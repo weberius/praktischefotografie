@@ -103,6 +103,93 @@ praktischefotografie/
 }
 ```
 
+Die Blogbeiträge nutzen Frontmatter und verknüpfen flüssig geschriebenen Text mit den Strukturdaten:
+
+```
+---
+id: post-makk-corbijn-und-bibliothek
+title: Fotokultur im MAKK: Anton Corbijn und Stöbern in der Präsenzbibliothek
+---
+
+Das MAKK (Museum für Angewandte Kunst Köln) im Herzen der Kölner Innenstadt ist auf den ersten Blick kein reines Fotografie-Museum – und doch einer der spannendsten Orte für visuelle Kultur in der Stadt.
+
+### Die Präsenzbibliothek: Stille Oase für Buchliebhaber
+Wer sich vertiefend mit Bildbänden, Designgeschichte und Fotokunst beschäftigen möchte, findet im MAKK eine öffentlich zugängliche **Präsenzbibliothek**. Hier kann man kostenfrei recherchieren, in historischen und zeitgenössischen Fotobänden blättern und abseits des Trubels arbeiten.
+
+### Aktuelle Ausstellungs-Empfehlung
+Derzeit lohnt sich der Besuch gleich in doppelter Hinsicht: Noch bis zum **15. November 2026** ist die Sonderausstellung *„A World of Wild Roses“* von Anton Corbijn zu sehen...
+```
+
+Die Verknüpfung im Frontend (User Experience)
+Wenn eine Leserin oder ein Leser auf praktischefotografie diesen Artikel aufruft, generiert das Frontend automatisch ein passendes Sidebar- / Infobox-Widget:
+
+```
+┌────────────────────────────────────────────────────────┐
+│ 📍 Erwähnter Ort                                      │
+│ MAKK – Museum für Angewandte Kunst Köln                │
+│ An der Rechtschule, 50667 Köln                         │
+│ 📚 Öffentliche Präsenzbibliothek vorhanden            │
+├────────────────────────────────────────────────────────┤
+│ 🖼️ Laufende Ausstellung                               │
+│ Anton Corbijn – A World of Wild Roses                  │
+│ 🗓️ Noch bis 15. November 2026 ⚠️ (Endet bald!)        │
+└────────────────────────────────────────────────────────┘
+```
+
+So wird das MAKK sowohl als Ort für wechselnde Fotokunst-Ausstellungen als auch als dauerhafter Recherche- und Fotobuch-Ort in deiner Anwendung sichtbar!
+
+### Die Rolle von Messen & Marken-Events auf praktische Fotografie
+
+Messen gehören nicht in die Kategorie der klassischen Kunstmuseen oder Galerien, aber sie passen hervorragend in die Event- & Netzwerk-Ebene der App:
+
+- Vorträge & Symposien: Auf solchen Messen sprechen oft renommierte Dokumentar-, Reportage- oder Kunstfotograf:innen über ihre Arbeit, Buchprojekte und Arbeitsweisen (nicht nur über Technik).
+- Community & Begegnung: Für viele (Hobby-)Fotografierende, Bildjournalist:innen und visuelle Gestalter:innen sind diese Events die seltenen Gelegenheiten im Jahr, sich physisch zu treffen, Netzwerke zu pflegen und Erfahrungen auszutauschen.
+- Fotobuch- & Print-Areas: Oft gibt es im Rahmen dieser Messen kleinere Ausstellungsflächen, Fotobuch-Stände oder Portfolio-Reviews.
+
+### Integration in die praktischefotografie-Datenstruktur
+
+Um die redaktionelle Ausrichtung von Lichtland (Fokus auf Fotokultur, Orte, Ausstellungen und Diskurse) nicht zu verwässern, empfiehlt sich ein klares Event-Typing in der events.json:
+
+Schema-Erweiterung für Messen/Festivals (events.json)
+
+```
+[
+  {
+    "id": "image-world-photokina-2027",
+    "title": "Image World Inspired by Photokina",
+    "eventType": "fair_and_convention",
+    "categoryTags": ["Messe", "Vorträge", "Community", "Netzwerk"],
+    "startDate": "2027-10-08",
+    "endDate": "2027-10-10",
+    "venueId": "koelnmesse",
+    "city": "Köln",
+    "website": "https://...",
+    "description": "Verkaufs- und Erlebnismesse mit umfangreichem Bühnenprogramm, Fachvorträgen, Portfolio-Talks und Community-Treffpunkten.",
+    "isCommercial": true,
+    "highlights": [
+      "Bühnenprogramm & Vorträge von Profi-Fotograf:innen",
+      "Community-Meetups",
+      "Print & Fotobuch-Area"
+    ]
+  }
+]
+```
+
+### Fotograf:innen Index (`data/photographers.json`)
+
+Ermöglicht die Quervernetzung: "Welche Ausstellungen mit Beteiligung von Barbara Klemm gab oder gibt es in NRW?"
+
+```
+[
+  {
+    "id": "martin-parr",
+    "name": "Martin Parr",
+    "bio": "Britischer Dokumentarfotograf, Mitglied von Magnum Photos.",
+    "website": "https://www.martinparr.com"
+  }
+]
+```
+
 ---
 
 ## 🚀 Vision & Fahrplan
