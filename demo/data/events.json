@@ -1,0 +1,86 @@
+[
+  {
+    "id": "demo-messe",
+    "title": "[Demo] Beispielmesse",
+    "eventType": "fair_and_convention",
+    "startDate": "2027-10-08",
+    "endDate": "2027-10-10",
+    "venueId": "nrw-forum-duesseldorf",
+    "city": "Düsseldorf",
+    "isCommercial": true,
+    "categoryTags": [
+      "Messe",
+      "Vorträge"
+    ],
+    "website": "https://example.org/messe",
+    "description": "Eine fiktive kommerzielle Messe.",
+    "highlights": [
+      "Bühnenprogramm",
+      "Community-Meetups",
+      "Fotobuch-Area"
+    ]
+  },
+  {
+    "id": "demo-artist-talk",
+    "title": "[Demo] Artist Talk",
+    "eventType": "talk",
+    "startDate": "2026-11-12",
+    "endDate": "2026-11-12",
+    "venueId": "makk-koeln",
+    "city": "Köln",
+    "isCommercial": false,
+    "description": "Ein fiktives Gespräch mit einer Fotografin.",
+    "highlights": [
+      "Gespräch",
+      "Publikumsfragen"
+    ]
+  },
+  {
+    "id": "demo-workshop",
+    "title": "[Demo] Workshop Sehen",
+    "eventType": "workshop",
+    "startDate": "2026-11-28",
+    "endDate": "2026-11-29",
+    "venueId": "photobookmuseum-koeln",
+    "city": "Köln",
+    "isCommercial": false,
+    "description": "Ein fiktiver Workshop zum Sehen."
+  },
+  {
+    "id": "demo-vernissage",
+    "title": "[Demo] Eröffnung Festival",
+    "eventType": "vernissage",
+    "startDate": "2026-11-01",
+    "endDate": "2026-11-01",
+    "venueId": "museum-ludwig-koeln",
+    "city": "Köln",
+    "isCommercial": false,
+    "description": "Eröffnung des fiktiven Festivals."
+  },
+  {
+    "id": "demo-lesung-vergangen",
+    "title": "[Demo] Fotobuch-Lesung",
+    "eventType": "reading",
+    "startDate": "2026-09-15",
+    "endDate": "2026-09-15",
+    "venueId": "kunst-und-museumsbibliothek-koeln",
+    "city": "Köln",
+    "isCommercial": false,
+    "description": "Eine fiktive Lesung, die schon stattfand."
+  },
+  {
+    "id": "demo-symposium",
+    "title": "[Demo] Symposium Fotografie",
+    "eventType": "symposium",
+    "startDate": "2026-12-05",
+    "endDate": "2026-12-06",
+    "venueId": "kunstpalast-duesseldorf",
+    "city": "Düsseldorf",
+    "isCommercial": false,
+    "description": "Ein fiktives zweitägiges Symposium.",
+    "highlights": [
+      "Vorträge",
+      "Diskussion"
+    ]
+  }
+]

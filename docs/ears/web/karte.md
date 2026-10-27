@@ -1,0 +1,16 @@
+# EARS: Karte der Orte (Kürzel `MAP`)
+
+**Bereich:** web  ·  **Systemname:** Webanwendung  ·  **Stand:** 2026-10-27
+
+Begriffe: „heute“ ist das aktuelle Datum der Anwendung (in Tests ein fester Referenzwert). Datenfelder siehe `schema/`.
+
+| ID | Anforderung | Gherkin | Quality | ADR |
+| --- | --- | --- | --- | --- |
+| MAP-UB-1 | Die Webanwendung soll auf `/map` jeden Ort an seinen Koordinaten als Marker darstellen, der bei Auswahl Name, Typ und einen Link zur Ortsseite zeigt. | `web/karte.feature` · „Karte zeigt alle Orte“ | Q-PERF-3 | ADR-004 |
+| MAP-UB-2 | Die Webanwendung soll die Orte nach Stadt, Typ und den Eigenschaften „Hat Präsenzbibliothek“ und „Ständige Sammlung“ filterbar machen; mehrere Filter wirken gemeinsam (UND) und sofort. | `web/karte.feature` · „Filter wirken kombiniert“ | Q-USE-3 | ADR-004 |
+| MAP-UB-3 | Die Webanwendung soll dieselben Orte mit denselben Filtern auf `/map` zusätzlich als Liste ohne Karte bereitstellen. | `web/karte.feature` · „Listenalternative“ | Q-USE-3 | ADR-004 |
+| MAP-UB-4 | Die Webanwendung soll den Filterzustand in den Query-Parametern `city`, `type`, `library`, `collection` und `organizer` der Adresse führen. | `web/karte.feature` · „Filterzustand in der Adresse“ | – | ADR-004 |
+| MAP-EV-1 | Wenn `/map` mit Query-Parametern aufgerufen wird, soll die Webanwendung die Filter entsprechend vorbelegen. | `web/karte.feature` · „Filter aus der Adresse“ | – | ADR-004 |
+| MAP-UB-5 | Die Webanwendung soll die Attribution „© OpenStreetMap-Mitwirkende“ an der Karte sichtbar anzeigen. | `web/karte.feature` · „Attribution sichtbar“ | – | ADR-004 |
+| MAP-UN-1 | Wenn kein Ort zu den Filtern passt, soll die Webanwendung einen Hinweis und eine Möglichkeit zum Zurücksetzen der Filter anzeigen. | `web/karte.feature` · „Kein Treffer“ | – | ADR-004 |
+| MAP-UB-6 | Die Webanwendung soll die Karte nur im Browser initialisieren und beim Vorabrendern die Liste ausgeben. | `web/karte.feature` · „Karte nur im Browser“ | Q-SEO-1 | ADR-002, ADR-004 |

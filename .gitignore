@@ -55,3 +55,7 @@ CLAUDE.local.md
 # --- OS files ---
 .DS_Store
 Thumbs.db
+
+# --- Webanwendung: Build-Artefakte (Datensync, siehe ADR-003) ---
+/web/public/data/
+/web/public/content/

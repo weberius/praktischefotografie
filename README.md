@@ -205,3 +205,22 @@ Ermöglicht die Quervernetzung: "Welche Ausstellungen mit Beteiligung von Barbar
 
 * **Content & Daten:** CC BY-NC-SA 4.0 (sofern nicht anders angegeben)
 * **Code:** MIT License
+
+---
+
+## 💻 Webanwendung (`web/`)
+
+Angular 20, statisch vorab gerendert (siehe `docs/architecture/ADR-002` bis `ADR-005`).
+
+```bash
+npm install && (cd web && npm install)
+cd web
+npm start            # synchronisiert data/ + demo/ und startet den Dev-Server
+npm test             # Karma/Jasmine (benötigt CHROME_BIN)
+npm run lint
+npm run build        # Produktionsbuild nur mit data/ (ohne Demo-Daten)
+npm run build:demo   # Build mit gekennzeichneten Demo-Daten aus demo/
+npm run quality      # axe, Tastatur, Netzwerk, SEO, Lighthouse gegen den Demo-Build
+```
+
+`demo/` enthält erkennbar fiktive Beispieldaten (`demo-`-IDs, Titel mit „[Demo]“). Sie erscheinen nie im Produktionsbuild.

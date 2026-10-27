@@ -1,0 +1,33 @@
+[
+  {
+    "id": "demo-anna-beispiel",
+    "name": "[Demo] Anna Beispiel",
+    "bio": "Fiktive Dokumentarfotografin für Entwicklung und Tests.",
+    "website": "https://example.org/anna-beispiel"
+  },
+  {
+    "id": "demo-bruno-muster",
+    "name": "[Demo] Bruno Muster",
+    "bio": "Fiktiver Straßenfotograf für Entwicklung und Tests."
+  },
+  {
+    "id": "demo-clara-probe",
+    "name": "[Demo] Clara Probe",
+    "bio": "Fiktive Porträtfotografin für Entwicklung und Tests.",
+    "website": "https://example.org/clara-probe"
+  },
+  {
+    "id": "demo-david-test",
+    "name": "[Demo] David Test"
+  },
+  {
+    "id": "demo-eva-fixture",
+    "name": "[Demo] Eva Fixture",
+    "bio": "Fiktive Landschaftsfotografin ohne Ausstellung, zum Test des Leerzustands."
+  },
+  {
+    "id": "demo-felix-attrappe",
+    "name": "[Demo] Felix Attrappe",
+    "bio": "Fiktiver Fotobuchautor für Entwicklung und Tests."
+  }
+]

@@ -1,0 +1,52 @@
+# language: de
+Funktionalität: Ausstellungen
+
+  # EARS: EXH-UB-1, EXH-UB-6
+  Szenario: Liste zeigt Ausstellungen mit Status
+    Angenommen drei Ausstellungen
+    Wenn "/exhibitions" aufgerufen wird
+    Dann zeigt jede Titel, Ort, Zeitraum und den Status als Text
+
+  # EARS: EXH-UB-2
+  Szenariogrundriss: Status der Ausstellung
+    Angenommen das heutige Datum 2026-10-27
+    Und eine Ausstellung von "<beginn>" bis "<ende>"
+    Dann hat sie den Status "<status>"
+    Beispiele:
+    | beginn | ende | status |
+    | 2026-11-01 | 2026-12-01 | kommend |
+    | 2026-10-01 | 2026-12-31 | laufend |
+    | 2026-10-01 | 2026-11-10 | endet bald |
+    | 2026-10-01 | 2026-11-11 | laufend |
+    | 2026-10-27 | 2026-10-27 | endet bald |
+    | 2026-10-27 | 2026-12-31 | laufend |
+    | 2026-09-01 | 2026-10-26 | beendet |
+
+  # EARS: EXH-UB-3
+  Szenario: Liste ist nach Status filterbar
+    Angenommen eine kommende und eine beendete Ausstellung
+    Wenn der Status "kommend" gewählt wird
+    Dann erscheint nur die kommende
+
+  # EARS: EXH-UB-4
+  Szenario: Ausstellungsdetail
+    Angenommen die Ausstellung "a-1" mit Ort und zwei Fotograf:innen
+    Wenn "/exhibitions/a-1" aufgerufen wird
+    Dann erscheinen Beschreibung, Typ, der Ort mit Link und beide Fotograf:innen mit Links
+
+  # EARS: EXH-OP-1
+  Szenario: Ausstellung eines Festivals
+    Angenommen eine Ausstellung mit festivalId "photoszene-koeln"
+    Wenn die Detailseite aufgerufen wird
+    Dann erscheint der Veranstalter mit Link auf "/organizers/photoszene-koeln"
+
+  # EARS: EXH-UB-5
+  Szenario: Verknüpfte Beiträge
+    Angenommen ein Beitrag, der die Ausstellung verknüpft
+    Wenn die Detailseite aufgerufen wird
+    Dann erscheint der Beitrag mit Link
+
+  # EARS: EXH-UB-6
+  Szenario: Status als Text
+    Angenommen eine Ausstellung mit dem Status "endet bald"
+    Dann steht der Text "Endet bald" im Dokument und nicht nur eine Farbe

@@ -1,0 +1,28 @@
+{
+  "name": "praktischefotografie",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Zentrum f\u00fcr Praktische Fotografie \u2013 Datenbasis und Tooling",
+  "scripts": {
+    "validate:data": "node scripts/validate-data.mjs",
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "lint": "eslint .",
+    "build": "npm --prefix web run build",
+    "web:lint": "npm --prefix web run lint",
+    "web:test": "npm --prefix web test",
+    "lint:all": "npm run lint && npm run web:lint"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0"
+  }
+}

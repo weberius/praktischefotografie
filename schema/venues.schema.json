@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Venues",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "name", "shortName", "type", "city", "address", "website", "features", "source"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "name": { "type": "string", "minLength": 1 },
+      "shortName": { "type": "string", "minLength": 1 },
+      "type": { "enum": ["museum", "gallery", "foundation", "off_space", "library_archive"] },
+      "city": { "type": "string", "minLength": 1 },
+      "district": { "type": "string", "minLength": 1 },
+      "address": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["street", "zip", "city", "lat", "lng"],
+        "properties": {
+          "street": { "type": "string", "minLength": 1 },
+          "zip": { "type": "string", "pattern": "^[0-9]{5}$" },
+          "city": { "type": "string", "minLength": 1 },
+          "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+          "lng": { "type": "number", "minimum": -180, "maximum": 180 }
+        }
+      },
+      "website": { "type": "string", "format": "uri", "pattern": "^https?://" },
+      "features": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["hasPermanentCollection", "hasReferenceLibrary"],
+        "properties": {
+          "hasPermanentCollection": { "type": "boolean" },
+          "hasReferenceLibrary": { "type": "boolean" },
+          "libraryNotes": { "type": "string", "minLength": 1 }
+        },
+        "if": { "properties": { "hasReferenceLibrary": { "const": true } }, "required": ["hasReferenceLibrary"] },
+        "then": { "required": ["libraryNotes"] }
+      },
+      "source": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "checkedAt", "status"],
+        "properties": {
+          "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+          "checkedAt": { "type": "string", "format": "date" },
+          "status": { "enum": ["recherchiert", "verifiziert"] }
+        }
+      }
+    }
+  }
+}

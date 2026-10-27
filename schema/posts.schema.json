@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Posts",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "slug", "title", "date", "contentFile"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "title": { "type": "string", "minLength": 1 },
+      "date": { "type": "string", "format": "date" },
+      "excerpt": { "type": "string", "minLength": 1, "maxLength": 300 },
+      "linkedVenueIds": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+      "linkedExhibitionIds": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+      "contentFile": { "type": "string", "pattern": "^content/posts/.+\\.md$" }
+    }
+  }
+}

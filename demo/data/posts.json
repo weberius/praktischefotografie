@@ -1,0 +1,80 @@
+[
+  {
+    "id": "demo-post-willkommen",
+    "slug": "willkommen",
+    "title": "[Demo] Willkommen im Magazin",
+    "date": "2026-10-20",
+    "excerpt": "Ein fiktiver Einstiegsbeitrag mit Hinweis auf eine kommende Schau.",
+    "contentFile": "content/posts/2026-10-20-willkommen.md",
+    "linkedVenueIds": [
+      "makk-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "demo-ausstellung-kommend"
+    ]
+  },
+  {
+    "id": "demo-post-endet-bald",
+    "slug": "endet-bald",
+    "title": "[Demo] Noch ein paar Tage",
+    "date": "2026-10-25",
+    "excerpt": "Eine fiktive Ausstellung schließt bald – ein Hinweis zum Beitrag.",
+    "contentFile": "content/posts/2026-10-25-endet-bald.md",
+    "linkedVenueIds": [
+      "photographische-sammlung-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "demo-ausstellung-endet-bald"
+    ]
+  },
+  {
+    "id": "demo-post-festival",
+    "slug": "festival",
+    "title": "[Demo] Festivalrundgang",
+    "date": "2026-10-15",
+    "excerpt": "Ein fiktiver Rundgang durch zwei Festival-Orte.",
+    "contentFile": "content/posts/2026-10-15-festival.md",
+    "linkedVenueIds": [
+      "museum-ludwig-koeln",
+      "galerie-lichtblick-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "demo-ausstellung-festival-1",
+      "demo-ausstellung-festival-2"
+    ]
+  },
+  {
+    "id": "demo-post-bibliotheken",
+    "slug": "bibliotheken",
+    "title": "[Demo] Stöbern in Präsenzbibliotheken",
+    "date": "2026-10-01",
+    "excerpt": "Fiktive Tipps zu Orten mit Präsenzbibliothek.",
+    "contentFile": "content/posts/2026-10-01-bibliotheken.md",
+    "linkedVenueIds": [
+      "kunst-und-museumsbibliothek-koeln",
+      "museum-folkwang-essen"
+    ]
+  },
+  {
+    "id": "demo-post-rueckblick",
+    "slug": "rueckblick",
+    "title": "[Demo] Rückblick auf den Sommer",
+    "date": "2026-07-10",
+    "excerpt": "Ein fiktiver Rückblick auf eine beendete Ausstellung.",
+    "contentFile": "content/posts/2026-07-10-rueckblick.md",
+    "linkedVenueIds": [
+      "nrw-forum-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "demo-ausstellung-beendet"
+    ]
+  },
+  {
+    "id": "demo-post-zukunft",
+    "slug": "zukunft",
+    "title": "[Demo] Beitrag aus der Zukunft",
+    "date": "2027-03-01",
+    "excerpt": "Dieser Beitrag liegt in der Zukunft und darf nicht erscheinen.",
+    "contentFile": "content/posts/2027-03-01-zukunft.md"
+  }
+]
