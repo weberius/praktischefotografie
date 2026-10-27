@@ -1,0 +1,47 @@
+<app-data-gate>
+  @if (event(); as e) {
+    <article>
+      <h1>{{ e.title }}</h1>
+      <p class="meta">
+        <span class="badge">{{ typeLabel[e.eventType] }}</span>
+        @if (e.isCommercial) {
+          <span class="badge">Kommerziell</span>
+        }
+        @if (over()) {
+          <span class="badge status-beendet">Beendet</span>
+        }
+      </p>
+      <dl class="facts">
+        <dt>Zeitraum</dt>
+        <dd>{{ formatRange(e.startDate, e.endDate) }}</dd>
+        <dt>Ort</dt>
+        <dd>
+          @if (venue(); as v) {
+            <a [routerLink]="['/venues', v.id]">{{ v.name }}</a>, {{ e.city }}
+          } @else {
+            {{ e.city }}
+          }
+        </dd>
+        @if (e.website) {
+          <dt>Website</dt>
+          <dd><a [href]="e.website" target="_blank" rel="noopener">{{ e.website }}<span class="visually-hidden"> (öffnet in neuem Tab)</span></a></dd>
+        }
+      </dl>
+
+      @if (e.description) {
+        <h2>Beschreibung</h2>
+        <p>{{ e.description }}</p>
+      }
+      @if (e.highlights?.length) {
+        <h2>Highlights</h2>
+        <ul>
+          @for (h of e.highlights; track h) {
+            <li>{{ h }}</li>
+          }
+        </ul>
+      }
+    </article>
+  } @else {
+    <app-not-found />
+  }
+</app-data-gate>

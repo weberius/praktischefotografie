@@ -1,0 +1,45 @@
+<app-data-gate>
+  @if (exhibition(); as exhibition) {
+    <h1>{{ exhibition.title }}</h1>
+    <p>
+      @if (status(); as status) {
+        <app-status-badge [status]="status" />
+      }
+      <span class="badge">{{ typeLabel[exhibition.type] }}</span>
+    </p>
+    <p class="meta">{{ formatRange(exhibition.startDate, exhibition.endDate) }}</p>
+    @if (exhibition.description) {
+      <p>{{ exhibition.description }}</p>
+    }
+
+    <h2>Ort</h2>
+    @if (venue(); as venue) {
+      <p><a [routerLink]="['/venues', venue.id]">{{ venue.name }}</a>, {{ venue.city }}</p>
+    }
+
+    @if (organizer(); as organizer) {
+      <h2>Veranstalter</h2>
+      <p><a [routerLink]="['/organizers', organizer.id]">{{ organizer.name }}</a></p>
+    }
+
+    @if (photographers().length) {
+      <h2>Beteiligte Fotograf:innen</h2>
+      <ul>
+        @for (person of photographers(); track person.id) {
+          <li><a [routerLink]="['/photographers', person.id]">{{ person.name }}</a></li>
+        }
+      </ul>
+    }
+
+    @if (posts().length) {
+      <h2>Beiträge</h2>
+      <ul>
+        @for (post of posts(); track post.id) {
+          <li><a [routerLink]="['/posts', post.slug]">{{ post.title }}</a> <span class="meta">({{ formatDate(post.date) }})</span></li>
+        }
+      </ul>
+    }
+  } @else {
+    <app-not-found />
+  }
+</app-data-gate>

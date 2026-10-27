@@ -1,0 +1,2 @@
+:host { display: block; }
+.map { height: 26rem; width: 100%; border: 1px solid var(--border); border-radius: var(--radius); background: #e8e6df; }

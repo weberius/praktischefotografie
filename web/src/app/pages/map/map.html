@@ -1,0 +1,72 @@
+<h1>Karte</h1>
+<app-data-gate>
+  <form class="filters" aria-label="Orte filtern" (submit)="$event.preventDefault()">
+    <label>
+      Stadt
+      <select id="filter-city" (change)="update({ city: value($event) || undefined })">
+        <option value="" [selected]="!filter().city">Alle Städte</option>
+        @for (city of cities(); track city) {
+          <option [value]="city" [selected]="filter().city === city">{{ city }}</option>
+        }
+      </select>
+    </label>
+    <label>
+      Typ
+      <select id="filter-type" (change)="update({ type: asType(value($event)) })">
+        <option value="" [selected]="!filter().type">Alle Typen</option>
+        @for (type of types; track type.value) {
+          <option [value]="type.value" [selected]="filter().type === type.value">{{ type.label }}</option>
+        }
+      </select>
+    </label>
+    <label>
+      Veranstalter:in
+      <select id="filter-organizer" (change)="update({ organizer: value($event) || undefined })">
+        <option value="" [selected]="!filter().organizer">Alle</option>
+        @for (organizer of data.organizers(); track organizer.id) {
+          <option [value]="organizer.id" [selected]="filter().organizer === organizer.id">{{ organizer.name }}</option>
+        }
+      </select>
+    </label>
+    <label class="inline">
+      <input type="checkbox" [checked]="!!filter().library" (change)="update({ library: checked($event) || undefined })" />
+      Hat Präsenzbibliothek
+    </label>
+    <label class="inline">
+      <input type="checkbox" [checked]="!!filter().collection" (change)="update({ collection: checked($event) || undefined })" />
+      Ständige Sammlung
+    </label>
+    @if (hasFilter() && venues().length > 0) {
+      <button type="button" (click)="reset()">Filter zurücksetzen</button>
+    }
+  </form>
+
+  <p role="status" class="meta">{{ venues().length }} {{ venues().length === 1 ? 'Ort' : 'Orte' }}</p>
+
+  <div class="map-layout">
+  <section aria-labelledby="list-heading">
+    <h2 id="list-heading">Orte als Liste</h2>
+    @if (venues().length > 0) {
+      <ul class="card-list">
+        @for (venue of venues(); track venue.id) {
+          <li class="card">
+            <h3><a [routerLink]="['/venues', venue.id]">{{ venue.name }}</a></h3>
+            <p class="venue-type"><span aria-hidden="true">{{ typeInfo[venue.type].icon }}</span> {{ typeInfo[venue.type].label }}</p>
+            <p>{{ venue.city }}</p>
+          </li>
+        }
+      </ul>
+    } @else {
+      <div class="notice">
+        <p>Zu diesen Filtern gibt es keinen Ort.</p>
+        <button type="button" (click)="reset()">Filter zurücksetzen</button>
+      </div>
+    }
+  </section>
+  <section class="map-section" aria-labelledby="map-heading">
+    <h2 id="map-heading" class="visually-hidden">Karte</h2>
+    <app-venue-map [venues]="venues()" />
+  </section>
+
+  </div>
+</app-data-gate>

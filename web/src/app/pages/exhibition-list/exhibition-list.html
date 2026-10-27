@@ -1,0 +1,31 @@
+<h1>Ausstellungen</h1>
+<app-data-gate>
+  <form class="filters" (submit)="$event.preventDefault()">
+    <label>
+      Status
+      <select (change)="setStatus($any($event.target).value)">
+        <option value="" [selected]="!statusFilter()">Alle</option>
+        @for (option of statusOptions; track option.value) {
+          <option [value]="option.value" [selected]="option.value === statusFilter()">{{ option.label }}</option>
+        }
+      </select>
+    </label>
+  </form>
+  <p class="meta" role="status">{{ items().length }} {{ items().length === 1 ? 'Ausstellung' : 'Ausstellungen' }}</p>
+  @if (items().length) {
+    <ul class="card-list">
+      @for (item of items(); track item.exhibition.id) {
+        <li class="card">
+          <h2><a [routerLink]="['/exhibitions', item.exhibition.id]">{{ item.exhibition.title }}</a></h2>
+          @if (item.venue) {
+            <p><a [routerLink]="['/venues', item.venue.id]">{{ item.venue.name }}</a></p>
+          }
+          <p class="meta">{{ formatRange(item.exhibition.startDate, item.exhibition.endDate) }}</p>
+          <p><app-status-badge [status]="item.status" /></p>
+        </li>
+      }
+    </ul>
+  } @else {
+    <p class="notice">Keine Ausstellungen für diese Auswahl gefunden.</p>
+  }
+</app-data-gate>

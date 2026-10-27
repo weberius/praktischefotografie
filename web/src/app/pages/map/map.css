@@ -1,0 +1,7 @@
+.map-section { margin: 1.5rem 0; }
+.venue-type { color: var(--muted); }
+/* Liste zuerst (Reihenfolge im Dokument = Fokus- und Lesereihenfolge), ab breiten Fenstern Liste links und Karte rechts. */
+@media (min-width: 60rem) {
+  .map-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 1.5rem; align-items: start; }
+  .map-section { margin: 0; position: sticky; top: 1rem; grid-column: 2; grid-row: 1; }
+}

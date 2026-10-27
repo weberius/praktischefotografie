@@ -1,0 +1,23 @@
+.month-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.period {
+  margin-top: 0;
+}
+
+.agenda {
+  grid-template-columns: 1fr;
+}
+
+.kind {
+  color: var(--fg);
+  border-style: solid;
+}
+
+.kind-event {
+  border-style: dashed;
+}

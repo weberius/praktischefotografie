@@ -1,0 +1,31 @@
+<app-data-gate>
+  @if (person(); as person) {
+    <h1>{{ person.name }}</h1>
+    @if (person.bio) {
+      <p>{{ person.bio }}</p>
+    }
+    @if (person.website) {
+      <p><a [href]="person.website" target="_blank" rel="noopener">Website von {{ person.name }} (öffnet extern)</a></p>
+    }
+
+    <h2>Ausstellungen</h2>
+    @if (exhibitions().length) {
+      <ul class="card-list">
+        @for (item of exhibitions(); track item.exhibition.id) {
+          <li class="card">
+            <h3><a [routerLink]="['/exhibitions', item.exhibition.id]">{{ item.exhibition.title }}</a></h3>
+            @if (item.venue) {
+              <p>{{ item.venue.name }}</p>
+            }
+            <p class="meta">{{ formatRange(item.exhibition.startDate, item.exhibition.endDate) }}</p>
+            <p><app-status-badge [status]="item.status" /></p>
+          </li>
+        }
+      </ul>
+    } @else {
+      <p class="notice">Für diese Person ist derzeit keine Ausstellung in NRW erfasst.</p>
+    }
+  } @else {
+    <app-not-found />
+  }
+</app-data-gate>

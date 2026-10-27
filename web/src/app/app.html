@@ -1,0 +1,25 @@
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <a class="brand" routerLink="/">Praktische Fotografie</a>
+  <nav aria-label="Hauptnavigation">
+    <ul>
+      @for (link of links; track link.path) {
+        <li>
+          <a [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: link.exact }">{{
+            link.label
+          }}</a>
+        </li>
+      }
+    </ul>
+  </nav>
+</header>
+<main id="inhalt" tabindex="-1">
+  <router-outlet />
+</main>
+<footer class="site-footer">
+  <nav aria-label="Rechtliches">
+    <a routerLink="/impressum">Impressum</a>
+    <a routerLink="/datenschutz">Datenschutz</a>
+  </nav>
+  <p class="muted">Zentrum für Praktische Fotografie · Fokus NRW</p>
+</footer>

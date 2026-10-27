@@ -1,0 +1,53 @@
+<app-data-gate>
+  @if (post(); as post) {
+    <article>
+      <h1>{{ post.title }}</h1>
+      <p class="meta"><time [attr.datetime]="post.date">{{ formatDate(post.date) }}</time></p>
+
+      @if (text.hasValue()) {
+        <div class="post-body" [innerHTML]="text.value()"></div>
+      } @else if (textError()) {
+        <p class="notice" role="status">Der Beitragstext konnte nicht geladen werden.</p>
+      } @else {
+        <p class="muted" role="status">Beitragstext wird geladen …</p>
+      }
+
+      @if (venues().length > 0 || exhibitions().length > 0) {
+        <aside class="post-info" aria-label="Verknüpfte Orte und Ausstellungen">
+          @if (venues().length > 0) {
+            <section class="card">
+              <h2>Orte</h2>
+              <ul>
+                @for (venue of venues(); track venue.id) {
+                  <li>
+                    <a [routerLink]="['/venues', venue.id]">{{ venue.name }}</a>
+                    <address class="meta">{{ venue.address.street }}, {{ venue.address.zip }} {{ venue.address.city }}</address>
+                    @if (venue.features.hasReferenceLibrary) {
+                      <span class="badge">Präsenzbibliothek</span>
+                    }
+                  </li>
+                }
+              </ul>
+            </section>
+          }
+          @if (exhibitions().length > 0) {
+            <section class="card">
+              <h2>Ausstellungen</h2>
+              <ul>
+                @for (exhibition of exhibitions(); track exhibition.id) {
+                  <li>
+                    <a [routerLink]="['/exhibitions', exhibition.id]">{{ exhibition.title }}</a>
+                    <span class="meta">{{ formatRange(exhibition.startDate, exhibition.endDate) }}</span>
+                    <app-status-badge [status]="exhibition.status" />
+                  </li>
+                }
+              </ul>
+            </section>
+          }
+        </aside>
+      }
+    </article>
+  } @else {
+    <app-not-found />
+  }
+</app-data-gate>

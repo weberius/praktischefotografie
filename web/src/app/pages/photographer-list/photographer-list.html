@@ -1,0 +1,10 @@
+<h1>Fotograf:innen</h1>
+<app-data-gate>
+  <ul class="card-list">
+    @for (person of photographers(); track person.id) {
+      <li class="card">
+        <h2><a [routerLink]="['/photographers', person.id]">{{ person.name }}</a></h2>
+      </li>
+    }
+  </ul>
+</app-data-gate>

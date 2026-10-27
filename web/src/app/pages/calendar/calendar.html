@@ -1,0 +1,57 @@
+@if (period(); as p) {
+  <h1>Kalender</h1>
+  <app-data-gate>
+    <nav class="month-nav" aria-label="Monatsnavigation">
+      @if (nav(); as n) {
+        <a [routerLink]="n.prev.commands"><span class="visually-hidden">Vorheriger Monat: </span>‹ {{ n.prev.text }}</a>
+        <a [routerLink]="n.next.commands"><span class="visually-hidden">Nächster Monat: </span>{{ n.next.text }} ›</a>
+      }
+      @if (p.isMonthView) {
+        <a routerLink="/calendar">Ab heute</a>
+      }
+    </nav>
+
+    <h2 class="period" aria-live="polite">{{ label() }}</h2>
+
+    @if (!p.isMonthView) {
+      <div class="filters">
+        <label class="inline">
+          <input type="checkbox" [checked]="showEnded()" (change)="toggleEnded($any($event.target).checked)" />
+          Beendete anzeigen
+        </label>
+      </div>
+    }
+
+    @if (items().length === 0) {
+      <p class="notice" role="status">
+        @if (p.isMonthView) {
+          Für {{ label() }} gibt es keine Einträge.
+        } @else {
+          Es gibt keine laufenden oder kommenden Einträge.
+        }
+      </p>
+    } @else {
+      <ol class="card-list agenda">
+        @for (item of items(); track item.kind + item.id) {
+          <li class="card">
+            <p class="meta">
+              <span class="badge kind" [class.kind-event]="item.kind === 'Event'">{{ item.kind }}</span>
+              @if (item.kind === 'Ausstellung' && (item.status === 'endet-bald' || item.status === 'beendet')) {
+                <app-status-badge [status]="item.status!" />
+              } @else if (item.kind === 'Event' && item.endDate < today) {
+                <span class="badge status-beendet">Beendet</span>
+              }
+            </p>
+            <h3><a [routerLink]="item.link">{{ item.title }}</a></h3>
+            @if (item.venue) {
+              <p>{{ item.venue }}</p>
+            }
+            <p class="meta">{{ formatRange(item.startDate, item.endDate) }}</p>
+          </li>
+        }
+      </ol>
+    }
+  </app-data-gate>
+} @else {
+  <app-not-found />
+}

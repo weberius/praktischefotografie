@@ -1,0 +1,16 @@
+<h1>Veranstalter:innen</h1>
+<app-data-gate>
+  @if (data.organizers().length > 0) {
+    <ul class="card-list">
+      @for (organizer of data.organizers(); track organizer.id) {
+        <li class="card">
+          <h2><a [routerLink]="['/organizers', organizer.id]">{{ organizer.name }}</a></h2>
+          <p>{{ typeLabel[organizer.type] }}</p>
+          <p class="meta">{{ organizer.city }}</p>
+        </li>
+      }
+    </ul>
+  } @else {
+    <p class="notice">Es sind noch keine Veranstalter:innen erfasst.</p>
+  }
+</app-data-gate>

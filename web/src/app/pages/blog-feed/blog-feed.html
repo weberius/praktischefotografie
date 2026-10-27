@@ -1,0 +1,18 @@
+<h1>Magazin</h1>
+<app-data-gate>
+  @if (posts().length === 0) {
+    <p class="notice" role="status">Zurzeit gibt es keine veröffentlichten Beiträge.</p>
+  } @else {
+    <ul class="card-list" aria-label="Beiträge">
+      @for (post of posts(); track post.id) {
+        <li class="card post-card">
+          <h2><a [routerLink]="['/posts', post.slug]">{{ post.title }}</a></h2>
+          <time class="meta" [attr.datetime]="post.date">{{ formatDate(post.date) }}</time>
+          @if (post.excerpt) {
+            <p>{{ post.excerpt }}</p>
+          }
+        </li>
+      }
+    </ul>
+  }
+</app-data-gate>

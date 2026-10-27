@@ -1,0 +1,53 @@
+<h1>Orte</h1>
+<app-data-gate>
+  @if (organizerName(); as name) {
+    <p class="notice" id="organizer-hint">
+      Gefiltert nach Veranstalter: {{ name }}
+      <a href="#" (click)="clearOrganizer(); $event.preventDefault()">Veranstalterfilter aufheben</a>
+    </p>
+  }
+  <form class="filters" (submit)="$event.preventDefault()">
+    <label>
+      Stadt
+      <select (change)="setCity($any($event.target).value)">
+        <option value="" [selected]="!filter().city">Alle Städte</option>
+        @for (city of cityOptions(); track city) {
+          <option [value]="city" [selected]="city === filter().city">{{ city }}</option>
+        }
+      </select>
+    </label>
+    <label>
+      Typ
+      <select (change)="setType($any($event.target).value)">
+        <option value="" [selected]="!filter().type">Alle Typen</option>
+        @for (option of typeOptions; track option.value) {
+          <option [value]="option.value" [selected]="option.value === filter().type">{{ option.label }}</option>
+        }
+      </select>
+    </label>
+  </form>
+  <p class="meta" role="status">{{ venues().length }} {{ venues().length === 1 ? 'Ort' : 'Orte' }}</p>
+  @if (venues().length) {
+    <ul class="card-list">
+      @for (venue of venues(); track venue.id) {
+        <li class="card">
+          <h2><a [routerLink]="['/venues', venue.id]">{{ venue.name }}</a></h2>
+          <p class="venue-type"><span aria-hidden="true">{{ typeInfo[venue.type].icon }}</span> {{ typeInfo[venue.type].label }}</p>
+          <p class="meta">{{ venue.city }}</p>
+          @if (venue.features.hasReferenceLibrary || venue.features.hasPermanentCollection) {
+            <ul class="features">
+              @if (venue.features.hasReferenceLibrary) {
+                <li>Präsenzbibliothek</li>
+              }
+              @if (venue.features.hasPermanentCollection) {
+                <li>Ständige Sammlung</li>
+              }
+            </ul>
+          }
+        </li>
+      }
+    </ul>
+  } @else {
+    <p class="notice">Keine Orte für diese Auswahl gefunden.</p>
+  }
+</app-data-gate>

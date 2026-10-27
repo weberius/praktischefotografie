@@ -1,0 +1,70 @@
+<app-data-gate>
+  @if (venue(); as venue) {
+    <h1>{{ venue.name }}</h1>
+    <p class="venue-type"><span aria-hidden="true">{{ typeInfo[venue.type].icon }}</span> {{ typeInfo[venue.type].label }}</p>
+
+    <h2>Adresse und Kontakt</h2>
+    <address>
+      {{ venue.address.street }}<br />
+      {{ venue.address.zip }} {{ venue.address.city }}
+    </address>
+    <p><a [href]="venue.website" target="_blank" rel="noopener">Website von {{ venue.name }} (öffnet extern)</a></p>
+
+    <h2>Eigenschaften</h2>
+    <ul>
+      <li>{{ venue.features.hasPermanentCollection ? 'Ständige Sammlung' : 'Keine ständige Sammlung' }}</li>
+      <li>
+        {{ venue.features.hasReferenceLibrary ? 'Präsenzbibliothek' : 'Keine Präsenzbibliothek' }}
+        @if (venue.features.libraryNotes) {
+          <span class="muted"> – {{ venue.features.libraryNotes }}</span>
+        }
+      </li>
+    </ul>
+
+    <h2>Quelle und Prüfstand</h2>
+    <p>
+      <a [href]="venue.source.url" target="_blank" rel="noopener">Quelle der Angaben (öffnet extern)</a><br />
+      <span class="meta">Prüfstand: {{ venue.source.status }}, zuletzt geprüft am {{ formatDate(venue.source.checkedAt) }}</span>
+    </p>
+
+    <h2>Programm</h2>
+    @if (exhibitions().length || events().length) {
+      @if (exhibitions().length) {
+        <h3>Ausstellungen</h3>
+        <ul class="card-list">
+          @for (item of exhibitions(); track item.exhibition.id) {
+            <li class="card">
+              <h4><a [routerLink]="['/exhibitions', item.exhibition.id]">{{ item.exhibition.title }}</a></h4>
+              <p class="meta">{{ formatRange(item.exhibition.startDate, item.exhibition.endDate) }}</p>
+              <p><app-status-badge [status]="item.status" /></p>
+            </li>
+          }
+        </ul>
+      }
+      @if (events().length) {
+        <h3>Events</h3>
+        <ul class="card-list">
+          @for (event of events(); track event.id) {
+            <li class="card">
+              <h4><a [routerLink]="['/events', event.id]">{{ event.title }}</a></h4>
+              <p class="meta">{{ formatRange(event.startDate, event.endDate) }}</p>
+            </li>
+          }
+        </ul>
+      }
+    } @else {
+      <p class="notice">Für diesen Ort sind derzeit keine laufenden oder kommenden Ausstellungen und Events bekannt.</p>
+    }
+
+    @if (posts().length) {
+      <h2>Beiträge</h2>
+      <ul>
+        @for (post of posts(); track post.id) {
+          <li><a [routerLink]="['/posts', post.slug]">{{ post.title }}</a> <span class="meta">({{ formatDate(post.date) }})</span></li>
+        }
+      </ul>
+    }
+  } @else {
+    <app-not-found />
+  }
+</app-data-gate>

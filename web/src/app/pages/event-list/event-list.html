@@ -1,0 +1,37 @@
+<h1>Events</h1>
+<app-data-gate>
+  <div class="filters">
+    <label>
+      Typ
+      <select (change)="selectType($any($event.target).value)">
+        <option value="" [selected]="selectedType() === ''">Alle Typen</option>
+        @for (o of typeOptions; track o.value) {
+          <option [value]="o.value" [selected]="selectedType() === o.value">{{ o.label }}</option>
+        }
+      </select>
+    </label>
+  </div>
+
+  @if (items().length === 0) {
+    <p class="notice" role="status">Keine Events für diese Auswahl.</p>
+  } @else {
+    <ul class="card-list">
+      @for (item of items(); track item.event.id) {
+        <li class="card">
+          <p class="meta">
+            <span class="badge">{{ typeLabel[item.event.eventType] }}</span>
+            @if (item.event.isCommercial) {
+              <span class="badge">Kommerziell</span>
+            }
+            @if (isOver(item.event.endDate)) {
+              <span class="badge status-beendet">Beendet</span>
+            }
+          </p>
+          <h2><a [routerLink]="['/events', item.event.id]">{{ item.event.title }}</a></h2>
+          <p>{{ item.venue }}</p>
+          <p class="meta">{{ formatRange(item.event.startDate, item.event.endDate) }}</p>
+        </li>
+      }
+    </ul>
+  }
+</app-data-gate>

@@ -1,0 +1,39 @@
+<app-data-gate>
+  @if (organizer(); as organizer) {
+    <h1>{{ organizer.name }}</h1>
+    <dl>
+      <dt>Typ</dt>
+      <dd>{{ typeLabel[organizer.type] }}</dd>
+      <dt>Stadt</dt>
+      <dd>{{ organizer.city }}</dd>
+      @if (organizer.website) {
+        <dt>Website</dt>
+        <dd>
+          <a [href]="organizer.website" target="_blank" rel="noopener">{{ organizer.website }}<span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
+        </dd>
+      }
+    </dl>
+
+    <h2>Ausstellungen</h2>
+    @if (exhibitions().length > 0) {
+      <p>
+        <a routerLink="/map" [queryParams]="{ organizer: organizer.id }">Orte auf der Karte</a> ·
+        <a routerLink="/venues" [queryParams]="{ organizer: organizer.id }">Orte als Liste</a>
+      </p>
+      <ul class="card-list">
+        @for (exhibition of exhibitions(); track exhibition.id) {
+          <li class="card">
+            <h3><a [routerLink]="['/exhibitions', exhibition.id]">{{ exhibition.title }}</a></h3>
+            <p>{{ exhibition.venueName }}</p>
+            <p class="meta">{{ exhibition.range }}</p>
+            <p><app-status-badge [status]="exhibition.status" /></p>
+          </li>
+        }
+      </ul>
+    } @else {
+      <p class="notice">Diesem Veranstalter sind derzeit keine Ausstellungen zugeordnet.</p>
+    }
+  } @else {
+    <app-not-found />
+  }
+</app-data-gate>
