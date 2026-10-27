@@ -5,10 +5,23 @@
     "shortName": "Fotografie-Forum Monschau",
     "type": "museum",
     "city": "Monschau",
-    "address": {"street": "Austraße 9", "zip": "52156", "city": "Monschau", "lat": 50.5549015, "lng": 6.2442923},
+    "address": {
+      "street": "Austraße 9",
+      "zip": "52156",
+      "city": "Monschau",
+      "lat": 50.5549015,
+      "lng": 6.2442923
+    },
     "website": "https://www.kuk-monschau.de/",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.kuk-monschau.de/fotografie-forum/besucherinformation.html", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.kuk-monschau.de/index.php/ausstellungen/ausstellungen-2026/94-j%C3%BCrgen-klauke-08-11-2026%E2%80%9320-12-2026.html",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "makk-koeln",
@@ -17,10 +30,23 @@
     "type": "museum",
     "city": "Köln",
     "district": "Altstadt-Nord",
-    "address": {"street": "An der Rechtschule 7", "zip": "50667", "city": "Köln", "lat": 50.9397621, "lng": 6.9545341},
+    "address": {
+      "street": "An der Rechtschule 7",
+      "zip": "50667",
+      "city": "Köln",
+      "lat": 50.9397621,
+      "lng": 6.9545341
+    },
     "website": "https://www.makk.de/",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.makk.de/", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://makk.de/besuchen/ausstellungen/sonderausstellungen/der-architektonische-blick-epochal-global",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "museum-ludwig-koeln",
@@ -29,10 +55,23 @@
     "type": "museum",
     "city": "Köln",
     "district": "Altstadt-Nord",
-    "address": {"street": "Heinrich-Böll-Platz", "zip": "50667", "city": "Köln", "lat": 50.9408347, "lng": 6.9600217},
+    "address": {
+      "street": "Heinrich-Böll-Platz",
+      "zip": "50667",
+      "city": "Köln",
+      "lat": 50.9408347,
+      "lng": 6.9600217
+    },
     "website": "https://www.museum-ludwig.de/",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.museum-ludwig.de/", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.museum-ludwig.de/",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "photographische-sammlung-koeln",
@@ -41,14 +80,24 @@
     "type": "foundation",
     "city": "Köln",
     "district": "Neustadt-Nord",
-    "address": {"street": "Im Mediapark 7", "zip": "50670", "city": "Köln", "lat": 50.9486933, "lng": 6.9433901},
+    "address": {
+      "street": "Im Mediapark 7",
+      "zip": "50670",
+      "city": "Köln",
+      "lat": 50.9486933,
+      "lng": 6.9433901
+    },
     "website": "https://photographie-stiftungkultur.de/",
     "features": {
       "hasPermanentCollection": true,
       "hasReferenceLibrary": true,
       "libraryNotes": "Präsenzbibliothek mit über 7.200 Bänden, u. a. rund 900 Bände aus der Privatbibliothek August Sanders; Nutzung nur nach Terminabsprache, Mo–Do 8:30–13:30 Uhr."
     },
-    "source": {"url": "https://photographie-stiftungkultur.de/ueber-uns/bibiothek", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "source": {
+      "url": "https://photographie-stiftungkultur.de/ausstellungen",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "photobookmuseum-koeln",
@@ -57,10 +106,23 @@
     "type": "museum",
     "city": "Köln",
     "district": "Ehrenfeld",
-    "address": {"street": "Körnerstraße 6–8", "zip": "50823", "city": "Köln", "lat": 50.94819, "lng": 6.9218663},
+    "address": {
+      "street": "Körnerstraße 6–8",
+      "zip": "50823",
+      "city": "Köln",
+      "lat": 50.94819,
+      "lng": 6.9218663
+    },
     "website": "https://www.thephotobookmuseum.com/de",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.thephotobookmuseum.com/de", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.thephotobookmuseum.com/de/allcategories-de-de/2-uncategorised/14-the-box-programm-de",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "kunst-und-museumsbibliothek-koeln",
@@ -69,14 +131,24 @@
     "type": "library_archive",
     "city": "Köln",
     "district": "Altstadt-Nord",
-    "address": {"street": "Heinrich-Böll-Platz/Bischofsgartenstraße 1", "zip": "50667", "city": "Köln", "lat": 50.9408347, "lng": 6.9600217},
+    "address": {
+      "street": "Heinrich-Böll-Platz/Bischofsgartenstraße 1",
+      "zip": "50667",
+      "city": "Köln",
+      "lat": 50.9408347,
+      "lng": 6.9600217
+    },
     "website": "https://www.museenkoeln.de/kunst-und-museumsbibliothek/",
     "features": {
       "hasPermanentCollection": false,
       "hasReferenceLibrary": true,
       "libraryNotes": "Öffentliche Präsenzbibliothek im Museum Ludwig (Eingang Filmforum) mit über 600.000 Bänden; Sammelschwerpunkt u. a. Fotografie; Literatur vorab über den Online-Katalog bestellen."
     },
-    "source": {"url": "https://www.stadt-koeln.de/service/adressen/kunst-und-museumsbibliothek", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "source": {
+      "url": "https://www.stadt-koeln.de/service/adressen/kunst-und-museumsbibliothek",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "rheinisches-bildarchiv-koeln",
@@ -85,10 +157,23 @@
     "type": "library_archive",
     "city": "Köln",
     "district": "Neustadt-Süd",
-    "address": {"street": "Eifelwall 5", "zip": "50674", "city": "Köln", "lat": 50.924158, "lng": 6.9381216},
+    "address": {
+      "street": "Eifelwall 5",
+      "zip": "50674",
+      "city": "Köln",
+      "lat": 50.924158,
+      "lng": 6.9381216
+    },
     "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/rheinisches-bildarchiv/index.html",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/rheinisches-bildarchiv/index.html", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/rheinisches-bildarchiv/index.html",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "zander-galerie-koeln",
@@ -97,10 +182,23 @@
     "type": "gallery",
     "city": "Köln",
     "district": "Bayenthal",
-    "address": {"street": "Schönhauser Straße 8", "zip": "50968", "city": "Köln", "lat": 50.9137181, "lng": 6.9695619},
+    "address": {
+      "street": "Schönhauser Straße 8",
+      "zip": "50968",
+      "city": "Köln",
+      "lat": 50.9137181,
+      "lng": 6.9695619
+    },
     "website": "https://zandergalerie.com/",
-    "features": {"hasPermanentCollection": false, "hasReferenceLibrary": false},
-    "source": {"url": "https://zandergalerie.com/contact/", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://zandergalerie.com/exhibitions/silver-shadows-a54844c5/",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "galerie-lichtblick-koeln",
@@ -109,10 +207,23 @@
     "type": "gallery",
     "city": "Köln",
     "district": "Nippes",
-    "address": {"street": "Steinberger Straße 21", "zip": "50733", "city": "Köln", "lat": 50.9614667, "lng": 6.9510975},
+    "address": {
+      "street": "Steinberger Straße 21",
+      "zip": "50733",
+      "city": "Köln",
+      "lat": 50.9614667,
+      "lng": 6.9510975
+    },
     "website": "https://www.lichtblicknet.com/",
-    "features": {"hasPermanentCollection": false, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.lichtblicknet.com/kontakt/index.html", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.lichtblicknet.com/aktuell/index.html",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "kaune-contemporary-koeln",
@@ -121,10 +232,23 @@
     "type": "gallery",
     "city": "Köln",
     "district": "Altstadt-Nord",
-    "address": {"street": "Gereonskloster 12", "zip": "50670", "city": "Köln", "lat": 50.9433859, "lng": 6.9444626},
+    "address": {
+      "street": "Gereonskloster 12",
+      "zip": "50670",
+      "city": "Köln",
+      "lat": 50.9433859,
+      "lng": 6.9444626
+    },
     "website": "https://www.kaunegallery.com/",
-    "features": {"hasPermanentCollection": false, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.kaunegallery.com/", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.kaunegallery.com/exhibitions/hg-esch-anthroposcape/",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "kunstpalast-duesseldorf",
@@ -133,10 +257,23 @@
     "type": "museum",
     "city": "Düsseldorf",
     "district": "Pempelfort",
-    "address": {"street": "Ehrenhof 4–5", "zip": "40479", "city": "Düsseldorf", "lat": 51.234998, "lng": 6.7731045},
+    "address": {
+      "street": "Ehrenhof 4–5",
+      "zip": "40479",
+      "city": "Düsseldorf",
+      "lat": 51.234998,
+      "lng": 6.7731045
+    },
     "website": "https://www.kunstpalast.de/",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.kunstpalast.de/de/programm/sammlung/die-sammlung-fotografie/", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.kunstpalast.de/de/programm/sammlung/die-sammlung-fotografie/",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "nrw-forum-duesseldorf",
@@ -145,10 +282,23 @@
     "type": "museum",
     "city": "Düsseldorf",
     "district": "Pempelfort",
-    "address": {"street": "Ehrenhof 2", "zip": "40479", "city": "Düsseldorf", "lat": 51.2332092, "lng": 6.7720702},
+    "address": {
+      "street": "Ehrenhof 2",
+      "zip": "40479",
+      "city": "Düsseldorf",
+      "lat": 51.2332092,
+      "lng": 6.7720702
+    },
     "website": "https://www.nrw-forum.de/",
-    "features": {"hasPermanentCollection": false, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.nrw-forum.de/", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.nrw-forum.de/",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "museum-folkwang-essen",
@@ -157,14 +307,24 @@
     "type": "museum",
     "city": "Essen",
     "district": "Südviertel",
-    "address": {"street": "Museumsplatz 1", "zip": "45128", "city": "Essen", "lat": 51.4425294, "lng": 7.0047432},
+    "address": {
+      "street": "Museumsplatz 1",
+      "zip": "45128",
+      "city": "Essen",
+      "lat": 51.4425294,
+      "lng": 7.0047432
+    },
     "website": "https://www.museum-folkwang.de/",
     "features": {
       "hasPermanentCollection": true,
       "hasReferenceLibrary": true,
       "libraryNotes": "Bibliothek mit über 50.000 Werken, u. a. zu Fotografie; Benutzung vor Ort nach Anmeldung Di–Fr; Fotografien und Grafik donnerstags nach Anmeldung einsehbar."
     },
-    "source": {"url": "https://www.museum-folkwang.de/en/library", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "source": {
+      "url": "https://www.museum-folkwang.de/en/exhibitions",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "ruhr-museum-essen",
@@ -173,10 +333,23 @@
     "type": "museum",
     "city": "Essen",
     "district": "Stoppenberg",
-    "address": {"street": "Gelsenkirchener Straße 181", "zip": "45309", "city": "Essen", "lat": 51.485864, "lng": 7.0421874},
+    "address": {
+      "street": "Gelsenkirchener Straße 181",
+      "zip": "45309",
+      "city": "Essen",
+      "lat": 51.485864,
+      "lng": 7.0421874
+    },
     "website": "https://ruhrmuseum.de/",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://ruhrmuseum.de/en/museum/collections/photography", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://ruhrmuseum.de/en/museum/collections/photography",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "isg-fotoarchiv-gelsenkirchen",
@@ -185,10 +358,23 @@
     "type": "library_archive",
     "city": "Gelsenkirchen",
     "district": "Ückendorf",
-    "address": {"street": "Munscheidstraße 14", "zip": "45886", "city": "Gelsenkirchen", "lat": 51.4990939, "lng": 7.1075317},
+    "address": {
+      "street": "Munscheidstraße 14",
+      "zip": "45886",
+      "city": "Gelsenkirchen",
+      "lat": 51.4990939,
+      "lng": 7.1075317
+    },
     "website": "https://www.archive.nrw.de/stadtarchiv-gelsenkirchen/foto-und-filmarchiv",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.archive.nrw.de/stadtarchiv-gelsenkirchen/foto-und-filmarchiv", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.archive.nrw.de/stadtarchiv-gelsenkirchen/foto-und-filmarchiv",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "museum-ostwall-dortmund",
@@ -196,10 +382,23 @@
     "shortName": "Museum Ostwall",
     "type": "museum",
     "city": "Dortmund",
-    "address": {"street": "Leonie-Reygers-Terrasse", "zip": "44137", "city": "Dortmund", "lat": 51.5151627, "lng": 7.4536964},
+    "address": {
+      "street": "Leonie-Reygers-Terrasse",
+      "zip": "44137",
+      "city": "Dortmund",
+      "lat": 51.5151627,
+      "lng": 7.4536964
+    },
     "website": "https://dortmunder-u.de/museum-ostwall/",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://dortmunder-u.de/museum-ostwall/", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://dortmunder-u.de/museum-ostwall/",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "galerie-m-duisburg",
@@ -208,10 +407,23 @@
     "type": "gallery",
     "city": "Duisburg",
     "district": "Dellviertel",
-    "address": {"street": "Krummacherstraße 36", "zip": "47051", "city": "Duisburg", "lat": 51.4284151, "lng": 6.7626874},
+    "address": {
+      "street": "Krummacherstraße 36",
+      "zip": "47051",
+      "city": "Duisburg",
+      "lat": 51.4284151,
+      "lng": 6.7626874
+    },
     "website": "https://www.galerie-m.com/",
-    "features": {"hasPermanentCollection": false, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.galerie-m.com/exposition.php", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.galerie-m.com/exposition.php",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "museum-dkm-duisburg",
@@ -220,10 +432,23 @@
     "type": "museum",
     "city": "Duisburg",
     "district": "Dellviertel",
-    "address": {"street": "Güntherstraße 13–15", "zip": "47051", "city": "Duisburg", "lat": 51.4286034, "lng": 6.769885},
+    "address": {
+      "street": "Güntherstraße 13–15",
+      "zip": "47051",
+      "city": "Duisburg",
+      "lat": 51.4286034,
+      "lng": 6.769885
+    },
     "website": "https://museumdkm.de/",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.ruhrgebiet-kultur.de/ruhrgebiet/ausstellung/museum-dkm-duisburg", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.ruhrgebiet-kultur.de/ruhrgebiet/ausstellung/museum-dkm-duisburg",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "lvr-landesmuseum-bonn-fotosammlung",
@@ -232,10 +457,23 @@
     "type": "museum",
     "city": "Bonn",
     "district": "Weststadt",
-    "address": {"street": "Colmantstraße 14–16", "zip": "53115", "city": "Bonn", "lat": 50.7321966, "lng": 7.0931343},
+    "address": {
+      "street": "Colmantstraße 14–16",
+      "zip": "53115",
+      "city": "Bonn",
+      "lat": 50.7321966,
+      "lng": 7.0931343
+    },
     "website": "https://landesmuseum-bonn.lvr.de/",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://www.archive.nrw.de/fotografische-sammlung-im-lvr-landesmuseum-bonn", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.archive.nrw.de/fotografische-sammlung-im-lvr-landesmuseum-bonn",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   },
   {
     "id": "museum-schloss-moyland",
@@ -244,9 +482,22 @@
     "type": "museum",
     "city": "Bedburg-Hau",
     "district": "Moyland",
-    "address": {"street": "Am Schloss 4", "zip": "47551", "city": "Bedburg-Hau", "lat": 51.7552962, "lng": 6.2368056},
+    "address": {
+      "street": "Am Schloss 4",
+      "zip": "47551",
+      "city": "Bedburg-Hau",
+      "lat": 51.7552962,
+      "lng": 6.2368056
+    },
     "website": "https://moyland.de/",
-    "features": {"hasPermanentCollection": true, "hasReferenceLibrary": false},
-    "source": {"url": "https://moyland.de/joseph-beuys-archiv/museumsbibliothek/", "checkedAt": "2026-10-27", "status": "recherchiert"}
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://moyland.de/joseph-beuys-archiv/museumsbibliothek/",
+      "checkedAt": "2026-10-27",
+      "status": "recherchiert"
+    }
   }
 ]

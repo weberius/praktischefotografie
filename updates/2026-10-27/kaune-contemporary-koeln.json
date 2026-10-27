@@ -1,0 +1,32 @@
+{
+  "venueId": "kaune-contemporary-koeln",
+  "fetchedAt": "2026-10-27",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "kaune-contemporary-koeln",
+        "title": "ANTHROPOSCAPE",
+        "startDate": "2026-09-16",
+        "endDate": "2026-10-30",
+        "type": "solo",
+        "photographerIds": [
+          "hans-georg-esch"
+        ],
+        "description": "Künstler-Edition als Buchskulptur mit 226 Architekturfotografien von Hans Georg Esch.",
+        "id": "anthroposcape-2026"
+      },
+      "evidence": {
+        "url": "https://www.kaunegallery.com/exhibitions/hg-esch-anthroposcape/",
+        "excerpt": "HG Esch ANTHROPOSCAPE 16.09.2026 – 30.10.2026 Eine Buchskulptur — die umfassendste Werkschau des Architekturfotografen Hans Georg Esch Fast vier Jahrz"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    }
+  ],
+  "rejected": []
+}

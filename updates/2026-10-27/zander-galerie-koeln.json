@@ -1,0 +1,91 @@
+{
+  "venueId": "zander-galerie-koeln",
+  "fetchedAt": "2026-10-27",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Tina Barney",
+        "id": "tina-barney"
+      },
+      "evidence": {
+        "url": "https://zandergalerie.com/exhibitions/silver-shadows-a54844c5/",
+        "excerpt": "Tina Barney Silver Shadows August 29, 2026 - October 30,"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c2",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Candida Höfer",
+        "id": "candida-hoefer"
+      },
+      "evidence": {
+        "url": "https://zandergalerie.com/exhibitions/between-238e989f/",
+        "excerpt": "Candida Höfer Between November 7, 2026 - February 1"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c3",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "zander-galerie-koeln",
+        "title": "Silver Shadows",
+        "startDate": "2026-08-29",
+        "endDate": "2026-10-30",
+        "type": "solo",
+        "photographerIds": [
+          "tina-barney"
+        ],
+        "description": "Erste Ausstellung der Fotografin Tina Barney in der Galerie mit zwei Schwarzweiß-Werkgruppen und dem Kurzfilm Family Portraits.",
+        "id": "silver-shadows-2026"
+      },
+      "evidence": {
+        "url": "https://zandergalerie.com/exhibitions/silver-shadows-a54844c5/",
+        "excerpt": "Tina Barney Silver Shadows August 29, 2026 - October 30, 2026 Zander Galerie Cologne Opening: Saturday, 29 August "
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c4",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "zander-galerie-koeln",
+        "title": "Between",
+        "startDate": "2026-11-07",
+        "endDate": "2027-02-19",
+        "type": "solo",
+        "photographerIds": [
+          "candida-hoefer"
+        ],
+        "description": "Farbfotografien von Candida Höfer von 1983 bis 2021 zu räumlichen Übergangssituationen.",
+        "id": "between-2026"
+      },
+      "evidence": {
+        "url": "https://zandergalerie.com/exhibitions/between-238e989f/",
+        "excerpt": "Candida Höfer Between November 7, 2026 - February 19, 2027 Zander Galerie Cologne Opening: Saturday, 7 November"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    }
+  ],
+  "rejected": []
+}

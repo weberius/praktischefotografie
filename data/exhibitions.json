@@ -1,1 +1,160 @@
-[]
+[
+  {
+    "venueId": "makk-koeln",
+    "title": "Der architektonische Blick. epochal – global",
+    "startDate": "2026-06-11",
+    "endDate": "2027-01-17",
+    "type": "solo",
+    "photographerIds": [
+      "hans-georg-esch"
+    ],
+    "description": "Zweite umfassende Museumsausstellung des Architekturfotografen Hans Georg Esch mit großformatigen Bildern und Bildserien zur Architektur weltweit.",
+    "id": "der-architektonische-blick-epochal-global-2026"
+  },
+  {
+    "venueId": "fotografie-forum-monschau",
+    "title": "MYSTERIUM DER PAARE",
+    "startDate": "2026-08-09",
+    "endDate": "2026-11-01",
+    "type": "group",
+    "photographerIds": [],
+    "description": "Rund 130 fotografische Arbeiten zum Thema Begegnung, darunter Martin Parr, Richard Kalvar und Elliott Erwitt.",
+    "id": "mysterium-der-paare-2026"
+  },
+  {
+    "venueId": "fotografie-forum-monschau",
+    "title": "JÜRGEN KLAUKE",
+    "startDate": "2026-11-08",
+    "endDate": "2026-12-20",
+    "type": "solo",
+    "photographerIds": [
+      "juergen-klauke"
+    ],
+    "description": "Begleitende Ausstellung zum Kunstpreis des Fotografie-Forums für den Foto- und Medienkünstler Jürgen Klauke.",
+    "id": "juergen-klauke-2026"
+  },
+  {
+    "venueId": "museum-ludwig-koeln",
+    "title": "Sammlung Fotografie: Man Ray: Kiki",
+    "startDate": "2026-10-31",
+    "endDate": "2027-06-13",
+    "type": "solo",
+    "photographerIds": [
+      "man-ray"
+    ],
+    "description": "Präsentation in den Fotoräumen des Museum Ludwig.",
+    "id": "sammlung-fotografie-man-ray-kiki-2026"
+  },
+  {
+    "venueId": "museum-ludwig-koeln",
+    "title": "HIER UND JETZT im Museum Ludwig. De/Collecting Memories from Turtle Island",
+    "startDate": "2026-02-07",
+    "endDate": "2026-11-08",
+    "type": "group",
+    "photographerIds": [
+      "wendy-red-star",
+      "william-henry-jackson"
+    ],
+    "description": "Ausgangspunkt ist ein Konvolut von Fotochromen der Detroit Publishing Company, kombiniert mit Positionen von Marie Watt und Wendy Red Star.",
+    "id": "hier-und-jetzt-im-museum-ludwig-de-collecting-memories-from-turtle-island-2026"
+  },
+  {
+    "venueId": "photographische-sammlung-koeln",
+    "title": "August Sander – Zum 150. Geburtstag",
+    "startDate": "2026-09-11",
+    "endDate": "2027-01-24",
+    "type": "solo",
+    "photographerIds": [
+      "august-sander"
+    ],
+    "id": "august-sander-zum-150-geburtstag-2026"
+  },
+  {
+    "venueId": "photobookmuseum-koeln",
+    "title": "All PhotoBooks by Duane Michals",
+    "startDate": "2026-09-25",
+    "endDate": "2026-11-21",
+    "type": "retrospective",
+    "photographerIds": [
+      "duane-michals"
+    ],
+    "description": "Mehr als 80 Fotobücher von Duane Michals aus der Sammlung von Tim Soter, gezeigt in THE BOX.",
+    "id": "all-photobooks-by-duane-michals-2026"
+  },
+  {
+    "venueId": "zander-galerie-koeln",
+    "title": "Silver Shadows",
+    "startDate": "2026-08-29",
+    "endDate": "2026-10-30",
+    "type": "solo",
+    "photographerIds": [
+      "tina-barney"
+    ],
+    "description": "Erste Ausstellung der Fotografin Tina Barney in der Galerie mit zwei Schwarzweiß-Werkgruppen und dem Kurzfilm Family Portraits.",
+    "id": "silver-shadows-2026"
+  },
+  {
+    "venueId": "zander-galerie-koeln",
+    "title": "Between",
+    "startDate": "2026-11-07",
+    "endDate": "2027-02-19",
+    "type": "solo",
+    "photographerIds": [
+      "candida-hoefer"
+    ],
+    "description": "Farbfotografien von Candida Höfer von 1983 bis 2021 zu räumlichen Übergangssituationen.",
+    "id": "between-2026"
+  },
+  {
+    "venueId": "galerie-lichtblick-koeln",
+    "title": "CROWDS",
+    "startDate": "2026-10-03",
+    "endDate": "2026-11-22",
+    "type": "solo",
+    "photographerIds": [
+      "wolfgang-zurborn"
+    ],
+    "description": "Farbfotografien der 1980er und 1990er Jahre von Menschengruppen bei Veranstaltungen, zugleich Buchprojekt (Kehrer Verlag).",
+    "id": "crowds-2026"
+  },
+  {
+    "venueId": "kaune-contemporary-koeln",
+    "title": "ANTHROPOSCAPE",
+    "startDate": "2026-09-16",
+    "endDate": "2026-10-30",
+    "type": "solo",
+    "photographerIds": [
+      "hans-georg-esch"
+    ],
+    "description": "Künstler-Edition als Buchskulptur mit 226 Architekturfotografien von Hans Georg Esch.",
+    "id": "anthroposcape-2026"
+  },
+  {
+    "venueId": "museum-folkwang-essen",
+    "title": "HERBERT W. FRANKE / GOTTFRIED JÄGER",
+    "startDate": "2026-10-16",
+    "endDate": "2027-01-10",
+    "type": "group",
+    "photographerIds": [
+      "herbert-w-franke",
+      "gottfried-jaeger"
+    ],
+    "description": "Experimentelle, gegenstandslose Fotografie: künstlerischer Austausch zwischen Gottfried Jäger und Herbert W. Franke über Jahrzehnte.",
+    "id": "herbert-w-franke-gottfried-jaeger-2026"
+  },
+  {
+    "venueId": "museum-folkwang-essen",
+    "title": "PHOTOGRAPHY MASTERS",
+    "startDate": "2026-10-16",
+    "endDate": "2027-01-10",
+    "type": "group",
+    "photographerIds": [
+      "florian-faeth",
+      "mara-fischer",
+      "patrick-lohse",
+      "nina-mokhtarbaf"
+    ],
+    "description": "Auswahl von Arbeiten von Absolvent:innen des Masterstudiengangs Photography Studies & Practice der Folkwang Universität der Künste.",
+    "id": "photography-masters-2026"
+  }
+]

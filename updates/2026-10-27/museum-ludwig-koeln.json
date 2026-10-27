@@ -1,0 +1,109 @@
+{
+  "venueId": "museum-ludwig-koeln",
+  "fetchedAt": "2026-10-27",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Man Ray",
+        "id": "man-ray"
+      },
+      "evidence": {
+        "url": "https://www.museum-ludwig.de/",
+        "excerpt": "Man Ray: KikiSchultze Projects #5 Jana Eule"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c2",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Wendy Red Star",
+        "id": "wendy-red-star"
+      },
+      "evidence": {
+        "url": "https://www.museum-ludwig.de/de/ausstellungen/hier-und-jetzt-im-museum-ludwig-de/collecting-memories-from-turtle-island",
+        "excerpt": "Wendy Red Star (geb. 1981) greifen auf humorvoll-satiris"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c3",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "William Henry Jackson",
+        "id": "william-henry-jackson"
+      },
+      "evidence": {
+        "url": "https://www.museum-ludwig.de/de/ausstellungen/hier-und-jetzt-im-museum-ludwig-de/collecting-memories-from-turtle-island",
+        "excerpt": "William Henry Jackson, Royal Gorge of the Arkansas "
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c4",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "museum-ludwig-koeln",
+        "title": "Sammlung Fotografie: Man Ray: Kiki",
+        "startDate": "2026-10-31",
+        "endDate": "2027-06-13",
+        "type": "solo",
+        "photographerIds": [
+          "man-ray"
+        ],
+        "description": "Präsentation in den Fotoräumen des Museum Ludwig.",
+        "id": "sammlung-fotografie-man-ray-kiki-2026"
+      },
+      "evidence": {
+        "url": "https://www.museum-ludwig.de/",
+        "excerpt": "Sammlung Fotografie: Man Ray: Kiki 31.10.2026 – 13.6.2027 Präsentation in den Fotoräume"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c5",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "museum-ludwig-koeln",
+        "title": "HIER UND JETZT im Museum Ludwig. De/Collecting Memories from Turtle Island",
+        "startDate": "2026-02-07",
+        "endDate": "2026-11-08",
+        "type": "group",
+        "photographerIds": [
+          "wendy-red-star",
+          "william-henry-jackson"
+        ],
+        "description": "Ausgangspunkt ist ein Konvolut von Fotochromen der Detroit Publishing Company, kombiniert mit Positionen von Marie Watt und Wendy Red Star.",
+        "id": "hier-und-jetzt-im-museum-ludwig-de-collecting-memories-from-turtle-island-2026"
+      },
+      "evidence": {
+        "url": "https://www.museum-ludwig.de/de/ausstellungen/hier-und-jetzt-im-museum-ludwig-de/collecting-memories-from-turtle-island",
+        "excerpt": "HIER UND JETZT im Museum Ludwig. De/Collecting Memories from Turtle Island 7. Februar – 8. November 2026Mit der umfangreichsten Pop Ar"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    }
+  ],
+  "rejected": []
+}

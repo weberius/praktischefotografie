@@ -1,0 +1,73 @@
+{
+  "venueId": "photobookmuseum-koeln",
+  "fetchedAt": "2026-10-27",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Duane Michals",
+        "id": "duane-michals"
+      },
+      "evidence": {
+        "url": "https://www.thephotobookmuseum.com/de/allcategories-de-de/2-uncategorised/14-the-box-programm-de",
+        "excerpt": "Duane Michals (1932–2026) revolutionierte die Fotografi"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c2",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "photobookmuseum-koeln",
+        "title": "All PhotoBooks by Duane Michals",
+        "startDate": "2026-09-25",
+        "endDate": "2026-11-21",
+        "type": "retrospective",
+        "photographerIds": [
+          "duane-michals"
+        ],
+        "description": "Mehr als 80 Fotobücher von Duane Michals aus der Sammlung von Tim Soter, gezeigt in THE BOX.",
+        "id": "all-photobooks-by-duane-michals-2026"
+      },
+      "evidence": {
+        "url": "https://www.thephotobookmuseum.com/de/allcategories-de-de/2-uncategorised/14-the-box-programm-de",
+        "excerpt": "25.09. – 21.11.2026 Das PhotoBookMuseum präsentiert mit „All PhotoBooks by Duane Michals“ eine außergewöhnliche Retrosp"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c3",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Ein Abend mit Tim Soter",
+        "eventType": "talk",
+        "startDate": "2026-11-07",
+        "endDate": "2026-11-07",
+        "venueId": "photobookmuseum-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Vortrag des Fotografen und Buchgestalters Tim Soter über seine Arbeit und seine Zeit mit Duane Michals.",
+        "id": "ein-abend-mit-tim-soter-2026"
+      },
+      "evidence": {
+        "url": "https://www.thephotobookmuseum.com/de/allcategories-de-de/2-uncategorised/14-the-box-programm-de",
+        "excerpt": "Ein Abend mit Tim Soter 07.11.2026 ab 20 Uhr Der Fotograf und Buchgestalter Tim Soter kommt aus Brooklyn, NYC, um einen Vortrag über seine Arbeit und seine Z"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    }
+  ],
+  "rejected": []
+}

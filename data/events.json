@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "Ein Abend mit Tim Soter",
+    "eventType": "talk",
+    "startDate": "2026-11-07",
+    "endDate": "2026-11-07",
+    "venueId": "photobookmuseum-koeln",
+    "city": "Köln",
+    "isCommercial": false,
+    "description": "Vortrag des Fotografen und Buchgestalters Tim Soter über seine Arbeit und seine Zeit mit Duane Michals.",
+    "id": "ein-abend-mit-tim-soter-2026"
+  }
+]

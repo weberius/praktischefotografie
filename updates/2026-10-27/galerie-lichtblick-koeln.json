@@ -1,0 +1,49 @@
+{
+  "venueId": "galerie-lichtblick-koeln",
+  "fetchedAt": "2026-10-27",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Wolfgang Zurborn",
+        "id": "wolfgang-zurborn"
+      },
+      "evidence": {
+        "url": "https://www.lichtblicknet.com/aktuell/index.html",
+        "excerpt": "Wolfgang Zurborn - CROWDS 3. Oktober - 22. November 2026 Eröffnung und Buchvorstellung: Samstag 3. Oktober, 19 Uhr Das B"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c2",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "galerie-lichtblick-koeln",
+        "title": "CROWDS",
+        "startDate": "2026-10-03",
+        "endDate": "2026-11-22",
+        "type": "solo",
+        "photographerIds": [
+          "wolfgang-zurborn"
+        ],
+        "description": "Farbfotografien der 1980er und 1990er Jahre von Menschengruppen bei Veranstaltungen, zugleich Buchprojekt (Kehrer Verlag).",
+        "id": "crowds-2026"
+      },
+      "evidence": {
+        "url": "https://www.lichtblicknet.com/aktuell/index.html",
+        "excerpt": "Wolfgang Zurborn - CROWDS 3. Oktober - 22. November 2026 Eröffnung und Buchvorstellung: Samstag 3. Oktober, 19 Uhr Das B"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    }
+  ],
+  "rejected": []
+}

@@ -224,3 +224,17 @@ npm run quality      # axe, Tastatur, Netzwerk, SEO, Lighthouse gegen den Demo-B
 ```
 
 `demo/` enthält erkennbar fiktive Beispieldaten (`demo-`-IDs, Titel mit „[Demo]“). Sie erscheinen nie im Produktionsbuild.
+
+---
+
+## 🔄 Daten aus Webseiten aktualisieren
+
+Der Skill `/update-venue-data` (Claude Code) ruft die Webseiten der Orte rücksichtsvoll ab (`robots.txt`, 2 s Abstand, höchstens 6 Seiten je Ort), erstellt Vorschläge mit Fundstelle und übernimmt sie erst nach Freigabe.
+
+```bash
+export SCRAPE_CONTACT="redaktion@example.org"   # Kontaktadresse für den User-Agent
+/update-venue-data                              # alle Orte (in Claude Code)
+/update-venue-data --venue makk-koeln           # ein Ort
+```
+
+Die einzelnen Schritte (`npm run data:fetch|check|report|apply`) und das Vorschlagsformat stehen in [`updates/README.md`](updates/README.md). Abgerufene Seitentexte liegen nur lokal unter `.cache/` und werden nicht versioniert.

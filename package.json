@@ -11,14 +11,20 @@
     "build": "npm --prefix web run build",
     "web:lint": "npm --prefix web run lint",
     "web:test": "npm --prefix web test",
-    "lint:all": "npm run lint && npm run web:lint"
+    "lint:all": "npm run lint && npm run web:lint",
+    "data:fetch": "node scripts/scrape/fetch-venues.mjs",
+    "data:check": "node scripts/scrape/check-proposals.mjs",
+    "data:apply": "node scripts/scrape/apply-proposals.mjs",
+    "data:report": "node scripts/scrape/report.mjs"
   },
   "engines": {
     "node": ">=20"
   },
   "dependencies": {
     "ajv": "^8.20.0",
-    "ajv-formats": "^3.0.1"
+    "ajv-formats": "^3.0.1",
+    "cheerio": "^1.2.0",
+    "robots-parser": "^3.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

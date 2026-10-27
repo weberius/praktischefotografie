@@ -1,0 +1,47 @@
+{
+  "venueId": "museum-schloss-moyland",
+  "fetchedAt": "2026-10-27",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Katharina Sieverding",
+        "id": "katharina-sieverding"
+      },
+      "evidence": {
+        "url": "https://moyland.de/ausstellungen/katharina-sieverding-im-dialog-mit-joseph-beuys/",
+        "excerpt": "Katharina Sieverding im Dialog mit Joseph Beuys 11.10.2026–8.2.2027"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": false
+    },
+    {
+      "id": "c2",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "museum-schloss-moyland",
+        "title": "Katharina Sieverding im Dialog mit Joseph Beuys",
+        "startDate": "2026-10-11",
+        "endDate": "2027-02-08",
+        "type": "group",
+        "photographerIds": [
+          "katharina-sieverding"
+        ],
+        "description": "Die Ausstellung umfasst rund 140 Werke von Katharina Sieverding und Joseph Beuys, darunter Fotografien, Zeichnungen, Film- und Diaprojektionen.",
+        "id": "katharina-sieverding-im-dialog-mit-joseph-beuys-2026"
+      },
+      "evidence": {
+        "url": "https://moyland.de/ausstellungen/katharina-sieverding-im-dialog-mit-joseph-beuys/",
+        "excerpt": "Katharina Sieverding im Dialog mit Joseph Beuys 11.10.2026–8.2.2027"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": false
+    }
+  ],
+  "rejected": []
+}

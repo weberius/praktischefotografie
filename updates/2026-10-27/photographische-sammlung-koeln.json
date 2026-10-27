@@ -1,0 +1,48 @@
+{
+  "venueId": "photographische-sammlung-koeln",
+  "fetchedAt": "2026-10-27",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "August Sander",
+        "id": "august-sander"
+      },
+      "evidence": {
+        "url": "https://photographie-stiftungkultur.de/ausstellungen",
+        "excerpt": "August Sander – Zum 150. Geburtstag Die Photographische Sammlung/"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c2",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "photographische-sammlung-koeln",
+        "title": "August Sander – Zum 150. Geburtstag",
+        "startDate": "2026-09-11",
+        "endDate": "2027-01-24",
+        "type": "solo",
+        "photographerIds": [
+          "august-sander"
+        ],
+        "id": "august-sander-zum-150-geburtstag-2026"
+      },
+      "evidence": {
+        "url": "https://photographie-stiftungkultur.de/ausstellungen",
+        "excerpt": "August Sander – Zum 150. Geburtstag Die Photographische Sammlung/ Stiftung Kultur der Sparkasse KölnBonn Im Mediapark 7 50670 Köln 11. September 2026 - 24. Januar 2027 Mehr erfahren Rückblick Filte"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    }
+  ],
+  "rejected": []
+}

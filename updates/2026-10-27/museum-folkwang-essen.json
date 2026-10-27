@@ -1,0 +1,207 @@
+{
+  "venueId": "museum-folkwang-essen",
+  "fetchedAt": "2026-10-27",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Herbert W. Franke",
+        "id": "herbert-w-franke"
+      },
+      "evidence": {
+        "url": "https://www.museum-folkwang.de/en/exhibitions",
+        "excerpt": "HERBERT W. FRANKE / GOTTFRIED JÄGER Art and Construction The experimental years of non-representational photography were marked by debates and positio"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c2",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Gottfried Jäger",
+        "id": "gottfried-jaeger"
+      },
+      "evidence": {
+        "url": "https://www.museum-folkwang.de/en/exhibitions",
+        "excerpt": "HERBERT W. FRANKE / GOTTFRIED JÄGER Art and Construction The experimental years of non-representational photography were marked by debates and positio"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c3",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Florian Fäth",
+        "id": "florian-faeth"
+      },
+      "evidence": {
+        "url": "https://www.museum-folkwang.de/en/exhibitions",
+        "excerpt": "The exhibition features works by Florian Fäth, Mara Fischer, Patrick Lohse and Nina Mokhtarbaf. Upcoming Vase (jarrón, F"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c4",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Mara Fischer",
+        "id": "mara-fischer"
+      },
+      "evidence": {
+        "url": "https://www.museum-folkwang.de/en/exhibitions",
+        "excerpt": "The exhibition features works by Florian Fäth, Mara Fischer, Patrick Lohse and Nina Mokhtarbaf. Upcoming Vase (jarrón, F"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c5",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Patrick Lohse",
+        "id": "patrick-lohse"
+      },
+      "evidence": {
+        "url": "https://www.museum-folkwang.de/en/exhibitions",
+        "excerpt": "The exhibition features works by Florian Fäth, Mara Fischer, Patrick Lohse and Nina Mokhtarbaf. Upcoming Vase (jarrón, F"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c6",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Nina Mokhtarbaf",
+        "id": "nina-mokhtarbaf"
+      },
+      "evidence": {
+        "url": "https://www.museum-folkwang.de/en/exhibitions",
+        "excerpt": "The exhibition features works by Florian Fäth, Mara Fischer, Patrick Lohse and Nina Mokhtarbaf. Upcoming Vase (jarrón, F"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c7",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "museum-folkwang-essen",
+        "title": "HERBERT W. FRANKE / GOTTFRIED JÄGER",
+        "startDate": "2026-10-16",
+        "endDate": "2027-01-10",
+        "type": "group",
+        "photographerIds": [
+          "herbert-w-franke",
+          "gottfried-jaeger"
+        ],
+        "description": "Experimentelle, gegenstandslose Fotografie: künstlerischer Austausch zwischen Gottfried Jäger und Herbert W. Franke über Jahrzehnte.",
+        "id": "herbert-w-franke-gottfried-jaeger-2026"
+      },
+      "evidence": {
+        "url": "https://www.museum-folkwang.de/en/exhibitions",
+        "excerpt": "HERBERT W. FRANKE / GOTTFRIED JÄGER Art and Construction The experimental years of non-representational photography were marked by debates and position statements articulated by a young generation. Af"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c8",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "museum-folkwang-essen",
+        "title": "PHOTOGRAPHY MASTERS",
+        "startDate": "2026-10-16",
+        "endDate": "2027-01-10",
+        "type": "group",
+        "photographerIds": [
+          "florian-faeth",
+          "mara-fischer",
+          "patrick-lohse",
+          "nina-mokhtarbaf"
+        ],
+        "description": "Auswahl von Arbeiten von Absolvent:innen des Masterstudiengangs Photography Studies & Practice der Folkwang Universität der Künste.",
+        "id": "photography-masters-2026"
+      },
+      "evidence": {
+        "url": "https://www.museum-folkwang.de/en/exhibitions",
+        "excerpt": "PHOTOGRAPHY MASTERS Folkwang University of the Arts The exhibition shows a selection of works by graduates of the master’s degree programme Photography Studies & Practice at the Folkwang University of"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c9",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Bildstrukturen zwischen Wissenschaft und Kunst– Gespräch mit Margarete Pratschke",
+        "eventType": "talk",
+        "startDate": "2026-11-19",
+        "endDate": "2026-11-19",
+        "venueId": "museum-folkwang-essen",
+        "city": "Essen",
+        "isCommercial": false,
+        "id": "bildstrukturen-zwischen-wissenschaft-und-kunst-gespraech-mit-margarete-pratschke-2026"
+      },
+      "evidence": {
+        "url": "https://www.museum-folkwang.de/en/exhibition/herbert-w-franke-gottfried-jager",
+        "excerpt": "Bildstrukturen zwischen Wissenschaft und Kunst– Gespräch mit Margarete Pratschke 19. Nov Thursday, 18:00 pm Talk GENERATIVES BATTLE – Gespräch mit Bernd Stiegle"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": false
+    },
+    {
+      "id": "c10",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "GENERATIVES BATTLE – Gespräch mit Bernd Stiegler und Adrian Sauer",
+        "eventType": "talk",
+        "startDate": "2026-12-04",
+        "endDate": "2026-12-04",
+        "venueId": "museum-folkwang-essen",
+        "city": "Essen",
+        "isCommercial": false,
+        "id": "generatives-battle-gespraech-mit-bernd-stiegler-und-adrian-sauer-2026"
+      },
+      "evidence": {
+        "url": "https://www.museum-folkwang.de/en/exhibition/herbert-w-franke-gottfried-jager",
+        "excerpt": "GENERATIVES BATTLE – Gespräch mit Bernd Stiegler und Adrian Sauer 04. Dec Friday, 18:00 pm Museumsplatz 1 45128 Essen T +49 201 8845 000 info@museum-folkwang.es"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": false
+    }
+  ],
+  "rejected": []
+}

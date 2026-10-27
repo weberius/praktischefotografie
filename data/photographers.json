@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "name": "Hans Georg Esch",
+    "bio": "Architekturfotograf, 1964 in Neuwied geboren.",
+    "id": "hans-georg-esch"
+  },
+  {
+    "name": "Jürgen Klauke",
+    "id": "juergen-klauke"
+  },
+  {
+    "name": "Man Ray",
+    "id": "man-ray"
+  },
+  {
+    "name": "Wendy Red Star",
+    "id": "wendy-red-star"
+  },
+  {
+    "name": "William Henry Jackson",
+    "id": "william-henry-jackson"
+  },
+  {
+    "name": "August Sander",
+    "id": "august-sander"
+  },
+  {
+    "name": "Duane Michals",
+    "id": "duane-michals"
+  },
+  {
+    "name": "Tina Barney",
+    "id": "tina-barney"
+  },
+  {
+    "name": "Candida Höfer",
+    "id": "candida-hoefer"
+  },
+  {
+    "name": "Wolfgang Zurborn",
+    "id": "wolfgang-zurborn"
+  },
+  {
+    "name": "Herbert W. Franke",
+    "id": "herbert-w-franke"
+  },
+  {
+    "name": "Gottfried Jäger",
+    "id": "gottfried-jaeger"
+  },
+  {
+    "name": "Florian Fäth",
+    "id": "florian-faeth"
+  },
+  {
+    "name": "Mara Fischer",
+    "id": "mara-fischer"
+  },
+  {
+    "name": "Patrick Lohse",
+    "id": "patrick-lohse"
+  },
+  {
+    "name": "Nina Mokhtarbaf",
+    "id": "nina-mokhtarbaf"
+  }
+]

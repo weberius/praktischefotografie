@@ -59,3 +59,6 @@ Thumbs.db
 # --- Webanwendung: Build-Artefakte (Datensync, siehe ADR-003) ---
 /web/public/data/
 /web/public/content/
+
+# --- Datenaktualisierung: abgerufene Seiten (Snapshots), nicht versionieren (ADR-006) ---
+/.cache/

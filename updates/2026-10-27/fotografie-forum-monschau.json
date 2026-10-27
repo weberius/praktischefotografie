@@ -1,0 +1,72 @@
+{
+  "venueId": "fotografie-forum-monschau",
+  "fetchedAt": "2026-10-27",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "name": "Jürgen Klauke",
+        "id": "juergen-klauke"
+      },
+      "evidence": {
+        "url": "https://www.kuk-monschau.de/index.php/ausstellungen/ausstellungen-2026/94-j%C3%BCrgen-klauke-08-11-2026%E2%80%9320-12-2026.html",
+        "excerpt": "JÜRGEN KLAUKE (08.11.2026–20.12.2026) Jürgen Klauke, aus Physiognom"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c2",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "fotografie-forum-monschau",
+        "title": "MYSTERIUM DER PAARE",
+        "startDate": "2026-08-09",
+        "endDate": "2026-11-01",
+        "type": "group",
+        "photographerIds": [],
+        "description": "Rund 130 fotografische Arbeiten zum Thema Begegnung, darunter Martin Parr, Richard Kalvar und Elliott Erwitt.",
+        "id": "mysterium-der-paare-2026"
+      },
+      "evidence": {
+        "url": "https://www.kuk-monschau.de/index.php/ausstellungen/ausstellungen-2026/93-mysterium-der-paare-09-08-2026%E2%80%9301-11-2026.html",
+        "excerpt": "MYSTERIUM DER PAARE (09.08.2026–01.11.2026) Martin Parr, France, Paris, F"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    },
+    {
+      "id": "c3",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "fotografie-forum-monschau",
+        "title": "JÜRGEN KLAUKE",
+        "startDate": "2026-11-08",
+        "endDate": "2026-12-20",
+        "type": "solo",
+        "photographerIds": [
+          "juergen-klauke"
+        ],
+        "description": "Begleitende Ausstellung zum Kunstpreis des Fotografie-Forums für den Foto- und Medienkünstler Jürgen Klauke.",
+        "id": "juergen-klauke-2026"
+      },
+      "evidence": {
+        "url": "https://www.kuk-monschau.de/index.php/ausstellungen/ausstellungen-2026/94-j%C3%BCrgen-klauke-08-11-2026%E2%80%9320-12-2026.html",
+        "excerpt": "JÜRGEN KLAUKE (08.11.2026–20.12.2026) Jürgen Klauke, aus Physiognom"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-27"
+    }
+  ],
+  "rejected": []
+}

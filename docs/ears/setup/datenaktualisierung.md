@@ -1,0 +1,19 @@
+# EARS: Aktualisierung der Daten aus Webseiten (Kürzel `UPD`)
+
+**Bereich:** setup  ·  **Systemname:** Datenaktualisierung  ·  **Stand:** 2026-10-27
+
+Begriffe: „heute“ ist das aktuelle Datum; „Snapshot“ ist die lokal gespeicherte Fassung einer abgerufenen Seite; „Vorschlag“ ist eine noch nicht übernommene Änderung.
+
+| ID | Anforderung | Gherkin | Quality | ADR |
+| --- | --- | --- | --- | --- |
+| UPD-EV-1 | Wenn die Extraktion für einen Ort gestartet wird, soll die Datenaktualisierung eine Vorschlagsdatei `updates/<JJJJ-MM-TT>/<venue-id>.json` erzeugen, die je Änderung Datensatz, Feld, alten Wert, neuen Wert, Fundstelle (URL und Textauszug) und Art („ergänzt“ oder „geändert“) enthält. | `setup/datenaktualisierung.feature` · „Vorschlagsdatei wird erzeugt“ | Q-DATA-3 | ADR-007 |
+| UPD-UB-1 | Die Datenaktualisierung soll nur Änderungen vorschlagen, die den Schemas unter `schema/` entsprechen und die Felder von Orten sowie Ausstellungen und Events dieses Ortes und die damit verknüpften Fotograf:innen betreffen. | `setup/datenaktualisierung.feature` · „Nur schemakonforme Vorschläge“ | Q-DATA-1 | ADR-007 |
+| UPD-UB-2 | Die Datenaktualisierung soll keinen Vorschlag ohne Fundstelle aufnehmen, deren Textauszug den neuen Wert enthält. | `setup/datenaktualisierung.feature` · „Vorschlag ohne Fundstelle“ | Q-DATA-3 | ADR-007 |
+| UPD-UB-3 | Die Datenaktualisierung soll bestehende Werte nur mit ausdrücklicher Freigabe ändern; leere Felder darf sie nach Freigabe des Vorschlags füllen. | `setup/datenaktualisierung.feature` · „Keine Überschreibung ohne Freigabe“ | Q-DATA-3 | ADR-007 |
+| UPD-EV-2 | Wenn Vorschläge freigegeben und übernommen werden, soll die Datenaktualisierung die Änderungen in `data/*.json` schreiben, `source.url` auf die Fundstelle und `source.checkedAt` auf das Abrufdatum setzen und `source.status` unverändert lassen. | `setup/datenaktualisierung.feature` · „Freigegebene Vorschläge werden übernommen“ | Q-DATA-3 | ADR-007 |
+| UPD-UB-4 | Die Datenaktualisierung soll `source.status` nie auf „verifiziert“ setzen; Vorschläge für Orte mit diesem Status soll sie als „Konflikt“ kennzeichnen und nicht automatisch übernehmen. | `setup/datenaktualisierung.feature` · „Verifizierte Orte bleiben geschützt“ | Q-DATA-3 | ADR-007 |
+| UPD-UN-1 | Wenn die Validierung nach der Übernahme fehlschlägt, soll die Datenaktualisierung alle Änderungen dieser Übernahme zurücknehmen und die Validierungsfehler ausgeben. | `setup/datenaktualisierung.feature` · „Übernahme wird zurückgerollt“ | Q-DATA-1 | ADR-007 |
+| UPD-UB-5 | Die Datenaktualisierung soll keine Ausstellung oder kein Event vorschlagen, das mit gleichem Ort, Titel und Beginn bereits vorhanden ist, und für neue Datensätze eine eindeutige `id` in kebab-case bilden. | `setup/datenaktualisierung.feature` · „Keine Dubletten“ | Q-DATA-1 | ADR-007 |
+| UPD-EV-3 | Wenn ein Aktualisierungslauf endet, soll die Datenaktualisierung einen Bericht `updates/<JJJJ-MM-TT>/REPORT.md` mit Anzahl abgerufener, fehlgeschlagener und übersprungener Orte, Anzahl Vorschläge je Art und allen Konflikten schreiben. | `setup/datenaktualisierung.feature` · „Bericht am Laufende“ | Q-REL-1 | ADR-007 |
+| UPD-OP-1 | Wo `--venue <id>` angegeben ist, soll die Datenaktualisierung nur diesen Ort bearbeiten; ohne Angabe bearbeitet sie alle Orte. | `setup/datenaktualisierung.feature` · „Einzelner Ort oder alle“ | Q-PERF-5 | ADR-007 |
+| UPD-UN-2 | Wenn die angegebene `venue-id` nicht existiert, soll die Datenaktualisierung mit Exit-Code 1 enden und die gültigen IDs nennen. | `setup/datenaktualisierung.feature` · „Unbekannte Ort-ID“ | Q-MAIN-2 | ADR-007 |
