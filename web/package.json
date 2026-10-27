@@ -9,11 +9,12 @@
     "test": "ng test --watch=false --code-coverage",
     "lint": "ng lint",
     "build:demo": "node tools/sync-data.mjs --demo && ng build && node tools/postbuild.mjs",
-    "prestart": "node tools/sync-data.mjs --demo",
-    "pretest": "node tools/sync-data.mjs --demo",
-    "prebuild": "node tools/sync-data.mjs",
+    "prestart": "node tools/clean-strays.mjs && node tools/sync-data.mjs --demo",
+    "pretest": "node tools/clean-strays.mjs && node tools/sync-data.mjs --demo",
+    "prebuild": "node tools/clean-strays.mjs && node tools/sync-data.mjs",
     "postbuild": "node tools/postbuild.mjs",
-    "quality": "node tools/quality/run.mjs"
+    "quality": "node tools/quality/run.mjs",
+    "prelint": "node tools/clean-strays.mjs"
   },
   "prettier": {
     "printWidth": 100,
