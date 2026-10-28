@@ -60,3 +60,11 @@ Funktionalität: Profile der Fotograf:innen
     Wenn die Daten für die Webanwendung zusammengeführt werden
     Dann liegt das Portrait unter "portraits/martin-parr.jpg" in der Webanwendung
     Und das zusammengeführte Ergebnis ist valide
+
+  # EARS: PRF-UN-3
+  Szenario: Art passt zur Zahl der Personen
+    Angenommen eine Ausstellung der Art "solo" mit zwei Personen
+    Wenn die Daten validiert werden
+    Dann meldet die Validierung einen Fehler für "type"
+    Und eine Ausstellung der Art "group" mit einer Person wird ebenfalls gemeldet
+    Aber "retrospective" und "permanent" bestehen unabhängig von der Zahl der Personen

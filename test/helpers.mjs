@@ -23,7 +23,7 @@ export const exhibition = (over = {}) => ({
   title: 'Test',
   startDate: '2026-08-09',
   endDate: '2026-11-01',
-  type: 'group',
+  type: 'solo',
   photographerIds: ['martin-parr'],
   description: 'Ausstellung mit Arbeiten von Martin Parr.',
   ...over,

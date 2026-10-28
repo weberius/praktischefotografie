@@ -149,6 +149,9 @@ export function validateData({ dataDir = join(ROOT, 'data'), schemaDir = join(RO
   }
   for (const r of data.exhibitions ?? []) {
     if (r.festivalId) ref('exhibitions', r, 'festivalId', r.festivalId, festivalIds);
+    // Die Art `solo` bzw. `group` muss zur Zahl der Personen passen (PRF-UN-3); die Webanwendung leitet „Einzel-“ und „Gruppenausstellung“ daraus ab.
+    if (r.type === 'solo' && r.photographerIds.length > 1) errors.push(`exhibitions.json: ${r.id} type – "solo" erlaubt höchstens eine Person, verknüpft sind ${r.photographerIds.length}`);
+    if (r.type === 'group' && r.photographerIds.length < 2) errors.push(`exhibitions.json: ${r.id} type – "group" erfordert mindestens zwei Personen, verknüpft sind ${r.photographerIds.length}`);
     if (r.photographerIds.length > 0) {
       const description = norm(r.description);
       const names = r.photographerIds.map((id) => (data.photographers ?? []).find((x) => x.id === id)?.name).filter(Boolean);

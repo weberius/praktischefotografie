@@ -78,7 +78,7 @@ test('Szenario: Ungültige Lebensdaten und doppelter Name (PRF-UN-2)', () => {
 test('Szenario: Beschreibung nennt alle Fotograf:innen / ohne Namen (PRF-UB-4, Q-DATA-9)', () => {
   const s = validSet();
   s.photographers.push({ id: 'elliott-erwitt', name: 'Elliott Erwitt' });
-  s.exhibitions = [exhibition({ photographerIds: ['martin-parr', 'elliott-erwitt'], description: 'Arbeiten von MARTIN  Parr und Elliott Erwitt.' })];
+  s.exhibitions = [exhibition({ type: 'group', photographerIds: ['martin-parr', 'elliott-erwitt'], description: 'Arbeiten von MARTIN  Parr und Elliott Erwitt.' })];
   assert.deepEqual(validate(s, { portraitBytes: null }).errors, []);
   s.exhibitions[0].description = 'Arbeiten von Martin Parr.';
   assert.match(validate(s, { portraitBytes: null }).errors.join('\n'), /description – nennt "Elliott Erwitt" nicht/);
@@ -87,6 +87,7 @@ test('Szenario: Beschreibung nennt alle Fotograf:innen / ohne Namen (PRF-UB-4, Q
   delete s.exhibitions[0].description;
   assert.match(validate(s, { portraitBytes: null }).errors.join('\n'), /description – fehlt/);
   s.exhibitions[0].photographerIds = [];
+  s.exhibitions[0].type = 'solo';
   assert.deepEqual(validate(s, { portraitBytes: null }).errors, [], 'ohne Personen ist keine Beschreibung nötig');
 });
 
@@ -117,4 +118,21 @@ test('Q-DATA-7: ungültige Profile werden zu 100 % erkannt, gültige ergeben 0 F
   assert.ok(Object.keys(bad).length >= 8);
   assert.deepEqual(validate(withPerson()).errors, []);
   for (const [name, build] of Object.entries(bad)) await t.test(name, () => assert.ok(validate(build()).errors.length > 0));
+});
+
+test('Szenario: Art passt zur Zahl der Personen (PRF-UN-3, Q-DATA-11)', () => {
+  const people = (n) => Array.from({ length: n }, (_, i) => ({ id: `person-${i}`, name: `Person ${i}` }));
+  const set = (type, n) => {
+    const s = validSet();
+    s.photographers = people(n);
+    s.exhibitions = [exhibition({ type, photographerIds: s.photographers.map((p) => p.id), description: s.photographers.map((p) => p.name).join(', ') || 'Ohne Personen.' })];
+    return s;
+  };
+  const errors = (type, n) => validate(set(type, n), { portraitBytes: null }).errors.join('\n');
+  assert.match(errors('solo', 2), /type – "solo" erlaubt höchstens eine Person, verknüpft sind 2/);
+  assert.match(errors('group', 1), /type – "group" erfordert mindestens zwei Personen, verknüpft sind 1/);
+  assert.match(errors('group', 0), /type – "group" erfordert mindestens zwei Personen, verknüpft sind 0/);
+  for (const [type, n] of [['solo', 1], ['solo', 0], ['group', 2], ['group', 57], ['retrospective', 1], ['retrospective', 3], ['permanent', 3], ['permanent', 0]]) {
+    assert.deepEqual(validate(set(type, n), { portraitBytes: null }).errors, [], `${type} mit ${n}`);
+  }
 });

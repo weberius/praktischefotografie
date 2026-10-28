@@ -81,3 +81,8 @@ test('Skill nennt die Titelregel der Neuigkeiten (NWS-UB-7)', () => {
   assert.match(text, /`title` ist \*\*immer\*\* `expectedTitle`/);
   assert.match(text, /ohne Anlass/);
 });
+
+test('Skill nennt die Regel zur Art der Ausstellung (PRF-UN-3)', () => {
+  const text = skill();
+  assert.match(text, /`solo` bei höchstens einer Person, `group` bei mehreren/);
+});

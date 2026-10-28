@@ -76,8 +76,8 @@ test('Szenario: Vorschläge von Veranstaltern bleiben im eigenen Bereich (UPD-UB
       add('eigen', 'festivals', festival()),
       add('fremd', 'festivals', festival({ organizerId: 'anderer', title: 'Fremdes Festival 2027' }), 'Photoszene-Festival 2027 findet'),
       { id: 'ort', dataset: 'venues', recordId: 'makk-koeln', field: 'district', newValue: 'Altstadt', evidence: evidence('Photoszene Köln') },
-      add('ohnefestival', 'exhibitions', { venueId: 'makk-koeln', title: 'Neue Positionen', startDate: '2027-05-14', endDate: '2027-06-15', type: 'group', photographerIds: [] }, 'Ausstellung Neue Positionen'),
-      add('mitfestival', 'exhibitions', { venueId: 'makk-koeln', festivalId: 'photoszene-festival-2027', isOfficialFestivalPartner: true, title: 'Neue Positionen', startDate: '2027-05-14', endDate: '2027-06-15', type: 'group', photographerIds: [] }, 'Ausstellung Neue Positionen'),
+      add('ohnefestival', 'exhibitions', { venueId: 'makk-koeln', title: 'Neue Positionen', startDate: '2027-05-14', endDate: '2027-06-15', type: 'solo', photographerIds: [] }, 'Ausstellung Neue Positionen'),
+      add('mitfestival', 'exhibitions', { venueId: 'makk-koeln', festivalId: 'photoszene-festival-2027', isOfficialFestivalPartner: true, title: 'Neue Positionen', startDate: '2027-05-14', endDate: '2027-06-15', type: 'solo', photographerIds: [] }, 'Ausstellung Neue Positionen'),
       add('event', 'events', { venueId: 'makk-koeln', title: 'Neue Positionen', eventType: 'talk', startDate: '2027-05-14', endDate: '2027-05-14', city: 'Köln', isCommercial: false }, 'Neue Positionen'),
     ],
   });
@@ -176,7 +176,7 @@ test('Ausstellung, die ein Festival referenziert, bleibt nach Übernahme valide 
   const ws = workspace({
     changes: [
       add('fest', 'festivals', festival()),
-      add('ausst', 'exhibitions', { venueId: 'makk-koeln', festivalId: 'photoszene-festival-2027', isOfficialFestivalPartner: true, title: 'Neue Positionen', startDate: '2027-05-14', endDate: '2027-06-15', type: 'group', photographerIds: [] }, 'Ausstellung Neue Positionen'),
+      add('ausst', 'exhibitions', { venueId: 'makk-koeln', festivalId: 'photoszene-festival-2027', isOfficialFestivalPartner: true, title: 'Neue Positionen', startDate: '2027-05-14', endDate: '2027-06-15', type: 'solo', photographerIds: [] }, 'Ausstellung Neue Positionen'),
     ],
     set: { exhibitions: [exhibition()] },
   });

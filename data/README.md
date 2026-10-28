@@ -45,6 +45,7 @@ Drei Ebenen: **Venue** (Ort mit fester Adresse), **Organizer** (Veranstalter ohn
 
 - Pflicht: `id`, `name`. Studios und Duos stehen wie in den Quellen genannt. Namen sind (ohne Beachtung von Groß- und Kleinschreibung und Leerraum) eindeutig.
 - Aufgenommen werden Personen, deren Bilder in einer Ausstellung gezeigt werden, nicht Kurator:innen, Sammler:innen oder Musiker:innen.
+- Die Art `type` einer Ausstellung passt zur Zahl der Personen: `solo` bei höchstens einer, `group` bei mindestens zwei Personen; `retrospective` und `permanent` gelten unabhängig davon. Die Webanwendung zeigt daraus „Einzelausstellung“, „Gruppenausstellung“, „Retrospektive“ bzw. „Dauerausstellung“.
 - **Jede Ausstellung mit `photographerIds` hat eine `description`, die den Namen jeder verknüpften Person nennt** (die Datenprüfung meldet Verstöße).
 - Optionales Profil (vom Skill `/research-photographers`): `occupation` (Berufsbezeichnung nach Wikipedia), `life` (`from`, `to` oder `null`), `wikipedia` (`summary` mit 40 bis 90 Wörtern in eigener Formulierung, `sources` mit `lang` und `url` auf `<lang>.wikipedia.org`) und `portrait` (`file`, `width`, `height`, `source` auf `commons.wikimedia.org`, `credit`, `license`, optional `licenseUrl`).
 - Portraits liegen unter `data/portraits/`, höchstens 400 Pixel breit und 200 kB groß, und erscheinen in der Webanwendung unter `portraits/`. Die Webanwendung zeigt bei jedem Portrait Urheber, Lizenz und den Link zur Commons-Dateiseite, bei der Zusammenfassung die Quellenlinks und den Hinweis CC BY-SA.
