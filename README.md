@@ -238,3 +238,5 @@ export SCRAPE_CONTACT="redaktion@example.org"   # Kontaktadresse für den User-A
 ```
 
 Die einzelnen Schritte (`npm run data:fetch|check|report|apply`) und das Vorschlagsformat stehen in [`updates/README.md`](updates/README.md). Abgerufene Seitentexte liegen nur lokal unter `.cache/` und werden nicht versioniert.
+
+Bei jedem Lauf pflegt der Skill auch das Magazin: Zu neuen, eröffnenden, bald endenden und beendeten Ausstellungen entstehen Beiträge von 60 bis 80 Wörtern (`npm run news:plan|check|apply`). Sie werden vorab mit dem Datum des Anlasses angelegt, das Magazin zeigt sie erst an dem Tag, und sie werden erst nach Freigabe übernommen (Format und Regeln: [`updates/README.md`](updates/README.md)).

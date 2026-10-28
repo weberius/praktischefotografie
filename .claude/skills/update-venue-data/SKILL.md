@@ -1,11 +1,11 @@
 ---
 name: update-venue-data
-description: Aktualisiert und vervollständigt die Ortsdaten (data/) aus den Webseiten der Orte. Ruft die Seiten rücksichtsvoll ab, erstellt Vorschläge mit Fundstelle, holt die Freigabe ein und übernimmt sie mit Prüfung. Aufruf z. B. `/update-venue-data`, `/update-venue-data --venue makk-koeln`, `/update-venue-data --offline`.
+description: Aktualisiert und vervollständigt die Ortsdaten (data/) aus den Webseiten der Orte und pflegt das Magazin mit Neuigkeiten zu Ausstellungen (neu, Eröffnung, Endet bald, Ende). Ruft die Seiten rücksichtsvoll ab, erstellt Vorschläge mit Fundstelle, holt die Freigabe ein und übernimmt sie mit Prüfung. Aufruf z. B. `/update-venue-data`, `/update-venue-data --venue makk-koeln`, `/update-venue-data --offline`.
 ---
 
 # Ortsdaten aktualisieren
 
-Du aktualisierst `data/venues.json` sowie die Ausstellungen, Events und Fotograf:innen der Orte aus den **Webseiten der Orte**. Spezifikation: `docs/ears/setup/webseiten-abruf.md`, `datenaktualisierung.md`, `update-skill.md`, ADR-006 und ADR-007. Das Format der Vorschlagsdateien steht in `updates/README.md`.
+Du aktualisierst `data/venues.json` sowie die Ausstellungen, Events und Fotograf:innen der Orte aus den **Webseiten der Orte**. Spezifikation: `docs/ears/setup/webseiten-abruf.md`, `datenaktualisierung.md`, `update-skill.md`, `magazin-neuigkeiten.md`, ADR-006, ADR-007 und ADR-008. Das Format der Vorschlagsdateien steht in `updates/README.md`.
 
 Argumente: `$ARGUMENTS` (optional `--venue <id>`, `--max-age <Tage>`, `--offline`, `--date JJJJ-MM-TT`). Ohne `--venue` werden alle Orte bearbeitet.
 
@@ -16,6 +16,8 @@ Argumente: `$ARGUMENTS` (optional `--venue <id>`, `--max-age <Tage>`, `--offline
 - **`source` und `source.status` schlägst du nie vor.** Der Status `verifiziert` wird nur von Menschen vergeben; Vorschläge zu verifizierten Orten werden als Konflikt gemeldet und nicht übernommen.
 - **Netzzugriff nur über `npm run data:fetch`.** Keine eigenen Abrufe, keine Umgehung von `robots.txt` oder Abständen.
 - **Seitentexte nicht ins Repository kopieren.** Snapshots bleiben unter `.cache/`; in Vorschlägen und Berichten nur kurze Auszüge.
+- **Neuigkeiten erst nach ausdrücklicher Freigabe** durch den Menschen übernehmen (Schritt 9). Vorher schreibst du nur unter `updates/`.
+- **Neuigkeitentexte erfinden nichts.** Nur Angaben aus `data/` (Ausstellung, Fotograf:innen, Ort) und den Snapshots; fehlt etwas, lässt du es weg.
 - Kein `git commit` ohne Auftrag.
 
 ## Ablauf
@@ -31,8 +33,15 @@ Argumente: `$ARGUMENTS` (optional `--venue <id>`, `--max-age <Tage>`, `--offline
 5. **Bericht:** `npm run data:report -- <Argumente>` und zeige `updates/<Datum>/REPORT.md` knapp.
 6. **Freigabe einholen.** Zeige die Vorschläge je Ort als Liste: Datensatz, Feld, alter → neuer Wert, Art (ergänzt/geändert), Fundstelle (URL). Konflikte nennst du gesondert als „nicht übernehmbar“. Frage per `AskUserQuestion`: alle übernehmen · Auswahl · keine. Bei „Auswahl“ frage nach den Vorschlags-IDs. Setze **nur für freigegebene** Änderungen `"approved": true` in der Vorschlagsdatei.
 7. **Übernehmen:** `npm run data:apply -- <Argumente>`. Bei ungültigem Ergebnis bleibt alles unverändert; dann berichte die Fehler.
-8. **Prüfen nach der Übernahme:** `npm run validate:data`, `npm test` und `npm run lint` ausführen und die Ergebnisse berichten (auch rote Tests; nichts beschönigen). Verweise auf `git diff data updates` zur Durchsicht.
+8. **Neuigkeiten planen:** `npm run news:plan -- <Argumente>` (es gelten nur `--venue` und `--date`). Der Plan `updates/<Datum>/news.json` enthält je Ausstellung die fehlenden Anlässe `neu`, `eroeffnung`, `endet-bald` und `ende`, auch vergangene und zukünftige (Datum = Datum des Beitrags; das Magazin zeigt Zukünftiges erst an dem Tag), sowie als `angepasst` Beiträge, deren Termin sich geändert hat. Ohne Einträge geht es mit Schritt 10 weiter.
+9. **Texte schreiben, prüfen, freigeben.**
+   - Ergänze je Eintrag `title`, `excerpt` (Kurztext, höchstens 300 Zeichen) und `text` im Plan. Der Text hat **60 bis 80 Wörter** und geht auf die **Ausstellung**, die **Künstler:innen** und die **Galerie bzw. das Museum** ein. Er nennt den Titel der Ausstellung, den Namen des Ortes und alle Namen aus `context.photographers` wörtlich. Anlass: `neu` kündigt die Ausstellung an, `eroeffnung` meldet den Eröffnungstag, `endet-bald` weist auf das nahe Ende hin, `ende` blickt auf die beendete Ausstellung zurück.
+   - Nenne **absolute Daten** (z. B. „bis 1. November“), nie „heute“ oder „morgen“; der Beitrag erscheint an einem anderen Tag. Schreibe nur, was in `context` oder den Snapshots (`.cache/snapshots/<venue-id>/*.json`) steht. Kein HTML, keine Überschriften.
+   - Prüfen: `npm run news:check`. Korrigiere ungültige Texte (Wortzahl, fehlende Namen) höchstens zweimal. Zeige den Bericht `updates/<Datum>/NEWS.md`.
+   - Zeige je Eintrag Anlass, Datum, Titel und Text. Frage per `AskUserQuestion`: alle übernehmen · Auswahl · keine. Setze **nur für freigegebene** Einträge `"approved": true` im Plan.
+   - Übernehmen: `npm run news:apply`. Bei ungültigem Ergebnis bleibt alles unverändert; berichte die Fehler. Verwaiste Beiträge nennst du im Bericht und löschst sie nicht.
+10. **Prüfen nach der Übernahme:** `npm run validate:data`, `npm test` und `npm run lint` ausführen und die Ergebnisse berichten (auch rote Tests; nichts beschönigen). Verweise auf `git diff data content updates` zur Durchsicht.
 
 ## Abschlussmeldung
 
-Kurz: bearbeitete Orte, Anzahl Vorschläge (ergänzt/geändert/verworfen/übernommen/Konflikte), Fehler beim Abruf, Ergebnis von Validierung, Tests und Lint, Hinweis auf nicht Geprüftes (z. B. Inhalt der Seiten, JavaScript-lastige Seiten ohne Text).
+Kurz: bearbeitete Orte, Anzahl Vorschläge (ergänzt/geändert/verworfen/übernommen/Konflikte), Neuigkeiten (geplant/verworfen/übernommen je Anlass), Fehler beim Abruf, Ergebnis von Validierung, Tests und Lint, Hinweis auf nicht Geprüftes (z. B. Inhalt der Seiten, JavaScript-lastige Seiten ohne Text).

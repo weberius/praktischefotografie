@@ -29,3 +29,5 @@ Die Prüfung arbeitet lokal und greift nicht auf das Netz zu.
 ## Beiträge (`posts.json`)
 
 `excerpt` ist optional (1 bis 300 Zeichen) und dient als Kurzvorschau im Magazin. Der Beitragstext liegt in `contentFile` (`content/posts/*.md`).
+
+Neuigkeiten zu Ausstellungen (`neu`, `eroeffnung`, `endet-bald`, `ende`) legt `npm run news:apply` als Beiträge an. `id` und `slug` lauten `<Ausstellungs-id>-<Anlass>`, `date` ist das Datum des Anlasses (siehe [`../updates/README.md`](../updates/README.md)).

@@ -15,7 +15,10 @@
     "data:fetch": "node scripts/scrape/fetch-venues.mjs",
     "data:check": "node scripts/scrape/check-proposals.mjs",
     "data:apply": "node scripts/scrape/apply-proposals.mjs",
-    "data:report": "node scripts/scrape/report.mjs"
+    "data:report": "node scripts/scrape/report.mjs",
+    "news:plan": "node scripts/news/plan-news.mjs",
+    "news:check": "node scripts/news/check-news.mjs",
+    "news:apply": "node scripts/news/apply-news.mjs"
   },
   "engines": {
     "node": ">=20"

@@ -1,0 +1,1416 @@
+{
+  "date": "2026-10-28",
+  "items": [
+    {
+      "id": "der-architektonische-blick-epochal-global-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "der-architektonische-blick-epochal-global-2026",
+      "venueId": "makk-koeln",
+      "date": "2026-06-11",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Der architektonische Blick. epochal – global",
+          "type": "solo",
+          "startDate": "2026-06-11",
+          "endDate": "2027-01-17",
+          "description": "Zweite umfassende Museumsausstellung des Architekturfotografen Hans Georg Esch mit großformatigen Bildern und Bildserien zur Architektur weltweit."
+        },
+        "venue": {
+          "name": "Museum für Angewandte Kunst Köln",
+          "shortName": "MAKK",
+          "city": "Köln",
+          "website": "https://www.makk.de/"
+        },
+        "photographers": [
+          {
+            "name": "Hans Georg Esch",
+            "bio": "Architekturfotograf, 1964 in Neuwied geboren."
+          }
+        ]
+      },
+      "title": "Eröffnung: Hans Georg Esch im MAKK Köln",
+      "excerpt": "Am 11. Juni 2026 eröffnet im MAKK Köln die zweite große Museumsausstellung des Architekturfotografen Hans Georg Esch.",
+      "text": "Am 11. Juni 2026 eröffnet im MAKK Köln „Der architektonische Blick. epochal – global“. Es ist die zweite umfassende Museumsausstellung des Architekturfotografen Hans Georg Esch, der 1964 in Neuwied geboren wurde. Seine großformatigen Bilder und Bildserien führen von Pompeji über den Kölner Dom bis zum Chrysler-Building in New York. Das Museum für Angewandte Kunst Köln liegt an der Rechtschule 7 in der Altstadt-Nord und zeigt die Schau bis zum 17. Januar 2027.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "der-architektonische-blick-epochal-global-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "der-architektonische-blick-epochal-global-2026",
+      "venueId": "makk-koeln",
+      "date": "2027-01-03",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Der architektonische Blick. epochal – global",
+          "type": "solo",
+          "startDate": "2026-06-11",
+          "endDate": "2027-01-17",
+          "description": "Zweite umfassende Museumsausstellung des Architekturfotografen Hans Georg Esch mit großformatigen Bildern und Bildserien zur Architektur weltweit."
+        },
+        "venue": {
+          "name": "Museum für Angewandte Kunst Köln",
+          "shortName": "MAKK",
+          "city": "Köln",
+          "website": "https://www.makk.de/"
+        },
+        "photographers": [
+          {
+            "name": "Hans Georg Esch",
+            "bio": "Architekturfotograf, 1964 in Neuwied geboren."
+          }
+        ]
+      },
+      "title": "Endet bald: Der architektonische Blick im MAKK Köln",
+      "excerpt": "Die Esch-Ausstellung im MAKK Köln läuft nur noch bis zum 17. Januar 2027.",
+      "text": "Noch bis zum 17. Januar 2027 ist im MAKK Köln „Der architektonische Blick. epochal – global“ zu sehen. Die Ausstellung des Architekturfotografen Hans Georg Esch, geboren 1964 in Neuwied, versammelt großformatige Bilder und Bildserien zur Architektur weltweit, von Pompeji bis zu den Bauten von Oswald Mathias Ungers. Wer die zweite umfassende Museumsausstellung des Fotografen sehen möchte, besucht das Museum für Angewandte Kunst Köln in der Altstadt-Nord in den letzten Wochen.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "der-architektonische-blick-epochal-global-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "der-architektonische-blick-epochal-global-2026",
+      "venueId": "makk-koeln",
+      "date": "2027-01-18",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Der architektonische Blick. epochal – global",
+          "type": "solo",
+          "startDate": "2026-06-11",
+          "endDate": "2027-01-17",
+          "description": "Zweite umfassende Museumsausstellung des Architekturfotografen Hans Georg Esch mit großformatigen Bildern und Bildserien zur Architektur weltweit."
+        },
+        "venue": {
+          "name": "Museum für Angewandte Kunst Köln",
+          "shortName": "MAKK",
+          "city": "Köln",
+          "website": "https://www.makk.de/"
+        },
+        "photographers": [
+          {
+            "name": "Hans Georg Esch",
+            "bio": "Architekturfotograf, 1964 in Neuwied geboren."
+          }
+        ]
+      },
+      "title": "Ende: Der architektonische Blick im MAKK Köln",
+      "excerpt": "Die Ausstellung von Hans Georg Esch im MAKK Köln ist am 17. Januar 2027 zu Ende gegangen.",
+      "text": "Am 17. Januar 2027 ist im MAKK Köln „Der architektonische Blick. epochal – global“ zu Ende gegangen. Die Ausstellung war die zweite umfassende Museumsausstellung des Architekturfotografen Hans Georg Esch und zeigte seit dem 11. Juni 2026 großformatige Bilder und Bildserien zur Architektur weltweit. Das Museum für Angewandte Kunst Köln an der Rechtschule 7 in der Altstadt-Nord besitzt zudem eine eigene Sammlung.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "mysterium-der-paare-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "mysterium-der-paare-2026",
+      "venueId": "fotografie-forum-monschau",
+      "date": "2026-08-09",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "MYSTERIUM DER PAARE",
+          "type": "group",
+          "startDate": "2026-08-09",
+          "endDate": "2026-11-01",
+          "description": "Rund 130 fotografische Arbeiten zum Thema Begegnung, darunter Martin Parr, Richard Kalvar und Elliott Erwitt."
+        },
+        "venue": {
+          "name": "Fotografie-Forum der StädteRegion Aachen",
+          "shortName": "Fotografie-Forum Monschau",
+          "city": "Monschau",
+          "website": "https://www.kuk-monschau.de/"
+        },
+        "photographers": []
+      },
+      "title": "Eröffnung: MYSTERIUM DER PAARE in Monschau",
+      "excerpt": "Am 9. August 2026 eröffnet im Fotografie-Forum Monschau die Gruppenausstellung zum Thema Begegnung.",
+      "text": "Am 9. August 2026 eröffnet im Fotografie-Forum Monschau die Gruppenausstellung „MYSTERIUM DER PAARE“. Rund 130 fotografische Arbeiten widmen sich dem Thema Begegnung, darunter Werke von Martin Parr, Richard Kalvar und Elliott Erwitt. Das Fotografie-Forum der StädteRegion Aachen in der Austraße 9 in Monschau zeigt die Schau bis zum 1. November 2026. Es verfügt über eine eigene Sammlung und ist damit ein fester Ort der Fotografie in der Eifel.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "mysterium-der-paare-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "mysterium-der-paare-2026",
+      "venueId": "fotografie-forum-monschau",
+      "date": "2026-10-18",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "MYSTERIUM DER PAARE",
+          "type": "group",
+          "startDate": "2026-08-09",
+          "endDate": "2026-11-01",
+          "description": "Rund 130 fotografische Arbeiten zum Thema Begegnung, darunter Martin Parr, Richard Kalvar und Elliott Erwitt."
+        },
+        "venue": {
+          "name": "Fotografie-Forum der StädteRegion Aachen",
+          "shortName": "Fotografie-Forum Monschau",
+          "city": "Monschau",
+          "website": "https://www.kuk-monschau.de/"
+        },
+        "photographers": []
+      },
+      "title": "Endet bald: MYSTERIUM DER PAARE in Monschau",
+      "excerpt": "Die Ausstellung im Fotografie-Forum Monschau endet am 1. November 2026.",
+      "text": "Nur noch bis zum 1. November 2026 zeigt das Fotografie-Forum Monschau „MYSTERIUM DER PAARE“. Die Gruppenausstellung versammelt rund 130 fotografische Arbeiten zum Thema Begegnung, unter anderem von Martin Parr, Richard Kalvar und Elliott Erwitt. Das Haus weist darauf hin, dass das letzte Wochenende auch an Allerheiligen geöffnet ist. Das Fotografie-Forum der StädteRegion Aachen finden Besucherinnen und Besucher in der Austraße 9 in Monschau.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "mysterium-der-paare-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "mysterium-der-paare-2026",
+      "venueId": "fotografie-forum-monschau",
+      "date": "2026-11-02",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "MYSTERIUM DER PAARE",
+          "type": "group",
+          "startDate": "2026-08-09",
+          "endDate": "2026-11-01",
+          "description": "Rund 130 fotografische Arbeiten zum Thema Begegnung, darunter Martin Parr, Richard Kalvar und Elliott Erwitt."
+        },
+        "venue": {
+          "name": "Fotografie-Forum der StädteRegion Aachen",
+          "shortName": "Fotografie-Forum Monschau",
+          "city": "Monschau",
+          "website": "https://www.kuk-monschau.de/"
+        },
+        "photographers": []
+      },
+      "title": "Ende: MYSTERIUM DER PAARE in Monschau",
+      "excerpt": "Die Gruppenausstellung im Fotografie-Forum Monschau ist am 1. November 2026 zu Ende gegangen.",
+      "text": "Am 1. November 2026 ist im Fotografie-Forum Monschau die Gruppenausstellung „MYSTERIUM DER PAARE“ zu Ende gegangen. Seit dem 9. August 2026 waren rund 130 fotografische Arbeiten zum Thema Begegnung zu sehen, darunter Werke von Martin Parr, Richard Kalvar und Elliott Erwitt. Das Fotografie-Forum der StädteRegion Aachen in der Austraße 9 in Monschau zeigt ab dem 8. November 2026 die nächste Ausstellung, Jürgen Klauke.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "juergen-klauke-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "juergen-klauke-2026",
+      "venueId": "fotografie-forum-monschau",
+      "date": "2026-11-08",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "JÜRGEN KLAUKE",
+          "type": "solo",
+          "startDate": "2026-11-08",
+          "endDate": "2026-12-20",
+          "description": "Begleitende Ausstellung zum Kunstpreis des Fotografie-Forums für den Foto- und Medienkünstler Jürgen Klauke."
+        },
+        "venue": {
+          "name": "Fotografie-Forum der StädteRegion Aachen",
+          "shortName": "Fotografie-Forum Monschau",
+          "city": "Monschau",
+          "website": "https://www.kuk-monschau.de/"
+        },
+        "photographers": [
+          {
+            "name": "Jürgen Klauke",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Eröffnung: JÜRGEN KLAUKE in Monschau",
+      "excerpt": "Am 8. November 2026 eröffnet im Fotografie-Forum Monschau die Ausstellung zum Kunstpreis für Jürgen Klauke.",
+      "text": "Am 8. November 2026 eröffnet im Fotografie-Forum Monschau „JÜRGEN KLAUKE“. Die Soloausstellung begleitet den Kunstpreis des Fotografie-Forums für den Foto- und Medienkünstler Jürgen Klauke. Die Vernissage beginnt um 12 Uhr im Bürgersaal in der Austraße 7, der Eintritt ist frei. Als Motiv der Ausstellung dient eine Arbeit aus der Serie „Physiognomien“ von 1972/73. Das Fotografie-Forum der StädteRegion Aachen in Monschau zeigt die Arbeiten bis zum 20. Dezember 2026.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "juergen-klauke-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "juergen-klauke-2026",
+      "venueId": "fotografie-forum-monschau",
+      "date": "2026-12-06",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "JÜRGEN KLAUKE",
+          "type": "solo",
+          "startDate": "2026-11-08",
+          "endDate": "2026-12-20",
+          "description": "Begleitende Ausstellung zum Kunstpreis des Fotografie-Forums für den Foto- und Medienkünstler Jürgen Klauke."
+        },
+        "venue": {
+          "name": "Fotografie-Forum der StädteRegion Aachen",
+          "shortName": "Fotografie-Forum Monschau",
+          "city": "Monschau",
+          "website": "https://www.kuk-monschau.de/"
+        },
+        "photographers": [
+          {
+            "name": "Jürgen Klauke",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Endet bald: JÜRGEN KLAUKE in Monschau",
+      "excerpt": "Die Ausstellung zu Jürgen Klauke im Fotografie-Forum Monschau läuft nur noch bis 20. Dezember 2026.",
+      "text": "Bis zum 20. Dezember 2026 ist im Fotografie-Forum Monschau „JÜRGEN KLAUKE“ zu sehen. Die Ausstellung begleitet den Kunstpreis des Fotografie-Forums für den Foto- und Medienkünstler Jürgen Klauke und kann bei freiem Eintritt besucht werden. Das Fotografie-Forum der StädteRegion Aachen in der Austraße 9 in Monschau verfügt über eine eigene Sammlung. Wer die Schau noch nicht gesehen hat, sollte die letzten Tage nutzen.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "juergen-klauke-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "juergen-klauke-2026",
+      "venueId": "fotografie-forum-monschau",
+      "date": "2026-12-21",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "JÜRGEN KLAUKE",
+          "type": "solo",
+          "startDate": "2026-11-08",
+          "endDate": "2026-12-20",
+          "description": "Begleitende Ausstellung zum Kunstpreis des Fotografie-Forums für den Foto- und Medienkünstler Jürgen Klauke."
+        },
+        "venue": {
+          "name": "Fotografie-Forum der StädteRegion Aachen",
+          "shortName": "Fotografie-Forum Monschau",
+          "city": "Monschau",
+          "website": "https://www.kuk-monschau.de/"
+        },
+        "photographers": [
+          {
+            "name": "Jürgen Klauke",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Ende: JÜRGEN KLAUKE in Monschau",
+      "excerpt": "Die Ausstellung zu Jürgen Klauke im Fotografie-Forum Monschau ist am 20. Dezember 2026 zu Ende gegangen.",
+      "text": "Am 20. Dezember 2026 ist im Fotografie-Forum Monschau die Ausstellung „JÜRGEN KLAUKE“ zu Ende gegangen. Sie begleitete den Kunstpreis des Fotografie-Forums für den Foto- und Medienkünstler Jürgen Klauke und war seit dem 8. November 2026 bei freiem Eintritt zu sehen. Das Fotografie-Forum der StädteRegion Aachen in der Austraße 9 in Monschau besitzt eine eigene Sammlung und liegt in Monschau in der Eifel.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "sammlung-fotografie-man-ray-kiki-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "sammlung-fotografie-man-ray-kiki-2026",
+      "venueId": "museum-ludwig-koeln",
+      "date": "2026-10-31",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Sammlung Fotografie: Man Ray: Kiki",
+          "type": "solo",
+          "startDate": "2026-10-31",
+          "endDate": "2027-06-13",
+          "description": "Präsentation in den Fotoräumen des Museum Ludwig."
+        },
+        "venue": {
+          "name": "Museum Ludwig",
+          "shortName": "Museum Ludwig",
+          "city": "Köln",
+          "website": "https://www.museum-ludwig.de/"
+        },
+        "photographers": [
+          {
+            "name": "Man Ray",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Eröffnung: Man Ray: Kiki im Museum Ludwig",
+      "excerpt": "Am 31. Oktober 2026 eröffnet im Museum Ludwig in Köln die Präsentation „Sammlung Fotografie: Man Ray: Kiki“.",
+      "text": "Am 31. Oktober 2026 eröffnet im Museum Ludwig in Köln die Präsentation „Sammlung Fotografie: Man Ray: Kiki“. In den Fotoräumen des Hauses rückt der Fotograf und Künstler Man Ray in den Mittelpunkt. Das Museum Ludwig am Heinrich-Böll-Platz in der Altstadt-Nord besitzt eine eigene Sammlung. Die Präsentation ist bis zum 13. Juni 2027 geöffnet; eine weitere Ausstellung des Hauses, „HIER UND JETZT“, läuft noch bis zum 8. November 2026.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "sammlung-fotografie-man-ray-kiki-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "sammlung-fotografie-man-ray-kiki-2026",
+      "venueId": "museum-ludwig-koeln",
+      "date": "2027-05-30",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Sammlung Fotografie: Man Ray: Kiki",
+          "type": "solo",
+          "startDate": "2026-10-31",
+          "endDate": "2027-06-13",
+          "description": "Präsentation in den Fotoräumen des Museum Ludwig."
+        },
+        "venue": {
+          "name": "Museum Ludwig",
+          "shortName": "Museum Ludwig",
+          "city": "Köln",
+          "website": "https://www.museum-ludwig.de/"
+        },
+        "photographers": [
+          {
+            "name": "Man Ray",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Endet bald: Man Ray: Kiki im Museum Ludwig",
+      "excerpt": "Die Präsentation „Sammlung Fotografie: Man Ray: Kiki“ im Museum Ludwig läuft nur noch bis 13. Juni 2027.",
+      "text": "Bis zum 13. Juni 2027 zeigt das Museum Ludwig in Köln „Sammlung Fotografie: Man Ray: Kiki“. Die Präsentation in den Fotoräumen des Hauses widmet sich dem Fotografen und Künstler Man Ray und schöpft aus der eigenen Sammlung des Museums am Heinrich-Böll-Platz in der Altstadt-Nord von Köln (50667). Wer sie noch nicht gesehen hat, sollte den Besuch nicht zu lange aufschieben.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "sammlung-fotografie-man-ray-kiki-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "sammlung-fotografie-man-ray-kiki-2026",
+      "venueId": "museum-ludwig-koeln",
+      "date": "2027-06-14",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Sammlung Fotografie: Man Ray: Kiki",
+          "type": "solo",
+          "startDate": "2026-10-31",
+          "endDate": "2027-06-13",
+          "description": "Präsentation in den Fotoräumen des Museum Ludwig."
+        },
+        "venue": {
+          "name": "Museum Ludwig",
+          "shortName": "Museum Ludwig",
+          "city": "Köln",
+          "website": "https://www.museum-ludwig.de/"
+        },
+        "photographers": [
+          {
+            "name": "Man Ray",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Ende: Man Ray: Kiki im Museum Ludwig",
+      "excerpt": "Die Präsentation „Sammlung Fotografie: Man Ray: Kiki“ im Museum Ludwig ist am 13. Juni 2027 zu Ende gegangen.",
+      "text": "Am 13. Juni 2027 ist im Museum Ludwig in Köln die Präsentation „Sammlung Fotografie: Man Ray: Kiki“ zu Ende gegangen. Seit dem 31. Oktober 2026 waren in den Fotoräumen des Hauses Arbeiten von Man Ray zu sehen. Das Museum Ludwig am Heinrich-Böll-Platz (50667) in der Altstadt-Nord von Köln besitzt eine eigene Sammlung und bleibt ein Haus für Fotografie in Köln.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "hier-und-jetzt-im-museum-ludwig-de-collecting-memories-from-turtle-island-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "hier-und-jetzt-im-museum-ludwig-de-collecting-memories-from-turtle-island-2026",
+      "venueId": "museum-ludwig-koeln",
+      "date": "2026-02-07",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "HIER UND JETZT im Museum Ludwig. De/Collecting Memories from Turtle Island",
+          "type": "group",
+          "startDate": "2026-02-07",
+          "endDate": "2026-11-08",
+          "description": "Ausgangspunkt ist ein Konvolut von Fotochromen der Detroit Publishing Company, kombiniert mit Positionen von Marie Watt und Wendy Red Star."
+        },
+        "venue": {
+          "name": "Museum Ludwig",
+          "shortName": "Museum Ludwig",
+          "city": "Köln",
+          "website": "https://www.museum-ludwig.de/"
+        },
+        "photographers": [
+          {
+            "name": "Wendy Red Star",
+            "bio": null
+          },
+          {
+            "name": "William Henry Jackson",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Eröffnung: HIER UND JETZT im Museum Ludwig",
+      "excerpt": "Am 7. Februar 2026 eröffnet im Museum Ludwig „HIER UND JETZT“ mit Fotochromen und zeitgenössischen Positionen.",
+      "text": "Am 7. Februar 2026 eröffnet im Museum Ludwig in Köln „HIER UND JETZT im Museum Ludwig. De/Collecting Memories from Turtle Island“. Ausgangspunkt ist ein Konvolut von Fotochromen der Detroit Publishing Company, kombiniert mit Positionen von Marie Watt und Wendy Red Star. Auch William Henry Jackson ist beteiligt. Das Museum am Heinrich-Böll-Platz in der Altstadt-Nord verfügt über eine eigene Sammlung und zeigt die Gruppenausstellung bis zum 8. November 2026.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "hier-und-jetzt-im-museum-ludwig-de-collecting-memories-from-turtle-island-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "hier-und-jetzt-im-museum-ludwig-de-collecting-memories-from-turtle-island-2026",
+      "venueId": "museum-ludwig-koeln",
+      "date": "2026-10-25",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "HIER UND JETZT im Museum Ludwig. De/Collecting Memories from Turtle Island",
+          "type": "group",
+          "startDate": "2026-02-07",
+          "endDate": "2026-11-08",
+          "description": "Ausgangspunkt ist ein Konvolut von Fotochromen der Detroit Publishing Company, kombiniert mit Positionen von Marie Watt und Wendy Red Star."
+        },
+        "venue": {
+          "name": "Museum Ludwig",
+          "shortName": "Museum Ludwig",
+          "city": "Köln",
+          "website": "https://www.museum-ludwig.de/"
+        },
+        "photographers": [
+          {
+            "name": "Wendy Red Star",
+            "bio": null
+          },
+          {
+            "name": "William Henry Jackson",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Endet bald: HIER UND JETZT im Museum Ludwig",
+      "excerpt": "Die Gruppenausstellung im Museum Ludwig endet am 8. November 2026.",
+      "text": "Nur noch bis zum 8. November 2026 läuft im Museum Ludwig in Köln „HIER UND JETZT im Museum Ludwig. De/Collecting Memories from Turtle Island“. Die Gruppenausstellung geht von Fotochromen der Detroit Publishing Company aus und verbindet sie mit Positionen von Marie Watt und Wendy Red Star. Auch William Henry Jackson ist beteiligt. Das Museum Ludwig am Heinrich-Böll-Platz in der Altstadt-Nord lädt dazu ein, die Schau in den letzten Tagen zu besuchen.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "hier-und-jetzt-im-museum-ludwig-de-collecting-memories-from-turtle-island-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "hier-und-jetzt-im-museum-ludwig-de-collecting-memories-from-turtle-island-2026",
+      "venueId": "museum-ludwig-koeln",
+      "date": "2026-11-09",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "HIER UND JETZT im Museum Ludwig. De/Collecting Memories from Turtle Island",
+          "type": "group",
+          "startDate": "2026-02-07",
+          "endDate": "2026-11-08",
+          "description": "Ausgangspunkt ist ein Konvolut von Fotochromen der Detroit Publishing Company, kombiniert mit Positionen von Marie Watt und Wendy Red Star."
+        },
+        "venue": {
+          "name": "Museum Ludwig",
+          "shortName": "Museum Ludwig",
+          "city": "Köln",
+          "website": "https://www.museum-ludwig.de/"
+        },
+        "photographers": [
+          {
+            "name": "Wendy Red Star",
+            "bio": null
+          },
+          {
+            "name": "William Henry Jackson",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Ende: HIER UND JETZT im Museum Ludwig",
+      "excerpt": "Die Gruppenausstellung im Museum Ludwig ist am 8. November 2026 zu Ende gegangen.",
+      "text": "Am 8. November 2026 ist im Museum Ludwig in Köln „HIER UND JETZT im Museum Ludwig. De/Collecting Memories from Turtle Island“ zu Ende gegangen. Die Ausstellung verband seit dem 7. Februar 2026 ein Konvolut von Fotochromen der Detroit Publishing Company mit Positionen von Marie Watt und Wendy Red Star. Auch William Henry Jackson war beteiligt. Das Museum Ludwig am Heinrich-Böll-Platz besitzt eine eigene Sammlung, die weiter zugänglich bleibt.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "august-sander-zum-150-geburtstag-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "august-sander-zum-150-geburtstag-2026",
+      "venueId": "photographische-sammlung-koeln",
+      "date": "2026-09-11",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "August Sander – Zum 150. Geburtstag",
+          "type": "solo",
+          "startDate": "2026-09-11",
+          "endDate": "2027-01-24",
+          "description": null
+        },
+        "venue": {
+          "name": "Die Photographische Sammlung/SK Stiftung Kultur",
+          "shortName": "Photographische Sammlung",
+          "city": "Köln",
+          "website": "https://photographie-stiftungkultur.de/"
+        },
+        "photographers": [
+          {
+            "name": "August Sander",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Eröffnung: August Sander zum 150. Geburtstag",
+      "excerpt": "Am 11. September 2026 eröffnet in der Photographischen Sammlung Köln die Ausstellung zu August Sanders 150. Geburtstag.",
+      "text": "Am 11. September 2026 eröffnet in der Photographischen Sammlung Köln die Soloausstellung „August Sander – Zum 150. Geburtstag“. Sie würdigt den Fotografen August Sander, der unter anderem mit seinem Bild „Zauberer“ von 1930 vertreten ist. Die Photographische Sammlung der SK Stiftung Kultur im Mediapark 7 pflegt zudem eine Präsenzbibliothek mit rund 900 Bänden aus Sanders Privatbibliothek. Die Ausstellung läuft bis zum 24. Januar 2027.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "august-sander-zum-150-geburtstag-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "august-sander-zum-150-geburtstag-2026",
+      "venueId": "photographische-sammlung-koeln",
+      "date": "2027-01-10",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "August Sander – Zum 150. Geburtstag",
+          "type": "solo",
+          "startDate": "2026-09-11",
+          "endDate": "2027-01-24",
+          "description": null
+        },
+        "venue": {
+          "name": "Die Photographische Sammlung/SK Stiftung Kultur",
+          "shortName": "Photographische Sammlung",
+          "city": "Köln",
+          "website": "https://photographie-stiftungkultur.de/"
+        },
+        "photographers": [
+          {
+            "name": "August Sander",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Endet bald: August Sander in der Photographischen Sammlung",
+      "excerpt": "Die Sander-Ausstellung in der Photographischen Sammlung Köln läuft bis 24. Januar 2027.",
+      "text": "Bis zum 24. Januar 2027 zeigt die Photographische Sammlung Köln „August Sander – Zum 150. Geburtstag“. Die Ausstellung würdigt den Fotografen August Sander mit Arbeiten wie „Zauberer“ von 1930. Die Photographische Sammlung der SK Stiftung Kultur im Mediapark 7 in Köln verfügt über eine Präsenzbibliothek, die rund 900 Bände aus Sanders Privatbibliothek umfasst und nach Terminabsprache nutzbar ist. Die letzten Wochen der Schau bieten eine gute Gelegenheit zum Besuch.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "august-sander-zum-150-geburtstag-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "august-sander-zum-150-geburtstag-2026",
+      "venueId": "photographische-sammlung-koeln",
+      "date": "2027-01-25",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "August Sander – Zum 150. Geburtstag",
+          "type": "solo",
+          "startDate": "2026-09-11",
+          "endDate": "2027-01-24",
+          "description": null
+        },
+        "venue": {
+          "name": "Die Photographische Sammlung/SK Stiftung Kultur",
+          "shortName": "Photographische Sammlung",
+          "city": "Köln",
+          "website": "https://photographie-stiftungkultur.de/"
+        },
+        "photographers": [
+          {
+            "name": "August Sander",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Ende: August Sander in der Photographischen Sammlung",
+      "excerpt": "Die Ausstellung zum 150. Geburtstag von August Sander ist am 24. Januar 2027 zu Ende gegangen.",
+      "text": "Am 24. Januar 2027 ist in der Photographischen Sammlung Köln „August Sander – Zum 150. Geburtstag“ zu Ende gegangen. Seit dem 11. September 2026 würdigte die Ausstellung den Fotografen August Sander. Die Photographische Sammlung der SK Stiftung Kultur im Mediapark 7 besitzt eine Präsenzbibliothek mit über 7.200 Bänden, darunter rund 900 aus Sanders Privatbibliothek. Sie ist weiterhin nach Terminabsprache nutzbar und liegt im Kölner Mediapark.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "all-photobooks-by-duane-michals-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "all-photobooks-by-duane-michals-2026",
+      "venueId": "photobookmuseum-koeln",
+      "date": "2026-09-25",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "All PhotoBooks by Duane Michals",
+          "type": "retrospective",
+          "startDate": "2026-09-25",
+          "endDate": "2026-11-21",
+          "description": "Mehr als 80 Fotobücher von Duane Michals aus der Sammlung von Tim Soter, gezeigt in THE BOX."
+        },
+        "venue": {
+          "name": "The PhotoBookMuseum",
+          "shortName": "PhotoBookMuseum",
+          "city": "Köln",
+          "website": "https://www.thephotobookmuseum.com/de"
+        },
+        "photographers": [
+          {
+            "name": "Duane Michals",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Eröffnung: All PhotoBooks by Duane Michals",
+      "excerpt": "Am 25. September 2026 eröffnet im PhotoBookMuseum Köln eine Retrospektive mit mehr als 80 Fotobüchern von Duane Michals.",
+      "text": "Am 25. September 2026 eröffnet The PhotoBookMuseum in Köln „All PhotoBooks by Duane Michals“. Die Retrospektive zeigt in THE BOX mehr als 80 Fotobücher von Duane Michals aus der Sammlung des Fotografen und Sammlers Tim Soter. Das Museum konnte sie mit Unterstützung seines Circle of Friends e. V. erwerben. Das Haus in der Körnerstraße 6–8 in Ehrenfeld zeigt die Ausstellung bis zum 21. November 2026.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "all-photobooks-by-duane-michals-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "all-photobooks-by-duane-michals-2026",
+      "venueId": "photobookmuseum-koeln",
+      "date": "2026-11-07",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "All PhotoBooks by Duane Michals",
+          "type": "retrospective",
+          "startDate": "2026-09-25",
+          "endDate": "2026-11-21",
+          "description": "Mehr als 80 Fotobücher von Duane Michals aus der Sammlung von Tim Soter, gezeigt in THE BOX."
+        },
+        "venue": {
+          "name": "The PhotoBookMuseum",
+          "shortName": "PhotoBookMuseum",
+          "city": "Köln",
+          "website": "https://www.thephotobookmuseum.com/de"
+        },
+        "photographers": [
+          {
+            "name": "Duane Michals",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Endet bald: All PhotoBooks by Duane Michals",
+      "excerpt": "Die Retrospektive im PhotoBookMuseum Köln läuft bis zum 21. November 2026.",
+      "text": "Bis zum 21. November 2026 ist „All PhotoBooks by Duane Michals“ in The PhotoBookMuseum in Köln zu sehen. In THE BOX werden mehr als 80 Fotobücher von Duane Michals gezeigt, zusammengetragen vom Fotografen und Sammler Tim Soter. Das Museum konnte die weltweit einzigartige Sammlung mit Unterstützung seines Circle of Friends e. V. erwerben. Das Haus in der Körnerstraße 6–8 in Ehrenfeld lädt zu einem Besuch in den letzten Wochen ein.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "all-photobooks-by-duane-michals-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "all-photobooks-by-duane-michals-2026",
+      "venueId": "photobookmuseum-koeln",
+      "date": "2026-11-22",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "All PhotoBooks by Duane Michals",
+          "type": "retrospective",
+          "startDate": "2026-09-25",
+          "endDate": "2026-11-21",
+          "description": "Mehr als 80 Fotobücher von Duane Michals aus der Sammlung von Tim Soter, gezeigt in THE BOX."
+        },
+        "venue": {
+          "name": "The PhotoBookMuseum",
+          "shortName": "PhotoBookMuseum",
+          "city": "Köln",
+          "website": "https://www.thephotobookmuseum.com/de"
+        },
+        "photographers": [
+          {
+            "name": "Duane Michals",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Ende: All PhotoBooks by Duane Michals",
+      "excerpt": "Die Retrospektive zu Duane Michals im PhotoBookMuseum Köln ist am 21. November 2026 zu Ende gegangen.",
+      "text": "Am 21. November 2026 ist „All PhotoBooks by Duane Michals“ in The PhotoBookMuseum in Köln zu Ende gegangen. Seit dem 25. September 2026 zeigte die Retrospektive in THE BOX mehr als 80 Fotobücher von Duane Michals aus der Sammlung von Tim Soter. Das Museum in der Körnerstraße 6–8 in Ehrenfeld hatte die Sammlung mit Unterstützung seines Circle of Friends e. V. erworben und verfügt über eine eigene Sammlung.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "silver-shadows-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "silver-shadows-2026",
+      "venueId": "zander-galerie-koeln",
+      "date": "2026-08-29",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Silver Shadows",
+          "type": "solo",
+          "startDate": "2026-08-29",
+          "endDate": "2026-10-30",
+          "description": "Erste Ausstellung der Fotografin Tina Barney in der Galerie mit zwei Schwarzweiß-Werkgruppen und dem Kurzfilm Family Portraits."
+        },
+        "venue": {
+          "name": "Zander Galerie",
+          "shortName": "Zander Galerie",
+          "city": "Köln",
+          "website": "https://zandergalerie.com/"
+        },
+        "photographers": [
+          {
+            "name": "Tina Barney",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Eröffnung: Silver Shadows von Tina Barney",
+      "excerpt": "Am 29. August 2026 eröffnet die Zander Galerie Köln die erste Ausstellung von Tina Barney in der Galerie.",
+      "text": "Am 29. August 2026 eröffnet die Zander Galerie Köln „Silver Shadows“, die erste Ausstellung der amerikanischen Fotografin Tina Barney in der Galerie. Sie zeigt zwei Schwarzweiß-Werkgruppen und den Kurzfilm „Family Portraits“. Die Eröffnung findet von 15 bis 18 Uhr statt, um 16 Uhr stellt die Künstlerin ihre Arbeit vor. Die Galerie in der Schönhauser Straße 8 in Bayenthal zeigt die Ausstellung bis zum 30. Oktober 2026.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "silver-shadows-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "silver-shadows-2026",
+      "venueId": "zander-galerie-koeln",
+      "date": "2026-10-16",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Silver Shadows",
+          "type": "solo",
+          "startDate": "2026-08-29",
+          "endDate": "2026-10-30",
+          "description": "Erste Ausstellung der Fotografin Tina Barney in der Galerie mit zwei Schwarzweiß-Werkgruppen und dem Kurzfilm Family Portraits."
+        },
+        "venue": {
+          "name": "Zander Galerie",
+          "shortName": "Zander Galerie",
+          "city": "Köln",
+          "website": "https://zandergalerie.com/"
+        },
+        "photographers": [
+          {
+            "name": "Tina Barney",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Endet bald: Silver Shadows von Tina Barney",
+      "excerpt": "Die Ausstellung von Tina Barney in der Zander Galerie Köln läuft bis 30. Oktober 2026.",
+      "text": "Bis zum 30. Oktober 2026 ist in der Zander Galerie Köln „Silver Shadows“ von Tina Barney zu sehen. Die amerikanische Fotografin präsentiert in ihrer ersten Ausstellung in der Galerie zwei Schwarzweiß-Werkgruppen und den Kurzfilm „Family Portraits“. Die Zander Galerie Köln in der Schönhauser Straße 8 in Bayenthal vertritt die Künstlerin seit diesem Frühjahr. Die letzten Wochen eignen sich gut für einen Besuch der Schau.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "silver-shadows-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "silver-shadows-2026",
+      "venueId": "zander-galerie-koeln",
+      "date": "2026-10-31",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Silver Shadows",
+          "type": "solo",
+          "startDate": "2026-08-29",
+          "endDate": "2026-10-30",
+          "description": "Erste Ausstellung der Fotografin Tina Barney in der Galerie mit zwei Schwarzweiß-Werkgruppen und dem Kurzfilm Family Portraits."
+        },
+        "venue": {
+          "name": "Zander Galerie",
+          "shortName": "Zander Galerie",
+          "city": "Köln",
+          "website": "https://zandergalerie.com/"
+        },
+        "photographers": [
+          {
+            "name": "Tina Barney",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Ende: Silver Shadows von Tina Barney",
+      "excerpt": "Die Ausstellung von Tina Barney in der Zander Galerie Köln ist am 30. Oktober 2026 zu Ende gegangen.",
+      "text": "Am 30. Oktober 2026 ist in der Zander Galerie Köln „Silver Shadows“ von Tina Barney zu Ende gegangen. Seit dem 29. August 2026 zeigte die erste Ausstellung der Fotografin in der Galerie zwei Schwarzweiß-Werkgruppen und den Kurzfilm „Family Portraits“. Die Zander Galerie Köln in der Schönhauser Straße 8 in Bayenthal zeigt als Nächstes ab dem 7. November 2026 Candida Höfer mit der Ausstellung „Between“.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "between-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "between-2026",
+      "venueId": "zander-galerie-koeln",
+      "date": "2026-11-07",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Between",
+          "type": "solo",
+          "startDate": "2026-11-07",
+          "endDate": "2027-02-19",
+          "description": "Farbfotografien von Candida Höfer von 1983 bis 2021 zu räumlichen Übergangssituationen."
+        },
+        "venue": {
+          "name": "Zander Galerie",
+          "shortName": "Zander Galerie",
+          "city": "Köln",
+          "website": "https://zandergalerie.com/"
+        },
+        "photographers": [
+          {
+            "name": "Candida Höfer",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Eröffnung: Between von Candida Höfer",
+      "excerpt": "Am 7. November 2026 eröffnet die Zander Galerie Köln „Between“ mit Farbfotografien von Candida Höfer.",
+      "text": "Am 7. November 2026 eröffnet die Zander Galerie Köln „Between“ mit Farbfotografien von Candida Höfer aus den Jahren 1983 bis 2021. Sie widmen sich räumlichen Übergangssituationen. Höfer zählt zu den bedeutendsten deutschen Gegenwartskünstlerinnen und zur Düsseldorfer Fotoschule. Die Eröffnung beginnt um 16 Uhr, die Künstlerin ist anwesend. Die Galerie in der Schönhauser Straße 8 in Bayenthal zeigt die Ausstellung bis zum 19. Februar 2027.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "between-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "between-2026",
+      "venueId": "zander-galerie-koeln",
+      "date": "2027-02-05",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Between",
+          "type": "solo",
+          "startDate": "2026-11-07",
+          "endDate": "2027-02-19",
+          "description": "Farbfotografien von Candida Höfer von 1983 bis 2021 zu räumlichen Übergangssituationen."
+        },
+        "venue": {
+          "name": "Zander Galerie",
+          "shortName": "Zander Galerie",
+          "city": "Köln",
+          "website": "https://zandergalerie.com/"
+        },
+        "photographers": [
+          {
+            "name": "Candida Höfer",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Endet bald: Between von Candida Höfer",
+      "excerpt": "Die Ausstellung von Candida Höfer in der Zander Galerie Köln läuft bis 19. Februar 2027.",
+      "text": "Noch bis zum 19. Februar 2027 zeigt die Zander Galerie Köln „Between“ von Candida Höfer. Die Farbfotografien aus den Jahren 1983 bis 2021 richten den Blick auf räumliche Übergangssituationen. Höfer gilt als eine der bedeutendsten deutschen Gegenwartskünstlerinnen und als führende Figur der Düsseldorfer Fotoschule. Die Galerie in der Schönhauser Straße 8 in Bayenthal lädt dazu ein, die Ausstellung in den letzten Wochen zu besuchen.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "between-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "between-2026",
+      "venueId": "zander-galerie-koeln",
+      "date": "2027-02-20",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "Between",
+          "type": "solo",
+          "startDate": "2026-11-07",
+          "endDate": "2027-02-19",
+          "description": "Farbfotografien von Candida Höfer von 1983 bis 2021 zu räumlichen Übergangssituationen."
+        },
+        "venue": {
+          "name": "Zander Galerie",
+          "shortName": "Zander Galerie",
+          "city": "Köln",
+          "website": "https://zandergalerie.com/"
+        },
+        "photographers": [
+          {
+            "name": "Candida Höfer",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Ende: Between von Candida Höfer",
+      "excerpt": "Die Ausstellung von Candida Höfer in der Zander Galerie Köln ist am 19. Februar 2027 zu Ende gegangen.",
+      "text": "Am 19. Februar 2027 ist in der Zander Galerie Köln „Between“ von Candida Höfer zu Ende gegangen. Seit dem 7. November 2026 zeigte die Galerie Farbfotografien der Künstlerin aus den Jahren 1983 bis 2021, die sich räumlichen Übergangssituationen widmen. Höfer gilt als führende Figur der Düsseldorfer Fotoschule. Die Zander Galerie in der Schönhauser Straße 8 in Bayenthal besitzt keine eigene Sammlung.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "crowds-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "crowds-2026",
+      "venueId": "galerie-lichtblick-koeln",
+      "date": "2026-10-03",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "CROWDS",
+          "type": "solo",
+          "startDate": "2026-10-03",
+          "endDate": "2026-11-22",
+          "description": "Farbfotografien der 1980er und 1990er Jahre von Menschengruppen bei Veranstaltungen, zugleich Buchprojekt (Kehrer Verlag)."
+        },
+        "venue": {
+          "name": "Galerie Lichtblick – Gesellschaft für fotografische Kunst e.V.",
+          "shortName": "Galerie Lichtblick",
+          "city": "Köln",
+          "website": "https://www.lichtblicknet.com/"
+        },
+        "photographers": [
+          {
+            "name": "Wolfgang Zurborn",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Eröffnung: CROWDS von Wolfgang Zurborn",
+      "excerpt": "Am 3. Oktober 2026 eröffnet die Galerie Lichtblick Köln „CROWDS“ von Wolfgang Zurborn mit Buchvorstellung.",
+      "text": "Am 3. Oktober 2026 eröffnet die Galerie Lichtblick Köln „CROWDS“ von Wolfgang Zurborn. Die Farbfotografien der 1980er und 1990er Jahre zeigen Menschengruppen bei Veranstaltungen und sind zugleich ein Buchprojekt, das im August 2026 beim Kehrer Verlag erschienen ist. Eröffnung und Buchvorstellung beginnen um 19 Uhr. Die Galerie Lichtblick der Gesellschaft für fotografische Kunst e. V. in der Steinberger Straße 21 in Nippes zeigt die Schau bis zum 22. November 2026.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "crowds-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "crowds-2026",
+      "venueId": "galerie-lichtblick-koeln",
+      "date": "2026-11-08",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "CROWDS",
+          "type": "solo",
+          "startDate": "2026-10-03",
+          "endDate": "2026-11-22",
+          "description": "Farbfotografien der 1980er und 1990er Jahre von Menschengruppen bei Veranstaltungen, zugleich Buchprojekt (Kehrer Verlag)."
+        },
+        "venue": {
+          "name": "Galerie Lichtblick – Gesellschaft für fotografische Kunst e.V.",
+          "shortName": "Galerie Lichtblick",
+          "city": "Köln",
+          "website": "https://www.lichtblicknet.com/"
+        },
+        "photographers": [
+          {
+            "name": "Wolfgang Zurborn",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Endet bald: CROWDS von Wolfgang Zurborn",
+      "excerpt": "Die Ausstellung „CROWDS“ in der Galerie Lichtblick Köln läuft bis 22. November 2026.",
+      "text": "Bis zum 22. November 2026 zeigt die Galerie Lichtblick Köln „CROWDS“ von Wolfgang Zurborn. Der Fotograf entwickelte das Projekt aus seinen Bildarchiven der 1980er und 1990er Jahre; die Farbfotografien zeigen Menschengruppen bei Veranstaltungen. Das Buch dazu ist im August 2026 beim Kehrer Verlag erschienen. Die Galerie Lichtblick in der Steinberger Straße 21 in Nippes wird von der Gesellschaft für fotografische Kunst e. V. getragen.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "crowds-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "crowds-2026",
+      "venueId": "galerie-lichtblick-koeln",
+      "date": "2026-11-23",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "CROWDS",
+          "type": "solo",
+          "startDate": "2026-10-03",
+          "endDate": "2026-11-22",
+          "description": "Farbfotografien der 1980er und 1990er Jahre von Menschengruppen bei Veranstaltungen, zugleich Buchprojekt (Kehrer Verlag)."
+        },
+        "venue": {
+          "name": "Galerie Lichtblick – Gesellschaft für fotografische Kunst e.V.",
+          "shortName": "Galerie Lichtblick",
+          "city": "Köln",
+          "website": "https://www.lichtblicknet.com/"
+        },
+        "photographers": [
+          {
+            "name": "Wolfgang Zurborn",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Ende: CROWDS von Wolfgang Zurborn",
+      "excerpt": "Die Ausstellung „CROWDS“ in der Galerie Lichtblick Köln ist am 22. November 2026 zu Ende gegangen.",
+      "text": "Am 22. November 2026 ist in der Galerie Lichtblick Köln „CROWDS“ von Wolfgang Zurborn zu Ende gegangen. Seit dem 3. Oktober 2026 zeigte die Ausstellung Farbfotografien der 1980er und 1990er Jahre von Menschengruppen bei Veranstaltungen. Das zugehörige Buch ist im August 2026 beim Kehrer Verlag erschienen. Die Galerie Lichtblick der Gesellschaft für fotografische Kunst e. V. in der Steinberger Straße 21 in Nippes liegt in Nippes.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "anthroposcape-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "anthroposcape-2026",
+      "venueId": "kaune-contemporary-koeln",
+      "date": "2026-09-16",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "ANTHROPOSCAPE",
+          "type": "solo",
+          "startDate": "2026-09-16",
+          "endDate": "2026-10-30",
+          "description": "Künstler-Edition als Buchskulptur mit 226 Architekturfotografien von Hans Georg Esch."
+        },
+        "venue": {
+          "name": "Kaune Contemporary Gallery",
+          "shortName": "Kaune Contemporary",
+          "city": "Köln",
+          "website": "https://www.kaunegallery.com/"
+        },
+        "photographers": [
+          {
+            "name": "Hans Georg Esch",
+            "bio": "Architekturfotograf, 1964 in Neuwied geboren."
+          }
+        ]
+      },
+      "title": "Eröffnung: ANTHROPOSCAPE von Hans Georg Esch",
+      "excerpt": "Am 16. September 2026 eröffnet die Kaune Contemporary Gallery in Köln „ANTHROPOSCAPE“ von Hans Georg Esch.",
+      "text": "Am 16. September 2026 eröffnet die Kaune Contemporary Gallery in Köln „ANTHROPOSCAPE“ von Hans Georg Esch. Die Künstler-Edition ist eine Buchskulptur mit 226 Architekturfotografien, die Michael Kaune aus rund 16.000 Aufnahmen des Fotografen auswählte. Esch, 1964 in Neuwied geboren, dokumentiert seit fast vier Jahrzehnten die gebaute Welt. Die Galerie im Gereonskloster 12 in der Altstadt-Nord zeigt die Ausstellung bis zum 30. Oktober 2026.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "anthroposcape-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "anthroposcape-2026",
+      "venueId": "kaune-contemporary-koeln",
+      "date": "2026-10-16",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "ANTHROPOSCAPE",
+          "type": "solo",
+          "startDate": "2026-09-16",
+          "endDate": "2026-10-30",
+          "description": "Künstler-Edition als Buchskulptur mit 226 Architekturfotografien von Hans Georg Esch."
+        },
+        "venue": {
+          "name": "Kaune Contemporary Gallery",
+          "shortName": "Kaune Contemporary",
+          "city": "Köln",
+          "website": "https://www.kaunegallery.com/"
+        },
+        "photographers": [
+          {
+            "name": "Hans Georg Esch",
+            "bio": "Architekturfotograf, 1964 in Neuwied geboren."
+          }
+        ]
+      },
+      "title": "Endet bald: ANTHROPOSCAPE von Hans Georg Esch",
+      "excerpt": "Die Esch-Ausstellung in der Kaune Contemporary Gallery läuft bis 30. Oktober 2026.",
+      "text": "Bis zum 30. Oktober 2026 ist in der Kaune Contemporary Gallery in Köln „ANTHROPOSCAPE“ von Hans Georg Esch zu sehen. Die Buchskulptur versammelt 226 Architekturfotografien aus rund 16.000 Aufnahmen und gilt als umfassendste Werkschau des 1964 in Neuwied geborenen Fotografen. Seine Bilder reichen von Sydney bis Rio und von Chicago bis Shanghai. Die Galerie im Gereonskloster 12 in der Altstadt-Nord lädt zu einem Besuch in den letzten Wochen ein.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "anthroposcape-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "anthroposcape-2026",
+      "venueId": "kaune-contemporary-koeln",
+      "date": "2026-10-31",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "ANTHROPOSCAPE",
+          "type": "solo",
+          "startDate": "2026-09-16",
+          "endDate": "2026-10-30",
+          "description": "Künstler-Edition als Buchskulptur mit 226 Architekturfotografien von Hans Georg Esch."
+        },
+        "venue": {
+          "name": "Kaune Contemporary Gallery",
+          "shortName": "Kaune Contemporary",
+          "city": "Köln",
+          "website": "https://www.kaunegallery.com/"
+        },
+        "photographers": [
+          {
+            "name": "Hans Georg Esch",
+            "bio": "Architekturfotograf, 1964 in Neuwied geboren."
+          }
+        ]
+      },
+      "title": "Ende: ANTHROPOSCAPE von Hans Georg Esch",
+      "excerpt": "Die Ausstellung ANTHROPOSCAPE in der Kaune Contemporary Gallery ist am 30. Oktober 2026 zu Ende gegangen.",
+      "text": "Am 30. Oktober 2026 ist in der Kaune Contemporary Gallery in Köln „ANTHROPOSCAPE“ von Hans Georg Esch zu Ende gegangen. Seit dem 16. September 2026 zeigte die Galerie die Buchskulptur mit 226 Architekturfotografien, ausgewählt von Michael Kaune aus rund 16.000 Aufnahmen. Esch, 1964 in Neuwied geboren, ist auch im MAKK Köln mit einer Museumsausstellung vertreten. Die Galerie im Gereonskloster 12 in der Altstadt-Nord hat keine eigene Sammlung.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "herbert-w-franke-gottfried-jaeger-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "herbert-w-franke-gottfried-jaeger-2026",
+      "venueId": "museum-folkwang-essen",
+      "date": "2026-10-16",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "HERBERT W. FRANKE / GOTTFRIED JÄGER",
+          "type": "group",
+          "startDate": "2026-10-16",
+          "endDate": "2027-01-10",
+          "description": "Experimentelle, gegenstandslose Fotografie: künstlerischer Austausch zwischen Gottfried Jäger und Herbert W. Franke über Jahrzehnte."
+        },
+        "venue": {
+          "name": "Museum Folkwang",
+          "shortName": "Folkwang",
+          "city": "Essen",
+          "website": "https://www.museum-folkwang.de/"
+        },
+        "photographers": [
+          {
+            "name": "Herbert W. Franke",
+            "bio": null
+          },
+          {
+            "name": "Gottfried Jäger",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Eröffnung: Herbert W. Franke / Gottfried Jäger",
+      "excerpt": "Am 16. Oktober 2026 eröffnet im Museum Folkwang die Ausstellung zu Herbert W. Franke und Gottfried Jäger.",
+      "text": "Am 16. Oktober 2026 eröffnet im Museum Folkwang in Essen „HERBERT W. FRANKE / GOTTFRIED JÄGER“. Die Gruppenausstellung widmet sich der experimentellen, gegenstandslosen Fotografie. Gottfried Jäger entdeckte 1958 das Buch „Kunst und Konstruktion“ des Computerpioniers Herbert W. Franke, daraus entwickelte sich ein künstlerischer Austausch über Jahrzehnte. Das Museum Folkwang am Museumsplatz 1 im Südviertel zeigt die Schau bis zum 10. Januar 2027.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "herbert-w-franke-gottfried-jaeger-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "herbert-w-franke-gottfried-jaeger-2026",
+      "venueId": "museum-folkwang-essen",
+      "date": "2026-12-27",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "HERBERT W. FRANKE / GOTTFRIED JÄGER",
+          "type": "group",
+          "startDate": "2026-10-16",
+          "endDate": "2027-01-10",
+          "description": "Experimentelle, gegenstandslose Fotografie: künstlerischer Austausch zwischen Gottfried Jäger und Herbert W. Franke über Jahrzehnte."
+        },
+        "venue": {
+          "name": "Museum Folkwang",
+          "shortName": "Folkwang",
+          "city": "Essen",
+          "website": "https://www.museum-folkwang.de/"
+        },
+        "photographers": [
+          {
+            "name": "Herbert W. Franke",
+            "bio": null
+          },
+          {
+            "name": "Gottfried Jäger",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Endet bald: Herbert W. Franke / Gottfried Jäger",
+      "excerpt": "Die Ausstellung im Museum Folkwang läuft bis zum 10. Januar 2027.",
+      "text": "Bis zum 10. Januar 2027 zeigt das Museum Folkwang in Essen „HERBERT W. FRANKE / GOTTFRIED JÄGER“. Die Ausstellung erzählt vom Austausch zwischen Gottfried Jäger und dem Computerpionier Herbert W. Franke, der 1958 mit dem Buch „Kunst und Konstruktion“ begann, und von der experimentellen, gegenstandslosen Fotografie. Das Museum am Museumsplatz 1 im Südviertel besitzt eine Bibliothek mit über 50.000 Werken, die vor Ort nach Anmeldung nutzbar ist.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "herbert-w-franke-gottfried-jaeger-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "herbert-w-franke-gottfried-jaeger-2026",
+      "venueId": "museum-folkwang-essen",
+      "date": "2027-01-11",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "HERBERT W. FRANKE / GOTTFRIED JÄGER",
+          "type": "group",
+          "startDate": "2026-10-16",
+          "endDate": "2027-01-10",
+          "description": "Experimentelle, gegenstandslose Fotografie: künstlerischer Austausch zwischen Gottfried Jäger und Herbert W. Franke über Jahrzehnte."
+        },
+        "venue": {
+          "name": "Museum Folkwang",
+          "shortName": "Folkwang",
+          "city": "Essen",
+          "website": "https://www.museum-folkwang.de/"
+        },
+        "photographers": [
+          {
+            "name": "Herbert W. Franke",
+            "bio": null
+          },
+          {
+            "name": "Gottfried Jäger",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Ende: Herbert W. Franke / Gottfried Jäger",
+      "excerpt": "Die Ausstellung im Museum Folkwang ist am 10. Januar 2027 zu Ende gegangen.",
+      "text": "Am 10. Januar 2027 ist im Museum Folkwang in Essen „HERBERT W. FRANKE / GOTTFRIED JÄGER“ zu Ende gegangen. Seit dem 16. Oktober 2026 zeigte die Gruppenausstellung den jahrzehntelangen künstlerischen Austausch zwischen Gottfried Jäger und dem Computerpionier Herbert W. Franke und die experimentelle, gegenstandslose Fotografie. Die Bibliothek des Museums Folkwang am Museumsplatz 1 mit über 50.000 Werken bleibt nach Anmeldung vor Ort nutzbar.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "photography-masters-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "photography-masters-2026",
+      "venueId": "museum-folkwang-essen",
+      "date": "2026-10-16",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "PHOTOGRAPHY MASTERS",
+          "type": "group",
+          "startDate": "2026-10-16",
+          "endDate": "2027-01-10",
+          "description": "Auswahl von Arbeiten von Absolvent:innen des Masterstudiengangs Photography Studies & Practice der Folkwang Universität der Künste."
+        },
+        "venue": {
+          "name": "Museum Folkwang",
+          "shortName": "Folkwang",
+          "city": "Essen",
+          "website": "https://www.museum-folkwang.de/"
+        },
+        "photographers": [
+          {
+            "name": "Florian Fäth",
+            "bio": null
+          },
+          {
+            "name": "Mara Fischer",
+            "bio": null
+          },
+          {
+            "name": "Patrick Lohse",
+            "bio": null
+          },
+          {
+            "name": "Nina Mokhtarbaf",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Eröffnung: PHOTOGRAPHY MASTERS im Museum Folkwang",
+      "excerpt": "Am 16. Oktober 2026 eröffnet im Museum Folkwang „PHOTOGRAPHY MASTERS“ mit Arbeiten von Absolvent:innen der Folkwang Universität.",
+      "text": "Am 16. Oktober 2026 eröffnet im Museum Folkwang in Essen „PHOTOGRAPHY MASTERS“. Die Gruppenausstellung zeigt eine Auswahl von Arbeiten von Absolvent:innen des Masterstudiengangs Photography Studies & Practice der Folkwang Universität der Künste, darunter Florian Fäth, Mara Fischer, Patrick Lohse und Nina Mokhtarbaf. Das Museum am Museumsplatz 1 im Südviertel besitzt eine eigene Sammlung sowie eine Bibliothek mit über 50.000 Werken und zeigt die Schau bis zum 10. Januar 2027.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "photography-masters-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "photography-masters-2026",
+      "venueId": "museum-folkwang-essen",
+      "date": "2026-12-27",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "PHOTOGRAPHY MASTERS",
+          "type": "group",
+          "startDate": "2026-10-16",
+          "endDate": "2027-01-10",
+          "description": "Auswahl von Arbeiten von Absolvent:innen des Masterstudiengangs Photography Studies & Practice der Folkwang Universität der Künste."
+        },
+        "venue": {
+          "name": "Museum Folkwang",
+          "shortName": "Folkwang",
+          "city": "Essen",
+          "website": "https://www.museum-folkwang.de/"
+        },
+        "photographers": [
+          {
+            "name": "Florian Fäth",
+            "bio": null
+          },
+          {
+            "name": "Mara Fischer",
+            "bio": null
+          },
+          {
+            "name": "Patrick Lohse",
+            "bio": null
+          },
+          {
+            "name": "Nina Mokhtarbaf",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Endet bald: PHOTOGRAPHY MASTERS im Museum Folkwang",
+      "excerpt": "Die Ausstellung „PHOTOGRAPHY MASTERS“ im Museum Folkwang läuft bis zum 10. Januar 2027.",
+      "text": "Bis zum 10. Januar 2027 ist im Museum Folkwang in Essen „PHOTOGRAPHY MASTERS“ zu sehen. Gezeigt wird eine Auswahl von Arbeiten von Absolvent:innen des Masterstudiengangs Photography Studies & Practice der Folkwang Universität der Künste, unter ihnen Florian Fäth, Mara Fischer, Patrick Lohse und Nina Mokhtarbaf. Das Museum Folkwang am Museumsplatz 1 im Südviertel lädt dazu ein, die junge Fotografie in den letzten Wochen zu entdecken.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    },
+    {
+      "id": "photography-masters-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "photography-masters-2026",
+      "venueId": "museum-folkwang-essen",
+      "date": "2027-01-11",
+      "kind": "anlegen",
+      "context": {
+        "exhibition": {
+          "title": "PHOTOGRAPHY MASTERS",
+          "type": "group",
+          "startDate": "2026-10-16",
+          "endDate": "2027-01-10",
+          "description": "Auswahl von Arbeiten von Absolvent:innen des Masterstudiengangs Photography Studies & Practice der Folkwang Universität der Künste."
+        },
+        "venue": {
+          "name": "Museum Folkwang",
+          "shortName": "Folkwang",
+          "city": "Essen",
+          "website": "https://www.museum-folkwang.de/"
+        },
+        "photographers": [
+          {
+            "name": "Florian Fäth",
+            "bio": null
+          },
+          {
+            "name": "Mara Fischer",
+            "bio": null
+          },
+          {
+            "name": "Patrick Lohse",
+            "bio": null
+          },
+          {
+            "name": "Nina Mokhtarbaf",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Ende: PHOTOGRAPHY MASTERS im Museum Folkwang",
+      "excerpt": "Die Ausstellung „PHOTOGRAPHY MASTERS“ im Museum Folkwang ist am 10. Januar 2027 zu Ende gegangen.",
+      "text": "Am 10. Januar 2027 ist im Museum Folkwang in Essen „PHOTOGRAPHY MASTERS“ zu Ende gegangen. Seit dem 16. Oktober 2026 zeigte die Gruppenausstellung Arbeiten von Absolvent:innen des Masterstudiengangs Photography Studies & Practice der Folkwang Universität der Künste, darunter Florian Fäth, Mara Fischer, Patrick Lohse und Nina Mokhtarbaf. Das Museum Folkwang am Museumsplatz 1 im Südviertel zeigt weiterhin seine Sammlung und eine Bibliothek zur Fotografie.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-10-28"
+    }
+  ],
+  "orphans": []
+}

@@ -25,3 +25,14 @@ Funktionalität: Update-Skill für Ortsdaten
     Angenommen eine abgeschlossene Übernahme
     Dann hat der Skill die Datenvalidierung und die Tests ausgeführt
     Und er berichtet das Ergebnis
+
+  # EARS: SKL-UB-4
+  Szenario: Skill pflegt das Magazin
+    Angenommen eine abgeschlossene Übernahme der Ortsdaten
+    Dann folgen im Skill Planung, Textbildung, Prüfung, Freigabe und Übernahme der Neuigkeiten
+    Und der Skill verlangt Texte von 60 bis 80 Wörtern ohne erfundene Angaben
+
+  # EARS: SKL-UB-5
+  Szenario: Skill übernimmt Neuigkeiten nur nach Freigabe
+    Angenommen geprüfte Neuigkeiten ohne Freigabe
+    Dann bleiben "data/posts.json" und "content/posts/" unverändert

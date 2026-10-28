@@ -40,3 +40,23 @@ test('Szenario: Skill prüft nach Übernahme (SKL-UB-3)', () => {
 test('Skill-Dokumentation und Format sind vorhanden', () => {
   assert.ok(existsSync(fileURLToPath(new URL('../../updates/README.md', import.meta.url))));
 });
+
+test('Szenario: Skill pflegt das Magazin (SKL-UB-4)', () => {
+  const text = skill();
+  const ablauf = text.slice(text.indexOf('## Ablauf'));
+  let position = ablauf.indexOf('npm run data:apply');
+  for (const step of ['npm run news:plan', 'npm run news:check', 'AskUserQuestion', 'npm run news:apply', 'npm run validate:data']) {
+    const next = ablauf.indexOf(step, position + 1);
+    assert.ok(next > position, `Schritt "${step}" fehlt oder steht in falscher Reihenfolge`);
+    position = next;
+  }
+  assert.match(text, /60 bis 80\*\* Wörter|60 bis 80 Wörter/);
+  assert.match(text, /absolute Daten/);
+  assert.match(text, /erfinden nichts/);
+});
+
+test('Szenario: Skill übernimmt Neuigkeiten nur nach Freigabe (SKL-UB-5)', () => {
+  const text = skill();
+  assert.match(text, /Neuigkeiten erst nach ausdrücklicher Freigabe/);
+  assert.match(text, /nur für freigegebene\*\* Einträge `"approved": true`/);
+});
