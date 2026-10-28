@@ -1,9 +1,29 @@
 <h1>Fotograf:innen</h1>
 <app-data-gate>
   <ul class="card-list">
-    @for (person of photographers(); track person.id) {
-      <li class="card">
-        <h2><a [routerLink]="['/photographers', person.id]">{{ person.name }}</a></h2>
+    @for (item of photographers(); track item.person.id) {
+      <li class="card person-card">
+        @if (item.portrait; as src) {
+          <img
+            class="portrait"
+            [src]="src"
+            [alt]="item.person.name + ' – Portrait'"
+            [attr.width]="item.person.portrait!.width"
+            [attr.height]="item.person.portrait!.height"
+            loading="lazy"
+            decoding="async"
+            (error)="portraitFailed(item.person.id)"
+          />
+        }
+        <div class="person-body">
+          <h2><a [routerLink]="['/photographers', item.person.id]">{{ item.person.name }}</a></h2>
+          @if (item.person.occupation) {
+            <p class="meta occupation">{{ item.person.occupation }}</p>
+          }
+          @if (item.life) {
+            <p class="meta life">{{ item.life }}</p>
+          }
+        </div>
       </li>
     }
   </ul>

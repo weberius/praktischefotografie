@@ -40,7 +40,8 @@ praktischefotografie/
 │   ├── events.json            # Einzel-Events, Vernissagen, Messen
 │   ├── organizers.json        # Netzwerke, Vereine & Veranstalter ohne eigenen Raum
 │   ├── festivals.json         # Festivals (Zeitraum) der Veranstalter
-│   ├── photographers.json     # Index beteiligter Fotograf:innen
+│   ├── photographers.json     # Fotograf:innen mit optionalem Profil (Wikipedia, Portrait)
+│   ├── portraits/             # Portraits von Wikimedia Commons (≤ 400 px, mit Bildnachweis in den Daten)
 │   └── posts.json             # Blog-Index & Metadaten
 ├── content/
 │   └── posts/                 # Markdown-Beiträge für das Magazin (.md)
@@ -186,10 +187,16 @@ Ermöglicht die Quervernetzung: "Welche Ausstellungen mit Beteiligung von Barbar
     "id": "martin-parr",
     "name": "Martin Parr",
     "bio": "Britischer Dokumentarfotograf, Mitglied von Magnum Photos.",
-    "website": "https://www.martinparr.com"
+    "website": "https://www.martinparr.com",
+    "occupation": "Fotograf",
+    "life": { "from": 1952, "to": null },
+    "wikipedia": { "summary": "…40 bis 90 Wörter in eigener Formulierung…", "sources": [{ "lang": "de", "url": "https://de.wikipedia.org/wiki/Martin_Parr" }] },
+    "portrait": { "file": "martin-parr.jpg", "width": 400, "height": 300, "source": "https://commons.wikimedia.org/wiki/File:….jpg", "credit": "Urheber", "license": "CC BY-SA 4.0" }
   }
 ]
 ```
+
+`occupation`, `life`, `wikipedia` und `portrait` sind optional und werden mit `/research-photographers` ergänzt (siehe [`data/README.md`](data/README.md)).
 
 ---
 
@@ -241,5 +248,7 @@ export SCRAPE_CONTACT="redaktion@example.org"   # Kontaktadresse für den User-A
 Die einzelnen Schritte (`npm run data:fetch|check|report|apply`) und das Vorschlagsformat stehen in [`updates/README.md`](updates/README.md). Abgerufene Seitentexte liegen nur lokal unter `.cache/` und werden nicht versioniert.
 
 Der Skill bearbeitet auch die Webseiten von Veranstaltern (Datensatz `organizers` mit `website`) und schlägt Festivals vor, aber nur mit belegtem Zeitraum (ADR-010, Details in [`updates/README.md`](updates/README.md)).
+
+Profile der Fotograf:innen (Berufsbezeichnung, Lebensdaten, Wikipedia-Zusammenfassung, Portrait von Wikimedia Commons) recherchiert der eigene Skill `/research-photographers` (`npm run photographers:fetch|check|apply`, ADR-012, Details in [`updates/README.md`](updates/README.md)); die Webanwendung zeigt Bildnachweis und Quellen an.
 
 Bei jedem Lauf pflegt der Skill auch das Magazin: Zu neuen, eröffnenden, bald endenden und beendeten Ausstellungen entstehen Beiträge von 60 bis 80 Wörtern (`npm run news:plan|check|apply`). Sie werden vorab mit dem Datum des Anlasses angelegt, das Magazin zeigt sie erst an dem Tag, und sie werden erst nach Freigabe übernommen (Format und Regeln: [`updates/README.md`](updates/README.md)).

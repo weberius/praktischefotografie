@@ -40,3 +40,12 @@ Drei Ebenen: **Venue** (Ort mit fester Adresse), **Organizer** (Veranstalter ohn
 - Festival: `id`, `organizerId`, `title`, `startDate`, `endDate`, `city`; optional `description`, `website`. Ein Festival ohne belegten Zeitraum wird nicht erfasst.
 - Ausstellung: `festivalId` verweist auf ein **Festival** (früher auf einen Veranstalter); `isOfficialFestivalPartner: true` ist nur zusammen mit `festivalId` zulässig. Die Ausstellung muss nicht im Festivalzeitraum liegen.
 - Eine `id` darf nicht zugleich bei einem Venue und einem Veranstalter vorkommen.
+
+## Fotograf:innen (`photographers.json`) und Portraits
+
+- Pflicht: `id`, `name`. Studios und Duos stehen wie in den Quellen genannt. Namen sind (ohne Beachtung von Groß- und Kleinschreibung und Leerraum) eindeutig.
+- Aufgenommen werden Personen, deren Bilder in einer Ausstellung gezeigt werden, nicht Kurator:innen, Sammler:innen oder Musiker:innen.
+- **Jede Ausstellung mit `photographerIds` hat eine `description`, die den Namen jeder verknüpften Person nennt** (die Datenprüfung meldet Verstöße).
+- Optionales Profil (vom Skill `/research-photographers`): `occupation` (Berufsbezeichnung nach Wikipedia), `life` (`from`, `to` oder `null`), `wikipedia` (`summary` mit 40 bis 90 Wörtern in eigener Formulierung, `sources` mit `lang` und `url` auf `<lang>.wikipedia.org`) und `portrait` (`file`, `width`, `height`, `source` auf `commons.wikimedia.org`, `credit`, `license`, optional `licenseUrl`).
+- Portraits liegen unter `data/portraits/`, höchstens 400 Pixel breit und 200 kB groß, und erscheinen in der Webanwendung unter `portraits/`. Die Webanwendung zeigt bei jedem Portrait Urheber, Lizenz und den Link zur Commons-Dateiseite, bei der Zusammenfassung die Quellenlinks und den Hinweis CC BY-SA.
+

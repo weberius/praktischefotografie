@@ -117,3 +117,18 @@ Funktionalität: Aktualisierung der Daten aus Webseiten
     Wenn "--venue photoszene-koeln" angegeben ist
     Dann wird nur diese Datei geprüft und übernommen
 
+  # EARS: UPD-UB-9
+  Szenario: Alle genannten Namen werden übernommen
+    Angenommen ein Seitentext mit den Namen "Martin Parr", "Richard Kalvar" und "Atelier Binder" als gezeigte Fotograf:innen und dem Kurator "Max Muster" zu einer neuen Ausstellung
+    Wenn die Vorschläge geprüft werden
+    Dann stehen alle drei Namen als Personen und in "photographerIds"
+    Und "Max Muster" steht nicht darunter
+    Und die "description" der Ausstellung nennt alle drei
+
+  # EARS: UPD-UB-9
+  Szenario: Beschreibung ohne Namen
+    Angenommen ein Vorschlag für eine Ausstellung, dessen "description" einen Namen aus "photographerIds" nicht nennt
+    Wenn die Vorschläge geprüft werden
+    Dann wird er verworfen
+    Und der Bericht nennt den fehlenden Namen
+

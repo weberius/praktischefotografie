@@ -38,6 +38,7 @@ export function syncData({ root, out, demo = false, today = new Date() }) {
       writeFileSync(join(tmp, 'data', `${name}.json`), JSON.stringify(merged, null, 2));
     }
     if (existsSync(join(root, 'content'))) cpSync(join(root, 'content'), join(tmp, 'content'), { recursive: true });
+    if (existsSync(join(root, 'data', 'portraits'))) cpSync(join(root, 'data', 'portraits'), join(tmp, 'data', 'portraits'), { recursive: true });
     if (demo && existsSync(join(root, 'demo', 'content'))) cpSync(join(root, 'demo', 'content'), join(tmp, 'content'), { recursive: true });
     if (errors.length === 0) errors.push(...validateData({ dataDir: join(tmp, 'data'), rootDir: tmp, today }).errors);
     if (errors.length > 0) return { errors };
@@ -46,6 +47,10 @@ export function syncData({ root, out, demo = false, today = new Date() }) {
       rmSync(join(out, dir), { recursive: true, force: true });
       if (existsSync(join(tmp, dir))) cpSync(join(tmp, dir), join(out, dir), { recursive: true });
     }
+    // Portraits liegen im Repository unter data/portraits und erscheinen in der Webanwendung unter portraits/ (PRF-UB-5).
+    rmSync(join(out, 'portraits'), { recursive: true, force: true });
+    rmSync(join(out, 'data', 'portraits'), { recursive: true, force: true });
+    if (existsSync(join(tmp, 'data', 'portraits'))) cpSync(join(tmp, 'data', 'portraits'), join(out, 'portraits'), { recursive: true });
     return { errors: [] };
   } finally {
     rmSync(tmp, { recursive: true, force: true });

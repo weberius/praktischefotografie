@@ -1,0 +1,2481 @@
+{
+  "date": "2026-10-28",
+  "offline": false,
+  "results": [
+    {
+      "id": "hans-georg-esch",
+      "name": "Hans Georg Esch",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "juergen-klauke",
+      "name": "Jürgen Klauke",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "wendy-red-star",
+      "name": "Wendy Red Star",
+      "status": "gefunden",
+      "wikidataId": "Q23416926",
+      "occupations": [
+        "Künstler",
+        "Fotograf",
+        "Bildhauer"
+      ],
+      "wikidataDescription": "US-amerikanische Künstlerin und Angehörige der Apsáalooke (Crow)",
+      "life": {
+        "from": 1981,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Wendy Red Star",
+          "url": "https://de.wikipedia.org/wiki/Wendy_Red_Star",
+          "description": "US-amerikanische Künstlerin und Angehörige der Apsáalooke (Crow)",
+          "extract": "Wendy Red Star ist eine US-amerikanische Künstlerin und Angehörige der Apsáalooke (Crow). In Fotografien, Collagen, Skulpturen und Installationen betrachtet sie die Geschichte und Gegenwart der Apsáalooke und stellt kolonial geprägte Darstellungen indigener Menschen infrage. Im Jahr 2024 wurde sie mit einer MacArthur Fellowship ausgezeichnet.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Wendy Red Star",
+          "url": "https://en.wikipedia.org/wiki/Wendy_Red_Star",
+          "description": "Native American contemporary artist (born 1981)",
+          "extract": "Wendy Red Star is an Apsáalooke contemporary multimedia artist born in Billings, Montana, in the United States. Her humorous approach and use of Native American images from traditional media draw the viewer into her work, while also confronting romanticized representations. She juxtaposes popular depictions of Native Americans with authentic cultural and gender identities. Her work has been described as \"funny, brash, and surreal\". Red Star was awarded a MacArthur Fellowship in 2024.",
+          "imageFile": "Ashkaamne (matrilineal inheritance) by Wendy Red Star.tif"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/wendy-red-star.jpg",
+        "file": "wendy-red-star.jpg",
+        "width": 400,
+        "height": 267,
+        "bytes": 62648,
+        "source": "https://commons.wikimedia.org/wiki/File:Ashkaamne_(matrilineal_inheritance)_by_Wendy_Red_Star.tif",
+        "credit": "Wendy Red Star",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "william-henry-jackson",
+      "name": "William Henry Jackson",
+      "status": "gefunden",
+      "wikidataId": "Q1971889",
+      "occupations": [
+        "Maler",
+        "Fotograf"
+      ],
+      "wikidataDescription": "US-amerikanischer Fotograf",
+      "life": {
+        "from": 1843,
+        "to": 1942
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "William Henry Jackson",
+          "url": "https://de.wikipedia.org/wiki/William_Henry_Jackson",
+          "description": "US-amerikanischer Fotograf",
+          "extract": "William Henry Jackson war ein US-amerikanischer Fotograf, Maler und Abenteurer. Er wurde vor allem durch seine Fotos über den amerikanischen Westen berühmt.",
+          "imageFile": "Whjcam.gif?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "William Henry Jackson",
+          "url": "https://en.wikipedia.org/wiki/William_Henry_Jackson",
+          "description": "American photographer and painter (1843–1942)",
+          "extract": "William Henry Jackson was an American photographer, Civil War veteran, painter, and an explorer famous for his images of the American West. He was a great-great nephew of Samuel Wilson, the progenitor of America's national symbol Uncle Sam. He was the great-grandfather of cartoonist Bill Griffith, creator of Zippy the Pinhead comics.",
+          "imageFile": "Jackson 1862.JPG?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "William Henry Jackson",
+          "url": "https://fr.wikipedia.org/wiki/William_Henry_Jackson",
+          "description": "peintre, photographe et explorateur américain",
+          "extract": "William Henry Jackson était un peintre, photographe et explorateur américain, célèbre pour ses documents sur l'Ouest américain.",
+          "imageFile": "Jackson 1862.JPG?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/william-henry-jackson.jpg",
+        "file": "william-henry-jackson.jpg",
+        "width": 400,
+        "height": 510,
+        "bytes": 131057,
+        "source": "https://commons.wikimedia.org/wiki/File:Jackson_1862.JPG",
+        "credit": "William Henry Jackson",
+        "license": "Public domain"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "august-sander",
+      "name": "August Sander",
+      "status": "gefunden",
+      "wikidataId": "Q61530",
+      "occupations": [
+        "Fotograf",
+        "bildender Künstler"
+      ],
+      "wikidataDescription": "deutscher Fotograf (1876–1964)",
+      "life": {
+        "from": 1876,
+        "to": 1964
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "August Sander",
+          "url": "https://de.wikipedia.org/wiki/August_Sander",
+          "description": "deutscher Fotograf (1876–1964)",
+          "extract": "August Sander war ein deutscher Fotograf. Er gilt als einer der wichtigsten und für die Porträtgeschichte einflussreichsten Fotografen des 20. Jahrhunderts. Mit seinem Werk Menschen des 20. Jahrhunderts schuf er ein „epochemachendes“ Fotoprojekt. Seine Bilder sind vornehmlich der dokumentarisch-sachlich-konzeptuellen Fotografie zuzuordnen.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "August Sander",
+          "url": "https://en.wikipedia.org/wiki/August_Sander",
+          "description": "German portrait and documentary photographer (1876–1964)",
+          "extract": "August Sander was a German portrait and documentary photographer. His first book Face of our Time was published in 1929. Sander has been described as \"the most important German portrait photographer of the early twentieth century\". Sander's work includes landscape, nature, architecture, and street photography, but he is best known for his portraits, as exemplified by his series People of the 20th Century, where he aimed to show a cross-section of society during the Weimar Republic.",
+          "imageFile": null
+        },
+        {
+          "lang": "fr",
+          "title": "August Sander",
+          "url": "https://fr.wikipedia.org/wiki/August_Sander",
+          "description": "photographe allemand",
+          "extract": "August Sander, né le 17 novembre 1876 à Herdorf et mort le 20 avril 1964 à Cologne, est un photographe allemand.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "tina-barney",
+      "name": "Tina Barney",
+      "status": "gefunden",
+      "wikidataId": "Q522240",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "US-amerikanische Fotografin",
+      "life": {
+        "from": 1945,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Tina Barney",
+          "url": "https://de.wikipedia.org/wiki/Tina_Barney",
+          "description": "US-amerikanische Fotografin",
+          "extract": "Tina Barney ist eine US-amerikanische Fotografin. Sie ist vor allem mit ihren großformatigen Porträts der gut situierten Bevölkerung New Yorks und Neuenglands bekannt geworden.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Tina Barney",
+          "url": "https://en.wikipedia.org/wiki/Tina_Barney",
+          "description": "American photographer (born 1945)",
+          "extract": "Tina Barney is an American photographer best known for her large-scale, color portraits of her family and close friends in New York and New England. She is a member of the Lehman family.",
+          "imageFile": null
+        },
+        {
+          "lang": "fr",
+          "title": "Tina Barney",
+          "url": "https://fr.wikipedia.org/wiki/Tina_Barney",
+          "description": "photographe américaine",
+          "extract": "Tina Barney est une photographe américaine née en 1945 à New York, spécialiste du portrait.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "wolfgang-zurborn",
+      "name": "Wolfgang Zurborn",
+      "status": "gefunden",
+      "wikidataId": "Q2591859",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1956,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Wolfgang Zurborn",
+          "url": "https://de.wikipedia.org/wiki/Wolfgang_Zurborn",
+          "description": "deutscher Fotograf",
+          "extract": "Wolfgang Zurborn ist ein deutscher Fotograf.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "herbert-w-franke",
+      "name": "Herbert W. Franke",
+      "status": "gefunden",
+      "wikidataId": "Q78620",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "österreichischer Science-Fiction-Autor",
+      "life": {
+        "from": 1927,
+        "to": 2022
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Herbert W. Franke",
+          "url": "https://de.wikipedia.org/wiki/Herbert_W._Franke",
+          "description": "österreichischer Science-Fiction-Autor",
+          "extract": "Herbert Werner Franke war ein österreichischer Science-Fiction-Schriftsteller und Sachbuchautor. Einige seiner Werke veröffentlichte er unter den Pseudonymen Sergius Both und Peter Parsival. Franke war außerdem aktiv in den Bereichen Zukunftsforschung, Höhlenforschung sowie Computergrafik und Computerkunst. Mit seinem Buch \"Kunst und Konstruktion\" aus dem Jahr 1957 gehört er weltweit zu den ersten Theoretikern, die die Idee formulierten, dass der Computer ein künstlerisches Medium sein könnte. Sein Erbe verwaltet die art meets science - Stiftung Herbert W. Franke.",
+          "imageFile": "Herbert W. Franke 070908 1.JPG?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Herbert W. Franke",
+          "url": "https://en.wikipedia.org/wiki/Herbert_W._Franke",
+          "description": "Austrian scientist and writer (1927–2022)",
+          "extract": "Herbert W. Franke was an Austrian scientist and writer. Die Zeit calls him \"the most prominent German writing Science Fiction author\". He is also one of the important early computer artists, creating computer graphics and early digital art since the late 1950s. Franke was also active in the fields of future research as well as speleology. He used his pen name Sergius Both as this Avatar name in Active Worlds and Opensimulator grids. The Sergius Both Award is given for creative scripting in Immersionskunst by Stiftung Kunstinformatik, first time issued at Amerika Art 2022. On November 2, 2025 the Sergius Both Award was given to RSquared and Herzstein for immersive scripting in AI LAND, being part of The Wrong Biennale.",
+          "imageFile": "Transmediale-2010-Opening-Frakne-detail.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Herbert W. Franke",
+          "url": "https://fr.wikipedia.org/wiki/Herbert_W._Franke",
+          "description": "écrivain de science-fiction autrichien",
+          "extract": "Herbert W. Franke, né le 14 mai 1927 à Vienne et mort le 16 juillet 2022, est un auteur de science-fiction et un pionnier du graphisme informatique autrichien.",
+          "imageFile": "Transmediale-2010-Opening-Frakne-detail.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/herbert-w-franke.jpg",
+        "file": "herbert-w-franke.jpg",
+        "width": 400,
+        "height": 533,
+        "bytes": 69360,
+        "source": "https://commons.wikimedia.org/wiki/File:Transmediale-2010-Opening-Frakne-detail.jpg",
+        "credit": "Shervin Afshar",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "gottfried-jaeger",
+      "name": "Gottfried Jäger",
+      "status": "gefunden",
+      "wikidataId": "Q1539270",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf und Fototheoretiker",
+      "life": {
+        "from": 1937,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Gottfried Jäger",
+          "url": "https://de.wikipedia.org/wiki/Gottfried_J%C3%A4ger",
+          "description": "deutscher Fotograf und Fototheoretiker",
+          "extract": "Gottfried Jäger ist ein deutscher Fotograf, Fototheoretiker und ehemaliger Hochschullehrer.",
+          "imageFile": "Gottfried Jäger 1987.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Gottfried Jäger",
+          "url": "https://en.wikipedia.org/wiki/Gottfried_J%C3%A4ger",
+          "description": "German photographer and theorist of photography",
+          "extract": "Gottfried Jäger is a German photographer, photo-theorist and former university teacher.",
+          "imageFile": null
+        },
+        {
+          "lang": "ar",
+          "title": "غوتفريد جاغر",
+          "url": "https://ar.wikipedia.org/wiki/%D8%BA%D9%88%D8%AA%D9%81%D8%B1%D9%8A%D8%AF_%D8%AC%D8%A7%D8%BA%D8%B1",
+          "description": "مصور ألماني",
+          "extract": "غوتفريد جاغر هو مصور وأستاذ جامعي ألماني، ولد في 13 مايو 1937 في بورغ باي ماغدبورغ في ألمانيا.",
+          "imageFile": "Gottfried Jäger 1987.jpg?utm source=ar.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/gottfried-jaeger.jpg",
+        "file": "gottfried-jaeger.jpg",
+        "width": 400,
+        "height": 216,
+        "bytes": 36666,
+        "source": "https://commons.wikimedia.org/wiki/File:Gottfried_J%C3%A4ger_1987.jpg",
+        "credit": "Ralph Hinterkeuser",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "florian-faeth",
+      "name": "Florian Fäth",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "mara-fischer",
+      "name": "Mara Fischer",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "patrick-lohse",
+      "name": "Patrick Lohse",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "nina-mokhtarbaf",
+      "name": "Nina Mokhtarbaf",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "hannes-jung",
+      "name": "Hannes Jung",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "paul-almasy",
+      "name": "Paul Almásy",
+      "status": "gefunden",
+      "wikidataId": "Q138740",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "französischer Reportage-Fotograf",
+      "life": {
+        "from": 1906,
+        "to": 2003
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Paul Almásy",
+          "url": "https://de.wikipedia.org/wiki/Paul_Alm%C3%A1sy",
+          "description": "französischer Reportage-Fotograf",
+          "extract": "Paul Almásy war ein französischer Fotojournalist ungarischer Herkunft, der hauptsächlich in Paris lebte und in einer über 50-jährigen Karriere weltweit als Fotojournalist tätig war.",
+          "imageFile": "Oliver Mark - Paul Almásy, Paris 2000.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Paul Almásy",
+          "url": "https://en.wikipedia.org/wiki/Paul_Alm%C3%A1sy",
+          "description": "French/Hungarianphotojournalist (1906–2003)",
+          "extract": "Paul Almásy was a Hungarian-born Swiss photographer known for his documentary and portrait photography. He grew up in a family of artists and turned to photography in the 1930s.",
+          "imageFile": "Oliver Mark - Paul Almásy, Paris 2000.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Paul Almásy",
+          "url": "https://fr.wikipedia.org/wiki/Paul_Alm%C3%A1sy",
+          "description": "photographe français",
+          "extract": "Paul Almásy, né Pál Almásy le 29 mai 1906 à Budapest et mort le 23 septembre 2003 à Jouars-Pontchartrain est un photographe français d'origine hongroise.",
+          "imageFile": "Oliver Mark - Paul Almásy, Paris 2000.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Urheber genannt"
+    },
+    {
+      "id": "atelier-binder",
+      "name": "Atelier Binder",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "bruno-barbey",
+      "name": "Bruno Barbey",
+      "status": "gefunden",
+      "wikidataId": "Q2926627",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "französischer Fotograf",
+      "life": {
+        "from": 1941,
+        "to": 2020
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Bruno Barbey",
+          "url": "https://de.wikipedia.org/wiki/Bruno_Barbey",
+          "description": "französischer Fotograf",
+          "extract": "Bruno Barbey war ein französischer Fotograf. Er war Mitglied der Fotoagentur Magnum. In den rund 40 Jahren seines Schaffens bereiste er alle Kontinente und photographierte in etlichen Konflikten.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Bruno Barbey",
+          "url": "https://en.wikipedia.org/wiki/Bruno_Barbey",
+          "description": "Moroccan-born French photographer (1941–2020)",
+          "extract": "Bruno Barbey was a Moroccan-born French photographer. Throughout his four-decade career, he travelled across five continents, photographing many wars.",
+          "imageFile": null
+        },
+        {
+          "lang": "fr",
+          "title": "Bruno Barbey",
+          "url": "https://fr.wikipedia.org/wiki/Bruno_Barbey",
+          "description": "photographe français",
+          "extract": "Bruno Barbey, né le 13 février 1941 à Berrechid au Maroc sous protectorat français et mort le 9 novembre 2020 à Orbais-l'Abbaye, est un journaliste professionnel et reporter photographe franco-suisse.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "heinrich-von-der-becke",
+      "name": "Heinrich von der Becke",
+      "status": "gefunden",
+      "wikidataId": "Q1599721",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Sportfotograf",
+      "life": {
+        "from": 1913,
+        "to": 1997
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Heinrich von der Becke",
+          "url": "https://de.wikipedia.org/wiki/Heinrich_von_der_Becke",
+          "description": "deutscher Sportfotograf",
+          "extract": "Heinrich von der Becke war ein deutscher Sportfotograf. Seine Bilder von Jesse Owens zu den Olympischen Spielen 1936 sind weltweit bekannt. Im Laufe seines Lebens schuf Heinrich von der Becke etwa 65.000 Schwarzweiß-Abzüge, 1,2 Millionen Negative, etwa 2000 Farbfilme mit einer dazugehörigen Kartei und umfangreiche Filmlegenden. Als eines der bekanntesten Markenzeichen gilt seine Schiebermütze.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "sibylle-bergemann",
+      "name": "Sibylle Bergemann",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "norbert-bunge",
+      "name": "Norbert Bunge",
+      "status": "gefunden",
+      "wikidataId": "Q1435489",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Filmemacher",
+      "life": {
+        "from": 1941,
+        "to": 2024
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Norbert Bunge",
+          "url": "https://de.wikipedia.org/wiki/Norbert_Bunge",
+          "description": "deutscher Filmemacher",
+          "extract": "Norbert Bunge war ein deutscher Filmemacher, Kameramann, Fotograf und Galerist. Er betrieb viele Jahre die Fotogalerie argus in Berlin-Mitte.",
+          "imageFile": null
+        },
+        {
+          "lang": "ro",
+          "title": "Norbert Bunge",
+          "url": "https://ro.wikipedia.org/wiki/Norbert_Bunge",
+          "description": null,
+          "extract": "Norbert Bunge a fost un director de imagine, regizor de film, scenarist de film[*], producător de film, editor de film[*], scenarist, fotograf și regizor[*] german.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "cornell-capa",
+      "name": "Cornell Capa",
+      "status": "gefunden",
+      "wikidataId": "Q504066",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "ungarischer-US-amerikanischer Fotograf",
+      "life": {
+        "from": 1918,
+        "to": 2008
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Cornell Capa",
+          "url": "https://de.wikipedia.org/wiki/Cornell_Capa",
+          "description": "ungarischer-US-amerikanischer Fotograf",
+          "extract": "Cornell Capa war ein ungarisch-US-amerikanischer Fotograf. Als jüngerer Bruder des berühmten Fotografen Robert Capa wurde er auch le petit Capa genannt. Mit seinem Bruder prägte er den Fotojournalismus. Bekannt wurde er mit Fotos aus dem Vietnamkrieg und mit seinen fotografischen Sozialreportagen aus Lateinamerika.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Cornell Capa",
+          "url": "https://en.wikipedia.org/wiki/Cornell_Capa",
+          "description": "Hungarian American photographer (1918–2008)",
+          "extract": "Cornell Capa was a Hungarian-American photographer, member of Magnum Photos, photo curator, and the younger brother of photo-journalist and war photographer Robert Capa. Graduating from Imre Madách Gymnasium in Budapest, he initially intended to study medicine, but instead joined his brother in Paris to pursue photography. Cornell was an ambitious photo enthusiast who founded the International Center of Photography in New York in 1974 with help from Micha Bar-Am after a stint of working for both Life magazine and Magnum Photos.",
+          "imageFile": "Cornell Capa, RIT NandE Vol12Num12 1980 Mar27 Complete.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Cornell Capa",
+          "url": "https://fr.wikipedia.org/wiki/Cornell_Capa",
+          "description": "photographe américain d'origine hongroise",
+          "extract": "Cornell Capa est un photographe américain d'origine hongroise, membre depuis 1954 de l'agence Magnum Photos, fondée par son frère aîné Robert Capa en 1947.",
+          "imageFile": "Cornell Capa, RIT NandE Vol12Num12 1980 Mar27 Complete.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/cornell-capa.jpg",
+        "file": "cornell-capa.jpg",
+        "width": 400,
+        "height": 353,
+        "bytes": 67485,
+        "source": "https://commons.wikimedia.org/wiki/File:Cornell_Capa,_RIT_NandE_Vol12Num12_1980_Mar27_Complete.jpg",
+        "credit": "Rochester Institute of Technology",
+        "license": "Public domain"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "bruce-davidson",
+      "name": "Bruce Davidson",
+      "status": "gefunden",
+      "wikidataId": "Q962520",
+      "occupations": [
+        "Fotograf",
+        "Künstler"
+      ],
+      "wikidataDescription": "US-amerikanischer Fotograf",
+      "life": {
+        "from": 1933,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Bruce Davidson (Fotograf)",
+          "url": "https://de.wikipedia.org/wiki/Bruce_Davidson_(Fotograf)",
+          "description": "US-amerikanischer Fotograf",
+          "extract": "Bruce Davidson ist ein US-amerikanischer Fotograf.",
+          "imageFile": "Bruce Davidson 2015.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Bruce Davidson (photographer)",
+          "url": "https://en.wikipedia.org/wiki/Bruce_Davidson_(photographer)",
+          "description": "American photographer",
+          "extract": "Bruce Landon Davidson is an American photographer, who has been a member of the Magnum Photos agency since 1958. His photographs, notably those taken in Harlem, New York City, have been widely exhibited and published. He is known for photographing communities that are usually hostile to outsiders.",
+          "imageFile": "Bruce Davidson 2015.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Bruce Davidson (photographe)",
+          "url": "https://fr.wikipedia.org/wiki/Bruce_Davidson_(photographe)",
+          "description": "photographe américain",
+          "extract": "Bruce Davidson est un photojournaliste et réalisateur de documentaires américain, membre de l'agence Magnum Photos depuis 1958.",
+          "imageFile": "Bruce Davidson 2015.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/bruce-davidson.jpg",
+        "file": "bruce-davidson.jpg",
+        "width": 400,
+        "height": 610,
+        "bytes": 112375,
+        "source": "https://commons.wikimedia.org/wiki/File:Bruce_Davidson_2015.jpg",
+        "credit": "BurnAway",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "gerti-deutsch",
+      "name": "Gerti Deutsch",
+      "status": "gefunden",
+      "wikidataId": "Q89293",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "österreichische Fotografin und Fotojournalistin",
+      "life": {
+        "from": 1908,
+        "to": 1979
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Gerti Deutsch",
+          "url": "https://de.wikipedia.org/wiki/Gerti_Deutsch",
+          "description": "österreichische Fotografin und Fotojournalistin",
+          "extract": "Gerti Deutsch war eine österreichisch-britische Fotografin.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Gerti Deutsch",
+          "url": "https://en.wikipedia.org/wiki/Gerti_Deutsch",
+          "description": "Austrian-born British photographer",
+          "extract": "Gertrude Helene \"Gerti\" Deutsch, also known as Gertrude Hopkinson, was an Austrian-born British photographer. She is best known for her work for the magazine Picture Post, from 1938 until 1950.",
+          "imageFile": "130327 Gerti Deutsch Praha Rakouske kulturni forum 26.JPG"
+        },
+        {
+          "lang": "fr",
+          "title": "Gerti Deutsch",
+          "url": "https://fr.wikipedia.org/wiki/Gerti_Deutsch",
+          "description": "photographe autrichienne",
+          "extract": "Gerti Deutsch, née le 19 décembre 1908 à Vienne et morte le 9 décembre 1979 à Leamington Spa (Royaume-Uni), est une photographe austro-britannique.",
+          "imageFile": null
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/gerti-deutsch.jpg",
+        "file": "gerti-deutsch.jpg",
+        "width": 400,
+        "height": 267,
+        "bytes": 30234,
+        "source": "https://commons.wikimedia.org/wiki/File:130327_Gerti_Deutsch_Praha_Rakouske_kulturni_forum_26.JPG",
+        "credit": "svajcr",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "herbert-dombrowski",
+      "name": "Herbert Dombrowski",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "pietro-donzelli",
+      "name": "Pietro Donzelli",
+      "status": "gefunden",
+      "wikidataId": "Q2094399",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "italienischer Fotograf",
+      "life": {
+        "from": 1915,
+        "to": 1998
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Pietro Donzelli",
+          "url": "https://de.wikipedia.org/wiki/Pietro_Donzelli",
+          "description": "italienischer Fotograf",
+          "extract": "Pietro Donzelli war ein italienischer Fotograf. Seine Fotografien in Schwarzweiß, insbesondere aus dem Italien der 1950er und 1960er Jahre mit der Thematik der Einsamkeit, wurden international bekannt und geehrt. Er gilt als einer der Maestros der italienischen Fotografie. Außerdem war er als Kurator und Organisator italienischer und internationaler Fotografie-Ausstellungen tätig.",
+          "imageFile": null
+        },
+        {
+          "lang": "it",
+          "title": "Pietro Donzelli",
+          "url": "https://it.wikipedia.org/wiki/Pietro_Donzelli",
+          "description": "fotografo italiano",
+          "extract": "Pietro Donzelli è stato un fotografo italiano. Contribuì, con le sue immagini, a far emergere ed affermare la fotografia in Italia nel secondo dopoguerra.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "stefan-draschan",
+      "name": "Stefan Draschan",
+      "status": "gefunden",
+      "wikidataId": "Q81170082",
+      "occupations": [
+        "Künstler"
+      ],
+      "wikidataDescription": "österreichischer Blogger und Fotograf",
+      "life": {
+        "from": 1979,
+        "to": null
+      },
+      "articles": [],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "jochen-ehmke",
+      "name": "Jochen Ehmke",
+      "status": "gefunden",
+      "wikidataId": "Q95230792",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "photographer",
+      "life": {
+        "from": 1936,
+        "to": null
+      },
+      "articles": [],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "elliott-erwitt",
+      "name": "Elliott Erwitt",
+      "status": "gefunden",
+      "wikidataId": "Q284360",
+      "occupations": [
+        "Fotograf",
+        "Künstler"
+      ],
+      "wikidataDescription": "US-amerikanischer Fotograf (1928-2023)",
+      "life": {
+        "from": 1928,
+        "to": 2023
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Elliott Erwitt",
+          "url": "https://de.wikipedia.org/wiki/Elliott_Erwitt",
+          "description": "US-amerikanischer Fotograf (1928-2023)",
+          "extract": "Elliott Erwitt war ein US-amerikanischer Fotograf. In den 1960ern war er für einige Jahre Präsident sowie Vizepräsident der Fotoagentur Magnum Photos.",
+          "imageFile": "Elliott Erwitt by Alessio Jacona (15554958273).jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Elliott Erwitt",
+          "url": "https://en.wikipedia.org/wiki/Elliott_Erwitt",
+          "description": "French-born American photographer (1928–2023)",
+          "extract": "Elliott Erwitt was a French-born American advertising and documentary photographer known for his black and white candid photos of ironic and absurd situations within everyday settings. He was a member of Magnum Photos since 1953.",
+          "imageFile": "Elliott Erwitt by Alessio Jacona (15554958273).jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Elliott Erwitt",
+          "url": "https://fr.wikipedia.org/wiki/Elliott_Erwitt",
+          "description": "photographe américain",
+          "extract": "Elliott Erwitt, né Elio Romano Ervitz le 26 juillet 1928 à Neuilly-sur-Seine et mort le 29 novembre 2023 à New York, est un photographe franco-américain, connu pour ses images en noir et blanc inhabituelles. Plus secondairement, il est aussi documentariste.",
+          "imageFile": "Elliott Erwitt by Alessio Jacona (15554958273).jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/elliott-erwitt.jpg",
+        "file": "elliott-erwitt.jpg",
+        "width": 400,
+        "height": 236,
+        "bytes": 25664,
+        "source": "https://commons.wikimedia.org/wiki/File:Elliott_Erwitt_by_Alessio_Jacona_(15554958273).jpg",
+        "credit": "Alessio Jacona from Rome, Italy",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "arno-fischer",
+      "name": "Arno Fischer",
+      "status": "gefunden",
+      "wikidataId": "Q94020",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1927,
+        "to": 2011
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Arno Fischer (Fotograf)",
+          "url": "https://de.wikipedia.org/wiki/Arno_Fischer_(Fotograf)",
+          "description": "deutscher Fotograf",
+          "extract": "Arno Fischer war ein deutscher Fotograf und Hochschullehrer.",
+          "imageFile": "Arno Fischer.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Arno Fischer",
+          "url": "https://en.wikipedia.org/wiki/Arno_Fischer",
+          "description": "German photographer (1927–2011)",
+          "extract": "Arno Fischer was a German photographer and university teacher.",
+          "imageFile": "Arno Fischer.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Arno Fischer",
+          "url": "https://fr.wikipedia.org/wiki/Arno_Fischer",
+          "description": "photographe allemand",
+          "extract": "Arno Fischer, né à Berlin-Wedding le 14 avril 1927 et mort à Neustrelitz le 13 septembre 2011, est un photographe allemand, également professeur d'université.",
+          "imageFile": "Arno Fischer.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/arno-fischer.jpg",
+        "file": "arno-fischer.jpg",
+        "width": 400,
+        "height": 285,
+        "bytes": 34062,
+        "source": "https://commons.wikimedia.org/wiki/File:Arno_Fischer.jpg",
+        "credit": "Rechteerklärung am 8.9.2016 an Wikipedia als pdf übermittelt",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "a-e-frankl",
+      "name": "A. & E. Frankl",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "leonard-freed",
+      "name": "Leonard Freed",
+      "status": "gefunden",
+      "wikidataId": "Q325185",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "US-amerikanischer Fotograf (1929-2006)",
+      "life": {
+        "from": 1929,
+        "to": 2006
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Leonard Freed",
+          "url": "https://de.wikipedia.org/wiki/Leonard_Freed",
+          "description": "US-amerikanischer Fotograf (1929-2006)",
+          "extract": "Leonard Freed war ein Fotograf und seit 1972 Vollmitglied bei Magnum Photos.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Leonard Freed",
+          "url": "https://en.wikipedia.org/wiki/Leonard_Freed",
+          "description": "American photojournalist (1929–2006)",
+          "extract": "Leonard Freed was an American documentary photojournalist and longtime Magnum Photos member.",
+          "imageFile": null
+        },
+        {
+          "lang": "fr",
+          "title": "Leonard Freed",
+          "url": "https://fr.wikipedia.org/wiki/Leonard_Freed",
+          "description": "photographe américain",
+          "extract": "Leonard Freed est un photographe américain.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "george-friedman",
+      "name": "George Friedman",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "jean-gaumy",
+      "name": "Jean Gaumy",
+      "status": "gefunden",
+      "wikidataId": "Q3172250",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "French photographer (1948- )",
+      "life": {
+        "from": 1948,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "en",
+          "title": "Jean Gaumy",
+          "url": "https://en.wikipedia.org/wiki/Jean_Gaumy",
+          "description": "French photographer and filmmaker (born 1948)",
+          "extract": "Jean Gaumy is a French photographer and filmmaker who has been associated with Magnum Photos since 1977 who has specialised in depictions of isolated or confined communities and groups.",
+          "imageFile": "Jean GAUMY.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Jean Gaumy",
+          "url": "https://fr.wikipedia.org/wiki/Jean_Gaumy",
+          "description": "photographe français",
+          "extract": "Jean Gaumy, né le 28 août 1948 à Pontaillac (Charente-Maritime), est un photographe français, membre de l'agence Magnum et de l'Institut de France, « Peintre officiel de la Marine » en tant que photographe et cinéaste.",
+          "imageFile": "Jean GAUMY-2.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "es",
+          "title": "Jean Gaumy",
+          "url": "https://es.wikipedia.org/wiki/Jean_Gaumy",
+          "description": "fotógrafo francés",
+          "extract": "Jean Gaumy es un fotógrafo francés, miembro de la agencia Magnum, « pintor oficial de la Marina » y miembro de la Academia de Bellas Artes de Francia.",
+          "imageFile": "Jean GAUMY.jpg?utm source=es.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/jean-gaumy.jpg",
+        "file": "jean-gaumy.jpg",
+        "width": 400,
+        "height": 644,
+        "bytes": 134948,
+        "source": "https://commons.wikimedia.org/wiki/File:Jean_GAUMY.jpg",
+        "credit": "© Jean GAUMY / Magnum Phoos",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "gilbert-garcin",
+      "name": "Gilbert Garcin",
+      "status": "gefunden",
+      "wikidataId": "Q3105718",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "French photographer",
+      "life": {
+        "from": 1929,
+        "to": 2020
+      },
+      "articles": [
+        {
+          "lang": "en",
+          "title": "Gilbert Garcin",
+          "url": "https://en.wikipedia.org/wiki/Gilbert_Garcin",
+          "description": "French photographer (1929–2020)",
+          "extract": "Gilbert Garcin was a French photographer.",
+          "imageFile": null
+        },
+        {
+          "lang": "fr",
+          "title": "Gilbert Garcin",
+          "url": "https://fr.wikipedia.org/wiki/Gilbert_Garcin",
+          "description": "photographe français",
+          "extract": "Gilbert Garcin, né à La Ciotat le 21 juin 1929 et mort le 17 avril 2020 à Marseille à l'âge de 91 ans, est un entrepreneur et photographe français.",
+          "imageFile": null
+        },
+        {
+          "lang": "es",
+          "title": "Gilbert Garcin",
+          "url": "https://es.wikipedia.org/wiki/Gilbert_Garcin",
+          "description": "fotógrafo francés",
+          "extract": "Gilbert Garcin fue un fotógrafo francés.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "bruce-gilden",
+      "name": "Bruce Gilden",
+      "status": "gefunden",
+      "wikidataId": "Q991646",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "US-amerikanischer Reportagefotograf",
+      "life": {
+        "from": 1946,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Bruce Gilden",
+          "url": "https://de.wikipedia.org/wiki/Bruce_Gilden",
+          "description": "US-amerikanischer Reportagefotograf",
+          "extract": "Bruce Gilden ist ein US-amerikanischer Reportagefotograf. Er wurde vor allem durch seine Arbeiten über die Bewohner der Stadt New York bekannt. Von anderen Straßenfotografen grenzt sich Gilden besonders durch seinen konsequenten Einsatz von Blitzlicht und der geringen Distanz zu seinem Motiv ab.",
+          "imageFile": "Bruce Gilden Pinacoteca Tosio Brescia 2026.jpeg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Bruce Gilden",
+          "url": "https://en.wikipedia.org/wiki/Bruce_Gilden",
+          "description": "American street photographer (born 1946)",
+          "extract": "Bruce Gilden is an American street photographer. He is best known for his candid close-up photographs of people on the streets of New York City, using a flashgun. He has had various books of his work published, has received the European Publishers Award for Photography and is a Guggenheim Fellow. Gilden has been a member of Magnum Photos since 1998. He was born in Brooklyn, New York.",
+          "imageFile": "Bruce Gilden Pinacoteca Tosio Brescia 2026.jpeg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Bruce Gilden",
+          "url": "https://fr.wikipedia.org/wiki/Bruce_Gilden",
+          "description": "photographe américain",
+          "extract": "Bruce Gilden, né le 16 octobre 1946 à Brooklyn, New York, est un photographe américain adepte de la photographie de rue pratiquant le portrait de rue avec un flash électronique. Il vit et travaille à New York",
+          "imageFile": "Bruce Gilden Pinacoteca Tosio Brescia 2026.jpeg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/bruce-gilden.jpg",
+        "file": "bruce-gilden.jpg",
+        "width": 400,
+        "height": 552,
+        "bytes": 133290,
+        "source": "https://commons.wikimedia.org/wiki/File:Bruce_Gilden_Pinacoteca_Tosio_Brescia_2026.jpeg",
+        "credit": "Wolfgang Moroder",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "franz-goettfried",
+      "name": "Franz Göttfried",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "philippe-halsman",
+      "name": "Philippe Halsman",
+      "status": "gefunden",
+      "wikidataId": "Q704572",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "lettisch-französisch-amerikanischer Porträt-Fotograf",
+      "life": {
+        "from": 1906,
+        "to": 1979
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Philippe Halsman",
+          "url": "https://de.wikipedia.org/wiki/Philippe_Halsman",
+          "description": "lettisch-französisch-amerikanischer Porträt-Fotograf",
+          "extract": "Philippe Halsman war ein Porträt- und Modefotograf. Über Jahrzehnte arbeitete er für die Zeitschrift Life. Seine Werke wurden über hundertmal als Titelbild veröffentlicht.",
+          "imageFile": "Philippe Halsman (cropped).jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Philippe Halsman",
+          "url": "https://en.wikipedia.org/wiki/Philippe_Halsman",
+          "description": "American photographer",
+          "extract": "Philippe Halsman was an American portrait photographer. He was born in Riga in the part of the Russian Empire which later became Latvia, and died in New York City.",
+          "imageFile": "Philippe Halsman (cropped).jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Philippe Halsman",
+          "url": "https://fr.wikipedia.org/wiki/Philippe_Halsman",
+          "description": "photographe américain",
+          "extract": "Philippe Halsman, né le 2 mai 1906 à Riga et mort le 25 juin 1979 à New York, est un photographe américain, naturalisé en 1949, membre de l'agence Magnum Photos, connu pour ses portraits de célébrités, ses couvertures du magazine Life et sa « Jumpologie ».",
+          "imageFile": "Philippe Halsman (cropped).jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/philippe-halsman.jpg",
+        "file": "philippe-halsman.jpg",
+        "width": 400,
+        "height": 628,
+        "bytes": 56941,
+        "source": "https://commons.wikimedia.org/wiki/File:Philippe_Halsman_(cropped).jpg",
+        "credit": "Unknown authorUnknown author",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "hans-henschke",
+      "name": "Hans Henschke",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "bernd-heyden",
+      "name": "Bernd Heyden",
+      "status": "gefunden",
+      "wikidataId": "Q823601",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1940,
+        "to": 1984
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Bernd Heyden",
+          "url": "https://de.wikipedia.org/wiki/Bernd_Heyden",
+          "description": "deutscher Fotograf",
+          "extract": "Bernd Heyden war ein deutscher Fotograf. Er wurde durch seine Fotografien aus dem Berliner Stadtteil Prenzlauer Berg bekannt.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "gerhard-hopf",
+      "name": "Gerhard Hopf",
+      "status": "gefunden",
+      "wikidataId": "Q128774493",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1946,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Gerhard Hopf",
+          "url": "https://de.wikipedia.org/wiki/Gerhard_Hopf",
+          "description": "deutscher Fotograf",
+          "extract": "August Gerhard Hopf ist ein deutscher Fotograf und Fotografiker.",
+          "imageFile": "Hopf Gerhard.png?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "Dateiseite auf Commons nicht gefunden"
+    },
+    {
+      "id": "lotte-jacobi",
+      "name": "Lotte Jacobi",
+      "status": "gefunden",
+      "wikidataId": "Q70006",
+      "occupations": [
+        "Fotograf",
+        "Künstler"
+      ],
+      "wikidataDescription": "deutsch-US-amerikanische Porträt-, Theater- und Kunstfotografin",
+      "life": {
+        "from": 1896,
+        "to": 1990
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Lotte Jacobi",
+          "url": "https://de.wikipedia.org/wiki/Lotte_Jacobi",
+          "description": "deutsch-US-amerikanische Porträt-, Theater- und Kunstfotografin",
+          "extract": "Johanna Alexandra „Lotte“ Jacobi war eine deutsche Fotografin auf den Gebieten des Porträts, des Theaters und der Kunst.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Lotte Jacobi",
+          "url": "https://en.wikipedia.org/wiki/Lotte_Jacobi",
+          "description": "German-American photographer",
+          "extract": "Lotte Jacobi was a leading German-American portrait photographer and photojournalist, known for her high-contrast black-and-white portrait photography, characterized by intimate, sometimes dramatic, sometimes idiosyncratic and often definitive humanist depictions of both ordinary people in the United States and Europe and some of the most important artists, thinkers and activists of the 20th century. Ruth Jacobi was her sister.",
+          "imageFile": "Lotte Jacobi 1977 2.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Lotte Jacobi",
+          "url": "https://fr.wikipedia.org/wiki/Lotte_Jacobi",
+          "description": "photographe germano-américaine (1896-1990)",
+          "extract": "Lotte Jacobi, de son vrai nom Johanna Alexandra Jacobi, née le 17 août 1896 à Toruń en Prusse et morte le 6 mai 1990 aux États-Unis, est une photographe américaine d'origine allemande.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "Dateiseite auf Commons nicht gefunden"
+    },
+    {
+      "id": "max-jacoby",
+      "name": "Max Jacoby",
+      "status": "gefunden",
+      "wikidataId": "Q104724",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1919,
+        "to": 2009
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Max Jacoby (Fotograf)",
+          "url": "https://de.wikipedia.org/wiki/Max_Jacoby_(Fotograf)",
+          "description": "deutscher Fotograf",
+          "extract": "Max Jacoby, später Max-Moshe Jacoby, war ein deutscher Fotograf und Bildjournalist.",
+          "imageFile": null
+        },
+        {
+          "lang": "lb",
+          "title": "Max Jacoby (Fotograf)",
+          "url": "https://lb.wikipedia.org/wiki/Max_Jacoby_(Fotograf)",
+          "description": "däitsche Fotograf",
+          "extract": "De Max Jacoby, gebuer den 8. Juni 1919 zu Koblenz, a gestuerwen de 15. Mäerz 2009 zu Berlin, war en däitsche Fotograf.",
+          "imageFile": "Grabstätte Stubenrauchstraße 43–45 (Fried) Max Moshe-Jacoby.jpg?utm source=lb.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "Dateiseite auf Commons nicht gefunden"
+    },
+    {
+      "id": "richard-kalvar",
+      "name": "Richard Kalvar",
+      "status": "gefunden",
+      "wikidataId": "Q7326984",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "American photographer (born 1944)",
+      "life": {
+        "from": 1944,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "en",
+          "title": "Richard Kalvar",
+          "url": "https://en.wikipedia.org/wiki/Richard_Kalvar",
+          "description": "American photographer (born 1944)",
+          "extract": "Richard Kalvar is an American photographer who has been associated with Magnum Photos since 1975.",
+          "imageFile": null
+        },
+        {
+          "lang": "fr",
+          "title": "Richard Kalvar",
+          "url": "https://fr.wikipedia.org/wiki/Richard_Kalvar",
+          "description": "photographe américain",
+          "extract": "Richard Kalvar est un photographe américain, né le 14 novembre 1944 à Brooklyn, New York",
+          "imageFile": null
+        },
+        {
+          "lang": "it",
+          "title": "Richard Kalvar",
+          "url": "https://it.wikipedia.org/wiki/Richard_Kalvar",
+          "description": "fotografo statunitense",
+          "extract": "Richard Kalvar è un fotografo statunitense, associato a Magnum Photos dal 1975. Kalvar ha tenuto una mostra personale alla Maison européenne de la photographie di Parigi.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "barbara-klemm",
+      "name": "Barbara Klemm",
+      "status": "gefunden",
+      "wikidataId": "Q91862",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutsche Fotografin",
+      "life": {
+        "from": 1939,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Barbara Klemm",
+          "url": "https://de.wikipedia.org/wiki/Barbara_Klemm",
+          "description": "deutsche Fotografin",
+          "extract": "Barbara Klemm ist eine deutsche Fotografin und Pressefotografin.",
+          "imageFile": "Barbara Klemm (2022).jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Barbara Klemm",
+          "url": "https://en.wikipedia.org/wiki/Barbara_Klemm",
+          "description": "German press photographer (born 1939)",
+          "extract": "Barbara Klemm is a German press photographer. She worked for Frankfurter Allgemeine Zeitung for 45 years. She photographed many of the most important events in recent German history and has received honors, including Fellowship of the Academy of Arts, Berlin and the Pour le Mérite. She was inducted into the Leica Hall of Fame in recognition of her status as \"a driving force in reportage photography\" and as \"an exemplary photographer\".",
+          "imageFile": "Barbara klemm 2010.tif"
+        },
+        {
+          "lang": "fr",
+          "title": "Barbara Klemm",
+          "url": "https://fr.wikipedia.org/wiki/Barbara_Klemm",
+          "description": "photographe allemande",
+          "extract": "Barbara Klemm, née le 27 décembre 1939 à Münster en Allemagne, est une photographe allemande.",
+          "imageFile": "Max-beckmann-preis-2010-barbara-klemm-ffm-007.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/barbara-klemm.jpg",
+        "file": "barbara-klemm.jpg",
+        "width": 400,
+        "height": 512,
+        "bytes": 50663,
+        "source": "https://commons.wikimedia.org/wiki/File:Barbara_klemm_2010.tif",
+        "credit": "Max-beckmann-preis-2010-barbara-klemm-ffm-002.jpg: Dontworry derivative work: Artmax (talk)",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "robert-lebeck",
+      "name": "Robert Lebeck",
+      "status": "gefunden",
+      "wikidataId": "Q75247",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1929,
+        "to": 2014
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Robert Lebeck",
+          "url": "https://de.wikipedia.org/wiki/Robert_Lebeck",
+          "description": "deutscher Fotograf",
+          "extract": "Robert Lebeck war ein deutscher Fotojournalist und bedeutender Sammler u. a. von Fotografien des 19. Jahrhunderts und Zeitschriften aus der Frühzeit des Fotojournalismus.",
+          "imageFile": "Lebeck Robert Leverkusen 200311.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Robert Lebeck",
+          "url": "https://en.wikipedia.org/wiki/Robert_Lebeck",
+          "description": "German photojournalist (1929–2014)",
+          "extract": "Robert Lebeck was a German photojournalist.",
+          "imageFile": "Lebeck Robert Leverkusen 200311.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Robert Lebeck",
+          "url": "https://fr.wikipedia.org/wiki/Robert_Lebeck",
+          "description": "photographe allemand",
+          "extract": "Robert Lebeck, né le 21 mars 1929 à Berlin où il est mort le 14 juin 2014, est une figure du photojournalisme allemand.",
+          "imageFile": "Lebeck Robert Leverkusen 200311.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/robert-lebeck.jpg",
+        "file": "robert-lebeck.jpg",
+        "width": 400,
+        "height": 533,
+        "bytes": 102658,
+        "source": "https://commons.wikimedia.org/wiki/File:Lebeck_Robert_Leverkusen_200311.jpg",
+        "credit": "Hpschaefer http://www.reserv-art.de",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "herbert-list",
+      "name": "Herbert List",
+      "status": "gefunden",
+      "wikidataId": "Q68223",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1903,
+        "to": 1975
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Herbert List",
+          "url": "https://de.wikipedia.org/wiki/Herbert_List",
+          "description": "deutscher Fotograf",
+          "extract": "Herbert List war ein deutscher Fotograf. Er gilt als „moderner Klassiker“ und wurde vor allem für seine surreal anmutenden Schwarzweiß-Fotografien bekannt.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Herbert List",
+          "url": "https://en.wikipedia.org/wiki/Herbert_List",
+          "description": "German photographer (1903–1975)",
+          "extract": "Herbert List was a German photographer, who worked for magazines, including Vogue, Harper's Bazaar, and Life, and was associated with Magnum Photos. His austere, classically posed black-and-white compositions, particularly his homoerotic male nudes, taken in Italy and Greece being influential in modern photography and contemporary fashion photography.",
+          "imageFile": null
+        },
+        {
+          "lang": "fr",
+          "title": "Herbert List",
+          "url": "https://fr.wikipedia.org/wiki/Herbert_List",
+          "description": "photographe allemand",
+          "extract": "Herbert List est un photographe allemand né à Hambourg le 7 octobre 1903 et mort à Munich le 4 avril 1975.",
+          "imageFile": "Grabstätte Herbert List.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "Dateiseite auf Commons nicht gefunden"
+    },
+    {
+      "id": "peter-marlow",
+      "name": "Peter Marlow",
+      "status": "gefunden",
+      "wikidataId": "Q3376742",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "British photographer (1952–2016)",
+      "life": {
+        "from": 1952,
+        "to": 2016
+      },
+      "articles": [
+        {
+          "lang": "en",
+          "title": "Peter Marlow (photographer)",
+          "url": "https://en.wikipedia.org/wiki/Peter_Marlow_(photographer)",
+          "description": "British photographer (1952–2016)",
+          "extract": "Peter Marlow was a British photographer and photojournalist, and member of Magnum Photos.",
+          "imageFile": "Peter Marlow Portrait.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Peter Marlow",
+          "url": "https://fr.wikipedia.org/wiki/Peter_Marlow",
+          "description": "photographe britannique",
+          "extract": "Peter Marlow, né le 19 janvier 1952 à Kenilworth, Angleterre, et mort le 21 février 2016 à Londres, est un photographe de presse britannique de l'agence Magnum.",
+          "imageFile": "Peter Marlow Portrait.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "nl",
+          "title": "Peter Marlow",
+          "url": "https://nl.wikipedia.org/wiki/Peter_Marlow",
+          "description": "Brits fotograaf (1952-2016)",
+          "extract": "Peter Marlow was een Brits fotograaf.",
+          "imageFile": "Peter Marlow Portrait.jpg?utm source=nl.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/peter-marlow.jpg",
+        "file": "peter-marlow.jpg",
+        "width": 400,
+        "height": 400,
+        "bytes": 51301,
+        "source": "https://commons.wikimedia.org/wiki/File:Peter_Marlow_Portrait.jpg",
+        "credit": "Barbicanf",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "will-mcbride",
+      "name": "Will McBride",
+      "status": "gefunden",
+      "wikidataId": "Q2576541",
+      "occupations": [
+        "Fotograf",
+        "Maler",
+        "Bildhauer",
+        "bildender Künstler"
+      ],
+      "wikidataDescription": "US-amerikanischer Fotograf",
+      "life": {
+        "from": 1931,
+        "to": 2015
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Will McBride",
+          "url": "https://de.wikipedia.org/wiki/Will_McBride",
+          "description": "US-amerikanischer Fotograf",
+          "extract": "Will McBride war ein in Deutschland lebender US-amerikanischer Fotograf und bildender Künstler.",
+          "imageFile": "Will McBride 1975.jpg"
+        },
+        {
+          "lang": "en",
+          "title": "Will McBride (photographer)",
+          "url": "https://en.wikipedia.org/wiki/Will_McBride_(photographer)",
+          "description": "American photographer (1931-2015)",
+          "extract": "Will McBride was an American photographer in reportage, art photography and book illustration as well as a painter and sculptor.",
+          "imageFile": "Will McBride 1975.jpg"
+        },
+        {
+          "lang": "fr",
+          "title": "Will McBride",
+          "url": "https://fr.wikipedia.org/wiki/Will_McBride",
+          "description": "photographe américain",
+          "extract": "Will McBride est un photographe de reportage et d'art américain. Il est aussi illustrateur, peintre et sculpteur.",
+          "imageFile": "Will McBride 1975.jpg"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/will-mcbride.jpg",
+        "file": "will-mcbride.jpg",
+        "width": 400,
+        "height": 268,
+        "bytes": 51260,
+        "source": "https://commons.wikimedia.org/wiki/File:Will_McBride_1975.jpg",
+        "credit": "Wolfgang H. Wögerer, Wien",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "inge-morath",
+      "name": "Inge Morath",
+      "status": "gefunden",
+      "wikidataId": "Q112033",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "österreichische Fotografin",
+      "life": {
+        "from": 1923,
+        "to": 2002
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Inge Morath",
+          "url": "https://de.wikipedia.org/wiki/Inge_Morath",
+          "description": "österreichische Fotografin",
+          "extract": "Ingeborg „Inge“ Morath war eine österreichische Fotografin.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Inge Morath",
+          "url": "https://en.wikipedia.org/wiki/Inge_Morath",
+          "description": "Austrian-American linguist and photographer (1923–2002)",
+          "extract": "Ingeborg Hermine \"Inge\" Morath was an Austrian photographer. Joining the Magnum Photos Agency in 1953, Morath became a full photographer with the agency in 1955. Morath is also known for being was the third wife of the playwright Arthur Miller and the mother of the filmmaker Rebecca Miller.",
+          "imageFile": "Inge Morath 1956.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Inge Morath",
+          "url": "https://fr.wikipedia.org/wiki/Inge_Morath",
+          "description": "photographe autrichienne",
+          "extract": "Ingeborg Hermine Morath est une photo-journaliste américaine née le 27 mai 1923 à Graz en Autriche et morte le 30 janvier 2002 à New York à l'âge de 78 ans.",
+          "imageFile": "Inge Morath 1956.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/inge-morath.jpg",
+        "file": "inge-morath.jpg",
+        "width": 400,
+        "height": 482,
+        "bytes": 103571,
+        "source": "https://commons.wikimedia.org/wiki/File:Inge_Morath_1956.jpg",
+        "credit": "User: Hanooz",
+        "license": "Public domain"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "stefan-moses",
+      "name": "Stefan Moses",
+      "status": "gefunden",
+      "wikidataId": "Q1145538",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1928,
+        "to": 2018
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Stefan Moses",
+          "url": "https://de.wikipedia.org/wiki/Stefan_Moses",
+          "description": "deutscher Fotograf",
+          "extract": "Stefan Moses war ein deutscher Fotograf.",
+          "imageFile": "Grab Stefan Moses.jpg"
+        },
+        {
+          "lang": "en",
+          "title": "Stefan Moses",
+          "url": "https://en.wikipedia.org/wiki/Stefan_Moses",
+          "description": "German photographer (1928–2018)",
+          "extract": "Stefan Moses was a German photographer living in Munich.",
+          "imageFile": null
+        },
+        {
+          "lang": "ha",
+          "title": "Stefan Musa",
+          "url": "https://ha.wikipedia.org/wiki/Stefan_Musa",
+          "description": null,
+          "extract": "Stefan Moses ya kasance mai daukar hoto na Jamus da ke zaune a Munich.",
+          "imageFile": null
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/stefan-moses.jpg",
+        "file": "stefan-moses.jpg",
+        "width": 300,
+        "height": 533,
+        "bytes": 134047,
+        "source": "https://commons.wikimedia.org/wiki/File:Grab_Stefan_Moses.jpg",
+        "credit": "Harvey Kneeslapper",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "elisabeth-niggemeyer",
+      "name": "Elisabeth Niggemeyer",
+      "status": "gefunden",
+      "wikidataId": "Q70640514",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutsche Fotografin und Fotobuchautorin",
+      "life": {
+        "from": 1930,
+        "to": 2025
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Elisabeth Niggemeyer",
+          "url": "https://de.wikipedia.org/wiki/Elisabeth_Niggemeyer",
+          "description": "deutsche Fotografin und Fotobuchautorin",
+          "extract": "Elisabeth Niggemeyer war eine deutsche Fotografin und Fotobuchautorin.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Elisabeth Niggemeyer",
+          "url": "https://en.wikipedia.org/wiki/Elisabeth_Niggemeyer",
+          "description": "German photographer (1930–2025)",
+          "extract": "Elisabeth Niggemeyer was a German photographer. Niggemeyer is best known as the photographer for Die gemordete Stadt, a classic critique of post-war German urban planning, and for her work on children and pedagogy created in collaboration with Nancy Hoenisch.",
+          "imageFile": "Elisabeth niggemeyer 1951ca.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "cs",
+          "title": "Elisabeth Niggemeyerová",
+          "url": "https://cs.wikipedia.org/wiki/Elisabeth_Niggemeyerov%C3%A1",
+          "description": "německá fotografka a spisovatelka",
+          "extract": "Elisabeth Niggemeyerová byla německá fotografka. Nejznámější je jako fotografka pro Die gemordete Stadt, obsahující klasickou kritiku poválečného německého urbanismu, a díky své práci o dětech a pedagogice, kterou vytvořila ve spolupráci s Nancy Hoenischovou.",
+          "imageFile": "Elisabeth niggemeyer 1951ca.jpg?utm source=cs.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/elisabeth-niggemeyer.jpg",
+        "file": "elisabeth-niggemeyer.jpg",
+        "width": 400,
+        "height": 466,
+        "bytes": 78160,
+        "source": "https://commons.wikimedia.org/wiki/File:Elisabeth_niggemeyer_1951ca.jpg",
+        "credit": "Benjamin983",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "ruth-orkin",
+      "name": "Ruth Orkin",
+      "status": "gefunden",
+      "wikidataId": "Q469449",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "US-amerikanische Photographin und Filmemacherin",
+      "life": {
+        "from": 1921,
+        "to": 1985
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Ruth Orkin",
+          "url": "https://de.wikipedia.org/wiki/Ruth_Orkin",
+          "description": "US-amerikanische Photographin und Filmemacherin",
+          "extract": "Ruth Orkin war eine US-amerikanische Fotografin, Bildjournalistin und Filmemacherin. In den 1940er und -50er-Jahren war sie als Straßenfotografin aktiv, als ihr bekanntestes Werk in diesem Bereich gilt American Girl in Italy (1951). Zudem porträtierte Orkin, die eigentlich Filmemacherin werden wollte, zahlreiche Hollywoodstars und Musiker. Zusammen mit ihrem Mann Morris Engel drehte sie die Spielfilme Der kleine Ausreißer (1953) und Lovers and Lollipops (1955).",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Ruth Orkin",
+          "url": "https://en.wikipedia.org/wiki/Ruth_Orkin",
+          "description": "American photographer and filmmaker (1921–1985)",
+          "extract": "Ruth Orkin was an American photographer, photojournalist, and filmmaker, with ties to New York City and Hollywood. Known for her photograph An American Girl in Italy (1951), she photographed many celebrities and personalities including Lauren Bacall, Doris Day, Ava Gardner, Tennessee Williams, Marlon Brando, and Alfred Hitchcock.",
+          "imageFile": "Mediální olympiáda 2024 v Ostravě 13, Galerie výtvarného umění v Ostravě, výstava Ruth Orkin.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Ruth Orkin",
+          "url": "https://fr.wikipedia.org/wiki/Ruth_Orkin",
+          "description": "photographe et réalisatrice américaine",
+          "extract": "Ruth Orkin est une photographe américaine, née le 3 septembre 1921 à Boston dans l'État du Massachusetts et morte le 16 janvier 1985 à New York.",
+          "imageFile": "Mediální olympiáda 2024 v Ostravě 13, Galerie výtvarného umění v Ostravě, výstava Ruth Orkin.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/ruth-orkin.jpg",
+        "file": "ruth-orkin.jpg",
+        "width": 400,
+        "height": 267,
+        "bytes": 36000,
+        "source": "https://commons.wikimedia.org/wiki/File:Medi%C3%A1ln%C3%AD_olympi%C3%A1da_2024_v_Ostrav%C4%9B_13,_Galerie_v%C3%BDtvarn%C3%A9ho_um%C4%9Bn%C3%AD_v_Ostrav%C4%9B,_v%C3%BDstava_Ruth_Orkin.jpg",
+        "credit": "Pavel Bednařík (WMCZ)",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "martin-parr",
+      "name": "Martin Parr",
+      "status": "gefunden",
+      "wikidataId": "Q962442",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "britischer Fotograf (1952–2025)",
+      "life": {
+        "from": 1952,
+        "to": 2025
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Martin Parr",
+          "url": "https://de.wikipedia.org/wiki/Martin_Parr",
+          "description": "britischer Fotograf (1952–2025)",
+          "extract": "Martin Parr war ein britischer Dokumentarfotograf, Fotojournalist und Sammler. Typisch für sein Werk ist der zugleich humoristische und anthropologische Blick auf Alltagssituationen.",
+          "imageFile": "MartinParrVA130524 (6 of 7) (cropped 2).jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Martin Parr",
+          "url": "https://en.wikipedia.org/wiki/Martin_Parr",
+          "description": "British documentary photographer (1952–2025)",
+          "extract": "Martin Parr was an English documentary photographer and photojournalist. He was known for his photographic projects that take an intimate, satirical and anthropological look at aspects of modern life, in particular documenting the social classes of England, and more broadly the wealth of the Western world.",
+          "imageFile": "MartinParrVA130524 (6 of 7) (cropped 2).jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Martin Parr",
+          "url": "https://fr.wikipedia.org/wiki/Martin_Parr",
+          "description": "photographe britannique",
+          "extract": "Martin Parr est un photographe documentaire britannique, né le 23 mai 1952 à Epsom et mort le 6 décembre 2025 à Bristol. Membre de l'agence Magnum Photos depuis 1994, il en est le président de 2013 à 2017.",
+          "imageFile": "MartinParrVA130524 (6 of 7) (cropped 2).jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/martin-parr.jpg",
+        "file": "martin-parr.jpg",
+        "width": 400,
+        "height": 533,
+        "bytes": 78673,
+        "source": "https://commons.wikimedia.org/wiki/File:MartinParrVA130524_(6_of_7)_(cropped_2).jpg",
+        "credit": "Raph_PH",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "nelly-rau-haering",
+      "name": "Nelly Rau-Häring",
+      "status": "gefunden",
+      "wikidataId": "Q94663836",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "photographer",
+      "life": {
+        "from": 1947,
+        "to": null
+      },
+      "articles": [],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "marc-riboud",
+      "name": "Marc Riboud",
+      "status": "gefunden",
+      "wikidataId": "Q702625",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "französischer Fotograf",
+      "life": {
+        "from": 1923,
+        "to": 2016
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Marc Riboud",
+          "url": "https://de.wikipedia.org/wiki/Marc_Riboud",
+          "description": "französischer Fotograf",
+          "extract": "Marc Riboud war ein französischer Fotograf und Mitglied der Fotoagentur Magnum Photos.",
+          "imageFile": "Marc Riboud Arles 1975.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Marc Riboud",
+          "url": "https://en.wikipedia.org/wiki/Marc_Riboud",
+          "description": "French photographer",
+          "extract": "Marc Riboud was a French photographer, best known for his extensive reports on the Far East: The Three Banners of China, Face of North Vietnam, Visions of China, and In China.",
+          "imageFile": "Marc Riboud Arles 1975.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Marc Riboud",
+          "url": "https://fr.wikipedia.org/wiki/Marc_Riboud",
+          "description": "photographe français",
+          "extract": "Marc Riboud, né le 24 juin 1923 à Saint-Genis-Laval (Rhône) et mort le 30 août 2016 à Paris 13e, est un photographe français.",
+          "imageFile": "Marc Riboud Arles 1975.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/marc-riboud.jpg",
+        "file": "marc-riboud.jpg",
+        "width": 400,
+        "height": 467,
+        "bytes": 94380,
+        "source": "https://commons.wikimedia.org/wiki/File:Marc_Riboud_Arles_1975.jpg",
+        "credit": "Jean-Pierre NAUD",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "gerhard-riebicke",
+      "name": "Gerhard Riebicke",
+      "status": "gefunden",
+      "wikidataId": "Q25374251",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1878,
+        "to": 1957
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Gerhard Riebicke",
+          "url": "https://de.wikipedia.org/wiki/Gerhard_Riebicke",
+          "description": "deutscher Fotograf",
+          "extract": "Gerhard Riebicke war ein deutscher Fotograf.",
+          "imageFile": null
+        },
+        {
+          "lang": "sv",
+          "title": "Gerhard Riebicke",
+          "url": "https://sv.wikipedia.org/wiki/Gerhard_Riebicke",
+          "description": null,
+          "extract": "Gerhard Riebicke, född 6 februari 1878 i Lausitz, Tyskland, död 1957 i Berlin, var en tysk fotograf.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "willy-ronis",
+      "name": "Willy Ronis",
+      "status": "gefunden",
+      "wikidataId": "Q536620",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "französischer Fotograf",
+      "life": {
+        "from": 1910,
+        "to": 2009
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Willy Ronis",
+          "url": "https://de.wikipedia.org/wiki/Willy_Ronis",
+          "description": "französischer Fotograf",
+          "extract": "Willy Ronis [wiˈli ʀɔˈnis] war ein vielfach ausgezeichneter französischer Fotograf. Ronis zählt mit Henri Cartier-Bresson, Sabine Weiss und Robert Doisneau zur französischen Schule des fotografischen Humanismus. Viele seiner Aufnahmen wurden zu Ikonen im kollektiven Gedächtnis.",
+          "imageFile": "02-01-20 16-53-07-Willy-Ronis.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Willy Ronis",
+          "url": "https://en.wikipedia.org/wiki/Willy_Ronis",
+          "description": "French photographer (1910–2009)",
+          "extract": "Willy Ronis was a French photographer. His best-known work shows life in post-war Paris and Provence.",
+          "imageFile": null
+        },
+        {
+          "lang": "fr",
+          "title": "Willy Ronis",
+          "url": "https://fr.wikipedia.org/wiki/Willy_Ronis",
+          "description": "photographe français",
+          "extract": "Willy Ronis, né le 14 août 1910 à Paris et mort le 11 septembre 2009 dans la même ville, est un photographe français, lauréat du Grand Prix national de la photographie en 1979 et du prix Nadar en 1981.",
+          "imageFile": "02-01-20 16-53-07-Willy-Ronis.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/willy-ronis.jpg",
+        "file": "willy-ronis.jpg",
+        "width": 400,
+        "height": 300,
+        "bytes": 55045,
+        "source": "https://commons.wikimedia.org/wiki/File:02-01-20_16-53-07-Willy-Ronis.jpg",
+        "credit": "24images",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "erich-salomon",
+      "name": "Erich Salomon",
+      "status": "gefunden",
+      "wikidataId": "Q65454",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotojournalist",
+      "life": {
+        "from": 1886,
+        "to": 1944
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Erich Salomon",
+          "url": "https://de.wikipedia.org/wiki/Erich_Salomon",
+          "description": "deutscher Fotojournalist",
+          "extract": "Erich Franz Emil Salomon war ein deutscher Jurist, Fotograf und Bildjournalist.",
+          "imageFile": "OttoErichSalomon1935.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Erich Salomon",
+          "url": "https://en.wikipedia.org/wiki/Erich_Salomon",
+          "description": "German photojournalist (1886–1944)",
+          "extract": "Erich Salomon was a German news photographer known for his pictures in the diplomatic and legal professions and the innovative methods he used to acquire them.",
+          "imageFile": "OttoErichSalomon1935.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Erich Salomon",
+          "url": "https://fr.wikipedia.org/wiki/Erich_Salomon",
+          "description": "photographe et journaliste allemand",
+          "extract": "Erich Salomon est un photographe et photo-journaliste allemand, né le 28 avril 1886 à Berlin et mort 7 juillet 1944 au camp d’extermination d’Auschwitz-Birkenau.",
+          "imageFile": "ErichSalomon1935.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/erich-salomon.jpg",
+        "file": "erich-salomon.jpg",
+        "width": 400,
+        "height": 582,
+        "bytes": 54616,
+        "source": "https://commons.wikimedia.org/wiki/File:ErichSalomon1935.jpg",
+        "credit": "Erich Salomon",
+        "license": "Public domain"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "max-scheler",
+      "name": "Max Scheler",
+      "status": "gefunden",
+      "wikidataId": "Q1913348",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1928,
+        "to": 2003
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Max Scheler (Fotograf)",
+          "url": "https://de.wikipedia.org/wiki/Max_Scheler_(Fotograf)",
+          "description": "deutscher Fotograf",
+          "extract": "Max Georg Scheler war ein deutscher Fotograf und Bildjournalist.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "karl-schenker",
+      "name": "Karl Schenker",
+      "status": "gefunden",
+      "wikidataId": "Q15141747",
+      "occupations": [
+        "Fotograf",
+        "Maler"
+      ],
+      "wikidataDescription": "österreichischer Fotograf, Illustrator und Zeichner",
+      "life": {
+        "from": 1886,
+        "to": 1954
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Karl Schenker",
+          "url": "https://de.wikipedia.org/wiki/Karl_Schenker",
+          "description": "österreichischer Fotograf, Illustrator und Zeichner",
+          "extract": "Karl Schenker, auch Karol Schenker war ein österreichischer Fotograf, Illustrator von Modezeitschriften und Maler. Der überwiegend in Berlin arbeitende jüdische Künstler musste 1938 aus Deutschland nach London emigrieren und erhielt 1948 die britische Staatsbürgerschaft.",
+          "imageFile": "Karl Schenker in aviator outfit 1919.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Karl Schenker",
+          "url": "https://en.wikipedia.org/wiki/Karl_Schenker",
+          "description": "Austrian photographer, illustrator and draughtsman",
+          "extract": "Karl Schenker was an Austrian photographer, illustrator of fashion magazines and painter. The artist, who mainly worked in Berlin, was Jewish and had to emigrate from Germany to London in 1938 and received British citizenship in 1948.",
+          "imageFile": "Karl Schenker in aviator outfit 1919.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Karl Schenker",
+          "url": "https://fr.wikipedia.org/wiki/Karl_Schenker",
+          "description": "photographe autrichien",
+          "extract": "Karl Schenker (1886-1954) est un photographe allemand.",
+          "imageFile": "Karl Schenker in aviator outfit 1919.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/karl-schenker.jpg",
+        "file": "karl-schenker.jpg",
+        "width": 400,
+        "height": 548,
+        "bytes": 30837,
+        "source": "https://commons.wikimedia.org/wiki/File:Karl_Schenker_in_aviator_outfit_1919.jpg",
+        "credit": "Hermann Schieberth",
+        "license": "Public domain"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "jordis-schloesser",
+      "name": "Jordis Schlösser",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "friedrich-seidenstuecker",
+      "name": "Friedrich Seidenstücker",
+      "status": "gefunden",
+      "wikidataId": "Q1462203",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1882,
+        "to": 1966
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Friedrich Seidenstücker",
+          "url": "https://de.wikipedia.org/wiki/Friedrich_Seidenst%C3%BCcker",
+          "description": "deutscher Fotograf",
+          "extract": "Friedrich Seidenstücker war ein deutscher Fotograf. Er wurde vor allem mit seinen Fotografien aus dem Alltagsleben, Tierfotografien und Aktaufnahmen sowie mit seinen Bildern der Ruinen des im Zweiten Weltkrieg zerstörten Berlins bekannt.",
+          "imageFile": "Gedenktafel Bundesplatz 17 (Wilmd) Friedrich Seidenstücker2.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "es",
+          "title": "Friedrich Seidenstücker",
+          "url": "https://es.wikipedia.org/wiki/Friedrich_Seidenst%C3%BCcker",
+          "description": "fotógrafo alemán",
+          "extract": "Friedrich Seidenstücker fue un fotógrafo alemán especializado en retratos de personas y animales, sus fotos de las ruinas de la Segunda Guerra Mundial de Berlín fueron otro aspecto fundamental de su arte, al igual que las del fotógrafo Hein Horny.",
+          "imageFile": "Gedenktafel Bundesplatz 17 (Wilmd) Friedrich Seidenstücker2.jpg?utm source=es.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "ru",
+          "title": "Зайденштюккер, Фридрих",
+          "url": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B9%D0%B4%D0%B5%D0%BD%D1%88%D1%82%D1%8E%D0%BA%D0%BA%D0%B5%D1%80%2C_%D0%A4%D1%80%D0%B8%D0%B4%D1%80%D0%B8%D1%85",
+          "description": null,
+          "extract": "Фридрих Зайденштюккер — немецкий фотограф, известен фотографиями повседневной жизни, животных и обнажённой натуры, а также фотоснимками руин Берлина, разрушенного во время Второй мировой войны.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "Dateiseite auf Commons nicht gefunden"
+    },
+    {
+      "id": "robert-sennecke",
+      "name": "Robert Sennecke",
+      "status": "gefunden",
+      "wikidataId": "Q1504478",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Pressefotograf und Leichtathlet (1885-1940)",
+      "life": {
+        "from": 1885,
+        "to": 1940
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Robert Sennecke",
+          "url": "https://de.wikipedia.org/wiki/Robert_Sennecke",
+          "description": "deutscher Pressefotograf und Leichtathlet (1885-1940)",
+          "extract": "Robert Wilhelm Sennecke war ein deutscher Pressefotograf und Marathonläufer.",
+          "imageFile": "WP Robert Sennecke.jpeg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "lt",
+          "title": "Robertas Zenekė",
+          "url": "https://lt.wikipedia.org/wiki/Robertas_Zenek%C4%97",
+          "description": null,
+          "extract": "Robertas Vilhelmas Zenekė (vok. Robert Wilhelm Sennecke; 1885 m. vasario 12 d. Piritce – 1940 m. birželio 8 d. Liubene – vokiečių spaudos fotografas ir maratono bėgikas.",
+          "imageFile": "WP Robert Sennecke.jpeg?utm source=lt.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/robert-sennecke.jpg",
+        "file": "robert-sennecke.jpg",
+        "width": 400,
+        "height": 534,
+        "bytes": 64104,
+        "source": "https://commons.wikimedia.org/wiki/File:WP_Robert_Sennecke.jpeg",
+        "credit": "Robert Sennecke",
+        "license": "Public domain"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "anton-stankowski",
+      "name": "Anton Stankowski",
+      "status": "gefunden",
+      "wikidataId": "Q456109",
+      "occupations": [
+        "Fotograf",
+        "Maler"
+      ],
+      "wikidataDescription": "deutscher Grafiker (1906–1998)",
+      "life": {
+        "from": 1906,
+        "to": 1998
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Anton Stankowski",
+          "url": "https://de.wikipedia.org/wiki/Anton_Stankowski",
+          "description": "deutscher Grafiker (1906–1998)",
+          "extract": "Anton Stankowski war ein deutscher Grafikdesigner, Fotograf und Maler.",
+          "imageFile": "W BIO 1958.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Anton Stankowski",
+          "url": "https://en.wikipedia.org/wiki/Anton_Stankowski",
+          "description": "German painter",
+          "extract": "Anton Stankowski was a German graphic designer, photographer and painter. He developed an original Theory of Design and pioneered Constructive Graphic Art. Typical Stankowski designs attempt to illustrate processes or behaviours rather than objects. Such experiments resulted in the use of fractal-like structures before the term 'fractal' was coined by Benoît Mandelbrot in 1975.",
+          "imageFile": "W BIO 1958.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Anton Stankowski",
+          "url": "https://fr.wikipedia.org/wiki/Anton_Stankowski",
+          "description": "artiste allemand (1906-1998)",
+          "extract": "Anton Stankowski est un peintre, graphiste et photographe allemand. Il a développé une théorie originale de design et a été un précurseur dans l'art graphique. Il a en particulier créé des logos représentant des identités d'entreprises.",
+          "imageFile": "W BIO 1958.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/anton-stankowski.jpg",
+        "file": "anton-stankowski.jpg",
+        "width": 400,
+        "height": 660,
+        "bytes": 86708,
+        "source": "https://commons.wikimedia.org/wiki/File:W_BIO_1958.jpg",
+        "credit": "Anton Stankowski",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "uwe-steinberg",
+      "name": "Uwe Steinberg",
+      "status": "gefunden",
+      "wikidataId": "Q1731413",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf und Fotojournalist",
+      "life": {
+        "from": 1942,
+        "to": 1983
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Uwe Steinberg",
+          "url": "https://de.wikipedia.org/wiki/Uwe_Steinberg",
+          "description": "deutscher Fotograf und Fotojournalist",
+          "extract": "Uwe Steinberg war ein deutscher Fotograf und Gründungsmitglied der Gruppe Jugendfoto Berlin.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "louis-stettner",
+      "name": "Louis Stettner",
+      "status": "gefunden",
+      "wikidataId": "Q3263136",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "US-amerikanischer Fotograf",
+      "life": {
+        "from": 1922,
+        "to": 2016
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Louis Stettner",
+          "url": "https://de.wikipedia.org/wiki/Louis_Stettner",
+          "description": "US-amerikanischer Fotograf",
+          "extract": "Louis Stettner war ein US-amerikanischer Fotograf, der vor allem für seine einfühlsamen Schwarz-Weiß-Aufnahmen von New York und Paris bekannt ist. Seine Arbeiten dokumentieren das Alltagsleben und die Architektur beider Städte über mehrere Jahrzehnte hinweg. Er war Mitglied der Photo League in New York. Die Photo League war eine Organisation von Fotografen in New York City, die sich der Dokumentation des Lebens in den Arbeitervierteln widmete. Sie wurde 1936 gegründet und bot ihren Mitgliedern Schulungen, Ausstellungsräume und eine Plattform für den Austausch über soziale und kreative Themen. Die Photo League spielte eine wichtige Rolle bei der Entwicklung der sozialdokumentarischen Fotografie in den USA.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Louis Stettner",
+          "url": "https://en.wikipedia.org/wiki/Louis_Stettner",
+          "description": "American photographer",
+          "extract": "Louis Stettner was an American photographer of the 20th century whose work included streetscapes, portraits and architectural images of New York and Paris. His work has been highly regarded because of its humanity and capturing the life and reality of the people and streets. Starting in 1947, Stettner photographed the changes in the people, culture, and architecture of both cities. He continued to photograph New York and Paris up until his death.",
+          "imageFile": null
+        },
+        {
+          "lang": "fr",
+          "title": "Louis Stettner",
+          "url": "https://fr.wikipedia.org/wiki/Louis_Stettner",
+          "description": "photographe américain",
+          "extract": "Louis Stettner, né le 7 novembre 1922 à New York dans le quartier de Brooklyn et mort le 13 octobre 2016 à Paris, est un photographe américain, qui a vécu une grande partie de sa vie en France.",
+          "imageFile": "Louis Stettner.jpg?utm source=fr.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "Dateiseite auf Commons nicht gefunden"
+    },
+    {
+      "id": "dennis-stock",
+      "name": "Dennis Stock",
+      "status": "gefunden",
+      "wikidataId": "Q708886",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "US-amerikanischer Fotograf und Autor",
+      "life": {
+        "from": 1928,
+        "to": 2010
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Dennis Stock",
+          "url": "https://de.wikipedia.org/wiki/Dennis_Stock",
+          "description": "US-amerikanischer Fotograf und Autor",
+          "extract": "Dennis Stock war ein US-amerikanischer Fotojournalist und Mitglied der Fotoagentur Magnum Photos.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Dennis Stock",
+          "url": "https://en.wikipedia.org/wiki/Dennis_Stock",
+          "description": "American journalist and professional photographer",
+          "extract": "Dennis Stock was an American journalist and professional photographer.",
+          "imageFile": null
+        },
+        {
+          "lang": "fr",
+          "title": "Dennis Stock",
+          "url": "https://fr.wikipedia.org/wiki/Dennis_Stock",
+          "description": "photographe américain",
+          "extract": "Dennis Stock est un photographe américain, membre depuis 1951 de l'agence Magnum Photos.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "kein Bild in Wikidata oder im Artikel"
+    },
+    {
+      "id": "sasha-stone",
+      "name": "Sasha Stone",
+      "status": "gefunden",
+      "wikidataId": "Q2225596",
+      "occupations": [
+        "Fotograf",
+        "Bildhauer",
+        "Künstler"
+      ],
+      "wikidataDescription": "russischer Fotograf",
+      "life": {
+        "from": 1895,
+        "to": 1940
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Sasha Stone",
+          "url": "https://de.wikipedia.org/wiki/Sasha_Stone",
+          "description": "russischer Fotograf",
+          "extract": "Sasha Stone war ein russisch-amerikanischer Fotograf.",
+          "imageFile": null
+        },
+        {
+          "lang": "en",
+          "title": "Sasha Stone (photographer)",
+          "url": "https://en.wikipedia.org/wiki/Sasha_Stone_(photographer)",
+          "description": "20th-century photographer",
+          "extract": "Sasha Stone, born Aleksander Serge Steinsapir, was a Russian-born artist. A stateless photographer, he and his first wife, Cami Stone, were successful photographers during the 1920s and 1930s. One of his best-known works is the photomontage he designed for the cover of Walter Benjamin's Einbahnstraße published in 1928.",
+          "imageFile": "Full cover of Walter Benjamin's \"Einbahnstraße\" (1928), designed by Sasha Stone.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "arz",
+          "title": "ساشا ستون",
+          "url": "https://arz.wikipedia.org/wiki/%D8%B3%D8%A7%D8%B4%D8%A7_%D8%B3%D8%AA%D9%88%D9%86",
+          "description": null,
+          "extract": "ساشا ستين كان مصور محترف من الاتحاد السوفيتى و الامبراطوريه الروسيه.",
+          "imageFile": null
+        }
+      ],
+      "portrait": null,
+      "portraitNote": "Dateiseite auf Commons nicht gefunden"
+    },
+    {
+      "id": "antanas-sutkus",
+      "name": "Antanas Sutkus",
+      "status": "gefunden",
+      "wikidataId": "Q1194533",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "Litauischer Fotograf",
+      "life": {
+        "from": 1939,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Antanas Sutkus",
+          "url": "https://de.wikipedia.org/wiki/Antanas_Sutkus",
+          "description": "Litauischer Fotograf",
+          "extract": "Antanas Sutkus ist ein litauischer Fotograf. Er gilt als Vertreter der so genannten humanistischen Fotografie und als bedeutendster Fotograf Litauens.",
+          "imageFile": "Ba-sutkus-antanas-1996-soviet-foto.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Antanas Sutkus",
+          "url": "https://en.wikipedia.org/wiki/Antanas_Sutkus",
+          "description": "Lithuanian photographer",
+          "extract": "Antanas Sutkus is a Lithuanian photographer.",
+          "imageFile": "Ba-sutkus-antanas-1996-soviet-foto.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Antanas Sutkus",
+          "url": "https://fr.wikipedia.org/wiki/Antanas_Sutkus",
+          "description": "photographe lituanien",
+          "extract": "Antanas Sutkus est un photographe lituanien.",
+          "imageFile": "Toulouse - Château d'eau Laganne - 20110325 (1).jpg"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/antanas-sutkus.jpg",
+        "file": "antanas-sutkus.jpg",
+        "width": 400,
+        "height": 290,
+        "bytes": 44691,
+        "source": "https://commons.wikimedia.org/wiki/File:Ba-sutkus-antanas-1996-soviet-foto.jpg",
+        "credit": "Бахтиёр Абдуллаев",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "paul-wolff",
+      "name": "Paul Wolff",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    },
+    {
+      "id": "harf-zimmermann",
+      "name": "Harf Zimmermann",
+      "status": "gefunden",
+      "wikidataId": "Q1317240",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "deutscher Fotograf",
+      "life": {
+        "from": 1955,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Harf Zimmermann",
+          "url": "https://de.wikipedia.org/wiki/Harf_Zimmermann",
+          "description": "deutscher Fotograf",
+          "extract": "Harf Zimmermann ist ein deutscher Fotograf, der durch seine Großformatfotografie mit großen und sehr großen Kameras bekannt wurde, beispielsweise die Arbeiten BRAND WAND und Hufelandstraße 1055 Berlin. Mit seinen Panoramafotos war er zu Beginn der 2000er Jahre Deutschlands renommiertester Panoramafotograf. Er ist Mitbegründer der Berliner Fotoagentur Ostkreuz.",
+          "imageFile": "Harf Zimmermann (2018).jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/harf-zimmermann.jpg",
+        "file": "harf-zimmermann.jpg",
+        "width": 400,
+        "height": 400,
+        "bytes": 89530,
+        "source": "https://commons.wikimedia.org/wiki/File:Harf_Zimmermann_(2018).jpg",
+        "credit": "Harf Zimmermann",
+        "license": "CC BY-SA 3.0 de",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+      },
+      "portraitNote": null
+    },
+    {
+      "id": "marie-watt",
+      "name": "Marie Watt",
+      "status": "nicht gefunden",
+      "note": "kein Eintrag mit passendem Namen und Beruf"
+    }
+  ]
+}

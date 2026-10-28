@@ -1,0 +1,85 @@
+# Recherche der Fotograf:innen 2026-10-28
+
+- Personen bearbeitet: 72
+- Gefunden: 55
+- Nicht gefunden: 17
+- Mehrdeutig: 0
+- Fehler: 0
+- Vorschläge geprüft: 35
+- Vorschläge verworfen: 0
+- Übernommen: 35
+
+## Personen
+
+- `hans-georg-esch` (Hans Georg Esch): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `juergen-klauke` (Jürgen Klauke): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `wendy-red-star` (Wendy Red Star): gefunden; Sprachen: de, en; Bild: CC BY-SA 4.0; übernommen
+- `william-henry-jackson` (William Henry Jackson): gefunden; Sprachen: de, en, fr; Bild: Public domain; übernommen
+- `august-sander` (August Sander): gefunden; Sprachen: de, en, fr; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `tina-barney` (Tina Barney): gefunden; Sprachen: de, en, fr; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `wolfgang-zurborn` (Wolfgang Zurborn): gefunden; Sprachen: de; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `herbert-w-franke` (Herbert W. Franke): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 3.0; übernommen
+- `gottfried-jaeger` (Gottfried Jäger): gefunden; Sprachen: de, en, ar; Bild: CC BY-SA 4.0; kein Vorschlag
+- `florian-faeth` (Florian Fäth): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `mara-fischer` (Mara Fischer): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `patrick-lohse` (Patrick Lohse): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `nina-mokhtarbaf` (Nina Mokhtarbaf): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `hannes-jung` (Hannes Jung): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `paul-almasy` (Paul Almásy): gefunden; Sprachen: de, en, fr; Bild: kein Bild: kein Urheber genannt; übernommen
+- `atelier-binder` (Atelier Binder): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `bruno-barbey` (Bruno Barbey): gefunden; Sprachen: de, en, fr; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; übernommen
+- `heinrich-von-der-becke` (Heinrich von der Becke): gefunden; Sprachen: de; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; übernommen
+- `sibylle-bergemann` (Sibylle Bergemann): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `norbert-bunge` (Norbert Bunge): gefunden; Sprachen: de, ro; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `cornell-capa` (Cornell Capa): gefunden; Sprachen: de, en, fr; Bild: Public domain; übernommen
+- `bruce-davidson` (Bruce Davidson): gefunden; Sprachen: de, en, fr; Bild: CC BY 2.0; übernommen
+- `gerti-deutsch` (Gerti Deutsch): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 3.0; übernommen
+- `herbert-dombrowski` (Herbert Dombrowski): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `pietro-donzelli` (Pietro Donzelli): gefunden; Sprachen: de, it; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; übernommen
+- `stefan-draschan` (Stefan Draschan): gefunden; Sprachen: –; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `jochen-ehmke` (Jochen Ehmke): gefunden; Sprachen: –; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `elliott-erwitt` (Elliott Erwitt): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 2.0; übernommen
+- `arno-fischer` (Arno Fischer): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 4.0; kein Vorschlag
+- `a-e-frankl` (A. & E. Frankl): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `leonard-freed` (Leonard Freed): gefunden; Sprachen: de, en, fr; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `george-friedman` (George Friedman): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `jean-gaumy` (Jean Gaumy): gefunden; Sprachen: en, fr, es; Bild: CC BY-SA 4.0; übernommen
+- `gilbert-garcin` (Gilbert Garcin): gefunden; Sprachen: en, fr, es; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; übernommen
+- `bruce-gilden` (Bruce Gilden): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 3.0; übernommen
+- `franz-goettfried` (Franz Göttfried): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `philippe-halsman` (Philippe Halsman): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 4.0; übernommen
+- `hans-henschke` (Hans Henschke): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `bernd-heyden` (Bernd Heyden): gefunden; Sprachen: de; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `gerhard-hopf` (Gerhard Hopf): gefunden; Sprachen: de; Bild: kein Bild: Dateiseite auf Commons nicht gefunden; kein Vorschlag
+- `lotte-jacobi` (Lotte Jacobi): gefunden; Sprachen: de, en, fr; Bild: kein Bild: Dateiseite auf Commons nicht gefunden; übernommen
+- `max-jacoby` (Max Jacoby): gefunden; Sprachen: de, lb; Bild: kein Bild: Dateiseite auf Commons nicht gefunden; kein Vorschlag
+- `richard-kalvar` (Richard Kalvar): gefunden; Sprachen: en, fr, it; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; übernommen
+- `barbara-klemm` (Barbara Klemm): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 3.0; übernommen
+- `robert-lebeck` (Robert Lebeck): gefunden; Sprachen: de, en, fr; Bild: CC0; übernommen
+- `herbert-list` (Herbert List): gefunden; Sprachen: de, en, fr; Bild: kein Bild: Dateiseite auf Commons nicht gefunden; übernommen
+- `peter-marlow` (Peter Marlow): gefunden; Sprachen: en, fr, nl; Bild: CC BY-SA 4.0; übernommen
+- `will-mcbride` (Will McBride): gefunden; Sprachen: de, en, fr; Bild: CC BY 3.0; übernommen
+- `inge-morath` (Inge Morath): gefunden; Sprachen: de, en, fr; Bild: Public domain; übernommen
+- `stefan-moses` (Stefan Moses): gefunden; Sprachen: de, en, ha; Bild: CC0; kein Vorschlag
+- `elisabeth-niggemeyer` (Elisabeth Niggemeyer): gefunden; Sprachen: de, en, cs; Bild: CC BY-SA 4.0; übernommen
+- `ruth-orkin` (Ruth Orkin): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 4.0; übernommen
+- `martin-parr` (Martin Parr): gefunden; Sprachen: de, en, fr; Bild: CC BY 2.0; übernommen
+- `nelly-rau-haering` (Nelly Rau-Häring): gefunden; Sprachen: –; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `marc-riboud` (Marc Riboud): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 4.0; übernommen
+- `gerhard-riebicke` (Gerhard Riebicke): gefunden; Sprachen: de, sv; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `willy-ronis` (Willy Ronis): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 4.0; übernommen
+- `erich-salomon` (Erich Salomon): gefunden; Sprachen: de, en, fr; Bild: Public domain; übernommen
+- `max-scheler` (Max Scheler): gefunden; Sprachen: de; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `karl-schenker` (Karl Schenker): gefunden; Sprachen: de, en, fr; Bild: Public domain; übernommen
+- `jordis-schloesser` (Jordis Schlösser): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `friedrich-seidenstuecker` (Friedrich Seidenstücker): gefunden; Sprachen: de, es, ru; Bild: kein Bild: Dateiseite auf Commons nicht gefunden; übernommen
+- `robert-sennecke` (Robert Sennecke): gefunden; Sprachen: de, lt; Bild: Public domain; kein Vorschlag
+- `anton-stankowski` (Anton Stankowski): gefunden; Sprachen: de, en, fr; Bild: CC BY 3.0; übernommen
+- `uwe-steinberg` (Uwe Steinberg): gefunden; Sprachen: de; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `louis-stettner` (Louis Stettner): gefunden; Sprachen: de, en, fr; Bild: kein Bild: Dateiseite auf Commons nicht gefunden; übernommen
+- `dennis-stock` (Dennis Stock): gefunden; Sprachen: de, en, fr; Bild: kein Bild: kein Bild in Wikidata oder im Artikel; kein Vorschlag
+- `sasha-stone` (Sasha Stone): gefunden; Sprachen: de, en, arz; Bild: kein Bild: Dateiseite auf Commons nicht gefunden; übernommen
+- `antanas-sutkus` (Antanas Sutkus): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 3.0; kein Vorschlag
+- `paul-wolff` (Paul Wolff): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+- `harf-zimmermann` (Harf Zimmermann): gefunden; Sprachen: de; Bild: CC BY-SA 3.0 de; übernommen
+- `marie-watt` (Marie Watt): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag

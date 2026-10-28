@@ -132,7 +132,7 @@ test('Szenario: Übernahme wird zurückgerollt (UPD-UN-1, Q-DATA-1)', () => {
 });
 
 test('Szenario: Keine Dubletten (UPD-UB-5, Q-DATA-1)', () => {
-  const record = (over) => ({ venueId: 'makk-koeln', title: 'Neue Schau', startDate: '2026-12-01', endDate: '2027-02-01', type: 'solo', photographerIds: ['martin-parr'], ...over });
+  const record = (over) => ({ venueId: 'makk-koeln', title: 'Neue Schau', startDate: '2026-12-01', endDate: '2027-02-01', type: 'solo', photographerIds: ['martin-parr'], description: 'Neue Schau mit Martin Parr.', ...over });
   const evidence = { url: URL_PAGE, excerpt: 'Ausstellung Neue Schau läuft ab 1. Dezember' };
   const ws = workspace({
     extra: { exhibitions: [record({ id: 'neue-schau-2026' })] },
@@ -175,4 +175,19 @@ test('Erneutes Prüfen lässt bereits übernommene Änderungen unverändert (UPD
   assert.equal(again.rejected.length, 0, 'nicht als Dublette verworfen');
   assert.equal(again.changes.length, 1);
   assert.equal(again.changes[0].appliedAt, '2026-10-28');
+});
+
+test('Szenario: Beschreibung ohne Namen (UPD-UB-9, Q-DATA-9)', () => {
+  const record = (over) => ({ venueId: 'makk-koeln', title: 'Neue Schau', startDate: '2026-12-01', endDate: '2027-02-01', type: 'solo', photographerIds: ['martin-parr'], ...over });
+  const evidence = { url: URL_PAGE, excerpt: 'Ausstellung Neue Schau läuft ab 1. Dezember' };
+  const ws = workspace({
+    proposal: [
+      { id: 'ohne', dataset: 'exhibitions', op: 'add', record: record({ description: 'Eine Schau ohne Namen.' }), evidence },
+      { id: 'leer', dataset: 'exhibitions', op: 'add', record: record({ startDate: '2027-03-01', endDate: '2027-04-01' }), evidence },
+      { id: 'mit', dataset: 'exhibitions', op: 'add', record: record({ startDate: '2027-05-01', endDate: '2027-06-01', description: 'Neue Schau mit  MARTIN PARR.' }), evidence },
+    ],
+  });
+  const result = check(ws);
+  assert.deepEqual(result.changes.map((c) => c.id), ['mit']);
+  assert.deepEqual(result.rejected.map((r) => [r.id, r.reason]), [['ohne', 'Beschreibung nennt "Martin Parr" nicht'], ['leer', 'Beschreibung fehlt, obwohl Fotograf:innen verknüpft sind']]);
 });

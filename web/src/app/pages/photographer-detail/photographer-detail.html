@@ -1,30 +1,80 @@
 <app-data-gate>
   @if (person(); as person) {
-    <h1>{{ person.name }}</h1>
-    @if (person.bio) {
-      <p>{{ person.bio }}</p>
-    }
-    @if (person.website) {
-      <p><a [href]="person.website" target="_blank" rel="noopener">Website von {{ person.name }} (öffnet extern)</a></p>
-    }
-
-    <h2>Ausstellungen</h2>
-    @if (exhibitions().length) {
-      <ul class="card-list">
-        @for (item of exhibitions(); track item.exhibition.id) {
-          <li class="card">
-            <h3><a [routerLink]="['/exhibitions', item.exhibition.id]">{{ item.exhibition.title }}</a></h3>
-            @if (item.venue) {
-              <p>{{ item.venue.name }}</p>
-            }
-            <p class="meta">{{ formatRange(item.exhibition.startDate, item.exhibition.endDate) }}</p>
-            <p><app-status-badge [status]="item.status" /></p>
-          </li>
+    <a class="back-link" routerLink="/photographers">‹ Alle Fotograf:innen</a>
+    <article>
+      <header class="profile-head">
+        <h1>{{ person.name }}</h1>
+        @if (person.occupation || life()) {
+          <p class="meta">{{ person.occupation }}@if (person.occupation && life()) {, }{{ life() }}</p>
         }
-      </ul>
-    } @else {
-      <p class="notice">Für diese Person ist derzeit keine Ausstellung in NRW erfasst.</p>
-    }
+      </header>
+
+      <div class="profile-grid">
+        @if (portrait(); as src) {
+          <figure class="portrait-figure">
+            <img
+              class="portrait"
+              [src]="src"
+              [alt]="person.name + ' – Portrait'"
+              [attr.width]="person.portrait!.width"
+              [attr.height]="person.portrait!.height"
+              (error)="portraitFailed.set(person.id)"
+            />
+            <figcaption class="image-attribution">
+              Bild:
+              <a [href]="person.portrait!.source" target="_blank" rel="noopener">Wikimedia Commons<span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
+              – {{ person.portrait!.credit }},
+              @if (person.portrait!.licenseUrl; as licenseUrl) {
+                <a [href]="licenseUrl" target="_blank" rel="noopener">{{ person.portrait!.license }}<span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
+              } @else {
+                {{ person.portrait!.license }}
+              }
+            </figcaption>
+          </figure>
+        }
+        <div class="profile-main">
+          @if (person.bio) {
+            <p>{{ person.bio }}</p>
+          }
+          @if (person.website) {
+            <p><a [href]="person.website" target="_blank" rel="noopener">Website von {{ person.name }} (öffnet extern)</a></p>
+          }
+        </div>
+      </div>
+
+      @if (person.wikipedia; as wiki) {
+        <section class="wiki-section" aria-labelledby="wiki-heading">
+          <h2 id="wiki-heading">Aus der Wikipedia</h2>
+          <p class="lead">{{ wiki.summary }}</p>
+          <p class="wiki-attribution">Zusammenfassung auf Basis der Wikipedia (CC BY-SA). Zu den Artikeln:</p>
+          <ul class="wiki-sources">
+            @for (source of wiki.sources; track source.lang) {
+              <li>
+                <a [href]="source.url" target="_blank" rel="noopener" [attr.hreflang]="source.lang" [attr.lang]="source.lang">Wikipedia ({{ languageLabel(source.lang) }})<span class="visually-hidden"> – öffnet in neuem Tab</span></a>
+              </li>
+            }
+          </ul>
+        </section>
+      }
+
+      <h2>Ausstellungen ({{ exhibitions().length }})</h2>
+      @if (exhibitions().length) {
+        <ul class="card-list">
+          @for (item of exhibitions(); track item.exhibition.id) {
+            <li class="card">
+              <h3><a [routerLink]="['/exhibitions', item.exhibition.id]">{{ item.exhibition.title }}</a></h3>
+              @if (item.venue) {
+                <p>{{ item.venue.name }}</p>
+              }
+              <p class="meta">{{ formatRange(item.exhibition.startDate, item.exhibition.endDate) }}</p>
+              <p><app-status-badge [status]="item.status" /></p>
+            </li>
+          }
+        </ul>
+      } @else {
+        <p class="notice">Für diese Person ist derzeit keine Ausstellung in NRW erfasst.</p>
+      }
+    </article>
   } @else {
     <app-not-found />
   }

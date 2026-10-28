@@ -88,3 +88,32 @@ Veranstalter mit `website` sind Quellen wie Orte (ADR-010): `data:fetch` ruft si
 - Eine **Ort-Website** darf wie bisher Ort, Ausstellungen und Events ändern und zusätzlich Veranstalter und Festivals neu aufnehmen, aber nicht ändern.
 - Ein **Festival** braucht `organizerId`, `title`, `startDate`, `endDate` und `city`; ohne gültigen Zeitraum wird der Vorschlag verworfen („Festival ohne gültigen Zeitraum“). Dubletten sind gleiche Veranstalternamen bzw. gleicher Veranstalter, Titel und Beginn. Die `id` bildet sich aus dem Titel (plus Jahr, wenn es nicht im Titel steht).
 - Veranstalter und Festivals tragen kein `source`; die Fundstelle im Vorschlag ist der Nachweis.
+
+## Profile der Fotograf:innen
+
+Der Skill `/research-photographers` ergänzt Berufsbezeichnung, Lebensdaten, Wikipedia-Zusammenfassung und Portrait (ADR-011, ADR-012). Er ist unabhängig vom Skill `/update-venue-data`.
+
+```bash
+export SCRAPE_CONTACT="redaktion@example.org"
+npm run photographers:fetch -- [--photographer <id>[,<id>…]] [--force] [--offline] [--max-age 30]
+# Skill: updates/<Datum>/photographers.json mit Zusammenfassungen schreiben
+npm run photographers:check
+# Freigabe: "approved": true je Vorschlag setzen
+npm run photographers:apply -- [--photographer <id>] [--force]
+npm run validate:data && npm test
+```
+
+```
+updates/<JJJJ-MM-TT>/
+├── photographers-candidates.json   Ergebnis des Abrufs je Person (Wikidata-ID, Lebensjahre, Artikel, Bild)
+├── photographers.json              Vorschläge (Zusammenfassung, Quellen, Berufsbezeichnung)
+└── PHOTOGRAPHERS.md                Bericht
+```
+
+- **Auflösung:** Wikidata-Suche (Deutsch und Englisch); infrage kommen nur Einträge mit Beruf Fotograf, Künstler, bildender Künstler, Maler, Bildhauer oder Installationskünstler (`OCCUPATIONS` in `scripts/photographers/lib/research.mjs`). Kein Treffer ergibt „nicht gefunden“, mehrere „mehrdeutig“; die Person bleibt unverändert.
+- **Sprachen:** Alle Sprachversionen der Sitelinks; Reihenfolge Deutsch, Englisch, Französisch, Spanisch, Italienisch, Niederländisch, danach alphabetisch; bis zu drei Artikel mit Anfangstext.
+- **Vorschlag:** `{ "id", "occupation", "summary", "sources": ["de", "en"], "portrait": true }`. Lebensdaten und Bildnachweis kommen aus der Kandidatendatei. `data:check`-ähnliche Prüfung (`photographers:check`) verwirft Zusammenfassungen außerhalb von 40 bis 90 Wörtern, mit einer wörtlichen Folge von acht oder mehr Wörtern aus einem Anfangstext, mit fremder Quelle oder leerer bzw. zu langer Berufsbezeichnung (über 60 Zeichen) sowie Portraits ohne freie Lizenz, ohne Urheber oder über 200 kB.
+- **Bilder:** Aus Wikidata (P18), ersatzweise dem Titelbild des ersten Artikels (nur Commons-Dateien). Das Vorschaubild kommt mit 400 Pixel Breite (bei Bedarf 300 oder 240) von Commons nach `.cache/portraits/`; Urheber, Lizenz, Lizenz-URL und Dateiseite werden festgehalten. Nur CC0, CC BY, CC BY-SA und gemeinfreie Bilder.
+- **Übernahme:** `photographers:apply` schreibt `data/photographers.json` und kopiert die Bilder nach `data/portraits/<id>.<ext>`; bei ungültigem Ergebnis bleibt alles unverändert. Vorhandene Profile werden nur mit `--force` ersetzt.
+- **Abruf:** Nur `*.wikipedia.org`, `www.wikidata.org`, `commons.wikimedia.org`, `upload.wikimedia.org` und `thumb.wikimedia.org`; mindestens 1 s Abstand; `User-Agent` mit Kontaktadresse; Cache `.cache/wikipedia/` (30 Tage); Weiterleitungen nur auf diese Hosts.
+

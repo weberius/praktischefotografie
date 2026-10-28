@@ -17,8 +17,66 @@
     "startDate": "2026-08-09",
     "endDate": "2026-11-01",
     "type": "group",
-    "photographerIds": [],
-    "description": "Rund 130 fotografische Arbeiten zum Thema Begegnung, darunter Martin Parr, Richard Kalvar und Elliott Erwitt.",
+    "photographerIds": [
+      "paul-almasy",
+      "atelier-binder",
+      "bruno-barbey",
+      "heinrich-von-der-becke",
+      "sibylle-bergemann",
+      "norbert-bunge",
+      "cornell-capa",
+      "bruce-davidson",
+      "gerti-deutsch",
+      "herbert-dombrowski",
+      "pietro-donzelli",
+      "stefan-draschan",
+      "jochen-ehmke",
+      "elliott-erwitt",
+      "arno-fischer",
+      "a-e-frankl",
+      "leonard-freed",
+      "george-friedman",
+      "jean-gaumy",
+      "gilbert-garcin",
+      "bruce-gilden",
+      "franz-goettfried",
+      "philippe-halsman",
+      "hans-henschke",
+      "bernd-heyden",
+      "gerhard-hopf",
+      "lotte-jacobi",
+      "max-jacoby",
+      "richard-kalvar",
+      "barbara-klemm",
+      "robert-lebeck",
+      "herbert-list",
+      "peter-marlow",
+      "will-mcbride",
+      "inge-morath",
+      "stefan-moses",
+      "elisabeth-niggemeyer",
+      "ruth-orkin",
+      "martin-parr",
+      "nelly-rau-haering",
+      "marc-riboud",
+      "gerhard-riebicke",
+      "willy-ronis",
+      "erich-salomon",
+      "max-scheler",
+      "karl-schenker",
+      "jordis-schloesser",
+      "friedrich-seidenstuecker",
+      "robert-sennecke",
+      "anton-stankowski",
+      "uwe-steinberg",
+      "louis-stettner",
+      "dennis-stock",
+      "sasha-stone",
+      "antanas-sutkus",
+      "paul-wolff",
+      "harf-zimmermann"
+    ],
+    "description": "Rund 130 fotografische Arbeiten zum Thema Begegnung von Paul Almásy, Atelier Binder, Bruno Barbey, Heinrich von der Becke, Sibylle Bergemann, Norbert Bunge, Cornell Capa, Bruce Davidson, Gerti Deutsch, Herbert Dombrowski, Pietro Donzelli, Stefan Draschan, Jochen Ehmke, Elliott Erwitt, Arno Fischer, A. & E. Frankl, Leonard Freed, George Friedman, Jean Gaumy, Gilbert Garcin, Bruce Gilden, Franz Göttfried, Philippe Halsman, Hans Henschke, Bernd Heyden, Gerhard Hopf, Lotte Jacobi, Max Jacoby, Richard Kalvar, Barbara Klemm, Robert Lebeck, Herbert List, Peter Marlow, Will McBride, Inge Morath, Stefan Moses, Elisabeth Niggemeyer, Ruth Orkin, Martin Parr, Nelly Rau-Häring, Marc Riboud, Gerhard Riebicke, Willy Ronis, Erich Salomon, Max Scheler, Karl Schenker, Jordis Schlösser, Friedrich Seidenstücker, Robert Sennecke, Anton Stankowski, Uwe Steinberg, Louis Stettner, Dennis Stock, Sasha Stone, Antanas Sutkus, Paul Wolff und Harf Zimmermann.",
     "id": "mysterium-der-paare-2026"
   },
   {
@@ -42,7 +100,7 @@
     "photographerIds": [
       "man-ray"
     ],
-    "description": "Präsentation in den Fotoräumen des Museum Ludwig.",
+    "description": "Präsentation von Man Ray in den Fotoräumen des Museum Ludwig.",
     "id": "sammlung-fotografie-man-ray-kiki-2026"
   },
   {
@@ -53,9 +111,10 @@
     "type": "group",
     "photographerIds": [
       "wendy-red-star",
-      "william-henry-jackson"
+      "william-henry-jackson",
+      "marie-watt"
     ],
-    "description": "Ausgangspunkt ist ein Konvolut von Fotochromen der Detroit Publishing Company, kombiniert mit Positionen von Marie Watt und Wendy Red Star.",
+    "description": "Ausgangspunkt ist ein Konvolut von Fotochromen der Detroit Publishing Company von William Henry Jackson, kombiniert mit Positionen von Marie Watt und Wendy Red Star.",
     "id": "hier-und-jetzt-im-museum-ludwig-de-collecting-memories-from-turtle-island-2026"
   },
   {
@@ -67,7 +126,8 @@
     "photographerIds": [
       "august-sander"
     ],
-    "id": "august-sander-zum-150-geburtstag-2026"
+    "id": "august-sander-zum-150-geburtstag-2026",
+    "description": "Ausstellung zum 150. Geburtstag des Fotografen August Sander in der Photographischen Sammlung/SK Stiftung Kultur."
   },
   {
     "venueId": "photobookmuseum-koeln",
@@ -114,7 +174,7 @@
     "photographerIds": [
       "wolfgang-zurborn"
     ],
-    "description": "Farbfotografien der 1980er und 1990er Jahre von Menschengruppen bei Veranstaltungen, zugleich Buchprojekt (Kehrer Verlag).",
+    "description": "Farbfotografien von Wolfgang Zurborn aus den 1980er und 1990er Jahren von Menschengruppen bei Veranstaltungen, zugleich Buchprojekt (Kehrer Verlag).",
     "id": "crowds-2026"
   },
   {
@@ -154,7 +214,7 @@
       "patrick-lohse",
       "nina-mokhtarbaf"
     ],
-    "description": "Auswahl von Arbeiten von Absolvent:innen des Masterstudiengangs Photography Studies & Practice der Folkwang Universität der Künste.",
+    "description": "Auswahl von Arbeiten von Absolvent:innen des Masterstudiengangs Photography Studies & Practice der Folkwang Universität der Künste, darunter Florian Fäth, Mara Fischer, Patrick Lohse und Nina Mokhtarbaf.",
     "id": "photography-masters-2026"
   },
   {
@@ -166,7 +226,7 @@
     "photographerIds": [
       "hannes-jung"
     ],
-    "description": "Fotografische Auseinandersetzung mit Geschichten von Männern, die im Bosnienkrieg der 1990er Jahre sexualisierte Gewalt erlebten.",
+    "description": "Fotografische Auseinandersetzung von Hannes Jung mit Geschichten von Männern, die im Bosnienkrieg der 1990er Jahre sexualisierte Gewalt erlebten.",
     "id": "men-dont-cry-2026"
   }
 ]

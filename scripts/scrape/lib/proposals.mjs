@@ -159,6 +159,16 @@ export function checkProposal(proposal, { dataset, snapshots, root = ROOT }) {
       if (change.record.id && ids.has(change.record.id)) { reject(change, `id "${change.record.id}" ist bereits vergeben`); continue; }
       change.record = { ...change.record, id: change.record.id ?? makeId(change.dataset, change.record, ids) };
     }
+    // Alle verknüpften Fotograf:innen stehen in der Beschreibung (UPD-UB-9, PRF-UB-4)
+    if (op === 'add' && change.dataset === 'exhibitions' && change.record.photographerIds?.length > 0) {
+      const description = normalizeSpace(change.record.description ?? '').toLowerCase();
+      const names = change.record.photographerIds.map((pid) => working.photographers.find((x) => x.id === pid)?.name).filter(Boolean);
+      const missing = description ? names.filter((n) => !description.includes(normalizeSpace(n).toLowerCase())) : names;
+      if (!description || missing.length > 0) {
+        reject(change, description ? `Beschreibung nennt ${missing.map((n) => `"${n}"`).join(', ')} nicht` : 'Beschreibung fehlt, obwohl Fotograf:innen verknüpft sind');
+        continue;
+      }
+    }
     // Schema und Referenzen (UPD-UB-1)
     const trial = clone(working);
     const problem = applyChange(trial, change);

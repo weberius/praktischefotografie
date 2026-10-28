@@ -43,3 +43,8 @@ Funktionalität: Update-Skill für Ortsdaten
     Dann nennt er Veranstalter, Festivals und die Festivalzuordnung als Zielfelder
     Und er verbietet Festivals ohne belegten Zeitraum
 
+  # EARS: SKL-UB-7
+  Szenario: Skill übernimmt alle genannten Namen
+    Angenommen der Skill mit den Extraktionsregeln
+    Dann verlangt er, alle genannten Namen von Personen mit gezeigten Bildern als Personen zu ergänzen, Kurator:innen und andere auszulassen, vor den Ausstellungen vorzuschlagen und in der Beschreibung aufzuführen
+

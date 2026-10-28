@@ -24,3 +24,5 @@ Begriffe: „heute“ ist das aktuelle Datum; „Snapshot“ ist die lokal gespe
 | UPD-OP-2 | Wo `--venue <id>` eine Veranstalter-ID nennt, soll die Datenaktualisierung nur diesen Veranstalter bearbeiten; Vorschlagsdatei ist `updates/<JJJJ-MM-TT>/<organizer-id>.json` mit dem Feld `organizerId`. | `setup/datenaktualisierung.feature` · „Einzelner Veranstalter“ | Q-MAIN-2 | ADR-010 |
 
 **Ergänzung 2026-10-28:** UPD-UN-2 nennt bei unbekannter ID die gültigen Ort- und Veranstalter-IDs. Die Regeln zu Fundstelle, Freigabe und Schutz verifizierter Orte (UPD-UB-2 bis UPD-UB-4) gelten unverändert; Veranstalter und Festivals tragen kein `source` und sind nie „verifiziert“.
+| UPD-UB-9 | Die Datenaktualisierung soll bei neuen Ausstellungen jede im Seitentext genannte Person, deren Bilder in der Ausstellung gezeigt werden, in `photographerIds` aufnehmen (vorhandene Person oder neuer Vorschlag mit Fundstelle) und prüfen, dass die `description` den Namen jeder dieser Personen nennt; sie soll Vorschläge verwerfen, bei denen ein Name fehlt. | `setup/datenaktualisierung.feature` · „Alle genannten Namen werden übernommen“, „Beschreibung ohne Namen“ | Q-DATA-9 | ADR-011 |
+

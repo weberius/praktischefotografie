@@ -69,11 +69,30 @@ export interface Festival {
   website?: string;
 }
 
+export interface WikipediaSource {
+  lang: string;
+  url: string;
+}
+
+export interface Portrait {
+  file: string;
+  width: number;
+  height: number;
+  source: string;
+  credit: string;
+  license: string;
+  licenseUrl?: string;
+}
+
 export interface Photographer {
   id: string;
   name: string;
   bio?: string;
   website?: string;
+  occupation?: string;
+  life?: { from: number; to: number | null };
+  wikipedia?: { summary: string; sources: WikipediaSource[] };
+  portrait?: Portrait;
 }
 
 export interface Post {

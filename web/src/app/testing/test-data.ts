@@ -40,8 +40,23 @@ export const TEST_DATASET: Dataset = {
     venue('v-essen', 'Museum Essen', 'Essen', 'museum', false, true),
   ],
   photographers: [
-    { id: 'martin-parr', name: 'Martin Parr', bio: 'Britischer Dokumentarfotograf.', website: 'https://example.org/parr' },
-    { id: 'elliott-erwitt', name: 'Elliott Erwitt' },
+    {
+      id: 'martin-parr',
+      name: 'Martin Parr',
+      bio: 'Britischer Dokumentarfotograf.',
+      website: 'https://example.org/parr',
+      occupation: 'Fotograf',
+      life: { from: 1952, to: null },
+      wikipedia: {
+        summary: 'Martin Parr ist ein britischer Fotograf und für seine farbigen, ironischen Alltagsbilder bekannt.',
+        sources: [
+          { lang: 'de', url: 'https://de.wikipedia.org/wiki/Martin_Parr' },
+          { lang: 'en', url: 'https://en.wikipedia.org/wiki/Martin_Parr' },
+        ],
+      },
+      portrait: { file: 'martin-parr.jpg', width: 400, height: 300, source: 'https://commons.wikimedia.org/wiki/File:Martin_Parr.jpg', credit: 'Jane Doe', license: 'CC BY-SA 4.0', licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/' },
+    },
+    { id: 'elliott-erwitt', name: 'Elliott Erwitt', occupation: 'Fotograf', life: { from: 1928, to: 2023 } },
     { id: 'richard-kalvar', name: 'Richard Kalvar' },
     { id: 'ohne-ausstellung', name: 'Person ohne Ausstellung' },
   ],

@@ -10,31 +10,215 @@
   },
   {
     "name": "Man Ray",
-    "id": "man-ray"
+    "id": "man-ray",
+    "occupation": "Fotograf, Maler und Objektkünstler",
+    "life": {
+      "from": 1890,
+      "to": 1976
+    },
+    "wikipedia": {
+      "summary": "Man Ray, 1890 in Philadelphia geboren und 1976 in Paris gestorben, war ein amerikanisch-französischer Künstler, der als Fotograf, Maler, Objektkünstler und Filmregisseur arbeitete. Er zählt zu den bedeutenden Künstlern von Dadaismus und Surrealismus und gab der modernen Fotografie wichtige Impulse, etwa mit Fotogrammen, die er „Rayografien“ nannte. Seine Porträts zeitgenössischer Künstler dokumentieren das kulturelle Leben im Paris der 1920er Jahre.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Man_Ray"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Man_Ray"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Man_Ray"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "man-ray.jpg",
+      "width": 400,
+      "height": 619,
+      "source": "https://commons.wikimedia.org/wiki/File:Man_Ray_Salvador_Dali_(cropped).jpg",
+      "credit": "Van Vechten, Carl, 1880-1964, photographer",
+      "license": "Public domain"
+    }
   },
   {
     "name": "Wendy Red Star",
-    "id": "wendy-red-star"
+    "id": "wendy-red-star",
+    "occupation": "Künstlerin",
+    "life": {
+      "from": 1981,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Wendy Red Star, 1981 in Billings, Montana, geboren, ist eine US-amerikanische Künstlerin und gehört dem Volk der Apsáalooke an, auch Crow genannt. Mit Fotografie, Collage, Skulptur und Installation untersucht sie Geschichte und Gegenwart ihres Volkes und hinterfragt kolonial geprägte Darstellungen indigener Menschen. Ihr humorvoller Zugang verbindet populäre Bilder mit echten kulturellen und geschlechtlichen Identitäten. 2024 wurde sie mit einem MacArthur-Stipendium ausgezeichnet.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Wendy_Red_Star"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Wendy_Red_Star"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "wendy-red-star.jpg",
+      "width": 400,
+      "height": 267,
+      "source": "https://commons.wikimedia.org/wiki/File:Ashkaamne_(matrilineal_inheritance)_by_Wendy_Red_Star.tif",
+      "credit": "Wendy Red Star",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
   {
     "name": "William Henry Jackson",
-    "id": "william-henry-jackson"
+    "id": "william-henry-jackson",
+    "occupation": "Fotograf und Maler",
+    "life": {
+      "from": 1843,
+      "to": 1942
+    },
+    "wikipedia": {
+      "summary": "Der Amerikaner William Henry Jackson (1843–1942) arbeitete als Fotograf, Maler und Abenteurer und wurde vor allem durch seine Bilder des amerikanischen Westens berühmt. Er war Veteran des Bürgerkriegs und Entdecker auf Expeditionen. Zu seinen Nachfahren zählt der Comiczeichner Bill Griffith, der Schöpfer von Zippy the Pinhead; ein Urenkel Jacksons verbindet damit Fotografie und Comic.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/William_Henry_Jackson"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/William_Henry_Jackson"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/William_Henry_Jackson"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "william-henry-jackson.jpg",
+      "width": 400,
+      "height": 510,
+      "source": "https://commons.wikimedia.org/wiki/File:Jackson_1862.JPG",
+      "credit": "William Henry Jackson",
+      "license": "Public domain"
+    }
   },
   {
     "name": "August Sander",
-    "id": "august-sander"
+    "id": "august-sander",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1876,
+      "to": 1964
+    },
+    "wikipedia": {
+      "summary": "August Sander (1876–1964), geboren in Herdorf und gestorben in Köln, war ein deutscher Fotograf und zählt zu den einflussreichsten Porträtfotografen des 20. Jahrhunderts. Sein erstes Buch erschien 1929. Mit dem Projekt „Menschen des 20. Jahrhunderts“ wollte er einen Querschnitt der Gesellschaft der Weimarer Republik zeigen. Neben Porträts schuf er auch Landschafts-, Architektur- und Straßenaufnahmen; seine Bilder gelten als dokumentarisch, sachlich und konzeptuell.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/August_Sander"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/August_Sander"
+        }
+      ]
+    }
   },
   {
     "name": "Duane Michals",
-    "id": "duane-michals"
+    "id": "duane-michals",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1932,
+      "to": 2026
+    },
+    "wikipedia": {
+      "summary": "Duane Michals (1932–2026) war ein US-amerikanischer Fotograf aus McKeesport in Pennsylvanien. Weitgehend Autodidakt, wurde er für seine Innovationskraft und Kunstfertigkeit bekannt. Seine Arbeiten zeigen oft den Einfluss des Surrealismus und erzählen Geschichten: Er nutzte Fotosequenzen und handschriftlichen Text, um Gefühle und Lebensanschauung zu erkunden, und zwar zu einer Zeit, als die Fotografie kaum erzählerisch ausgerichtet war.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Duane_Michals"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Duane_Michals"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Duane_Michals"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "duane-michals.jpg",
+      "width": 400,
+      "height": 418,
+      "source": "https://commons.wikimedia.org/wiki/File:Duane_Michals,_RIT_yearbook_1984_page_61.jpg",
+      "credit": "Rochester Institute of Technology",
+      "license": "Public domain"
+    }
   },
   {
     "name": "Tina Barney",
-    "id": "tina-barney"
+    "id": "tina-barney",
+    "occupation": "Fotografin",
+    "life": {
+      "from": 1945,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Tina Barney, 1945 in New York geboren, ist eine US-amerikanische Fotografin und auf das Porträt spezialisiert. Bekannt wurde sie durch großformatige Farbaufnahmen ihrer Familie, enger Freunde und wohlhabender Kreise in New York und Neuengland. Sie gehört zur Familie Lehman. Ihre Bilder zeigen Menschen in ihrem privaten Umfeld.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Tina_Barney"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Tina_Barney"
+        }
+      ]
+    }
   },
   {
     "name": "Candida Höfer",
-    "id": "candida-hoefer"
+    "id": "candida-hoefer",
+    "occupation": "Fotografin",
+    "life": {
+      "from": 1944,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Candida Höfer, 1944 in Eberswalde geboren, ist eine deutsche Fotografin und gilt als Vertreterin der Düsseldorfer Fotoschule. Sie studierte bei Bernd und Hilla Becher. Zunächst arbeitete sie porträtfotografisch, später wandte sie sich öffentlichen Räumen wie Bibliotheken und Museen zu. Ihr Werk wird als technisch perfekt und streng konzeptuell beschrieben und untersucht, wie institutionelle Architektur menschliche Erfahrung prägt und lenkt.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Candida_H%C3%B6fer"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Candida_H%C3%B6fer"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Candida_H%C3%B6fer"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "candida-hoefer.jpg",
+      "width": 400,
+      "height": 560,
+      "source": "https://commons.wikimedia.org/wiki/File:Hoefer-candida-290613-galerie-zander-koeln.jpg",
+      "credit": "Hpschaefer",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    }
   },
   {
     "name": "Wolfgang Zurborn",
@@ -42,7 +226,34 @@
   },
   {
     "name": "Herbert W. Franke",
-    "id": "herbert-w-franke"
+    "id": "herbert-w-franke",
+    "occupation": "Science-Fiction-Autor und Computerkünstler",
+    "life": {
+      "from": 1927,
+      "to": 2022
+    },
+    "wikipedia": {
+      "summary": "Herbert W. Franke (1927–2022) war ein österreichischer Wissenschaftler und Schriftsteller, bekannt als Science-Fiction-Autor und Sachbuchautor. Er zählt zu den frühen Computerkünstlern und schuf seit den späten 1950er-Jahren Computergrafiken und frühe digitale Kunst. Mit seinem Buch „Kunst und Konstruktion“ von 1957 gehört er zu den ersten Theoretikern, die den Computer als künstlerisches Medium dachten. Daneben arbeitete er in Zukunftsforschung und Höhlenforschung.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Herbert_W._Franke"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Herbert_W._Franke"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "herbert-w-franke.jpg",
+      "width": 400,
+      "height": 533,
+      "source": "https://commons.wikimedia.org/wiki/File:Transmediale-2010-Opening-Frakne-detail.jpg",
+      "credit": "Shervin Afshar",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    }
   },
   {
     "name": "Gottfried Jäger",
@@ -69,5 +280,1094 @@
     "bio": "Studierte Fotografie in München, Valencia und Hannover; Lotto Brandenburg Kunstpreis Fotografie 2025.",
     "website": "https://hannesjung.com",
     "id": "hannes-jung"
+  },
+  {
+    "name": "Paul Almásy",
+    "id": "paul-almasy",
+    "occupation": "Fotojournalist",
+    "life": {
+      "from": 1906,
+      "to": 2003
+    },
+    "wikipedia": {
+      "summary": "Paul Almásy (1906–2003) wurde in Budapest geboren und starb in Jouars-Pontchartrain. Der aus Ungarn stammende Fotojournalist lebte vor allem in Paris und war in einer Laufbahn von mehr als fünfzig Jahren weltweit im Einsatz. Bekannt ist er für Dokumentar- und Porträtfotografie. Er wuchs in einer Künstlerfamilie auf und wandte sich in den 1930er-Jahren der Fotografie zu.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Paul_Alm%C3%A1sy"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Paul_Alm%C3%A1sy"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Paul_Alm%C3%A1sy"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Atelier Binder",
+    "id": "atelier-binder"
+  },
+  {
+    "name": "Bruno Barbey",
+    "id": "bruno-barbey",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1941,
+      "to": 2020
+    },
+    "wikipedia": {
+      "summary": "Bruno Barbey (1941–2020) wurde in Berrechid in Marokko geboren und starb in Orbais-l'Abbaye. Der französische Fotograf war Mitglied der Fotoagentur Magnum. In rund vierzig Jahren seines Schaffens bereiste er mehrere Kontinente und fotografierte in zahlreichen Kriegen und Konflikten. Die englische Wikipedia nennt ihn einen in Marokko geborenen französischen Fotografen.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Bruno_Barbey"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Bruno_Barbey"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Bruno_Barbey"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Heinrich von der Becke",
+    "id": "heinrich-von-der-becke",
+    "occupation": "Sportfotograf",
+    "life": {
+      "from": 1913,
+      "to": 1997
+    },
+    "wikipedia": {
+      "summary": "Heinrich von der Becke (1913–1997) war ein deutscher Sportfotograf. Weltweit bekannt sind seine Bilder von Jesse Owens bei den Olympischen Spielen 1936. Im Laufe seines Lebens entstanden bei ihm etwa 65.000 Abzüge in Schwarzweiß, 1,2 Millionen Negative, rund 2000 Farbfilme mit Kartei und ausführliche Filmlegenden. Zu seinen bekanntesten Markenzeichen zählte die Schiebermütze.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Heinrich_von_der_Becke"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Sibylle Bergemann",
+    "id": "sibylle-bergemann"
+  },
+  {
+    "name": "Norbert Bunge",
+    "id": "norbert-bunge"
+  },
+  {
+    "name": "Cornell Capa",
+    "id": "cornell-capa",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1918,
+      "to": 2008
+    },
+    "wikipedia": {
+      "summary": "Cornell Capa (1918–2008) war ein ungarisch-amerikanischer Fotograf und Fotokurator, seit 1954 Mitglied der Agentur Magnum Photos. Als jüngerer Bruder von Robert Capa wurde er „le petit Capa“ genannt; gemeinsam prägten sie den Fotojournalismus. Bekannt wurde er mit Bildern aus dem Vietnamkrieg und mit Sozialreportagen aus Lateinamerika. 1974 gründete er in New York das International Center of Photography.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Cornell_Capa"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Cornell_Capa"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Cornell_Capa"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "cornell-capa.jpg",
+      "width": 400,
+      "height": 353,
+      "source": "https://commons.wikimedia.org/wiki/File:Cornell_Capa,_RIT_NandE_Vol12Num12_1980_Mar27_Complete.jpg",
+      "credit": "Rochester Institute of Technology",
+      "license": "Public domain"
+    }
+  },
+  {
+    "name": "Bruce Davidson",
+    "id": "bruce-davidson",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1933,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Bruce Davidson, geboren 1933, ist ein US-amerikanischer Fotograf und Dokumentarfilmer und seit 1958 Mitglied der Fotoagentur Magnum Photos. Seine Fotografien, vor allem die aus Harlem in New York, wurden vielfach ausgestellt und veröffentlicht. Er ist dafür bekannt, Gemeinschaften zu fotografieren, die Außenstehenden meist feindselig gegenüberstehen.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Bruce_Davidson_(Fotograf)"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Bruce_Davidson_(photographer)"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Bruce_Davidson_(photographe)"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "bruce-davidson.jpg",
+      "width": 400,
+      "height": 610,
+      "source": "https://commons.wikimedia.org/wiki/File:Bruce_Davidson_2015.jpg",
+      "credit": "BurnAway",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    }
+  },
+  {
+    "name": "Gerti Deutsch",
+    "id": "gerti-deutsch",
+    "occupation": "Fotografin",
+    "life": {
+      "from": 1908,
+      "to": 1979
+    },
+    "wikipedia": {
+      "summary": "Gerti Deutsch (1908–1979) wurde in Wien geboren und starb in Leamington Spa. Die österreichisch-britische Fotografin und Fotojournalistin, auch als Gertrude Hopkinson bekannt, wurde vor allem durch ihre Arbeit für das Magazin Picture Post bekannt, für das sie von 1938 bis 1950 fotografierte.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Gerti_Deutsch"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Gerti_Deutsch"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Gerti_Deutsch"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "gerti-deutsch.jpg",
+      "width": 400,
+      "height": 267,
+      "source": "https://commons.wikimedia.org/wiki/File:130327_Gerti_Deutsch_Praha_Rakouske_kulturni_forum_26.JPG",
+      "credit": "svajcr",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    }
+  },
+  {
+    "name": "Herbert Dombrowski",
+    "id": "herbert-dombrowski"
+  },
+  {
+    "name": "Pietro Donzelli",
+    "id": "pietro-donzelli",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1915,
+      "to": 1998
+    },
+    "wikipedia": {
+      "summary": "Pietro Donzelli (1915–1998) war ein italienischer Fotograf. Seine Schwarzweißfotografien, besonders aus den 1950er- und 1960er-Jahren in Italien, kreisen um das Thema Einsamkeit und fanden international Beachtung und Auszeichnungen. Er zählt zu den Maestros der italienischen Fotografie; mit seinen Bildern trug er dazu bei, dass sich die Fotografie im Italien nach dem Zweiten Weltkrieg durchsetzte. Zudem war er als Kurator und Organisator von Fotoausstellungen tätig.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Pietro_Donzelli"
+        },
+        {
+          "lang": "it",
+          "url": "https://it.wikipedia.org/wiki/Pietro_Donzelli"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Stefan Draschan",
+    "id": "stefan-draschan"
+  },
+  {
+    "name": "Jochen Ehmke",
+    "id": "jochen-ehmke"
+  },
+  {
+    "name": "Elliott Erwitt",
+    "id": "elliott-erwitt",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1928,
+      "to": 2023
+    },
+    "wikipedia": {
+      "summary": "Elliott Erwitt (1928–2023) wurde in Neuilly-sur-Seine geboren und starb in New York. Der französisch-amerikanische Werbe- und Dokumentarfotograf war bekannt für seine Schwarzweißbilder ironischer und absurder Alltagssituationen. Seit 1953 gehörte er zur Agentur Magnum Photos und war in den 1960er-Jahren einige Jahre deren Präsident sowie Vizepräsident.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Elliott_Erwitt"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Elliott_Erwitt"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Elliott_Erwitt"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "elliott-erwitt.jpg",
+      "width": 400,
+      "height": 236,
+      "source": "https://commons.wikimedia.org/wiki/File:Elliott_Erwitt_by_Alessio_Jacona_(15554958273).jpg",
+      "credit": "Alessio Jacona from Rome, Italy",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+    }
+  },
+  {
+    "name": "Arno Fischer",
+    "id": "arno-fischer"
+  },
+  {
+    "name": "A. & E. Frankl",
+    "id": "a-e-frankl"
+  },
+  {
+    "name": "Leonard Freed",
+    "id": "leonard-freed"
+  },
+  {
+    "name": "George Friedman",
+    "id": "george-friedman"
+  },
+  {
+    "name": "Jean Gaumy",
+    "id": "jean-gaumy",
+    "occupation": "Fotograf und Filmemacher",
+    "life": {
+      "from": 1948,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Jean Gaumy wurde am 28. August 1948 in Pontaillac (Charente-Maritime) geboren. Der französische Fotograf und Filmemacher ist seit 1977 mit der Agentur Magnum verbunden und hat sich auf Darstellungen abgeschiedener oder abgeschlossener Gemeinschaften und Gruppen spezialisiert. Er ist außerdem Mitglied des Institut de France und der Académie des Beaux-Arts und trägt den Titel „Peintre officiel de la Marine“.",
+      "sources": [
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Jean_Gaumy"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Jean_Gaumy"
+        },
+        {
+          "lang": "es",
+          "url": "https://es.wikipedia.org/wiki/Jean_Gaumy"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "jean-gaumy.jpg",
+      "width": 400,
+      "height": 644,
+      "source": "https://commons.wikimedia.org/wiki/File:Jean_GAUMY.jpg",
+      "credit": "© Jean GAUMY / Magnum Phoos",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  },
+  {
+    "name": "Gilbert Garcin",
+    "id": "gilbert-garcin",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1929,
+      "to": 2020
+    },
+    "wikipedia": {
+      "summary": "Gilbert Garcin (1929–2020) wurde am 21. Juni 1929 in La Ciotat geboren und starb am 17. April 2020 im Alter von 91 Jahren in Marseille. Er war ein französischer Fotograf und zugleich Unternehmer. Die englische, die französische und die spanische Wikipedia führen ihn übereinstimmend als französischen Fotografen.",
+      "sources": [
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Gilbert_Garcin"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Gilbert_Garcin"
+        },
+        {
+          "lang": "es",
+          "url": "https://es.wikipedia.org/wiki/Gilbert_Garcin"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Bruce Gilden",
+    "id": "bruce-gilden",
+    "occupation": "Reportagefotograf",
+    "life": {
+      "from": 1946,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Bruce Gilden wurde am 16. Oktober 1946 in Brooklyn, New York, geboren und lebt und arbeitet dort. Der US-amerikanische Reportage- und Straßenfotograf wurde vor allem durch Aufnahmen von Menschen auf den Straßen New Yorks bekannt, die er aus geringer Distanz mit Blitzlicht macht. Er erhielt den European Publishers Award for Photography, ist Guggenheim Fellow und seit 1998 Mitglied der Agentur Magnum Photos.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Bruce_Gilden"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Bruce_Gilden"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Bruce_Gilden"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "bruce-gilden.jpg",
+      "width": 400,
+      "height": 552,
+      "source": "https://commons.wikimedia.org/wiki/File:Bruce_Gilden_Pinacoteca_Tosio_Brescia_2026.jpeg",
+      "credit": "Wolfgang Moroder",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    }
+  },
+  {
+    "name": "Franz Göttfried",
+    "id": "franz-goettfried"
+  },
+  {
+    "name": "Philippe Halsman",
+    "id": "philippe-halsman",
+    "occupation": "Porträt- und Modefotograf",
+    "life": {
+      "from": 1906,
+      "to": 1979
+    },
+    "wikipedia": {
+      "summary": "Philippe Halsman (1906–1979) wurde in Riga geboren und starb in New York. Er war Porträt- und Modefotograf, wurde 1949 in den USA eingebürgert und gehörte der Agentur Magnum Photos an. Jahrzehntelang fotografierte er für die Zeitschrift Life, und mehr als hundertmal erschienen seine Werke als Titelbild. Bekannt ist er außerdem für Porträts von Prominenten und seine „Jumpologie“.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Philippe_Halsman"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Philippe_Halsman"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Philippe_Halsman"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "philippe-halsman.jpg",
+      "width": 400,
+      "height": 628,
+      "source": "https://commons.wikimedia.org/wiki/File:Philippe_Halsman_(cropped).jpg",
+      "credit": "Unknown authorUnknown author",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  },
+  {
+    "name": "Hans Henschke",
+    "id": "hans-henschke"
+  },
+  {
+    "name": "Bernd Heyden",
+    "id": "bernd-heyden"
+  },
+  {
+    "name": "Gerhard Hopf",
+    "id": "gerhard-hopf"
+  },
+  {
+    "name": "Lotte Jacobi",
+    "id": "lotte-jacobi",
+    "occupation": "Fotografin",
+    "life": {
+      "from": 1896,
+      "to": 1990
+    },
+    "wikipedia": {
+      "summary": "Lotte Jacobi (1896–1990), eigentlich Johanna Alexandra Jacobi, wurde am 17. August 1896 in Toruń geboren und starb am 6. Mai 1990 in den USA. Die deutsch-amerikanische Fotografin und Fotojournalistin arbeitete in den Bereichen Porträt, Theater und Kunst und war für ihre kontrastreichen Schwarzweißporträts bekannt. Sie zeigte gewöhnliche Menschen in den USA und Europa ebenso wie bedeutende Künstler, Denker und Aktivisten des 20. Jahrhunderts. Ruth Jacobi war ihre Schwester.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Lotte_Jacobi"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Lotte_Jacobi"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Lotte_Jacobi"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Max Jacoby",
+    "id": "max-jacoby"
+  },
+  {
+    "name": "Richard Kalvar",
+    "id": "richard-kalvar",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1944,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Richard Kalvar wurde am 14. November 1944 in Brooklyn, New York, geboren. Der US-amerikanische Fotograf ist seit 1975 mit der Agentur Magnum Photos verbunden. Eine Einzelausstellung hatte er in der Maison européenne de la photographie in Paris. Die englische, die französische und die italienische Wikipedia führen ihn als amerikanischen Fotografen.",
+      "sources": [
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Richard_Kalvar"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Richard_Kalvar"
+        },
+        {
+          "lang": "it",
+          "url": "https://it.wikipedia.org/wiki/Richard_Kalvar"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Barbara Klemm",
+    "id": "barbara-klemm",
+    "occupation": "Fotografin und Pressefotografin",
+    "life": {
+      "from": 1939,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Barbara Klemm wurde am 27. Dezember 1939 in Münster geboren. Die deutsche Fotografin und Pressefotografin arbeitete 45 Jahre für die Frankfurter Allgemeine Zeitung und fotografierte viele der wichtigsten Ereignisse der jüngeren deutschen Geschichte. Sie erhielt unter anderem die Mitgliedschaft der Akademie der Künste Berlin und den Orden Pour le Mérite und wurde in die Leica Hall of Fame aufgenommen.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Barbara_Klemm"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Barbara_Klemm"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "barbara-klemm.jpg",
+      "width": 400,
+      "height": 512,
+      "source": "https://commons.wikimedia.org/wiki/File:Barbara_klemm_2010.tif",
+      "credit": "Max-beckmann-preis-2010-barbara-klemm-ffm-002.jpg: Dontworry derivative work: Artmax (talk)",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    }
+  },
+  {
+    "name": "Robert Lebeck",
+    "id": "robert-lebeck",
+    "occupation": "Fotojournalist",
+    "life": {
+      "from": 1929,
+      "to": 2014
+    },
+    "wikipedia": {
+      "summary": "Robert Lebeck (1929–2014) wurde am 21. März 1929 in Berlin geboren und starb dort am 14. Juni 2014. Er war ein deutscher Fotojournalist und gilt als eine Figur des deutschen Fotojournalismus. Außerdem war er ein bedeutender Sammler, unter anderem von Fotografien des 19. Jahrhunderts und von Zeitschriften aus der Frühzeit des Fotojournalismus.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Robert_Lebeck"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Robert_Lebeck"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Robert_Lebeck"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "robert-lebeck.jpg",
+      "width": 400,
+      "height": 533,
+      "source": "https://commons.wikimedia.org/wiki/File:Lebeck_Robert_Leverkusen_200311.jpg",
+      "credit": "Hpschaefer http://www.reserv-art.de",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+    }
+  },
+  {
+    "name": "Herbert List",
+    "id": "herbert-list",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1903,
+      "to": 1975
+    },
+    "wikipedia": {
+      "summary": "Herbert List (1903–1975) wurde am 7. Oktober 1903 in Hamburg geboren und starb am 4. April 1975 in München. Der deutsche Fotograf wird als „moderner Klassiker“ bezeichnet; bekannt sind vor allem seine surreal wirkenden Schwarzweißfotografien. Er arbeitete für Magazine wie Vogue, Harper's Bazaar und Life und stand der Agentur Magnum nahe. Seine strengen, klassisch inszenierten Aufnahmen, besonders männliche Akte aus Italien und Griechenland, beeinflussten die moderne Fotografie.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Herbert_List"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Herbert_List"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Herbert_List"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Peter Marlow",
+    "id": "peter-marlow",
+    "occupation": "Fotograf und Fotojournalist",
+    "life": {
+      "from": 1952,
+      "to": 2016
+    },
+    "wikipedia": {
+      "summary": "Peter Marlow (1952–2016) wurde am 19. Januar 1952 in Kenilworth, England, geboren und starb am 21. Februar 2016 in London. Der britische Fotograf und Fotojournalist war Mitglied der Agentur Magnum Photos und arbeitete als Pressefotograf. Die englische, die französische und die niederländische Wikipedia führen ihn übereinstimmend als britischen Fotografen.",
+      "sources": [
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Peter_Marlow_(photographer)"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Peter_Marlow"
+        },
+        {
+          "lang": "nl",
+          "url": "https://nl.wikipedia.org/wiki/Peter_Marlow"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "peter-marlow.jpg",
+      "width": 400,
+      "height": 400,
+      "source": "https://commons.wikimedia.org/wiki/File:Peter_Marlow_Portrait.jpg",
+      "credit": "Barbicanf",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  },
+  {
+    "name": "Will McBride",
+    "id": "will-mcbride",
+    "occupation": "Fotograf und bildender Künstler",
+    "life": {
+      "from": 1931,
+      "to": 2015
+    },
+    "wikipedia": {
+      "summary": "Will McBride (1931–2015) war ein US-amerikanischer Fotograf, der in Deutschland lebte. Er arbeitete in der Reportage, der Kunstfotografie und der Buchillustration und war zugleich Maler, Bildhauer und bildender Künstler. Die französische Wikipedia nennt ihn außerdem Illustrator. Die deutsche Wikipedia beschreibt ihn als in Deutschland lebenden Fotografen und bildenden Künstler.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Will_McBride"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Will_McBride_(photographer)"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Will_McBride"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "will-mcbride.jpg",
+      "width": 400,
+      "height": 268,
+      "source": "https://commons.wikimedia.org/wiki/File:Will_McBride_1975.jpg",
+      "credit": "Wolfgang H. Wögerer, Wien",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+    }
+  },
+  {
+    "name": "Inge Morath",
+    "id": "inge-morath",
+    "occupation": "Fotografin",
+    "life": {
+      "from": 1923,
+      "to": 2002
+    },
+    "wikipedia": {
+      "summary": "Inge Morath (1923–2002) wurde am 27. Mai 1923 in Graz geboren und starb am 30. Januar 2002 in New York. Die österreichische Fotografin trat 1953 der Agentur Magnum Photos bei und wurde 1955 dort vollwertige Fotografin. Sie war außerdem die dritte Frau des Dramatikers Arthur Miller und die Mutter der Filmemacherin Rebecca Miller.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Inge_Morath"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Inge_Morath"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Inge_Morath"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "inge-morath.jpg",
+      "width": 400,
+      "height": 482,
+      "source": "https://commons.wikimedia.org/wiki/File:Inge_Morath_1956.jpg",
+      "credit": "User: Hanooz",
+      "license": "Public domain"
+    }
+  },
+  {
+    "name": "Stefan Moses",
+    "id": "stefan-moses"
+  },
+  {
+    "name": "Elisabeth Niggemeyer",
+    "id": "elisabeth-niggemeyer",
+    "occupation": "Fotografin und Fotobuchautorin",
+    "life": {
+      "from": 1930,
+      "to": 2025
+    },
+    "wikipedia": {
+      "summary": "Elisabeth Niggemeyer (1930–2025) war eine deutsche Fotografin und Fotobuchautorin. Am bekanntesten ist sie als Fotografin für „Die gemordete Stadt“, eine klassische Kritik an der Stadtplanung der Nachkriegszeit in Deutschland, sowie für ihre Arbeit über Kinder und Pädagogik, die sie gemeinsam mit Nancy Hoenisch schuf.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Elisabeth_Niggemeyer"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Elisabeth_Niggemeyer"
+        },
+        {
+          "lang": "cs",
+          "url": "https://cs.wikipedia.org/wiki/Elisabeth_Niggemeyerov%C3%A1"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "elisabeth-niggemeyer.jpg",
+      "width": 400,
+      "height": 466,
+      "source": "https://commons.wikimedia.org/wiki/File:Elisabeth_niggemeyer_1951ca.jpg",
+      "credit": "Benjamin983",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  },
+  {
+    "name": "Ruth Orkin",
+    "id": "ruth-orkin",
+    "occupation": "Fotografin und Filmemacherin",
+    "life": {
+      "from": 1921,
+      "to": 1985
+    },
+    "wikipedia": {
+      "summary": "Ruth Orkin (1921–1985) wurde am 3. September 1921 in Boston geboren und starb am 16. Januar 1985 in New York. Die US-amerikanische Fotografin, Bildjournalistin und Filmemacherin war in den 1940er- und 1950er-Jahren als Straßenfotografin aktiv; ihr bekanntestes Foto ist „American Girl in Italy“ von 1951. Sie porträtierte viele Prominente und drehte mit ihrem Mann Morris Engel Spielfilme.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Ruth_Orkin"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Ruth_Orkin"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Ruth_Orkin"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "ruth-orkin.jpg",
+      "width": 400,
+      "height": 267,
+      "source": "https://commons.wikimedia.org/wiki/File:Medi%C3%A1ln%C3%AD_olympi%C3%A1da_2024_v_Ostrav%C4%9B_13,_Galerie_v%C3%BDtvarn%C3%A9ho_um%C4%9Bn%C3%AD_v_Ostrav%C4%9B,_v%C3%BDstava_Ruth_Orkin.jpg",
+      "credit": "Pavel Bednařík (WMCZ)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  },
+  {
+    "name": "Martin Parr",
+    "id": "martin-parr",
+    "occupation": "Dokumentarfotograf",
+    "life": {
+      "from": 1952,
+      "to": 2025
+    },
+    "wikipedia": {
+      "summary": "Martin Parr (1952–2025) wurde am 23. Mai 1952 in Epsom geboren und starb am 6. Dezember 2025 in Bristol. Der britische Dokumentarfotograf und Fotojournalist wurde für seinen humorvollen, satirischen und anthropologischen Blick auf Alltagssituationen bekannt, besonders auf die Gesellschaftsschichten Englands und den Wohlstand der westlichen Welt. Er war seit 1994 Mitglied der Agentur Magnum Photos und von 2013 bis 2017 deren Präsident.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Martin_Parr"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Martin_Parr"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Martin_Parr"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "martin-parr.jpg",
+      "width": 400,
+      "height": 533,
+      "source": "https://commons.wikimedia.org/wiki/File:MartinParrVA130524_(6_of_7)_(cropped_2).jpg",
+      "credit": "Raph_PH",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+    }
+  },
+  {
+    "name": "Nelly Rau-Häring",
+    "id": "nelly-rau-haering"
+  },
+  {
+    "name": "Marc Riboud",
+    "id": "marc-riboud",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1923,
+      "to": 2016
+    },
+    "wikipedia": {
+      "summary": "Marc Riboud (1923–2016) wurde am 24. Juni 1923 in Saint-Genis-Laval geboren und starb am 30. August 2016 in Paris. Der französische Fotograf war Mitglied der Fotoagentur Magnum Photos und wurde vor allem durch seine ausführlichen Reportagen über den Fernen Osten bekannt, darunter Bildbände über China und Nordvietnam.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Marc_Riboud"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Marc_Riboud"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Marc_Riboud"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "marc-riboud.jpg",
+      "width": 400,
+      "height": 467,
+      "source": "https://commons.wikimedia.org/wiki/File:Marc_Riboud_Arles_1975.jpg",
+      "credit": "Jean-Pierre NAUD",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  },
+  {
+    "name": "Gerhard Riebicke",
+    "id": "gerhard-riebicke"
+  },
+  {
+    "name": "Willy Ronis",
+    "id": "willy-ronis",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1910,
+      "to": 2009
+    },
+    "wikipedia": {
+      "summary": "Willy Ronis (1910–2009) wurde am 14. August 1910 in Paris geboren und starb dort am 11. September 2009. Der vielfach ausgezeichnete französische Fotograf, 1979 Träger des Grand Prix national de la photographie und 1981 des Prix Nadar, zählt zur französischen Schule des fotografischen Humanismus. Seine bekanntesten Arbeiten zeigen das Leben im Paris und in der Provence der Nachkriegszeit.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Willy_Ronis"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Willy_Ronis"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Willy_Ronis"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "willy-ronis.jpg",
+      "width": 400,
+      "height": 300,
+      "source": "https://commons.wikimedia.org/wiki/File:02-01-20_16-53-07-Willy-Ronis.jpg",
+      "credit": "24images",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  },
+  {
+    "name": "Erich Salomon",
+    "id": "erich-salomon",
+    "occupation": "Fotojournalist",
+    "life": {
+      "from": 1886,
+      "to": 1944
+    },
+    "wikipedia": {
+      "summary": "Erich Salomon (1886–1944) wurde am 28. April 1886 in Berlin geboren und starb am 7. Juli 1944 im Vernichtungslager Auschwitz-Birkenau. Er war Jurist, Fotograf und Bildjournalist. Der deutsche Pressefotograf wurde für seine Bilder aus Diplomatie und Justiz und für die innovativen Methoden bekannt, mit denen er sie aufnahm.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Erich_Salomon"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Erich_Salomon"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Erich_Salomon"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "erich-salomon.jpg",
+      "width": 400,
+      "height": 582,
+      "source": "https://commons.wikimedia.org/wiki/File:ErichSalomon1935.jpg",
+      "credit": "Erich Salomon",
+      "license": "Public domain"
+    }
+  },
+  {
+    "name": "Max Scheler",
+    "id": "max-scheler"
+  },
+  {
+    "name": "Karl Schenker",
+    "id": "karl-schenker",
+    "occupation": "Fotograf, Illustrator und Maler",
+    "life": {
+      "from": 1886,
+      "to": 1954
+    },
+    "wikipedia": {
+      "summary": "Der Österreicher Karl Schenker (1886–1954), auch Karol Schenker genannt, arbeitete als Fotograf, Maler und als Illustrator für Modezeitschriften. Er arbeitete überwiegend in Berlin, musste als Jude 1938 Deutschland verlassen und ging nach London, wo er 1948 britischer Staatsbürger wurde. Die französische Wikipedia führt ihn als deutschen Fotografen.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Karl_Schenker"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Karl_Schenker"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Karl_Schenker"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "karl-schenker.jpg",
+      "width": 400,
+      "height": 548,
+      "source": "https://commons.wikimedia.org/wiki/File:Karl_Schenker_in_aviator_outfit_1919.jpg",
+      "credit": "Hermann Schieberth",
+      "license": "Public domain"
+    }
+  },
+  {
+    "name": "Jordis Schlösser",
+    "id": "jordis-schloesser"
+  },
+  {
+    "name": "Friedrich Seidenstücker",
+    "id": "friedrich-seidenstuecker",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1882,
+      "to": 1966
+    },
+    "wikipedia": {
+      "summary": "Friedrich Seidenstücker (1882–1966) war ein deutscher Fotograf. Bekannt wurde er vor allem durch Aufnahmen aus dem Alltagsleben, durch Tierfotografien und Aktbilder sowie durch seine Bilder der Ruinen Berlins, das im Zweiten Weltkrieg zerstört wurde. Die spanische Wikipedia hebt seine Porträts von Menschen und Tieren hervor.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Friedrich_Seidenst%C3%BCcker"
+        },
+        {
+          "lang": "es",
+          "url": "https://es.wikipedia.org/wiki/Friedrich_Seidenst%C3%BCcker"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Robert Sennecke",
+    "id": "robert-sennecke"
+  },
+  {
+    "name": "Anton Stankowski",
+    "id": "anton-stankowski",
+    "occupation": "Grafikdesigner, Fotograf und Maler",
+    "life": {
+      "from": 1906,
+      "to": 1998
+    },
+    "wikipedia": {
+      "summary": "Anton Stankowski (1906–1998) war ein deutscher Grafikdesigner, Fotograf und Maler. Er entwickelte eine eigene Gestaltungstheorie und war ein Wegbereiter der konstruktiven Grafik. Typisch für seine Entwürfe ist der Versuch, Prozesse und Verhaltensweisen statt Gegenstände darzustellen; solche Experimente führten zu fraktalähnlichen Strukturen, noch bevor Benoît Mandelbrot 1975 den Begriff „Fraktal“ prägte. Außerdem schuf er Logos für Unternehmen.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Anton_Stankowski"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Anton_Stankowski"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Anton_Stankowski"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "anton-stankowski.jpg",
+      "width": 400,
+      "height": 660,
+      "source": "https://commons.wikimedia.org/wiki/File:W_BIO_1958.jpg",
+      "credit": "Anton Stankowski",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+    }
+  },
+  {
+    "name": "Uwe Steinberg",
+    "id": "uwe-steinberg"
+  },
+  {
+    "name": "Louis Stettner",
+    "id": "louis-stettner",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1922,
+      "to": 2016
+    },
+    "wikipedia": {
+      "summary": "Louis Stettner (1922–2016) wurde am 7. November 1922 in Brooklyn geboren und starb am 13. Oktober 2016 in Paris; einen großen Teil seines Lebens lebte er in Frankreich. Der US-amerikanische Fotograf ist vor allem für einfühlsame Schwarzweißaufnahmen von New York und Paris bekannt, die über Jahrzehnte Alltagsleben und Architektur beider Städte dokumentieren. Zudem gehörte er der Photo League in New York an.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Louis_Stettner"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Louis_Stettner"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Louis_Stettner"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Dennis Stock",
+    "id": "dennis-stock"
+  },
+  {
+    "name": "Sasha Stone",
+    "id": "sasha-stone",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1895,
+      "to": 1940
+    },
+    "wikipedia": {
+      "summary": "Sasha Stone, eigentlich Aleksander Serge Steinsapir (1895–1940), war ein in Russland geborener Künstler und russisch-amerikanischer Fotograf, laut der englischen Wikipedia staatenlos. Er und seine erste Frau Cami Stone waren in den 1920er- und 1930er-Jahren erfolgreiche Fotografen. Zu seinen bekanntesten Arbeiten zählt die Fotomontage für den Umschlag von Walter Benjamins „Einbahnstraße“ von 1928.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Sasha_Stone"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Sasha_Stone_(photographer)"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Antanas Sutkus",
+    "id": "antanas-sutkus"
+  },
+  {
+    "name": "Paul Wolff",
+    "id": "paul-wolff"
+  },
+  {
+    "name": "Harf Zimmermann",
+    "id": "harf-zimmermann",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1955,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Harf Zimmermann, geboren 1955, ist ein deutscher Fotograf, der mit Großformatfotografie bekannt wurde, aufgenommen mit großen und sehr großen Kameras, zu seinen Arbeiten zählen „Brand Wand“ und „Hufelandstraße 1055 Berlin“. Seine Panoramabilder machten ihn zu Beginn der 2000er-Jahre zu Deutschlands renommiertestem Panoramafotografen. Er ist Mitbegründer der Berliner Fotoagentur Ostkreuz.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Harf_Zimmermann"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "harf-zimmermann.jpg",
+      "width": 400,
+      "height": 400,
+      "source": "https://commons.wikimedia.org/wiki/File:Harf_Zimmermann_(2018).jpg",
+      "credit": "Harf Zimmermann",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+    }
+  },
+  {
+    "name": "Marie Watt",
+    "id": "marie-watt"
   }
 ]

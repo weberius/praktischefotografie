@@ -67,3 +67,11 @@ test('Szenario: Skill schlägt Festivals nur mit Zeitraum vor (SKL-UB-6)', () =>
   assert.match(text, /Nie ein Festival ohne belegten Zeitraum/);
   assert.match(text, /Orte und Veranstalter dürfen nie dieselbe `id` haben/);
 });
+
+test('Szenario: Skill übernimmt alle genannten Namen (SKL-UB-7)', () => {
+  const text = skill();
+  assert.match(text, /\*\*Alle\*\* im Seitentext genannten Personen, deren Bilder in der Ausstellung gezeigt werden/);
+  assert.match(text, /Kurator:innen, Sammler:innen, Musiker:innen und Redner:innen ohne gezeigte Bilder nicht/);
+  assert.match(text, /`description` der Ausstellung nennt \*\*alle\*\* diese Namen/);
+  assert.match(text, /\/research-photographers/);
+});
