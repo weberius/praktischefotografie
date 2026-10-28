@@ -38,7 +38,8 @@ praktischefotografie/
 │   ├── venues.json            # Permanente Orte (Museen, Stiftungen, Bibliotheken)
 │   ├── exhibitions.json       # Ausstellungen & Laufzeiten
 │   ├── events.json            # Einzel-Events, Vernissagen, Messen
-│   ├── organizers.json        # Netzwerke, Vereine & Festival-Organisatoren
+│   ├── organizers.json        # Netzwerke, Vereine & Veranstalter ohne eigenen Raum
+│   ├── festivals.json         # Festivals (Zeitraum) der Veranstalter
 │   ├── photographers.json     # Index beteiligter Fotograf:innen
 │   └── posts.json             # Blog-Index & Metadaten
 ├── content/
@@ -238,5 +239,7 @@ export SCRAPE_CONTACT="redaktion@example.org"   # Kontaktadresse für den User-A
 ```
 
 Die einzelnen Schritte (`npm run data:fetch|check|report|apply`) und das Vorschlagsformat stehen in [`updates/README.md`](updates/README.md). Abgerufene Seitentexte liegen nur lokal unter `.cache/` und werden nicht versioniert.
+
+Der Skill bearbeitet auch die Webseiten von Veranstaltern (Datensatz `organizers` mit `website`) und schlägt Festivals vor, aber nur mit belegtem Zeitraum (ADR-010, Details in [`updates/README.md`](updates/README.md)).
 
 Bei jedem Lauf pflegt der Skill auch das Magazin: Zu neuen, eröffnenden, bald endenden und beendeten Ausstellungen entstehen Beiträge von 60 bis 80 Wörtern (`npm run news:plan|check|apply`). Sie werden vorab mit dem Datum des Anlasses angelegt, das Magazin zeigt sie erst an dem Tag, und sie werden erst nach Freigabe übernommen (Format und Regeln: [`updates/README.md`](updates/README.md)).

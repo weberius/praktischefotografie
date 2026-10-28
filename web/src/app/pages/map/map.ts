@@ -8,7 +8,7 @@ import { VenueFilter, cities, filterToParams, filterVenues, paramsToFilter } fro
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { VenueMap } from '../../shared/venue-map/venue-map';
 
-/** Karte und Liste der Orte mit Filtern; der Filterzustand liegt in der Adresse (MAP-UB-1 bis MAP-UB-4, MAP-EV-1, MAP-UN-1, ORG-UB-4). */
+/** Karte und Liste der Orte mit Filtern; der Filterzustand liegt in der Adresse (MAP-UB-1 bis MAP-UB-4, MAP-EV-1, MAP-UN-1, ORG-UB-6, FST-UB-5). */
 @Component({
   selector: 'app-map-page',
   imports: [DataGate, VenueMap, RouterLink],
@@ -22,14 +22,14 @@ export class MapPage {
 
   private readonly params = toSignal(this.route.queryParamMap, { initialValue: this.route.snapshot.queryParamMap });
   protected readonly filter = computed(() => paramsToFilter(this.params()));
-  protected readonly venues = computed(() => filterVenues(this.data.venues(), this.filter(), this.data.exhibitions()));
+  protected readonly venues = computed(() => filterVenues(this.data.venues(), this.filter(), this.data.exhibitions(), this.data.festivals()));
   protected readonly cities = computed(() => cities(this.data.venues()));
   protected readonly types = (Object.keys(VENUE_TYPE_INFO) as VenueType[]).map((value) => ({ value, label: VENUE_TYPE_INFO[value].label }));
   protected readonly typeInfo = VENUE_TYPE_INFO;
   protected readonly hasFilter = computed(() => Object.keys(filterToParams(this.filter())).length > 0);
 
   constructor() {
-    inject(PageMeta).set('Karte', 'Karte und Liste der Foto-Orte in NRW, filterbar nach Stadt, Typ, Präsenzbibliothek, Sammlung und Veranstalter:in.');
+    inject(PageMeta).set('Karte', 'Karte und Liste der Foto-Orte in NRW, filterbar nach Stadt, Typ, Präsenzbibliothek, Sammlung, Veranstalter:in und Festival.');
   }
 
   protected update(change: Partial<VenueFilter>): void {

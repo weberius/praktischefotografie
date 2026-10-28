@@ -1,4 +1,4 @@
-// Gherkin: web/veranstalter.feature · „Veranstalterseite zeigt Stammdaten“, „… listet Ausstellungen“, „Veranstalter ohne Ausstellung“ (ORG-UB-2, ORG-UB-3, ORG-ST-1)
+// Gherkin: web/veranstalter.feature · „Veranstalterseite zeigt Stammdaten“, „… listet Ausstellungen über Festivals“, „… listet Festivals“, „… zeigt Beschreibung und Instagram“, „Veranstalter ohne Ausstellung“ (ORG-UB-2, ORG-UB-5, ORG-UB-7, ORG-UB-8, ORG-ST-1)
 import { Title } from '@angular/platform-browser';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
@@ -31,7 +31,7 @@ describe('OrganizerDetailPage', () => {
     expect(TestBed.inject(Title).getTitle()).toContain('Photoszene Köln e.V.');
   });
 
-  it('Szenario: Veranstalterseite listet Ausstellungen – genau die zwei mit Ort, Zeitraum und Status', async () => {
+  it('Szenario: Veranstalterseite listet Ausstellungen über Festivals (ORG-UB-5) – genau die zwei mit Ort, Zeitraum und Status', async () => {
     const root = await open('/organizers/photoszene-koeln');
     const items = Array.from(root.querySelectorAll('ul.card-list li'));
     expect(items.length).toBe(2);
@@ -46,7 +46,29 @@ describe('OrganizerDetailPage', () => {
     expect(items[0].querySelector('a')?.getAttribute('href')).toBe('/exhibitions/f-1');
   });
 
-  it('Links zu Karte und Liste mit Veranstalterfilter (ORG-UB-4)', async () => {
+  it('Szenario: Veranstalterseite listet Festivals (ORG-UB-7) – genau die zwei mit Titel, Zeitraum und Link', async () => {
+    const root = await open('/organizers/photoszene-koeln');
+    const items = Array.from(root.querySelectorAll('#organizer-festivals li'));
+    expect(items.map((i) => i.querySelector('a')?.getAttribute('href'))).toEqual(['/festivals/photoszene-festival-2026', '/festivals/photoszene-nachlese-2027']);
+    expect(items[0].textContent).toContain('Photoszene-Festival 2026');
+    expect(items[0].textContent).toContain('1. November 2026 – 15. Dezember 2026');
+    expect(root.querySelector('a[href="/festivals/festival-ohne-programm"]')).toBeNull();
+  });
+
+  it('Szenario: Veranstalterseite zeigt Beschreibung und Instagram (ORG-UB-8)', async () => {
+    const root = await open('/organizers/photoszene-koeln');
+    expect(root.textContent).toContain('Verein zur Förderung der Fotografie.');
+    const link = root.querySelector('a[href="https://www.instagram.com/photoszene_koeln/"]');
+    expect(link).not.toBeNull();
+    expect(link?.getAttribute('rel')).toContain('noopener');
+  });
+
+  it('Veranstalter ohne Instagram-Namen zeigt keinen Instagram-Link (ORG-UB-8)', async () => {
+    const root = await open('/organizers/ohne-programm');
+    expect(root.querySelector('a[href^="https://www.instagram.com/"]')).toBeNull();
+  });
+
+  it('Links zu Karte und Liste mit Veranstalterfilter (ORG-UB-6)', async () => {
     const root = await open('/organizers/photoszene-koeln');
     const hrefs = Array.from(root.querySelectorAll('a')).map((a) => a.getAttribute('href'));
     expect(hrefs).toContain('/map?organizer=photoszene-koeln');

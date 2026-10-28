@@ -33,6 +33,7 @@ export const validSet = () => ({
   exhibitions: [exhibition()],
   events: [],
   organizers: [{ id: 'photoszene-koeln', name: 'Internationale Photoszene Köln e.V.', type: 'association', city: 'Köln' }],
+  festivals: [],
   photographers: [{ id: 'martin-parr', name: 'Martin Parr' }],
   posts: [],
 });

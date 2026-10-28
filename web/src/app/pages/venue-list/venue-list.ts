@@ -7,7 +7,7 @@ import { PageMeta } from '../../core/page-meta';
 import { VenueFilter, cities, filterToParams, filterVenues, paramsToFilter } from '../../core/venue-filter';
 import { DataGate } from '../../shared/data-gate/data-gate';
 
-/** Ortsverzeichnis mit Filtern nach Stadt und Typ; der Filterzustand liegt in den Query-Parametern (VNU-UB-1, VNU-UB-2, ORG-UB-4). */
+/** Ortsverzeichnis mit Filtern nach Stadt und Typ; der Filterzustand liegt in den Query-Parametern (VNU-UB-1, VNU-UB-2, ORG-UB-6, FST-UB-5, FST-ST-3). */
 @Component({
   selector: 'app-venue-list-page',
   imports: [RouterLink, DataGate],
@@ -25,11 +25,17 @@ export class VenueListPage {
   protected readonly filter = computed(() => paramsToFilter(this.params()));
   protected readonly cityOptions = computed(() => cities(this.data.venues()));
   protected readonly venues = computed(() =>
-    filterVenues(this.data.venues(), this.filter(), this.data.exhibitions()).sort((a, b) => a.name.localeCompare(b.name, 'de')),
+    filterVenues(this.data.venues(), this.filter(), this.data.exhibitions(), this.data.festivals()).sort((a, b) => a.name.localeCompare(b.name, 'de')),
   );
   protected readonly organizerName = computed(() => {
     const id = this.filter().organizer;
     return id ? (this.data.organizerById().get(id)?.name ?? id) : null;
+  });
+  protected readonly festivalHint = computed(() => {
+    const id = this.filter().festival;
+    if (!id) return null;
+    const festival = this.data.festivalById().get(id);
+    return festival ? `Gefiltert nach Festival: ${festival.title}` : `Unbekanntes Festival im Filter: ${id}`;
   });
 
   constructor() {
@@ -46,6 +52,10 @@ export class VenueListPage {
 
   protected clearOrganizer(): void {
     this.apply({ ...this.filter(), organizer: undefined });
+  }
+
+  protected clearFestival(): void {
+    this.apply({ ...this.filter(), festival: undefined });
   }
 
   private apply(filter: VenueFilter): void {

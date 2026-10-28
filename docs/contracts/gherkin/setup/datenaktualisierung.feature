@@ -83,3 +83,37 @@ Funktionalität: Aktualisierung der Daten aus Webseiten
     Wenn der Lauf mit "--venue gibt-es-nicht" gestartet wird
     Dann endet er mit Exit-Code 1
     Und die Meldung nennt die gültigen IDs
+
+  # EARS: UPD-UB-6
+  Szenario: Vorschläge von Veranstaltern bleiben im eigenen Bereich
+    Angenommen eine Vorschlagsdatei des Veranstalters "photoszene-koeln"
+    Wenn sie einen Ort ändert oder ein Festival eines anderen Veranstalters ergänzt
+    Dann werden diese Vorschläge verworfen
+    Aber ein neues Festival von "photoszene-koeln" wird angenommen
+
+  # EARS: UPD-UB-7
+  Szenario: Veranstalter und Festivals als Vorschläge
+    Angenommen ein Vorschlag für ein neues Festival "Photoszene-Festival 2027" mit gültigem Zeitraum
+    Wenn die Vorschläge geprüft werden
+    Dann erhält der Datensatz die id "photoszene-festival-2027"
+    Und der Vorschlag trägt die Art "ergänzt"
+
+  # EARS: UPD-UB-8
+  Szenario: Keine Dubletten bei Veranstaltern und Festivals
+    Angenommen ein vorhandener Veranstalter "Photoszene Köln" und ein vorhandenes Festival mit Veranstalter, Titel und Beginn
+    Wenn beide erneut vorgeschlagen werden
+    Dann werden beide als Dublette verworfen
+
+  # EARS: UPD-UN-3
+  Szenario: Festival ohne belegten Zeitraum
+    Angenommen ein Festivalvorschlag ohne "endDate"
+    Wenn die Vorschläge geprüft werden
+    Dann wird er verworfen
+    Und der Bericht nennt den Grund
+
+  # EARS: UPD-OP-2
+  Szenario: Einzelner Veranstalter
+    Angenommen eine Vorschlagsdatei "updates/2026-10-28/photoszene-koeln.json" mit "organizerId"
+    Wenn "--venue photoszene-koeln" angegeben ist
+    Dann wird nur diese Datei geprüft und übernommen
+

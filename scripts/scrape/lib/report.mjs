@@ -11,8 +11,8 @@ export function buildReport({ root, date }) {
   const proposals = existsSync(dir)
     ? readdirSync(dir).filter((f) => f.endsWith('.json') && f !== 'fetch-summary.json').map((f) => readJson(join(dir, f)))
     : [];
-  const changes = proposals.flatMap((p) => (p.changes ?? []).map((c) => ({ ...c, venueId: p.venueId })));
-  const rejected = proposals.flatMap((p) => (p.rejected ?? []).map((c) => ({ ...c, venueId: p.venueId })));
+  const changes = proposals.flatMap((p) => (p.changes ?? []).map((c) => ({ ...c, venueId: p.venueId ?? p.organizerId })));
+  const rejected = proposals.flatMap((p) => (p.rejected ?? []).map((c) => ({ ...c, venueId: p.venueId ?? p.organizerId })));
   const conflicts = changes.filter((c) => c.conflict);
   const lines = [
     `# Bericht zur Datenaktualisierung ${date}`,

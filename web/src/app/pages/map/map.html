@@ -28,6 +28,15 @@
         }
       </select>
     </label>
+    <label>
+      Festival
+      <select id="filter-festival" (change)="update({ festival: value($event) || undefined })">
+        <option value="" [selected]="!filter().festival">Alle</option>
+        @for (festival of data.festivals(); track festival.id) {
+          <option [value]="festival.id" [selected]="filter().festival === festival.id">{{ festival.title }}</option>
+        }
+      </select>
+    </label>
     <label class="inline">
       <input type="checkbox" [checked]="!!filter().library" (change)="update({ library: checked($event) || undefined })" />
       Hat Präsenzbibliothek

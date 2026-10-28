@@ -17,6 +17,16 @@
       <p><a [routerLink]="['/venues', venue.id]">{{ venue.name }}</a>, {{ venue.city }}</p>
     }
 
+    @if (festival(); as festival) {
+      <h2>Festival</h2>
+      <p>
+        <a [routerLink]="['/festivals', festival.id]">{{ festival.title }}</a>
+        @if (exhibition.isOfficialFestivalPartner) {
+          <span class="badge partner">Offizieller Partner</span>
+        }
+      </p>
+    }
+
     @if (organizer(); as organizer) {
       <h2>Veranstalter</h2>
       <p><a [routerLink]="['/organizers', organizer.id]">{{ organizer.name }}</a></p>

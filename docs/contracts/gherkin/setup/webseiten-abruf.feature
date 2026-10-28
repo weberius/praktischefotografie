@@ -72,3 +72,11 @@ Funktionalität: Abruf der Webseiten von Orten
     Wenn der Abruf gestartet wird
     Dann wird der ftp-Link nicht abgerufen
     Und das Formular wird nicht abgesendet
+
+  # EARS: FET-OP-2
+  Szenario: Abruf der Website eines Veranstalters
+    Angenommen ein Veranstalter "photoszene-koeln" mit Website auf dem Testserver
+    Wenn der Abruf mit "--venue photoszene-koeln" gestartet wird
+    Dann liegen Snapshots unter ".cache/snapshots/photoszene-koeln/"
+    Und die Regeln für robots.txt, Abstand und Kennung gelten wie bei Orten
+

@@ -1,12 +1,12 @@
 # language: de
 Funktionalität: Navigation und Seitenrahmen
 
-  # EARS: NAV-UB-1
+  # EARS: NAV-UB-1 (ersetzt durch NAV-UB-5), NAV-UB-5
   Szenario: Navigation ist auf jeder Seite vorhanden
     Angenommen eine beliebige Seite der Anwendung
-    Dann enthält sie Links zu Magazin, Kalender, Karte, Orten, Fotograf:innen, Ausstellungen, Events, Veranstalter:innen, Impressum und Datenschutz
+    Dann enthält sie Links zu Magazin, Kalender, Karte, Orten, Fotograf:innen, Ausstellungen, Events, Festivals, Veranstalter:innen, Impressum und Datenschutz
 
-  # EARS: NAV-UB-2
+  # EARS: NAV-UB-2 (ersetzt durch NAV-UB-6), NAV-UB-6
   Szenariogrundriss: Jede Adresse zeigt ihre Seite
     Angenommen die Adresse "<adresse>"
     Wenn sie aufgerufen wird
@@ -21,6 +21,7 @@ Funktionalität: Navigation und Seitenrahmen
     | /photographers | Fotograf:innen |
     | /exhibitions | Ausstellungen |
     | /events | Events |
+    | /festivals | Festivals |
     | /organizers | Veranstalter:innen |
     | /impressum | Impressum |
     | /datenschutz | Datenschutz |

@@ -6,6 +6,16 @@
       <dd>{{ typeLabel[organizer.type] }}</dd>
       <dt>Stadt</dt>
       <dd>{{ organizer.city }}</dd>
+      @if (organizer.shortName) {
+        <dt>Kurzname</dt>
+        <dd>{{ organizer.shortName }}</dd>
+      }
+      @if (instagramUrl(); as instagram) {
+        <dt>Instagram</dt>
+        <dd>
+          <a [href]="instagram" target="_blank" rel="noopener">{{ organizer.social?.instagram }}<span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
+        </dd>
+      }
       @if (organizer.website) {
         <dt>Website</dt>
         <dd>
@@ -13,6 +23,19 @@
         </dd>
       }
     </dl>
+
+    @if (organizer.description) {
+      <p>{{ organizer.description }}</p>
+    }
+
+    @if (festivals().length > 0) {
+      <h2>Festivals</h2>
+      <ul id="organizer-festivals">
+        @for (festival of festivals(); track festival.id) {
+          <li><a [routerLink]="['/festivals', festival.id]">{{ festival.title }}</a> <span class="meta">({{ festival.range }})</span></li>
+        }
+      </ul>
+    }
 
     <h2>Ausstellungen</h2>
     @if (exhibitions().length > 0) {

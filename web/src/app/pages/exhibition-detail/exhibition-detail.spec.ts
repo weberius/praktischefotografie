@@ -32,15 +32,23 @@ describe('ExhibitionDetailPage', () => {
     expect(document.title).toContain('Ausstellung a-laufend');
   });
 
-  it('Szenario: Ausstellung eines Festivals (EXH-OP-1)', async () => {
+  it('Szenario: Ausstellung eines Festivals (EXH-OP-2) – Festival, Veranstalter und Partnerkennzeichnung', async () => {
     const el = await open('/exhibitions/f-1');
-    const link = el.querySelector('a[href="/organizers/photoszene-koeln"]');
-    expect(link?.textContent).toContain('Photoszene Köln e.V.');
+    expect(el.querySelector('a[href="/festivals/photoszene-festival-2026"]')?.textContent).toContain('Photoszene-Festival 2026');
+    expect(el.querySelector('a[href="/organizers/photoszene-koeln"]')?.textContent).toContain('Photoszene Köln e.V.');
+    expect(el.textContent).toContain('Offizieller Partner');
   });
 
-  it('Ausstellung ohne Festival nennt keinen Veranstalter (EXH-OP-1)', async () => {
+  it('Ausstellung eines Festivals ohne Partnerkennzeichnung nennt den Partnerstatus nicht (EXH-OP-2)', async () => {
+    const el = await open('/exhibitions/f-2');
+    expect(el.querySelector('a[href="/festivals/photoszene-festival-2026"]')).not.toBeNull();
+    expect(el.textContent).not.toContain('Offizieller Partner');
+  });
+
+  it('Ausstellung ohne Festival nennt weder Festival noch Veranstalter (EXH-OP-2)', async () => {
     const el = await open('/exhibitions/a-laufend');
     expect(el.querySelector('a[href^="/organizers/"]')).toBeNull();
+    expect(el.querySelector('a[href^="/festivals/"]')).toBeNull();
   });
 
   it('Szenario: Verknüpfte Beiträge (EXH-UB-5)', async () => {

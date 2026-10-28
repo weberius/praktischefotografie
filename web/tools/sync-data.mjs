@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { DATASETS, validateData } from '../../scripts/validate-data.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const NAME_FIELD = { venues: 'name', organizers: 'name', photographers: 'name', exhibitions: 'title', events: 'title', posts: 'title' };
+const NAME_FIELD = { venues: 'name', organizers: 'name', festivals: 'title', photographers: 'name', exhibitions: 'title', events: 'title', posts: 'title' };
 
 const readArray = (file) => (existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : []);
 

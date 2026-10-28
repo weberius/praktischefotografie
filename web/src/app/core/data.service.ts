@@ -3,7 +3,7 @@ import { Injectable, computed, inject, signal } from '@angular/core';
 import { forkJoin } from 'rxjs';
 import { Dataset } from './models';
 
-const FILES = ['venues', 'exhibitions', 'events', 'organizers', 'photographers', 'posts'] as const;
+const FILES = ['venues', 'exhibitions', 'events', 'organizers', 'festivals', 'photographers', 'posts'] as const;
 
 /** Lädt die JSON-Daten einmal und stellt sie als Signals bereit (ADR-002). Relationen werden über IDs aufgelöst. */
 @Injectable({ providedIn: 'root' })
@@ -18,6 +18,7 @@ export class DataService {
   readonly exhibitions = computed(() => this.data()?.exhibitions ?? []);
   readonly events = computed(() => this.data()?.events ?? []);
   readonly organizers = computed(() => this.data()?.organizers ?? []);
+  readonly festivals = computed(() => this.data()?.festivals ?? []);
   readonly photographers = computed(() => this.data()?.photographers ?? []);
   readonly posts = computed(() => this.data()?.posts ?? []);
 
@@ -25,6 +26,7 @@ export class DataService {
   readonly exhibitionById = computed(() => new Map(this.exhibitions().map((e) => [e.id, e])));
   readonly eventById = computed(() => new Map(this.events().map((e) => [e.id, e])));
   readonly organizerById = computed(() => new Map(this.organizers().map((o) => [o.id, o])));
+  readonly festivalById = computed(() => new Map(this.festivals().map((f) => [f.id, f])));
   readonly photographerById = computed(() => new Map(this.photographers().map((p) => [p.id, p])));
   readonly postBySlug = computed(() => new Map(this.posts().map((p) => [p.slug, p])));
 

@@ -6,6 +6,12 @@
       <a href="#" (click)="clearOrganizer(); $event.preventDefault()">Veranstalterfilter aufheben</a>
     </p>
   }
+  @if (festivalHint(); as hint) {
+    <p class="notice" id="festival-hint">
+      {{ hint }}
+      <a href="#" (click)="clearFestival(); $event.preventDefault()">Festivalfilter aufheben</a>
+    </p>
+  }
   <form class="filters" (submit)="$event.preventDefault()">
     <label>
       Stadt

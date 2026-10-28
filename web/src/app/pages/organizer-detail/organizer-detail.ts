@@ -11,7 +11,7 @@ import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
 import { StatusBadge } from '../../shared/status-badge/status-badge';
 
-/** Veranstalter:in mit Stammdaten und allen zugehörigen Ausstellungen (ORG-UB-2, ORG-UB-3, ORG-ST-1, ORG-UB-4). */
+/** Veranstalter:in mit Stammdaten, Festivals und allen Ausstellungen dieser Festivals (ORG-UB-2, ORG-UB-5 bis ORG-UB-8, ORG-ST-1). */
 @Component({
   selector: 'app-organizer-detail-page',
   imports: [DataGate, NotFound, RouterLink, StatusBadge],
@@ -28,12 +28,24 @@ export class OrganizerDetailPage {
 
   protected readonly typeLabel = ORGANIZER_TYPE_LABEL;
   protected readonly organizer = computed(() => this.data.organizerById().get(this.id()));
+  protected readonly festivals = computed(() =>
+    this.data
+      .festivals()
+      .filter((f) => f.organizerId === this.id())
+      .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.title.localeCompare(b.title, 'de'))
+      .map((f) => ({ id: f.id, title: f.title, range: formatRange(f.startDate, f.endDate) })),
+  );
+  protected readonly instagramUrl = computed(() => {
+    const name = this.organizer()?.social?.instagram;
+    return name ? `https://www.instagram.com/${name}/` : null;
+  });
   protected readonly exhibitions = computed(() => {
     const today = this.clock.today();
     const venues = this.data.venueById();
+    const festivalIds = new Set(this.festivals().map((f) => f.id));
     return this.data
       .exhibitions()
-      .filter((e) => e.festivalId === this.id())
+      .filter((e) => !!e.festivalId && festivalIds.has(e.festivalId))
       .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.title.localeCompare(b.title, 'de'))
       .map((e) => ({
         id: e.id,

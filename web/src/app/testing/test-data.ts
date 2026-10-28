@@ -19,10 +19,11 @@ const venue = (id: string, name: string, city: string, type: 'museum' | 'gallery
   source: { url: `https://example.org/${id}`, checkedAt: '2026-10-27', status: 'recherchiert' as const },
 });
 
-const exhibition = (id: string, venueId: string, startDate: string, endDate: string, photographerIds: string[], festivalId: string | null = null) => ({
+const exhibition = (id: string, venueId: string, startDate: string, endDate: string, photographerIds: string[], festivalId: string | null = null, isOfficialFestivalPartner?: boolean) => ({
   id,
   venueId,
   festivalId,
+  ...(isOfficialFestivalPartner === undefined ? {} : { isOfficialFestivalPartner }),
   title: `Ausstellung ${id}`,
   startDate,
   endDate,
@@ -45,16 +46,30 @@ export const TEST_DATASET: Dataset = {
     { id: 'ohne-ausstellung', name: 'Person ohne Ausstellung' },
   ],
   organizers: [
-    { id: 'photoszene-koeln', name: 'Photoszene Köln e.V.', type: 'association', city: 'Köln', website: 'https://example.org/photoszene' },
+    {
+      id: 'photoszene-koeln',
+      name: 'Photoszene Köln e.V.',
+      shortName: 'Photoszene',
+      type: 'association',
+      city: 'Köln',
+      website: 'https://example.org/photoszene',
+      description: 'Verein zur Förderung der Fotografie.',
+      social: { instagram: 'photoszene_koeln' },
+    },
     { id: 'ohne-programm', name: 'Festival ohne Programm', type: 'festival', city: 'Düsseldorf' },
+  ],
+  festivals: [
+    { id: 'photoszene-festival-2026', organizerId: 'photoszene-koeln', title: 'Photoszene-Festival 2026', startDate: '2026-11-01', endDate: '2026-12-15', city: 'Köln', description: 'Stadtweites Festival.', website: 'https://example.org/festival' },
+    { id: 'photoszene-nachlese-2027', organizerId: 'photoszene-koeln', title: 'Photoszene Nachlese 2027', startDate: '2027-02-01', endDate: '2027-02-07', city: 'Köln' },
+    { id: 'festival-ohne-programm', organizerId: 'ohne-programm', title: 'Festival ohne Programm 2027', startDate: '2027-03-01', endDate: '2027-03-10', city: 'Düsseldorf' },
   ],
   exhibitions: [
     exhibition('a-kommend', 'v-koeln-lib', '2026-11-20', '2027-02-14', ['martin-parr']),
     exhibition('a-laufend', 'v-essen', '2026-09-01', '2027-01-10', ['martin-parr', 'elliott-erwitt']),
     exhibition('a-endet-bald', 'v-koeln-lib', '2026-08-15', '2026-11-05', ['martin-parr']),
     exhibition('a-beendet', 'v-koeln-gal', '2026-03-01', '2026-06-30', ['richard-kalvar']),
-    exhibition('f-1', 'v-koeln-lib', '2026-11-01', '2026-12-15', ['elliott-erwitt'], 'photoszene-koeln'),
-    exhibition('f-2', 'v-koeln-gal', '2026-11-01', '2026-12-15', ['richard-kalvar'], 'photoszene-koeln'),
+    exhibition('f-1', 'v-koeln-lib', '2026-11-01', '2026-12-15', ['elliott-erwitt'], 'photoszene-festival-2026', true),
+    exhibition('f-2', 'v-koeln-gal', '2026-11-01', '2026-12-15', ['richard-kalvar'], 'photoszene-festival-2026'),
   ],
   events: [
     { id: 'e-talk', title: 'Artist Talk', eventType: 'talk', startDate: '2026-11-12', endDate: '2026-11-12', venueId: 'v-koeln-lib', city: 'Köln', isCommercial: false, description: 'Gespräch.', highlights: ['Gespräch'] },

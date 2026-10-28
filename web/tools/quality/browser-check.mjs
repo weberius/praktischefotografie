@@ -10,7 +10,7 @@ const ALLOWED_HOST = /(^|\.)tile\.openstreetmap\.org$/;
 /** Je Seitentyp eine Adresse (aus der Sitemap abgeleitet) plus Hinweisseite. */
 export function samplePages(paths) {
   const first = (re) => paths.find((p) => re.test(p));
-  return ['/', '/calendar', first(/^\/calendar\/\d{4}\/\d+$/), '/map', '/venues', first(/^\/venues\/.+/), '/photographers', first(/^\/photographers\/.+/), '/exhibitions', first(/^\/exhibitions\/.+/), '/events', first(/^\/events\/.+/), '/organizers', first(/^\/organizers\/.+/), first(/^\/posts\/.+/), '/impressum', '/datenschutz', '/404.html'].filter(Boolean);
+  return ['/', '/calendar', first(/^\/calendar\/\d{4}\/\d+$/), '/map', '/venues', first(/^\/venues\/.+/), '/photographers', first(/^\/photographers\/.+/), '/exhibitions', first(/^\/exhibitions\/.+/), '/events', first(/^\/events\/.+/), '/festivals', first(/^\/festivals\/.+/), '/organizers', first(/^\/organizers\/.+/), first(/^\/posts\/.+/), '/impressum', '/datenschutz', '/404.html'].filter(Boolean);
 }
 
 export async function browserCheck({ baseUrl, paths, executablePath }) {

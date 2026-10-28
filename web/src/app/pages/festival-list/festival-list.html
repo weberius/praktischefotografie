@@ -1,0 +1,16 @@
+<h1>Festivals</h1>
+<app-data-gate>
+  @if (festivals().length > 0) {
+    <ul class="card-list">
+      @for (festival of festivals(); track festival.id) {
+        <li class="card">
+          <h2><a [routerLink]="['/festivals', festival.id]">{{ festival.title }}</a></h2>
+          <p>{{ festival.organizerName }}</p>
+          <p class="meta">{{ festival.range }} · {{ festival.city }}</p>
+        </li>
+      }
+    </ul>
+  } @else {
+    <p class="notice">Es sind noch keine Festivals erfasst.</p>
+  }
+</app-data-gate>

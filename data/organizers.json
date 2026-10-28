@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "photoszene-koeln",
+    "name": "Internationale Photoszene Köln gUG",
+    "shortName": "Photoszene Köln",
+    "type": "association",
+    "city": "Köln",
+    "website": "https://www.photoszene.de",
+    "description": "Gemeinnützige Gesellschaft mit Festival, Diskursformaten und dem Artist Programme „Artist Meets Archive“.",
+    "social": {
+      "instagram": "photoszene_koeln"
+    }
+  },
+  {
+    "id": "duesseldorf-photo-plus",
+    "name": "düsseldorf photo+",
+    "shortName": "düsseldorf photo+",
+    "type": "festival",
+    "city": "Düsseldorf",
+    "website": "https://www.duesseldorfphotoplus.de/",
+    "description": "Biennale der Fotografie in Düsseldorf.",
+    "social": {
+      "instagram": "duesseldorfphotoplus"
+    }
+  }
+]

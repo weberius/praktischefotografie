@@ -1,0 +1,51 @@
+<app-data-gate>
+  @if (festival(); as festival) {
+    <h1>{{ festival.title }}</h1>
+    <dl>
+      <dt>Zeitraum</dt>
+      <dd>{{ range() }}</dd>
+      <dt>Stadt</dt>
+      <dd>{{ festival.city }}</dd>
+      @if (organizer(); as organizer) {
+        <dt>Veranstalter</dt>
+        <dd><a [routerLink]="['/organizers', organizer.id]">{{ organizer.name }}</a></dd>
+      }
+      @if (festival.website) {
+        <dt>Website</dt>
+        <dd>
+          <a [href]="festival.website" target="_blank" rel="noopener">{{ festival.website }}<span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
+        </dd>
+      }
+    </dl>
+    @if (festival.description) {
+      <p>{{ festival.description }}</p>
+    }
+
+    <h2>Ausstellungen</h2>
+    @if (exhibitions().length > 0) {
+      <p>
+        <a routerLink="/map" [queryParams]="{ festival: festival.id }">Orte auf der Karte</a> ·
+        <a routerLink="/venues" [queryParams]="{ festival: festival.id }">Orte als Liste</a>
+      </p>
+      <ul class="card-list">
+        @for (exhibition of exhibitions(); track exhibition.id) {
+          <li class="card">
+            <h3><a [routerLink]="['/exhibitions', exhibition.id]">{{ exhibition.title }}</a></h3>
+            <p>{{ exhibition.venueName }}</p>
+            <p class="meta">{{ exhibition.range }}</p>
+            <p>
+              <app-status-badge [status]="exhibition.status" />
+              @if (exhibition.partner) {
+                <span class="badge partner">Offizieller Partner</span>
+              }
+            </p>
+          </li>
+        }
+      </ul>
+    } @else {
+      <p class="notice">Diesem Festival sind derzeit keine Ausstellungen zugeordnet.</p>
+    }
+  } @else {
+    <app-not-found />
+  }
+</app-data-gate>

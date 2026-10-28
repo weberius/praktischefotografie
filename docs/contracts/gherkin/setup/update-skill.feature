@@ -36,3 +36,10 @@ Funktionalität: Update-Skill für Ortsdaten
   Szenario: Skill übernimmt Neuigkeiten nur nach Freigabe
     Angenommen geprüfte Neuigkeiten ohne Freigabe
     Dann bleiben "data/posts.json" und "content/posts/" unverändert
+
+  # EARS: SKL-UB-6
+  Szenario: Skill schlägt Festivals nur mit Zeitraum vor
+    Angenommen der Skill mit den Extraktionsregeln
+    Dann nennt er Veranstalter, Festivals und die Festivalzuordnung als Zielfelder
+    Und er verbietet Festivals ohne belegten Zeitraum
+

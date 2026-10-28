@@ -7,3 +7,5 @@
 | Q-SEO-1 | Suchmaschine ruft die Seite ohne Skriptausführung ab. | 100 % der Adressen aus NAV-UB-2 (für vorhandene Daten) liefern HTML mit Hauptüberschrift und Hauptinhalt. | Build-Test über die erzeugten HTML-Dateien | BLD-UB-1, MAP-UB-6 |
 | Q-SEO-2 | Suchmaschine liest Titel und Beschreibung. | 100 % der Seiten haben nicht leeren Titel und Meta-Beschreibung; 0 doppelte Titel; Detailseiten nennen den Namen im Titel. | Build-Test über die erzeugten HTML-Dateien | NAV-UB-3 |
 | Q-SEO-3 | Suchmaschine liest Sitemap. | `sitemap.xml` enthält 100 % der erzeugten Adressen; `robots.txt` verweist auf sie. | Build-Test | NAV-UB-2, BLD-UB-2 |
+
+**Ergänzung 2026-10-28:** Q-SEO-1 bis Q-SEO-3 gelten für die Adressen aus NAV-UB-6 (inklusive `/festivals` und `/festivals/:id`) und für die Seitentitel aus NAV-UB-3.

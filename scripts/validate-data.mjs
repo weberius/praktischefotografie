@@ -8,7 +8,7 @@ import addFormats from 'ajv-formats';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
-export const DATASETS = ['venues', 'exhibitions', 'events', 'organizers', 'photographers', 'posts'];
+export const DATASETS = ['venues', 'exhibitions', 'events', 'organizers', 'festivals', 'photographers', 'posts'];
 
 // NRW-Grenzen (VEN-UB-2). Bei der Ausweitung auf Deutschland anpassen (ADR-001).
 export const NRW_BBOX = { latMin: 50.3, latMax: 52.6, lngMin: 5.8, lngMax: 9.5 };
@@ -80,6 +80,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), schemaDir = join(RO
   const venueIds = ids('venues');
   const exhibitionIds = ids('exhibitions');
   const organizerIds = ids('organizers');
+  const festivalIds = ids('festivals');
   const photographerIds = ids('photographers');
 
   const ref = (file, record, field, value, known) => {
@@ -103,8 +104,20 @@ export function validateData({ dataDir = join(ROOT, 'data'), schemaDir = join(RO
       ref(file, r, 'venueId', r.venueId, venueIds);
     }
   }
+  for (const id of venueIds) {
+    // Orte und Veranstalter teilen sich den Namensraum der Quellen (ADR-010, FES-UN-3).
+    if (organizerIds.has(id)) {
+      errors.push(`venues.json: ${id} id – doppelte id (auch Veranstalter)`);
+      errors.push(`organizers.json: ${id} id – doppelte id (auch Ort)`);
+    }
+  }
+  for (const r of data.festivals ?? []) {
+    if (r.endDate < r.startDate) errors.push(`festivals.json: ${r.id} endDate – liegt vor startDate`);
+    ref('festivals', r, 'organizerId', r.organizerId, organizerIds);
+  }
   for (const r of data.exhibitions ?? []) {
-    if (r.festivalId) ref('exhibitions', r, 'festivalId', r.festivalId, organizerIds);
+    if (r.festivalId) ref('exhibitions', r, 'festivalId', r.festivalId, festivalIds);
+    if (r.isOfficialFestivalPartner === true && !r.festivalId) errors.push(`exhibitions.json: ${r.id} isOfficialFestivalPartner – erfordert festivalId`);
     for (const p of r.photographerIds) ref('exhibitions', r, 'photographerIds', p, photographerIds);
   }
   for (const r of data.posts ?? []) {

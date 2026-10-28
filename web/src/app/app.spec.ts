@@ -19,6 +19,8 @@ const ADDRESSES: [string, string][] = [
   ['/exhibitions/a-laufend', 'Ausstellung'],
   ['/events', 'Events'],
   ['/events/e-talk', 'Event'],
+  ['/festivals', 'Festivals'],
+  ['/festivals/photoszene-festival-2026', 'Festival'],
   ['/organizers', 'Veranstalter:innen'],
   ['/organizers/photoszene-koeln', 'Veranstalter:in'],
   ['/posts/willkommen', 'Beitrag'],
@@ -31,11 +33,11 @@ describe('App', () => {
     TestBed.configureTestingModule({ providers: [provideRouter(routes, withComponentInputBinding()), ...provideTestData()] });
   });
 
-  it('Szenario: Navigation ist auf jeder Seite vorhanden (NAV-UB-1)', async () => {
+  it('Szenario: Navigation ist auf jeder Seite vorhanden (NAV-UB-5)', async () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const labels = Array.from<HTMLElement>(fixture.nativeElement.querySelectorAll('a')).map((a) => a.textContent?.trim());
-    for (const label of ['Magazin', 'Kalender', 'Karte', 'Orte', 'Fotograf:innen', 'Ausstellungen', 'Events', 'Veranstalter:innen', 'Impressum', 'Datenschutz']) {
+    for (const label of ['Magazin', 'Kalender', 'Karte', 'Orte', 'Fotograf:innen', 'Ausstellungen', 'Events', 'Festivals', 'Veranstalter:innen', 'Impressum', 'Datenschutz']) {
       expect(labels).toContain(label);
     }
   });
@@ -68,7 +70,7 @@ describe('App', () => {
   });
 
   describe('Szenario: Unbekannte Adresse oder ID (NAV-EV-1)', () => {
-    for (const url of ['/gibt-es-nicht', '/venues/unbekannt', '/photographers/unbekannt', '/posts/unbekannt', '/exhibitions/unbekannt', '/events/unbekannt', '/organizers/unbekannt']) {
+    for (const url of ['/gibt-es-nicht', '/venues/unbekannt', '/photographers/unbekannt', '/posts/unbekannt', '/exhibitions/unbekannt', '/events/unbekannt', '/festivals/unbekannt', '/organizers/unbekannt']) {
       it(`${url} zeigt die Hinweisseite mit Link zur Startseite`, async () => {
         const harness = await RouterTestingHarness.create();
         await harness.navigateByUrl(url);

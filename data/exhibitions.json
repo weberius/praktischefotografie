@@ -156,5 +156,17 @@
     ],
     "description": "Auswahl von Arbeiten von Absolvent:innen des Masterstudiengangs Photography Studies & Practice der Folkwang Universität der Künste.",
     "id": "photography-masters-2026"
+  },
+  {
+    "venueId": "fotoraum-koeln",
+    "title": "Men Don't Cry",
+    "startDate": "2026-09-19",
+    "endDate": "2026-11-01",
+    "type": "solo",
+    "photographerIds": [
+      "hannes-jung"
+    ],
+    "description": "Fotografische Auseinandersetzung mit Geschichten von Männern, die im Bosnienkrieg der 1990er Jahre sexualisierte Gewalt erlebten.",
+    "id": "men-dont-cry-2026"
   }
 ]

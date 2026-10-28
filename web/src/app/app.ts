@@ -15,6 +15,7 @@ export class App {
     { path: '/photographers', label: 'Fotograf:innen', exact: false },
     { path: '/exhibitions', label: 'Ausstellungen', exact: false },
     { path: '/events', label: 'Events', exact: false },
+    { path: '/festivals', label: 'Festivals', exact: false },
     { path: '/organizers', label: 'Veranstalter:innen', exact: false },
   ];
 }

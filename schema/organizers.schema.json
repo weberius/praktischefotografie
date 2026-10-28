@@ -11,7 +11,14 @@
       "name": { "type": "string", "minLength": 1 },
       "type": { "enum": ["association", "festival", "network", "foundation"] },
       "city": { "type": "string", "minLength": 1 },
-      "website": { "type": "string", "format": "uri", "pattern": "^https?://" }
+      "shortName": { "type": "string", "minLength": 1 },
+      "website": { "type": "string", "format": "uri", "pattern": "^https?://" },
+      "description": { "type": "string", "minLength": 1 },
+      "social": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": { "instagram": { "type": "string", "pattern": "^[A-Za-z0-9._]+$" } }
+      }
     }
   }
 }

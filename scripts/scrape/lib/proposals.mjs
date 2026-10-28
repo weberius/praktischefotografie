@@ -6,8 +6,8 @@ import { DATASETS, validateData } from '../../validate-data.mjs';
 import { ROOT, normalizeSpace, readJson } from './common.mjs';
 import { listSnapshots } from './snapshots.mjs';
 
-const SETTABLE = ['venues', 'exhibitions', 'events', 'photographers'];
-const ADDABLE = ['exhibitions', 'events', 'photographers'];
+const SETTABLE = ['venues', 'exhibitions', 'events', 'photographers', 'organizers', 'festivals'];
+const ADDABLE = ['exhibitions', 'events', 'photographers', 'organizers', 'festivals'];
 
 export const loadDataset = (dataDir) => Object.fromEntries(DATASETS.map((n) => [n, readJson(join(dataDir, `${n}.json`), [])]));
 const clone = (value) => structuredClone(value);
@@ -27,9 +27,15 @@ export function setPath(record, field, value) {
 const slug = (text) =>
   String(text).toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
-/** Eindeutige kebab-case-id für neue Datensätze (UPD-UB-5): Titel plus Jahr bei Ausstellungen und Events. */
+/** Eindeutige kebab-case-id für neue Datensätze (UPD-UB-5, UPD-UB-7): Name bei Personen und Veranstaltern, sonst Titel plus Jahr (bei Festivals nur, wenn das Jahr nicht im Titel steht). */
 export function makeId(dataset, record, existingIds) {
-  const base = dataset === 'photographers' ? slug(record.name) : `${slug(record.title)}-${String(record.startDate).slice(0, 4)}`;
+  const year = String(record.startDate).slice(0, 4);
+  const base =
+    dataset === 'photographers' || dataset === 'organizers'
+      ? slug(record.name)
+      : dataset === 'festivals' && String(record.title).includes(year)
+        ? slug(record.title)
+        : `${slug(record.title)}-${year}`;
   let id = base;
   for (let n = 2; existingIds.has(id); n++) id = `${base}-${n}`;
   return id;
@@ -46,6 +52,7 @@ export function validateDataset(dataset, root = ROOT) {
   }
 }
 
+const isDate = (value) => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value));
 const isEmpty = (value) => value === undefined || value === null || value === '';
 const contains = (haystack, needle) => normalizeSpace(haystack).toLowerCase().includes(normalizeSpace(needle).toLowerCase());
 
@@ -64,9 +71,11 @@ function applyChange(dataset, change) {
 
 /** Prüft die Änderungen einer Vorschlagsdatei (UPD-EV-1, UPD-UB-1, UPD-UB-2, UPD-UB-4, UPD-UB-5). */
 export function checkProposal(proposal, { dataset, snapshots, root = ROOT }) {
-  const venue = dataset.venues.find((v) => v.id === proposal.venueId);
-  if (!venue) throw new Error(`Ort "${proposal.venueId}" existiert nicht`);
-  const conflict = venue.source.status === 'verifiziert';
+  const venue = proposal.organizerId ? undefined : dataset.venues.find((v) => v.id === proposal.venueId);
+  const organizer = proposal.organizerId ? dataset.organizers.find((o) => o.id === proposal.organizerId) : undefined;
+  if (!venue && !organizer) throw new Error(`Quelle "${proposal.organizerId ?? proposal.venueId}" existiert weder als Ort noch als Veranstalter`);
+  const conflict = venue?.source.status === 'verifiziert';
+  const festivalsOfOrganizer = (data) => new Set(data.festivals.filter((f) => f.organizerId === organizer?.id).map((f) => f.id));
   const working = clone(dataset);
   const accepted = [];
   const rejected = [...(proposal.rejected ?? [])];
@@ -84,17 +93,45 @@ export function checkProposal(proposal, { dataset, snapshots, root = ROOT }) {
       reject(change, `Datensatztyp "${change.dataset}" mit Operation "${op}" ist nicht vorgesehen`);
       continue;
     }
-    // Zuordnung zum Ort (UPD-UB-1)
+    // Zuordnung zur Quelle (UPD-UB-1, UPD-UB-6)
     if (op === 'set') {
       const target = working[change.dataset].find((r) => r.id === change.recordId);
       if (!target) { reject(change, `Datensatz "${change.recordId}" existiert nicht`); continue; }
-      const belongs = change.dataset === 'venues' ? target.id === venue.id : change.dataset === 'photographers' ? true : target.venueId === venue.id;
-      if (!belongs) { reject(change, 'Datensatz gehört nicht zu diesem Ort'); continue; }
+      const belongs = venue
+        ? change.dataset === 'venues'
+          ? target.id === venue.id
+          : change.dataset === 'photographers'
+            ? true
+            : ['exhibitions', 'events'].includes(change.dataset) && target.venueId === venue.id
+        : change.dataset === 'organizers'
+          ? target.id === organizer.id
+          : change.dataset === 'festivals'
+            ? target.organizerId === organizer.id
+            : change.dataset === 'exhibitions'
+              ? festivalsOfOrganizer(working).has(target.festivalId)
+              : change.dataset === 'photographers';
+      if (!belongs) { reject(change, venue ? 'Datensatz gehört nicht zu diesem Ort' : 'Datensatz gehört nicht zu diesem Veranstalter'); continue; }
       if (!change.field || change.field === 'id') { reject(change, 'Feld fehlt oder ist nicht änderbar'); continue; }
       if (change.field === 'source' || change.field.startsWith('source.')) { reject(change, 'source wird nur von der Übernahme gesetzt, nie vorgeschlagen'); continue; }
-    } else if (!change.record || typeof change.record !== 'object' || (change.dataset !== 'photographers' && change.record.venueId !== venue.id)) {
-      reject(change, 'Neuer Datensatz fehlt oder gehört nicht zu diesem Ort');
+    } else if (!change.record || typeof change.record !== 'object') {
+      reject(change, 'Neuer Datensatz fehlt');
       continue;
+    } else {
+      const record = change.record;
+      const ok = venue
+        ? ['exhibitions', 'events'].includes(change.dataset)
+          ? record.venueId === venue.id
+          : true // Personen, Veranstalter und Festivals darf jede Ort-Website neu aufnehmen (UPD-UB-6)
+        : change.dataset === 'festivals'
+          ? record.organizerId === organizer.id
+          : change.dataset === 'exhibitions'
+            ? !!record.festivalId && festivalsOfOrganizer(working).has(record.festivalId)
+            : ['photographers', 'organizers'].includes(change.dataset);
+      if (!ok) { reject(change, venue ? 'Neuer Datensatz gehört nicht zu diesem Ort' : 'Neuer Datensatz gehört nicht zu diesem Veranstalter'); continue; }
+      if (change.dataset === 'festivals' && !(isDate(record.startDate) && isDate(record.endDate))) {
+        reject(change, 'Festival ohne gültigen Zeitraum (startDate und endDate erforderlich)');
+        continue;
+      }
     }
     // Fundstelle (UPD-UB-2)
     const excerpt = change.evidence?.excerpt;
@@ -110,10 +147,13 @@ export function checkProposal(proposal, { dataset, snapshots, root = ROOT }) {
       oldValue = getPath(target, change.field);
       if (JSON.stringify(oldValue) === JSON.stringify(change.newValue)) { reject(change, 'Wert ist bereits vorhanden'); continue; }
     } else {
+      const sameTitle = (r) => normalizeSpace(r.title).toLowerCase() === normalizeSpace(change.record.title).toLowerCase() && r.startDate === change.record.startDate;
       const same = (r) =>
-        change.dataset === 'photographers'
+        ['photographers', 'organizers'].includes(change.dataset)
           ? normalizeSpace(r.name).toLowerCase() === normalizeSpace(change.record.name).toLowerCase()
-          : r.venueId === change.record.venueId && normalizeSpace(r.title).toLowerCase() === normalizeSpace(change.record.title).toLowerCase() && r.startDate === change.record.startDate;
+          : change.dataset === 'festivals'
+            ? r.organizerId === change.record.organizerId && sameTitle(r)
+            : r.venueId === change.record.venueId && sameTitle(r);
       if (working[change.dataset].some(same)) { reject(change, 'Dublette: Datensatz ist bereits vorhanden'); continue; }
       const ids = new Set(working[change.dataset].map((r) => r.id));
       if (change.record.id && ids.has(change.record.id)) { reject(change, `id "${change.record.id}" ist bereits vergeben`); continue; }
@@ -139,7 +179,7 @@ export function checkProposal(proposal, { dataset, snapshots, root = ROOT }) {
 
 export function checkProposalFile(file, { dataDir, snapshotDir, root = ROOT }) {
   const proposal = readJson(file);
-  const result = checkProposal(proposal, { dataset: loadDataset(dataDir), snapshots: listSnapshots(snapshotDir, proposal.venueId), root });
+  const result = checkProposal(proposal, { dataset: loadDataset(dataDir), snapshots: listSnapshots(snapshotDir, proposal.organizerId ?? proposal.venueId), root });
   writeFileSync(file, JSON.stringify(result, null, 2) + '\n');
   return result;
 }
@@ -156,10 +196,11 @@ export function applyProposals(files, { dataDir, root = ROOT, now = new Date() }
   const proposals = files.map((file) => ({ file, proposal: readJson(file) }));
 
   for (const { proposal } of proposals) {
-    const venue = working.venues.find((v) => v.id === proposal.venueId);
+    const venue = proposal.organizerId ? undefined : working.venues.find((v) => v.id === proposal.venueId);
+    const sourceId = proposal.organizerId ?? proposal.venueId;
     let firstUrl = null;
     for (const change of proposal.changes ?? []) {
-      const note = (reason) => skipped.push({ venueId: proposal.venueId, id: change.id, reason });
+      const note = (reason) => skipped.push({ venueId: sourceId, id: change.id, reason });
       if (change.appliedAt) continue;
       if (change.approved !== true) { note('keine Freigabe'); continue; }
       if (!change.kind) { note('nicht geprüft (data:check fehlt)'); continue; }
@@ -172,7 +213,7 @@ export function applyProposals(files, { dataDir, root = ROOT, now = new Date() }
       const problem = applyChange(working, change);
       if (problem) { note(problem); continue; }
       firstUrl ??= change.evidence.url;
-      applied.push({ venueId: proposal.venueId, id: change.id });
+      applied.push({ venueId: sourceId, id: change.id });
       change.appliedAt = now.toISOString().slice(0, 10);
     }
     if (firstUrl && venue) {

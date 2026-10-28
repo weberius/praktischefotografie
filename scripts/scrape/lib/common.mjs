@@ -17,12 +17,18 @@ export function readJson(file, fallback) {
 
 export const loadVenues = (root = ROOT) => readJson(join(root, 'data', 'venues.json'));
 
-/** Wählt einen Ort oder alle Orte (UPD-OP-1); unbekannte IDs werden mit den gültigen IDs gemeldet (UPD-UN-2). */
+/** Quellen der Aktualisierung: Orte und Veranstalter mit `website` (ADR-010). IDs sind über beide Datensätze eindeutig (FES-UN-3). */
+export const loadSources = (root = ROOT) => [
+  ...loadVenues(root),
+  ...readJson(join(root, 'data', 'organizers.json'), []).filter((o) => o.website),
+];
+
+/** Wählt eine Quelle (Ort oder Veranstalter) oder alle (UPD-OP-1, UPD-OP-2); unbekannte IDs werden mit den gültigen IDs gemeldet (UPD-UN-2). */
 export function resolveVenues(venues, venueId) {
   if (!venueId) return venues;
   const found = venues.filter((v) => v.id === venueId);
   if (found.length === 0) {
-    throw new Error(`Unbekannte Ort-ID "${venueId}". Gültige IDs: ${venues.map((v) => v.id).join(', ')}`);
+    throw new Error(`Unbekannte Ort- oder Veranstalter-ID "${venueId}". Gültige IDs: ${venues.map((v) => v.id).join(', ')}`);
   }
   return found;
 }

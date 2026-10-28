@@ -25,6 +25,7 @@ export interface Exhibition {
   type: ExhibitionType;
   photographerIds: string[];
   description?: string;
+  isOfficialFestivalPartner?: boolean;
 }
 
 export type EventType = 'fair_and_convention' | 'talk' | 'symposium' | 'workshop' | 'vernissage' | 'reading';
@@ -49,8 +50,22 @@ export type OrganizerType = 'association' | 'festival' | 'network' | 'foundation
 export interface Organizer {
   id: string;
   name: string;
+  shortName?: string;
   type: OrganizerType;
   city: string;
+  website?: string;
+  description?: string;
+  social?: { instagram?: string };
+}
+
+export interface Festival {
+  id: string;
+  organizerId: string;
+  title: string;
+  startDate: string;
+  endDate: string;
+  city: string;
+  description?: string;
   website?: string;
 }
 
@@ -77,6 +92,7 @@ export interface Dataset {
   exhibitions: Exhibition[];
   events: PhotoEvent[];
   organizers: Organizer[];
+  festivals: Festival[];
   photographers: Photographer[];
   posts: Post[];
 }

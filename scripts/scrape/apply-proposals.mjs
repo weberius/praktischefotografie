@@ -3,12 +3,12 @@
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ROOT, arg, loadVenues, resolveVenues, today } from './lib/common.mjs';
+import { ROOT, arg, loadSources, resolveVenues, today } from './lib/common.mjs';
 import { applyProposals } from './lib/proposals.mjs';
 
 export function main(argv = process.argv.slice(2), root = ROOT) {
   const date = arg(argv, 'date', today());
-  const venues = resolveVenues(loadVenues(root), arg(argv, 'venue'));
+  const venues = resolveVenues(loadSources(root), arg(argv, 'venue'));
   const files = venues.map((v) => join(root, 'updates', date, `${v.id}.json`)).filter(existsSync);
   const result = applyProposals(files, { dataDir: join(root, 'data'), root });
   if (!result.ok) {

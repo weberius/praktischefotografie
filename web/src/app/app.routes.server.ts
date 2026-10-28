@@ -10,6 +10,7 @@ export const serverRoutes: ServerRoute[] = [
     ['photographers/:id', 'photographers'],
     ['exhibitions/:id', 'exhibitions'],
     ['events/:id', 'events'],
+    ['festivals/:id', 'festivals'],
     ['organizers/:id', 'organizers'],
   ].map(([path, file]): ServerRoute => ({ path, renderMode: RenderMode.Prerender, getPrerenderParams: async () => ids(file).map((id) => ({ id })) })),
   { path: '**', renderMode: RenderMode.Prerender },

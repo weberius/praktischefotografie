@@ -69,7 +69,7 @@ describe('VenueListPage', () => {
     expect(type.textContent).toMatch(/Museum|Galerie/);
   });
 
-  it('Szenario: Veranstalterfilter zeigt nur Orte mit Ausstellung des Veranstalters (ORG-UB-4)', async () => {
+  it('Szenario: Veranstalterfilter zeigt nur Orte mit Ausstellung des Veranstalters (ORG-UB-6)', async () => {
     const { harness, el } = await open('/venues?organizer=photoszene-koeln');
     expect(cards(el).length).toBe(2);
     expect(cards(el).some((c) => c.textContent?.includes('Museum Essen'))).toBeFalse();
@@ -81,5 +81,24 @@ describe('VenueListPage', () => {
     expect(cards(el).length).toBe(3);
     expect(el.querySelector('#organizer-hint')).toBeNull();
     expect(TestBed.inject(Router).url).toBe('/venues');
+  });
+
+  it('Szenario: Festivalfilter zeigt nur Orte mit Ausstellung des Festivals (FST-UB-5)', async () => {
+    const { harness, el } = await open('/venues?festival=photoszene-festival-2026');
+    expect(cards(el).length).toBe(2);
+    expect(cards(el).some((c) => c.textContent?.includes('Museum Essen'))).toBeFalse();
+    const hint = el.querySelector('#festival-hint') as HTMLElement;
+    expect(hint.textContent).toContain('Gefiltert nach Festival: Photoszene-Festival 2026');
+    (hint.querySelector('a') as HTMLElement).click();
+    await harness.fixture.whenStable();
+    harness.detectChanges();
+    expect(cards(el).length).toBe(3);
+    expect(el.querySelector('#festival-hint')).toBeNull();
+  });
+
+  it('Szenario: Unbekanntes Festival im Filter – keine Ortskarte, Hinweis (FST-ST-3)', async () => {
+    const { el } = await open('/venues?festival=gibt-es-nicht');
+    expect(cards(el).length).toBe(0);
+    expect(el.querySelector('#festival-hint')?.textContent).toContain('Unbekanntes Festival im Filter: gibt-es-nicht');
   });
 });

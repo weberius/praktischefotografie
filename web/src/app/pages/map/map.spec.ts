@@ -107,7 +107,14 @@ describe('MapPage', () => {
     expect(TestBed.inject(Location).path()).toBe('/map');
   });
 
-  it('Szenario: Festivalfilter in der Karte – nur die zwei Orte des Veranstalters in Karte und Liste', async () => {
+  it('Szenario: Festivalfilter in Karte und Orten – nur die zwei Orte des Festivals in Karte und Liste (FST-UB-5)', async () => {
+    const { harness, root } = await open('/map?festival=photoszene-festival-2026');
+    expect(select(root, 'Festival').value).toBe('photoszene-festival-2026');
+    expect(names(root)).toEqual(['Haus Köln Bibliothek', 'Galerie Köln']);
+    await until(() => root.querySelectorAll('.leaflet-marker-icon').length === 2, harness);
+  });
+
+  it('Szenario: Veranstalterfilter in der Karte – nur die zwei Orte über die Festivals des Veranstalters (ORG-UB-6)', async () => {
     const { harness, root } = await open('/map?organizer=photoszene-koeln');
     expect(select(root, 'Veranstalter').value).toBe('photoszene-koeln');
     expect(names(root)).toEqual(['Haus Köln Bibliothek', 'Galerie Köln']);

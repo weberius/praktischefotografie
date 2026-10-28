@@ -1,14 +1,14 @@
 // Prüft Vorschlagsdateien unter updates/<Datum>/ (ADR-007): Schema, Fundstelle im Snapshot, Dubletten, Konflikte.
-// Aufruf: npm run data:check -- [--date JJJJ-MM-TT] [--venue <id>]
+// Aufruf: npm run data:check -- [--date JJJJ-MM-TT] [--venue <ort-oder-veranstalter-id>]
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ROOT, arg, loadVenues, resolveVenues, today } from './lib/common.mjs';
+import { ROOT, arg, loadSources, resolveVenues, today } from './lib/common.mjs';
 import { checkProposalFile } from './lib/proposals.mjs';
 
 export function main(argv = process.argv.slice(2), root = ROOT) {
   const date = arg(argv, 'date', today());
-  const venues = resolveVenues(loadVenues(root), arg(argv, 'venue'));
+  const venues = resolveVenues(loadSources(root), arg(argv, 'venue'));
   const results = [];
   for (const venue of venues) {
     const file = join(root, 'updates', date, `${venue.id}.json`);

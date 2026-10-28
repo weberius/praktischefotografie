@@ -31,3 +31,12 @@ Die Prüfung arbeitet lokal und greift nicht auf das Netz zu.
 `excerpt` ist optional (1 bis 300 Zeichen) und dient als Kurzvorschau im Magazin. Der Beitragstext liegt in `contentFile` (`content/posts/*.md`).
 
 Neuigkeiten zu Ausstellungen (`neu`, `eroeffnung`, `endet-bald`, `ende`) legt `npm run news:apply` als Beiträge an. `id` und `slug` lauten `<Ausstellungs-id>-<Anlass>`, `date` ist das Datum des Anlasses (siehe [`../updates/README.md`](../updates/README.md)).
+
+## Veranstalter und Festivals (`organizers.json`, `festivals.json`)
+
+Drei Ebenen: **Venue** (Ort mit fester Adresse), **Organizer** (Veranstalter ohne eigenen Ausstellungsraum) und **Festival** (zeitlich begrenzte Ausgabe eines Veranstalters).
+
+- Organizer: `id`, `name`, `type` (`association`, `festival`, `network`, `foundation`), `city`; optional `shortName`, `website`, `description`, `social.instagram`.
+- Festival: `id`, `organizerId`, `title`, `startDate`, `endDate`, `city`; optional `description`, `website`. Ein Festival ohne belegten Zeitraum wird nicht erfasst.
+- Ausstellung: `festivalId` verweist auf ein **Festival** (früher auf einen Veranstalter); `isOfficialFestivalPartner: true` ist nur zusammen mit `festivalId` zulässig. Die Ausstellung muss nicht im Festivalzeitraum liegen.
+- Eine `id` darf nicht zugleich bei einem Venue und einem Veranstalter vorkommen.

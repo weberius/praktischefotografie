@@ -34,11 +34,13 @@ Funktionalität: Ausstellungen
     Wenn "/exhibitions/a-1" aufgerufen wird
     Dann erscheinen Beschreibung, Typ, der Ort mit Link und beide Fotograf:innen mit Links
 
-  # EARS: EXH-OP-1
+  # EARS: EXH-OP-1 (ersetzt durch EXH-OP-2), EXH-OP-2
   Szenario: Ausstellung eines Festivals
-    Angenommen eine Ausstellung mit festivalId "photoszene-koeln"
+    Angenommen eine Ausstellung mit festivalId "photoszene-festival-2027" als offizieller Partner
     Wenn die Detailseite aufgerufen wird
-    Dann erscheint der Veranstalter mit Link auf "/organizers/photoszene-koeln"
+    Dann erscheint das Festival mit Link auf "/festivals/photoszene-festival-2027"
+    Und der Veranstalter erscheint mit Link auf "/organizers/photoszene-koeln"
+    Und der Text "Offizieller Partner" erscheint
 
   # EARS: EXH-UB-5
   Szenario: Verknüpfte Beiträge

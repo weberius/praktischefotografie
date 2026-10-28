@@ -10,7 +10,7 @@ import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
 import { StatusBadge } from '../../shared/status-badge/status-badge';
 
-/** Ausstellungsdetail mit Ort, Fotograf:innen, Veranstalter und Beiträgen (EXH-UB-4, EXH-OP-1, EXH-UB-5). */
+/** Ausstellungsdetail mit Ort, Fotograf:innen, Veranstalter und Beiträgen (EXH-UB-4, EXH-OP-2, EXH-UB-5). */
 @Component({
   selector: 'app-exhibition-detail-page',
   imports: [RouterLink, DataGate, NotFound, StatusBadge],
@@ -35,9 +35,13 @@ export class ExhibitionDetailPage {
     const e = this.exhibition();
     return e ? this.data.venueById().get(e.venueId) : undefined;
   });
-  protected readonly organizer = computed(() => {
+  protected readonly festival = computed(() => {
     const festivalId = this.exhibition()?.festivalId;
-    return festivalId ? this.data.organizerById().get(festivalId) : undefined;
+    return festivalId ? this.data.festivalById().get(festivalId) : undefined;
+  });
+  protected readonly organizer = computed(() => {
+    const f = this.festival();
+    return f ? this.data.organizerById().get(f.organizerId) : undefined;
   });
   protected readonly photographers = computed(() =>
     (this.exhibition()?.photographerIds ?? []).flatMap((id) => this.data.photographerById().get(id) ?? []),

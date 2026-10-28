@@ -1,11 +1,12 @@
 # updates/
 
-Vorschläge und Berichte der Datenaktualisierung aus den Webseiten der Orte (ADR-006, ADR-007). Versioniert; abgerufene Seitentexte (Snapshots) liegen unter `.cache/` und werden nicht versioniert.
+Vorschläge und Berichte der Datenaktualisierung aus den Webseiten der Orte und Veranstalter (ADR-006, ADR-007, ADR-010). Versioniert; abgerufene Seitentexte (Snapshots) liegen unter `.cache/` und werden nicht versioniert.
 
 ```
 updates/<JJJJ-MM-TT>/
 ├── fetch-summary.json   Ergebnis des Abrufs je Ort
 ├── <venue-id>.json      Vorschläge für einen Ort
+├── <organizer-id>.json  Vorschläge für einen Veranstalter (Feld `organizerId`)
 └── REPORT.md            Bericht des Laufs
 ```
 
@@ -13,7 +14,7 @@ updates/<JJJJ-MM-TT>/
 
 ```bash
 export SCRAPE_CONTACT="redaktion@example.org"   # Kontaktadresse für den User-Agent
-npm run data:fetch -- [--venue <id>] [--offline] [--max-age 7]
+npm run data:fetch -- [--venue <ort-oder-veranstalter-id>] [--offline] [--max-age 7]
 # Vorschläge schreiben (Skill /update-venue-data oder von Hand)
 npm run data:check -- [--venue <id>]
 npm run data:report
@@ -50,7 +51,7 @@ Die komfortable Variante ist der Skill `/update-venue-data` (`.claude/skills/upd
 }
 ```
 
-- `dataset`: `venues`, `exhibitions`, `events`, `photographers`. `op` ist `set` (Standard, mit `recordId`, `field` als Punktpfad und `newValue`) oder `add` (mit `record`; ohne `id` wird eine eindeutige kebab-case-`id` gebildet).
+- `dataset`: `venues`, `exhibitions`, `events`, `photographers`, `organizers`, `festivals`. `op` ist `set` (Standard, mit `recordId`, `field` als Punktpfad und `newValue`) oder `add` (mit `record`; ohne `id` wird eine eindeutige kebab-case-`id` gebildet).
 - Der Prüfer (`data:check`) schreibt die Datei neu: Änderungen unter `changes` sind gültig und tragen `oldValue`, `kind` (`ergänzt` oder `geändert`), `conflict` und `approved`; abgelehnte stehen unter `rejected` mit `reason`.
 - Regeln: Fundstelle muss im Snapshot stehen und den Wert enthalten; `source` wird nie vorgeschlagen; Orte mit `source.status: verifiziert` ergeben Konflikte, die nicht übernommen werden; vorhandene Werte werden nur mit `"approved": true` geändert.
 - `data:apply` übernimmt nur freigegebene Änderungen, setzt `source.url` (erste übernommene Fundstelle) und `source.checkedAt` (`fetchedAt`), lässt `source.status` unverändert, validiert vor dem Schreiben und vermerkt `appliedAt`.
@@ -78,3 +79,12 @@ npm run validate:data && npm test
 ```
 
 Der Plan enthält je Eintrag `id`, `occasion`, `exhibitionId`, `venueId`, `date`, `kind` (`anlegen` oder `angepasst`, dann mit `previousDate`) und `context` (Ausstellung, Ort, Fotograf:innen als Schreibgrundlage). `news:check` setzt `problems` und entzieht ungültigen Einträgen die Freigabe. Gültig ist ein Text mit 60 bis 80 Wörtern, der Titel der Ausstellung, Ort und alle Fotograf:innen nennt, ohne `<` und `>`; der Kurztext hat höchstens 300 Zeichen. Ändert sich ein Termin, erscheint der Beitrag beim nächsten Lauf als `angepasst`. Beiträge ohne Ausstellung werden im Bericht als verwaist genannt und nicht gelöscht. Die Sachrichtigkeit der Texte prüft die Redaktion bei der Freigabe.
+
+## Veranstalter und Festivals
+
+Veranstalter mit `website` sind Quellen wie Orte (ADR-010): `data:fetch` ruft sie ab, `--venue <id>` nimmt Orts- oder Veranstalter-IDs, und die Vorschlagsdatei heißt `updates/<Datum>/<organizer-id>.json` mit dem Feld `organizerId` statt `venueId`. Eine ID darf nicht zugleich Ort und Veranstalter sein.
+
+- Eine **Veranstalter-Website** darf den eigenen Veranstalter ändern, dessen Festivals ergänzen und ändern und Ausstellungen mit `festivalId` eines eigenen Festivals ergänzen.
+- Eine **Ort-Website** darf wie bisher Ort, Ausstellungen und Events ändern und zusätzlich Veranstalter und Festivals neu aufnehmen, aber nicht ändern.
+- Ein **Festival** braucht `organizerId`, `title`, `startDate`, `endDate` und `city`; ohne gültigen Zeitraum wird der Vorschlag verworfen („Festival ohne gültigen Zeitraum“). Dubletten sind gleiche Veranstalternamen bzw. gleicher Veranstalter, Titel und Beginn. Die `id` bildet sich aus dem Titel (plus Jahr, wenn es nicht im Titel steht).
+- Veranstalter und Festivals tragen kein `source`; die Fundstelle im Vorschlag ist der Nachweis.

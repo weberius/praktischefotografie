@@ -60,3 +60,10 @@ test('Szenario: Skill übernimmt Neuigkeiten nur nach Freigabe (SKL-UB-5)', () =
   assert.match(text, /Neuigkeiten erst nach ausdrücklicher Freigabe/);
   assert.match(text, /nur für freigegebene\*\* Einträge `"approved": true`/);
 });
+
+test('Szenario: Skill schlägt Festivals nur mit Zeitraum vor (SKL-UB-6)', () => {
+  const text = skill();
+  for (const target of ['`organizers`', '`festivals`', '`festivalId`', '`isOfficialFestivalPartner: true`', '`organizerId`']) assert.ok(text.includes(target), target);
+  assert.match(text, /Nie ein Festival ohne belegten Zeitraum/);
+  assert.match(text, /Orte und Veranstalter dürfen nie dieselbe `id` haben/);
+});

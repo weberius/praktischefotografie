@@ -129,6 +129,20 @@ In Anlehnung an das Architekturmuster von [`klangland`](https://github.com/weber
 }
 ```
 
+#### D2. `festivals.json` (Festivals, ergänzt 2026-10-28, ADR-009)
+```json
+{
+  "id": "photoszene-festival-2027",
+  "organizerId": "photoszene-koeln",
+  "title": "Photoszene-Festival 2027",
+  "startDate": "2027-05-14",
+  "endDate": "2027-06-13",
+  "city": "Köln",
+  "website": "https://www.photoszene.de/de/festival/"
+}
+```
+`festivalId` einer Ausstellung verweist auf ein Festival; `isOfficialFestivalPartner` kennzeichnet offizielle Partner. Veranstalter ohne eigenen Ausstellungsraum stehen in `organizers.json`, nicht in `venues.json`.
+
 #### E. `posts.json` (Magazin-Index)
 ```json
 {

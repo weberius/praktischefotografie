@@ -499,5 +499,55 @@
       "checkedAt": "2026-10-27",
       "status": "recherchiert"
     }
+  },
+  {
+    "id": "fotoraum-koeln",
+    "name": "fotoraum köln",
+    "shortName": "fotoraum köln",
+    "type": "off_space",
+    "city": "Köln",
+    "district": "Lindenthal",
+    "address": {
+      "street": "Herderstraße 88",
+      "zip": "50935",
+      "city": "Köln",
+      "lat": 50.9255743,
+      "lng": 6.9100216
+    },
+    "website": "https://www.fotoraum-koeln.de/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.fotoraum-koeln.de/impressum",
+      "checkedAt": "2026-10-28",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "michael-horbach-stiftung",
+    "name": "Kunsträume der Michael Horbach Stiftung",
+    "shortName": "Michael Horbach Stiftung",
+    "type": "foundation",
+    "city": "Köln",
+    "district": "Südstadt",
+    "address": {
+      "street": "Wormser Straße 23",
+      "zip": "50677",
+      "city": "Köln",
+      "lat": 50.9179959,
+      "lng": 6.9546889
+    },
+    "website": "http://www.michael-horbach-stiftung.de/",
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.dgph.de/ausstellungsorte/kunstraeume-der-michael-horbach-stiftung-koeln",
+      "checkedAt": "2026-10-28",
+      "status": "recherchiert"
+    }
   }
 ]
