@@ -1,5 +1,5 @@
 ---
-title: "Endet bald: Man Ray: Kiki im Museum Ludwig"
+title: "Sammlung Fotografie: Man Ray: Kiki in Köln"
 date: 2027-05-30
 ---
 

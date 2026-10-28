@@ -75,3 +75,9 @@ test('Szenario: Skill übernimmt alle genannten Namen (SKL-UB-7)', () => {
   assert.match(text, /`description` der Ausstellung nennt \*\*alle\*\* diese Namen/);
   assert.match(text, /\/research-photographers/);
 });
+
+test('Skill nennt die Titelregel der Neuigkeiten (NWS-UB-7)', () => {
+  const text = skill();
+  assert.match(text, /`title` ist \*\*immer\*\* `expectedTitle`/);
+  assert.match(text, /ohne Anlass/);
+});

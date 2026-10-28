@@ -1,5 +1,5 @@
 ---
-title: "Ende: Men Don't Cry im fotoraum köln"
+title: "Men Don't Cry in Köln"
 date: 2026-11-02
 ---
 

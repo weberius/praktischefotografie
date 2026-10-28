@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: Herbert W. Franke / Gottfried Jäger"
+title: "HERBERT W. FRANKE / GOTTFRIED JÄGER in Essen"
 date: 2026-10-16
 ---
 

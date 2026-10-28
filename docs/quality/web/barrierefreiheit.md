@@ -9,3 +9,6 @@
 | Q-USE-4 | Besucher:in mit Farbsehschwäche liest Status und Typen. | 100 % der Status-, Typ- und Kennzeichnungsanzeigen enthalten Text; Kontrast ≥ 4,5:1 (axe `color-contrast`). | Komponententests auf Textinhalt; axe | CAL-UB-4, VNU-UB-5, EXH-UB-2, EXH-UB-6, EVT-UB-4 |
 
 **Ergänzung 2026-10-28:** Q-USE-2 bis Q-USE-4 gelten auch für die Festivalseiten (FST-UB-1 bis FST-UB-3); die Partnerkennzeichnung „Offizieller Partner“ ist Text, nicht nur Farbe.
+
+**Ergänzung 2026-10-28:** Q-USE-2 und Q-USE-4 gelten auch für die Karten im Magazin (BLG-UB-6 bis BLG-UB-8; Q-USE-6): Anlass und Art stehen als Text im Badge, jede Karte hat einen Link (die Überschrift).
+

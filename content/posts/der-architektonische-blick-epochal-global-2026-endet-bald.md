@@ -1,5 +1,5 @@
 ---
-title: "Endet bald: Der architektonische Blick im MAKK Köln"
+title: "Der architektonische Blick. epochal – global in Köln"
 date: 2027-01-03
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Ende: PHOTOGRAPHY MASTERS im Museum Folkwang"
+title: "PHOTOGRAPHY MASTERS in Essen"
 date: 2027-01-11
 ---
 

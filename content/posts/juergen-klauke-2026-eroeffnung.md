@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: JÜRGEN KLAUKE in Monschau"
+title: "JÜRGEN KLAUKE in Monschau"
 date: 2026-11-08
 ---
 

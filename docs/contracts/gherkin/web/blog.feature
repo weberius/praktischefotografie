@@ -54,3 +54,48 @@ Funktionalität: Blog: Magazin und Beitrag
     Wenn die Detailseite aufgerufen wird
     Dann wird kein Skript ausgeführt
     Und die Elemente erscheinen nicht im Dokument
+
+  # EARS: BLG-UB-6
+  Szenario: Beitrag zu einer Ausstellung zeigt Badges
+    Angenommen der Beitrag "mysterium-der-paare-endet-bald" mit dem Titel "MYSTERIUM DER PAARE in Monschau" zur Gruppenausstellung "mysterium-der-paare"
+    Wenn die Startseite aufgerufen wird
+    Dann zeigt die Karte des Beitrags die Badges "Endet bald" und "Gruppenausstellung" als Text
+    Und die Überschrift lautet "MYSTERIUM DER PAARE in Monschau" ohne den Zusatz "Endet bald"
+
+  # EARS: BLG-UB-6
+  Szenariogrundriss: Anlass-Badge je Kennung
+    Angenommen ein Beitrag mit der Kennung "<kennung>" zu einer Ausstellung
+    Wenn die Startseite aufgerufen wird
+    Dann zeigt die Karte das Anlass-Badge "<badge>"
+    Beispiele:
+    | kennung | badge |
+    | schau-2026-neu | Neu |
+    | schau-2026-eroeffnung | Eröffnung |
+    | schau-2026-endet-bald | Endet bald |
+    | schau-2026-ende | Beendet |
+
+  # EARS: BLG-UB-7
+  Szenario: Aufbau der Karte
+    Angenommen der Beitrag "mysterium-der-paare-endet-bald" vom 2026-10-18 mit der Kurzvorschau "Die Ausstellung im Fotografie-Forum Monschau endet am 1. November 2026."
+    Wenn die Startseite aufgerufen wird
+    Dann stehen in der Karte nacheinander das Datum, die Badges, der Titel als Link auf "/posts/mysterium-der-paare-endet-bald" und die Kurzvorschau
+
+  # EARS: BLG-ST-2
+  Szenario: Beitrag ohne Ausstellung
+    Angenommen ein Beitrag ohne verknüpfte Ausstellung
+    Wenn die Startseite aufgerufen wird
+    Dann zeigt die Karte Datum, Titel und Kurzvorschau ohne Badges
+
+  # EARS: BLG-UN-3
+  Szenario: Verknüpfung ohne Datensatz
+    Angenommen ein Beitrag, dessen verknüpfte Ausstellung in den Daten fehlt
+    Wenn die Startseite aufgerufen wird
+    Dann zeigt die Karte Datum, Titel und Kurzvorschau ohne Badges
+
+  # EARS: BLG-UB-8
+  Szenario: Beitragsseite zeigt Badges
+    Angenommen der Beitrag "mysterium-der-paare-endet-bald" zur Gruppenausstellung "mysterium-der-paare"
+    Wenn die Detailseite aufgerufen wird
+    Dann erscheinen unter dem Datum die Badges "Endet bald" und "Gruppenausstellung" als Text
+    Und ein Beitrag ohne Ausstellung zeigt keine Badges
+

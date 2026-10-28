@@ -15,6 +15,9 @@ const ORPHAN_PATTERN = new RegExp(`^(.+)-(${OCCASIONS.join('|')})$`);
 const LABEL = { neu: 'Neu', eroeffnung: 'Eröffnung', 'endet-bald': 'Endet bald', ende: 'Ende' };
 
 export const newsId = (exhibitionId, occasion) => `${exhibitionId}-${occasion}`;
+
+/** Titel einer Neuigkeit: „Ausstellungstitel in Stadt“, ohne Anlass (NWS-UB-7, ADR-013). */
+export const expectedTitle = (exhibition, venue) => normalizeSpace(`${exhibition.title} in ${venue?.city ?? ''}`);
 export const planPath = (root, date) => join(root, 'updates', date, 'news.json');
 export const reportPath = (root, date) => join(root, 'updates', date, 'NEWS.md');
 
@@ -68,6 +71,7 @@ export function planNews({ dataset, date, venueId, newIds = new Set(), previous 
         date: itemDate,
         kind: post ? 'angepasst' : 'anlegen',
         ...(post ? { previousDate: post.date } : {}),
+        expectedTitle: expectedTitle(ex, venue),
         context: {
           exhibition: { title: ex.title, type: ex.type, startDate: ex.startDate, endDate: ex.endDate, description: ex.description ?? null },
           venue: { name: venue?.name, shortName: venue?.shortName, city: venue?.city, website: venue?.website },
@@ -112,7 +116,9 @@ export function checkItem(item, dataset) {
     const name = dataset.photographers.find((p) => p.id === pid)?.name;
     if (name && !contains(text, name)) problems.push(`Text nennt "${name}" nicht`);
   }
-  if (!normalizeSpace(item.title ?? '')) problems.push('Titel fehlt');
+  const title = normalizeSpace(item.title ?? '');
+  if (!title) problems.push('Titel fehlt');
+  else if (venue && title !== expectedTitle(ex, venue)) problems.push(`Titel muss "${expectedTitle(ex, venue)}" lauten (Ausstellungstitel und Stadt, ohne Anlass)`);
   const excerpt = normalizeSpace(item.excerpt ?? '');
   if (!excerpt || excerpt.length > MAX_EXCERPT) problems.push(`Kurztext fehlt oder hat mehr als ${MAX_EXCERPT} Zeichen`);
   return problems;

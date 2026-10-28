@@ -27,7 +27,7 @@ const edit = (root, fn) => {
   fn(p);
   writeFileSync(join(root, 'updates', DATE, 'news.json'), JSON.stringify(p));
 };
-const fill = (root, id, over = {}) => edit(root, (p) => Object.assign(p.items.find((i) => i.id === id), { title: 'Titel', excerpt: 'Kurz.', text: goodText(), ...over }));
+const fill = (root, id, over = {}) => edit(root, (p) => Object.assign(p.items.find((i) => i.id === id), { title: 'Test in Köln', excerpt: 'Kurz.', text: goodText(), ...over }));
 
 test('Szenario: Eindeutige Kennung, Datum je Anlass und Plan mit fehlenden Anlässen (NWS-UB-1, NWS-UB-2, NWS-EV-1)', () => {
   const root = workspace();
@@ -125,13 +125,13 @@ test('Freigabe eines ungültigen Eintrags wird nicht übernommen (NWS-UB-6, Q-DA
 test('Szenario: Beitrag wird angelegt und ersetzt (NWS-EV-2)', () => {
   const root = workspace();
   plan(argv(), root);
-  fill(root, 'schau-2026-ende', { approved: true, title: 'Ende von "Test"' });
+  fill(root, 'schau-2026-ende', { approved: true });
   check(argv(), root);
   assert.deepEqual(apply(argv(), root).applied, ['schau-2026-ende']);
   const [post] = read(root, 'data', 'posts.json');
-  assert.deepEqual(post, { id: 'schau-2026-ende', slug: 'schau-2026-ende', title: 'Ende von "Test"', date: '2026-11-02', excerpt: 'Kurz.', linkedVenueIds: ['makk-koeln'], linkedExhibitionIds: ['schau-2026'], contentFile: 'content/posts/schau-2026-ende.md' });
+  assert.deepEqual(post, { id: 'schau-2026-ende', slug: 'schau-2026-ende', title: 'Test in Köln', date: '2026-11-02', excerpt: 'Kurz.', linkedVenueIds: ['makk-koeln'], linkedExhibitionIds: ['schau-2026'], contentFile: 'content/posts/schau-2026-ende.md' });
   const md = readFileSync(join(root, 'content', 'posts', 'schau-2026-ende.md'), 'utf8');
-  assert.match(md, /^---\ntitle: "Ende von \\"Test\\""\ndate: 2026-11-02\n---\n\nDie Ausstellung Test im MAKK Köln/);
+  assert.match(md, /^---\ntitle: "Test in Köln"\ndate: 2026-11-02\n---\n\nDie Ausstellung Test im MAKK Köln/);
 
   // Termin ändert sich: Beitrag wird ersetzt
   const ex = read(root, 'data', 'exhibitions.json');
@@ -152,7 +152,7 @@ test('Szenario: Übernahme wird zurückgerollt (NWS-UN-2)', () => {
   // Slug-Muster verletzt: ungültige Kennung erzeugt ein Schemaproblem.
   edit(root, (p) => {
     const item = p.items.find((i) => i.id === 'schau-2026-ende');
-    Object.assign(item, { id: 'Ungültig Ende', title: 'T', excerpt: 'K', text: goodText(), approved: true });
+    Object.assign(item, { id: 'Ungültig Ende', title: 'Test in Köln', excerpt: 'K', text: goodText(), approved: true });
   });
   const before = readFileSync(join(root, 'data', 'posts.json'), 'utf8');
   const result = apply(argv(), root);
@@ -195,3 +195,20 @@ test('Re-Planung behält Texte und Freigaben bei gleichem Datum', () => {
   assert.equal(item.approved, true);
   assert.ok(item.text);
 });
+
+test('Szenario: Titel ist Ausstellungstitel mit Stadt (NWS-UB-7, Q-DATA-10)', () => {
+  const root = workspace();
+  plan(argv(), root);
+  assert.ok(planOf(root).items.every((i) => i.expectedTitle === 'Test in Köln'));
+  for (const title of ['Endet bald: Test im MAKK Köln', 'Test', 'Test in Essen', 'Endet bald: Test in Köln']) {
+    fill(root, 'schau-2026-ende', { title });
+    const item = check(argv(), root).items.find((i) => i.id === 'schau-2026-ende');
+    assert.match(item.problems.join(), /Titel muss "Test in Köln" lauten/, title);
+  }
+  fill(root, 'schau-2026-ende', { title: '  Test   in Köln ' });
+  assert.deepEqual(check(argv(), root).items.find((i) => i.id === 'schau-2026-ende').problems, []);
+  fill(root, 'schau-2026-ende', { approved: true });
+  assert.equal(apply(argv(), root).applied[0], 'schau-2026-ende');
+  assert.equal(read(root, 'data', 'posts.json')[0].title, 'Test in Köln');
+});
+

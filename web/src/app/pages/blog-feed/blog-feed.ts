@@ -5,11 +5,12 @@ import { DataService } from '../../core/data.service';
 import { PageMeta } from '../../core/page-meta';
 import { publishedPosts } from '../../core/posts';
 import { DataGate } from '../../shared/data-gate/data-gate';
+import { NewsBadges } from '../../shared/news-badges/news-badges';
 
-/** Startseite: veröffentlichte Beiträge, neueste zuerst (BLG-UB-1, BLG-UB-2, BLG-ST-1, BLG-UN-1). */
+/** Startseite: veröffentlichte Beiträge, neueste zuerst; Karte aus Datum, Badges, Titel und Kurzvorschau (BLG-UB-1, BLG-UB-2, BLG-UB-6, BLG-UB-7, BLG-ST-1, BLG-UN-1). */
 @Component({
   selector: 'app-blog-feed-page',
-  imports: [RouterLink, DataGate],
+  imports: [RouterLink, DataGate, NewsBadges],
   templateUrl: './blog-feed.html',
   styleUrl: './blog-feed.css',
 })

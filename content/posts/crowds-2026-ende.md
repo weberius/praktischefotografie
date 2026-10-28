@@ -1,5 +1,5 @@
 ---
-title: "Ende: CROWDS von Wolfgang Zurborn"
+title: "CROWDS in Köln"
 date: 2026-11-23
 ---
 

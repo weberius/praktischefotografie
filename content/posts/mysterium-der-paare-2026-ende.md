@@ -1,5 +1,5 @@
 ---
-title: "Ende: MYSTERIUM DER PAARE in Monschau"
+title: "MYSTERIUM DER PAARE in Monschau"
 date: 2026-11-02
 ---
 

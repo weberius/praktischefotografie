@@ -1,5 +1,5 @@
 ---
-title: "Ende: ANTHROPOSCAPE von Hans Georg Esch"
+title: "ANTHROPOSCAPE in Köln"
 date: 2026-10-31
 ---
 

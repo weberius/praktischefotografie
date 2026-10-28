@@ -1,5 +1,5 @@
 ---
-title: "Endet bald: Between von Candida Höfer"
+title: "Between in Köln"
 date: 2027-02-05
 ---
 

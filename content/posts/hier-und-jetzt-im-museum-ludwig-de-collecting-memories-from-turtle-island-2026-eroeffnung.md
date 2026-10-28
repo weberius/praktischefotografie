@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: HIER UND JETZT im Museum Ludwig"
+title: "HIER UND JETZT im Museum Ludwig. De/Collecting Memories from Turtle Island in Köln"
 date: 2026-02-07
 ---
 

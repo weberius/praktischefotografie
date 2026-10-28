@@ -7,13 +7,14 @@ import { exhibitionStatus } from '../../core/exhibition-status';
 import { MarkdownService } from '../../core/markdown.service';
 import { PageMeta } from '../../core/page-meta';
 import { DataGate } from '../../shared/data-gate/data-gate';
+import { NewsBadges } from '../../shared/news-badges/news-badges';
 import { NotFound } from '../../shared/not-found/not-found';
 import { StatusBadge } from '../../shared/status-badge/status-badge';
 
-/** Beitragsseite mit Text, verknüpften Orten und Ausstellungen (BLG-UB-3 bis BLG-UB-5, BLG-UN-1, BLG-UN-2). */
+/** Beitragsseite mit Text, verknüpften Orten und Ausstellungen (BLG-UB-3 bis BLG-UB-5, BLG-UB-8, BLG-UN-1, BLG-UN-2). */
 @Component({
   selector: 'app-post-detail-page',
-  imports: [RouterLink, DataGate, NotFound, StatusBadge],
+  imports: [RouterLink, DataGate, NewsBadges, NotFound, StatusBadge],
   templateUrl: './post-detail.html',
   styleUrl: './post-detail.css',
 })

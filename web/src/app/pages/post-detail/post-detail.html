@@ -3,6 +3,7 @@
     <article>
       <h1>{{ post.title }}</h1>
       <p class="meta"><time [attr.datetime]="post.date">{{ formatDate(post.date) }}</time></p>
+      <app-news-badges [post]="post" />
 
       @if (text.hasValue()) {
         <div class="post-body" [innerHTML]="text.value()"></div>

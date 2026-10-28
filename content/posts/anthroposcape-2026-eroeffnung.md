@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: ANTHROPOSCAPE von Hans Georg Esch"
+title: "ANTHROPOSCAPE in Köln"
 date: 2026-09-16
 ---
 

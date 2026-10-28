@@ -1,5 +1,5 @@
 ---
-title: "Ende: Herbert W. Franke / Gottfried Jäger"
+title: "HERBERT W. FRANKE / GOTTFRIED JÄGER in Essen"
 date: 2027-01-11
 ---
 

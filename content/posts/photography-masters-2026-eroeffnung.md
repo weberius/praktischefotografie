@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: PHOTOGRAPHY MASTERS im Museum Folkwang"
+title: "PHOTOGRAPHY MASTERS in Essen"
 date: 2026-10-16
 ---
 

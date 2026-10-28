@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: All PhotoBooks by Duane Michals"
+title: "All PhotoBooks by Duane Michals in Köln"
 date: 2026-09-25
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: August Sander zum 150. Geburtstag"
+title: "August Sander – Zum 150. Geburtstag in Köln"
 date: 2026-09-11
 ---
 

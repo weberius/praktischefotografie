@@ -112,3 +112,11 @@ Funktionalität: Magazin-Neuigkeiten aus Ausstellungsdaten
     Dann enthält der Plan nur Ausstellungen dieses Ortes
     Wenn die Ort-ID "gibt-es-nicht" lautet
     Dann endet der Aufruf mit Exit-Code 1 und nennt die gültigen IDs
+
+  # EARS: NWS-UB-7
+  Szenario: Titel ist Ausstellungstitel mit Stadt
+    Angenommen eine Ausstellung "Test" im Ort "makk-koeln" in der Stadt "Köln"
+    Und ein Planeintrag mit dem Titel "Endet bald: Test im MAKK Köln"
+    Wenn die Neuigkeiten geprüft werden
+    Dann wird der Eintrag verworfen und der Grund nennt den erwarteten Titel "Test in Köln"
+    Aber mit dem Titel "Test in Köln" ist der Eintrag gültig

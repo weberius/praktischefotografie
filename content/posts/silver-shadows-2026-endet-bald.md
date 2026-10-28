@@ -1,5 +1,5 @@
 ---
-title: "Endet bald: Silver Shadows von Tina Barney"
+title: "Silver Shadows in Köln"
 date: 2026-10-16
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Endet bald: PHOTOGRAPHY MASTERS im Museum Folkwang"
+title: "PHOTOGRAPHY MASTERS in Essen"
 date: 2026-12-27
 ---
 

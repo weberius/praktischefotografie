@@ -1,5 +1,5 @@
 ---
-title: "Endet bald: August Sander in der Photographischen Sammlung"
+title: "August Sander – Zum 150. Geburtstag in Köln"
 date: 2027-01-10
 ---
 

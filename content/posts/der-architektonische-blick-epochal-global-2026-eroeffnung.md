@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: Hans Georg Esch im MAKK Köln"
+title: "Der architektonische Blick. epochal – global in Köln"
 date: 2026-06-11
 ---
 

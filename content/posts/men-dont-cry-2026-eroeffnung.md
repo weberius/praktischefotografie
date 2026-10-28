@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: Men Don't Cry im fotoraum köln"
+title: "Men Don't Cry in Köln"
 date: 2026-09-19
 ---
 

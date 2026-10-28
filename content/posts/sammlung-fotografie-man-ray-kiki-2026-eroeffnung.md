@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: Man Ray: Kiki im Museum Ludwig"
+title: "Sammlung Fotografie: Man Ray: Kiki in Köln"
 date: 2026-10-31
 ---
 

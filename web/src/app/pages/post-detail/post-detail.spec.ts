@@ -1,4 +1,4 @@
-// Gherkin: web/blog.feature · Beitrag lesen (BLG-UB-3, BLG-UB-4, BLG-UB-5, BLG-UN-1, BLG-UN-2)
+// Gherkin: web/blog.feature · Beitrag lesen (BLG-UB-3, BLG-UB-4, BLG-UB-5, BLG-UB-8, BLG-UN-1, BLG-UN-2)
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingHarness } from '@angular/router/testing';
@@ -84,5 +84,19 @@ describe('PostDetailPage', () => {
         expect((window as unknown as Record<string, unknown>)['__pwned']).toBeUndefined();
       });
     }
+  });
+
+  it('Szenario: Beitragsseite zeigt Badges (BLG-UB-8)', async () => {
+    const news = { id: 'a-laufend-endet-bald', slug: 'a-laufend-endet-bald', title: 'Ausstellung a-laufend in Essen', date: '2026-10-18', linkedVenueIds: ['v-essen'], linkedExhibitionIds: ['a-laufend'], contentFile: 'content/posts/a-laufend-endet-bald.md' };
+    const { el } = await open('/posts/a-laufend-endet-bald', { dataset: { posts: [news] } });
+    const badges = Array.from(el.querySelectorAll('.badges .badge')).map((b) => b.textContent?.trim());
+    expect(badges).toEqual(['Endet bald', 'Gruppenausstellung']);
+    const order = Array.from(el.querySelector('article')!.children).map((c) => c.tagName.toLowerCase());
+    expect(order.slice(0, 3)).toEqual(['h1', 'p', 'app-news-badges']);
+  });
+
+  it('Beitrag ohne Ausstellung zeigt keine Badges (BLG-UB-8)', async () => {
+    const { el } = await open('/posts/willkommen');
+    expect(el.querySelector('.badges')).toBeNull();
   });
 });

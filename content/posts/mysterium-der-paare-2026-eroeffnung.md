@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: MYSTERIUM DER PAARE in Monschau"
+title: "MYSTERIUM DER PAARE in Monschau"
 date: 2026-08-09
 ---
 

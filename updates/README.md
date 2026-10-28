@@ -67,7 +67,7 @@ Nach der Übernahme der Ortsdaten plant `npm run news:plan` Beiträge zu Ausstel
 | `endet-bald` | `endDate` minus 14 Tage (entfällt, wenn das nicht nach `startDate` liegt) |
 | `ende` | `endDate` plus 1 Tag |
 
-Beiträge mit Datum in der Zukunft zeigt das Magazin erst an dem Tag. Beim ersten Lauf werden alle Anlässe des Bestands nachgetragen, auch vergangene.
+Der Titel jeder Neuigkeit ist „Ausstellungstitel in Stadt“ ohne Anlass (Plan-Feld `expectedTitle`, z. B. „MYSTERIUM DER PAARE in Monschau“); den Anlass zeigt das Magazin als Badge (ADR-013). Beiträge mit Datum in der Zukunft zeigt das Magazin erst an dem Tag. Beim ersten Lauf werden alle Anlässe des Bestands nachgetragen, auch vergangene.
 
 ```bash
 npm run news:plan -- [--venue <id>] [--date JJJJ-MM-TT]   # schreibt updates/<Datum>/news.json

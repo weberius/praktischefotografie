@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: Silver Shadows von Tina Barney"
+title: "Silver Shadows in Köln"
 date: 2026-08-29
 ---
 

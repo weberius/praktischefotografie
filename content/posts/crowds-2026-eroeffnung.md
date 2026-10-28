@@ -1,5 +1,5 @@
 ---
-title: "Eröffnung: CROWDS von Wolfgang Zurborn"
+title: "CROWDS in Köln"
 date: 2026-10-03
 ---
 

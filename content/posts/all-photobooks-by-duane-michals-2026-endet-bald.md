@@ -1,5 +1,5 @@
 ---
-title: "Endet bald: All PhotoBooks by Duane Michals"
+title: "All PhotoBooks by Duane Michals in Köln"
 date: 2026-11-07
 ---
 
