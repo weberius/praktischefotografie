@@ -46,10 +46,10 @@
       <ul class="card-list">
         @for (exhibition of exhibitions(); track exhibition.id) {
           <li class="card">
+            <app-exhibition-badges [kind]="exhibition.badges.kind" [second]="exhibition.badges.second" />
             <h3><a [routerLink]="['/exhibitions', exhibition.id]">{{ exhibition.title }}</a></h3>
             <p>{{ exhibition.venueName }}</p>
             <p class="meta">{{ exhibition.range }}</p>
-            <p><app-status-badge [status]="exhibition.status" /></p>
           </li>
         }
       </ul>

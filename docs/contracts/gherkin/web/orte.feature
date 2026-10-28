@@ -37,3 +37,9 @@ Funktionalität: Orte
     Angenommen ein Ort ohne laufende oder kommende Ausstellungen und Events
     Wenn die Ortsseite aufgerufen wird
     Dann zeigt sie einen Hinweis
+
+  # EARS: VNU-UB-6
+  Szenario: Ausstellungen der Ortsseite tragen Badges
+    Angenommen ein Ort mit einer laufenden Einzelausstellung
+    Wenn die Ortsseite aufgerufen wird
+    Dann beginnt die Karte der Ausstellung mit "Einzelausstellung" und danach "Laufend"

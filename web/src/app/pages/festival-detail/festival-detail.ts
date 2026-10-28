@@ -4,16 +4,17 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
 import { Clock, formatRange } from '../../core/clock';
 import { DataService } from '../../core/data.service';
+import { exhibitionBadgeData } from '../../core/exhibition-kind';
 import { exhibitionStatus } from '../../core/exhibition-status';
 import { PageMeta } from '../../core/page-meta';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
-import { StatusBadge } from '../../shared/status-badge/status-badge';
+import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
 
 /** Festival mit Stammdaten, Veranstalter und allen zugeordneten Ausstellungen (FST-UB-2 bis FST-UB-4, FST-ST-2). */
 @Component({
   selector: 'app-festival-detail-page',
-  imports: [DataGate, NotFound, RouterLink, StatusBadge],
+  imports: [DataGate, NotFound, RouterLink, ExhibitionBadges],
   templateUrl: './festival-detail.html',
 })
 export class FestivalDetailPage {
@@ -46,6 +47,7 @@ export class FestivalDetailPage {
         venueName: venues.get(e.venueId)?.name ?? 'Unbekannter Ort',
         range: formatRange(e.startDate, e.endDate),
         status: exhibitionStatus(e, today),
+        badges: exhibitionBadgeData(e, today),
         partner: e.isOfficialFestivalPartner === true,
       }));
   });

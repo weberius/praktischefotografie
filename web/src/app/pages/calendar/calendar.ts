@@ -3,15 +3,16 @@ import { Router, RouterLink } from '@angular/router';
 import { Clock, formatRange, monthName } from '../../core/clock';
 import { AgendaItem, buildAgenda, filterByMonth, filterFromToday, parseMonth, shiftMonth } from '../../core/agenda';
 import { DataService } from '../../core/data.service';
+import { STATUS_LABEL } from '../../core/exhibition-status';
 import { PageMeta } from '../../core/page-meta';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
-import { StatusBadge } from '../../shared/status-badge/status-badge';
+import { ExhibitionBadges, SecondBadge } from '../../shared/exhibition-badges/exhibition-badges';
 
 /** Kalender und Agenda: `/calendar` (ab heute) und `/calendar/:year/:month` (Monatsansicht). */
 @Component({
   selector: 'app-calendar-page',
-  imports: [RouterLink, DataGate, NotFound, StatusBadge],
+  imports: [RouterLink, DataGate, NotFound, ExhibitionBadges],
   templateUrl: './calendar.html',
   styleUrl: './calendar.css',
 })
@@ -27,6 +28,13 @@ export class CalendarPage {
 
   protected readonly today = this.clock.today();
   protected readonly formatRange = formatRange;
+
+  /** Zweites Badge der Agenda: bei Ausstellungen „Endet bald“ bzw. „Beendet“ (CAL-UB-3, CAL-UB-6), bei beendeten Events „Beendet“ (CAL-UB-6). */
+  protected secondBadge(item: AgendaItem): SecondBadge | null {
+    if (item.kind === 'Ausstellung' && (item.status === 'endet-bald' || item.status === 'beendet')) return { label: STATUS_LABEL[item.status], status: item.status };
+    if (item.kind === 'Event' && item.endDate < this.today) return { label: STATUS_LABEL.beendet, status: 'beendet' };
+    return null;
+  }
 
   /** `null` bei ungültiger Adresse; `isMonthView` ist falsch in der Agenda ab heute (dann gilt der heutige Monat für die Navigation). */
   protected readonly period = computed(() => {

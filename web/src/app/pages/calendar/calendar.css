@@ -13,11 +13,3 @@
   grid-template-columns: 1fr;
 }
 
-.kind {
-  color: var(--fg);
-  border-style: solid;
-}
-
-.kind-event {
-  border-style: dashed;
-}

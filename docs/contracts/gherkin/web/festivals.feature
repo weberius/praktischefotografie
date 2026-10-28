@@ -21,12 +21,13 @@ Funktionalität: Festivals
     Dann erscheinen Titel, Zeitraum, Stadt, Beschreibung und Website
     Und der Veranstalter erscheint mit Link auf "/organizers/photoszene-koeln"
 
-  # EARS: FST-UB-3
+  # EARS: FST-UB-3, FST-UB-6
   Szenario: Festivalseite listet Ausstellungen
     Angenommen zwei Ausstellungen mit festivalId "photoszene-festival-2027", davon eine als offizieller Partner, und eine ohne
     Wenn die Festivalseite aufgerufen wird
     Dann erscheinen genau die zwei Ausstellungen mit Ort, Zeitraum und Status
-    Und nur die Partnerausstellung trägt den Text "Offizieller Partner"
+    Und jede Karte beginnt mit der Badge-Zeile aus Art und Status
+    Und nur die Partnerausstellung trägt in der Badge-Zeile nach dem Status den Text "Offizieller Partner"
 
   # EARS: FST-ST-2
   Szenario: Festival ohne Ausstellung

@@ -1,20 +1,19 @@
 import { Component, computed, inject, input } from '@angular/core';
 import { DataService } from '../../core/data.service';
-import { EXHIBITION_TYPE_LABEL, Post } from '../../core/models';
+import { exhibitionKind } from '../../core/exhibition-kind';
+import { Post } from '../../core/models';
 import { OCCASION_BADGE, newsOccasion } from '../../core/news';
+import { ExhibitionBadges } from '../exhibition-badges/exhibition-badges';
 
-/** Badges einer Neuigkeit: Anlass („Endet bald“) und Art der Ausstellung („Gruppenausstellung“) als Text (BLG-UB-6, BLG-UB-8, BLG-UN-3). */
+/** Badges einer Neuigkeit: zuerst die Art der Ausstellung („Gruppenausstellung“), danach der Anlass („Endet bald“) (BLG-UB-9, BDG-UB-2, BLG-UN-3). */
 @Component({
   selector: 'app-news-badges',
+  imports: [ExhibitionBadges],
   template: `
     @if (badges(); as b) {
-      <p class="badges">
-        <span [class]="'badge status-' + b.status">{{ b.occasion }}</span>
-        <span class="badge">{{ b.type }}</span>
-      </p>
+      <app-exhibition-badges [kind]="b.kind" [second]="b.second" />
     }
   `,
-  styles: '.badges { margin: 0.25rem 0; display: flex; flex-wrap: wrap; gap: 0.35rem; }',
 })
 export class NewsBadges {
   readonly post = input.required<Post>();
@@ -25,6 +24,6 @@ export class NewsBadges {
     const occasion = newsOccasion(post);
     const exhibition = occasion ? this.data.exhibitionById().get(post.linkedExhibitionIds![0]) : undefined;
     if (!occasion || !exhibition) return null;
-    return { occasion: OCCASION_BADGE[occasion].label, status: OCCASION_BADGE[occasion].status, type: EXHIBITION_TYPE_LABEL[exhibition.type] };
+    return { kind: exhibitionKind(exhibition), second: { label: OCCASION_BADGE[occasion].label, status: OCCASION_BADGE[occasion].status } };
   });
 }

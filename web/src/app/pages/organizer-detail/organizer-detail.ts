@@ -4,17 +4,18 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
 import { Clock, formatRange } from '../../core/clock';
 import { DataService } from '../../core/data.service';
+import { exhibitionBadgeData } from '../../core/exhibition-kind';
 import { exhibitionStatus } from '../../core/exhibition-status';
 import { ORGANIZER_TYPE_LABEL } from '../../core/models';
 import { PageMeta } from '../../core/page-meta';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
-import { StatusBadge } from '../../shared/status-badge/status-badge';
+import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
 
 /** Veranstalter:in mit Stammdaten, Festivals und allen Ausstellungen dieser Festivals (ORG-UB-2, ORG-UB-5 bis ORG-UB-8, ORG-ST-1). */
 @Component({
   selector: 'app-organizer-detail-page',
-  imports: [DataGate, NotFound, RouterLink, StatusBadge],
+  imports: [DataGate, NotFound, RouterLink, ExhibitionBadges],
   templateUrl: './organizer-detail.html',
 })
 export class OrganizerDetailPage {
@@ -53,6 +54,7 @@ export class OrganizerDetailPage {
         venueName: venues.get(e.venueId)?.name ?? 'Unbekannter Ort',
         range: formatRange(e.startDate, e.endDate),
         status: exhibitionStatus(e, today),
+        badges: exhibitionBadgeData(e, today),
       }));
   });
 

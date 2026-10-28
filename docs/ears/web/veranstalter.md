@@ -17,3 +17,6 @@ Begriffe: „heute“ ist das aktuelle Datum der Anwendung (in Tests ein fester 
 | ORG-UB-8 | Die Webanwendung soll auf der Veranstalterseite, soweit vorhanden, Kurzbeschreibung und den Link zum Instagram-Profil anzeigen. | `web/veranstalter.feature` · „Veranstalterseite zeigt Beschreibung und Instagram“ | – | ADR-002 |
 
 **Supersede 2026-10-28:** ORG-UB-3 und ORG-UB-4 lasen `festivalId` als Veranstalter-ID; mit dem Festival-Datensatz (ADR-009) ersetzen ORG-UB-5 und ORG-UB-6 sie. Alte Fassung oben durchgestrichen.
+| ORG-UB-9 | Die Webanwendung soll auf der Veranstalterseite jede Ausstellung der Festivals des Veranstalters mit der Badge-Zeile (Art, danach Status) oberhalb der Überschrift zeigen. | `web/veranstalter.feature` · „Ausstellungen des Veranstalters tragen Badges“ | Q-USE-4, Q-USE-7 | ADR-015 |
+
+**Ergänzung 2026-10-28:** ORG-UB-9 ergänzt ORG-UB-5; der Status steht in der Badge-Zeile statt unter dem Zeitraum.

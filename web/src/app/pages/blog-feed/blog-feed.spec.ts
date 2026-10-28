@@ -60,18 +60,18 @@ describe('BlogFeedPage', () => {
     contentFile: `content/posts/${id}.md`,
     ...over,
   });
-  const badgesOf = (item: Element) => Array.from(item.querySelectorAll('.badges .badge')).map((b) => b.textContent?.trim());
+  const badgesOf = (item: Element) => Array.from(item.querySelectorAll('.badge-row .badge')).map((b) => b.textContent?.trim());
 
-  it('Szenario: Beitrag zu einer Ausstellung zeigt Badges (BLG-UB-6)', async () => {
+  it('Szenario: Beitrag zu einer Ausstellung zeigt Badges, zuerst die Art (BLG-UB-9, BDG-UB-2)', async () => {
     const harness = await open({ dataset: { posts: [newsPost('a-laufend-endet-bald', '2026-10-18')] } });
     const item = (harness.routeNativeElement as HTMLElement).querySelector('ul li') as HTMLElement;
-    expect(badgesOf(item)).toEqual(['Endet bald', 'Gruppenausstellung']);
-    expect(item.querySelector('.badges .status-endet-bald')?.textContent).toContain('Endet bald');
+    expect(badgesOf(item)).toEqual(['Gruppenausstellung', 'Endet bald']);
+    expect(item.querySelector('.badge-row .status-endet-bald')?.textContent).toContain('Endet bald');
     expect(item.querySelector('h2')?.textContent?.trim()).toBe('Ausstellung a-laufend in Essen');
     expect(item.querySelector('h2')?.textContent).not.toContain('Endet bald');
   });
 
-  it('Szenario: Anlass-Badge je Kennung (BLG-UB-6)', async () => {
+  it('Szenario: Anlass-Badge je Kennung (BLG-UB-9)', async () => {
     const harness = await open({
       dataset: {
         posts: [
@@ -83,7 +83,7 @@ describe('BlogFeedPage', () => {
       },
     });
     const items = Array.from((harness.routeNativeElement as HTMLElement).querySelectorAll('ul li'));
-    expect(items.map((i) => badgesOf(i)[0])).toEqual(['Neu', 'Eröffnung', 'Endet bald', 'Beendet']);
+    expect(items.map((i) => badgesOf(i)[1])).toEqual(['Neu', 'Eröffnung', 'Endet bald', 'Beendet']);
   });
 
   it('Szenario: Aufbau der Karte (BLG-UB-7, BLG-UB-2) – Datum, Badges, Titel als Link, Kurzvorschau', async () => {
@@ -94,7 +94,7 @@ describe('BlogFeedPage', () => {
     expect(item.querySelector('time')?.getAttribute('datetime')).toBe('2026-10-18');
     const link = item.querySelector('h2 a') as HTMLAnchorElement;
     expect(link.getAttribute('href')).toBe('/posts/a-laufend-endet-bald');
-    expect(item.querySelector('p:not(.badges)')?.textContent).toContain('endet am 10. Januar 2027');
+    expect(item.querySelector('p')?.textContent).toContain('endet am 10. Januar 2027');
     expect(item.querySelectorAll('a').length).toBe(1);
   });
 
@@ -103,7 +103,7 @@ describe('BlogFeedPage', () => {
     const items = Array.from((harness.routeNativeElement as HTMLElement).querySelectorAll('ul li'));
     expect(items.length).toBe(2);
     for (const item of items) {
-      expect(item.querySelector('.badges')).toBeNull();
+      expect(item.querySelector('.badge-row')).toBeNull();
       expect(Array.from(item.children).map((c) => c.tagName.toLowerCase())).toEqual(['time', 'app-news-badges', 'h2', 'p']);
     }
   });
@@ -111,7 +111,7 @@ describe('BlogFeedPage', () => {
   it('Szenario: Verknüpfung ohne Datensatz (BLG-UN-3)', async () => {
     const harness = await open({ dataset: { posts: [newsPost('gibt-es-nicht-endet-bald', '2026-10-18', { linkedExhibitionIds: ['gibt-es-nicht'] })] } });
     const item = (harness.routeNativeElement as HTMLElement).querySelector('ul li') as HTMLElement;
-    expect(item.querySelector('.badges')).toBeNull();
+    expect(item.querySelector('.badge-row')).toBeNull();
     expect(item.querySelector('h2 a')?.textContent).toContain('Ausstellung a-laufend in Essen');
     expect(item.querySelector('time')).not.toBeNull();
     expect(item.textContent).toContain('endet am 10. Januar 2027');

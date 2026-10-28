@@ -56,6 +56,13 @@ describe('ExhibitionDetailPage', () => {
     expect(el.querySelector('a[href="/posts/willkommen"]')?.textContent).toContain('Willkommen');
   });
 
+  it('Szenario: Ausstellungsdetail zeigt Art und danach Status (EXH-UB-9, BDG-UB-2)', async () => {
+    const el = await open('/exhibitions/a-laufend');
+    expect(Array.from(el.querySelectorAll('.badge-row .badge')).map((b) => b.textContent?.trim())).toEqual(['Gruppenausstellung', 'Laufend']);
+    const h1 = el.querySelector('h1')!;
+    expect(h1.nextElementSibling?.tagName.toLowerCase()).toBe('app-exhibition-badges');
+  });
+
   it('Szenario: Status als Text (EXH-UB-6)', async () => {
     const el = await open('/exhibitions/a-endet-bald');
     expect(el.querySelector('.badge.status-endet-bald')?.textContent?.trim()).toBe('Endet bald');

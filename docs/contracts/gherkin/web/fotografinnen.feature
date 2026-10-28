@@ -62,3 +62,8 @@ Funktionalität: Fotograf:innen
     Wenn die Personenseite aufgerufen wird
     Dann erscheint die Seite ohne Bild und ohne Bildnachweis
 
+  # EARS: PHO-UB-10
+  Szenario: Ausstellungen der Person tragen Badges
+    Angenommen eine Person mit einer laufenden Gruppenausstellung
+    Wenn die Personenseite aufgerufen wird
+    Dann beginnt die Karte der Ausstellung mit "Gruppenausstellung" und danach "Laufend"

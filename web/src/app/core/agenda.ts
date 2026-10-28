@@ -1,4 +1,5 @@
 import { Exhibition, PhotoEvent, Venue } from './models';
+import { exhibitionKind } from './exhibition-kind';
 import { ExhibitionStatus, exhibitionStatus } from './exhibition-status';
 
 export type AgendaKind = 'Ausstellung' | 'Event';
@@ -16,6 +17,8 @@ export interface AgendaItem {
   link: string;
   /** Nur bei Ausstellungen. */
   status?: ExhibitionStatus;
+  /** Badge der Art: bei Ausstellungen „Gruppenausstellung“ usw. (BDG-UB-1), bei Events „Event“ (CAL-UB-7). */
+  art: string;
 }
 
 /** Führt Ausstellungen und Events zusammen und sortiert nach Beginn aufsteigend (Ende und Titel als Tiebreaker). */
@@ -36,6 +39,7 @@ export function buildAgenda(
       endDate: e.endDate,
       link: `/exhibitions/${e.id}`,
       status: exhibitionStatus(e, today),
+      art: exhibitionKind(e),
     })),
     ...events.map((e) => ({
       kind: 'Event' as const,
@@ -45,6 +49,7 @@ export function buildAgenda(
       startDate: e.startDate,
       endDate: e.endDate,
       link: `/events/${e.id}`,
+      art: 'Event',
     })),
   ];
   return items.sort(

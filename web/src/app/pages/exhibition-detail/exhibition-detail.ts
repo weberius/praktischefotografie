@@ -2,18 +2,18 @@ import { Component, computed, effect, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Clock, formatDate, formatRange } from '../../core/clock';
 import { DataService } from '../../core/data.service';
-import { exhibitionStatus } from '../../core/exhibition-status';
-import { EXHIBITION_TYPE_LABEL } from '../../core/models';
+import { exhibitionKind } from '../../core/exhibition-kind';
+import { STATUS_LABEL, exhibitionStatus } from '../../core/exhibition-status';
 import { PageMeta } from '../../core/page-meta';
 import { postsLinking } from '../../core/posts';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
-import { StatusBadge } from '../../shared/status-badge/status-badge';
+import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
 
-/** Ausstellungsdetail mit Ort, Fotograf:innen, Veranstalter und Beiträgen (EXH-UB-4, EXH-OP-2, EXH-UB-5). */
+/** Ausstellungsdetail mit Ort, Fotograf:innen, Veranstalter und Beiträgen (EXH-UB-9, EXH-OP-2, EXH-UB-5). */
 @Component({
   selector: 'app-exhibition-detail-page',
-  imports: [RouterLink, DataGate, NotFound, StatusBadge],
+  imports: [RouterLink, DataGate, NotFound, ExhibitionBadges],
   templateUrl: './exhibition-detail.html',
 })
 export class ExhibitionDetailPage {
@@ -22,7 +22,6 @@ export class ExhibitionDetailPage {
 
   readonly id = input('');
 
-  protected readonly typeLabel = EXHIBITION_TYPE_LABEL;
   protected readonly formatDate = formatDate;
   protected readonly formatRange = formatRange;
 
@@ -30,6 +29,14 @@ export class ExhibitionDetailPage {
   protected readonly status = computed(() => {
     const e = this.exhibition();
     return e ? exhibitionStatus(e, this.today) : null;
+  });
+  protected readonly kind = computed(() => {
+    const e = this.exhibition();
+    return e ? exhibitionKind(e) : '';
+  });
+  protected readonly second = computed(() => {
+    const status = this.status();
+    return status ? { label: STATUS_LABEL[status], status } : null;
   });
   protected readonly venue = computed(() => {
     const e = this.exhibition();
@@ -53,7 +60,7 @@ export class ExhibitionDetailPage {
     effect(() => {
       if (!this.data.ready()) return;
       const e = this.exhibition();
-      if (e) meta.set(e.title, e.description ?? `${EXHIBITION_TYPE_LABEL[e.type]}: ${formatRange(e.startDate, e.endDate)}.`);
+      if (e) meta.set(e.title, e.description ?? `${exhibitionKind(e)}: ${formatRange(e.startDate, e.endDate)}.`);
       else meta.set('Nicht gefunden', 'Diese Ausstellung existiert nicht.');
     });
   }

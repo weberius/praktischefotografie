@@ -2,18 +2,19 @@ import { Component, computed, effect, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Clock, formatDate, formatRange } from '../../core/clock';
 import { DataService } from '../../core/data.service';
+import { exhibitionBadgeData } from '../../core/exhibition-kind';
 import { exhibitionStatus } from '../../core/exhibition-status';
 import { VENUE_TYPE_INFO } from '../../core/models';
 import { PageMeta } from '../../core/page-meta';
 import { postsLinking } from '../../core/posts';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
-import { StatusBadge } from '../../shared/status-badge/status-badge';
+import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
 
 /** Ortsdetail mit Stammdaten, Programm und verlinkten Beiträgen (VNU-UB-3, VNU-UB-4, VNU-ST-1). */
 @Component({
   selector: 'app-venue-detail-page',
-  imports: [RouterLink, DataGate, NotFound, StatusBadge],
+  imports: [RouterLink, DataGate, NotFound, ExhibitionBadges],
   templateUrl: './venue-detail.html',
 })
 export class VenueDetailPage {
@@ -31,7 +32,7 @@ export class VenueDetailPage {
     this.data
       .exhibitions()
       .filter((e) => e.venueId === this.id())
-      .map((e) => ({ exhibition: e, status: exhibitionStatus(e, this.today) }))
+      .map((e) => ({ exhibition: e, status: exhibitionStatus(e, this.today), badges: exhibitionBadgeData(e, this.today) }))
       .filter((e) => e.status !== 'beendet')
       .sort((a, b) => a.exhibition.startDate.localeCompare(b.exhibition.startDate)),
   );

@@ -128,4 +128,16 @@ describe('PhotographerDetailPage', () => {
     const el = await open('/photographers/unbekannt');
     expect(el.querySelector('app-not-found')).not.toBeNull();
   });
+
+  it('Szenario: Ausstellungen der Person tragen Badges (PHO-UB-10, BDG-UB-6)', async () => {
+    const el = await open('/photographers/elliott-erwitt');
+    const cards = Array.from(el.querySelectorAll('ul.card-list > li'));
+    const gruppe = cards.find((c) => c.textContent?.includes('Ausstellung a-laufend')) as HTMLElement;
+    const einzel = cards.find((c) => c.textContent?.includes('Ausstellung f-1')) as HTMLElement;
+    const texts = (c: Element) => Array.from(c.querySelectorAll('.badge-row .badge')).map((b) => b.textContent?.trim());
+    expect(texts(gruppe)).toEqual(['Gruppenausstellung', 'Laufend']);
+    expect(texts(einzel)).toEqual(['Einzelausstellung', 'Kommend']);
+    for (const c of cards) expect(Array.from(c.children).map((x) => x.tagName.toLowerCase()).slice(0, 2)).toEqual(['app-exhibition-badges', 'h3']);
+    expect(el.querySelectorAll('app-status-badge').length).toBe(0);
+  });
 });

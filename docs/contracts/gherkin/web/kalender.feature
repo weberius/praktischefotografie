@@ -19,10 +19,12 @@ Funktionalität: Kalender und Agenda
     Angenommen eine laufende Ausstellung, die in 10 Tagen endet
     Dann trägt ihr Agendaeintrag den Text "Endet bald"
 
-  # EARS: CAL-UB-4
-  Szenario: Einträge sind als Ausstellung oder Event beschriftet
-    Angenommen eine Ausstellung und ein Event in der Agenda
-    Dann tragen sie den Text "Ausstellung" bzw. "Event"
+  # EARS: CAL-UB-4 (ersetzt durch CAL-UB-7), CAL-UB-7
+  Szenario: Einträge tragen Art und Status
+    Angenommen eine Gruppenausstellung, die bald endet, eine Einzelausstellung und ein Event in der Agenda
+    Dann trägt die Gruppenausstellung zuerst "Gruppenausstellung", danach "Endet bald"
+    Und die Einzelausstellung trägt "Einzelausstellung"
+    Und das Event trägt "Event"
 
   # EARS: CAL-OP-1
   Szenario: Beendete sind standardmäßig ausgeblendet

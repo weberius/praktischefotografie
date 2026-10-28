@@ -55,11 +55,11 @@ Funktionalität: Blog: Magazin und Beitrag
     Dann wird kein Skript ausgeführt
     Und die Elemente erscheinen nicht im Dokument
 
-  # EARS: BLG-UB-6
+  # EARS: BLG-UB-6 (ersetzt durch BLG-UB-9), BLG-UB-9
   Szenario: Beitrag zu einer Ausstellung zeigt Badges
     Angenommen der Beitrag "mysterium-der-paare-endet-bald" mit dem Titel "MYSTERIUM DER PAARE in Monschau" zur Gruppenausstellung "mysterium-der-paare"
     Wenn die Startseite aufgerufen wird
-    Dann zeigt die Karte des Beitrags die Badges "Endet bald" und "Gruppenausstellung" als Text
+    Dann zeigt die Karte des Beitrags zuerst "Gruppenausstellung" und danach "Endet bald" als Text
     Und die Überschrift lautet "MYSTERIUM DER PAARE in Monschau" ohne den Zusatz "Endet bald"
 
   # EARS: BLG-UB-6
@@ -96,6 +96,6 @@ Funktionalität: Blog: Magazin und Beitrag
   Szenario: Beitragsseite zeigt Badges
     Angenommen der Beitrag "mysterium-der-paare-endet-bald" zur Gruppenausstellung "mysterium-der-paare"
     Wenn die Detailseite aufgerufen wird
-    Dann erscheinen unter dem Datum die Badges "Endet bald" und "Gruppenausstellung" als Text
+    Dann erscheinen unter dem Datum zuerst "Gruppenausstellung" und danach "Endet bald" als Text
     Und ein Beitrag ohne Ausstellung zeigt keine Badges
 

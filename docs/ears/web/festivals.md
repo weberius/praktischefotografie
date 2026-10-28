@@ -14,3 +14,6 @@ Begriffe: „heute“ ist das aktuelle Datum der Anwendung (in Tests ein fester 
 | FST-UB-4 | Die Webanwendung soll auf der Festivalseite, wenn Ausstellungen zugeordnet sind, Links auf `/map?festival=<id>` und `/venues?festival=<id>` anbieten. | `web/festivals.feature` · „Festivalfilter in Karte und Orten“ | – | ADR-004 |
 | FST-UB-5 | Die Webanwendung soll auf `/map` und `/venues` den Filter `festival` bereitstellen, der nur Orte mit mindestens einer Ausstellung dieses Festivals zeigt. | `web/festivals.feature` · „Festivalfilter in Karte und Orten“ | – | ADR-004 |
 | FST-ST-3 | Wenn das Festival bei einem Filteraufruf unbekannt ist, soll die Webanwendung die Liste ohne Orte mit einem Hinweis auf den unbekannten Filter zeigen. | `web/festivals.feature` · „Unbekanntes Festival im Filter“ | – | ADR-004 |
+| FST-UB-6 | Die Webanwendung soll auf der Festivalseite jede Ausstellung mit der Badge-Zeile (Art, danach Status, danach bei offiziellen Partnern „Offizieller Partner“) oberhalb der Überschrift zeigen. | `web/festivals.feature` · „Festivalseite listet Ausstellungen“ | Q-USE-4, Q-USE-7 | ADR-015 |
+
+**Ergänzung 2026-10-28:** FST-UB-6 ergänzt FST-UB-3; die Kennzeichnung „Offizieller Partner“ steht in der Badge-Zeile nach dem Status.

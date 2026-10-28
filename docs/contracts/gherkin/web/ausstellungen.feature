@@ -7,6 +7,13 @@ Funktionalität: Ausstellungen
     Wenn "/exhibitions" aufgerufen wird
     Dann zeigt jede Titel, Ort, Zeitraum und den Status als Text
 
+  # EARS: EXH-UB-8
+  Szenario: Badges oben in der Liste
+    Angenommen eine Gruppenausstellung, die kommt
+    Wenn "/exhibitions" aufgerufen wird
+    Dann beginnt die Karte mit den Badges "Gruppenausstellung" und danach "Kommend"
+    Und danach folgt die Überschrift
+
   # EARS: EXH-UB-2
   Szenariogrundriss: Status der Ausstellung
     Angenommen das heutige Datum 2026-10-27
@@ -28,11 +35,11 @@ Funktionalität: Ausstellungen
     Wenn der Status "kommend" gewählt wird
     Dann erscheint nur die kommende
 
-  # EARS: EXH-UB-4
+  # EARS: EXH-UB-4 (ersetzt durch EXH-UB-9), EXH-UB-9
   Szenario: Ausstellungsdetail
     Angenommen die Ausstellung "a-1" mit Ort und zwei Fotograf:innen
     Wenn "/exhibitions/a-1" aufgerufen wird
-    Dann erscheinen Beschreibung, Typ, der Ort mit Link und beide Fotograf:innen mit Links
+    Dann erscheinen Beschreibung, die Badges "Gruppenausstellung" und danach der Status, der Ort mit Link und beide Fotograf:innen mit Links
 
   # EARS: EXH-OP-1 (ersetzt durch EXH-OP-2), EXH-OP-2
   Szenario: Ausstellung eines Festivals

@@ -2,17 +2,18 @@ import { Component, computed, effect, inject, input, signal } from '@angular/cor
 import { RouterLink } from '@angular/router';
 import { Clock, formatRange } from '../../core/clock';
 import { DataService } from '../../core/data.service';
+import { exhibitionBadgeData } from '../../core/exhibition-kind';
 import { exhibitionStatus } from '../../core/exhibition-status';
 import { PageMeta } from '../../core/page-meta';
 import { languageLabel, lifeLabel, portraitUrl } from '../../core/photographer-profile';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
-import { StatusBadge } from '../../shared/status-badge/status-badge';
+import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
 
 /** Personenseite nach dem Vorbild der Komponist:innen-Seite von klangland: Stammdaten, Portrait mit Bildnachweis, Wikipedia, Ausstellungen (PHO-UB-3, PHO-UB-6 bis PHO-UB-9, PHO-ST-1, PHO-ST-2, PHO-UN-1). */
 @Component({
   selector: 'app-photographer-detail-page',
-  imports: [RouterLink, DataGate, NotFound, StatusBadge],
+  imports: [RouterLink, DataGate, NotFound, ExhibitionBadges],
   templateUrl: './photographer-detail.html',
   styleUrl: './photographer-detail.css',
 })
@@ -38,7 +39,7 @@ export class PhotographerDetailPage {
       .exhibitions()
       .filter((e) => e.photographerIds.includes(this.id()))
       .sort((a, b) => b.startDate.localeCompare(a.startDate))
-      .map((e) => ({ exhibition: e, venue: this.data.venueById().get(e.venueId), status: exhibitionStatus(e, this.today) })),
+      .map((e) => ({ exhibition: e, venue: this.data.venueById().get(e.venueId), status: exhibitionStatus(e, this.today), badges: exhibitionBadgeData(e, this.today) })),
   );
 
   constructor() {

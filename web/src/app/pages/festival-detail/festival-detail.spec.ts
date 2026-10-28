@@ -66,4 +66,14 @@ describe('FestivalDetailPage', () => {
     expect(root.querySelector('app-not-found')).not.toBeNull();
     expect(TestBed.inject(Title).getTitle()).toContain('Nicht gefunden');
   });
+
+  it('Szenario: Offizieller Partner in der Badge-Zeile (FST-UB-6, BDG-UB-6, BDG-UB-7)', async () => {
+    const root = await open('/festivals/photoszene-festival-2026');
+    const cards = Array.from(root.querySelectorAll('ul.card-list li'));
+    const texts = (c: Element) => Array.from(c.querySelectorAll('.badge-row .badge')).map((b) => b.textContent?.trim());
+    expect(texts(cards[0])).toEqual(['Einzelausstellung', 'Kommend', 'Offizieller Partner']);
+    expect(texts(cards[1])).toEqual(['Einzelausstellung', 'Kommend']);
+    for (const c of cards) expect(Array.from(c.children).map((x) => x.tagName.toLowerCase()).slice(0, 2)).toEqual(['app-exhibition-badges', 'h3']);
+    expect(root.querySelectorAll('app-status-badge').length).toBe(0);
+  });
 });

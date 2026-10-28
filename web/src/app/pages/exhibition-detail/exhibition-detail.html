@@ -1,12 +1,7 @@
 <app-data-gate>
   @if (exhibition(); as exhibition) {
     <h1>{{ exhibition.title }}</h1>
-    <p>
-      @if (status(); as status) {
-        <app-status-badge [status]="status" />
-      }
-      <span class="badge">{{ typeLabel[exhibition.type] }}</span>
-    </p>
+    <app-exhibition-badges [kind]="kind()" [second]="second()" />
     <p class="meta">{{ formatRange(exhibition.startDate, exhibition.endDate) }}</p>
     @if (exhibition.description) {
       <p>{{ exhibition.description }}</p>

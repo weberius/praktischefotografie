@@ -86,17 +86,17 @@ describe('PostDetailPage', () => {
     }
   });
 
-  it('Szenario: Beitragsseite zeigt Badges (BLG-UB-8)', async () => {
+  it('Szenario: Beitragsseite zeigt Badges (BLG-UB-8, BLG-UB-9)', async () => {
     const news = { id: 'a-laufend-endet-bald', slug: 'a-laufend-endet-bald', title: 'Ausstellung a-laufend in Essen', date: '2026-10-18', linkedVenueIds: ['v-essen'], linkedExhibitionIds: ['a-laufend'], contentFile: 'content/posts/a-laufend-endet-bald.md' };
     const { el } = await open('/posts/a-laufend-endet-bald', { dataset: { posts: [news] } });
-    const badges = Array.from(el.querySelectorAll('.badges .badge')).map((b) => b.textContent?.trim());
-    expect(badges).toEqual(['Endet bald', 'Gruppenausstellung']);
+    const badges = Array.from(el.querySelectorAll('.badge-row .badge')).map((b) => b.textContent?.trim());
+    expect(badges).toEqual(['Gruppenausstellung', 'Endet bald']);
     const order = Array.from(el.querySelector('article')!.children).map((c) => c.tagName.toLowerCase());
     expect(order.slice(0, 3)).toEqual(['h1', 'p', 'app-news-badges']);
   });
 
-  it('Beitrag ohne Ausstellung zeigt keine Badges (BLG-UB-8)', async () => {
+  it('Beitrag ohne Ausstellung zeigt keine Badges (BLG-UB-8, BLG-UB-9)', async () => {
     const { el } = await open('/posts/willkommen');
-    expect(el.querySelector('.badges')).toBeNull();
+    expect(el.querySelector('.badge-row')).toBeNull();
   });
 });

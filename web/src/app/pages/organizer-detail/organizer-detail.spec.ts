@@ -87,4 +87,15 @@ describe('OrganizerDetailPage', () => {
     expect(root.querySelector('app-not-found')).not.toBeNull();
     expect(TestBed.inject(Title).getTitle()).toContain('Nicht gefunden');
   });
+
+  it('Szenario: Ausstellungen des Veranstalters tragen Badges (ORG-UB-9, BDG-UB-6)', async () => {
+    const root = await open('/organizers/photoszene-koeln');
+    const cards = Array.from(root.querySelectorAll('ul.card-list li'));
+    expect(cards.length).toBe(2);
+    for (const c of cards) {
+      expect(Array.from(c.querySelectorAll('.badge-row .badge')).map((b) => b.textContent?.trim())).toEqual(['Einzelausstellung', 'Kommend']);
+      expect(Array.from(c.children).map((x) => x.tagName.toLowerCase()).slice(0, 2)).toEqual(['app-exhibition-badges', 'h3']);
+    }
+    expect(root.querySelectorAll('app-status-badge').length).toBe(0);
+  });
 });

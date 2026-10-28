@@ -55,11 +55,25 @@ describe('CalendarPage', () => {
     expect(laufend.textContent).not.toContain('Endet bald');
   });
 
-  it('Szenario: Einträge sind als Ausstellung oder Event beschriftet (CAL-UB-4)', async () => {
+  it('Szenario: Einträge tragen Art und Status (CAL-UB-7, BDG-UB-1, BDG-UB-2)', async () => {
     const { el } = await open('/calendar');
-    const kind = (title: string) => entries(el).find((li) => li.querySelector('h3')?.textContent?.trim() === title)?.querySelector('.kind')?.textContent?.trim();
-    expect(kind('Ausstellung a-laufend')).toBe('Ausstellung');
-    expect(kind('Artist Talk')).toBe('Event');
+    const badges = (title: string) =>
+      Array.from(entries(el).find((li) => li.querySelector('h3')?.textContent?.trim() === title)?.querySelectorAll('.badge-row .badge') ?? []).map((b) => b.textContent?.trim());
+    // a-laufend: zwei Personen → Gruppenausstellung; kein Statusbadge (laufend)
+    expect(badges('Ausstellung a-laufend')).toEqual(['Gruppenausstellung']);
+    // a-endet-bald: eine Person → Einzelausstellung, danach Endet bald
+    expect(badges('Ausstellung a-endet-bald')).toEqual(['Einzelausstellung', 'Endet bald']);
+    expect(badges('Artist Talk')).toEqual(['Event']);
+    const kinds = Array.from(el.querySelectorAll('.badge-row .badge.kind')).map((b) => b.textContent?.trim());
+    expect(kinds).not.toContain('Ausstellung'); // die allgemeine Beschriftung „Ausstellung“ entfällt
+  });
+
+  it('Szenario: Abstand zwischen Badges (BDG-UB-3, Q-USE-7) – 0,25 em in der Agenda', async () => {
+    const { el } = await open('/calendar');
+    const row = entries(el).find((li) => li.textContent?.includes('Ausstellung a-endet-bald'))!.querySelector('.badge-row') as HTMLElement;
+    const style = getComputedStyle(row);
+    expect(row.querySelectorAll('.badge').length).toBe(2);
+    expect(Math.abs(parseFloat(style.columnGap) - parseFloat(style.fontSize) * 0.25)).toBeLessThan(0.2);
   });
 
   it('Szenario: Beendete sind standardmäßig ausgeblendet (CAL-OP-1)', async () => {

@@ -55,3 +55,9 @@ Funktionalität: Veranstalter:innen und Festivals
     Angenommen der Veranstalter "photoszene-koeln" mit Beschreibung und Instagram-Name "photoszene_koeln"
     Wenn die Veranstalterseite aufgerufen wird
     Dann erscheinen die Beschreibung und ein Link auf "https://www.instagram.com/photoszene_koeln/"
+
+  # EARS: ORG-UB-9
+  Szenario: Ausstellungen des Veranstalters tragen Badges
+    Angenommen ein Veranstalter mit einem Festival, das eine kommende Einzelausstellung enthält
+    Wenn die Veranstalterseite aufgerufen wird
+    Dann beginnt die Karte der Ausstellung mit "Einzelausstellung" und danach "Kommend"

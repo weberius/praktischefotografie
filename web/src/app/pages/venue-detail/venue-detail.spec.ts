@@ -65,4 +65,14 @@ describe('VenueDetailPage', () => {
     const el = await open('/venues/unbekannt');
     expect(el.querySelector('app-not-found')).not.toBeNull();
   });
+
+  it('Szenario: Ausstellungen der Ortsseite tragen Badges (VNU-UB-6, BDG-UB-6)', async () => {
+    setup();
+    const el = await open('/venues/v-koeln-lib');
+    const card = Array.from(el.querySelectorAll('ul.card-list li.card')).find((c) => c.textContent?.includes('Ausstellung a-endet-bald')) as HTMLElement;
+    expect(Array.from(card.children).map((c) => c.tagName.toLowerCase()).slice(0, 2)).toEqual(['app-exhibition-badges', 'h4']);
+    expect(Array.from(card.querySelectorAll('.badge-row .badge')).map((b) => b.textContent?.trim())).toEqual(['Einzelausstellung', 'Endet bald']);
+    expect(card.querySelector('app-status-badge')).toBeNull();
+    expect(getComputedStyle(card.querySelector('app-exhibition-badges')!).marginTop).toBe('0px');
+  });
 });

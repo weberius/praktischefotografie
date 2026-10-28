@@ -34,14 +34,7 @@
       <ol class="card-list agenda">
         @for (item of items(); track item.kind + item.id) {
           <li class="card">
-            <p class="meta">
-              <span class="badge kind" [class.kind-event]="item.kind === 'Event'">{{ item.kind }}</span>
-              @if (item.kind === 'Ausstellung' && (item.status === 'endet-bald' || item.status === 'beendet')) {
-                <app-status-badge [status]="item.status!" />
-              } @else if (item.kind === 'Event' && item.endDate < today) {
-                <span class="badge status-beendet">Beendet</span>
-              }
-            </p>
+            <app-exhibition-badges [kind]="item.art" [dashed]="item.kind === 'Event'" [second]="secondBadge(item)" />
             <h3><a [routerLink]="item.link">{{ item.title }}</a></h3>
             @if (item.venue) {
               <p>{{ item.venue }}</p>

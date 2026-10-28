@@ -62,12 +62,12 @@
         <ul class="card-list">
           @for (item of exhibitions(); track item.exhibition.id) {
             <li class="card">
+              <app-exhibition-badges [kind]="item.badges.kind" [second]="item.badges.second" />
               <h3><a [routerLink]="['/exhibitions', item.exhibition.id]">{{ item.exhibition.title }}</a></h3>
               @if (item.venue) {
                 <p>{{ item.venue.name }}</p>
               }
               <p class="meta">{{ formatRange(item.exhibition.startDate, item.exhibition.endDate) }}</p>
-              <p><app-status-badge [status]="item.status" /></p>
             </li>
           }
         </ul>

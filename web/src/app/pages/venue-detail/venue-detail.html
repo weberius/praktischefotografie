@@ -34,9 +34,9 @@
         <ul class="card-list">
           @for (item of exhibitions(); track item.exhibition.id) {
             <li class="card">
+              <app-exhibition-badges [kind]="item.badges.kind" [second]="item.badges.second" />
               <h4><a [routerLink]="['/exhibitions', item.exhibition.id]">{{ item.exhibition.title }}</a></h4>
               <p class="meta">{{ formatRange(item.exhibition.startDate, item.exhibition.endDate) }}</p>
-              <p><app-status-badge [status]="item.status" /></p>
             </li>
           }
         </ul>

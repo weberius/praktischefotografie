@@ -41,6 +41,20 @@ describe('ExhibitionListPage', () => {
     expect(items[2].textContent).toContain('Beendet');
   });
 
+  it('Szenario: Badges oben in der Liste (EXH-UB-8, BDG-UB-2) – zuerst die Art, danach der Status, vor der Überschrift', async () => {
+    const { el } = await open('/exhibitions');
+    const items = cards(el);
+    for (const item of items) {
+      const children = Array.from(item.children).map((c) => c.tagName.toLowerCase());
+      expect(children[0]).toBe('app-exhibition-badges');
+      expect(children[1]).toBe('h2');
+    }
+    const badges = (i: Element) => Array.from(i.querySelectorAll('.badge-row .badge')).map((b) => b.textContent?.trim());
+    expect(badges(items[0])).toEqual(['Einzelausstellung', 'Kommend']);
+    expect(badges(items[1])).toEqual(['Einzelausstellung', 'Endet bald']);
+    expect(badges(items[2])).toEqual(['Einzelausstellung', 'Beendet']);
+  });
+
   it('Szenario: Liste ist nach Status filterbar (EXH-UB-3)', async () => {
     const { harness, el } = await open('/exhibitions');
     const select = el.querySelector('select') as HTMLSelectElement;

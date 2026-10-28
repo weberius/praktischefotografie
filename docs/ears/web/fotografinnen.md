@@ -19,4 +19,6 @@ Begriffe: „heute“ ist das aktuelle Datum der Anwendung (in Tests ein fester 
 | PHO-UN-1 | Wenn das Portrait nicht geladen werden kann, soll die Webanwendung die Personenseite ohne Bild und ohne Bildnachweis weiter anzeigen. | `web/fotografinnen.feature` · „Portrait nicht ladbar“ | Q-USE-2 | ADR-002 |
 
 **Supersede 2026-10-28:** PHO-UB-2 wird durch PHO-UB-6 ersetzt (Lebensdaten ergänzt). Darstellung und Aufbau folgen der Komponist:innen-Seite von klangland.
+| PHO-UB-10 | Die Webanwendung soll auf der Personenseite jede Ausstellung der Person mit der Badge-Zeile (Art, danach Status) oberhalb der Überschrift zeigen. | `web/fotografinnen.feature` · „Ausstellungen der Person tragen Badges“ | Q-USE-4, Q-USE-7 | ADR-015 |
 
+**Ergänzung 2026-10-28:** PHO-UB-10 ergänzt PHO-UB-3; der Status steht in der Badge-Zeile statt unter dem Zeitraum.
