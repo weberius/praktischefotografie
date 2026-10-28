@@ -193,6 +193,42 @@
       "cached": 6,
       "errors": [],
       "notes": []
+    },
+    {
+      "venueId": "fotoraum-koeln",
+      "status": "abgerufen",
+      "pages": 5,
+      "fetched": 5,
+      "cached": 0,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "michael-horbach-stiftung",
+      "status": "abgerufen",
+      "pages": 3,
+      "fetched": 3,
+      "cached": 0,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "photoszene-koeln",
+      "status": "abgerufen",
+      "pages": 6,
+      "fetched": 6,
+      "cached": 0,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "duesseldorf-photo-plus",
+      "status": "abgerufen",
+      "pages": 1,
+      "fetched": 1,
+      "cached": 0,
+      "errors": [],
+      "notes": []
     }
   ]
 }

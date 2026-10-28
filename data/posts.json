@@ -544,5 +544,47 @@
       "photography-masters-2026"
     ],
     "contentFile": "content/posts/photography-masters-2026-ende.md"
+  },
+  {
+    "id": "men-dont-cry-2026-eroeffnung",
+    "slug": "men-dont-cry-2026-eroeffnung",
+    "title": "Eröffnung: Men Don't Cry im fotoraum köln",
+    "date": "2026-09-19",
+    "excerpt": "Am 19. September 2026 eröffnet der fotoraum köln die Ausstellung „Men Don't Cry“ von Hannes Jung.",
+    "linkedVenueIds": [
+      "fotoraum-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "men-dont-cry-2026"
+    ],
+    "contentFile": "content/posts/men-dont-cry-2026-eroeffnung.md"
+  },
+  {
+    "id": "men-dont-cry-2026-endet-bald",
+    "slug": "men-dont-cry-2026-endet-bald",
+    "title": "Endet bald: Men Don't Cry im fotoraum köln",
+    "date": "2026-10-18",
+    "excerpt": "Die Ausstellung von Hannes Jung im fotoraum köln läuft nur noch bis zum 1. November 2026.",
+    "linkedVenueIds": [
+      "fotoraum-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "men-dont-cry-2026"
+    ],
+    "contentFile": "content/posts/men-dont-cry-2026-endet-bald.md"
+  },
+  {
+    "id": "men-dont-cry-2026-ende",
+    "slug": "men-dont-cry-2026-ende",
+    "title": "Ende: Men Don't Cry im fotoraum köln",
+    "date": "2026-11-02",
+    "excerpt": "Die Ausstellung von Hannes Jung im fotoraum köln ist am 1. November 2026 zu Ende gegangen.",
+    "linkedVenueIds": [
+      "fotoraum-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "men-dont-cry-2026"
+    ],
+    "contentFile": "content/posts/men-dont-cry-2026-ende.md"
   }
 ]
