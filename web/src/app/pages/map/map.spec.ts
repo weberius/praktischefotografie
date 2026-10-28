@@ -1,4 +1,4 @@
-// Gherkin: web/karte.feature (MAP-UB-1 bis MAP-UB-4, MAP-EV-1, MAP-UN-1) und web/veranstalter.feature · „Festivalfilter in der Karte“ (ORG-UB-4)
+// Gherkin: web/karte.feature (MAP-UB-1 bis MAP-UB-4, MAP-EV-1, MAP-UN-1), web/veranstalter.feature · „Veranstalterfilter in der Karte“ (ORG-UB-6) und web/festivals.feature · „Festivalfilter in Karte und Orten“ (FST-UB-5)
 import { Location } from '@angular/common';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
@@ -34,6 +34,8 @@ function toggle(root: HTMLElement, label: string): void {
 }
 
 async function until(condition: () => boolean, harness: RouterTestingHarness): Promise<void> {
+  // Die Karte startet erst, wenn sie sichtbar wird; je nach Browser und Fenstergröße liegt sie sonst außerhalb des Sichtbereichs.
+  (harness.routeNativeElement as HTMLElement).querySelector('app-venue-map')?.scrollIntoView();
   for (let i = 0; i < 150 && !condition(); i++) {
     await new Promise((r) => setTimeout(r, 25));
     harness.detectChanges();
