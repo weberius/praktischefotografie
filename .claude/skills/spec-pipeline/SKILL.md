@@ -3,7 +3,7 @@ name: spec-pipeline
 description: Übersetzt eine Vision (MSCO-Ticket/PRD) über wertorientierte UserStories in eine explizite, mehrdimensionale Spezifikation (EARS, Gherkin, Quality nach arc42, ADR), leitet daraus atomare Tasks ab, setzt sie um und lässt das Ergebnis per Human-in-the-Loop gegen die Intention prüfen. Menschliche Interaktion nur an zwei Punkten – Vision und Human in the Loop; alle anderen Phasen laufen autonom. Abweichungen werden an ihrer Quelle korrigiert (Story/EARS/Gherkin/Quality/ADR/Task), bevor das akzeptierte Ergebnis die vier Reviews durchläuft.
 argument-hint: "[--ticket MSCO-123] [--phase N] [--resume] [--gated]"
 disable-model-invocation: true
-allowed-tools: Read, Grep, Glob, Write, Edit, AskUserQuestion, Agent, Bash(git diff:*), Bash(git log:*), Bash(git branch:*), Bash(git status:*), Bash(git merge-base:*), Bash(git ls-files:*), Bash(git mv:*), Bash(npm test:*), Bash(npm run test:*), Bash(npm run lint:*), Bash(npm run eslint:*), Bash(npm run stylelint:*), Bash(npm run prettier:*), Bash(npm run prettier-check:*), Bash(npm run build:*)
+allowed-tools: Read, Grep, Glob, Write, Edit, AskUserQuestion, Agent, Bash(git diff:*), Bash(git log:*), Bash(git branch:*), Bash(git switch:*), Bash(git status:*), Bash(git merge-base:*), Bash(git ls-files:*), Bash(git mv:*), Bash(npm test:*), Bash(npm run test:*), Bash(npm run lint:*), Bash(npm run eslint:*), Bash(npm run stylelint:*), Bash(npm run prettier:*), Bash(npm run prettier-check:*), Bash(npm run build:*), Bash(npm run web:test:*), Bash(npm run web:lint:*), Bash(npm run lint:all:*), Bash(npm run validate:data:*)
 ---
 
 # Spec Pipeline
@@ -38,11 +38,11 @@ Der Mensch wird **nur an zwei Stellen** einbezogen:
 | Haltepunkt | Phase | Wozu |
 | --- | --- | --- |
 | **H1 – Vision** | 1 | Klärung der Vision per gezielter Nachfrage, Freigabe von Ziel, Abgrenzung und Review-Schwelle |
-| **H2 – Human in the Loop** | 6 | Ergebnis gegen die Intention prüfen: akzeptieren oder Abweichung samt Ursache benennen |
+| **H2 – Human in the Loop** | 6 und 7 | **Je Story zweimal:** (a) Ergebnis gegen die Intention prüfen – akzeptieren oder Abweichung samt Ursache benennen; (b) Review-Analysen und vorgeschlagene Tasks abnehmen |
 
-Alles dazwischen und danach – UserStories, alle vier Spezifikationssichten, Tasks, Implementierung,
-Quellkorrekturen nach einem Rücklauf, Review-Triage und Closure – läuft **ohne Rückfrage** in einem
-Zug durch. Ein Aufruf arbeitet von der aktuellen Phase bis zum nächsten Haltepunkt (bzw. bis zur
+Alles dazwischen – UserStories, alle vier Spezifikationssichten, Tasks, Implementierung,
+Quellkorrekturen nach einem Rücklauf und Closure – läuft **ohne Rückfrage** in einem Zug durch. Die
+Review-Abnahme je Story (Phase 7) ist die zweite H2-Runde, keine neue Art von Haltepunkt. Ein Aufruf arbeitet von der aktuellen Phase bis zum nächsten Haltepunkt (bzw. bis zur
 Closure) und hält nur dort an.
 
 **Statt Rückfragen in autonomen Phasen:**
@@ -63,11 +63,15 @@ harten Leitplanke ohne vertretbare Annahme), wird ausnahmsweise zu H1 zurückgek
 
 - **Nicht über einen Haltepunkt hinwegarbeiten.** An H1 und H2 wird immer gestoppt bzw. per
   `AskUserQuestion` entschieden; ohne ausdrückliche Freigabe geht es nicht weiter.
+- **Feature-Branch statt Hauptbranch.** Phase 0 legt für das Ticket automatisch den Branch `feature/<TICKET>-<slug>` an bzw. wechselt auf ihn; auf dem Hauptbranch (`main`/`master`) werden keine Artefakte geschrieben. Commits, Push und Merge macht der Skill nicht von sich aus, sondern nur auf Wunsch.
 - **Code nur in Phase 5.** Alle anderen Phasen ändern nur Spec-/Planning-Artefakte unter `docs/`.
 - **Bestehendes nicht still überschreiben.** Geänderte EARS/Gherkin/Quality/ADR per
   **Supersede/Deprecate** dokumentieren (alte Fassung referenziert behalten, Grund nennen).
 - **Tasks entstehen aus der gesamten Spezifikation**: Story + EARS + Gherkin + Quality + ADR.
-- **Review nur auf akzeptierte Ergebnisse.** Phase 7 startet erst nach „Akzeptiert" an H2.
+- **Prüf-Gate nach jedem Task.** Ein Task gilt erst als `Umgesetzt`, wenn Build, Tests und Lint grün
+  sind (Details: phase-guides.md, Phase 5). Ohne grünes Gate wird nicht mit dem nächsten Task begonnen.
+- **Review nur auf akzeptierte Ergebnisse, je Story.** Phase 7 startet erst nach „Akzeptiert" an H2 und
+  erzeugt zunächst nur Analysen und vorgeschlagene Tasks. Setzt etwas daraus um, erst **nach Abnahme**.
 - **Review-Skills bleiben unangetastet.** Sie werden gelesen und von Subagents befolgt, nie verändert.
 - **Ehrlich berichten.** Nicht Geprüftes, rote Tests und getroffene Annahmen werden an H2 vollständig
   offengelegt, nicht beschönigt.
@@ -88,11 +92,22 @@ harten Leitplanke ohne vertretbare Annahme), wird ausnahmsweise zu H1 zurückgek
 
 - `--ticket MSCO-123` setzt den Ketten-Kopf. Fehlt er, aus dem Branchnamen ableiten
   (`[A-Z]+-[0-9]+`); ohne Ticket (Service-Arbeiten) lokalen Platzhalter `SERVICE-NN` vergeben.
-- `--resume` liest `PIPELINE.md` und setzt am ersten offenen Punkt fort (inkl. offener Rückläufe).
+- `--resume` liest `PIPELINE.md`, wechselt auf den dort eingetragenen Branch (falls nötig) und setzt am ersten offenen Punkt fort (inkl. offener Rückläufe).
   Ohne Argumente verhält sich der Aufruf wie `--resume`; ohne `PIPELINE.md` beginnt er bei Phase 0.
 - `--phase N` startet gezielt bei Phase N (Vorphasen müssen laut `PIPELINE.md` erledigt sein) und läuft
   dann regulär bis zum nächsten Haltepunkt.
 - `--gated` hält nach jeder Phase an (siehe oben).
+
+### Übergabe aus `spec-intake`
+
+Hat [`spec-intake`](../spec-intake/SKILL.md) den Kontext bereits erstellt, steht in `PIPELINE.md`
+Phase 1 auf **`Entwurf (Intake)`** und Phase 0, 2 und 3 auf `Erledigt`. Dann gilt:
+
+- Der Aufruf von `spec-pipeline` **ist die Freigabe von H1** – keine weitere Rückfrage. Phase 1 auf
+  `Freigegeben` setzen (Review-Schwelle aus `PIPELINE.md` übernehmen) und bei **Phase 4** fortfahren.
+- Der Entwurf wird nicht neu erarbeitet. Hat der Mensch ihn im Chat nachgeschärft, zuerst die
+  betroffene Quelle anpassen und den Konsistenzcheck wiederholen.
+- Die `ANNAHME:`-Punkte aus dem Intake bleiben offen und gehen an H2.
 
 ## Die Phasen
 
@@ -100,14 +115,18 @@ Details, Eingaben, Ausgaben und Checklisten: [references/phase-guides.md](refere
 
 | # | Phase | Leitfrage | Kernaktion | Modus |
 | --- | --- | --- | --- | --- |
-| 0 | **Setup** | – | Ticket-Key, Kontext laden, Planning-Ordner + `PIPELINE.md` | autonom |
+| 0 | **Setup** | – | Ticket-Key, Kontext laden, Planning-Ordner + `PIPELINE.md`, **Feature-Branch** | autonom |
 | 1 | **Vision** | Warum und wofür? | Ticket/PRD einlesen, gezielt nachfragen, EPIC-Notiz + Review-Schwelle | **H1** |
 | 2 | **UserStory** | Welchen Wert für wen? | wertorientierte, überschaubare Stories (INVEST), **ohne Lösung** | autonom |
 | 3 | **Spezifikation** | Was muss gelten? | alle vier Sichten (EARS · Gherkin · Quality · ADR) + Konsistenzcheck | autonom |
 | 4 | **Tasks** | Was ist konkret zu tun? | atomare, überprüfbare `TASK-MM` aus Story + allen Sichten | autonom |
-| 5 | **Implement** | Umsetzen und prüfen | alle Tasks: Code + Tests + Lint; Gherkin/Quality als **Prüfmaßstab** | autonom |
-| 6 | **Human in the Loop** | Entspricht das Ergebnis der Intention? | Prüfpaket vorlegen; Akzeptanz oder Abweichung + Ursache | **H2** |
-| 7 | **Review** | Ist das Ergebnis abgesichert? | vier Reviews per Subagent, Severity-Triage, Rückläufe quellgerecht | autonom |
+| 5 | **Implement** | Umsetzen und prüfen | je Task: Code + Tests, danach **Prüf-Gate** (Build, Tests, Lint); Gherkin/Quality als **Prüfmaßstab** | autonom |
+| 6 | **Human in the Loop** | Entspricht das Ergebnis der Intention? | **je Story:** Prüfpaket vorlegen; Akzeptanz oder Abweichung + Ursache | **H2** |
+| 7 | **Review** | Ist das Ergebnis abgesichert? | **je Story:** Reviews per Subagent → Analyse-Dokumente + vorgeschlagene Tasks → **Abnahme (H2)** → Umsetzung freigegebener Tasks | autonom, Abnahme **H2** |
+
+**Story-Schleife:** Phase 5–7 laufen **pro Story**. Eine Story ist erst abgeschlossen, wenn ihre Tasks
+umgesetzt sind (Prüf-Gate grün), das Ergebnis akzeptiert ist und die Review-Befunde abgenommen und
+abgearbeitet bzw. begründet zurückgestellt sind. Erst dann beginnt die nächste Story.
 | — | **Closure** | – | alle Stories `done`: `CLOSURE`-Bericht, Ordner nach `done/` | autonom |
 
 ### Phase 3 – vier Sichten, keine Sequenz
@@ -143,11 +162,11 @@ für `--resume`.
 ```markdown
 # Pipeline: <TICKET> – <Titel>
 
-**Review-Schwelle:** <z. B. kritisch + hoch lösen Rücklauf aus>  ·  **Modus:** <autonom | gated>
+**Review-Schwelle:** <z. B. kritisch + hoch lösen Rücklauf aus>  ·  **Modus:** <autonom | gated>  ·  **Branch:** <feature/TICKET-slug>
 
 | Phase | Artefakt(e) | Status | Datum |
 | --- | --- | --- | --- |
-| 0 Setup | Ordner, PIPELINE.md | … | … |
+| 0 Setup | Ordner, PIPELINE.md, Feature-Branch | … | … |
 | 1 Vision (H1) | EPIC, Annahmen | Offen / Freigegeben | … |
 | 2 UserStory | STORY-NN | … | … |
 | 3 Spezifikation · EARS | ears/<bereich>/<faehigkeit>.md (Req-IDs) | … | … |
@@ -196,8 +215,8 @@ Status: `Offen` · `In Arbeit` · `Erledigt` · `Nicht erforderlich` · `Rückla
 
 ### Abschlussmeldung eines Laufs
 
-Endet ein Lauf (an H1, H2 oder nach der Closure), kurz berichten: geschriebene/geänderte Dateien
-(mit Pfad), was autonom entschieden wurde, offene Annahmen, nächster Schritt.
+Endet ein Lauf (an H1, H2 oder nach der Closure), kurz berichten: Branch, geschriebene/geänderte Dateien
+(mit Pfad), was autonom entschieden wurde, offene Annahmen, nächster Schritt (bei der Closure: Commit und Merge des Branches anbieten).
 
 ## Changelog
 

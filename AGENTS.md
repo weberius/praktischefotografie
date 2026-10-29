@@ -26,7 +26,7 @@ docs/
 | Artefakt | Ort |
 |---|---|
 | PRD / Vision | `docs/product/prd.md` |
-| Ideen | `docs/product/ideen.md` |
+| Idee | `docs/product/ideen/<slug>.md` (Format: [README](docs/product/ideen/README.md)) |
 | ADR | `docs/architecture/ADR-NNN-slug.md` (fortlaufende Nummer) |
 | EARS-Anforderung | `docs/ears/<bereich>/<faehigkeit>.md` (ohne Ticket-Key) |
 | Gherkin-Feature | `docs/contracts/gherkin/<bereich>/<name>.feature` |
@@ -60,11 +60,15 @@ Vision ──► UserStory ──► Spezifikation ──► Tasks ──► Imp
 
 **Leitprinzip:** Korrigiere die Quelle einer Abweichung, nicht nur deren Ergebnis.
 
+### Einstieg: `spec-intake`
+
+Änderungswünsche werden als Ideen in `docs/product/ideen/` gesammelt (eine Datei pro Idee, Reihenfolge über `prio` im Dateikopf) und mit dem Skill [`spec-intake`](.claude/skills/spec-intake/SKILL.md) verarbeitet (`/spec-intake`, `/spec-intake --idee <slug>` oder `/spec-intake <Freitext>`). Er erstellt EPIC-Notiz, Story, EARS, Gherkin, Quality und ggf. einen ADR (`Proposed`) als Entwurf, ändert keinen Code und stellt keine Rückfragen. Erst `/spec-pipeline` leitet daraus Tasks ab und setzt sie um; der Aufruf gilt als Freigabe von H1. Ohne laufende Pipeline entstehen keine Codeänderungen.
+
 ### Phasen
 
 | # | Phase | Leitfrage | Ergebnis | Modus |
 |---|---|---|---|---|
-| 0 | Setup | – | Ticket-Ordner unter `docs/planning/`, `PIPELINE.md` | autonom |
+| 0 | Setup | – | Ticket-Ordner unter `docs/planning/`, `PIPELINE.md`, Feature-Branch `feature/<TICKET>-<slug>` | autonom |
 | 1 | Vision | Warum und wofür? | EPIC-Notiz, Abgrenzung, Review-Schwelle | **Haltepunkt H1** |
 | 2 | UserStory | Welchen Wert für wen? | `STORY-NN` (INVEST, lösungsneutral) | autonom |
 | 3 | Spezifikation | Was muss gelten? | EARS, Gherkin, Quality, ADR und Konsistenzcheck | autonom |
@@ -77,6 +81,9 @@ Vision ──► UserStory ──► Spezifikation ──► Tasks ──► Imp
 ### Regeln
 
 - **Nur zwei Haltepunkte:** Der Mensch wird an H1 (Vision) und H2 (Ergebnis) einbezogen. Alle anderen Phasen laufen ohne Rückfrage. Unklarheiten werden als `ANNAHME:` markiert und an H2 vorgelegt.
+- **Feature-Branch:** Phase 0 legt automatisch den Branch `feature/<TICKET>-<slug>` an; auf dem Hauptbranch entstehen keine Artefakte. Commit, Push und Merge erfolgen nur auf Wunsch.
+- **Prüf-Gate:** Nach jedem Task müssen `npm run build`, `npm test` / `npm run web:test` und `npm run lint:all` grün sein, bevor der nächste Task beginnt.
+- **Review je Story:** Phase 5–7 laufen pro Story. Das Review erzeugt zuerst Analysen und vorgeschlagene Tasks; umgesetzt wird erst nach Abnahme (zweite H2-Runde).
 - **Code nur in Phase 5:** Alle anderen Phasen ändern ausschließlich Artefakte unter `docs/`.
 - **Vier Sichten in Phase 3:** EARS, Gherkin, Quality und ADR sind parallele Sichten auf dieselbe Veränderung, keine Abfolge. Eine nicht benötigte Sicht wird mit Begründung als „nicht erforderlich“ vermerkt.
 - **Tasks aus der ganzen Spezifikation:** Tasks werden aus Story, EARS, Gherkin, Quality und ADR abgeleitet, nicht aus der Story allein.

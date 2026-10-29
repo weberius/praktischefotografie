@@ -11,7 +11,7 @@ Ein Lauf endet am nächsten Haltepunkt bzw. nach der Closure.
 
 ## Phase 0 – Setup
 
-**Ziel:** Ketten-Kopf und Arbeitsumgebung festlegen.
+**Ziel:** Ketten-Kopf und Arbeitsumgebung (Planning-Ordner, Feature-Branch) festlegen.
 
 1. Ticket-Key bestimmen: `--ticket` → sonst Branchname (`[A-Z]+-[0-9]+`) → sonst `SERVICE-NN`.
 2. Kontext laden: PRD, passende ADRs, bestehende EARS/Gherkin/Quality der voraussichtlich
@@ -19,9 +19,24 @@ Ein Lauf endet am nächsten Haltepunkt bzw. nach der Closure.
 3. Planning-Ordner anlegen: `docs/planning/todo/<TICKET>-<slug>/` (neue Arbeit darf auch
    zunächst in `backlog/` liegen – mit dem Menschen klären).
 4. `PIPELINE.md` aus der Vorlage in `SKILL.md` anlegen.
+5. **Feature-Branch** anlegen (nur in einem Git-Repository; sonst überspringen und in `PIPELINE.md`
+   vermerken):
+   - Aktuellen Branch mit `git branch --show-current` lesen.
+   - Name: `feature/<TICKET>-<slug>` mit dem Ticket-Key in Großbuchstaben und dem Slug des
+     Ticket-Ordners (z. B. `feature/SERVICE-09-badges-auf-allen-seiten`).
+   - Steht der Lauf auf dem Hauptbranch (`main`, `master` oder dem Standardbranch von `origin`) oder auf
+     einem Branch ohne diesen Ticket-Key: Branch mit `git switch -c <name>` anlegen; existiert er
+     bereits, mit `git switch <name>` wechseln. Der neue Branch zweigt vom aktuellen Stand ab; nicht
+     committete Änderungen bleiben im Arbeitsverzeichnis und werden in `PIPELINE.md` als `ANNAHME:`
+     vermerkt.
+   - Steht der Lauf bereits auf einem Branch mit diesem Ticket-Key, bleibt er dort.
+   - Branchname in der Kopfzeile von `PIPELINE.md` eintragen. Bei `--resume` den Branch prüfen und
+     ggf. wechseln.
+   - Der Skill committet, pusht und merged nichts von sich aus; Commits erfolgen nur auf Wunsch des
+     Menschen (z. B. nach der Closure).
 
-**Modus:** autonom → direkt weiter mit Phase 1. Ticket-Key, Ablageort und betroffene Bereiche werden
-an H1 mit vorgelegt.
+**Modus:** autonom → direkt weiter mit Phase 1. Ticket-Key, Ablageort, Branch und betroffene Bereiche
+werden an H1 mit vorgelegt.
 
 ---
 
@@ -29,6 +44,10 @@ an H1 mit vorgelegt.
 
 **Ziel:** Zweck und angestrebtes Ergebnis des Vorhabens eindeutig machen.
 **Artefakt:** EPIC-Notiz (bzw. PRD-Abschnitt). Leitfrage: *Warum und wofür entwickeln wir etwas?*
+
+> **Nach `spec-intake`:** Steht Phase 1 auf `Entwurf (Intake)`, entfällt die Nachfrage. Der Aufruf von
+> `spec-pipeline` ist die Freigabe: Phase 1 auf `Freigegeben` setzen und mit Phase 4 fortfahren
+> (siehe `SKILL.md`, „Übergabe aus `spec-intake`").
 
 1. Ticketinhalt beschaffen (eingefügter Text bzw. bereitgestellte Jira-/GitHub-Quelle). Kein
    Inhalt → beim Menschen anfordern.
@@ -175,15 +194,23 @@ Pro Task:
 2. **Gherkin-Szenarien** des Tasks als automatisierte Tests umsetzen bzw. gegen sie prüfen
    (Cucumber/Step-Definitions, wo vorhanden; sonst 1:1 abgeleitete Tests mit Szenarioverweis).
 3. **Quality-Maße** prüfen, soweit lokal möglich (Messung, a11y-Check, …); nicht Prüfbares nennen.
-4. Unit-Tests (`npm test`) und Lint (`npm run lint`, ESLint mit angular-eslint) im Repo-Root
-   **ausführen**, Ergebnisse festhalten.
-   E2E-Tests (Playwright) benötigen laufendes Backend/Frontend – nur ausführen,
-   wenn verfügbar, sonst als „nicht geprüft" vermerken.
-5. Changelog fortschreiben (Format in `SKILL.md`), Task-Status `Umgesetzt`.
-6. Ohne Halt mit dem nächsten Task weitermachen; nach dem letzten Task direkt zu Phase 6.
+4. **Prüf-Gate** – nach **jedem** Task im Repo-Root ausführen, alle drei Punkte müssen grün sein:
+
+   | Prüfung | Befehl |
+   | --- | --- |
+   | Übersetzt die Anwendung? | `npm run build` |
+   | Tests grün? | `npm test` (Skripte, Daten) und `npm run web:test` (Webapp) |
+   | Lint ohne Befund? | `npm run lint:all` (ESLint Root + `web`) |
+
+   Berührt der Task Daten unter `data/`, zusätzlich `npm run validate:data`. E2E-Tests (Playwright)
+   benötigen laufendes Backend/Frontend – nur ausführen, wenn verfügbar, sonst als „nicht geprüft"
+   vermerken. Ergebnisse (je Befehl grün/rot) im Changelog festhalten.
+5. Changelog fortschreiben (Format in `SKILL.md`), Task-Status `Umgesetzt` – **nur bei grünem Gate**.
+6. Ohne Halt mit dem nächsten Task weitermachen. Nach dem letzten Task der **Story** weiter zu
+   Phase 6 für diese Story (bei mehreren Stories: Story-Schleife, siehe `SKILL.md`).
 
 > **Fehlschläge:** Rote Tests/Lint selbstständig beheben, sofern es ein Umsetzungsfehler ist
-> (höchstens drei Anläufe je Task). Liegt die Ursache in der Spezifikation (z. B. Szenario
+> (höchstens drei Anläufe je Task, danach erneut das gesamte Gate). Liegt die Ursache in der Spezifikation (z. B. Szenario
 > widerspricht EARS) oder bleibt es rot, **nicht** im Code umgehen und **nicht** nachfragen, sondern
 > als Befund dokumentieren und – falls weitere Tasks darauf aufbauen – **vorzeitig zu H2** springen.
 
@@ -221,34 +248,44 @@ Quelle zugeordnet? Rücklauf in `PIPELINE.md` dokumentiert?
 
 ---
 
-## Phase 7 – Review: Ergebnis absichern  · autonom
+## Phase 7 – Review: Ergebnis absichern  · je Story, Abnahme an H2
 
-**Ziel:** Übergreifende Absicherung des in Phase 6 akzeptierten Ergebnisses hinsichtlich Code,
-Quality, Security und Governance.
+**Ziel:** Übergreifende Absicherung des in Phase 6 akzeptierten Ergebnisses **einer Story**
+hinsichtlich Architektur, Code, Security und Compliance. Das Review **erzeugt zunächst nur
+Analyse-Dokumente und vorgeschlagene Tasks**; umgesetzt wird erst nach Abnahme.
 
-1. Voraussetzung prüfen: Phase 6 = `Akzeptiert`. Sonst abbrechen und darauf hinweisen.
-2. Die vier Reviews **parallel per Subagent** ausführen (Agent-Tool, ein Subagent je Review, in
-   einer Nachricht gestartet). Die Review-Skills sind nicht modell-aufrufbar
-   (`disable-model-invocation`); jeder Subagent erhält daher den Auftrag, die jeweilige
-   `.claude/skills/review-<art>/SKILL.md` (`<art>` = `code`, `quality`, `security`, `governance`) zu
-   lesen und **exakt zu befolgen** – mit `--ticket <TICKET>` als Argument und der dort definierten
-   Ausgabedatei unter `docs/planning/todo/<TICKET>-<slug>/review/`. Die Skill-Dateien selbst werden
-   nicht verändert. **Existiert ein Review-Skill (noch) nicht**, dieses Review als „nicht verfügbar"
-   in `PIPELINE.md` vermerken und an H2 bzw. in der Closure offenlegen – nicht improvisieren.
-3. Analyse-Dateien lesen – **nicht** verändern.
-4. Findings nach **Severity** triagieren (kritisch/hoch/mittel/niedrig). Die an H1 vereinbarte
-   **Review-Schwelle** ist die Abbruchbedingung: nur Findings oberhalb lösen einen Rücklauf aus; der
-   Rest wird als „akzeptiert/zurückgestellt" begründet dokumentiert (nicht gelöscht).
-5. Rücklauf-relevante Findings mit derselben **Ursachen-Tabelle** wie in Phase 6 einer Quelle
-   zuordnen (z. B. fehlende Sicherheitsanforderung → Quality/EARS, Architekturverstoß → ADR/Task).
-   Erfordert ein Finding einen **neuen Wert** (über die Story hinaus) → neue Folge-Story (Phase 2).
-6. Rückläufe autonom abarbeiten (Quelle korrigieren → neu ableiten → umsetzen), danach erneut **H2**,
-   da sich das Ergebnis geändert hat. Höchstens **zwei** automatische Review-Rückläufe; danach
-   verbleibende Befunde an H2 zur Entscheidung vorlegen.
-7. Keine Findings oberhalb der Schwelle → Review abgeschlossen, autonom weiter mit Closure.
+1. Voraussetzung prüfen: Phase 6 der Story = `Akzeptiert`. Sonst abbrechen und darauf hinweisen.
+2. Die Reviews **parallel per Subagent** ausführen (Agent-Tool, ein Subagent je Review, in einer
+   Nachricht gestartet). Die Review-Skills sind nicht modell-aufrufbar (`disable-model-invocation`);
+   jeder Subagent erhält daher den Auftrag, die jeweilige `.claude/skills/review-<art>/SKILL.md`
+   (`<art>` = `architecture`, `code`, `security`, `compliance`) zu lesen und **exakt zu befolgen** –
+   mit `--ticket <TICKET>` und dem **Umfang der Story** (deren geänderte Dateien, z. B. aus
+   `git diff` gegen den Abzweigpunkt des Feature-Branches bzw. den Story-Changelog; Dateien unter
+   `docs/product/ideen/` gehören nicht dazu).
+   **Ausgabeordner:** `docs/planning/todo/<TICKET>-<slug>/review/<TICKET>-STORY-NN/` (so liegt
+   alles im Ticket-Ordner; das überschreibt die abweichende Pfadangabe im Review-Skill). Die
+   Skill-Dateien selbst werden nicht verändert. **Ist ein Review nicht ausführbar** (Skill fehlt,
+   MCP-Schnittstelle nicht erreichbar), in `PIPELINE.md` als „nicht verfügbar" vermerken und an H2
+   offenlegen – nicht improvisieren.
+3. Analyse-Dateien lesen – **nicht** verändern. Die Review-Skills schlagen Tasks bereits vor
+   (Status `Vorgeschlagen`); diese Vorschläge bleiben unberührt, bis sie abgenommen sind.
+4. Findings nach **Severity** triagieren. Die an H1 vereinbarte **Review-Schwelle** trennt
+   „zur Umsetzung empfohlen" (oberhalb) von „zurückgestellt" (darunter, begründet dokumentiert,
+   nicht gelöscht). Jedes empfohlene Finding mit der **Ursachen-Tabelle** aus Phase 6 einer Quelle
+   zuordnen (fehlende Anforderung → EARS/Quality, Architekturverstoß → ADR/Task usw.); ein neuer
+   Wert über die Story hinaus → Folge-Story (Phase 2).
+5. **Abnahme (H2, zweite Runde):** Analysen, Triage und vorgeschlagene Tasks per `AskUserQuestion`
+   vorlegen: **Freigeben** (ggf. mit Auswahl) · **Anpassen** · **Alles zurückstellen**.
+6. Nach Freigabe **autonom**: Quelle korrigieren → nachgelagerte Artefakte ableiten → freigegebene
+   Tasks mit **Prüf-Gate** (Phase 5) umsetzen → Review-Changelog fortschreiben. Danach ist die Story
+   fertig; das geänderte Ergebnis wird im Abschlussbericht benannt. Höchstens **zwei** solcher
+   automatischen Review-Rückläufe je Story; verbleibende Befunde an H2 zur Entscheidung.
+7. Keine Findings oberhalb der Schwelle bzw. alles zurückgestellt → Story abgeschlossen. Nächste
+   Story beginnen (Phase 5) oder – wenn alle Stories fertig sind – Closure.
 
-**Checkliste:** Alle vier Reviews berücksichtigt? Severity + Abbruchbedingung dokumentiert?
-Findings quellgerecht zugeordnet? Zurückgestellte Findings begründet?
+**Checkliste:** Alle Reviews berücksichtigt bzw. als „nicht verfügbar" offengelegt? Umfang auf die
+Story begrenzt? Severity + Schwelle dokumentiert? Findings quellgerecht zugeordnet? Nichts vor der
+Abnahme umgesetzt? Zurückgestellte Findings begründet?
 
 ---
 
@@ -259,3 +296,5 @@ Sind alle Stories eines Tickets `done`:
    korrigierte Quellen**, Erkenntnisse, Follow-ups, empfohlene neue Tickets).
 2. Ticket-Ordner nach `docs/planning/done/` verschieben.
 3. `PIPELINE.md` abschließen.
+4. Stammt das Ticket aus einer Idee (`docs/product/ideen/<slug>.md`, Ticket-Key im Dateikopf):
+   `status` auf `umgesetzt` setzen (bei verworfenem Ticket `verworfen`).
