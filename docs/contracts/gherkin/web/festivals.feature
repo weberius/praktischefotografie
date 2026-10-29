@@ -40,7 +40,7 @@ Funktionalität: Festivals
     Angenommen Orte, von denen zwei Ausstellungen des Festivals "photoszene-festival-2027" zeigen
     Wenn die Festivalseite "/map?festival=photoszene-festival-2027" und "/venues?festival=photoszene-festival-2027" verlinkt
     Und "/map?festival=photoszene-festival-2027" aufgerufen wird
-    Dann erscheinen nur diese zwei Orte in Karte und Liste
+    Dann zeigt die Karte nur diese zwei Orte
 
   # EARS: FST-ST-3
   Szenario: Unbekanntes Festival im Filter

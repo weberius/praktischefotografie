@@ -29,7 +29,7 @@ Funktionalität: Veranstalter:innen und Festivals
   Szenario: Festivalfilter in der Karte
     Angenommen Orte, von denen zwei Ausstellungen des Veranstalters "photoszene-koeln" zeigen
     Wenn "/map?organizer=photoszene-koeln" aufgerufen wird
-    Dann erscheinen nur diese zwei Orte in Karte und Liste
+    Dann zeigt die Karte nur diese zwei Orte
 
   # EARS: ORG-UB-5
   Szenario: Veranstalterseite listet Ausstellungen über Festivals
@@ -41,7 +41,7 @@ Funktionalität: Veranstalter:innen und Festivals
   Szenario: Veranstalterfilter in der Karte
     Angenommen Orte, von denen zwei Ausstellungen von Festivals des Veranstalters "photoszene-koeln" zeigen
     Wenn "/map?organizer=photoszene-koeln" aufgerufen wird
-    Dann erscheinen nur diese zwei Orte in Karte und Liste
+    Dann zeigt die Karte nur diese zwei Orte
 
   # EARS: ORG-UB-7
   Szenario: Veranstalterseite listet Festivals

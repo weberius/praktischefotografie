@@ -1,6 +1,6 @@
 # ADR-004: Leaflet mit OpenStreetMap für die Kartenansicht
 
-**Status:** Accepted (an H2 am 2026-10-27 bestätigt)  ·  **Datum:** 2026-10-27
+**Status:** Accepted (an H2 am 2026-10-27 bestätigt); Punkt „gleichwertige Listenalternative“ teilweise ersetzt durch ADR-016 (Proposed)  ·  **Datum:** 2026-10-27
 
 ## Kontext
 PRD 2.3 verlangt eine OpenStreetMap-basierte Karte mit Filtern. `klangland` nutzt Leaflet. Kartenkacheln werden von einem Dritten geladen; das PRD-Ziel „keine Telemetrie“ und die Barrierefreiheit müssen berücksichtigt werden.
@@ -9,7 +9,7 @@ PRD 2.3 verlangt eine OpenStreetMap-basierte Karte mit Filtern. `klangland` nutz
 - **Leaflet 1.9** mit `@types/leaflet` und OSM-Standardkacheln, eingebunden in eine eigene Karten-Komponente (kein Wrapper-Paket).
 - Marker-Icons werden mit der App ausgeliefert, nicht von einem CDN geladen.
 - Die Attribution „© OpenStreetMap-Mitwirkende“ ist immer sichtbar.
-- Jede Karte hat eine **gleichwertige Listenalternative** mit denselben Filtern, damit Inhalte ohne Karte und per Tastatur erreichbar sind.
+- Jede Karte hat eine **gleichwertige Listenalternative** mit denselben Filtern, damit Inhalte ohne Karte und per Tastatur erreichbar sind. *(Teilweise ersetzt durch ADR-016: auf `/map` liegt sie nicht mehr auf derselben Seite, sondern auf `/venues` mit übernommenen Filtern.)*
 - Außer den Kartenkacheln werden keine Drittanbieter-Ressourcen geladen. Der Kachelabruf wird im Datenschutzhinweis genannt.
 - Filterzustand (Stadt, Typ, Feature) liegt in der URL (Query-Parameter), damit Ansichten teilbar sind.
 
