@@ -12,3 +12,6 @@
 
 **Ergänzung 2026-10-28:** Q-USE-2 und Q-USE-4 gelten auch für die Karten im Magazin (BLG-UB-6 bis BLG-UB-8; Q-USE-6): Anlass und Art stehen als Text im Badge, jede Karte hat einen Link (die Überschrift).
 
+**Ergänzung 2026-10-29:** Q-USE-3 gilt für die Navigation im Burger-Menü (FRM-UB-1); Prüfung, Maße und Zusatzanforderungen in `seitenrahmen.md` (Q-USE-12, Q-USE-13).
+
+**Ergänzung 2026-10-29:** Q-USE-2 gilt auch für `/haftungsausschluss` und `/quellen` (NAV-UB-7); die rechtlichen Seiten werden zusätzlich nach Q-USE-14 geprüft.

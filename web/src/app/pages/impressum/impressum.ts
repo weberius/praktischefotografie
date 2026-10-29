@@ -7,6 +7,6 @@ import { PageMeta } from '../../core/page-meta';
 })
 export class ImpressumPage {
   constructor() {
-    inject(PageMeta).set('Impressum', 'Anbieterkennzeichnung der Webseite Praktische Fotografie.');
+    inject(PageMeta).set('Impressum', 'Anbieterkennzeichnung nach § 5 DDG für das Zentrum für praktische Fotografie.');
   }
 }

@@ -10,12 +10,12 @@ const ALLOWED_HOST = /(^|\.)tile\.openstreetmap\.org$/;
 /** Je Seitentyp eine Adresse (aus der Sitemap abgeleitet) plus Hinweisseite. */
 export function samplePages(paths) {
   const first = (re) => paths.find((p) => re.test(p));
-  return ['/', '/calendar', first(/^\/calendar\/\d{4}\/\d+$/), '/map', '/venues', first(/^\/venues\/.+/), '/photographers', first(/^\/photographers\/.+/), '/exhibitions', first(/^\/exhibitions\/.+/), '/events', first(/^\/events\/.+/), '/festivals', first(/^\/festivals\/.+/), '/organizers', first(/^\/organizers\/.+/), first(/^\/posts\/.+/), '/impressum', '/datenschutz', '/404.html'].filter(Boolean);
+  return ['/', '/calendar', first(/^\/calendar\/\d{4}\/\d+$/), '/map', '/venues', first(/^\/venues\/.+/), '/photographers', first(/^\/photographers\/.+/), '/exhibitions', first(/^\/exhibitions\/.+/), '/events', first(/^\/events\/.+/), '/festivals', first(/^\/festivals\/.+/), '/organizers', first(/^\/organizers\/.+/), first(/^\/posts\/.+/), '/impressum', '/haftungsausschluss', '/datenschutz', '/quellen', '/404.html'].filter(Boolean);
 }
 
 export async function browserCheck({ baseUrl, paths, executablePath }) {
   const browser = await chromium.launch({ executablePath, args: ['--no-sandbox'] });
-  const report = { axe: {}, network: {}, keyboard: {}, errors: [] };
+  const report = { axe: {}, network: {}, keyboard: {}, layout: {}, errors: [] };
   try {
     for (const path of samplePages(paths)) {
       const page = await browser.newPage();
@@ -56,6 +56,19 @@ export async function browserCheck({ baseUrl, paths, executablePath }) {
       report.keyboard[path] = { interactive, reached: reached.size, invisibleFocus };
       if (reached.size < Math.min(interactive, 1) || invisibleFocus > 0) report.errors.push(`${path}: Tastatur – ${reached.size}/${interactive} erreicht, ${invisibleFocus} ohne sichtbaren Fokus (Q-USE-3)`);
       await page.close();
+    }
+    // Q-USE-13: Kopfhöhe und Scrollbreite bei schmalen Fenstern (390 px ≤ 5 rem, 320 px ≤ 6 rem, kein horizontales Scrollen).
+    for (const [width, height, maxRem] of [[390, 844, 5], [320, 640, 6]]) {
+      for (const path of ['/', '/map']) {
+        const page = await browser.newPage({ viewport: { width, height } });
+        await page.goto(baseUrl + path, { waitUntil: 'networkidle' }).catch(() => undefined);
+        await page.waitForSelector('.site-header');
+        const m = await page.evaluate(() => ({ rem: document.querySelector('.site-header').getBoundingClientRect().height / parseFloat(getComputedStyle(document.documentElement).fontSize), scrollWidth: document.documentElement.scrollWidth, clientWidth: document.documentElement.clientWidth }));
+        report.layout[`${path} @${width}`] = { kopfRem: +m.rem.toFixed(2), scrollWidth: m.scrollWidth, clientWidth: m.clientWidth };
+        if (m.rem > maxRem) report.errors.push(`${path} bei ${width} px: Kopf ${m.rem.toFixed(2)} rem > ${maxRem} rem (Q-USE-13)`);
+        if (m.scrollWidth > m.clientWidth) report.errors.push(`${path} bei ${width} px: horizontales Scrollen (Q-USE-13)`);
+        await page.close();
+      }
     }
   } finally {
     await browser.close();

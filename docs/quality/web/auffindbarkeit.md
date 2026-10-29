@@ -9,3 +9,5 @@
 | Q-SEO-3 | Suchmaschine liest Sitemap. | `sitemap.xml` enthält 100 % der erzeugten Adressen; `robots.txt` verweist auf sie. | Build-Test | NAV-UB-2, BLD-UB-2 |
 
 **Ergänzung 2026-10-28:** Q-SEO-1 bis Q-SEO-3 gelten für die Adressen aus NAV-UB-6 (inklusive `/festivals` und `/festivals/:id`) und für die Seitentitel aus NAV-UB-3.
+
+**Ergänzung 2026-10-29:** Q-SEO-2 und Q-SEO-3 gelten für die Adressen aus NAV-UB-7 (zusätzlich `/haftungsausschluss` und `/quellen`); siehe `rechtliches.md`.

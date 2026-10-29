@@ -1,12 +1,12 @@
 # language: de
 Funktionalität: Navigation und Seitenrahmen
 
-  # EARS: NAV-UB-1 (ersetzt durch NAV-UB-5), NAV-UB-5
+  # EARS: NAV-UB-1 (ersetzt durch NAV-UB-5), NAV-UB-5 (ersetzt durch NAV-UB-8), NAV-UB-8
   Szenario: Navigation ist auf jeder Seite vorhanden
     Angenommen eine beliebige Seite der Anwendung
-    Dann enthält sie Links zu Magazin, Kalender, Karte, Orten, Fotograf:innen, Ausstellungen, Events, Festivals, Veranstalter:innen, Impressum und Datenschutz
+    Dann enthält sie Links zu Magazin, Kalender, Karte, Orten, Fotograf:innen, Ausstellungen, Events, Festivals, Veranstalter:innen, Impressum, Haftungsausschluss, Datenschutz und Quellen & Lizenzen
 
-  # EARS: NAV-UB-2 (ersetzt durch NAV-UB-6), NAV-UB-6
+  # EARS: NAV-UB-2 (ersetzt durch NAV-UB-6), NAV-UB-6 (ersetzt durch NAV-UB-7), NAV-UB-7
   Szenariogrundriss: Jede Adresse zeigt ihre Seite
     Angenommen die Adresse "<adresse>"
     Wenn sie aufgerufen wird
@@ -25,6 +25,8 @@ Funktionalität: Navigation und Seitenrahmen
     | /organizers | Veranstalter:innen |
     | /impressum | Impressum |
     | /datenschutz | Datenschutz |
+    | /haftungsausschluss | Haftungsausschluss |
+    | /quellen | Quellen & Lizenzen |
 
   # EARS: NAV-EV-1
   Szenariogrundriss: Unbekannte Adresse oder ID

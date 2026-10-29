@@ -34,15 +34,15 @@ Funktionalität: Marken-Icon der Webanwendung
     Und es verweist auf Icons mit 192 mal 192 und 512 mal 512 Pixeln
     Und alle Verweise im Manifest führen auf vorhandene Dateien
 
-  # EARS: ICO-UB-3, ICO-UB-4, ICO-UB-6
+  # EARS: ICO-UB-3 (ersetzt durch ICO-UB-7), ICO-UB-4 (ersetzt durch ICO-UB-8), ICO-UB-6, ICO-UB-7, ICO-UB-8
   Szenario: Icon im Kopfbereich
     Angenommen eine beliebige Seite der Anwendung
-    Dann enthält der Link zur Startseite im Kopfbereich zuerst das Icon und danach den Text "Praktische Fotografie"
+    Dann enthält der Link zur Startseite im Kopfbereich zuerst das Icon und danach den Text "Zentrum für praktische Fotografie"
     Und das Icon hat einen leeren Alternativtext und ist für Screenreader verborgen
-    Und der Link hat den zugänglichen Namen "Praktische Fotografie"
+    Und der Link hat den zugänglichen Namen "Zentrum für praktische Fotografie"
     Und das Icon hat eine feste Breite und Höhe
 
-  # EARS: ICO-UB-3
+  # EARS: ICO-UB-3 (ersetzt durch ICO-UB-7), ICO-UB-7
   Szenario: Icon auf jeder Seite gleich
     Angenommen die Seiten "/", "/calendar", "/map", "/venues" und "/impressum"
     Wenn sie aufgerufen werden

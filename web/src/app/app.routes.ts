@@ -79,6 +79,14 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/datenschutz/datenschutz').then((m) => m.DatenschutzPage),
   },
   {
+    path: 'haftungsausschluss',
+    loadComponent: () => import('./pages/haftungsausschluss/haftungsausschluss').then((m) => m.HaftungsausschlussPage),
+  },
+  {
+    path: 'quellen',
+    loadComponent: () => import('./pages/quellen/quellen').then((m) => m.QuellenPage),
+  },
+  {
     path: '404',
     loadComponent: () => import('./pages/not-found/not-found').then((m) => m.NotFoundPage),
   },
