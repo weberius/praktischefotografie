@@ -1,6 +1,6 @@
 # ADR-016: Vollflächige Karte ohne Ortsliste, mit Typ-Symbolen und Legende
 
-**Status:** Proposed  ·  **Datum:** 2026-10-29
+**Status:** Accepted (an H2 am 2026-10-29 bestätigt)  ·  **Datum:** 2026-10-29
 
 ## Kontext
 ADR-004 verlangt für jede Karte eine gleichwertige Listenalternative mit denselben Filtern, damit Inhalte ohne Karte und per Tastatur erreichbar sind. Auf `/map` stand diese Liste neben der Karte; die Karte war dadurch klein, und alle Orte erschienen mit dem Standard-Marker von Leaflet. Die Idee verlangt: keine Liste auf `/map`, eine Karte über die gesamte Fläche unterhalb der Filter, Symbole in Farben je Ortstyp und eine Legende. `/venues` bietet bereits dieselbe Orteliste mit denselben Filterparametern (`city`, `type`, `library`, `collection`, `organizer`, `festival`) und wird vorab gerendert.

@@ -2,7 +2,7 @@ import { Component, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { DataService } from '../../core/data.service';
-import { VENUE_TYPE_INFO, VenueType } from '../../core/models';
+import { VENUE_TYPE_INFO, VENUE_TYPE_OPTIONS, VenueType } from '../../core/models';
 import { PageMeta } from '../../core/page-meta';
 import { VenueFilter, cities, filterToParams, filterVenues, paramsToFilter } from '../../core/venue-filter';
 import { DataGate } from '../../shared/data-gate/data-gate';
@@ -20,7 +20,7 @@ export class VenueListPage {
   private readonly params = toSignal(inject(ActivatedRoute).queryParamMap, { requireSync: true });
 
   protected readonly typeInfo = VENUE_TYPE_INFO;
-  protected readonly typeOptions = (Object.keys(VENUE_TYPE_INFO) as VenueType[]).map((value) => ({ value, label: VENUE_TYPE_INFO[value].label }));
+  protected readonly typeOptions = VENUE_TYPE_OPTIONS;
 
   protected readonly filter = computed(() => paramsToFilter(this.params()));
   protected readonly cityOptions = computed(() => cities(this.data.venues()));

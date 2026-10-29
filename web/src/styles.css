@@ -30,8 +30,10 @@ h2 { font-size: 1.3rem; margin: 2rem 0 0.75rem; }
 .site-header ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; list-style: none; margin: 0; padding: 0; }
 .site-header nav a { text-decoration: none; color: var(--fg); padding: 0.25rem 0; border-bottom: 2px solid transparent; }
 .site-header nav a.active { border-bottom-color: var(--accent); font-weight: 600; }
-main { max-width: 64rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+main { flex: 1 0 auto; width: 100%; max-width: 64rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
 main:focus { outline: none; }
+/* Auf /map füllt die Karte die Fläche bis zur Trennlinie oberhalb des Fußbereichs (MAP-UB-9): kein unterer Innenabstand, die Seite wächst mit. */
+main:has(> app-map-page) { display: flex; flex-direction: column; padding-bottom: 0; }
 .site-footer { border-top: 1px solid var(--border); padding: 1rem 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; }
 .site-footer nav { display: flex; gap: 1rem; }
 .muted { color: var(--muted); }

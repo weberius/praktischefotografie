@@ -5,17 +5,17 @@
 | Phase | Artefakt(e) | Status | Datum |
 | --- | --- | --- | --- |
 | 0 Setup | Ordner, PIPELINE.md, Feature-Branch | Erledigt | 2026-10-29 |
-| 1 Vision (H1) | EPIC, Annahmen | Entwurf (Intake) | 2026-10-29 |
+| 1 Vision (H1) | EPIC, Annahmen | Freigegeben (Aufruf von spec-pipeline) | 2026-10-29 |
 | 2 UserStory | STORY-01, STORY-02 | Erledigt | 2026-10-29 |
 | 3 Spezifikation · EARS | web/karte.md (MAP-UB-7 bis MAP-UB-13; ersetzen MAP-UB-3, MAP-UB-6) | Erledigt | 2026-10-29 |
 | 3 Spezifikation · Gherkin | web/karte.feature (+6 Szenarien, 2 ersetzt), web/veranstalter.feature, web/festivals.feature (Formulierung) | Erledigt | 2026-10-29 |
 | 3 Spezifikation · Quality | web/karte-darstellung.md (Q-USE-9, Q-USE-10); Ergänzungen Q-USE-3, Q-USE-4, Q-PERF-3, Q-SEO-1 | Erledigt | 2026-10-29 |
-| 3 Spezifikation · ADR | ADR-016 (Proposed); ADR-004 teilweise ersetzt | Erledigt | 2026-10-29 |
+| 3 Spezifikation · ADR | ADR-016 (Accepted an H2); ADR-004 teilweise ersetzt | Erledigt | 2026-10-29 |
 | 3 Spezifikation · Konsistenz | Querbezüge geprüft | Erledigt | 2026-10-29 |
-| 4 Tasks | – | Offen | |
-| 5 Implement | – | Offen | |
-| 6 Human in the Loop (H2) | – | Offen | |
-| 7 Review | – | Offen | |
+| 4 Tasks | STORY-01: 3, STORY-02: 3 (+ 5 Review-Tasks) | Erledigt | 2026-10-29 |
+| 5 Implement | STORY-01 und STORY-02: je TASK-01 bis 03 umgesetzt, Gate grün | Erledigt | 2026-10-29 |
+| 6 Human in the Loop (H2) · STORY-01 und STORY-02 | Prüfpaket (gemeinsam, auf Wunsch nach „Wo ist die Legende?“) | Akzeptiert | 2026-10-29 |
+| 7 Review · STORY-01 und STORY-02 | `review/` (Architektur, Code, Security je Story; Compliance nicht verfügbar) | Erledigt (Abnahme 2026-10-29: 5 Tasks umgesetzt, 5 zurückgestellt) | 2026-10-29 |
 
 Status: `Offen` · `In Arbeit` · `Erledigt` · `Nicht erforderlich` · `Rücklauf` · `Verworfen`
 (an H1: `Entwurf (Intake)` / `Freigegeben`, an H2: `Akzeptiert` / `Abweichung`)
@@ -39,3 +39,12 @@ Status: `Offen` · `In Arbeit` · `Erledigt` · `Nicht erforderlich` · `Rückla
 - ANNAHME: Ohne Treffer bleibt die Karte in der Standardansicht sichtbar, der Hinweis aus MAP-UN-1 steht darüber.
 - ANNAHME: Die uncommittete Änderung an der Idee-Datei (Status/Ticket) und der neue Idee-Inhalt liegen mit auf dem Feature-Branch.
 - ANNAHME: `docs/templates/` fehlt im Repo; Struktur der Artefakte folgt SERVICE-09.
+- ANNAHME: Anzahl der Orte und Link zur Ortsliste stehen in einer Zeile oberhalb der Karte (nicht untereinander), damit die Karte auf 1280 × 800 ohne Bildlauf bis zur Trennlinie reicht.
+- ANNAHME: `ResizeObserver` in `VenueMap` (Leaflet `invalidateSize`) ist Teil von STORY-01, damit die Karte ihre Größe bei geänderter Höhe behält; stand nicht in der Spezifikation.
+- ANNAHME: `main:has(> app-map-page)` (Browser ab Chrome 105 / Firefox 121 / Safari 15.4) ist für die Seitenrahmen-Änderung akzeptiert.
+- ANNAHME: Der Seitenrahmen aller Seiten ist jetzt eine Spalte mit Mindesthöhe; bei kurzen Seiten rutscht der Fußbereich an den Fensterrand.
+- ANNAHME: Lokal lief Karma mit `CHROME_BIN` auf das Playwright-Chromium (Chrome 130); keine Systeminstallation im Repo-Setup.
+- ANNAHME: H2 findet für STORY-01 und STORY-02 gemeinsam statt (Wunsch des Menschen, 2026-10-29); die Reviews (Phase 7) laufen danach je Story auf deren Dateien.
+- ANNAHME: Legende steht oberhalb der Karte im Kartenbereich; Symbole 30 px auf der Karte, 24 px in der Legende; Marker-Mittelpunkt liegt auf der Koordinate (kein Pin mit Spitze).
+- ANNAHME: `bypassSecurityTrustHtml` für das konstante SVG-Markup der Legende (Angular würde SVG sonst aus `innerHTML` entfernen); kein Datenwert fließt ein.
+- Closure: 2026-10-29, Ordner nach `done/` verschoben.

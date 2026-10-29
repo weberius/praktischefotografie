@@ -1,0 +1,2 @@
+/* Seitenrahmen als Spalte: Der Fußbereich steht bei kurzem Inhalt am Fensterrand, `main` wächst (MAP-UB-9, ADR-016). */
+:host { display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh; }

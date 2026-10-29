@@ -1,2 +1,3 @@
-:host { display: block; }
-.map { height: 26rem; width: 100%; border: 1px solid var(--border); border-radius: var(--radius); background: #e8e6df; }
+:host { display: flex; flex-direction: column; min-height: 24rem; }
+/* Hintergrund = MAP_SURFACE_COLORS.placeholder (core/venue-symbol.ts); der Kontrasttest der Symbole rechnet mit demselben Wert. */
+.map { flex: 1 1 auto; min-height: 24rem; width: 100%; border: 1px solid var(--border); border-radius: var(--radius); background: #e8e6df; }

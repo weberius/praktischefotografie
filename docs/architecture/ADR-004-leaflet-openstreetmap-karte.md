@@ -1,6 +1,6 @@
 # ADR-004: Leaflet mit OpenStreetMap für die Kartenansicht
 
-**Status:** Accepted (an H2 am 2026-10-27 bestätigt); Punkt „gleichwertige Listenalternative“ teilweise ersetzt durch ADR-016 (Proposed)  ·  **Datum:** 2026-10-27
+**Status:** Accepted (an H2 am 2026-10-27 bestätigt); Punkt „gleichwertige Listenalternative“ teilweise ersetzt durch ADR-016 (Accepted)  ·  **Datum:** 2026-10-27
 
 ## Kontext
 PRD 2.3 verlangt eine OpenStreetMap-basierte Karte mit Filtern. `klangland` nutzt Leaflet. Kartenkacheln werden von einem Dritten geladen; das PRD-Ziel „keine Telemetrie“ und die Barrierefreiheit müssen berücksichtigt werden.

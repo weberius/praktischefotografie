@@ -116,13 +116,26 @@ export interface Dataset {
   posts: Post[];
 }
 
-export const VENUE_TYPE_INFO: Record<VenueType, { label: string; icon: string }> = {
-  museum: { label: 'Museum', icon: '🏛️' },
-  gallery: { label: 'Galerie', icon: '🖼️' },
-  foundation: { label: 'Stiftung', icon: '🏛️' },
-  off_space: { label: 'Off-Space', icon: '🚪' },
-  library_archive: { label: 'Bibliothek / Archiv', icon: '📚' },
+/** Form des Symbols eines Ortstyps auf Karte und Legende (MAP-UB-10, ADR-016). */
+export type VenueSymbolShape = 'columns' | 'frame' | 'diamond' | 'door' | 'book';
+
+/**
+ * Anzeige je Ortstyp. `icon` (Emoji) steht in Textlisten; `shape` und `color` bestimmen das Symbol auf der Karte und in der Legende (eine Quelle für beide).
+ * Die Farben haben ≥ 3:1 Kontrast zum Kartenhintergrund (Q-USE-9); der Typ ist allein an der Form erkennbar.
+ */
+export const VENUE_TYPE_INFO: Record<VenueType, { label: string; icon: string; shape: VenueSymbolShape; color: string }> = {
+  museum: { label: 'Museum', icon: '🏛️', shape: 'columns', color: '#1b5fa8' },
+  gallery: { label: 'Galerie', icon: '🖼️', shape: 'frame', color: '#b45309' },
+  foundation: { label: 'Stiftung', icon: '🏛️', shape: 'diamond', color: '#7b3fa0' },
+  off_space: { label: 'Off-Space', icon: '🚪', shape: 'door', color: '#b3261e' },
+  library_archive: { label: 'Bibliothek / Archiv', icon: '📚', shape: 'book', color: '#1d7a3a' },
 };
+
+/** Alle Ortstypen in der Reihenfolge von `VENUE_TYPE_INFO` – für Filter und Legende (eine Stelle statt je Verbraucher). */
+export const VENUE_TYPES = Object.keys(VENUE_TYPE_INFO) as VenueType[];
+
+/** Ortstypen als Auswahlliste (Wert und Beschriftung) für die Typfilter. */
+export const VENUE_TYPE_OPTIONS = VENUE_TYPES.map((value) => ({ value, label: VENUE_TYPE_INFO[value].label }));
 
 export const EXHIBITION_TYPE_LABEL: Record<ExhibitionType, string> = {
   solo: 'Einzelausstellung',

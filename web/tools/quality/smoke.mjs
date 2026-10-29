@@ -23,7 +23,7 @@ try {
   if (!page.url().includes('city=K')) errors.push(`Filter nicht in der Adresse: ${page.url()}`);
 
   await page.goto(`${url}/map`);
-  await page.waitForSelector('ul.card-list li');
+  await page.waitForSelector('a.list-link');
   await page.locator('app-venue-map').scrollIntoViewIfNeeded();
   await page.waitForSelector('.leaflet-marker-icon', { timeout: 10000 });
   const markers = await page.locator('.leaflet-marker-icon').count();

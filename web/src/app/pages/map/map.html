@@ -50,32 +50,21 @@
     }
   </form>
 
-  <p role="status" class="meta">{{ venues().length }} {{ venues().length === 1 ? 'Ort' : 'Orte' }}</p>
+  <div class="map-info">
+    <p role="status" class="meta">{{ venues().length }} {{ venues().length === 1 ? 'Ort' : 'Orte' }}</p>
+    <a class="list-link" routerLink="/venues" [queryParams]="listParams()">Orte als Liste anzeigen</a>
+  </div>
 
-  <div class="map-layout">
-  <section aria-labelledby="list-heading">
-    <h2 id="list-heading">Orte als Liste</h2>
-    @if (venues().length > 0) {
-      <ul class="card-list">
-        @for (venue of venues(); track venue.id) {
-          <li class="card">
-            <h3><a [routerLink]="['/venues', venue.id]">{{ venue.name }}</a></h3>
-            <p class="venue-type"><span aria-hidden="true">{{ typeInfo[venue.type].icon }}</span> {{ typeInfo[venue.type].label }}</p>
-            <p>{{ venue.city }}</p>
-          </li>
-        }
-      </ul>
-    } @else {
-      <div class="notice">
-        <p>Zu diesen Filtern gibt es keinen Ort.</p>
-        <button type="button" (click)="reset()">Filter zurücksetzen</button>
-      </div>
-    }
-  </section>
+  @if (venues().length === 0) {
+    <div class="notice">
+      <p>Zu diesen Filtern gibt es keinen Ort.</p>
+      <button type="button" (click)="reset()">Filter zurücksetzen</button>
+    </div>
+  }
+
   <section class="map-section" aria-labelledby="map-heading">
     <h2 id="map-heading" class="visually-hidden">Karte</h2>
+    <app-venue-legend />
     <app-venue-map [venues]="venues()" />
   </section>
-
-  </div>
 </app-data-gate>

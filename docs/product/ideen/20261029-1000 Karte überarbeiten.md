@@ -1,5 +1,5 @@
 ---
-status: in-arbeit    # offen | in-arbeit | umgesetzt | verworfen
+status: umgesetzt    # offen | in-arbeit | umgesetzt | verworfen
 prio: 2              # optional, kleiner = früher
 ticket: SERVICE-10   # setzt spec-intake
 ---

@@ -1,7 +1,8 @@
-.map-section { margin: 1.5rem 0; }
-.venue-type { color: var(--muted); }
-/* Liste zuerst (Reihenfolge im Dokument = Fokus- und Lesereihenfolge), ab breiten Fenstern Liste links und Karte rechts. */
-@media (min-width: 60rem) {
-  .map-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 1.5rem; align-items: start; }
-  .map-section { margin: 0; position: sticky; top: 1rem; grid-column: 2; grid-row: 1; }
-}
+/* Die Seite wächst bis zur Trennlinie oberhalb des Fußbereichs; die Karte füllt den Rest, mindestens 24 rem (MAP-UB-9, ADR-016). */
+:host { display: flex; flex-direction: column; flex: 1 0 auto; }
+/* Die Datenschranke ist nur eine Hülle; ihre Inhalte gehören in die Spalte der Seite. */
+app-data-gate { display: contents; }
+.map-info { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1.5rem; margin: 0 0 0.75rem; }
+.map-info p { margin: 0; }
+.map-section { display: flex; flex-direction: column; flex: 1 0 auto; margin: 0; }
+app-venue-map { flex: 1 1 auto; }

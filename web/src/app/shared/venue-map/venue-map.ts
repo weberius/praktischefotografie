@@ -3,6 +3,7 @@ import { Component, ElementRef, NgZone, OnDestroy, PLATFORM_ID, afterNextRender,
 import { Router } from '@angular/router';
 import type * as Leaflet from 'leaflet';
 import { VENUE_TYPE_INFO, Venue } from '../../core/models';
+import { venueSymbolMarkup } from '../../core/venue-symbol';
 
 type LeafletModule = typeof Leaflet;
 
@@ -10,9 +11,11 @@ const ASSET_PATH = 'assets/leaflet/';
 const STYLE_ID = 'leaflet-css';
 /** Mittelpunkt und Zoom für eine leere Karte (Nordrhein-Westfalen). */
 const DEFAULT_VIEW: [number, number] = [51.43, 7.66];
+/** Kantenlänge des Typ-Symbols auf der Karte in Pixeln (mindestens 24 × 24 px Zielgröße, WCAG 2.2). */
+const MARKER_SIZE = 30;
 
 /**
- * Karte der Orte mit Leaflet und OpenStreetMap-Kacheln (MAP-UB-1, MAP-UB-5, MAP-UB-6, ADR-004).
+ * Karte der Orte mit Leaflet und OpenStreetMap-Kacheln (MAP-UB-1, MAP-UB-5, MAP-UB-13, ADR-004).
  * Leaflet wird nur im Browser geladen; beim Vorabrendern entsteht nur der leere Container.
  * Das Leaflet-Stylesheet wird als Asset erst mit der Karte nachgeladen und belastet andere Seiten nicht.
  */
@@ -33,6 +36,7 @@ export class VenueMap implements OnDestroy {
   private leaflet?: LeafletModule;
   private destroyed = false;
   private observer?: IntersectionObserver;
+  private resizeObserver?: ResizeObserver;
   /** Das Leaflet-Kartenobjekt; nur im Browser vorhanden, nach dem Laden von Leaflet. */
   readonly map = signal<Leaflet.Map | null>(null);
   private layer?: Leaflet.LayerGroup;
@@ -54,6 +58,7 @@ export class VenueMap implements OnDestroy {
   ngOnDestroy(): void {
     this.destroyed = true;
     this.observer?.disconnect();
+    this.resizeObserver?.disconnect();
     this.map()?.remove();
   }
 
@@ -94,6 +99,14 @@ export class VenueMap implements OnDestroy {
     });
     this.layer = leaflet.layerGroup().addTo(map);
     this.map.set(map);
+    this.followContainerSize(map);
+  }
+
+  /** Die Karte füllt den Rest der Seite; ändert sich ihre Höhe (z. B. durch einen Hinweis darüber), passt Leaflet seine Größe an. */
+  private followContainerSize(map: Leaflet.Map): void {
+    if (typeof ResizeObserver === 'undefined') return;
+    this.resizeObserver = new ResizeObserver(() => map.invalidateSize());
+    this.resizeObserver.observe(this.container().nativeElement);
   }
 
   /** Bindet das ausgelieferte Leaflet-Stylesheet nur einmal ein (relative URL wegen base-href). */
@@ -111,19 +124,18 @@ export class VenueMap implements OnDestroy {
     const layer = this.layer;
     if (!L || !layer) return;
     layer.clearLayers();
-    const icon = L.icon({
-      iconUrl: `${ASSET_PATH}images/marker-icon.png`,
-      iconRetinaUrl: `${ASSET_PATH}images/marker-icon-2x.png`,
-      shadowUrl: `${ASSET_PATH}images/marker-shadow.png`,
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-      shadowSize: [41, 41],
-    });
     for (const venue of venues) {
-      L.marker([venue.address.lat, venue.address.lng], { icon, title: venue.name, alt: venue.name })
-        .bindPopup(this.popupContent(venue))
-        .addTo(layer);
+      const text = `${venue.name}, ${VENUE_TYPE_INFO[venue.type].label}`;
+      const icon = L.divIcon({
+        html: venueSymbolMarkup(venue.type),
+        className: 'venue-marker',
+        iconSize: [MARKER_SIZE, MARKER_SIZE],
+        iconAnchor: [MARKER_SIZE / 2, MARKER_SIZE / 2],
+        popupAnchor: [0, -MARKER_SIZE / 2],
+      });
+      const marker = L.marker([venue.address.lat, venue.address.lng], { icon, title: text }).bindPopup(this.popupContent(venue)).addTo(layer);
+      // Textalternative des Symbols: „Name, Typ“ (MAP-UB-12); das SVG selbst ist für Screenreader verborgen.
+      marker.getElement()?.setAttribute('aria-label', text);
     }
     this.markerCount.set(venues.length);
     if (venues.length > 0) {
