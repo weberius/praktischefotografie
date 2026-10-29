@@ -233,6 +233,16 @@ npm run quality      # axe, Tastatur, Netzwerk, SEO, Lighthouse gegen den Demo-B
 
 `demo/` enthält erkennbar fiktive Beispieldaten (`demo-`-IDs, Titel mit „[Demo]“). Sie erscheinen nie im Produktionsbuild.
 
+### Icon und Postkartenmotiv
+
+Das Quellbild `docs/resources/zfpf.png` zeigt links das Icon und rechts das Motiv einer Postkarte. Im Wurzelverzeichnis erzeugt
+
+```bash
+CHROME_BIN=/pfad/zu/chrome npm run icons:build
+```
+
+daraus `docs/resources/icon.png` und `docs/resources/postkarte.png` (zugeschnitten; das Postkartenmotiv wird nicht ausgeliefert) sowie die Icon-Dateien der Webanwendung in `web/public/` (`favicon.ico`, `favicon-96x96.png`, `apple-touch-icon.png`, `web-app-manifest-192x192.png`, `web-app-manifest-512x512.png`). Das Skript `web/tools/make-icons.mjs` nutzt das vorhandene `playwright-core` und braucht ein Chromium (`CHROME_BIN`); es läuft nicht im Build, die Ergebnisse sind eingecheckt (`docs/architecture/ADR-017`).
+
 ---
 
 ## 🔄 Daten aus Webseiten aktualisieren

@@ -1,4 +1,4 @@
-// Gherkin: web/navigation.feature (NAV-UB-1 bis NAV-UB-4, NAV-EV-1), web/karte.feature · „Karte füllt die Fläche“ (Voraussetzung: Fußbereich am Fensterrand, MAP-UB-9)
+// Gherkin: web/navigation.feature (NAV-UB-1 bis NAV-UB-4, NAV-EV-1), web/karte.feature · „Karte füllt die Fläche“ (Voraussetzung: Fußbereich am Fensterrand, MAP-UB-9), web/markenicon.feature · „Icon im Kopfbereich“ (ICO-UB-3 bis ICO-UB-6)
 import { provideRouter, Router, withComponentInputBinding } from '@angular/router';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingHarness } from '@angular/router/testing';
@@ -143,6 +143,70 @@ describe('App', () => {
       expect(rect(map).height).toBeGreaterThanOrEqual(24 * 16 - 1);
       expect(rect(footer).top).toBeGreaterThanOrEqual(rect(map).bottom - 1);
       expect(Math.abs(rect(footer).top - rect(map).bottom)).toBeLessThanOrEqual(1);
+    });
+  });
+
+  describe('Szenario: Icon im Kopfbereich (ICO-UB-3 bis ICO-UB-6)', () => {
+    async function open(url = '/') {
+      const fixture = TestBed.createComponent(App);
+      fixture.detectChanges();
+      await TestBed.inject(Router).navigateByUrl(url);
+      await fixture.whenStable();
+      fixture.detectChanges();
+      const root: HTMLElement = fixture.nativeElement;
+      return { root, brand: root.querySelector('.site-header a.brand') as HTMLAnchorElement, header: root.querySelector('.site-header') as HTMLElement };
+    }
+
+    it('das Icon steht im Link zur Startseite zuerst, danach der Text „Praktische Fotografie“ (ICO-UB-3)', async () => {
+      const { brand } = await open();
+      expect(brand.getAttribute('href')).toBe('/');
+      const nodes = Array.from(brand.childNodes).filter((n) => n.nodeType === Node.ELEMENT_NODE || n.textContent?.trim());
+      expect(nodes.length).toBe(2);
+      expect((nodes[0] as HTMLElement).tagName).toBe('IMG');
+      expect(nodes[1].textContent?.trim()).toBe('Praktische Fotografie');
+    });
+
+    it('das Icon ist dekorativ: leeres Alt, für Screenreader verborgen; der Link behält den Namen (ICO-UB-4)', async () => {
+      const { brand } = await open();
+      const img = brand.querySelector('img') as HTMLImageElement;
+      expect(img.getAttribute('alt')).toBe('');
+      expect(img.getAttribute('aria-hidden')).toBe('true');
+      expect(brand.textContent?.trim()).toBe('Praktische Fotografie');
+      expect(brand.getAttribute('aria-label')).toBeNull();
+    });
+
+    it('der Pfad zum Icon ist relativ zum Basispfad (ICO-UB-5)', async () => {
+      const { brand } = await open();
+      expect((brand.querySelector('img') as HTMLImageElement).getAttribute('src')).toBe('favicon-96x96.png');
+    });
+
+    it('das Icon hat feste Breite und Höhe, die Kopfzeile wird kaum höher (ICO-UB-6)', async () => {
+      const { brand, header } = await open();
+      const img = brand.querySelector('img') as HTMLImageElement;
+      expect(img.getAttribute('width')).toBe('32');
+      expect(img.getAttribute('height')).toBe('32');
+      const rect = img.getBoundingClientRect();
+      expect(Math.round(rect.width)).toBe(32);
+      expect(Math.round(rect.height)).toBe(32);
+      // Das Icon macht die Kopfzeile höchstens wenige Pixel höher als der reine Text (im schmalen Testfenster bricht die Navigation um).
+      const withIcon = header.getBoundingClientRect().height;
+      img.style.display = 'none';
+      const withoutIcon = header.getBoundingClientRect().height;
+      img.style.display = '';
+      expect(withIcon - withoutIcon).toBeLessThanOrEqual(8);
+      expect(img.getAttribute('loading')).toBeNull();
+    });
+
+    it('Szenario: Icon auf jeder Seite gleich – dasselbe Icon steht nach der Navigation auf allen geprüften Seiten (ICO-UB-3)', async () => {
+      const sources = new Set<string | null>();
+      for (const url of ['/', '/calendar', '/map', '/venues', '/impressum']) {
+        TestBed.resetTestingModule();
+        TestBed.configureTestingModule({ providers: [provideRouter(routes, withComponentInputBinding()), ...provideTestData()] });
+        const { brand } = await open(url);
+        sources.add(brand.querySelector('img')?.getAttribute('src') ?? null);
+        expect(brand.querySelectorAll('img').length).toBe(1);
+      }
+      expect(Array.from(sources)).toEqual(['favicon-96x96.png']);
     });
   });
 });

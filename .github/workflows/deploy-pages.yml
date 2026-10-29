@@ -44,6 +44,9 @@ jobs:
           npm run lint
           npm test
           npm run build -- --base-href "$BASE_HREF"
+      - name: Icon-Verweise im Build mit Basispfad prüfen
+        working-directory: web
+        run: node --test ../test/marken-icon.test.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web/dist/web/browser
