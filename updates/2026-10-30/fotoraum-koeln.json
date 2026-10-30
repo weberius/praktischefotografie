@@ -1,0 +1,31 @@
+{
+  "venueId": "fotoraum-koeln",
+  "fetchedAt": "2026-10-30",
+  "changes": [
+    {
+      "id": "t1",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Finissage: Men Don't Cry",
+        "eventType": "finissage",
+        "startDate": "2026-11-01",
+        "endDate": "2026-11-01",
+        "venueId": "fotoraum-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Finissage am Sonntag, 1. November 2026, mit einer Performance von Oliver Bedorf. Resonanz im Fotoraum um 18:00 Uhr.",
+        "id": "men-dont-cry-2026-finissage"
+      },
+      "evidence": {
+        "url": "https://www.fotoraum-koeln.de/",
+        "excerpt": "FINISSAGE–SONNTAG, 01. NOVEMBER AB 15 UHRMIT EINER PERFORMANCE VON OLIVER BEDORFRESONANZ IM FOTORAUM UM 18 UHR"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-30"
+    }
+  ],
+  "rejected": []
+}

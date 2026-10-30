@@ -9,5 +9,38 @@
     "isCommercial": false,
     "description": "Vortrag des Fotografen und Buchgestalters Tim Soter über seine Arbeit und seine Zeit mit Duane Michals.",
     "id": "ein-abend-mit-tim-soter-2026"
+  },
+  {
+    "title": "Eröffnung: JÜRGEN KLAUKE",
+    "eventType": "vernissage",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-08",
+    "venueId": "fotografie-forum-monschau",
+    "city": "Monschau",
+    "isCommercial": false,
+    "description": "Eröffnung am 8. November 2026 um 12:00 Uhr im Bürgersaal, Austr. 7, in Monschau.",
+    "id": "juergen-klauke-2026-eroeffnung"
+  },
+  {
+    "title": "Eröffnung: Between",
+    "eventType": "vernissage",
+    "startDate": "2026-11-07",
+    "endDate": "2026-11-07",
+    "venueId": "zander-galerie-koeln",
+    "city": "Köln",
+    "isCommercial": false,
+    "description": "Eröffnung am 7. November 2026 von 16:00 bis 18:00 Uhr. Candida Höfer ist anwesend. Einführung durch Prof. (em.) Dr. Herbert Burkert um 16:30 Uhr.",
+    "id": "between-2026-eroeffnung"
+  },
+  {
+    "title": "Finissage: Men Don't Cry",
+    "eventType": "finissage",
+    "startDate": "2026-11-01",
+    "endDate": "2026-11-01",
+    "venueId": "fotoraum-koeln",
+    "city": "Köln",
+    "isCommercial": false,
+    "description": "Finissage am Sonntag, 1. November 2026, mit einer Performance von Oliver Bedorf. Resonanz im Fotoraum um 18:00 Uhr.",
+    "id": "men-dont-cry-2026-finissage"
   }
 ]

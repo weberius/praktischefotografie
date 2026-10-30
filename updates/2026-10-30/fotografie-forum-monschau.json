@@ -1,0 +1,31 @@
+{
+  "venueId": "fotografie-forum-monschau",
+  "fetchedAt": "2026-10-30",
+  "changes": [
+    {
+      "id": "t1",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Eröffnung: JÜRGEN KLAUKE",
+        "eventType": "vernissage",
+        "startDate": "2026-11-08",
+        "endDate": "2026-11-08",
+        "venueId": "fotografie-forum-monschau",
+        "city": "Monschau",
+        "isCommercial": false,
+        "description": "Eröffnung am 8. November 2026 um 12:00 Uhr im Bürgersaal, Austr. 7, in Monschau.",
+        "id": "juergen-klauke-2026-eroeffnung"
+      },
+      "evidence": {
+        "url": "https://www.kuk-monschau.de/index.php/ausstellungen/ausstellungen-2026/94-j%C3%BCrgen-klauke-08-11-2026%E2%80%9320-12-2026.html",
+        "excerpt": "Die Vernissage wird am 08.11.2026 um 12 Uhr im Bürgersaal, Austr. 7, in Monschau stattfinden."
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-30"
+    }
+  ],
+  "rejected": []
+}

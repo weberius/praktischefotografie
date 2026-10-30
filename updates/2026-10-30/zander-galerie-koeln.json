@@ -1,0 +1,31 @@
+{
+  "venueId": "zander-galerie-koeln",
+  "fetchedAt": "2026-10-30",
+  "changes": [
+    {
+      "id": "t1",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Eröffnung: Between",
+        "eventType": "vernissage",
+        "startDate": "2026-11-07",
+        "endDate": "2026-11-07",
+        "venueId": "zander-galerie-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eröffnung am 7. November 2026 von 16:00 bis 18:00 Uhr. Candida Höfer ist anwesend. Einführung durch Prof. (em.) Dr. Herbert Burkert um 16:30 Uhr.",
+        "id": "between-2026-eroeffnung"
+      },
+      "evidence": {
+        "url": "https://zandergalerie.com/exhibitions/between-238e989f/",
+        "excerpt": "Opening: Saturday, 7 November 2026, 4-6pm The artist is present. Introduction by Prof. (em.) Dr. Herbert Burkert at 4:30 pm."
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-10-30"
+    }
+  ],
+  "rejected": []
+}
