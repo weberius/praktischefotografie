@@ -86,3 +86,10 @@ test('Skill nennt die Regel zur Art der Ausstellung (PRF-UN-3)', () => {
   const text = skill();
   assert.match(text, /`solo` bei höchstens einer Person, `group` bei mehreren/);
 });
+
+test('Szenario: Uhrzeit und Anwesenheit der Künstlerin – Skill nennt Eröffnung und Finissage (OPN-UB-2, OPN-UB-6, OPN-UB-7)', () => {
+  const text = skill();
+  const abschnitt = text.slice(text.indexOf('**Eröffnung und Finissage**'));
+  for (const target of ['`vernissage`', '`finissage`', 'Eröffnung: <Ausstellungstitel>', 'Finissage: <Ausstellungstitel>', 'Uhrzeit', 'Anwesenheit', 'Nichts erfinden', 'heute oder später', 'auch für bereits vorhandene']) assert.ok(abschnitt.includes(target), target);
+  assert.match(abschnitt, /Finissage nur, wenn die Seite sie ausdrücklich nennt/);
+});

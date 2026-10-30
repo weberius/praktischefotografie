@@ -29,6 +29,19 @@ export const exhibition = (over = {}) => ({
   ...over,
 });
 
+/** Event für Vernissage und Finissage (OPN-*). */
+export const terminEvent = (over = {}) => ({
+  id: 'eroeffnung-between-2026',
+  title: 'Eröffnung: Between',
+  eventType: 'vernissage',
+  startDate: '2026-11-07',
+  endDate: '2026-11-07',
+  venueId: 'makk-koeln',
+  city: 'Köln',
+  isCommercial: false,
+  ...over,
+});
+
 export const validSet = () => ({
   venues: [venue()],
   exhibitions: [exhibition()],

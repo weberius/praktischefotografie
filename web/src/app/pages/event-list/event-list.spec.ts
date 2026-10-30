@@ -1,4 +1,4 @@
-// Gherkin: web/events.feature · „Liste zeigt Events“, „Liste ist nach Typ filterbar“, „Kommerzielles Event“, „Beendetes Event“
+// Gherkin: web/events.feature · „Liste zeigt Events“, „Liste ist nach Typ filterbar“, „Kommerzielles Event“, „Beendetes Event“, „Vernissage und Finissage in der Liste“, „Vernissage und Finissage filterbar“, „Vernissage und Finissage in der Detailansicht“
 import { TestBed } from '@angular/core/testing';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
@@ -73,5 +73,32 @@ describe('EventListPage', () => {
   it('zeigt einen Hinweis ohne Treffer', async () => {
     const { el } = await open('/events', { events: [] });
     expect(el.querySelector('.notice')).not.toBeNull();
+  });
+
+  describe('Vernissage und Finissage (EVT-UB-5)', () => {
+    const termine = [
+      { ...baseEvent, id: 'e-eroeffnung', title: 'Eröffnung: Between', eventType: 'vernissage' as const, startDate: '2026-11-07', endDate: '2026-11-07' },
+      { ...baseEvent, id: 'e-finissage', title: 'Finissage: Between', eventType: 'finissage' as const, startDate: '2027-02-19', endDate: '2027-02-19' },
+    ];
+
+    it('Szenario: Vernissage und Finissage in der Liste', async () => {
+      const { el } = await open('/events', { events: termine });
+      const [vernissage, finissage] = cards(el);
+      expect(vernissage.querySelector('.badge')?.textContent?.trim()).toBe('Vernissage');
+      expect(finissage.querySelector('.badge')?.textContent?.trim()).toBe('Finissage');
+    });
+
+    it('Szenario: Vernissage und Finissage filterbar', async () => {
+      const { el } = await open('/events?type=finissage', { events: termine });
+      expect(titles(el)).toEqual(['Finissage: Between']);
+      const options = Array.from(el.querySelectorAll('option')).map((o) => o.textContent?.trim());
+      expect(options).toContain('Vernissage');
+      expect(options).toContain('Finissage');
+    });
+
+    it('Szenario: Vernissage und Finissage in der Detailansicht', async () => {
+      const { el } = await open('/events/e-finissage', { events: termine });
+      expect(el.querySelector('.badge')?.textContent?.trim()).toBe('Finissage');
+    });
   });
 });

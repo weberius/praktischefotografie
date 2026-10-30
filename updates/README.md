@@ -56,6 +56,34 @@ Die komfortable Variante ist der Skill `/update-venue-data` (`.claude/skills/upd
 - Regeln: Fundstelle muss im Snapshot stehen und den Wert enthalten; `source` wird nie vorgeschlagen; Orte mit `source.status: verifiziert` ergeben Konflikte, die nicht übernommen werden; vorhandene Werte werden nur mit `"approved": true` geändert.
 - `data:apply` übernimmt nur freigegebene Änderungen, setzt `source.url` (erste übernommene Fundstelle) und `source.checkedAt` (`fetchedAt`), lässt `source.status` unverändert, validiert vor dem Schreiben und vermerkt `appliedAt`.
 
+## Eröffnung und Finissage
+
+Termine einer Ausstellung sind Events vom Typ `vernissage` bzw. `finissage` (`dataset: "events"`, `op: "add"`). Die Prüfung verlangt:
+
+```json
+{
+  "id": "c3",
+  "dataset": "events",
+  "op": "add",
+  "record": {
+    "title": "Eröffnung: Between",
+    "eventType": "vernissage",
+    "startDate": "2026-11-07",
+    "endDate": "2026-11-07",
+    "venueId": "zander-galerie-koeln",
+    "city": "Köln",
+    "isCommercial": false,
+    "description": "Eröffnung am 7. November 2026 von 16:00 bis 18:00 Uhr. Candida Höfer ist anwesend."
+  },
+  "evidence": { "url": "https://…/between", "excerpt": "Opening: Saturday, 7 November 2026, 4-6pm The artist is present." }
+}
+```
+
+- Titel „Eröffnung: “ bzw. „Finissage: “ plus Titel einer Ausstellung desselben Ortes (vorhanden oder zuvor in der Datei ergänzt); die `id` wird zu `<Ausstellungs-id>-eroeffnung` bzw. `-finissage` und darf nicht abweichen.
+- `startDate` gleich `endDate`, nicht vor dem Datum des Laufs (`--date`).
+- Der Textauszug nennt Stichwort und Datum der Art (Eröffnung: Vernissage, Opening, Eröffnung; Finissage: Finissage, Closing, Abschlussveranstaltung); eine Finissage wird nie aus dem Ausstellungsende abgeleitet. Steht in der `description` eine Uhrzeit, muss sie im Textauszug stehen, sonst „Uhrzeit nicht belegt“.
+- Der Bericht (`REPORT.md`, Abschnitt „Termine“) nennt je Quelle Snapshots mit Hinweis, Vorschläge und bereits Vorhandenes; Hinweise ohne beides stehen als „zu prüfen“. Die Zählung ist ein Stichwortzähler (Stichwort plus Datum), kein Parser; Fehlalarme sind möglich.
+
 ## Neuigkeiten für das Magazin
 
 Nach der Übernahme der Ortsdaten plant `npm run news:plan` Beiträge zu Ausstellungen (ADR-008). Je Ausstellung und Anlass gibt es höchstens einen Beitrag mit der `id` `<Ausstellungs-id>-<Anlass>`:

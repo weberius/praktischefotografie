@@ -28,3 +28,21 @@ Funktionalität: Events und Messen
   Szenario: Beendetes Event
     Angenommen ein Event, das gestern endete
     Dann trägt es den Text "Beendet"
+
+  # EARS: EVT-UB-5
+  Szenario: Vernissage und Finissage in der Liste
+    Angenommen ein Event vom Typ "vernissage" und eines vom Typ "finissage"
+    Wenn "/events" aufgerufen wird
+    Dann tragen sie die Typen "Vernissage" und "Finissage"
+
+  # EARS: EVT-UB-5
+  Szenario: Vernissage und Finissage filterbar
+    Angenommen ein Event vom Typ "vernissage" und eines vom Typ "finissage"
+    Wenn der Typ "Finissage" gewählt wird
+    Dann erscheint nur die Finissage
+
+  # EARS: EVT-UB-5
+  Szenario: Vernissage und Finissage in der Detailansicht
+    Angenommen ein Event "e-finissage" vom Typ "finissage"
+    Wenn "/events/e-finissage" aufgerufen wird
+    Dann trägt es den Typ "Finissage"

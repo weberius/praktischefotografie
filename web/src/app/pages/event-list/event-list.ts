@@ -42,7 +42,7 @@ export class EventListPage {
   });
 
   constructor() {
-    inject(PageMeta).set('Events', 'Messen, Talks, Workshops, Symposien, Vernissagen und Lesungen rund um die Fotografie.');
+    inject(PageMeta).set('Events', 'Messen, Talks, Workshops, Symposien, Vernissagen, Finissagen und Lesungen rund um die Fotografie.');
   }
 
   protected selectType(value: string): void {

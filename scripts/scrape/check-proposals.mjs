@@ -13,7 +13,7 @@ export function main(argv = process.argv.slice(2), root = ROOT) {
   for (const venue of venues) {
     const file = join(root, 'updates', date, `${venue.id}.json`);
     if (!existsSync(file)) continue;
-    const result = checkProposalFile(file, { dataDir: join(root, 'data'), snapshotDir: join(root, '.cache', 'snapshots'), root });
+    const result = checkProposalFile(file, { dataDir: join(root, 'data'), snapshotDir: join(root, '.cache', 'snapshots'), root, today: date });
     results.push({ venueId: venue.id, accepted: result.changes.length, rejected: result.rejected.length });
     console.log(`${venue.id}: ${result.changes.length} Vorschläge, ${result.rejected.length} verworfen`);
   }

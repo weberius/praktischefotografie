@@ -14,7 +14,7 @@ Das Projekt versteht sich als Gegenentwurf zu kommerziellen Kamera-Testportalen 
 * **Interaktive Karte (OSM / Leaflet):** Geografische Übersicht aller Foto-Orte (Museen, Galerien, Off-Spaces, Präsenzbibliotheken, Stiftungen).
 * **Agenda & Ausstellungs-Kalender:**
   * Visualisierung von Ausstellungszeiträumen.
-  * Integration von Einzelveranstaltungen (Vernissagen, Artist Talks, Fotobuch-Readings, Workshops).
+  * Integration von Einzelveranstaltungen (Vernissagen, Finissagen, Artist Talks, Fotobuch-Readings, Workshops).
   * **„Endet bald“-Indikator:** Hebt Ausstellungen hervor, die in den nächsten Tagen schließen.
 * **Typisierung & Filter:**
   * 🏛️ *Museum / Galerie*
@@ -37,7 +37,7 @@ praktischefotografie/
 ├── data/
 │   ├── venues.json            # Permanente Orte (Museen, Stiftungen, Bibliotheken)
 │   ├── exhibitions.json       # Ausstellungen & Laufzeiten
-│   ├── events.json            # Einzel-Events, Vernissagen, Messen
+│   ├── events.json            # Einzel-Events, Vernissagen, Finissagen, Messen
 │   ├── organizers.json        # Netzwerke, Vereine & Veranstalter ohne eigenen Raum
 │   ├── festivals.json         # Festivals (Zeitraum) der Veranstalter
 │   ├── photographers.json     # Fotograf:innen mit optionalem Profil (Wikipedia, Portrait)

@@ -84,3 +84,10 @@ Funktionalität: Datenmodell und Venue-Datenbestand
       | excerpt                 | ergebnis |
       | Kurzer Text.            | gültig   |
       |                         | ungültig |
+
+  # EARS: DAT-UB-7
+  Szenario: Event-Typ Finissage ist gültig
+    Angenommen ein Event mit "eventType" "finissage" und allen Pflichtfeldern
+    Wenn die Daten validiert werden
+    Dann ist der Datensatz gültig
+    Und ein Event mit "eventType" "unbekannt" ist ungültig

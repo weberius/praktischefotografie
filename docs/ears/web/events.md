@@ -11,3 +11,4 @@ Begriffe: „heute“ ist das aktuelle Datum der Anwendung (in Tests ein fester 
 | EVT-OP-1 | Wo ein Event kommerziell ist, soll die Webanwendung es mit dem Text „Kommerziell“ kennzeichnen. | `web/events.feature` · „Kommerzielles Event“ | – | ADR-002 |
 | EVT-UB-3 | Die Webanwendung soll auf `/events/:id` Beschreibung, Highlights, den Ort mit Link und die Website anzeigen. | `web/events.feature` · „Eventdetail“ | – | ADR-002 |
 | EVT-UB-4 | Die Webanwendung soll Events, deren Ende vor heute liegt, mit dem Text „Beendet“ kennzeichnen. | `web/events.feature` · „Beendetes Event“ | Q-USE-4 | ADR-002 |
+| EVT-UB-5 | Die Webanwendung soll Events vom Typ `vernissage` als „Vernissage“ und vom Typ `finissage` als „Finissage“ in Liste und Detail kennzeichnen und beide Typen in der Typ-Filterliste anbieten. | `web/events.feature` · „Vernissage und Finissage in der Liste“, „Vernissage und Finissage filterbar“, „Vernissage und Finissage in der Detailansicht“ | Q-USE-4 | ADR-002 |

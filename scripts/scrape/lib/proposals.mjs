@@ -5,6 +5,7 @@ import { join } from 'node:path';
 import { DATASETS, validateData } from '../../validate-data.mjs';
 import { ROOT, normalizeSpace, readJson } from './common.mjs';
 import { listSnapshots } from './snapshots.mjs';
+import { EVENT_PREFIX, ID_SUFFIX, hasDate, hasHint, terminKind, timesOf } from './termine.mjs';
 
 const SETTABLE = ['venues', 'exhibitions', 'events', 'photographers', 'organizers', 'festivals'];
 const ADDABLE = ['exhibitions', 'events', 'photographers', 'organizers', 'festivals'];
@@ -69,8 +70,28 @@ function applyChange(dataset, change) {
   return null;
 }
 
-/** Prüft die Änderungen einer Vorschlagsdatei (UPD-EV-1, UPD-UB-1, UPD-UB-2, UPD-UB-4, UPD-UB-5). */
-export function checkProposal(proposal, { dataset, snapshots, root = ROOT }) {
+/** Prüft ein Terminevent (Vernissage, Finissage); gibt den Verwerfungsgrund oder `null` zurück. */
+function checkTermin(kind, change, working, today) {
+  const record = change.record;
+  const prefix = EVENT_PREFIX[kind];
+  if (!String(record.title).startsWith(prefix)) return `Titel muss mit "${prefix.trim()}" beginnen`;
+  const exhibition = working.exhibitions.find((e) => e.venueId === record.venueId && normalizeSpace(e.title).toLowerCase() === normalizeSpace(String(record.title).slice(prefix.length)).toLowerCase());
+  if (!exhibition) return 'Ausstellung zum Titel nicht gefunden (Ort und Titel müssen zu einer vorhandenen oder zuvor ergänzten Ausstellung passen)';
+  const id = `${exhibition.id}-${ID_SUFFIX[kind]}`;
+  if (record.id && record.id !== id) return `id muss "${id}" lauten`;
+  record.id = id;
+  if (!isDate(record.startDate) || record.startDate !== record.endDate) return 'Termin braucht ein Datum (startDate gleich endDate)';
+  if (record.startDate < today) return `Termin liegt in der Vergangenheit (${record.startDate})`;
+  const excerpt = change.evidence?.excerpt ?? '';
+  if (!hasHint(excerpt, kind)) return kind === 'finissage' ? 'Finissage nicht belegt: Textauszug nennt keine Finissage mit Datum' : 'Eröffnung nicht belegt: Textauszug nennt keine Eröffnung mit Datum';
+  if (!hasDate(excerpt, kind, record.startDate)) return `Datum nicht belegt: Textauszug nennt ${record.startDate} nicht nach dem Stichwort`;
+  const belegt = new Set(timesOf(excerpt));
+  if (timesOf(record.description).some((time) => !belegt.has(time))) return 'Uhrzeit nicht belegt';
+  return null;
+}
+
+/** Prüft die Änderungen einer Vorschlagsdatei (UPD-EV-1, UPD-UB-1, UPD-UB-2, UPD-UB-4, UPD-UB-5, OPN-UB-3 bis OPN-UB-8, OPN-UN-1). */
+export function checkProposal(proposal, { dataset, snapshots, root = ROOT, today = new Date().toISOString().slice(0, 10) }) {
   const venue = proposal.organizerId ? undefined : dataset.venues.find((v) => v.id === proposal.venueId);
   const organizer = proposal.organizerId ? dataset.organizers.find((o) => o.id === proposal.organizerId) : undefined;
   if (!venue && !organizer) throw new Error(`Quelle "${proposal.organizerId ?? proposal.venueId}" existiert weder als Ort noch als Veranstalter`);
@@ -133,12 +154,19 @@ export function checkProposal(proposal, { dataset, snapshots, root = ROOT }) {
         continue;
       }
     }
+    // Eröffnung und Finissage (OPN-UB-3, OPN-UB-5, OPN-UB-7, OPN-UN-1): Titel, Kennung, Datum, Beleg
+    const kind = op === 'add' && change.dataset === 'events' ? terminKind(change.record) : null;
+    if (kind) {
+      const problem = checkTermin(kind, change, working, today);
+      if (problem) { reject(change, problem); continue; }
+    }
     // Fundstelle (UPD-UB-2)
     const excerpt = change.evidence?.excerpt;
     const snapshot = snapshots.find((s) => s.url === change.evidence?.url);
     if (!excerpt || !snapshot) { reject(change, 'Fundstelle fehlt: URL ohne Snapshot oder Textauszug leer'); continue; }
     if (!contains(snapshot.text, excerpt)) { reject(change, 'Fundstelle: Textauszug steht nicht im Snapshot'); continue; }
-    const needle = op === 'add' ? change.record.title ?? change.record.name : change.newValue;
+    // Termine belegt checkTermin (Stichwort und Datum im Textauszug); der Titel des Events ist abgeleitet.
+    const needle = kind ? null : op === 'add' ? change.record.title ?? change.record.name : change.newValue;
     if (typeof needle === 'string' && !contains(excerpt, needle)) { reject(change, `Fundstelle: Textauszug enthält "${needle}" nicht`); continue; }
 
     let oldValue;
@@ -187,9 +215,9 @@ export function checkProposal(proposal, { dataset, snapshots, root = ROOT }) {
   return { ...proposal, changes: accepted, rejected };
 }
 
-export function checkProposalFile(file, { dataDir, snapshotDir, root = ROOT }) {
+export function checkProposalFile(file, { dataDir, snapshotDir, root = ROOT, today }) {
   const proposal = readJson(file);
-  const result = checkProposal(proposal, { dataset: loadDataset(dataDir), snapshots: listSnapshots(snapshotDir, proposal.organizerId ?? proposal.venueId), root });
+  const result = checkProposal(proposal, { dataset: loadDataset(dataDir), snapshots: listSnapshots(snapshotDir, proposal.organizerId ?? proposal.venueId), root, today });
   writeFileSync(file, JSON.stringify(result, null, 2) + '\n');
   return result;
 }

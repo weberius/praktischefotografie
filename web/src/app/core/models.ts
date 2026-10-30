@@ -28,7 +28,7 @@ export interface Exhibition {
   isOfficialFestivalPartner?: boolean;
 }
 
-export type EventType = 'fair_and_convention' | 'talk' | 'symposium' | 'workshop' | 'vernissage' | 'reading';
+export type EventType = 'fair_and_convention' | 'talk' | 'symposium' | 'workshop' | 'vernissage' | 'finissage' | 'reading';
 
 export interface PhotoEvent {
   id: string;
@@ -150,6 +150,7 @@ export const EVENT_TYPE_LABEL: Record<EventType, string> = {
   symposium: 'Symposium',
   workshop: 'Workshop',
   vernissage: 'Vernissage',
+  finissage: 'Finissage',
   reading: 'Lesung',
 };
 
