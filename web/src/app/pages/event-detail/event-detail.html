@@ -28,6 +28,15 @@
         }
       </dl>
 
+      @if (!over()) {
+        <div class="calendar-save">
+          <button type="button" aria-describedby="calendar-save-hint" (click)="saveToCalendar()">Termin in Geräte-Kalender speichern</button>
+          <p id="calendar-save-hint" class="hint">
+            Lädt eine Kalenderdatei (.ics) für den Kalender Ihres Smartphones oder Rechners. Gemeint ist nicht der Kalender dieser Webseite.
+          </p>
+        </div>
+      }
+
       @if (e.description) {
         <h2>Beschreibung</h2>
         <p>{{ e.description }}</p>

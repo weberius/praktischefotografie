@@ -7,10 +7,17 @@ const require = createRequire(import.meta.url);
 const AXE = readFileSync(require.resolve('axe-core/axe.min.js'), 'utf8');
 const ALLOWED_HOST = /(^|\.)tile\.openstreetmap\.org$/;
 
+/** Erste Eventseite eines noch nicht beendeten Events: nur dort gibt es die Schaltfläche zum Kalender (Q-USE-15). */
+function upcomingEventPath(paths, today = new Date().toISOString().slice(0, 10)) {
+  const events = JSON.parse(readFileSync(new URL('../../../data/events.json', import.meta.url), 'utf8'));
+  const upcoming = new Set(events.filter((e) => e.endDate >= today).map((e) => e.id));
+  return paths.find((p) => /^\/events\/.+/.test(p) && upcoming.has(p.split('/').pop()));
+}
+
 /** Je Seitentyp eine Adresse (aus der Sitemap abgeleitet) plus Hinweisseite. */
 export function samplePages(paths) {
   const first = (re) => paths.find((p) => re.test(p));
-  return ['/', '/calendar', first(/^\/calendar\/\d{4}\/\d+$/), '/map', '/venues', first(/^\/venues\/.+/), '/photographers', first(/^\/photographers\/.+/), '/exhibitions', first(/^\/exhibitions\/.+/), '/events', first(/^\/events\/.+/), '/festivals', first(/^\/festivals\/.+/), '/organizers', first(/^\/organizers\/.+/), first(/^\/posts\/.+/), '/impressum', '/haftungsausschluss', '/datenschutz', '/quellen', '/404.html'].filter(Boolean);
+  return ['/', '/calendar', first(/^\/calendar\/\d{4}\/\d+$/), '/map', '/venues', first(/^\/venues\/.+/), '/photographers', first(/^\/photographers\/.+/), '/exhibitions', first(/^\/exhibitions\/.+/), '/events', first(/^\/events\/.+/), upcomingEventPath(paths), '/festivals', first(/^\/festivals\/.+/), '/organizers', first(/^\/organizers\/.+/), first(/^\/posts\/.+/), '/impressum', '/haftungsausschluss', '/datenschutz', '/quellen', '/404.html'].filter((p, i, all) => Boolean(p) && all.indexOf(p) === i);
 }
 
 export async function browserCheck({ baseUrl, paths, executablePath }) {

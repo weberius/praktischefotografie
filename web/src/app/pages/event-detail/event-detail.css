@@ -12,3 +12,13 @@
 .facts dd {
   margin: 0;
 }
+
+.calendar-save {
+  margin: 1rem 0;
+}
+
+.calendar-save .hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}

@@ -1,4 +1,5 @@
-// Gherkin: web/events.feature · „Eventdetail“, „Kommerzielles Event“, „Beendetes Event“; web/navigation.feature · unbekannte ID
+// Gherkin: web/events.feature · „Eventdetail“, „Kommerzielles Event“, „Beendetes Event“; web/navigation.feature · unbekannte ID;
+// web/kalender-export.feature · „Schaltfläche auf der Eventdetailseite“, „Download der Kalenderdatei“, „Beendetes Event ohne Schaltfläche“, „Nur auf der Eventdetailseite“
 import { TestBed } from '@angular/core/testing';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
@@ -45,5 +46,70 @@ describe('EventDetailPage', () => {
     expect(el.textContent).toContain('nicht gefunden');
     expect(el.querySelector('a[href="/"]')).not.toBeNull();
     expect(document.title).toContain('Nicht gefunden');
+  });
+
+  describe('Termin in den Gerätekalender (ICS-*)', () => {
+    const LABEL = 'Termin in Geräte-Kalender speichern';
+    const button = (el: HTMLElement) => Array.from(el.querySelectorAll('button')).find((b) => b.textContent?.trim() === LABEL);
+
+    it('Szenario: Schaltfläche auf der Eventdetailseite (ICS-UB-1)', async () => {
+      const el = await open('/events/e-talk');
+      const b = button(el)!;
+      expect(b).toBeDefined();
+      expect(b.type).toBe('button');
+      const hint = el.querySelector<HTMLElement>(`#${b.getAttribute('aria-describedby')}`)!;
+      expect(hint.textContent).toContain('Smartphones oder Rechners');
+      expect(hint.textContent).toContain('Kalenderdatei');
+      expect(hint.textContent).toContain('nicht der Kalender dieser Webseite');
+      expect(getComputedStyle(hint).display).not.toBe('none');
+    });
+
+    it('Szenario: Download der Kalenderdatei (ICS-EV-1)', async () => {
+      const el = await open('/events/e-talk');
+      jasmine.clock().install();
+      let blob: Blob | undefined;
+      spyOn(URL, 'createObjectURL').and.callFake((b: Blob | MediaSource) => {
+        blob = b as Blob;
+        return 'blob:test';
+      });
+      const revoke = spyOn(URL, 'revokeObjectURL');
+      let download = '';
+      spyOn(HTMLAnchorElement.prototype, 'click').and.callFake(function (this: HTMLAnchorElement) {
+        download = this.download;
+      });
+      const fetchSpy = spyOn(window, 'fetch');
+      const xhrSpy = spyOn(XMLHttpRequest.prototype, 'open');
+      button(el)!.click();
+      expect(download).toBe('e-talk.ics');
+      expect(blob?.type).toBe('text/calendar;charset=utf-8');
+      expect(revoke).not.toHaveBeenCalled(); // der Download darf die Adresse noch brauchen
+      jasmine.clock().tick(9_999);
+      expect(revoke).not.toHaveBeenCalled();
+      jasmine.clock().tick(1);
+      jasmine.clock().uninstall();
+      expect(revoke).toHaveBeenCalledOnceWith('blob:test');
+      const text = await blob!.text();
+      expect(text).toContain('SUMMARY:Artist Talk');
+      expect(text).toContain('DTSTART;VALUE=DATE:20261112');
+      expect(text).toContain('UID:e-talk@zentrum-praktische-fotografie');
+      expect(text).toContain('LOCATION:Haus Köln Bibliothek\\, ');
+      expect(text).toContain(`URL:${new URL('events/e-talk', document.baseURI).href}`);
+      expect(fetchSpy).not.toHaveBeenCalled();
+      expect(xhrSpy).not.toHaveBeenCalled();
+    });
+
+    it('Szenario: Beendetes Event ohne Schaltfläche (ICS-ST-1)', async () => {
+      const el = await open('/events/e-vergangen');
+      expect(el.textContent).toContain('Beendet');
+      expect(button(el)).toBeUndefined();
+    });
+
+    it('Szenario: Nur auf der Eventdetailseite (ICS-UB-5)', async () => {
+      for (const url of ['/events', '/calendar', '/exhibitions/a-laufend']) {
+        TestBed.resetTestingModule();
+        const el = await open(url);
+        expect(button(el)).withContext(url).toBeUndefined();
+      }
+    });
   });
 });
