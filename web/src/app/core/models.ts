@@ -74,6 +74,11 @@ export interface WikipediaSource {
   url: string;
 }
 
+export interface WebSource {
+  title: string;
+  url: string;
+}
+
 export interface Portrait {
   file: string;
   width: number;
@@ -92,6 +97,7 @@ export interface Photographer {
   occupation?: string;
   life?: { from: number; to: number | null };
   wikipedia?: { summary: string; sources: WikipediaSource[] };
+  web?: { summary: string; sources: WebSource[] };
   portrait?: Portrait;
 }
 

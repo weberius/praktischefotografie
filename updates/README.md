@@ -145,3 +145,35 @@ updates/<JJJJ-MM-TT>/
 - **Übernahme:** `photographers:apply` schreibt `data/photographers.json` und kopiert die Bilder nach `data/portraits/<id>.<ext>`; bei ungültigem Ergebnis bleibt alles unverändert. Vorhandene Profile werden nur mit `--force` ersetzt.
 - **Abruf:** Nur `*.wikipedia.org`, `www.wikidata.org`, `commons.wikimedia.org`, `upload.wikimedia.org` und `thumb.wikimedia.org`; mindestens 1 s Abstand; `User-Agent` mit Kontaktadresse; Cache `.cache/wikipedia/` (30 Tage); Weiterleitungen nur auf diese Hosts.
 
+
+## Websuche nach Personen (`--web`)
+
+Mit `/research-photographers --web --photographer <id>` oder `--web --name "<Name>"` recherchiert der Skill eine Person über eine Suchmaschine (ADR-019, `docs/ears/setup/personen-websuche.md`). Ohne `--web` entsteht keine Suchanfrage.
+
+```bash
+npm run photographers:web -- plan --web --name "Wendy Red Star" [--offline] [--max-age 30]
+# Skill: Suche (≤ 3 Anfragen, ≤ 10 Treffer) und updates/<Datum>/photographers-search.json schreiben
+npm run photographers:web -- links
+npm run photographers:web -- pages [--offline]     # braucht SCRAPE_CONTACT
+# Skill: updates/<Datum>/photographers-web-proposals.json schreiben
+npm run photographers:web -- check
+# Freigabe: "approved": true je Vorschlag setzen
+npm run photographers:web -- apply [--photographer <id>] [--force]
+```
+
+```
+updates/
+├── photographers-links.json              Linksammlung je Person-ID (url, title, query, foundAt), fortgeschrieben über alle Läufe
+└── <JJJJ-MM-TT>/
+    ├── photographers-web.json            Plan und Ergebnis je Person (Anfragen, Treffer, neue Links, Seiten)
+    ├── photographers-search.json         Treffer der Suche (Titel, URL, Textauszug, Anfrage, Abrufdatum)
+    └── photographers-web-proposals.json  Vorschläge: neue Person (`create`) und Webkurztext (`web`)
+```
+
+- **Links:** Nur http/https, ohne Fragment und ohne `utm_*`, `fbclid`, `gclid`; Host klein, ohne abschließenden Schrägstrich; Dubletten werden ausgelassen, Vorhandenes bleibt unverändert.
+- **Seiten:** Nur neue Links, höchstens fünf je Person, nach den Regeln des Abrufdienstes (`robots.txt`, ≥ 2 s Abstand je Website, Kennung im `User-Agent`, keine Weiterleitung auf andere Websites); Snapshots unter `.cache/snapshots/<person-id>/`.
+- **Cache:** `.cache/websearch/<person-id>.json` (30 Tage, `--max-age`); mit `--offline` oder frischem Cache keine Suche.
+- **Neue Person:** Nur `id` (Kleinbuchstaben, Umlaute umgeschrieben, z. B. `uelkue-mueller-oez`) und `name`; vorhandene Namen und `id` werden nie doppelt angelegt.
+- **Webkurztext:** Feld `web` (`summary` 40 bis 90 Wörter, `sources` 1 bis 5 mit `title` und `url`) neben `wikipedia`. Neuer Vorschlag nur bei neuen Links. `photographers:web -- check` verwirft falsche Wortzahl, wörtliche Folgen von acht Wörtern aus Textauszügen oder Snapshots, Quellen außerhalb der Linksammlung und Bilder von anderen Hosts als Wikimedia.
+- **Übernahme:** Nur mit `"approved": true`; vorhandenes `web` nur mit `--force`; bei ungültigem Ergebnis bleibt `data/photographers.json` unverändert.
+- **Bericht:** `PHOTOGRAPHERS.md` enthält den Abschnitt „Websuche“.

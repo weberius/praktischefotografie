@@ -22,3 +22,8 @@ Begriffe: „heute“ ist das aktuelle Datum der Anwendung (in Tests ein fester 
 | PHO-UB-10 | Die Webanwendung soll auf der Personenseite jede Ausstellung der Person mit der Badge-Zeile (Art, danach Status) oberhalb der Überschrift zeigen. | `web/fotografinnen.feature` · „Ausstellungen der Person tragen Badges“ | Q-USE-4, Q-USE-7 | ADR-015 |
 
 **Ergänzung 2026-10-28:** PHO-UB-10 ergänzt PHO-UB-3; der Status steht in der Badge-Zeile statt unter dem Zeitraum.
+
+| PHO-UB-11 | Die Webanwendung soll auf der Personenseite, wenn die Person einen Webkurztext hat, unter „Aus dem Web“ die Zusammenfassung, den Hinweis, dass sie aus frei zugänglichen Webseiten zusammengefasst wurde, und je Quelle einen Link mit Titel und Host zeigen; Links sollen sich ohne Referrer in neuem Kontext öffnen. | `web/fotografinnen.feature` · „Webkurztext mit Quellen“ | Q-USE-5, Q-SEC-2 | ADR-019 |
+| PHO-ST-3 | Solange eine Person kein Portrait hat, soll die Webanwendung weder Bild noch Bildnachweis zeigen; solange sie keine Wikipedia-Zusammenfassung hat, soll sie den Abschnitt „Aus der Wikipedia“ nicht zeigen; solange sie keinen Webkurztext hat, soll sie den Abschnitt „Aus dem Web“ nicht zeigen. | `web/fotografinnen.feature` · „Person ohne Portrait und Wikipedia“, „Person ohne Webkurztext“ | – | ADR-002 |
+
+**Supersede 2026-10-31:** PHO-ST-3 ersetzt PHO-ST-2 (Abschnitt „Aus dem Web“ ergänzt). PHO-UB-11 ergänzt PHO-UB-8; der Abschnitt „Aus der Wikipedia“ bleibt unverändert.

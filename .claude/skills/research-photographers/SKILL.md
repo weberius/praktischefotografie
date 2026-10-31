@@ -1,13 +1,15 @@
 ---
 name: research-photographers
-description: Recherchiert Fotograf:innen über Wikidata, die Wikipedia in mehreren Sprachen und Wikimedia Commons und ergänzt Berufsbezeichnung, Lebensdaten, Wikipedia-Zusammenfassung und Portrait mit Bildnachweis. Ruft Wikimedia rücksichtsvoll ab, schreibt eigene Zusammenfassungen, holt die Freigabe ein und übernimmt sie mit Prüfung. Aufruf z. B. `/research-photographers`, `/research-photographers --photographer august-sander`, `/research-photographers --offline`.
+description: Recherchiert Fotograf:innen über Wikidata, die Wikipedia in mehreren Sprachen und Wikimedia Commons und ergänzt Berufsbezeichnung, Lebensdaten, Wikipedia-Zusammenfassung und Portrait mit Bildnachweis. Ruft Wikimedia rücksichtsvoll ab, schreibt eigene Zusammenfassungen, holt die Freigabe ein und übernimmt sie mit Prüfung. Mit `--web` zusätzlich Websuche nach einer Person mit Linksammlung und Webkurztext. Aufruf z. B. `/research-photographers`, `/research-photographers --photographer august-sander`, `/research-photographers --offline`, `/research-photographers --web --name "Wendy Red Star"`.
 ---
 
 # Fotograf:innen recherchieren
 
 Du ergänzst in `data/photographers.json` die Profile der Personen aus **Wikidata, Wikipedia (mehrere Sprachen) und Wikimedia Commons**. Spezifikation: `docs/ears/setup/fotografinnen-recherche.md`, `docs/ears/content/fotografinnen-profile.md`, ADR-011 und ADR-012. Format der Dateien: `updates/README.md`.
 
-Argumente: `$ARGUMENTS` (optional `--photographer <id>`, `--force`, `--offline`, `--max-age <Tage>`, `--date JJJJ-MM-TT`). Ohne `--photographer` werden alle Personen ohne Wikipedia-Zusammenfassung oder ohne Portrait bearbeitet.
+Argumente: `$ARGUMENTS` (optional `--photographer <id>`, `--force`, `--offline`, `--max-age <Tage>`, `--date JJJJ-MM-TT`, `--web`, `--name "<Name>"`). Ohne `--photographer` werden alle Personen ohne Wikipedia-Zusammenfassung oder ohne Portrait bearbeitet.
+
+**Ohne `--web` gilt ausschließlich der Ablauf unten („Ablauf“): keine Suchmaschine, keine Trefferseite.** Mit `--web` gilt stattdessen der Abschnitt „Websuche (`--web`)“ (Spezifikation: `docs/ears/setup/personen-websuche.md`, ADR-019).
 
 ## Harte Regeln
 
@@ -43,3 +45,44 @@ Argumente: `$ARGUMENTS` (optional `--photographer <id>`, `--force`, `--offline`,
 ## Abschlussmeldung
 
 Kurz: bearbeitete Personen, Anzahl gefunden / nicht gefunden / mehrdeutig / Fehler, Vorschläge (geprüft / verworfen / übernommen), Portraits mit Lizenz, Ergebnis von Validierung, Tests und Lint, Hinweis auf nicht Geprüftes (z. B. Sachrichtigkeit der Zusammenfassungen, richtige Person bei Namensgleichheit).
+
+## Websuche (`--web`)
+
+Nur auf ausdrücklichen Wunsch, für **eine** Person: `--photographer <id>` (vorhandene Person) oder `--name "<Name>"` (auch unbekannte Person). Fehlt beides, brich mit einem Hinweis ab. Du recherchierst im Web, sammelst die Links in `updates/photographers-links.json` und schreibst einen Webkurztext (Feld `web`), der neben der Wikipedia-Zusammenfassung steht und sie nicht ersetzt.
+
+### Zusätzliche Regeln
+
+- **Suche nur über dein Websuch-Werkzeug**, höchstens **drei Suchanfragen** je Person (`"<Name>" Fotograf`, `"<Name>" Fotografin`, `"<Name>" Künstler:in`) und höchstens **zehn Treffer** je Anfrage. Seiten rufst du **nicht** selbst ab (kein WebFetch, kein curl), sondern nur über `npm run photographers:web -- pages`; dort gelten `robots.txt`, Abstand von mindestens 2 s je Website, Kennung im User-Agent, höchstens fünf Seiten je Person.
+- **Kurztext in eigener Formulierung** (Deutsch, **40 bis 90 Wörter**), **nur** aus Textauszügen (`snippet`) und Snapshots (`.cache/snapshots/<person-id>/`). Du schreibst nichts hinzu, was dort nicht steht, und löst **widersprüchliche Angaben nicht auf, sondern lässt sie weg**. Keine wörtliche Folge von acht oder mehr Wörtern.
+- **Quellen** (1 bis 5) sind Adressen aus der Linksammlung der Person.
+- **Keine Bilder aus dem Web.** Du lädst und verlinkst keine Bilder von Trefferseiten; Portraits kommen nur von Wikimedia Commons über `photographers:fetch`.
+- **Neuer Kurztext nur bei neuen Links.** Hat der Lauf keinen neuen Link ergeben (`newLinks` leer), schreibst du keinen Vorschlag für `web` und lässt den vorhandenen unverändert.
+- **Änderungen an `data/` erst nach ausdrücklicher Freigabe** (per `AskUserQuestion`); ersetzen nur mit `--force`.
+- Eine neue Person legst du nur mit `id` und `name` an; Berufsbezeichnung, Lebensdaten und Portrait kommen aus der Wikipedia-Recherche.
+
+### Ablauf
+
+1. **Plan:** `npm run photographers:web -- plan --web --photographer <id>` bzw. `--name "<Name>"` (mit `--offline`, `--max-age <Tage>` wie oben). Die Ausgabe nennt die Person (neu oder vorhanden) und die Suchanfragen oder den Zwischenspeicher. Ist die Suche zwischengespeichert, überspringst du Schritt 2.
+2. **Suchen** und `updates/<Datum>/photographers-search.json` schreiben:
+   ```json
+   { "date": "2026-11-02", "engine": "<Name der Suchmaschine>", "persons": [
+     { "id": "wendy-red-star", "queries": [ { "query": "\"Wendy Red Star\" Fotografin", "results": [ { "title": "…", "url": "https://…", "snippet": "…" } ] } ] }
+   ] }
+   ```
+   Schlägt die Suche fehl: `{ "id": "…", "error": "Grund" }`.
+3. **Links übernehmen:** `npm run photographers:web -- links`. Lies die Ausgabe (Treffer, neue Links, Status).
+4. **Seiten abrufen** (nur wenn neue Links da sind und du deren Inhalt für den Kurztext brauchst): `npm run photographers:web -- pages` (`SCRAPE_CONTACT` nötig; mit `--offline` nur Snapshots).
+5. **Vorschläge schreiben** in `updates/<Datum>/photographers-web-proposals.json`:
+   ```json
+   { "date": "2026-11-02", "proposals": [
+     { "id": "uelkue-mueller-oez", "name": "Ülkü Müller-Öz", "create": true,
+       "web": { "summary": "…", "sources": ["https://example.org/a"] } }
+   ] }
+   ```
+   `create` nur für eine neue Person. `web` nur, wenn es neue Links gibt.
+6. **Prüfen:** `npm run photographers:web -- check`. Verworfene Vorschläge nennst du mit Grund; korrigiere höchstens zweimal, nie die Prüfregeln.
+7. **Freigabe einholen** (Name, neue Person ja/nein, Zusammenfassung, Quellen mit Titel und Adresse, Ersetzen ja/nein) per `AskUserQuestion`; setze nur für Freigegebene `"approved": true`.
+8. **Übernehmen:** `npm run photographers:web -- apply` (mit `--force` nur nach ausdrücklicher Freigabe). Optional danach `npm run photographers:fetch -- --photographer <id>` für Wikipedia und Portrait der neuen Person.
+9. **Prüfen:** `npm run validate:data`, `npm test`, `npm run lint`; Ergebnisse ehrlich berichten.
+
+Der Bericht `updates/<Datum>/PHOTOGRAPHERS.md` enthält den Abschnitt „Websuche“ (Suchmaschine, Anfragen, Treffer, neue Links, angelegte Personen, aktualisierte Kurztexte). Nicht Geprüftes nennst du ausdrücklich: Sachrichtigkeit des Kurztexts, richtige Person bei Namensgleichheit, Eignung der Treffer.

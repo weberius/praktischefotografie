@@ -57,6 +57,21 @@
         </section>
       }
 
+      @if (person.web; as web) {
+        <section class="wiki-section web-section" aria-labelledby="web-heading">
+          <h2 id="web-heading">Aus dem Web</h2>
+          <p class="lead">{{ web.summary }}</p>
+          <p class="wiki-attribution">Zusammenfassung aus frei zugänglichen Webseiten. Die Quellen:</p>
+          <ul class="wiki-sources web-sources">
+            @for (source of web.sources; track source.url) {
+              <li>
+                <a [href]="source.url" target="_blank" rel="noopener noreferrer">{{ source.title }}<span class="visually-hidden"> – öffnet in neuem Tab</span></a> ({{ hostOf(source.url) }})
+              </li>
+            }
+          </ul>
+        </section>
+      }
+
       <h2>Ausstellungen ({{ exhibitions().length }})</h2>
       @if (exhibitions().length) {
         <ul class="card-list">

@@ -136,3 +136,23 @@ test('Szenario: Art passt zur Zahl der Personen (PRF-UN-3, Q-DATA-11)', () => {
     assert.deepEqual(validate(set(type, n), { portraitBytes: null }).errors, [], `${type} mit ${n}`);
   }
 });
+
+const webSource = (n) => ({ title: `Quelle ${n}`, url: `https://example.org/${n}` });
+const web = (summaryWords, sources = [webSource(1), webSource(2)]) => ({ web: { summary: words(summaryWords), sources } });
+
+test('Szenario: Webkurztext mit Quellen (PRF-UB-6)', () => {
+  assert.deepEqual(validate(withPerson(web(60))).errors, []);
+  assert.deepEqual(validate(withPerson(web(40, [webSource(1)]))).errors, []);
+  assert.deepEqual(validate(withPerson(web(90, [1, 2, 3, 4, 5].map(webSource)))).errors, []);
+});
+
+test('Szenario: Ungültiger Webkurztext (PRF-UN-4)', () => {
+  const bad = {
+    'ohne Quelle': web(60, []),
+    'sechs Quellen': web(60, [1, 2, 3, 4, 5, 6].map(webSource)),
+    '39 Wörter': web(39),
+    '91 Wörter': web(91),
+    'ftp-Quelle': web(60, [{ title: 'FTP', url: 'ftp://example.org/a' }]),
+  };
+  for (const [name, over] of Object.entries(bad)) assert.match(validate(withPerson(over)).errors.join('\n'), /web/, name);
+});

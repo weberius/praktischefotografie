@@ -68,3 +68,16 @@ Funktionalität: Profile der Fotograf:innen
     Dann meldet die Validierung einen Fehler für "type"
     Und eine Ausstellung der Art "group" mit einer Person wird ebenfalls gemeldet
     Aber "retrospective" und "permanent" bestehen unabhängig von der Zahl der Personen
+
+  # EARS: PRF-UB-6
+  Szenario: Webkurztext mit Quellen
+    Angenommen eine Person mit "web" aus einer Zusammenfassung von 60 Wörtern und zwei Quellen mit Titel und https-Adresse
+    Wenn die Daten validiert werden
+    Dann besteht die Validierung
+    Und "wikipedia" der Person bleibt unverändert zulässig
+
+  # EARS: PRF-UN-4
+  Szenario: Ungültiger Webkurztext
+    Angenommen Personen mit "web" ohne Quelle, mit sechs Quellen, mit 39 Wörtern, mit 91 Wörtern und mit einer Quelle "ftp://example.org/a"
+    Wenn die Daten validiert werden
+    Dann meldet die Validierung für jede dieser Personen einen Fehler für "web"

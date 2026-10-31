@@ -34,3 +34,22 @@ test('Szenario: Skill schreibt nur aus den Quellen (RSF-UB-7)', () => {
   assert.match(text, /Du lädst keine Bilder selbst/);
   assert.match(text, /nur für freigegebene\*\* Vorschläge `"approved": true`/);
 });
+
+test('Szenario: Skill schreibt nur aus den Quellen, Websuche (WSP-UB-1, WSP-UB-7)', () => {
+  const text = skill();
+  assert.match(text, /Ohne `--web` gilt ausschließlich der Ablauf unten/);
+  assert.match(text, /Fehlt beides, brich mit einem Hinweis ab/);
+  assert.match(text, /höchstens \*\*drei Suchanfragen\*\*/);
+  assert.match(text, /\*\*Kurztext in eigener Formulierung\*\* \(Deutsch, \*\*40 bis 90 Wörter\*\*\)/);
+  assert.match(text, /nur\*\* aus Textauszügen/);
+  assert.match(text, /widersprüchliche Angaben nicht auf, sondern lässt sie weg/);
+  assert.match(text, /Änderungen an `data\/` erst nach ausdrücklicher Freigabe/);
+  assert.match(text, /Keine Bilder aus dem Web/);
+  const web = text.slice(text.indexOf('## Websuche'));
+  let position = -1;
+  for (const step of ['photographers:web -- plan', 'photographers-search.json', 'photographers:web -- links', 'photographers:web -- pages', 'photographers:web -- check', 'AskUserQuestion', 'photographers:web -- apply', 'npm run validate:data']) {
+    const next = web.indexOf(step, position + 1);
+    assert.ok(next > position, `Schritt "${step}" fehlt oder steht in falscher Reihenfolge`);
+    position = next;
+  }
+});

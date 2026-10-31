@@ -67,3 +67,19 @@ Funktionalität: Fotograf:innen
     Angenommen eine Person mit einer laufenden Gruppenausstellung
     Wenn die Personenseite aufgerufen wird
     Dann beginnt die Karte der Ausstellung mit "Gruppenausstellung" und danach "Laufend"
+
+  # EARS: PHO-UB-11
+  Szenario: Webkurztext mit Quellen
+    Angenommen eine Person mit Webkurztext und zwei Quellen "https://example.org/a" und "https://www.example.com/b"
+    Wenn die Personenseite aufgerufen wird
+    Dann erscheint unter "Aus dem Web" die Zusammenfassung
+    Und der Hinweis auf Zusammenfassung aus frei zugänglichen Webseiten erscheint
+    Und je ein Link mit Titel und Host "example.org" bzw. "www.example.com"
+    Und die Links öffnen ohne Referrer in einem neuen Kontext
+
+  # EARS: PHO-ST-3
+  Szenario: Person ohne Webkurztext
+    Angenommen eine Person mit Wikipedia-Zusammenfassung, aber ohne Webkurztext
+    Wenn die Personenseite aufgerufen wird
+    Dann erscheint der Abschnitt "Aus der Wikipedia"
+    Aber der Abschnitt "Aus dem Web" erscheint nicht

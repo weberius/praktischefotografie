@@ -119,6 +119,11 @@ export function validateData({ dataDir = join(ROOT, 'data'), schemaDir = join(RO
         if (host !== `${s.lang}.wikipedia.org`) errors.push(`photographers.json: ${person.id} wikipedia/sources – "${s.url}" gehört nicht zu ${s.lang}.wikipedia.org`);
       }
     }
+    const webSummary = person.web?.summary;
+    if (webSummary !== undefined) {
+      const words = wordCount(webSummary);
+      if (words < SUMMARY_WORDS.min || words > SUMMARY_WORDS.max) errors.push(`photographers.json: ${person.id} web/summary – ${words} Wörter, erlaubt sind ${SUMMARY_WORDS.min} bis ${SUMMARY_WORDS.max}`);
+    }
     const portrait = person.portrait;
     if (portrait) {
       let host = '';

@@ -3,6 +3,7 @@ import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, statSync, wr
 import { join } from 'node:path';
 import { MAX_PORTRAIT_BYTES, SUMMARY_WORDS, validateData, wordCount } from '../../validate-data.mjs';
 import { ROOT, normalizeSpace, readJson } from '../../scrape/lib/common.mjs';
+import { webReportLines } from './webreport.mjs';
 
 export const PREFERRED_LANGS = ['de', 'en', 'fr', 'es', 'it', 'nl'];
 export const MAX_ARTICLES = 3;
@@ -351,7 +352,7 @@ export function writeReport({ root = ROOT, date, candidates, proposals }) {
     const state = prop ? (prop.appliedAt ? 'übernommen' : prop.problems?.length ? `verworfen: ${prop.problems.join('; ')}` : prop.approved ? 'freigegeben' : 'geprüft') : 'kein Vorschlag';
     lines.push(`- \`${r.id}\` (${r.name}): ${r.status}${r.note ? ` – ${r.note}` : ''}; Sprachen: ${langs}; Bild: ${license}; ${state}`);
   }
-  const text = lines.join('\n') + '\n';
+  const text = [...lines, ...webReportLines({ root, date })].join('\n') + '\n';
   mkdirSync(join(root, 'updates', date), { recursive: true });
   writeFileSync(reportPath(root, date), text);
   return text;

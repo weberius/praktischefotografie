@@ -10,7 +10,7 @@ import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
 import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
 
-/** Personenseite nach dem Vorbild der Komponist:innen-Seite von klangland: Stammdaten, Portrait mit Bildnachweis, Wikipedia, Ausstellungen (PHO-UB-3, PHO-UB-6 bis PHO-UB-9, PHO-ST-1, PHO-ST-2, PHO-UN-1). */
+/** Personenseite nach dem Vorbild der Komponist:innen-Seite von klangland: Stammdaten, Portrait mit Bildnachweis, Wikipedia, Web, Ausstellungen (PHO-UB-3, PHO-UB-6 bis PHO-UB-9, PHO-UB-11, PHO-ST-1, PHO-ST-3, PHO-UN-1). */
 @Component({
   selector: 'app-photographer-detail-page',
   imports: [RouterLink, DataGate, NotFound, ExhibitionBadges],
@@ -26,6 +26,13 @@ export class PhotographerDetailPage {
   protected readonly formatRange = formatRange;
 
   protected readonly languageLabel = languageLabel;
+  protected readonly hostOf = (url: string): string => {
+    try {
+      return new URL(url).host;
+    } catch {
+      return url;
+    }
+  };
   protected readonly portraitFailed = signal<string | null>(null);
 
   protected readonly person = computed(() => this.data.photographerById().get(this.id()));

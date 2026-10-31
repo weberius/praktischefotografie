@@ -43,6 +43,28 @@
           }
         }
       },
+      "web": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["summary", "sources"],
+        "properties": {
+          "summary": { "type": "string", "minLength": 1 },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["title", "url"],
+              "properties": {
+                "title": { "type": "string", "minLength": 1 },
+                "url": { "type": "string", "format": "uri", "pattern": "^https?://" }
+              }
+            }
+          }
+        }
+      },
       "portrait": {
         "type": "object",
         "additionalProperties": false,

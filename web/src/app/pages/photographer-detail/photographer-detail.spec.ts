@@ -58,13 +58,35 @@ describe('PhotographerDetailPage', () => {
     expect(links.every((a) => a.getAttribute('rel')?.includes('noopener'))).toBeTrue();
   });
 
-  it('Szenario: Person ohne Portrait und Wikipedia (PHO-ST-2) – weder Bild noch Bildnachweis noch Abschnitt', async () => {
+  it('Szenario: Webkurztext mit Quellen (PHO-UB-11)', async () => {
+    const el = await open('/photographers/richard-kalvar');
+    const section = el.querySelector('section.web-section') as HTMLElement;
+    expect(section.querySelector('h2')?.textContent).toBe('Aus dem Web');
+    expect(section.textContent).toContain('Straßenfotografie');
+    expect(section.textContent).toContain('frei zugänglichen Webseiten');
+    const links = Array.from(section.querySelectorAll('ul.web-sources a'));
+    expect(links.map((a) => a.getAttribute('href'))).toEqual(['https://example.org/a', 'https://www.example.com/b']);
+    expect(links[0].textContent).toContain('Porträt von Richard Kalvar');
+    expect(section.querySelectorAll('li')[0].textContent).toContain('(example.org)');
+    expect(section.querySelectorAll('li')[1].textContent).toContain('(www.example.com)');
+    expect(links.every((a) => a.getAttribute('target') === '_blank' && a.getAttribute('rel') === 'noopener noreferrer')).toBeTrue();
+  });
+
+  it('Szenario: Person ohne Webkurztext (PHO-ST-3) – Wikipedia ja, „Aus dem Web“ nein', async () => {
+    const el = await open('/photographers/martin-parr');
+    expect(el.querySelector('section.wiki-section:not(.web-section)')).not.toBeNull();
+    expect(el.querySelector('section.web-section')).toBeNull();
+    expect(el.textContent).not.toContain('Aus dem Web');
+  });
+
+  it('Szenario: Person ohne Portrait und Wikipedia (PHO-ST-3) – weder Bild noch Bildnachweis noch Abschnitt', async () => {
     const el = await open('/photographers/elliott-erwitt');
     expect(el.querySelector('figure')).toBeNull();
     expect(el.querySelector('img')).toBeNull();
     expect(el.textContent).not.toContain('Wikimedia Commons');
     expect(el.querySelector('section.wiki-section')).toBeNull();
     expect(el.textContent).not.toContain('Aus der Wikipedia');
+    expect(el.textContent).not.toContain('Aus dem Web');
     expect(el.querySelector('.profile-head .meta')?.textContent?.replace(/\s+/g, ' ').trim()).toBe('Fotograf, 1928–2023');
   });
 

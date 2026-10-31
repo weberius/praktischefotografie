@@ -45,9 +45,11 @@ praktischefotografie/
 │   └── posts.json             # Blog-Index & Metadaten
 ├── content/
 │   └── posts/                 # Markdown-Beiträge für das Magazin (.md)
-├── public/
-│   └── assets/                # Bilder (Cover, Venues, Ausstellungen)
-└── src/                       # Frontend-Quellcode (App-Logik, Map, Agenda)
+├── web/                       # Angular-Webanwendung (siehe unten)
+├── scripts/                   # Abruf, Prüfung und Übernahme (Orte, Fotograf:innen, Magazin)
+├── updates/                   # Vorschläge, Berichte und Linksammlung der Skills (siehe updates/README.md)
+├── .claude/skills/            # Skills: update-venue-data, research-photographers
+└── docs/                      # Spezifikation, ADRs, Planung
 ```
 
 ---
@@ -191,12 +193,13 @@ Ermöglicht die Quervernetzung: "Welche Ausstellungen mit Beteiligung von Barbar
     "occupation": "Fotograf",
     "life": { "from": 1952, "to": null },
     "wikipedia": { "summary": "…40 bis 90 Wörter in eigener Formulierung…", "sources": [{ "lang": "de", "url": "https://de.wikipedia.org/wiki/Martin_Parr" }] },
+    "web": { "summary": "…40 bis 90 Wörter aus Webquellen in eigener Formulierung…", "sources": [{ "title": "Titel der Seite", "url": "https://example.org/parr" }] },
     "portrait": { "file": "martin-parr.jpg", "width": 400, "height": 300, "source": "https://commons.wikimedia.org/wiki/File:….jpg", "credit": "Urheber", "license": "CC BY-SA 4.0" }
   }
 ]
 ```
 
-`occupation`, `life`, `wikipedia` und `portrait` sind optional und werden mit `/research-photographers` ergänzt (siehe [`data/README.md`](data/README.md)).
+`occupation`, `life`, `wikipedia`, `web` und `portrait` sind optional und werden mit `/research-photographers` ergänzt (siehe [`data/README.md`](data/README.md)).
 
 ---
 
@@ -245,20 +248,63 @@ daraus `docs/resources/icon.png` und `docs/resources/postkarte.png` (zugeschnitt
 
 ---
 
-## 🔄 Daten aus Webseiten aktualisieren
+## 🔄 Nutzerhinweise: Skills für die Datenpflege
 
-Der Skill `/update-venue-data` (Claude Code) ruft die Webseiten der Orte rücksichtsvoll ab (`robots.txt`, 2 s Abstand, höchstens 6 Seiten je Ort), erstellt Vorschläge mit Fundstelle und übernimmt sie erst nach Freigabe.
+Zwei Skills pflegen die Daten. Beide laufen in Claude Code bzw. GitHub Copilot im Projektordner und arbeiten in vier Schritten: **abrufen → Vorschläge schreiben und prüfen → Freigabe durch dich → übernehmen**. In `data/` wird nichts ohne deine ausdrückliche Freigabe geändert; Zwischenstände liegen unter `updates/<Datum>/`. Details zu Dateiformaten und Einzelbefehlen: [`updates/README.md`](updates/README.md).
+
+### Voraussetzungen
 
 ```bash
-export SCRAPE_CONTACT="redaktion@example.org"   # Kontaktadresse für den User-Agent
-/update-venue-data                              # alle Orte (in Claude Code)
-/update-venue-data --venue makk-koeln           # ein Ort
+npm install
+export SCRAPE_CONTACT="redaktion@example.org"   # Kontaktadresse für den User-Agent (Pflicht für Abrufe, nicht mit --offline)
 ```
 
-Die einzelnen Schritte (`npm run data:fetch|check|report|apply`) und das Vorschlagsformat stehen in [`updates/README.md`](updates/README.md). Abgerufene Seitentexte liegen nur lokal unter `.cache/` und werden nicht versioniert.
+Abgerufene Seiten und Antworten liegen nur lokal unter `.cache/` und werden nicht versioniert. Alle Abrufe beachten `robots.txt` und halten Abstand (2 s je Website bei Orten, 1 s bei Wikimedia).
 
-Der Skill bearbeitet auch die Webseiten von Veranstaltern (Datensatz `organizers` mit `website`) und schlägt Festivals vor, aber nur mit belegtem Zeitraum (ADR-010, Details in [`updates/README.md`](updates/README.md)).
+### `/update-venue-data` – Orte, Veranstalter, Festivals, Magazin
 
-Profile der Fotograf:innen (Berufsbezeichnung, Lebensdaten, Wikipedia-Zusammenfassung, Portrait von Wikimedia Commons) recherchiert der eigene Skill `/research-photographers` (`npm run photographers:fetch|check|apply`, ADR-012, Details in [`updates/README.md`](updates/README.md)); die Webanwendung zeigt Bildnachweis und Quellen an.
+Aktualisiert Orte, Ausstellungen, Events, Veranstalter und Festivals aus deren Webseiten (höchstens 6 Seiten je Ort) und pflegt das Magazin.
 
-Bei jedem Lauf pflegt der Skill auch das Magazin: Zu neuen, eröffnenden, bald endenden und beendeten Ausstellungen entstehen Beiträge von 60 bis 80 Wörtern (`npm run news:plan|check|apply`). Sie werden vorab mit dem Datum des Anlasses angelegt, das Magazin zeigt sie erst an dem Tag, und sie werden erst nach Freigabe übernommen (Format und Regeln: [`updates/README.md`](updates/README.md)).
+```text
+/update-venue-data                      # alle Orte und Veranstalter mit Website
+/update-venue-data --venue makk-koeln   # ein Ort oder Veranstalter
+/update-venue-data --offline            # nur mit zwischengespeicherten Seiten, ohne Netz
+```
+
+Hinweise:
+* Jeder Vorschlag nennt seine Fundstelle; Festivals werden nur mit belegtem Zeitraum vorgeschlagen (ADR-010).
+* Zu neuen, eröffnenden, bald endenden und beendeten Ausstellungen entstehen Magazinbeiträge (60 bis 80 Wörter, `npm run news:plan|check|apply`). Sie erscheinen erst an dem Tag ihres Anlasses und werden nur nach Freigabe übernommen.
+* Prüfe vor der Freigabe Fundstellen und Daten stichprobenartig gegen die Webseite; die Prüfung kann Formfehler finden, aber nicht jede Sachabweichung.
+
+### `/research-photographers` – Profile der Fotograf:innen
+
+Ergänzt Berufsbezeichnung, Lebensdaten, Wikipedia-Zusammenfassung und Portrait (nur Wikimedia Commons, freie Lizenz, mit Bildnachweis).
+
+```text
+/research-photographers                              # alle Personen ohne Wikipedia-Text oder Portrait
+/research-photographers --photographer august-sander # eine Person (mit --force ein vorhandenes Profil ersetzen)
+/research-photographers --offline                    # nur aus dem Zwischenspeicher
+```
+
+Mit `--web` recherchiert der Skill eine einzelne Person zusätzlich über eine Suchmaschine – auch Personen ohne Wikipedia-Eintrag oder noch nicht erfasste Personen:
+
+```text
+/research-photographers --web --photographer wendy-red-star
+/research-photographers --web --name "Wendy Red Star"   # legt die Person nach Freigabe an, falls sie fehlt
+```
+
+Hinweise:
+* Ohne `--web` entsteht keine Suchanfrage. Mit `--web` sind es höchstens drei Anfragen mit je zehn Treffern; Trefferseiten werden höflich abgerufen (höchstens fünf je Person).
+* Die gefundenen Links sammelt `updates/photographers-links.json` über alle Läufe. Ein neuer Kurztext („Aus dem Web“, 40 bis 90 Wörter, 1 bis 5 Quellen) wird nur vorgeschlagen, wenn neue Links dazugekommen sind. Er steht neben der Wikipedia-Zusammenfassung und ersetzt sie nicht.
+* Kurztexte sind in eigenen Worten und nur aus den Quellen geschrieben, wörtliche Übernahmen ab acht Wörtern werden verworfen. Bilder aus dem Web werden nie geladen.
+* **Prüfe bei der Freigabe**, ob es wirklich die richtige Person ist (Namensgleichheit) und ob der Text sachlich stimmt; das kann kein Skript.
+* Vorhandene Profile oder Kurztexte werden nur mit `--force` und ausdrücklicher Freigabe ersetzt. Bei ungültigen Daten bleibt alles unverändert.
+
+### Nach jedem Lauf
+
+```bash
+npm run validate:data && npm test && npm run lint
+git diff data updates      # Änderungen durchsehen, dann committen
+```
+
+Der Bericht des Laufs liegt in `updates/<Datum>/` (`REPORT.md` bzw. `PHOTOGRAPHERS.md`). Beide Skills committen nie von selbst.

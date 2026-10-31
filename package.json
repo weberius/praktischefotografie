@@ -22,7 +22,8 @@
     "news:apply": "node scripts/news/apply-news.mjs",
     "photographers:fetch": "node scripts/photographers/fetch-photographers.mjs",
     "photographers:check": "node scripts/photographers/check-photographers.mjs",
-    "photographers:apply": "node scripts/photographers/apply-photographers.mjs"
+    "photographers:apply": "node scripts/photographers/apply-photographers.mjs",
+    "photographers:web": "node scripts/photographers/web.mjs"
   },
   "engines": {
     "node": ">=20"

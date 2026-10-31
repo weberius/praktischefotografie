@@ -1,7 +1,7 @@
 ---
-status: offen.       # offen | in-arbeit | umgesetzt | verworfen
+status: umgesetzt # offen | in-arbeit | umgesetzt | verworfen
 prio: 2              # optional, kleiner = früher
-ticket:              # setzt spec-intake
+ticket: SERVICE-15   # setzt spec-intake
 ---
 # Personen recherchieren
 

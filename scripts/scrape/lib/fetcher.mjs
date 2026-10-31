@@ -166,6 +166,29 @@ export async function fetchVenues(venues, options) {
       continue;
     }
     try {
+      if (venue.pages) {
+        // Explizite Seitenliste (Personen-Websuche, WSP-UB-3): keine Links verfolgen, höchstens maxPages Seiten.
+        const pages = [];
+        for (const url of venue.pages.slice(0, o.maxPages)) {
+          const cached = fresh(url);
+          if (cached) {
+            summary.cached++;
+            pages.push(cached);
+            continue;
+          }
+          const page = await fetchPage(venue.id, url, summary);
+          if (page) {
+            summary.fetched++;
+            pages.push(page);
+          } else {
+            const old = loadSnapshot(o.snapshotDir, venue.id, url);
+            if (old) pages.push(old);
+          }
+        }
+        summary.pages = pages.length;
+        summary.status = summary.fetched > 0 ? 'abgerufen' : pages.length > 0 ? 'zwischengespeichert' : summary.errors.length > 0 ? 'fehlgeschlagen' : 'übersprungen';
+        continue;
+      }
       let start = fresh(venue.website);
       if (start) summary.cached++;
       else {

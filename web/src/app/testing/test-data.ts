@@ -57,7 +57,17 @@ export const TEST_DATASET: Dataset = {
       portrait: { file: 'martin-parr.jpg', width: 400, height: 300, source: 'https://commons.wikimedia.org/wiki/File:Martin_Parr.jpg', credit: 'Jane Doe', license: 'CC BY-SA 4.0', licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/' },
     },
     { id: 'elliott-erwitt', name: 'Elliott Erwitt', occupation: 'Fotograf', life: { from: 1928, to: 2023 } },
-    { id: 'richard-kalvar', name: 'Richard Kalvar' },
+    {
+      id: 'richard-kalvar',
+      name: 'Richard Kalvar',
+      web: {
+        summary: 'Richard Kalvar ist ein Fotograf, der vor allem für seine Straßenfotografie bekannt ist und Mitglied einer Fotoagentur war.',
+        sources: [
+          { title: 'Porträt von Richard Kalvar', url: 'https://example.org/a' },
+          { title: 'Interview', url: 'https://www.example.com/b' },
+        ],
+      },
+    },
     { id: 'ohne-ausstellung', name: 'Person ohne Ausstellung' },
   ],
   organizers: [
