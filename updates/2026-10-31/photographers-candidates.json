@@ -39,6 +39,101 @@
           "description": "photographe lituanien",
           "extract": "Antanas Sutkus est un photographe lituanien.",
           "imageFile": "Toulouse - Château d'eau Laganne - 20110325 (1).jpg"
+        },
+        {
+          "lang": "arz",
+          "title": "انتاناس سوتكوس",
+          "url": "https://arz.wikipedia.org/wiki/%D8%A7%D9%86%D8%AA%D8%A7%D9%86%D8%A7%D8%B3_%D8%B3%D9%88%D8%AA%D9%83%D9%88%D8%B3",
+          "description": null,
+          "extract": "انتاناس سوتكوس صحفى من ليتوانيا.",
+          "imageFile": "Ba-sutkus-antanas-1996-soviet-foto.jpg?utm source=arz.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "bg",
+          "title": "Антанас Суткус",
+          "url": "https://bg.wikipedia.org/wiki/%D0%90%D0%BD%D1%82%D0%B0%D0%BD%D0%B0%D1%81_%D0%A1%D1%83%D1%82%D0%BA%D1%83%D1%81",
+          "description": "класик на съветската и литовската фотография",
+          "extract": "Антанас Суткус е класик на литовската фотография, основател на Литовския съюз на фотографското изкуство. Творчеството му, с фокус върху обикновените литовци по време на дългогодишната окупация на страната от Съветският съюз, е сочено като пример за усилията на страната да запази културната си идентичност през този период.",
+          "imageFile": "Ba-sutkus-antanas-1996-soviet-foto.jpg?utm source=bg.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "lt",
+          "title": "Antanas Sutkus (1939)",
+          "url": "https://lt.wikipedia.org/wiki/Antanas_Sutkus_(1939)",
+          "description": "lietuvių fotografas",
+          "extract": "Antanas Sutkus – fotomenininkas, Lietuvos fotografijos meno draugijos iniciatorius ir ilgametis vadovas.",
+          "imageFile": "Ba-sutkus-antanas-1996-soviet-foto.jpg?utm source=lt.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "pt",
+          "title": "Antanas Sutkus",
+          "url": "https://pt.wikipedia.org/wiki/Antanas_Sutkus",
+          "description": "fotógrafo lituano",
+          "extract": "Antanas Sutkus é um fotógrafo de renome lituano destinatário do en:Lithuanian National Prize e en:Order of the Lithuanian Grand Duke Gediminas. Ele foi um dos fundadores e um co-presidente da Sociedade de Arte fotográfica da Lituânia Lietuvos fotografijos meno draugija).",
+          "imageFile": "Toulouse - Château d'eau Laganne - 20110325 (1).jpg"
+        },
+        {
+          "lang": "ru",
+          "title": "Суткус, Антанас (фотограф)",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D1%82%D0%BA%D1%83%D1%81%2C_%D0%90%D0%BD%D1%82%D0%B0%D0%BD%D0%B0%D1%81_(%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84)",
+          "description": "литовский фотограф",
+          "extract": "Анта́нас Су́ткус — классик советской и литовской фотографии, основатель Союза фотоискусства Литвы.",
+          "imageFile": "Ba-sutkus-antanas-1996-soviet-foto.jpg?utm source=ru.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "sv",
+          "title": "Antanas Sutkus",
+          "url": "https://sv.wikipedia.org/wiki/Antanas_Sutkus",
+          "description": null,
+          "extract": "Antanas Sutkus, född 27 juni 1939 i Kluoniškiai väster om Kaunas, är en litauisk fotograf och mottagare av det Litauiska nationalpriset.",
+          "imageFile": "Ba-sutkus-antanas-1996-soviet-foto.jpg?utm source=sv.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        }
+      ],
+      "sitelinks": [
+        {
+          "lang": "de",
+          "title": "Antanas Sutkus",
+          "url": "https://de.wikipedia.org/wiki/Antanas_Sutkus"
+        },
+        {
+          "lang": "en",
+          "title": "Antanas Sutkus",
+          "url": "https://en.wikipedia.org/wiki/Antanas_Sutkus"
+        },
+        {
+          "lang": "fr",
+          "title": "Antanas Sutkus",
+          "url": "https://fr.wikipedia.org/wiki/Antanas_Sutkus"
+        },
+        {
+          "lang": "arz",
+          "title": "انتاناس سوتكوس",
+          "url": "https://arz.wikipedia.org/wiki/%D8%A7%D9%86%D8%AA%D8%A7%D9%86%D8%A7%D8%B3_%D8%B3%D9%88%D8%AA%D9%83%D9%88%D8%B3"
+        },
+        {
+          "lang": "bg",
+          "title": "Антанас Суткус",
+          "url": "https://bg.wikipedia.org/wiki/%D0%90%D0%BD%D1%82%D0%B0%D0%BD%D0%B0%D1%81_%D0%A1%D1%83%D1%82%D0%BA%D1%83%D1%81"
+        },
+        {
+          "lang": "lt",
+          "title": "Antanas Sutkus (1939)",
+          "url": "https://lt.wikipedia.org/wiki/Antanas_Sutkus_(1939)"
+        },
+        {
+          "lang": "pt",
+          "title": "Antanas Sutkus",
+          "url": "https://pt.wikipedia.org/wiki/Antanas_Sutkus"
+        },
+        {
+          "lang": "ru",
+          "title": "Суткус, Антанас (фотограф)",
+          "url": "https://ru.wikipedia.org/wiki/%D0%A1%D1%83%D1%82%D0%BA%D1%83%D1%81%2C_%D0%90%D0%BD%D1%82%D0%B0%D0%BD%D0%B0%D1%81_(%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84)"
+        },
+        {
+          "lang": "sv",
+          "title": "Antanas Sutkus",
+          "url": "https://sv.wikipedia.org/wiki/Antanas_Sutkus"
         }
       ],
       "portrait": {

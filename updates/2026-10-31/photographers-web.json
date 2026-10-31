@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-31",
+  "offline": false,
+  "maxAgeDays": 30,
+  "persons": [
+    {
+      "id": "antanas-sutkus",
+      "name": "Antanas Sutkus",
+      "isNew": false,
+      "queries": [
+        "\"Antanas Sutkus\" Fotograf",
+        "\"Antanas Sutkus\" photographer",
+        "\"Antanas Sutkus\" photographe",
+        "\"Antanas Sutkus\" fotógrafo",
+        "\"Antanas Sutkus\" fotografo",
+        "\"Antanas Sutkus\" fotograaf"
+      ],
+      "useCache": false,
+      "queryCount": 6,
+      "hitCount": 13,
+      "newLinks": [
+        "https://www.artnet.com/artists/antanas-sutkus",
+        "https://brucesilverstein.com/artists/182-antanas-sutkus",
+        "https://steidl.de/Artists/Antanas-Sutkus-0417262830.html",
+        "https://independent-photo.com/news/antanas-sutkus-planet-lithuania",
+        "https://fkmagazine.lv/2021/01/25/antanas-sutkus-5-photographs-5-stories",
+        "https://actuphoto.com/antanassutkus",
+        "http://www.olivarauna.com/artista/antanas_sutkus.html",
+        "https://kolekcija.mo.lt/en/Authors/43106",
+        "https://linkimage.com/collections/antanas-sutkus",
+        "https://www.lrt.lt/naujienos/kultura/12/2441159/trauma-vis-dar-gyva-apie-fotografo-antano-sutkaus-zvilgsni-i-sovietine-lietuva"
+      ],
+      "status": "gesucht",
+      "engine": "Bing (über Websuch-Werkzeug)",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 7,
+        "cached": 0,
+        "errors": [
+          {
+            "url": "https://www.artnet.com/artists/antanas-sutkus",
+            "reason": "HTTP 403"
+          },
+          {
+            "url": "http://www.olivarauna.com/artista/antanas_sutkus.html",
+            "reason": "HTTP 500"
+          },
+          {
+            "url": "https://kolekcija.mo.lt/en/Authors/43106",
+            "reason": "nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: UND_ERR_CONNECT_TIMEOUT)"
+          }
+        ],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://brucesilverstein.com/artists/182-antanas-sutkus",
+        "https://steidl.de/Artists/Antanas-Sutkus-0417262830.html",
+        "https://fkmagazine.lv/2021/01/25/antanas-sutkus-5-photographs-5-stories",
+        "https://actuphoto.com/antanassutkus"
+      ]
+    }
+  ]
+}

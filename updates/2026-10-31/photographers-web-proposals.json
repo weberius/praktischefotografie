@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-31",
+  "proposals": [
+    {
+      "id": "antanas-sutkus",
+      "approved": true,
+      "web": {
+        "summary": "Antanas Sutkus, 1939 in Kluoniškiai bei Kaunas geboren, gilt als herausragende Gestalt der litauischen Fotografie und Mitbegründer ihrer humanistischen Schule. Er studierte Journalismus in Vilnius, schrieb für Tageszeitungen und gründete 1969 den litauischen Fotografenverband mit, den er lange leitete. Sechs Jahrzehnte lang dokumentierte er den Alltag unter sowjetischer Herrschaft; bekannt sind seine Porträts Jean-Paul Sartres in den Dünen von Nida. Heute wertet er sein Archiv von rund einer Million Negative aus und macht daraus Bücher und Ausstellungen.",
+        "sources": [
+          "https://brucesilverstein.com/artists/182-antanas-sutkus",
+          "https://steidl.de/Artists/Antanas-Sutkus-0417262830.html",
+          "https://fkmagazine.lv/2021/01/25/antanas-sutkus-5-photographs-5-stories",
+          "https://actuphoto.com/antanassutkus"
+        ]
+      },
+      "problems": [],
+      "result": {
+        "web": {
+          "summary": "Antanas Sutkus, 1939 in Kluoniškiai bei Kaunas geboren, gilt als herausragende Gestalt der litauischen Fotografie und Mitbegründer ihrer humanistischen Schule. Er studierte Journalismus in Vilnius, schrieb für Tageszeitungen und gründete 1969 den litauischen Fotografenverband mit, den er lange leitete. Sechs Jahrzehnte lang dokumentierte er den Alltag unter sowjetischer Herrschaft; bekannt sind seine Porträts Jean-Paul Sartres in den Dünen von Nida. Heute wertet er sein Archiv von rund einer Million Negative aus und macht daraus Bücher und Ausstellungen.",
+          "sources": [
+            {
+              "title": "Antanas Sutkus | Bruce Silverstein",
+              "url": "https://brucesilverstein.com/artists/182-antanas-sutkus"
+            },
+            {
+              "title": "Antanas Sutkus - Steidl Verlag",
+              "url": "https://steidl.de/Artists/Antanas-Sutkus-0417262830.html"
+            },
+            {
+              "title": "Antanas Sutkus: 5 photographs, 5 stories – FK",
+              "url": "https://fkmagazine.lv/2021/01/25/antanas-sutkus-5-photographs-5-stories"
+            },
+            {
+              "title": "Antanas Sutkus Photographe | Actuphoto",
+              "url": "https://actuphoto.com/antanassutkus"
+            }
+          ]
+        }
+      },
+      "appliedAt": "2026-10-31"
+    }
+  ]
+}

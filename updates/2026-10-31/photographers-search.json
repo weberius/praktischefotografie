@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-31",
+  "engine": "Bing (über Websuch-Werkzeug)",
+  "persons": [
+    {
+      "id": "antanas-sutkus",
+      "engine": "Bing (über Websuch-Werkzeug)",
+      "queries": [
+        {
+          "query": "\"Antanas Sutkus\" Fotograf",
+          "results": [
+            {
+              "title": "Antanas Sutkus - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Antanas_Sutkus",
+              "snippet": "Litauischer Fotograf, Vertreter der humanistischen Fotografie.",
+              "query": "\"Antanas Sutkus\" Fotograf",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            },
+            {
+              "title": "Antanas Sutkus - Artnet",
+              "url": "https://www.artnet.com/artists/antanas-sutkus/",
+              "snippet": "Künstlerprofil mit Werken und Preisen.",
+              "query": "\"Antanas Sutkus\" Fotograf",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            },
+            {
+              "title": "Antanas Sutkus | Bruce Silverstein",
+              "url": "https://brucesilverstein.com/artists/182-antanas-sutkus/",
+              "snippet": "Galerieprofil.",
+              "query": "\"Antanas Sutkus\" Fotograf",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            },
+            {
+              "title": "Antanas Sutkus - Steidl Verlag",
+              "url": "https://steidl.de/Artists/Antanas-Sutkus-0417262830.html",
+              "snippet": "Verlagsprofil mit Büchern.",
+              "query": "\"Antanas Sutkus\" Fotograf",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            }
+          ]
+        },
+        {
+          "query": "\"Antanas Sutkus\" photographer",
+          "results": [
+            {
+              "title": "Antanas Sutkus - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Antanas_Sutkus",
+              "snippet": "Lithuanian photographer, founder of the Lithuanian School of Photography.",
+              "query": "\"Antanas Sutkus\" photographer",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            },
+            {
+              "title": "Antanas Sutkus: Planet Lithuania - The Independent Photographer",
+              "url": "https://independent-photo.com/news/antanas-sutkus-planet-lithuania/",
+              "snippet": "Artikel zum Buch Planet Lithuania.",
+              "query": "\"Antanas Sutkus\" photographer",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            }
+          ]
+        },
+        {
+          "query": "\"Antanas Sutkus\" photographe",
+          "results": [
+            {
+              "title": "Antanas Sutkus: 5 photographs, 5 stories – FK",
+              "url": "https://fkmagazine.lv/2021/01/25/antanas-sutkus-5-photographs-5-stories/",
+              "snippet": "Fünf Fotografien und ihre Geschichten.",
+              "query": "\"Antanas Sutkus\" photographe",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            },
+            {
+              "title": "Antanas Sutkus Photographe | Actuphoto",
+              "url": "https://actuphoto.com/antanassutkus",
+              "snippet": "Französisches Fotografenprofil.",
+              "query": "\"Antanas Sutkus\" photographe",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            }
+          ]
+        },
+        {
+          "query": "\"Antanas Sutkus\" fotógrafo",
+          "results": [
+            {
+              "title": "Antanas Sutkus :: Galería Oliva Arauna",
+              "url": "http://www.olivarauna.com/artista/antanas_sutkus.html",
+              "snippet": "Galerieprofil auf Spanisch.",
+              "query": "\"Antanas Sutkus\" fotógrafo",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            }
+          ]
+        },
+        {
+          "query": "\"Antanas Sutkus\" fotografo",
+          "results": [
+            {
+              "title": "Antanas Sutkus - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Antanas_Sutkus",
+              "snippet": "Lithuanian photographer.",
+              "query": "\"Antanas Sutkus\" fotografo",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            }
+          ]
+        },
+        {
+          "query": "\"Antanas Sutkus\" fotograaf",
+          "results": [
+            {
+              "title": "Antanas Sutkus - MO Museum's Collection",
+              "url": "https://kolekcija.mo.lt/en/Authors/43106",
+              "snippet": "Sammlungseintrag des MO Museums.",
+              "query": "\"Antanas Sutkus\" fotograaf",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            },
+            {
+              "title": "Art Photographer Antanas Sutkus – LINKIMAGE",
+              "url": "https://linkimage.com/collections/antanas-sutkus",
+              "snippet": "Sammlungsseite.",
+              "query": "\"Antanas Sutkus\" fotograaf",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            },
+            {
+              "title": "Trauma vis dar gyva: apie fotografo Antano Sutkaus žvilgsnį į sovietinę Lietuvą",
+              "url": "https://www.lrt.lt/naujienos/kultura/12/2441159/trauma-vis-dar-gyva-apie-fotografo-antano-sutkaus-zvilgsni-i-sovietine-lietuva",
+              "snippet": "Beitrag des litauischen Rundfunks.",
+              "query": "\"Antanas Sutkus\" fotograaf",
+              "foundAt": "2026-10-31T15:19:01.151Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
