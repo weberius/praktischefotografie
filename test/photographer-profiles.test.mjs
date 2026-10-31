@@ -149,7 +149,7 @@ test('Szenario: Webkurztext mit Quellen (PRF-UB-6)', () => {
 test('Szenario: Ungültiger Webkurztext (PRF-UN-4)', () => {
   const bad = {
     'ohne Quelle': web(60, []),
-    'sechs Quellen': web(60, [1, 2, 3, 4, 5, 6].map(webSource)),
+    'elf Quellen': web(60, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(webSource)),
     '39 Wörter': web(39),
     '91 Wörter': web(91),
     'ftp-Quelle': web(60, [{ title: 'FTP', url: 'ftp://example.org/a' }]),

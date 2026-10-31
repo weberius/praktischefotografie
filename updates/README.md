@@ -146,12 +146,12 @@ updates/<JJJJ-MM-TT>/
 - **Abruf:** Nur `*.wikipedia.org`, `www.wikidata.org`, `commons.wikimedia.org`, `upload.wikimedia.org` und `thumb.wikimedia.org`; mindestens 1 s Abstand; `User-Agent` mit Kontaktadresse; Cache `.cache/wikipedia/` (30 Tage); Weiterleitungen nur auf diese Hosts.
 
 
-## Websuche nach Personen (`--web`)
+## Websuche nach Personen
 
-Mit `/research-photographers --web --photographer <id>` oder `--web --name "<Name>"` recherchiert der Skill eine Person über eine Suchmaschine (ADR-019, `docs/ears/setup/personen-websuche.md`). Ohne `--web` entsteht keine Suchanfrage.
+Der Skill recherchiert standardmäßig auch über eine Suchmaschine (ADR-019, ADR-020, `docs/ears/setup/personen-websuche.md`, `docs/ears/setup/recherche-in-allen-sprachen.md`): höchstens sechs Anfragen in sechs Sprachen, höchstens zehn Seiten. Die Wikipedia-Sprachversionen landen als Links ebenfalls in der Linksammlung. Mit `--no-web` entsteht keine Suchanfrage.
 
 ```bash
-npm run photographers:web -- plan --web --name "Wendy Red Star" [--offline] [--max-age 30]
+npm run photographers:web -- plan --name "Wendy Red Star" [--offline] [--max-age 30]
 # Skill: Suche (≤ 3 Anfragen, ≤ 10 Treffer) und updates/<Datum>/photographers-search.json schreiben
 npm run photographers:web -- links
 npm run photographers:web -- pages [--offline]     # braucht SCRAPE_CONTACT

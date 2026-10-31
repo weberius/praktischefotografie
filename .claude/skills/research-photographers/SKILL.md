@@ -7,9 +7,9 @@ description: Recherchiert Fotograf:innen über Wikidata, die Wikipedia in mehrer
 
 Du ergänzst in `data/photographers.json` die Profile der Personen aus **Wikidata, Wikipedia (mehrere Sprachen) und Wikimedia Commons**. Spezifikation: `docs/ears/setup/fotografinnen-recherche.md`, `docs/ears/content/fotografinnen-profile.md`, ADR-011 und ADR-012. Format der Dateien: `updates/README.md`.
 
-Argumente: `$ARGUMENTS` (optional `--photographer <id>`, `--force`, `--offline`, `--max-age <Tage>`, `--date JJJJ-MM-TT`, `--web`, `--name "<Name>"`). Ohne `--photographer` werden alle Personen ohne Wikipedia-Zusammenfassung oder ohne Portrait bearbeitet.
+Argumente: `$ARGUMENTS` (optional `--photographer <id>`, `--force`, `--offline`, `--max-age <Tage>`, `--date JJJJ-MM-TT`, `--no-web`, `--web`, `--name "<Name>"`). Ohne `--photographer` werden alle Personen ohne Wikipedia-Zusammenfassung oder ohne Portrait bearbeitet.
 
-**Ohne `--web` gilt ausschließlich der Ablauf unten („Ablauf“): keine Suchmaschine, keine Trefferseite.** Mit `--web` gilt stattdessen der Abschnitt „Websuche (`--web`)“ (Spezifikation: `docs/ears/setup/personen-websuche.md`, ADR-019).
+Ein Lauf umfasst **beides**: die Wikipedia in allen Sprachen (Ablauf unten) und das Web in mehreren Sprachen (Abschnitt „Websuche“; Spezifikation: `docs/ears/setup/recherche-in-allen-sprachen.md`, ADR-020). Alle Fundstellen werden als Links in `updates/photographers-links.json` gespeichert; die Seiten dahinter (Snapshots) fließen in den Text ein. **Mit `--no-web` entfällt die Websuche: keine Suchmaschine, keine Trefferseite.** `--web` ist ein Alias für den Standardlauf.
 
 ## Harte Regeln
 
@@ -25,7 +25,7 @@ Argumente: `$ARGUMENTS` (optional `--photographer <id>`, `--force`, `--offline`,
 ## Ablauf
 
 1. **Voraussetzung prüfen.** Für den Abruf muss `SCRAPE_CONTACT` (Kontaktadresse für den User-Agent) in der Umgebung gesetzt sein. Fehlt sie, bitte den Menschen, sie zu setzen (`export SCRAPE_CONTACT=…`), und trage sie nicht in Dateien ein. Mit `--offline` ist sie nicht nötig (Antworten aus `.cache/wikipedia/`).
-2. **Abrufen:** `npm run photographers:fetch -- <Argumente>`. Lies die Ausgabe und `updates/<Datum>/photographers-candidates.json`. Je Person steht dort `status` (`gefunden`, `nicht gefunden`, `mehrdeutig`, `Fehler`), `wikidataId`, `occupations`, `life`, `articles` (Sprache, Titel, Kurzbeschreibung `description`, Anfangstext `extract`, Reihenfolge Deutsch, Englisch, Französisch, Spanisch, Italienisch, Niederländisch, danach alphabetisch; höchstens drei) und `portrait` (mit Lizenz) bzw. `portraitNote`. Nicht gefundene, mehrdeutige und fehlgeschlagene Personen nennst du im Bericht.
+2. **Abrufen:** `npm run photographers:fetch -- <Argumente>`. Lies die Ausgabe und `updates/<Datum>/photographers-candidates.json`. Je Person steht dort `status` (`gefunden`, `nicht gefunden`, `mehrdeutig`, `Fehler`), `wikidataId`, `occupations`, `life`, `articles` (Sprache, Titel, Kurzbeschreibung `description`, Anfangstext `extract`, Reihenfolge Deutsch, Englisch, Französisch, Spanisch, Italienisch, Niederländisch, danach alphabetisch; höchstens zehn; `sitelinks` nennt alle Sprachversionen mit Adresse, sie werden automatisch als Links gespeichert) und `portrait` (mit Lizenz) bzw. `portraitNote`. Nicht gefundene, mehrdeutige und fehlgeschlagene Personen nennst du im Bericht.
 3. **Vorschläge schreiben.** Für jede Person mit Status `gefunden` und mindestens einem Artikel schreibst du einen Eintrag in `updates/<Datum>/photographers.json`:
    ```json
    { "date": "2026-10-28", "proposals": [
@@ -34,7 +34,7 @@ Argumente: `$ARGUMENTS` (optional `--photographer <id>`, `--force`, `--offline`,
    ```
    - `occupation`: kurze Berufsbezeichnung auf Deutsch, so wie die Wikipedia die Person nennt (Kurzbeschreibung `description`, erster Satz), z. B. „Fotografin“ oder „Medienkünstler“; höchstens 60 Zeichen.
    - `summary`: 40 bis 90 Wörter zu Person, Werk und Bedeutung, nur aus den Anfangstexten, eigene Worte.
-   - `sources`: die Sprachen der Artikel, aus denen du geschöpft hast (1 bis 3, nur aus `articles`).
+   - `sources`: die Sprachen der Artikel, aus denen du geschöpft hast (1 bis 10, nur aus `articles`).
    - `portrait`: `true`, wenn die Kandidatendatei ein Portrait enthält; sonst `false`.
    - Lebensdaten und Bildnachweis trägst du **nicht** ein; sie kommen aus der Kandidatendatei.
 4. **Prüfen:** `npm run photographers:check`. Verworfene Vorschläge nennst du mit Grund. Korrigiere ungültige Zusammenfassungen höchstens zweimal (Wortzahl, wörtliche Folgen); nie die Prüfregeln.
@@ -46,15 +46,15 @@ Argumente: `$ARGUMENTS` (optional `--photographer <id>`, `--force`, `--offline`,
 
 Kurz: bearbeitete Personen, Anzahl gefunden / nicht gefunden / mehrdeutig / Fehler, Vorschläge (geprüft / verworfen / übernommen), Portraits mit Lizenz, Ergebnis von Validierung, Tests und Lint, Hinweis auf nicht Geprüftes (z. B. Sachrichtigkeit der Zusammenfassungen, richtige Person bei Namensgleichheit).
 
-## Websuche (`--web`)
+## Websuche
 
-Nur auf ausdrücklichen Wunsch, für **eine** Person: `--photographer <id>` (vorhandene Person) oder `--name "<Name>"` (auch unbekannte Person). Fehlt beides, brich mit einem Hinweis ab. Du recherchierst im Web, sammelst die Links in `updates/photographers-links.json` und schreibst einen Webkurztext (Feld `web`), der neben der Wikipedia-Zusammenfassung steht und sie nicht ersetzt.
+Für **eine** Person: `--photographer <id>` (vorhandene Person) oder `--name "<Name>"` (auch unbekannte Person). Fehlt beides, brich mit einem Hinweis ab. Du recherchierst im Web, sammelst die Links in `updates/photographers-links.json` und schreibst einen Webkurztext (Feld `web`), der neben der Wikipedia-Zusammenfassung steht und sie nicht ersetzt. Schreibe ihn **erst, nachdem die Seiten abgerufen sind**; eine eigene Website der Person nutzt du bevorzugt.
 
 ### Zusätzliche Regeln
 
-- **Suche nur über dein Websuch-Werkzeug**, höchstens **drei Suchanfragen** je Person (`"<Name>" Fotograf`, `"<Name>" Fotografin`, `"<Name>" Künstler:in`) und höchstens **zehn Treffer** je Anfrage. Seiten rufst du **nicht** selbst ab (kein WebFetch, kein curl), sondern nur über `npm run photographers:web -- pages`; dort gelten `robots.txt`, Abstand von mindestens 2 s je Website, Kennung im User-Agent, höchstens fünf Seiten je Person.
+- **Suche nur über dein Websuch-Werkzeug**, höchstens **sechs Suchanfragen** je Person in sechs Sprachen (`"<Name>" Fotograf`, `photographer`, `photographe`, `fotógrafo`, `fotografo`, `fotograaf`) und höchstens **zehn Treffer** je Anfrage. Seiten rufst du **nicht** selbst ab (kein WebFetch, kein curl), sondern nur über `npm run photographers:web -- pages`; dort gelten `robots.txt`, Abstand von mindestens 2 s je Website, Kennung im User-Agent, höchstens zehn Seiten je Person; Wikipedia-Seiten werden nicht über den Webabruf geladen.
 - **Kurztext in eigener Formulierung** (Deutsch, **40 bis 90 Wörter**), **nur** aus Textauszügen (`snippet`) und Snapshots (`.cache/snapshots/<person-id>/`). Du schreibst nichts hinzu, was dort nicht steht, und löst **widersprüchliche Angaben nicht auf, sondern lässt sie weg**. Keine wörtliche Folge von acht oder mehr Wörtern.
-- **Quellen** (1 bis 5) sind Adressen aus der Linksammlung der Person.
+- **Quellen** (1 bis 10) sind Adressen aus der Linksammlung der Person.
 - **Keine Bilder aus dem Web.** Du lädst und verlinkst keine Bilder von Trefferseiten; Portraits kommen nur von Wikimedia Commons über `photographers:fetch`.
 - **Neuer Kurztext nur bei neuen Links.** Hat der Lauf keinen neuen Link ergeben (`newLinks` leer), schreibst du keinen Vorschlag für `web` und lässt den vorhandenen unverändert.
 - **Änderungen an `data/` erst nach ausdrücklicher Freigabe** (per `AskUserQuestion`); ersetzen nur mit `--force`.
@@ -62,7 +62,7 @@ Nur auf ausdrücklichen Wunsch, für **eine** Person: `--photographer <id>` (vor
 
 ### Ablauf
 
-1. **Plan:** `npm run photographers:web -- plan --web --photographer <id>` bzw. `--name "<Name>"` (mit `--offline`, `--max-age <Tage>` wie oben). Die Ausgabe nennt die Person (neu oder vorhanden) und die Suchanfragen oder den Zwischenspeicher. Ist die Suche zwischengespeichert, überspringst du Schritt 2.
+1. **Plan:** `npm run photographers:web -- plan --photographer <id>` bzw. `--name "<Name>"` (mit `--offline`, `--max-age <Tage>` wie oben). Die Ausgabe nennt die Person (neu oder vorhanden) und die Suchanfragen oder den Zwischenspeicher. Ist die Suche zwischengespeichert, überspringst du Schritt 2.
 2. **Suchen** und `updates/<Datum>/photographers-search.json` schreiben:
    ```json
    { "date": "2026-11-02", "engine": "<Name der Suchmaschine>", "persons": [
@@ -71,7 +71,7 @@ Nur auf ausdrücklichen Wunsch, für **eine** Person: `--photographer <id>` (vor
    ```
    Schlägt die Suche fehl: `{ "id": "…", "error": "Grund" }`.
 3. **Links übernehmen:** `npm run photographers:web -- links`. Lies die Ausgabe (Treffer, neue Links, Status).
-4. **Seiten abrufen** (nur wenn neue Links da sind und du deren Inhalt für den Kurztext brauchst): `npm run photographers:web -- pages` (`SCRAPE_CONTACT` nötig; mit `--offline` nur Snapshots).
+4. **Seiten abrufen** (wenn neue Links da sind; vor dem Schreiben des Kurztexts): `npm run photographers:web -- pages` (`SCRAPE_CONTACT` nötig; mit `--offline` nur Snapshots).
 5. **Vorschläge schreiben** in `updates/<Datum>/photographers-web-proposals.json`:
    ```json
    { "date": "2026-11-02", "proposals": [

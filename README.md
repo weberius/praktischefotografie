@@ -286,15 +286,15 @@ Ergänzt Berufsbezeichnung, Lebensdaten, Wikipedia-Zusammenfassung und Portrait 
 /research-photographers --offline                    # nur aus dem Zwischenspeicher
 ```
 
-Mit `--web` recherchiert der Skill eine einzelne Person zusätzlich über eine Suchmaschine – auch Personen ohne Wikipedia-Eintrag oder noch nicht erfasste Personen:
+Standardmäßig recherchiert der Skill zusätzlich über eine Suchmaschine (mit `--no-web` entfällt das) – auch Personen ohne Wikipedia-Eintrag oder noch nicht erfasste Personen:
 
 ```text
-/research-photographers --web --photographer wendy-red-star
-/research-photographers --web --name "Wendy Red Star"   # legt die Person nach Freigabe an, falls sie fehlt
+/research-photographers --photographer wendy-red-star
+/research-photographers --name "Wendy Red Star"   # legt die Person nach Freigabe an, falls sie fehlt
 ```
 
 Hinweise:
-* Ohne `--web` entsteht keine Suchanfrage. Mit `--web` sind es höchstens drei Anfragen mit je zehn Treffern; Trefferseiten werden höflich abgerufen (höchstens fünf je Person).
+* Die Wikipedia wird in allen Sprachen berücksichtigt (alle Sprachversionen als Links, Anfangstexte bis zu zehn Sprachen). Die Websuche umfasst höchstens sechs Anfragen in sechs Sprachen mit je zehn Treffern; Trefferseiten werden höflich abgerufen (höchstens zehn je Person). Alle Links stehen in `updates/photographers-links.json`. Mit `--no-web` entsteht keine Suchanfrage.
 * Die gefundenen Links sammelt `updates/photographers-links.json` über alle Läufe. Ein neuer Kurztext („Aus dem Web“, 40 bis 90 Wörter, 1 bis 5 Quellen) wird nur vorgeschlagen, wenn neue Links dazugekommen sind. Er steht neben der Wikipedia-Zusammenfassung und ersetzt sie nicht.
 * Kurztexte sind in eigenen Worten und nur aus den Quellen geschrieben, wörtliche Übernahmen ab acht Wörtern werden verworfen. Bilder aus dem Web werden nie geladen.
 * **Prüfe bei der Freigabe**, ob es wirklich die richtige Person ist (Namensgleichheit) und ob der Text sachlich stimmt; das kann kein Skript.

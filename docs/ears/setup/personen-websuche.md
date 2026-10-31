@@ -4,6 +4,8 @@
 
 Ergänzt `fotografinnen-recherche.md` (RSF): Die Recherche über Wikipedia, Wikidata und Commons bleibt unverändert und ohne `--web` das einzige Verhalten des Skills.
 
+**Teilweise ersetzt** durch `recherche-in-allen-sprachen.md`: WSP-UB-1 (Websuche nur mit `--web`) durch RAS-UB-3, WSP-EV-1 (drei Anfragen) durch RAS-EV-1, die Seitenzahl in WSP-UB-3 durch RAS-UB-4, die Quellenzahl in WSP-UB-4 durch RAS-UB-6.
+
 Begriffe: „Websuche“ ist die Suche nach einer Person über eine Suchmaschine. „Treffer“ ist ein Suchergebnis aus Titel, URL und Textauszug (Snippet). „Linksammlung“ ist `updates/photographers-links.json`, die über alle Läufe fortgeschrieben wird. „Suchdatei“ ist `updates/<JJJJ-MM-TT>/photographers-search.json`. „Neuer Link“ ist eine normalisierte URL, die vorher nicht in der Linksammlung der Person stand. „Webkurztext“ ist das Feld `web` der Person (siehe PRF-UB-6).
 
 | ID | Anforderung | Gherkin | Quality | ADR |

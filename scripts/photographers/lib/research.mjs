@@ -3,10 +3,10 @@ import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, statSync, wr
 import { join } from 'node:path';
 import { MAX_PORTRAIT_BYTES, SUMMARY_WORDS, validateData, wordCount } from '../../validate-data.mjs';
 import { ROOT, normalizeSpace, readJson } from '../../scrape/lib/common.mjs';
-import { webReportLines } from './webreport.mjs';
+import { linksPath, webReportLines } from './webreport.mjs';
 
 export const PREFERRED_LANGS = ['de', 'en', 'fr', 'es', 'it', 'nl'];
-export const MAX_ARTICLES = 3;
+export const MAX_ARTICLES = 10;
 export const PORTRAIT_WIDTHS = [400, 300, 240];
 export const MAX_OCCUPATION = 60;
 export const VERBATIM_WORDS = 8;
@@ -77,18 +77,23 @@ export function commonsFileName(url) {
 
 const wikipediaTitleUrl = (lang, title) => `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g, '_'))}`;
 
+/** Alle Sprachversionen der Person laut Wikidata, in der Reihenfolge der Sprachen (RAS-UB-1). */
+export function loadSitelinks(entity) {
+  const byLang = new Map(
+    Object.entries(entity.sitelinks ?? {})
+      .map(([site, v]) => [/^([a-z]{2,3})wiki$/.exec(site)?.[1], v.title])
+      .filter(([lang]) => lang),
+  );
+  return orderLangs([...byLang.keys()]).map((lang) => ({ lang, title: byLang.get(lang), url: wikipediaTitleUrl(lang, byLang.get(lang)) }));
+}
+
 async function loadArticles(client, entity) {
-  const links = Object.entries(entity.sitelinks ?? {})
-    .map(([site, v]) => [/^([a-z]{2,3})wiki$/.exec(site)?.[1], v.title])
-    .filter(([lang]) => lang);
-  const byLang = new Map(links);
   const articles = [];
-  for (const lang of orderLangs([...byLang.keys()])) {
+  for (const { lang, title, url } of loadSitelinks(entity)) {
     if (articles.length >= MAX_ARTICLES) break;
-    const title = byLang.get(lang);
     const summary = await client.getJson(`${client.endpoints.wikipedia(lang)}/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, '_'))}`);
     if (!summary || summary.type !== 'standard' || !normalizeSpace(summary.extract ?? '')) continue;
-    articles.push({ lang, title, url: wikipediaTitleUrl(lang, title), description: summary.description ?? null, extract: normalizeSpace(summary.extract), imageFile: commonsFileName(summary.originalimage?.source ?? summary.thumbnail?.source) });
+    articles.push({ lang, title, url, description: summary.description ?? null, extract: normalizeSpace(summary.extract), imageFile: commonsFileName(summary.originalimage?.source ?? summary.thumbnail?.source) });
   }
   return articles;
 }
@@ -176,6 +181,7 @@ export async function researchPerson(client, person, { root = ROOT, cacheDir = j
       wikidataDescription: entity.descriptions?.de?.value ?? entity.descriptions?.en?.value ?? null,
       life: from ? { from, to: to ?? null } : null,
       articles,
+      sitelinks: loadSitelinks(entity),
       portrait,
       portraitNote: note,
     };
@@ -195,6 +201,33 @@ export function selectCandidates(photographers, { photographerId, force = false 
   return force ? photographers : photographers.filter((p) => !p.wikipedia || !p.portrait);
 }
 
+const normalizeLink = (url) => {
+  const u = new URL(url);
+  return `${u.origin}${u.pathname.replace(/\/+$/, '')}${u.search}`;
+};
+
+/** Übernimmt die Adressen aller Sprachversionen in die Linksammlung, ohne Dubletten und ohne Vorhandenes zu ändern (RAS-UB-2). */
+export function addWikipediaLinks(root, file) {
+  const path = linksPath(root);
+  const links = readJson(path, {});
+  let changed = false;
+  for (const r of file.results) {
+    if (r.status !== 'gefunden') continue;
+    const list = (links[r.id] ??= []);
+    const known = new Set(list.map((l) => normalizeLink(l.url)));
+    for (const s of r.sitelinks ?? []) {
+      const url = normalizeLink(s.url);
+      if (known.has(url)) continue;
+      known.add(url);
+      list.push({ url, title: s.title, query: `wikipedia:${s.lang}`, foundAt: new Date().toISOString() });
+      changed = true;
+    }
+  }
+  if (!changed) return;
+  mkdirSync(join(path, '..'), { recursive: true });
+  writeFileSync(path, JSON.stringify(links, null, 2) + '\n');
+}
+
 export async function fetchCandidates({ root = ROOT, date, client, photographerId, force = false }) {
   const photographers = readJson(join(root, 'data', 'photographers.json'));
   const persons = selectCandidates(photographers, { photographerId, force });
@@ -203,6 +236,7 @@ export async function fetchCandidates({ root = ROOT, date, client, photographerI
   const file = { date, offline: client.offline, results };
   mkdirSync(join(root, 'updates', date), { recursive: true });
   writeFileSync(candidatesPath(root, date), JSON.stringify(file, null, 2) + '\n');
+  addWikipediaLinks(root, file);
   writeReport({ root, date, candidates: file, proposals: readJson(proposalsPath(root, date), null) });
   return file;
 }

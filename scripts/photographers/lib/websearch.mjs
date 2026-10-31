@@ -7,10 +7,10 @@ import { fetchVenues } from '../../scrape/lib/fetcher.mjs';
 import { sharesSequence, VERBATIM_WORDS, writeReport, candidatesPath, proposalsPath } from './research.mjs';
 import { linksPath, webPlanPath, webProposalsPath, webSearchPath } from './webreport.mjs';
 
-export const MAX_QUERIES = 3;
+export const MAX_QUERIES = 6;
 export const MAX_HITS = 10;
-export const MAX_PAGES = 5;
-export const MAX_SOURCES = 5;
+export const MAX_PAGES = 10;
+export const MAX_SOURCES = 10;
 export const WIKIMEDIA_IMAGE_HOSTS = ['commons.wikimedia.org', 'upload.wikimedia.org'];
 
 const fold = (text) => normalizeSpace(text).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -47,7 +47,9 @@ export function normalizeUrl(input) {
   return `${url.origin}${url.pathname.replace(/\/+$/, '')}${url.search}`;
 }
 
-export const queriesFor = (name) => [`"${name}" Fotograf`, `"${name}" Fotografin`, `"${name}" Künstler:in`];
+/** Berufswort je Sprache für die Suchanfragen (RAS-EV-1). */
+export const QUERY_TERMS = ['Fotograf', 'photographer', 'photographe', 'fotógrafo', 'fotografo', 'fotograaf'];
+export const queriesFor = (name) => QUERY_TERMS.map((term) => `"${name}" ${term}`);
 
 /** Bestimmt die Person: vorhandene über `--photographer`, sonst über `--name` (vorhanden oder neu, WSP-EV-2, WSP-UN-2). */
 export function resolveTarget(photographers, { photographerId, name }) {
@@ -161,6 +163,9 @@ export function isInternalHost(url) {
   return !host.includes('.');
 }
 
+/** Wikipedia-, Wikidata- und Wikimedia-Adressen laufen über die API der Recherche, nicht über den Webabruf (RAS-UB-4). */
+export const isWikimediaPage = (url) => /(^|\.)(wikipedia|wikidata|wikimedia)\.org$/.test(new URL(url).hostname.toLowerCase());
+
 /** Ruft die Seiten neuer Links höflich ab (WSP-UB-3). `allowInternal` ist nur für Tests mit lokalem Server gedacht. */
 export async function fetchPages({ root = ROOT, date, contact, offline = false, maxAgeDays = 30, fetchOptions = {}, allowInternal = false }) {
   const plan = readJson(webPlanPath(root, date), null);
@@ -168,7 +173,7 @@ export async function fetchPages({ root = ROOT, date, contact, offline = false, 
   for (const person of plan.persons) {
     if (!person.newLinks?.length) continue;
     const internal = allowInternal ? [] : person.newLinks.filter(isInternalHost);
-    const pages = person.newLinks.filter((u) => !internal.includes(u)).slice(0, MAX_PAGES);
+    const pages = person.newLinks.filter((u) => !internal.includes(u) && !isWikimediaPage(u)).slice(0, MAX_PAGES);
     const [summary] = await fetchVenues([{ id: person.id, pages }], {
       contact,
       offline,

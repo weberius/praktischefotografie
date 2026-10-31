@@ -42,12 +42,14 @@ const people = (root) => readJson(root, 'data', 'photographers.json');
 const proposals = (root, list) => writeFileSync(join(root, 'updates', DATE, 'photographers-web-proposals.json'), JSON.stringify({ date: DATE, proposals: list }, null, 2));
 const readProposals = (root) => readJson(root, 'updates', DATE, 'photographers-web-proposals.json').proposals;
 
-test('Szenario: Websuche nur auf Wunsch (WSP-UB-1, Q-SEC-7)', async () => {
+test('Szenario: Websuche im Standardlauf, ohne Person Hinweis (RAS-UB-3, Q-SEC-8)', async () => {
   const root = workspace();
-  await assert.rejects(() => main(argv('plan', '--photographer', 'wendy-red-star'), {}, root), /nur mit --web/);
-  await assert.rejects(() => main(argv('plan', '--web'), {}, root), /--photographer <id> oder --name/);
+  await assert.rejects(() => main(argv('plan'), {}, root), /--photographer <id> oder --name/);
   assert.ok(!existsSync(join(root, 'updates', DATE, 'photographers-web.json')));
-  // Die Wikipedia-Recherche (ohne --web) fragt nur Wikimedia ab und kennt keine Suchmaschine: offline ohne Anfrage.
+  const person = await run(root, 'plan', '--photographer', 'wendy-red-star');
+  assert.equal(person.id, 'wendy-red-star', 'der Plan braucht kein --web');
+  await run(root, 'plan', '--web', '--photographer', 'wendy-red-star');
+  // Die Wikipedia-Recherche fragt nur Wikimedia ab und kennt keine Suchmaschine: offline ohne Anfrage.
   const file = await quiet(() => fetchMain(argv('--offline'), {}, root));
   assert.equal(file.offline, true);
   assert.ok(!existsSync(join(root, '.cache', 'websearch')));
@@ -55,19 +57,20 @@ test('Szenario: Websuche nur auf Wunsch (WSP-UB-1, Q-SEC-7)', async () => {
 
 test('Szenario: Treffer werden festgehalten (WSP-EV-1, Q-SEC-7)', async () => {
   const root = workspace();
-  await run(root, 'plan', '--web', '--photographer', 'wendy-red-star');
+  await run(root, 'plan', '--photographer', 'wendy-red-star');
   const plan = readJson(root, 'updates', DATE, 'photographers-web.json');
-  assert.equal(plan.persons[0].queries.length, 3);
-  writeSearch(root, [search('wendy-red-star', hits(12), 5)]);
+  assert.equal(plan.persons[0].queries.length, 6);
+  assert.deepEqual(plan.persons[0].queries.map((q) => q.split(' ').pop()), ['Fotograf', 'photographer', 'photographe', 'fotógrafo', 'fotografo', 'fotograaf'].map((t) => t));
+  writeSearch(root, [search('wendy-red-star', hits(12), 8)]);
   await run(root, 'links');
   const out = readJson(root, 'updates', DATE, 'photographers-search.json').persons[0];
-  assert.equal(out.queries.length, 3);
+  assert.equal(out.queries.length, 6);
   for (const q of out.queries) {
     assert.equal(q.results.length, 10);
     for (const r of q.results) assert.deepEqual(Object.keys(r).sort(), ['foundAt', 'query', 'snippet', 'title', 'url']);
   }
   const p = readJson(root, 'updates', DATE, 'photographers-web.json').persons[0];
-  assert.deepEqual([p.queryCount, p.hitCount, p.engine], [3, 30, 'Testsuche']);
+  assert.deepEqual([p.queryCount, p.hitCount, p.engine], [6, 60, 'Testsuche']);
 });
 
 test('Szenario: Linksammlung wird fortgeschrieben (WSP-UB-2, Q-DATA-14)', async () => {
@@ -167,12 +170,12 @@ test('Szenario: Trefferseiten höflich abrufen (WSP-UB-3, Q-SEC-7)', async () =>
     '/robots.txt': { body: 'User-agent: *\nDisallow: /gesperrt\n' },
     '/gesperrt': { body: page('Gesperrt') },
     '/weiter': { status: 302, headers: { location: 'http://localhost:1/anders' } },
-    ...Object.fromEntries(Array.from({ length: 7 }, (_, i) => [`/ok${i}`, { body: page(`Seite ${i}`, `<p>Inhalt ${i}</p>`) }])),
+    ...Object.fromEntries(Array.from({ length: 12 }, (_, i) => [`/ok${i}`, { body: page(`Seite ${i}`, `<p>Inhalt ${i}</p>`) }])),
   });
   try {
     const root = workspace();
     await run(root, 'plan', '--web', '--photographer', 'wendy-red-star');
-    const urls = [`${server.url}/gesperrt`, `${server.url}/weiter`, ...Array.from({ length: 7 }, (_, i) => `${server.url}/ok${i}`)];
+    const urls = ['https://de.wikipedia.org/wiki/Wendy_Red_Star', `${server.url}/gesperrt`, `${server.url}/weiter`, ...Array.from({ length: 12 }, (_, i) => `${server.url}/ok${i}`)];
     writeSearch(root, [search('wendy-red-star', urls.map((url, i) => ({ title: `T${i}`, url, snippet: '' })), 1)]);
     await run(root, 'links');
     const sleeps = [];
@@ -181,11 +184,11 @@ test('Szenario: Trefferseiten höflich abrufen (WSP-UB-3, Q-SEC-7)', async () =>
     assert.ok(!paths.includes('/gesperrt'));
     assert.ok(paths.includes('/weiter'));
     assert.ok(!paths.includes('/anders'));
-    assert.equal(paths.filter((p) => p !== '/robots.txt').length, 4); // die ersten fünf Treffer zählen, der gesperrte wird nicht angefragt
-    assert.ok(!paths.includes('/ok3') && !paths.includes('/ok6'));
+    assert.equal(paths.filter((p) => p !== '/robots.txt').length, 8); // höchstens zehn Treffer je Anfrage, Wikipedia (Wikipedia läuft nicht über den Webabruf), die gesperrte wird nicht angefragt
+    assert.ok(paths.includes('/ok6') && !paths.includes('/ok7'));
     assert.ok(sleeps.length > 0 && sleeps.every((ms) => ms > 0 && ms <= 2000));
     assert.ok(server.requests.every((r) => r.userAgent.includes('praktischefotografie-bot') && r.userAgent.includes(CONTACT)));
-    assert.equal(readdirSync(join(root, '.cache', 'snapshots', 'wendy-red-star')).length, 3);
+    assert.equal(readdirSync(join(root, '.cache', 'snapshots', 'wendy-red-star')).length, 7);
     const report = readFileSync(join(root, 'updates', DATE, 'PHOTOGRAPHERS.md'), 'utf8');
     assert.match(report, /laut robots\.txt nicht erlaubt/);
     assert.match(report, /Weiterleitung auf andere Website/);
@@ -198,7 +201,7 @@ test('Szenario: Neue Ergebnisse fließen in den Kurztext, ohne neue Links kein n
   const root = workspace();
   await run(root, 'plan', '--web', '--photographer', 'wendy-red-star');
   const snippet = `${words('quelle', 20)}`;
-  writeSearch(root, [search('wendy-red-star', [{ title: 'Porträt', url: 'https://example.org/a', snippet }, { title: 'Interview', url: 'https://example.org/b', snippet: '' }], 1)]);
+  writeSearch(root, [search('wendy-red-star', [{ title: 'Porträt', url: 'https://example.org/a', snippet }, { title: 'Interview', url: 'https://example.org/b', snippet: '' }, ...Array.from({ length: 9 }, (_, i) => ({ title: `X${i}`, url: `https://x.org/${i}`, snippet: '' }))], 1)]);
   await run(root, 'links');
   const ok = (n) => ({ summary: words('eigen', n), sources: ['https://example.org/a'] });
   const verbatim = { summary: `${words('eigen', 40)} ${words('quelle', 8)}`, sources: ['https://example.org/a'] };
@@ -209,7 +212,8 @@ test('Szenario: Neue Ergebnisse fließen in den Kurztext, ohne neue Links kein n
     '91': { web: ok(91) },
     wörtlich: { web: verbatim },
     'Quelle fremd': { web: { ...ok(50), sources: ['https://example.org/fremd'] } },
-    'sechs Quellen': { web: { ...ok(50), sources: ['https://example.org/a', 'https://example.org/b', 'https://x.org/1', 'https://x.org/2', 'https://x.org/3', 'https://x.org/4'] } },
+    '10 Quellen': { web: { ...ok(50), sources: ['https://example.org/a', 'https://example.org/b', ...Array.from({ length: 8 }, (_, i) => `https://x.org/${i}`)] } },
+    'elf Quellen': { web: { ...ok(50), sources: ['https://example.org/a', 'https://example.org/b', ...Array.from({ length: 9 }, (_, i) => `https://x.org/${i}`)] } },
     'Bild fremd': { web: ok(50), image: 'https://example.org/foto.jpg' },
     'Bild Commons': { web: ok(50), image: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Foto.jpg' },
     leer: {},
@@ -217,8 +221,8 @@ test('Szenario: Neue Ergebnisse fließen in den Kurztext, ohne neue Links kein n
   proposals(root, Object.entries(cases).map(([k, v]) => ({ id: 'wendy-red-star', label: k, ...v })));
   await run(root, 'check');
   const verdict = Object.fromEntries(readProposals(root).map((p) => [p.label, p.problems]));
-  for (const k of ['40', '90', 'Bild Commons']) assert.deepEqual(verdict[k], [], k);
-  for (const k of ['zu kurz', '91', 'wörtlich', 'Quelle fremd', 'sechs Quellen', 'Bild fremd', 'leer']) assert.ok(verdict[k].length > 0, k);
+  for (const k of ['40', '90', '10 Quellen', 'Bild Commons']) assert.deepEqual(verdict[k], [], k);
+  for (const k of ['zu kurz', '91', 'wörtlich', 'Quelle fremd', 'elf Quellen', 'Bild fremd', 'leer']) assert.ok(verdict[k].length > 0, k);
   assert.match(verdict['Bild fremd'].join(), /Wikimedia Commons/);
   assert.match(verdict['wörtlich'].join(), /wörtliche Folge/);
   assert.equal(readProposals(root).find((p) => p.label === '40').result.web.sources[0].title, 'Porträt');

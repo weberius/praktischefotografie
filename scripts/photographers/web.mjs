@@ -1,5 +1,5 @@
 // Websuche nach Personen (ADR-019, WSP-*). Die Suche selbst führt der Skill aus und schreibt photographers-search.json.
-// Aufruf: npm run photographers:web -- plan   --web … (--photographer <id> | --name "<Name>") [--offline] [--max-age <Tage>] [--date JJJJ-MM-TT]
+// Aufruf: npm run photographers:web -- plan   … (--photographer <id> | --name "<Name>") [--offline] [--max-age <Tage>] [--date JJJJ-MM-TT]
 //         npm run photographers:web -- links  [--date …]   (Suchdatei in Linksammlung übernehmen)
 //         npm run photographers:web -- pages  [--offline] [--date …]   (Seiten neuer Links abrufen; braucht SCRAPE_CONTACT)
 //         npm run photographers:web -- check  [--date …]
@@ -15,7 +15,6 @@ export async function main(argv = process.argv.slice(2), env = process.env, root
   const offline = arg(rest, 'offline', false) === true;
   const maxAgeDays = Number(arg(rest, 'max-age', 30));
   if (command === 'plan') {
-    if (arg(rest, 'web', false) !== true) throw new Error('Die Websuche startet nur mit --web.');
     const { person } = planWeb({ root, date, photographerId: arg(rest, 'photographer') || undefined, name: arg(rest, 'name') || undefined, offline, maxAgeDays });
     console.log(`${person.id}${person.isNew ? ' (neu)' : ''}: ${person.useCache ? 'Suche aus dem Zwischenspeicher' : `Suchanfragen: ${person.queries.join(' | ')}`}`);
     return person;

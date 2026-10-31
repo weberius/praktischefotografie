@@ -1,0 +1,8 @@
+# Qualität: Recherche in allen Sprachen (setup)
+
+**Stand:** 2026-10-31. Fortlaufend zu Q-SEC-5, Q-SEC-7, Q-DATA-14 und Q-DATA-15. Q-SEC-8 ersetzt in Q-SEC-7 die Obergrenzen für Anfragen und Seiten (3 → 6 Anfragen, 5 → 10 Seiten) und die Regel „ohne `--web` 0 Anfragen“ (jetzt „mit `--no-web`“); alle übrigen Maße aus Q-SEC-7 gelten fort.
+
+| ID | Szenario | Maß | Prüfverfahren | EARS |
+| --- | --- | --- | --- | --- |
+| Q-SEC-8 | Redaktion startet den Standardlauf; Suchmaschine und Betreiber der Trefferseiten sollen trotz mehr Quellen nicht belastet werden. | Mit `--no-web` 0 Anfragen an Suchmaschine und Trefferseiten; je Person ≤ 6 Suchanfragen, ≤ 10 Treffer je Anfrage, ≤ 10 abgerufene Seiten; 0 Abrufe von Wikipedia-/Wikidata-/Wikimedia-Adressen über den Webabruf; alle übrigen Maße aus Q-SEC-7 (robots.txt, interne Adressen, Abstand ≥ 2 s, Kennung, Cache/offline) unverändert. | Tests mit lokalem Testserver und Zeitstempeln, Prüfung der Pläne | RAS-UB-3, RAS-EV-1, RAS-UB-4 |
+| Q-DATA-16 | Redaktion prüft, woher der Text stammt; alle Fundstellen in mehreren Sprachen sollen nachvollziehbar und der Text nicht abgeschrieben sein. | 100 % der Sprachversionen einer Person stehen in der Kandidatendatei (`sitelinks`) und, ohne Dubletten und ohne Verlust, in der Linksammlung; ≤ 10 Anfangstexte; Vorschläge mit 10 Quellsprachen bzw. 10 Quellen gültig, mit 11 verworfen; Wikipedia-Links lösen keinen neuen Webkurztext aus; Sachrichtigkeit und Übersetzung prüft der Mensch bei der Freigabe. | Tests der Recherche und Prüfung mit Fixtures (12 Sprachversionen), Durchsicht der Skill-Regeln | RAS-UB-1, RAS-UB-2, RAS-UB-5, RAS-UB-6 |

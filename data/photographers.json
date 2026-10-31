@@ -1333,7 +1333,30 @@
   },
   {
     "name": "Antanas Sutkus",
-    "id": "antanas-sutkus"
+    "id": "antanas-sutkus",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1939,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Antanas Sutkus wurde 1939 geboren und ist ein litauischer Fotograf. Er wird der sogenannten humanistischen Fotografie zugerechnet. Als Vertreter dieser Richtung gilt er zugleich als bedeutendster Fotograf Litauens. Damit wird er in seinem Heimatland als herausragende Figur dieses Fachs gewürdigt.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Antanas_Sutkus"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "antanas-sutkus.jpg",
+      "width": 400,
+      "height": 290,
+      "source": "https://commons.wikimedia.org/wiki/File:Ba-sutkus-antanas-1996-soviet-foto.jpg",
+      "credit": "Бахтиёр Абдуллаев",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    }
   },
   {
     "name": "Paul Wolff",

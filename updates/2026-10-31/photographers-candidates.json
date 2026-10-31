@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-31",
+  "offline": false,
+  "results": [
+    {
+      "id": "antanas-sutkus",
+      "name": "Antanas Sutkus",
+      "status": "gefunden",
+      "wikidataId": "Q1194533",
+      "occupations": [
+        "Fotograf"
+      ],
+      "wikidataDescription": "Litauischer Fotograf",
+      "life": {
+        "from": 1939,
+        "to": null
+      },
+      "articles": [
+        {
+          "lang": "de",
+          "title": "Antanas Sutkus",
+          "url": "https://de.wikipedia.org/wiki/Antanas_Sutkus",
+          "description": "Litauischer Fotograf",
+          "extract": "Antanas Sutkus ist ein litauischer Fotograf. Er gilt als Vertreter der so genannten humanistischen Fotografie und als bedeutendster Fotograf Litauens.",
+          "imageFile": "Ba-sutkus-antanas-1996-soviet-foto.jpg?utm source=de.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "en",
+          "title": "Antanas Sutkus",
+          "url": "https://en.wikipedia.org/wiki/Antanas_Sutkus",
+          "description": "Lithuanian photographer",
+          "extract": "Antanas Sutkus is a Lithuanian photographer.",
+          "imageFile": "Ba-sutkus-antanas-1996-soviet-foto.jpg?utm source=en.wikipedia.org&utm campaign=api&utm content=thumbnail unscaled"
+        },
+        {
+          "lang": "fr",
+          "title": "Antanas Sutkus",
+          "url": "https://fr.wikipedia.org/wiki/Antanas_Sutkus",
+          "description": "photographe lituanien",
+          "extract": "Antanas Sutkus est un photographe lituanien.",
+          "imageFile": "Toulouse - Château d'eau Laganne - 20110325 (1).jpg"
+        }
+      ],
+      "portrait": {
+        "cacheFile": ".cache/portraits/antanas-sutkus.jpg",
+        "file": "antanas-sutkus.jpg",
+        "width": 400,
+        "height": 290,
+        "bytes": 44691,
+        "source": "https://commons.wikimedia.org/wiki/File:Ba-sutkus-antanas-1996-soviet-foto.jpg",
+        "credit": "Бахтиёр Абдуллаев",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      "portraitNote": null
+    }
+  ]
+}

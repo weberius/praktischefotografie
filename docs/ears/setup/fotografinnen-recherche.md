@@ -2,6 +2,8 @@
 
 **Bereich:** setup  ·  **Systemname:** Fotograf:innen-Recherche  ·  **Stand:** 2026-10-28
 
+**Teilweise ersetzt:** RSF-UB-2 (drei Artikel) durch RAS-UB-1 in `recherche-in-allen-sprachen.md` (bis zu zehn Anfangstexte, alle Sprachversionen als Links).
+
 Begriffe: „Kandidat“ ist eine Person ohne `wikipedia` oder ohne `portrait`. „Kandidatendatei“ ist `updates/<JJJJ-MM-TT>/photographers-candidates.json`, „Vorschlagsdatei“ `updates/<JJJJ-MM-TT>/photographers.json`. „Frei lizenziert“ sind Bilder unter CC0, CC BY, CC BY-SA oder gemeinfrei.
 
 | ID | Anforderung | Gherkin | Quality | ADR |

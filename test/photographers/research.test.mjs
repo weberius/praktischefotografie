@@ -31,8 +31,9 @@ const ENTITIES = {
   Q600: entity({ label: 'Evil Host', claims: { P18: image('Evil.jpg') } }),
   Q700: entity({ label: 'Candida Höfer', claims: { P569: time('+1944-00-00T00:00:00Z') } }),
   Q800: entity({ label: 'Bild Ersatz' }),
+  Q900: entity({ label: 'Viel Sprachen', sitelinks: Object.fromEntries(['de', 'en', 'fr', 'es', 'it', 'nl', 'pt', 'sv', 'da', 'fi', 'pl', 'cs'].map((l) => [`${l}wiki`, { title: 'Viel Sprachen' }])) }),
 };
-const SEARCH = { 'August Sander': ['Q100', 'Q101'], 'Maria Muster': ['Q200', 'Q201'], 'Fritz Unfrei': ['Q300'], 'Karl Anonym': ['Q400'], 'Gross Bild': ['Q500'], 'Evil Host': ['Q600'], 'Candida Höfer': ['Q700'], 'Bild Ersatz': ['Q800'] };
+const SEARCH = { 'August Sander': ['Q100', 'Q101'], 'Maria Muster': ['Q200', 'Q201'], 'Fritz Unfrei': ['Q300'], 'Karl Anonym': ['Q400'], 'Gross Bild': ['Q500'], 'Evil Host': ['Q600'], 'Candida Höfer': ['Q700'], 'Bild Ersatz': ['Q800'], 'Viel Sprachen': ['Q900'] };
 const EXTRACT = `August Sander war ein deutscher Fotograf und gilt als Wegbereiter der dokumentarischen Porträtfotografie. ${words('quelle', 40)}`;
 
 async function wikimedia() {
@@ -119,7 +120,30 @@ test('Szenario: Sprachreihenfolge (RSF-UB-2)', async () => {
   try {
     const root = workspace(['August Sander']);
     await fetchAll(w, root);
-    assert.deepEqual(candidates(root).results[0].articles.map((a) => a.lang), ['de', 'en', 'fr']);
+    assert.deepEqual(candidates(root).results[0].articles.map((a) => a.lang), ['de', 'en', 'fr', 'ja', 'pt']);
+  } finally {
+    await w.close();
+  }
+});
+
+test('Szenario: Alle Sprachversionen als Links, Anfangstexte bis zu zehn Sprachen (RAS-UB-1, RAS-UB-2)', async () => {
+  const w = await wikimedia();
+  try {
+    const root = workspace(['Viel Sprachen']);
+    const linksFile = join(root, 'updates', 'photographers-links.json');
+    mkdirSync(join(root, 'updates'), { recursive: true });
+    const known = { url: 'https://de.wikipedia.org/wiki/Viel_Sprachen', title: 'alt', query: 'manuell', foundAt: '2026-01-01T00:00:00.000Z' };
+    writeFileSync(linksFile, JSON.stringify({ 'viel-sprachen': [known] }));
+    await fetchAll(w, root);
+    const [r] = candidates(root).results;
+    assert.equal(r.sitelinks.length, 12);
+    assert.deepEqual(r.articles.map((a) => a.lang), ['de', 'en', 'fr', 'es', 'it', 'nl', 'cs', 'da', 'fi', 'pl']);
+    const links = readJson(root, 'updates', 'photographers-links.json')['viel-sprachen'];
+    assert.equal(links.length, 12);
+    assert.deepEqual(links[0], known);
+    assert.ok(links.slice(1).every((l) => /^wikipedia:[a-z]+$/.test(l.query)));
+    await fetchAll(w, root);
+    assert.equal(readJson(root, 'updates', 'photographers-links.json')['viel-sprachen'].length, 12, 'zweiter Lauf ohne Dubletten');
   } finally {
     await w.close();
   }
@@ -413,7 +437,7 @@ test('Szenario: Bericht der Recherche (RSF-EV-2)', async () => {
     applyMain(argv(), root);
     const report = readFileSync(join(root, 'updates', DATE, 'PHOTOGRAPHERS.md'), 'utf8');
     assert.match(report, /Gefunden: 1/);
-    assert.match(report, /`august-sander` \(August Sander\): gefunden; Sprachen: de, en, fr; Bild: CC BY-SA 4\.0; übernommen/);
+    assert.match(report, /`august-sander` \(August Sander\): gefunden; Sprachen: de, en, fr, ja, pt; Bild: CC BY-SA 4\.0; übernommen/);
   } finally {
     await w.close();
   }
