@@ -15,8 +15,8 @@ Ein Lauf umfasst **beides**: die Wikipedia in allen Sprachen (Ablauf unten) und 
 
 - **Änderungen an `data/` erst nach ausdrücklicher Freigabe durch den Menschen** (per `AskUserQuestion`). Vorher schreibst du nur unter `updates/`.
 - **Netzzugriff nur über `npm run photographers:fetch`.** Keine eigenen Abrufe (kein WebFetch, kein curl), keine Umgehung von Abständen oder Hosts.
-- **Eigene Formulierung.** Zusammenfassungen sind in deinen Worten geschrieben (Deutsch, **60 bis 120 Wörter**; 120 nur, wenn es viel zu berichten gibt). Keine wörtliche Folge von acht oder mehr Wörtern aus den Anfangstexten (die Prüfung verwirft sie).
-- **Nichts erfinden.** Du schreibst nur, was in den Anfangstexten der Artikel (`articles[].extract`) steht. Fehlt eine Angabe, lässt du sie weg. Übersetze aus den vorhandenen Sprachen, ohne Angaben zu ergänzen.
+- **Eigene Formulierung.** Zusammenfassungen sind in deinen Worten geschrieben (Deutsch, **60 bis 120 Wörter**; 120 nur, wenn es viel zu berichten gibt). Keine wörtliche Folge von acht oder mehr Wörtern aus den Anfangstexten und Volltexten (die Prüfung verwirft sie).
+- **Nichts erfinden.** Du schreibst nur, was in den Anfangstexten (`articles[].extract`) und Volltexten (`articles[].fulltext`, nur bei den ersten drei Artikeln) der Artikel steht. Fehlt eine Angabe, lässt du sie weg. Übersetze aus den vorhandenen Sprachen, ohne Angaben zu ergänzen.
 - **Nur freie Bilder mit Nachweis.** Ein Portrait wird nur vorgeschlagen, wenn die Kandidatendatei es mit freier Lizenz, Urheber und Dateiseite enthält. Du lädst keine Bilder selbst.
 - **Mehrdeutige oder nicht gefundene Personen** bleiben unverändert; du rätst keine Treffer.
 - Vorhandene Profile werden nur mit `--force` und ausdrücklicher Freigabe ersetzt.
@@ -33,7 +33,7 @@ Ein Lauf umfasst **beides**: die Wikipedia in allen Sprachen (Ablauf unten) und 
    ] }
    ```
    - `occupation`: kurze Berufsbezeichnung auf Deutsch, so wie die Wikipedia die Person nennt (Kurzbeschreibung `description`, erster Satz), z. B. „Fotografin“ oder „Medienkünstler“; höchstens 60 Zeichen.
-   - `summary`: 60 bis 120 Wörter zu Person, Werk und Bedeutung, nur aus den Anfangstexten, eigene Worte.
+   - `summary`: 60 bis 120 Wörter zu Person, Werk und Bedeutung, nur aus den Anfangs- und Volltexten, eigene Worte.
    - `sources`: die Sprachen der Artikel, aus denen du geschöpft hast (1 bis 10, nur aus `articles`).
    - `portrait`: `true`, wenn die Kandidatendatei ein Portrait enthält; sonst `false`.
    - Lebensdaten und Bildnachweis trägst du **nicht** ein; sie kommen aus der Kandidatendatei.

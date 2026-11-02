@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-02",
+  "engine": "Bing (über Websuch-Werkzeug)",
+  "persons": [
+    {
+      "id": "arno-fischer",
+      "engine": "Bing (über Websuch-Werkzeug)",
+      "queries": [
+        {
+          "query": "\"Arno Fischer\" Fotograf",
+          "results": [
+            {
+              "title": "Arno Fischer - Berlinische Galerie",
+              "url": "https://berlinischegalerie.de/en/collection/specialised-fields/photography/arno-fischer/",
+              "snippet": "Arno Fischer (1927–2011), Fotograf und Fotografielehrer, Serie Situation Berlin 1953–1960.",
+              "query": "\"Arno Fischer\" Fotograf",
+              "foundAt": "2026-11-02T10:15:54.095Z"
+            },
+            {
+              "title": "Arno Fischer. Fotografie - ifa",
+              "url": "https://www.ifa.de/tournee/arno-fischer-busan/",
+              "snippet": "Ausstellung zu Arno Fischer, Chronist des geteilten Berlin und des Alltags in der DDR.",
+              "query": "\"Arno Fischer\" Fotograf",
+              "foundAt": "2026-11-02T10:15:54.095Z"
+            },
+            {
+              "title": "Kicken Berlin | Arno Fischer",
+              "url": "https://kicken-gallery.com/artists/arno-fischer",
+              "snippet": "Künstlerseite der Galerie Kicken Berlin zu Arno Fischer.",
+              "query": "\"Arno Fischer\" Fotograf",
+              "foundAt": "2026-11-02T10:15:54.095Z"
+            }
+          ]
+        },
+        {
+          "query": "\"Arno Fischer\" photographer",
+          "results": [
+            {
+              "title": "LFI | Stories | A Journey in Photographs",
+              "url": "https://lfi-online.de/en/stories/a-journey-in-photographs-15564.html",
+              "snippet": "Bericht über Reisefotografien von Arno Fischer.",
+              "query": "\"Arno Fischer\" photographer",
+              "foundAt": "2026-11-02T10:15:54.095Z"
+            },
+            {
+              "title": "Kicken Berlin | Arno Fischer",
+              "url": "https://kicken-gallery.com/artists/arno-fischer",
+              "snippet": "Künstlerseite der Galerie Kicken Berlin zu Arno Fischer.",
+              "query": "\"Arno Fischer\" photographer",
+              "foundAt": "2026-11-02T10:15:54.095Z"
+            }
+          ]
+        },
+        {
+          "query": "\"Arno Fischer\" photographe",
+          "results": [
+            {
+              "title": "Arno Fischer. Photography - ifa",
+              "url": "https://www.ifa.de/en/tour/arno-fischer-seoul/",
+              "snippet": "Ausstellung Arno Fischer, Fotografie.",
+              "query": "\"Arno Fischer\" photographe",
+              "foundAt": "2026-11-02T10:15:54.095Z"
+            }
+          ]
+        },
+        {
+          "query": "\"Arno Fischer\" fotógrafo",
+          "results": []
+        },
+        {
+          "query": "\"Arno Fischer\" fotografo",
+          "results": []
+        },
+        {
+          "query": "\"Arno Fischer\" fotograaf",
+          "results": []
+        }
+      ]
+    }
+  ]
+}

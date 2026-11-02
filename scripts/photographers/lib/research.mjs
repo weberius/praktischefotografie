@@ -7,6 +7,9 @@ import { linksPath, webReportLines } from './webreport.mjs';
 
 export const PREFERRED_LANGS = ['de', 'en', 'fr', 'es', 'it', 'nl'];
 export const MAX_ARTICLES = 10;
+/** Volltext (Fließtext ohne Gliederung) nur für die ersten Artikel in der Reihenfolge der Sprachen, auf höchstens so viele Zeichen gekürzt (RSF-EV-1). */
+export const MAX_FULLTEXT_ARTICLES = 3;
+export const MAX_FULLTEXT_CHARS = 12_000;
 export const PORTRAIT_WIDTHS = [400, 300, 240];
 export const MAX_OCCUPATION = 60;
 export const VERBATIM_WORDS = 8;
@@ -95,7 +98,19 @@ async function loadArticles(client, entity) {
     if (!summary || summary.type !== 'standard' || !normalizeSpace(summary.extract ?? '')) continue;
     articles.push({ lang, title, url, description: summary.description ?? null, extract: normalizeSpace(summary.extract), imageFile: commonsFileName(summary.originalimage?.source ?? summary.thumbnail?.source) });
   }
+  for (const article of articles.slice(0, MAX_FULLTEXT_ARTICLES)) article.fulltext = await loadFulltext(client, article);
   return articles;
+}
+
+/** Fließtext des ganzen Artikels über die MediaWiki-API (TextExtracts), gekürzt; ohne Treffer null. */
+async function loadFulltext(client, article) {
+  const url = `${client.endpoints.wikipedia(article.lang)}/w/api.php?action=query&prop=extracts&explaintext=1&exsectionformat=plain&redirects=1&titles=${encodeURIComponent(article.title)}&format=json&formatversion=2`;
+  try {
+    const text = normalizeSpace((await client.getJson(url))?.query?.pages?.[0]?.extract ?? '');
+    return text ? text.slice(0, MAX_FULLTEXT_CHARS) : null;
+  } catch {
+    return null;
+  }
 }
 
 /** Lädt das Bild (RSF-UB-4): nur frei lizenziert, mit Urheber, verkleinert, höchstens 200 kB. */
@@ -272,7 +287,7 @@ export function checkProposal(proposal, { candidate, person, root = ROOT }) {
     if (!article) problems.push(`Quelle "${lang}" steht nicht in der Kandidatendatei`);
     else sources.push({ lang, url: article.url });
   }
-  for (const article of articles) if (sharesSequence(summary, article.extract)) problems.push(`Zusammenfassung enthält eine wörtliche Folge von ${VERBATIM_WORDS} Wörtern aus dem Artikel (${article.lang})`);
+  for (const article of articles) if (sharesSequence(summary, article.extract) || sharesSequence(summary, article.fulltext ?? '')) problems.push(`Zusammenfassung enthält eine wörtliche Folge von ${VERBATIM_WORDS} Wörtern aus dem Artikel (${article.lang})`);
   let portrait;
   if (proposal.portrait === true) {
     const p = candidate?.portrait;

@@ -538,7 +538,51 @@
   },
   {
     "name": "Arno Fischer",
-    "id": "arno-fischer"
+    "id": "arno-fischer",
+    "web": {
+      "summary": "Arno Fischer (1927–2011) wuchs im Berliner Arbeiterbezirk Wedding auf, lernte zunächst Modelltischler, studierte Bildhauerei und entdeckte dann die Fotografie. Sein bekanntestes Werk, „Situation Berlin“, hält bis 1960 das Alltagsleben der geteilten Stadt in Ost und West fest. Wegen des Mauerbaus durfte der geplante Bildband zunächst nicht erscheinen und kam erst 42 Jahre später heraus. 1965 gehörte Fischer zu den Mitgründern der Gruppe DIREKT. Als Lehrer in Leipzig, Berlin und Dortmund prägte er drei Generationen von Fotografinnen und Fotografen in beiden deutschen Staaten. 2000 erhielt er den Erich-Salomon-Preis, 2010 den Hannah-Höch-Preis.",
+      "sources": [
+        {
+          "title": "Arno Fischer - Berlinische Galerie",
+          "url": "https://berlinischegalerie.de/en/collection/specialised-fields/photography/arno-fischer"
+        },
+        {
+          "title": "Kicken Berlin | Arno Fischer",
+          "url": "https://kicken-gallery.com/artists/arno-fischer"
+        }
+      ]
+    },
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1927,
+      "to": 2011
+    },
+    "wikipedia": {
+      "summary": "Arno Fischer wurde 1927 in Berlin-Wedding geboren und starb 2011 in Neustrelitz. Er studierte Bildhauerei in Ost- und West-Berlin, zog 1953 nach Ost-Berlin und arbeitete zunächst als Fotolaborant. Sein Buchprojekt „Situation Berlin“, das die Jahre 1953 bis 1960 umfasste, kam wegen des Mauerbaus nicht zustande. Für Zeitschriften wie „Sibylle“ und „Das Magazin“ fotografierte er vor allem Mode und Reisen. Er lehrte an der Kunsthochschule Berlin-Weißensee, der Hochschule für Grafik und Buchkunst in Leipzig, in Dortmund und an der Ostkreuzschule in Berlin. 2000 erhielt er den Erich-Salomon-Preis, 2010 den Hannah-Höch-Preis.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Arno_Fischer_(Fotograf)"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Arno_Fischer"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Arno_Fischer"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "arno-fischer.jpg",
+      "width": 400,
+      "height": 285,
+      "source": "https://commons.wikimedia.org/wiki/File:Arno_Fischer.jpg",
+      "credit": "Rechteerklärung am 8.9.2016 an Wikipedia als pdf übermittelt",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
   {
     "name": "A. & E. Frankl",

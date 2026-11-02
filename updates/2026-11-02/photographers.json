@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-02",
+  "proposals": [
+    {
+      "id": "arno-fischer",
+      "approved": true,
+      "occupation": "Fotograf",
+      "summary": "Arno Fischer wurde 1927 in Berlin-Wedding geboren und starb 2011 in Neustrelitz. Er studierte Bildhauerei in Ost- und West-Berlin, zog 1953 nach Ost-Berlin und arbeitete zunächst als Fotolaborant. Sein Buchprojekt „Situation Berlin“, das die Jahre 1953 bis 1960 umfasste, kam wegen des Mauerbaus nicht zustande. Für Zeitschriften wie „Sibylle“ und „Das Magazin“ fotografierte er vor allem Mode und Reisen. Er lehrte an der Kunsthochschule Berlin-Weißensee, der Hochschule für Grafik und Buchkunst in Leipzig, in Dortmund und an der Ostkreuzschule in Berlin. 2000 erhielt er den Erich-Salomon-Preis, 2010 den Hannah-Höch-Preis.",
+      "sources": [
+        "de",
+        "en",
+        "fr"
+      ],
+      "portrait": true,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1927,
+          "to": 2011
+        },
+        "wikipedia": {
+          "summary": "Arno Fischer wurde 1927 in Berlin-Wedding geboren und starb 2011 in Neustrelitz. Er studierte Bildhauerei in Ost- und West-Berlin, zog 1953 nach Ost-Berlin und arbeitete zunächst als Fotolaborant. Sein Buchprojekt „Situation Berlin“, das die Jahre 1953 bis 1960 umfasste, kam wegen des Mauerbaus nicht zustande. Für Zeitschriften wie „Sibylle“ und „Das Magazin“ fotografierte er vor allem Mode und Reisen. Er lehrte an der Kunsthochschule Berlin-Weißensee, der Hochschule für Grafik und Buchkunst in Leipzig, in Dortmund und an der Ostkreuzschule in Berlin. 2000 erhielt er den Erich-Salomon-Preis, 2010 den Hannah-Höch-Preis.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Arno_Fischer_(Fotograf)"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Arno_Fischer"
+            },
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/Arno_Fischer"
+            }
+          ]
+        },
+        "portrait": {
+          "file": "arno-fischer.jpg",
+          "width": 400,
+          "height": 285,
+          "source": "https://commons.wikimedia.org/wiki/File:Arno_Fischer.jpg",
+          "credit": "Rechteerklärung am 8.9.2016 an Wikipedia als pdf übermittelt",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "cacheFile": ".cache/portraits/arno-fischer.jpg"
+        }
+      },
+      "appliedAt": "2026-11-02"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-02",
+  "proposals": [
+    {
+      "id": "arno-fischer",
+      "approved": true,
+      "web": {
+        "summary": "Arno Fischer (1927–2011) wuchs im Berliner Arbeiterbezirk Wedding auf, lernte zunächst Modelltischler, studierte Bildhauerei und entdeckte dann die Fotografie. Sein bekanntestes Werk, „Situation Berlin“, hält bis 1960 das Alltagsleben der geteilten Stadt in Ost und West fest. Wegen des Mauerbaus durfte der geplante Bildband zunächst nicht erscheinen und kam erst 42 Jahre später heraus. 1965 gehörte Fischer zu den Mitgründern der Gruppe DIREKT. Als Lehrer in Leipzig, Berlin und Dortmund prägte er drei Generationen von Fotografinnen und Fotografen in beiden deutschen Staaten. 2000 erhielt er den Erich-Salomon-Preis, 2010 den Hannah-Höch-Preis.",
+        "sources": [
+          "https://berlinischegalerie.de/en/collection/specialised-fields/photography/arno-fischer",
+          "https://kicken-gallery.com/artists/arno-fischer"
+        ]
+      },
+      "problems": [],
+      "result": {
+        "web": {
+          "summary": "Arno Fischer (1927–2011) wuchs im Berliner Arbeiterbezirk Wedding auf, lernte zunächst Modelltischler, studierte Bildhauerei und entdeckte dann die Fotografie. Sein bekanntestes Werk, „Situation Berlin“, hält bis 1960 das Alltagsleben der geteilten Stadt in Ost und West fest. Wegen des Mauerbaus durfte der geplante Bildband zunächst nicht erscheinen und kam erst 42 Jahre später heraus. 1965 gehörte Fischer zu den Mitgründern der Gruppe DIREKT. Als Lehrer in Leipzig, Berlin und Dortmund prägte er drei Generationen von Fotografinnen und Fotografen in beiden deutschen Staaten. 2000 erhielt er den Erich-Salomon-Preis, 2010 den Hannah-Höch-Preis.",
+          "sources": [
+            {
+              "title": "Arno Fischer - Berlinische Galerie",
+              "url": "https://berlinischegalerie.de/en/collection/specialised-fields/photography/arno-fischer"
+            },
+            {
+              "title": "Kicken Berlin | Arno Fischer",
+              "url": "https://kicken-gallery.com/artists/arno-fischer"
+            }
+          ]
+        }
+      },
+      "appliedAt": "2026-11-02"
+    }
+  ]
+}

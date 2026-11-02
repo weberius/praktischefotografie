@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-02",
+  "offline": false,
+  "maxAgeDays": 30,
+  "persons": [
+    {
+      "id": "arno-fischer",
+      "name": "Arno Fischer",
+      "isNew": false,
+      "queries": [
+        "\"Arno Fischer\" Fotograf",
+        "\"Arno Fischer\" photographer",
+        "\"Arno Fischer\" photographe",
+        "\"Arno Fischer\" fotógrafo",
+        "\"Arno Fischer\" fotografo",
+        "\"Arno Fischer\" fotograaf"
+      ],
+      "useCache": false,
+      "queryCount": 6,
+      "hitCount": 6,
+      "newLinks": [
+        "https://berlinischegalerie.de/en/collection/specialised-fields/photography/arno-fischer",
+        "https://www.ifa.de/tournee/arno-fischer-busan",
+        "https://kicken-gallery.com/artists/arno-fischer",
+        "https://lfi-online.de/en/stories/a-journey-in-photographs-15564.html",
+        "https://www.ifa.de/en/tour/arno-fischer-seoul"
+      ],
+      "status": "gesucht",
+      "engine": "Bing (über Websuch-Werkzeug)",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [
+          {
+            "url": "https://www.ifa.de/tournee/arno-fischer-busan",
+            "reason": "HTTP 401"
+          },
+          {
+            "url": "https://lfi-online.de/en/stories/a-journey-in-photographs-15564.html",
+            "reason": "HTTP 403"
+          },
+          {
+            "url": "https://www.ifa.de/en/tour/arno-fischer-seoul",
+            "reason": "HTTP 401"
+          }
+        ],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://berlinischegalerie.de/en/collection/specialised-fields/photography/arno-fischer",
+        "https://kicken-gallery.com/artists/arno-fischer"
+      ]
+    }
+  ]
+}

@@ -11,7 +11,7 @@ Funktionalität: Recherche der Fotograf:innen über Wikipedia
   Szenario: Kandidat wird über Wikidata aufgelöst
     Angenommen die Person "August Sander" ohne Profil und ein Testserver für Wikipedia und Wikidata
     Wenn der Abruf gestartet wird
-    Dann enthält "photographers-candidates.json" Wikidata-ID, Berufsbezeichnung, Lebensjahre, Artikelsprachen, Anfangstexte und das Bild
+    Dann enthält "photographers-candidates.json" Wikidata-ID, Berufsbezeichnung, Lebensjahre, Artikelsprachen, Anfangstexte, Volltexte der ersten drei Artikel und das Bild
     Und nur Einträge mit dem Beruf Fotograf:in oder Künstler:in laut Wikipedia kommen infrage
 
   # EARS: RSF-UB-2
@@ -98,4 +98,4 @@ Funktionalität: Recherche der Fotograf:innen über Wikipedia
   # EARS: RSF-UB-7
   Szenario: Skill schreibt nur aus den Quellen
     Angenommen der Skill mit seinen Regeln
-    Dann verlangt er eigene Formulierung, 40 bis 90 Wörter, keine Angaben außerhalb der Anfangstexte und die Freigabe vor der Übernahme
+    Dann verlangt er eigene Formulierung, 60 bis 120 Wörter, keine Angaben außerhalb der Anfangs- und Volltexte und die Freigabe vor der Übernahme

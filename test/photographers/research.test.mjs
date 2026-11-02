@@ -34,6 +34,7 @@ const ENTITIES = {
   Q900: entity({ label: 'Viel Sprachen', sitelinks: Object.fromEntries(['de', 'en', 'fr', 'es', 'it', 'nl', 'pt', 'sv', 'da', 'fi', 'pl', 'cs'].map((l) => [`${l}wiki`, { title: 'Viel Sprachen' }])) }),
 };
 const SEARCH = { 'August Sander': ['Q100', 'Q101'], 'Maria Muster': ['Q200', 'Q201'], 'Fritz Unfrei': ['Q300'], 'Karl Anonym': ['Q400'], 'Gross Bild': ['Q500'], 'Evil Host': ['Q600'], 'Candida Höfer': ['Q700'], 'Bild Ersatz': ['Q800'], 'Viel Sprachen': ['Q900'] };
+const FULLTEXT_TAIL = 'Nach dem Krieg lehrte er an der Kunstakademie in Köln und stellte regelmäßig international aus.';
 const EXTRACT = `August Sander war ein deutscher Fotograf und gilt als Wegbereiter der dokumentarischen Porträtfotografie. ${words('quelle', 40)}`;
 
 async function wikimedia() {
@@ -68,6 +69,8 @@ async function wikimedia() {
     if (thumb) return send(200, 'image/jpeg', Buffer.alloc({ 'gross-400': 250_000, 'gross-300': 150_000 }[thumb[1]] ?? 5000, 7));
     const summary = /^\/wp-([a-z]+)\/api\/rest_v1\/page\/summary\/(.+)$/.exec(u.pathname);
     if (summary) return send(200, 'application/json', JSON.stringify({ type: 'standard', title: decodeURIComponent(summary[2]), extract: EXTRACT, originalimage: u.pathname.includes('Bild_Ersatz') ? { source: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Titelbild.jpg' } : u.pathname.includes('Sander') ? { source: 'https://upload.wikimedia.org/wikipedia/en/a/ab/Nur_en.jpg' } : undefined, description: summary[1] === 'de' ? 'deutscher Fotograf' : 'German photographer' }));
+    const fulltext = /^\/wp-([a-z]+)\/w\/api\.php$/.exec(u.pathname);
+    if (fulltext) return send(200, 'application/json', JSON.stringify({ query: { pages: [{ extract: `${EXTRACT} Später Text im ganzen Artikel. ${FULLTEXT_TAIL}` }] } }));
     const area = /^\/(wikidata|commons)\/w\/api\.php$/.exec(u.pathname);
     if (area) return send(200, 'application/json', JSON.stringify(handlers[area[1]](u)));
     return send(404, 'text/plain', 'nicht gefunden');
@@ -108,6 +111,8 @@ test('Szenario: Kandidat wird über Wikidata aufgelöst (RSF-EV-1)', async () =>
     assert.equal(r.articles[0].url, 'https://de.wikipedia.org/wiki/August_Sander');
     assert.equal(r.articles[0].description, 'deutscher Fotograf');
     assert.match(r.articles[0].extract, /Wegbereiter/);
+    assert.match(r.articles[0].fulltext, /Später Text im ganzen Artikel/);
+    assert.equal(r.articles.filter((a) => a.fulltext).length, 3, 'Volltext nur für die ersten drei Artikel');
     assert.equal(r.portrait.license, 'CC BY-SA 4.0');
   } finally {
     await w.close();
@@ -321,14 +326,16 @@ test('Szenario: Zusammenfassung wird geprüft (RSF-UB-5, Q-DATA-8)', async () =>
     { ...person, summary: summaryOf(60), sources: ['sv'] },
     { ...person, summary: summaryOf(60), occupation: '' },
     { ...person, summary: summaryOf(60), occupation: 'x'.repeat(61) },
+    { ...person, summary: `${FULLTEXT_TAIL.split(' ').slice(0, 9).join(' ')} ${summaryOf(55)}` },
   ]);
   try {
     const checked = checkMain(argv(), root);
     const good = checked.proposals.map((p) => p.problems.length === 0);
-    assert.deepEqual(good, [false, true, true, false, false, false, false, false]);
+    assert.deepEqual(good, [false, true, true, false, false, false, false, false, false]);
     assert.match(checked.proposals[0].problems[0], /59 Wörter/);
     assert.match(checked.proposals[4].problems.join(), /wörtliche Folge von 8 Wörtern/);
     assert.match(checked.proposals[5].problems.join(), /Quelle "sv" steht nicht/);
+    assert.match(checked.proposals[8].problems.join(), /wörtliche Folge von 8 Wörtern aus dem Artikel \(de\)/);
     assert.deepEqual(checked.proposals[1].result.wikipedia.sources.map((s) => s.lang), ['de', 'en']);
     assert.equal(checked.proposals[1].result.life.to, 1964);
   } finally {

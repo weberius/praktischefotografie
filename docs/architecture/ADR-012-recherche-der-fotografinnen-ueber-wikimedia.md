@@ -11,7 +11,7 @@ Profile (ADR-011) sollen aus den Wikipedia-Ausgaben mehrerer Sprachen und Bilder
 - **Sprachen über Sitelinks.** Alle Sprachversionen aus den Sitelinks des Wikidata-Eintrags; bevorzugt Deutsch, Englisch, Französisch, Spanisch, Italienisch, Niederländisch, danach alphabetisch; bis zu drei Artikel mit Anfangstext (REST-Summary der jeweiligen Wikipedia).
 - **Stammdaten aus Wikidata:** Lebensjahre (P569, P570) und Bild (P18, ersatzweise das Titelbild der Wikipedia-Summary, sofern die Datei auf Commons liegt; lokale Dateien einer Sprachversion sind unzulässig).
 - **Bild von Commons:** Metadaten über die Commons-API (`imageinfo` mit `extmetadata`: Urheber, Lizenzkürzel, Lizenz-URL, Dateiseite), Download des Vorschaubilds mit 400 px Breite (`iiurlwidth`), Ablage unter `.cache/portraits/`; nur frei lizenziert und mit Urheber.
-- **Zusammenfassung durch Claude im Skill** (wie ADR-007): Der Skill liest die Kandidatendatei und schreibt `updates/<Datum>/photographers.json` mit `summary`, `sources`, `life`, `portrait`. Die deterministische Prüfung verwirft Wortzahlen außerhalb 60–120, wörtliche Folgen ab acht Wörtern aus den Anfangstexten, fremde Quellen und unfreie oder zu große Bilder.
+- **Zusammenfassung durch Claude im Skill** (wie ADR-007): Der Skill liest die Kandidatendatei und schreibt `updates/<Datum>/photographers.json` mit `summary`, `sources`, `life`, `portrait`. Die deterministische Prüfung verwirft Wortzahlen außerhalb 60–120, wörtliche Folgen ab acht Wörtern aus den Anfangs- und Volltexten, fremde Quellen und unfreie oder zu große Bilder.
 - **Freigabe vor Übernahme:** `photographers:apply` übernimmt nur Freigegebenes, kopiert die Bilder nach `data/portraits/`, validiert und rollt bei Fehlern zurück; Vorhandenes nur mit `--force`.
 - **Höflicher Abruf:** nur Wikimedia-Hosts (Wikipedia-Sprachversionen, Wikidata, Commons, `upload` und `thumb`; Weiterleitungen werden einzeln geprüft), ≥ 1 s Abstand, `User-Agent` mit Kontakt (`SCRAPE_CONTACT`), Cache `.cache/wikipedia/` (30 Tage), Wiederholungen bei 429/5xx, kein Abruf offline.
 - **Berichte und Vorschläge** liegen versioniert unter `updates/`; Cache und Rohantworten nicht.
@@ -31,3 +31,5 @@ Profile (ADR-011) sollen aus den Wikipedia-Ausgaben mehrerer Sprachen und Bilder
 - EARS: RSF-UB-1 bis RSF-UB-7, RSF-EV-1, RSF-EV-2, RSF-UN-1, RSF-UN-2, RSF-OP-1, RSF-OP-2
 - Features: `setup/fotografinnen-recherche.feature`
 - Quality: Q-SEC-5, Q-MAIN-4, Q-DATA-7, Q-DATA-8
+
+**Ergänzung 2026-11-02 – Volltext:** Die REST-Summary liefert oft nur einen Satz. Für die ersten drei Artikel (Sprachreihenfolge) holt die Recherche zusätzlich den Fließtext über `action=query&prop=extracts&explaintext=1` derselben Wikipedia-Hosts (gleiche Regeln für Abstand, Cache und Offline), kürzt ihn auf 12 000 Zeichen und legt ihn als `fulltext` in die Kandidatendatei. Der Skill darf daraus schreiben; die Prüfung verwirft wörtliche Folgen ab acht Wörtern auch aus dem Volltext.
