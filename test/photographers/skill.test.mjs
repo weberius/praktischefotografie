@@ -28,7 +28,7 @@ test('Skill führt den Ablauf in der richtigen Reihenfolge aus (RSF-UB-1)', () =
 test('Szenario: Skill schreibt nur aus den Quellen (RSF-UB-7)', () => {
   const text = skill();
   assert.match(text, /erst nach ausdrücklicher Freigabe/);
-  assert.match(text, /40 bis 90 Wörter/);
+  assert.match(text, /60 bis 120 Wörter/);
   assert.match(text, /wörtliche Folge von acht oder mehr Wörtern/);
   assert.match(text, /Nichts erfinden/);
   assert.match(text, /Du lädst keine Bilder selbst/);
@@ -40,7 +40,7 @@ test('Szenario: Skill schreibt nur aus den Quellen, Websuche (WSP-UB-1, WSP-UB-7
   assert.match(text, /Mit `--no-web` entfällt die Websuche/);
   assert.match(text, /Fehlt beides, brich mit einem Hinweis ab/);
   assert.match(text, /höchstens \*\*sechs Suchanfragen\*\*/);
-  assert.match(text, /\*\*Kurztext in eigener Formulierung\*\* \(Deutsch, \*\*40 bis 90 Wörter\*\*\)/);
+  assert.match(text, /\*\*Kurztext in eigener Formulierung\*\* \(Deutsch, \*\*60 bis 120 Wörter\*\*\)/);
   assert.match(text, /nur\*\* aus Textauszügen/);
   assert.match(text, /widersprüchliche Angaben nicht auf, sondern lässt sie weg/);
   assert.match(text, /Änderungen an `data\/` erst nach ausdrücklicher Freigabe/);

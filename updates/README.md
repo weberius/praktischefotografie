@@ -174,6 +174,6 @@ updates/
 - **Seiten:** Nur neue Links, höchstens fünf je Person, nach den Regeln des Abrufdienstes (`robots.txt`, ≥ 2 s Abstand je Website, Kennung im `User-Agent`, keine Weiterleitung auf andere Websites); Snapshots unter `.cache/snapshots/<person-id>/`.
 - **Cache:** `.cache/websearch/<person-id>.json` (30 Tage, `--max-age`); mit `--offline` oder frischem Cache keine Suche.
 - **Neue Person:** Nur `id` (Kleinbuchstaben, Umlaute umgeschrieben, z. B. `uelkue-mueller-oez`) und `name`; vorhandene Namen und `id` werden nie doppelt angelegt.
-- **Webkurztext:** Feld `web` (`summary` 40 bis 90 Wörter, `sources` 1 bis 5 mit `title` und `url`) neben `wikipedia`. Neuer Vorschlag nur bei neuen Links. `photographers:web -- check` verwirft falsche Wortzahl, wörtliche Folgen von acht Wörtern aus Textauszügen oder Snapshots, Quellen außerhalb der Linksammlung und Bilder von anderen Hosts als Wikimedia.
+- **Webkurztext:** Feld `web` (`summary` 60 bis 120 Wörter, `sources` 1 bis 5 mit `title` und `url`) neben `wikipedia`; die Personenseite zeigt nur eine Beschreibung und die Links beider Quellen. Neuer Vorschlag nur bei neuen Links. `photographers:web -- check` verwirft falsche Wortzahl, wörtliche Folgen von acht Wörtern aus Textauszügen oder Snapshots, Quellen außerhalb der Linksammlung und Bilder von anderen Hosts als Wikimedia.
 - **Übernahme:** Nur mit `"approved": true`; vorhandenes `web` nur mit `--force`; bei ungültigem Ergebnis bleibt `data/photographers.json` unverändert.
 - **Bericht:** `PHOTOGRAPHERS.md` enthält den Abschnitt „Websuche“.

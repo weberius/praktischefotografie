@@ -192,8 +192,8 @@ Ermöglicht die Quervernetzung: "Welche Ausstellungen mit Beteiligung von Barbar
     "website": "https://www.martinparr.com",
     "occupation": "Fotograf",
     "life": { "from": 1952, "to": null },
-    "wikipedia": { "summary": "…40 bis 90 Wörter in eigener Formulierung…", "sources": [{ "lang": "de", "url": "https://de.wikipedia.org/wiki/Martin_Parr" }] },
-    "web": { "summary": "…40 bis 90 Wörter aus Webquellen in eigener Formulierung…", "sources": [{ "title": "Titel der Seite", "url": "https://example.org/parr" }] },
+    "wikipedia": { "summary": "…60 bis 120 Wörter in eigener Formulierung…", "sources": [{ "lang": "de", "url": "https://de.wikipedia.org/wiki/Martin_Parr" }] },
+    "web": { "summary": "…60 bis 120 Wörter aus Webquellen in eigener Formulierung…", "sources": [{ "title": "Titel der Seite", "url": "https://example.org/parr" }] },
     "portrait": { "file": "martin-parr.jpg", "width": 400, "height": 300, "source": "https://commons.wikimedia.org/wiki/File:….jpg", "credit": "Urheber", "license": "CC BY-SA 4.0" }
   }
 ]
@@ -295,7 +295,7 @@ Standardmäßig recherchiert der Skill zusätzlich über eine Suchmaschine (mit 
 
 Hinweise:
 * Die Wikipedia wird in allen Sprachen berücksichtigt (alle Sprachversionen als Links, Anfangstexte bis zu zehn Sprachen). Die Websuche umfasst höchstens sechs Anfragen in sechs Sprachen mit je zehn Treffern; Trefferseiten werden höflich abgerufen (höchstens zehn je Person). Alle Links stehen in `updates/photographers-links.json`. Mit `--no-web` entsteht keine Suchanfrage.
-* Die gefundenen Links sammelt `updates/photographers-links.json` über alle Läufe. Ein neuer Kurztext („Aus dem Web“, 40 bis 90 Wörter, 1 bis 5 Quellen) wird nur vorgeschlagen, wenn neue Links dazugekommen sind. Er steht neben der Wikipedia-Zusammenfassung und ersetzt sie nicht.
+* Die gefundenen Links sammelt `updates/photographers-links.json` über alle Läufe. Ein neuer Kurztext (60 bis 120 Wörter, 1 bis 5 Quellen) wird nur vorgeschlagen, wenn neue Links dazugekommen sind. Die Personenseite zeigt nur eine Beschreibung (den Webkurztext, sonst die Wikipedia-Zusammenfassung) und darunter die Links beider Quellen. Bestehende Texte mit 40 bis 59 Wörtern bleiben gültig, bis sie neu recherchiert werden.
 * Kurztexte sind in eigenen Worten und nur aus den Quellen geschrieben, wörtliche Übernahmen ab acht Wörtern werden verworfen. Bilder aus dem Web werden nie geladen.
 * **Prüfe bei der Freigabe**, ob es wirklich die richtige Person ist (Namensgleichheit) und ob der Text sachlich stimmt; das kann kein Skript.
 * Vorhandene Profile oder Kurztexte werden nur mit `--force` und ausdrücklicher Freigabe ersetzt. Bei ungültigen Daten bleibt alles unverändert.

@@ -45,49 +45,39 @@ describe('PhotographerDetailPage', () => {
     expect(caption.querySelector('a[href="https://creativecommons.org/licenses/by-sa/4.0/"]')).not.toBeNull();
   });
 
-  it('Szenario: Wikipedia-Zusammenfassung mit Quellen (PHO-UB-8)', async () => {
+  it('Szenario: Eine Beschreibung und Links aus Wikipedia (PHO-UB-8)', async () => {
     const el = await open('/photographers/martin-parr');
-    const section = el.querySelector('section.wiki-section') as HTMLElement;
-    expect(section.querySelector('h2')?.textContent).toBe('Aus der Wikipedia');
-    expect(section.textContent).toContain('farbigen, ironischen Alltagsbilder');
-    expect(section.textContent).toContain('Zusammenfassung auf Basis der Wikipedia (CC BY-SA)');
-    const links = Array.from(section.querySelectorAll('ul.wiki-sources a'));
+    expect(el.querySelectorAll('section.wiki-section h2')[0].textContent).toBe('Über Martin Parr');
+    expect(el.querySelectorAll('p.lead').length).toBe(1);
+    expect(el.querySelector('p.lead')?.textContent).toContain('farbigen, ironischen Alltagsbilder');
+    const links = Array.from(el.querySelectorAll('ul.wiki-sources a'));
     expect(links.map((a) => a.getAttribute('href'))).toEqual(['https://de.wikipedia.org/wiki/Martin_Parr', 'https://en.wikipedia.org/wiki/Martin_Parr']);
     expect(links[0].textContent).toContain('Wikipedia (Deutsch)');
     expect(links[1].textContent).toContain('Wikipedia (Englisch)');
     expect(links.every((a) => a.getAttribute('rel')?.includes('noopener'))).toBeTrue();
+    expect(el.textContent).not.toContain('Aus der Wikipedia');
+    expect(el.textContent).not.toContain('Aus dem Web');
   });
 
-  it('Szenario: Webkurztext mit Quellen (PHO-UB-11)', async () => {
+  it('Szenario: Eine Beschreibung, Links aus Wikipedia und Web (PHO-UB-11)', async () => {
     const el = await open('/photographers/richard-kalvar');
-    const section = el.querySelector('section.web-section') as HTMLElement;
-    expect(section.querySelector('h2')?.textContent).toBe('Aus dem Web');
-    expect(section.textContent).toContain('Straßenfotografie');
-    expect(section.textContent).toContain('frei zugänglichen Webseiten');
-    const links = Array.from(section.querySelectorAll('ul.web-sources a'));
-    expect(links.map((a) => a.getAttribute('href'))).toEqual(['https://example.org/a', 'https://www.example.com/b']);
-    expect(links[0].textContent).toContain('Porträt von Richard Kalvar');
-    expect(section.querySelectorAll('li')[0].textContent).toContain('(example.org)');
-    expect(section.querySelectorAll('li')[1].textContent).toContain('(www.example.com)');
+    expect(el.querySelectorAll('p.lead').length).toBe(1);
+    expect(el.querySelector('p.lead')?.textContent).toContain('Straßenfotografie');
+    const links = Array.from(el.querySelectorAll('ul.wiki-sources a'));
+    const hrefs = links.map((a) => a.getAttribute('href'));
+    expect(hrefs).toEqual(['https://en.wikipedia.org/wiki/Richard_Kalvar', 'https://example.org/a', 'https://www.example.com/b']);
+    expect(el.textContent).not.toContain('Wikipedia-Text, der neben');
+    const items = Array.from(el.querySelectorAll('ul.wiki-sources li'));
+    expect(items[items.length - 2].textContent).toContain('Porträt von Richard Kalvar');
+    expect(items[items.length - 2].textContent).toContain('(example.org)');
+    expect(items[items.length - 1].textContent).toContain('(www.example.com)');
     expect(links.every((a) => a.getAttribute('target') === '_blank' && a.getAttribute('rel') === 'noopener noreferrer')).toBeTrue();
   });
 
-  it('Szenario: Person ohne Webkurztext (PHO-ST-3) – Wikipedia ja, „Aus dem Web“ nein', async () => {
-    const el = await open('/photographers/martin-parr');
-    expect(el.querySelector('section.wiki-section:not(.web-section)')).not.toBeNull();
-    expect(el.querySelector('section.web-section')).toBeNull();
-    expect(el.textContent).not.toContain('Aus dem Web');
-  });
-
-  it('Szenario: Person ohne Portrait und Wikipedia (PHO-ST-3) – weder Bild noch Bildnachweis noch Abschnitt', async () => {
+  it('Szenario: Person ohne Beschreibung (PHO-ST-3) – weder Beschreibung noch Links', async () => {
     const el = await open('/photographers/elliott-erwitt');
-    expect(el.querySelector('figure')).toBeNull();
-    expect(el.querySelector('img')).toBeNull();
-    expect(el.textContent).not.toContain('Wikimedia Commons');
     expect(el.querySelector('section.wiki-section')).toBeNull();
-    expect(el.textContent).not.toContain('Aus der Wikipedia');
-    expect(el.textContent).not.toContain('Aus dem Web');
-    expect(el.querySelector('.profile-head .meta')?.textContent?.replace(/\s+/g, ' ').trim()).toBe('Fotograf, 1928–2023');
+    expect(el.textContent).not.toContain('Weiterführende Links');
   });
 
   it('Szenario: Portrait nicht ladbar (PHO-UN-1) – Seite bleibt, ohne Bild und ohne Bildnachweis', async () => {

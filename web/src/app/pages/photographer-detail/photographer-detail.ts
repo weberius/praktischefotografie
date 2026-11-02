@@ -10,7 +10,7 @@ import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
 import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
 
-/** Personenseite nach dem Vorbild der Komponist:innen-Seite von klangland: Stammdaten, Portrait mit Bildnachweis, Wikipedia, Web, Ausstellungen (PHO-UB-3, PHO-UB-6 bis PHO-UB-9, PHO-UB-11, PHO-ST-1, PHO-ST-3, PHO-UN-1). */
+/** Personenseite nach dem Vorbild der Komponist:innen-Seite von klangland: Stammdaten, Portrait mit Bildnachweis, eine Beschreibung mit Links aus Wikipedia und Web, Ausstellungen (PHO-UB-3, PHO-UB-6 bis PHO-UB-9, PHO-UB-11, PHO-ST-1, PHO-ST-3, PHO-UN-1). */
 @Component({
   selector: 'app-photographer-detail-page',
   imports: [RouterLink, DataGate, NotFound, ExhibitionBadges],
@@ -33,6 +33,13 @@ export class PhotographerDetailPage {
       return url;
     }
   };
+  protected readonly description = computed(() => this.person()?.web?.summary ?? this.person()?.wikipedia?.summary ?? null);
+  protected readonly links = computed(() => {
+    const person = this.person();
+    const wikipedia = (person?.wikipedia?.sources ?? []).map((s) => ({ url: s.url, label: `Wikipedia (${languageLabel(s.lang)})`, lang: s.lang, host: null as string | null }));
+    const web = (person?.web?.sources ?? []).map((s) => ({ url: s.url, label: s.title, lang: null as string | null, host: this.hostOf(s.url) }));
+    return [...wikipedia, ...web];
+  });
   protected readonly portraitFailed = signal<string | null>(null);
 
   protected readonly person = computed(() => this.data.photographerById().get(this.id()));

@@ -42,30 +42,21 @@
         </div>
       </div>
 
-      @if (person.wikipedia; as wiki) {
-        <section class="wiki-section" aria-labelledby="wiki-heading">
-          <h2 id="wiki-heading">Aus der Wikipedia</h2>
-          <p class="lead">{{ wiki.summary }}</p>
-          <p class="wiki-attribution">Zusammenfassung auf Basis der Wikipedia (CC BY-SA). Zu den Artikeln:</p>
-          <ul class="wiki-sources">
-            @for (source of wiki.sources; track source.lang) {
-              <li>
-                <a [href]="source.url" target="_blank" rel="noopener" [attr.hreflang]="source.lang" [attr.lang]="source.lang">Wikipedia ({{ languageLabel(source.lang) }})<span class="visually-hidden"> – öffnet in neuem Tab</span></a>
-              </li>
-            }
-          </ul>
+      @if (description(); as text) {
+        <section class="wiki-section" aria-labelledby="about-heading">
+          <h2 id="about-heading">Über {{ person.name }}</h2>
+          <p class="lead">{{ text }}</p>
         </section>
       }
 
-      @if (person.web; as web) {
-        <section class="wiki-section web-section" aria-labelledby="web-heading">
-          <h2 id="web-heading">Aus dem Web</h2>
-          <p class="lead">{{ web.summary }}</p>
-          <p class="wiki-attribution">Zusammenfassung aus frei zugänglichen Webseiten. Die Quellen:</p>
-          <ul class="wiki-sources web-sources">
-            @for (source of web.sources; track source.url) {
+      @if (links().length) {
+        <section class="wiki-section" aria-labelledby="links-heading">
+          <h2 id="links-heading">Weiterführende Links</h2>
+          <p class="wiki-attribution">Die Beschreibung ist in eigenen Worten aus diesen Quellen geschrieben (Wikipedia-Inhalte: CC BY-SA).</p>
+          <ul class="wiki-sources">
+            @for (link of links(); track link.url) {
               <li>
-                <a [href]="source.url" target="_blank" rel="noopener noreferrer">{{ source.title }}<span class="visually-hidden"> – öffnet in neuem Tab</span></a> ({{ hostOf(source.url) }})
+                <a [href]="link.url" target="_blank" rel="noopener noreferrer" [attr.hreflang]="link.lang" [attr.lang]="link.lang">{{ link.label }}<span class="visually-hidden"> – öffnet in neuem Tab</span></a>@if (link.host) { ({{ link.host }}) }
               </li>
             }
           </ul>

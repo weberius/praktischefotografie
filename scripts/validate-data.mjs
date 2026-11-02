@@ -11,7 +11,10 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const DATASETS = ['venues', 'exhibitions', 'events', 'organizers', 'festivals', 'photographers', 'posts'];
 
 export const MAX_PORTRAIT_BYTES = 200 * 1024;
-export const SUMMARY_WORDS = { min: 40, max: 90 };
+/** Neue Beschreibungen (Prüfung der Vorschläge): 60 bis 120 Wörter. */
+export const SUMMARY_WORDS = { min: 60, max: 120 };
+/** Bestand: Texte aus der Zeit vor der Erhöhung bleiben mit mindestens 40 Wörtern gültig, bis sie neu recherchiert sind. */
+export const STORED_SUMMARY_WORDS = { min: 40, max: SUMMARY_WORDS.max };
 export const wordCount = (text) => String(text ?? '').split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w)).length;
 const norm = (text) => String(text ?? '').replace(/\s+/g, ' ').trim().toLowerCase();
 
@@ -112,7 +115,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), schemaDir = join(RO
     const summary = person.wikipedia?.summary;
     if (summary !== undefined) {
       const words = wordCount(summary);
-      if (words < SUMMARY_WORDS.min || words > SUMMARY_WORDS.max) errors.push(`photographers.json: ${person.id} wikipedia/summary – ${words} Wörter, erlaubt sind ${SUMMARY_WORDS.min} bis ${SUMMARY_WORDS.max}`);
+      if (words < STORED_SUMMARY_WORDS.min || words > STORED_SUMMARY_WORDS.max) errors.push(`photographers.json: ${person.id} wikipedia/summary – ${words} Wörter, erlaubt sind ${STORED_SUMMARY_WORDS.min} bis ${STORED_SUMMARY_WORDS.max}`);
       for (const s of person.wikipedia.sources ?? []) {
         let host = '';
         try { host = new URL(s.url).hostname; } catch { /* Schema meldet die ungültige URL */ }
@@ -122,7 +125,7 @@ export function validateData({ dataDir = join(ROOT, 'data'), schemaDir = join(RO
     const webSummary = person.web?.summary;
     if (webSummary !== undefined) {
       const words = wordCount(webSummary);
-      if (words < SUMMARY_WORDS.min || words > SUMMARY_WORDS.max) errors.push(`photographers.json: ${person.id} web/summary – ${words} Wörter, erlaubt sind ${SUMMARY_WORDS.min} bis ${SUMMARY_WORDS.max}`);
+      if (words < STORED_SUMMARY_WORDS.min || words > STORED_SUMMARY_WORDS.max) errors.push(`photographers.json: ${person.id} web/summary – ${words} Wörter, erlaubt sind ${STORED_SUMMARY_WORDS.min} bis ${STORED_SUMMARY_WORDS.max}`);
     }
     const portrait = person.portrait;
     if (portrait) {

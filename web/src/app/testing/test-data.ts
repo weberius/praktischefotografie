@@ -60,6 +60,7 @@ export const TEST_DATASET: Dataset = {
     {
       id: 'richard-kalvar',
       name: 'Richard Kalvar',
+      wikipedia: { summary: 'Wikipedia-Text, der neben dem Webtext nicht angezeigt wird.', sources: [{ lang: 'en', url: 'https://en.wikipedia.org/wiki/Richard_Kalvar' }] },
       web: {
         summary: 'Richard Kalvar ist ein Fotograf, der vor allem für seine Straßenfotografie bekannt ist und Mitglied einer Fotoagentur war.',
         sources: [

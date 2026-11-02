@@ -39,8 +39,8 @@ test('Szenario: Wikipedia-Zusammenfassung mit Quellen (PRF-UB-2)', () => {
   const summary = (n) => withPerson({ wikipedia: { summary: words(n), sources: [{ lang: 'de', url: 'https://de.wikipedia.org/wiki/X' }] } });
   assert.match(validate(summary(39)).errors.join('\n'), /wikipedia\/summary – 39 Wörter/);
   assert.deepEqual(validate(summary(40)).errors, []);
-  assert.deepEqual(validate(summary(90)).errors, []);
-  assert.match(validate(summary(91)).errors.join('\n'), /wikipedia\/summary – 91 Wörter/);
+  assert.deepEqual(validate(summary(120)).errors, []);
+  assert.match(validate(summary(121)).errors.join('\n'), /wikipedia\/summary – 121 Wörter/);
   const wrong = withPerson({ wikipedia: { summary: words(50), sources: [{ lang: 'en', url: 'https://de.wikipedia.org/wiki/X' }] } });
   assert.match(validate(wrong).errors.join('\n'), /gehört nicht zu en\.wikipedia\.org/);
   const none = withPerson({ wikipedia: { summary: words(50), sources: [] } });
@@ -104,7 +104,7 @@ test('Szenario: Portraits im Build (PRF-UB-5)', () => {
 
 const bad = {
   'Zusammenfassung zu kurz': () => withPerson({ wikipedia: { summary: words(10), sources: [{ lang: 'de', url: 'https://de.wikipedia.org/x' }] } }),
-  'Zusammenfassung zu lang': () => withPerson({ wikipedia: { summary: words(120), sources: [{ lang: 'de', url: 'https://de.wikipedia.org/x' }] } }),
+  'Zusammenfassung zu lang': () => withPerson({ wikipedia: { summary: words(121), sources: [{ lang: 'de', url: 'https://de.wikipedia.org/x' }] } }),
   'Quelle ohne Sprache': () => withPerson({ wikipedia: { summary: words(50), sources: [{ url: 'https://de.wikipedia.org/x' }] } }),
   'Portrait ohne Urheber': () => withPerson({ portrait: { ...profile().portrait, credit: '' } }),
   'Portrait ohne Lizenz': () => withPerson({ portrait: { ...profile().portrait, license: undefined } }),
@@ -143,7 +143,7 @@ const web = (summaryWords, sources = [webSource(1), webSource(2)]) => ({ web: { 
 test('Szenario: Webkurztext mit Quellen (PRF-UB-6)', () => {
   assert.deepEqual(validate(withPerson(web(60))).errors, []);
   assert.deepEqual(validate(withPerson(web(40, [webSource(1)]))).errors, []);
-  assert.deepEqual(validate(withPerson(web(90, [1, 2, 3, 4, 5].map(webSource)))).errors, []);
+  assert.deepEqual(validate(withPerson(web(120, [1, 2, 3, 4, 5].map(webSource)))).errors, []);
 });
 
 test('Szenario: Ungültiger Webkurztext (PRF-UN-4)', () => {
@@ -151,7 +151,7 @@ test('Szenario: Ungültiger Webkurztext (PRF-UN-4)', () => {
     'ohne Quelle': web(60, []),
     'elf Quellen': web(60, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(webSource)),
     '39 Wörter': web(39),
-    '91 Wörter': web(91),
+    '121 Wörter': web(121),
     'ftp-Quelle': web(60, [{ title: 'FTP', url: 'ftp://example.org/a' }]),
   };
   for (const [name, over] of Object.entries(bad)) assert.match(validate(withPerson(over)).errors.join('\n'), /web/, name);

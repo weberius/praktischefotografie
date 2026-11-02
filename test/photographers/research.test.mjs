@@ -313,20 +313,20 @@ const approve = (root, ids) => {
 test('Szenario: Zusammenfassung wird geprüft (RSF-UB-5, Q-DATA-8)', async () => {
   const verbatim = EXTRACT.split(' ').slice(0, 8).join(' ');
   const { w, root } = await prepared([
-    { ...person, id: 'august-sander', summary: summaryOf(39) },
-    { ...person, summary: summaryOf(40) },
-    { ...person, summary: summaryOf(90) },
-    { ...person, summary: summaryOf(91) },
-    { ...person, summary: `${verbatim} ${summaryOf(45)}` },
-    { ...person, summary: summaryOf(50), sources: ['sv'] },
-    { ...person, summary: summaryOf(50), occupation: '' },
-    { ...person, summary: summaryOf(50), occupation: 'x'.repeat(61) },
+    { ...person, id: 'august-sander', summary: summaryOf(59) },
+    { ...person, summary: summaryOf(60) },
+    { ...person, summary: summaryOf(120) },
+    { ...person, summary: summaryOf(121) },
+    { ...person, summary: `${verbatim} ${summaryOf(52)}` },
+    { ...person, summary: summaryOf(60), sources: ['sv'] },
+    { ...person, summary: summaryOf(60), occupation: '' },
+    { ...person, summary: summaryOf(60), occupation: 'x'.repeat(61) },
   ]);
   try {
     const checked = checkMain(argv(), root);
     const good = checked.proposals.map((p) => p.problems.length === 0);
     assert.deepEqual(good, [false, true, true, false, false, false, false, false]);
-    assert.match(checked.proposals[0].problems[0], /39 Wörter/);
+    assert.match(checked.proposals[0].problems[0], /59 Wörter/);
     assert.match(checked.proposals[4].problems.join(), /wörtliche Folge von 8 Wörtern/);
     assert.match(checked.proposals[5].problems.join(), /Quelle "sv" steht nicht/);
     assert.deepEqual(checked.proposals[1].result.wikipedia.sources.map((s) => s.lang), ['de', 'en']);

@@ -15,7 +15,7 @@ Ein Lauf umfasst **beides**: die Wikipedia in allen Sprachen (Ablauf unten) und 
 
 - **Änderungen an `data/` erst nach ausdrücklicher Freigabe durch den Menschen** (per `AskUserQuestion`). Vorher schreibst du nur unter `updates/`.
 - **Netzzugriff nur über `npm run photographers:fetch`.** Keine eigenen Abrufe (kein WebFetch, kein curl), keine Umgehung von Abständen oder Hosts.
-- **Eigene Formulierung.** Zusammenfassungen sind in deinen Worten geschrieben (Deutsch, **40 bis 90 Wörter**). Keine wörtliche Folge von acht oder mehr Wörtern aus den Anfangstexten (die Prüfung verwirft sie).
+- **Eigene Formulierung.** Zusammenfassungen sind in deinen Worten geschrieben (Deutsch, **60 bis 120 Wörter**; 120 nur, wenn es viel zu berichten gibt). Keine wörtliche Folge von acht oder mehr Wörtern aus den Anfangstexten (die Prüfung verwirft sie).
 - **Nichts erfinden.** Du schreibst nur, was in den Anfangstexten der Artikel (`articles[].extract`) steht. Fehlt eine Angabe, lässt du sie weg. Übersetze aus den vorhandenen Sprachen, ohne Angaben zu ergänzen.
 - **Nur freie Bilder mit Nachweis.** Ein Portrait wird nur vorgeschlagen, wenn die Kandidatendatei es mit freier Lizenz, Urheber und Dateiseite enthält. Du lädst keine Bilder selbst.
 - **Mehrdeutige oder nicht gefundene Personen** bleiben unverändert; du rätst keine Treffer.
@@ -33,7 +33,7 @@ Ein Lauf umfasst **beides**: die Wikipedia in allen Sprachen (Ablauf unten) und 
    ] }
    ```
    - `occupation`: kurze Berufsbezeichnung auf Deutsch, so wie die Wikipedia die Person nennt (Kurzbeschreibung `description`, erster Satz), z. B. „Fotografin“ oder „Medienkünstler“; höchstens 60 Zeichen.
-   - `summary`: 40 bis 90 Wörter zu Person, Werk und Bedeutung, nur aus den Anfangstexten, eigene Worte.
+   - `summary`: 60 bis 120 Wörter zu Person, Werk und Bedeutung, nur aus den Anfangstexten, eigene Worte.
    - `sources`: die Sprachen der Artikel, aus denen du geschöpft hast (1 bis 10, nur aus `articles`).
    - `portrait`: `true`, wenn die Kandidatendatei ein Portrait enthält; sonst `false`.
    - Lebensdaten und Bildnachweis trägst du **nicht** ein; sie kommen aus der Kandidatendatei.
@@ -48,12 +48,12 @@ Kurz: bearbeitete Personen, Anzahl gefunden / nicht gefunden / mehrdeutig / Fehl
 
 ## Websuche
 
-Für **eine** Person: `--photographer <id>` (vorhandene Person) oder `--name "<Name>"` (auch unbekannte Person). Fehlt beides, brich mit einem Hinweis ab. Du recherchierst im Web, sammelst die Links in `updates/photographers-links.json` und schreibst einen Webkurztext (Feld `web`), der neben der Wikipedia-Zusammenfassung steht und sie nicht ersetzt. Schreibe ihn **erst, nachdem die Seiten abgerufen sind**; eine eigene Website der Person nutzt du bevorzugt.
+Für **eine** Person: `--photographer <id>` (vorhandene Person) oder `--name "<Name>"` (auch unbekannte Person). Fehlt beides, brich mit einem Hinweis ab. Du recherchierst im Web, sammelst die Links in `updates/photographers-links.json` und schreibst einen Webkurztext (Feld `web`), dessen Beschreibung auf der Personenseite die Wikipedia-Zusammenfassung ersetzt; die Links beider Quellen bleiben darunter erhalten. Schreibe ihn **erst, nachdem die Seiten abgerufen sind**; eine eigene Website der Person nutzt du bevorzugt.
 
 ### Zusätzliche Regeln
 
 - **Suche nur über dein Websuch-Werkzeug**, höchstens **sechs Suchanfragen** je Person in sechs Sprachen (`"<Name>" Fotograf`, `photographer`, `photographe`, `fotógrafo`, `fotografo`, `fotograaf`) und höchstens **zehn Treffer** je Anfrage. Seiten rufst du **nicht** selbst ab (kein WebFetch, kein curl), sondern nur über `npm run photographers:web -- pages`; dort gelten `robots.txt`, Abstand von mindestens 2 s je Website, Kennung im User-Agent, höchstens zehn Seiten je Person; Wikipedia-Seiten werden nicht über den Webabruf geladen.
-- **Kurztext in eigener Formulierung** (Deutsch, **40 bis 90 Wörter**), **nur** aus Textauszügen (`snippet`) und Snapshots (`.cache/snapshots/<person-id>/`). Du schreibst nichts hinzu, was dort nicht steht, und löst **widersprüchliche Angaben nicht auf, sondern lässt sie weg**. Keine wörtliche Folge von acht oder mehr Wörtern.
+- **Kurztext in eigener Formulierung** (Deutsch, **60 bis 120 Wörter**), **nur** aus Textauszügen (`snippet`) und Snapshots (`.cache/snapshots/<person-id>/`). Du schreibst nichts hinzu, was dort nicht steht, und löst **widersprüchliche Angaben nicht auf, sondern lässt sie weg**. Keine wörtliche Folge von acht oder mehr Wörtern.
 - **Quellen** (1 bis 10) sind Adressen aus der Linksammlung der Person.
 - **Keine Bilder aus dem Web.** Du lädst und verlinkst keine Bilder von Trefferseiten; Portraits kommen nur von Wikimedia Commons über `photographers:fetch`.
 - **Neuer Kurztext nur bei neuen Links.** Hat der Lauf keinen neuen Link ergeben (`newLinks` leer), schreibst du keinen Vorschlag für `web` und lässt den vorhandenen unverändert.

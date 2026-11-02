@@ -77,6 +77,14 @@ Funktionalität: Fotograf:innen
     Und je ein Link mit Titel und Host "example.org" bzw. "www.example.com"
     Und die Links öffnen ohne Referrer in einem neuen Kontext
 
+  # EARS: PHO-UB-12
+  Szenario: Eine Beschreibung mit Links aus Wikipedia und Web
+    Angenommen eine Person mit Wikipedia-Zusammenfassung mit Quellen in "en" und Webkurztext mit zwei Quellen
+    Wenn die Personenseite aufgerufen wird
+    Dann erscheint genau eine Beschreibung, und zwar der Webkurztext
+    Und darunter erscheinen unter "Weiterführende Links" der Link "Wikipedia (Englisch)" und die beiden Weblinks mit Titel und Host
+    Und es gibt keine Abschnitte "Aus der Wikipedia" und "Aus dem Web"
+
   # EARS: PHO-ST-3
   Szenario: Person ohne Webkurztext
     Angenommen eine Person mit Wikipedia-Zusammenfassung, aber ohne Webkurztext

@@ -204,37 +204,37 @@ test('Szenario: Neue Ergebnisse fließen in den Kurztext, ohne neue Links kein n
   writeSearch(root, [search('wendy-red-star', [{ title: 'Porträt', url: 'https://example.org/a', snippet }, { title: 'Interview', url: 'https://example.org/b', snippet: '' }, ...Array.from({ length: 9 }, (_, i) => ({ title: `X${i}`, url: `https://x.org/${i}`, snippet: '' }))], 1)]);
   await run(root, 'links');
   const ok = (n) => ({ summary: words('eigen', n), sources: ['https://example.org/a'] });
-  const verbatim = { summary: `${words('eigen', 40)} ${words('quelle', 8)}`, sources: ['https://example.org/a'] };
+  const verbatim = { summary: `${words('eigen', 52)} ${words('quelle', 8)}`, sources: ['https://example.org/a'] };
   const cases = {
-    'zu kurz': { web: ok(39) },
-    '40': { web: ok(40) },
-    '90': { web: ok(90) },
-    '91': { web: ok(91) },
+    'zu kurz': { web: ok(59) },
+    '60': { web: ok(60) },
+    '120': { web: ok(120) },
+    '121': { web: ok(121) },
     wörtlich: { web: verbatim },
-    'Quelle fremd': { web: { ...ok(50), sources: ['https://example.org/fremd'] } },
-    '10 Quellen': { web: { ...ok(50), sources: ['https://example.org/a', 'https://example.org/b', ...Array.from({ length: 8 }, (_, i) => `https://x.org/${i}`)] } },
-    'elf Quellen': { web: { ...ok(50), sources: ['https://example.org/a', 'https://example.org/b', ...Array.from({ length: 9 }, (_, i) => `https://x.org/${i}`)] } },
-    'Bild fremd': { web: ok(50), image: 'https://example.org/foto.jpg' },
-    'Bild Commons': { web: ok(50), image: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Foto.jpg' },
+    'Quelle fremd': { web: { ...ok(60), sources: ['https://example.org/fremd'] } },
+    '10 Quellen': { web: { ...ok(60), sources: ['https://example.org/a', 'https://example.org/b', ...Array.from({ length: 8 }, (_, i) => `https://x.org/${i}`)] } },
+    'elf Quellen': { web: { ...ok(60), sources: ['https://example.org/a', 'https://example.org/b', ...Array.from({ length: 9 }, (_, i) => `https://x.org/${i}`)] } },
+    'Bild fremd': { web: ok(60), image: 'https://example.org/foto.jpg' },
+    'Bild Commons': { web: ok(60), image: 'https://upload.wikimedia.org/wikipedia/commons/a/ab/Foto.jpg' },
     leer: {},
   };
   proposals(root, Object.entries(cases).map(([k, v]) => ({ id: 'wendy-red-star', label: k, ...v })));
   await run(root, 'check');
   const verdict = Object.fromEntries(readProposals(root).map((p) => [p.label, p.problems]));
-  for (const k of ['40', '90', '10 Quellen', 'Bild Commons']) assert.deepEqual(verdict[k], [], k);
-  for (const k of ['zu kurz', '91', 'wörtlich', 'Quelle fremd', 'elf Quellen', 'Bild fremd', 'leer']) assert.ok(verdict[k].length > 0, k);
+  for (const k of ['60', '120', '10 Quellen', 'Bild Commons']) assert.deepEqual(verdict[k], [], k);
+  for (const k of ['zu kurz', '121', 'wörtlich', 'Quelle fremd', 'elf Quellen', 'Bild fremd', 'leer']) assert.ok(verdict[k].length > 0, k);
   assert.match(verdict['Bild fremd'].join(), /Wikimedia Commons/);
   assert.match(verdict['wörtlich'].join(), /wörtliche Folge/);
-  assert.equal(readProposals(root).find((p) => p.label === '40').result.web.sources[0].title, 'Porträt');
+  assert.equal(readProposals(root).find((p) => p.label === '60').result.web.sources[0].title, 'Porträt');
   // zweiter Lauf, alle Treffer bekannt: kein Vorschlag für den Webkurztext
-  proposals(root, [{ id: 'wendy-red-star', web: ok(50), approved: true }]);
+  proposals(root, [{ id: 'wendy-red-star', web: ok(60), approved: true }]);
   await run(root, 'apply');
   assert.equal(people(root)[0].web.sources[0].url, 'https://example.org/a');
   await run(root, 'plan', '--web', '--photographer', 'wendy-red-star', '--max-age', '0');
   writeSearch(root, [search('wendy-red-star', [{ title: 'Porträt', url: 'https://example.org/a/' }], 1)]);
   await run(root, 'links');
   assert.deepEqual(readJson(root, 'updates', DATE, 'photographers-web.json').persons[0].newLinks, []);
-  proposals(root, [{ id: 'wendy-red-star', web: ok(50) }]);
+  proposals(root, [{ id: 'wendy-red-star', web: ok(60) }]);
   await run(root, 'check');
   assert.match(readProposals(root)[0].problems.join(), /Kein neuer Link/);
 });
@@ -244,7 +244,7 @@ test('Szenario: Übernahme nach Freigabe (WSP-UB-6)', async () => {
   await run(root, 'plan', '--web', '--photographer', 'wendy-red-star');
   writeSearch(root, [search('wendy-red-star', hits(2), 1)]);
   await run(root, 'links');
-  const web = { summary: words('neu', 50), sources: ['https://example.org/p0'] };
+  const web = { summary: words('neu', 60), sources: ['https://example.org/p0'] };
   proposals(root, [{ id: 'wendy-red-star', web, approved: false }]);
   await run(root, 'check');
   const before = readFileSync(join(root, 'data', 'photographers.json'), 'utf8');
@@ -272,7 +272,7 @@ test('Szenario: Bericht der Websuche (WSP-EV-4)', async () => {
   await run(root, 'plan', '--web', '--photographer', 'wendy-red-star');
   writeSearch(root, [search('wendy-red-star', hits(2), 2)], 'Beispielsuche');
   await run(root, 'links');
-  proposals(root, [{ id: 'wendy-red-star', web: { summary: words('eigen', 50), sources: ['https://example.org/p0'] }, approved: true }]);
+  proposals(root, [{ id: 'wendy-red-star', web: { summary: words('eigen', 60), sources: ['https://example.org/p0'] }, approved: true }]);
   await run(root, 'check');
   await run(root, 'apply');
   const report = readFileSync(join(root, 'updates', DATE, 'PHOTOGRAPHERS.md'), 'utf8');

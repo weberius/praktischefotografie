@@ -26,4 +26,8 @@ Begriffe: „heute“ ist das aktuelle Datum der Anwendung (in Tests ein fester 
 | PHO-UB-11 | Die Webanwendung soll auf der Personenseite, wenn die Person einen Webkurztext hat, unter „Aus dem Web“ die Zusammenfassung, den Hinweis, dass sie aus frei zugänglichen Webseiten zusammengefasst wurde, und je Quelle einen Link mit Titel und Host zeigen; Links sollen sich ohne Referrer in neuem Kontext öffnen. | `web/fotografinnen.feature` · „Webkurztext mit Quellen“ | Q-USE-5, Q-SEC-2 | ADR-019 |
 | PHO-ST-3 | Solange eine Person kein Portrait hat, soll die Webanwendung weder Bild noch Bildnachweis zeigen; solange sie keine Wikipedia-Zusammenfassung hat, soll sie den Abschnitt „Aus der Wikipedia“ nicht zeigen; solange sie keinen Webkurztext hat, soll sie den Abschnitt „Aus dem Web“ nicht zeigen. | `web/fotografinnen.feature` · „Person ohne Portrait und Wikipedia“, „Person ohne Webkurztext“ | – | ADR-002 |
 
+| PHO-UB-12 | Die Webanwendung soll auf der Personenseite genau eine Beschreibung zeigen (den Webkurztext, sonst die Wikipedia-Zusammenfassung) und darunter unter „Weiterführende Links“ alle Quellen aus Wikipedia (Link mit Sprachbezeichnung) und Web (Link mit Titel und Host); Links sollen sich ohne Referrer in neuem Kontext öffnen. | `web/fotografinnen.feature` · „Eine Beschreibung mit Links aus Wikipedia und Web“ | Q-USE-5, Q-SEC-2 | ADR-011, ADR-019 |
+
+**Supersede 2026-11-02:** PHO-UB-12 ersetzt PHO-UB-8 und PHO-UB-11 (kein getrennter Abschnitt „Aus der Wikipedia“ bzw. „Aus dem Web“ mehr) und ergänzt PHO-ST-3: ohne Beschreibung entfallen Beschreibung und Linkliste.
+
 **Supersede 2026-10-31:** PHO-ST-3 ersetzt PHO-ST-2 (Abschnitt „Aus dem Web“ ergänzt). PHO-UB-11 ergänzt PHO-UB-8; der Abschnitt „Aus der Wikipedia“ bleibt unverändert.

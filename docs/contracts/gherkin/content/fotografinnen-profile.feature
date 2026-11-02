@@ -9,10 +9,10 @@ Funktionalität: Profile der Fotograf:innen
 
   # EARS: PRF-UB-2
   Szenario: Wikipedia-Zusammenfassung mit Quellen
-    Angenommen eine Zusammenfassung mit 39 Wörtern
+    Angenommen eine Zusammenfassung mit 39 Wörtern oder mit 121 Wörtern
     Wenn die Daten validiert werden
     Dann meldet die Validierung einen Fehler für "wikipedia.summary"
-    Aber mit 40 und mit 90 Wörtern besteht die Validierung
+    Aber mit 40 bis 120 Wörtern besteht die Validierung
     Und eine Quelle mit der Adresse "https://de.wikipedia.org/wiki/X" und dem Sprachcode "en" wird abgelehnt
 
   # EARS: PRF-UB-3
@@ -78,6 +78,6 @@ Funktionalität: Profile der Fotograf:innen
 
   # EARS: PRF-UN-4
   Szenario: Ungültiger Webkurztext
-    Angenommen Personen mit "web" ohne Quelle, mit sechs Quellen, mit 39 Wörtern, mit 91 Wörtern und mit einer Quelle "ftp://example.org/a"
+    Angenommen Personen mit "web" ohne Quelle, mit sechs Quellen, mit 39 Wörtern, mit 121 Wörtern und mit einer Quelle "ftp://example.org/a"
     Wenn die Daten validiert werden
     Dann meldet die Validierung für jede dieser Personen einen Fehler für "web"
