@@ -8,6 +8,7 @@ import { buildEventIcs, icsFileName } from '../../core/ics';
 import { EVENT_TYPE_LABEL } from '../../core/models';
 import { PageMeta } from '../../core/page-meta';
 import { BackLink } from '../../shared/back-link/back-link';
+import { FavoriteToggle } from '../../shared/favorite-toggle/favorite-toggle';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
 
@@ -17,7 +18,7 @@ const BLOB_URL_LIFETIME_MS = 10_000;
 /** Eventdetail `/events/:id`. */
 @Component({
   selector: 'app-event-detail-page',
-  imports: [BackLink, RouterLink, DataGate, NotFound],
+  imports: [BackLink, FavoriteToggle, RouterLink, DataGate, NotFound],
   templateUrl: './event-detail.html',
   styleUrl: './event-detail.css',
 })

@@ -8,11 +8,12 @@ import { PageMeta } from '../../core/page-meta';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
 import { ExhibitionBadges, SecondBadge } from '../../shared/exhibition-badges/exhibition-badges';
+import { FavoriteToggle } from '../../shared/favorite-toggle/favorite-toggle';
 
 /** Kalender und Agenda: `/calendar` (ab heute) und `/calendar/:year/:month` (Monatsansicht). */
 @Component({
   selector: 'app-calendar-page',
-  imports: [RouterLink, DataGate, NotFound, ExhibitionBadges],
+  imports: [RouterLink, DataGate, NotFound, ExhibitionBadges, FavoriteToggle],
   templateUrl: './calendar.html',
   styleUrl: './calendar.css',
 })

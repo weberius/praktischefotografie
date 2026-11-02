@@ -1,21 +1,26 @@
-import { Component, computed, inject, input } from '@angular/core';
+import { Component, computed, inject, input, signal } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { Clock, formatRange } from '../../core/clock';
 import { DataService } from '../../core/data.service';
 import { isOver } from '../../core/exhibition-status';
 import { EVENT_TYPE_LABEL, EventType } from '../../core/models';
 import { PageMeta } from '../../core/page-meta';
+import { Favorites } from '../../core/favorites';
 import { DataGate } from '../../shared/data-gate/data-gate';
+import { FavoriteToggle } from '../../shared/favorite-toggle/favorite-toggle';
 
-/** Eventliste `/events`: nach Beginn aufsteigend, filterbar nach Typ (Query-Parameter `type`). */
+/** Eventliste `/events`: nach Beginn aufsteigend, filterbar nach Typ (Query-Parameter `type`) und nach Favoriten (FAV-UB-4). */
 @Component({
   selector: 'app-event-list-page',
-  imports: [RouterLink, DataGate],
+  imports: [RouterLink, DataGate, FavoriteToggle],
   templateUrl: './event-list.html',
 })
 export class EventListPage {
   private readonly data = inject(DataService);
   private readonly router = inject(Router);
+  private readonly favorites = inject(Favorites);
+
+  protected readonly onlyFavorites = signal(false);
 
   readonly type = input<string>();
 
@@ -34,9 +39,10 @@ export class EventListPage {
   protected readonly items = computed(() => {
     const type = this.selectedType();
     const venues = this.data.venueById();
+    const onlyFavorites = this.onlyFavorites();
     return this.data
       .events()
-      .filter((e) => !type || e.eventType === type)
+      .filter((e) => (!type || e.eventType === type) && (!onlyFavorites || this.favorites.isFavorite(e.id)))
       .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.endDate.localeCompare(b.endDate) || a.title.localeCompare(b.title, 'de'))
       .map((e) => ({ event: e, venue: venues.get(e.venueId)?.name ?? e.city }));
   });
