@@ -1,4 +1,3 @@
-.back-link { display: inline-block; margin-bottom: 0.5rem; }
 .profile-head h1 { margin-bottom: 0.25rem; }
 .profile-grid { display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 18rem) 1fr; align-items: start; margin: 1rem 0; }
 .profile-grid:not(:has(.portrait-figure)) { grid-template-columns: 1fr; }

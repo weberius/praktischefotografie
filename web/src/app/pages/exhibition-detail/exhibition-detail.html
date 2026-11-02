@@ -1,5 +1,6 @@
 <app-data-gate>
   @if (exhibition(); as exhibition) {
+    <app-back-link kind="exhibitions" />
     <h1>{{ exhibition.title }}</h1>
     <app-exhibition-badges [kind]="kind()" [second]="second()" />
     <p class="meta">{{ formatRange(exhibition.startDate, exhibition.endDate) }}</p>

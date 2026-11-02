@@ -7,6 +7,7 @@ import { DataService } from '../../core/data.service';
 import { exhibitionBadgeData } from '../../core/exhibition-kind';
 import { exhibitionStatus } from '../../core/exhibition-status';
 import { PageMeta } from '../../core/page-meta';
+import { BackLink } from '../../shared/back-link/back-link';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
 import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
@@ -14,7 +15,7 @@ import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badg
 /** Festival mit Stammdaten, Veranstalter und allen zugeordneten Ausstellungen (FST-UB-2 bis FST-UB-4, FST-ST-2). */
 @Component({
   selector: 'app-festival-detail-page',
-  imports: [DataGate, NotFound, RouterLink, ExhibitionBadges],
+  imports: [BackLink, DataGate, NotFound, RouterLink, ExhibitionBadges],
   templateUrl: './festival-detail.html',
 })
 export class FestivalDetailPage {

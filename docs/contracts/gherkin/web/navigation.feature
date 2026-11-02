@@ -58,3 +58,50 @@ Funktionalität: Navigation und Seitenrahmen
   Szenario: Datenschutzseite nennt Kartenabruf
     Angenommen die Seite "/datenschutz"
     Dann nennt sie den Abruf von Kartenkacheln bei OpenStreetMap
+
+  # EARS: NAV-UB-9
+  Szenariogrundriss: Zurück-Link auf jeder Detailseite
+    Angenommen die Detailseite "<adresse>"
+    Wenn sie angezeigt wird
+    Dann steht oben ein Zurück-Link
+    Und sein zugänglicher Name nennt das Ziel
+    Und er ist per Tastatur erreichbar
+    Beispiele:
+    | adresse |
+    | /posts/beispiel-beitrag |
+    | /venues/zander-galerie-koeln |
+    | /photographers/august-sander |
+    | /exhibitions/beispiel-ausstellung |
+    | /events/between-2026-eroeffnung |
+    | /festivals/beispiel-festival |
+    | /organizers/beispiel-veranstalter |
+
+  # EARS: NAV-EV-2
+  Szenario: Zurück zur vorherigen Seite
+    Angenommen "/calendar" ist geöffnet
+    Und von dort wurde "/events/between-2026-eroeffnung" geöffnet
+    Wenn der Zurück-Link gewählt wird
+    Dann zeigt die Anwendung "/calendar"
+
+  # EARS: NAV-ST-1
+  Szenariogrundriss: Zurück bei Direktaufruf
+    Angenommen die Detailseite "<adresse>" wird direkt aufgerufen
+    Wenn der Zurück-Link gewählt wird
+    Dann zeigt die Anwendung "<ziel>"
+    Beispiele:
+    | adresse | ziel |
+    | /photographers/august-sander | /photographers |
+    | /events/between-2026-eroeffnung | /events |
+    | /posts/beispiel-beitrag | / |
+
+  # EARS: NAV-ST-1
+  Szenariogrundriss: Kein Zurück-Link auf Übersichtsseiten
+    Angenommen die Seite "<adresse>"
+    Dann gibt es keinen Zurück-Link
+    Beispiele:
+    | adresse |
+    | / |
+    | /calendar |
+    | /map |
+    | /photographers |
+    | /impressum |

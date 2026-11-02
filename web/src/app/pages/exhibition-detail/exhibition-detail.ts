@@ -6,6 +6,7 @@ import { exhibitionKind } from '../../core/exhibition-kind';
 import { STATUS_LABEL, exhibitionStatus } from '../../core/exhibition-status';
 import { PageMeta } from '../../core/page-meta';
 import { postsLinking } from '../../core/posts';
+import { BackLink } from '../../shared/back-link/back-link';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
 import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
@@ -13,7 +14,7 @@ import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badg
 /** Ausstellungsdetail mit Ort, Fotograf:innen, Veranstalter und Beiträgen (EXH-UB-9, EXH-OP-2, EXH-UB-5). */
 @Component({
   selector: 'app-exhibition-detail-page',
-  imports: [RouterLink, DataGate, NotFound, ExhibitionBadges],
+  imports: [BackLink, RouterLink, DataGate, NotFound, ExhibitionBadges],
   templateUrl: './exhibition-detail.html',
 })
 export class ExhibitionDetailPage {

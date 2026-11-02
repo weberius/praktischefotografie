@@ -6,6 +6,7 @@ import { exhibitionBadgeData } from '../../core/exhibition-kind';
 import { exhibitionStatus } from '../../core/exhibition-status';
 import { PageMeta } from '../../core/page-meta';
 import { languageLabel, lifeLabel, portraitUrl } from '../../core/photographer-profile';
+import { BackLink } from '../../shared/back-link/back-link';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
 import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
@@ -13,7 +14,7 @@ import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badg
 /** Personenseite nach dem Vorbild der Komponist:innen-Seite von klangland: Stammdaten, Portrait mit Bildnachweis, eine Beschreibung mit Links aus Wikipedia und Web, Ausstellungen (PHO-UB-3, PHO-UB-6 bis PHO-UB-9, PHO-UB-11, PHO-ST-1, PHO-ST-3, PHO-UN-1). */
 @Component({
   selector: 'app-photographer-detail-page',
-  imports: [RouterLink, DataGate, NotFound, ExhibitionBadges],
+  imports: [BackLink, RouterLink, DataGate, NotFound, ExhibitionBadges],
   templateUrl: './photographer-detail.html',
   styleUrl: './photographer-detail.css',
 })

@@ -20,3 +20,11 @@ Begriffe: „heute“ ist das aktuelle Datum der Anwendung (in Tests ein fester 
 **Supersede 2026-10-28:** NAV-UB-1 und NAV-UB-2 ergänzt um Festivals; ersetzt durch NAV-UB-5 und NAV-UB-6.
 
 **Supersede 2026-10-29:** NAV-UB-6 (Adressen) ersetzt durch NAV-UB-7 (zusätzlich `/haftungsausschluss` und `/quellen`); NAV-UB-5 (Navigation und rechtliche Links) ersetzt durch NAV-UB-8 (zusätzlich Haftungsausschluss und Quellen & Lizenzen; Darstellung siehe `seitenrahmen.md`).
+
+| ID | Anforderung | Gherkin | Quality | ADR |
+| --- | --- | --- | --- | --- |
+| NAV-UB-9 | Die Webanwendung soll oben auf jeder Detailseite (`/posts/:slug`, `/venues/:id`, `/photographers/:id`, `/exhibitions/:id`, `/events/:id`, `/festivals/:id`, `/organizers/:id`) einen Zurück-Link in gleicher Gestaltung und Platzierung zeigen, dessen zugänglicher Name das Ziel nennt. | `web/navigation.feature` · „Zurück-Link auf jeder Detailseite“ | Q-USE-16, Q-USE-3 | ADR-022 |
+| NAV-EV-2 | Wenn Besucher:innen den Zurück-Link wählen und die Detailseite aus einer anderen Seite der Webanwendung erreicht wurde, soll die Webanwendung diese vorherige Seite anzeigen. | `web/navigation.feature` · „Zurück zur vorherigen Seite“ | Q-USE-16 | ADR-022 |
+| NAV-ST-1 | Solange keine vorherige Seite der Webanwendung bekannt ist (Direktaufruf, Aufruf von außen), soll der Zurück-Link zur zugehörigen Übersicht führen (`/` für Beiträge, sonst `/venues`, `/photographers`, `/exhibitions`, `/events`, `/festivals`, `/organizers`); auf Übersichts-, Karten-, Kalender- und rechtlichen Seiten soll es keinen Zurück-Link geben. | `web/navigation.feature` · „Zurück bei Direktaufruf“, „Kein Zurück-Link auf Übersichtsseiten“ | Q-USE-16 | ADR-022 |
+
+**Ergänzung 2026-11-02:** NAV-UB-9, NAV-EV-2 und NAV-ST-1 ergänzen die Navigation um eine Zurücknavigation; bestehende NAV-Anforderungen bleiben gültig. Der bisher unspezifizierte feste Link „‹ Alle Fotograf:innen“ auf `/photographers/:id` wird von NAV-UB-9, NAV-EV-2 und NAV-ST-1 abgedeckt (Fallback-Ziel `/photographers`).

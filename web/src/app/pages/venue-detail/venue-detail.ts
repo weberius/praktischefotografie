@@ -7,6 +7,7 @@ import { exhibitionStatus } from '../../core/exhibition-status';
 import { VENUE_TYPE_INFO } from '../../core/models';
 import { PageMeta } from '../../core/page-meta';
 import { postsLinking } from '../../core/posts';
+import { BackLink } from '../../shared/back-link/back-link';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
 import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
@@ -14,7 +15,7 @@ import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badg
 /** Ortsdetail mit Stammdaten, Programm und verlinkten Beiträgen (VNU-UB-3, VNU-UB-4, VNU-ST-1). */
 @Component({
   selector: 'app-venue-detail-page',
-  imports: [RouterLink, DataGate, NotFound, ExhibitionBadges],
+  imports: [BackLink, RouterLink, DataGate, NotFound, ExhibitionBadges],
   templateUrl: './venue-detail.html',
 })
 export class VenueDetailPage {

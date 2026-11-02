@@ -1,6 +1,6 @@
 <app-data-gate>
   @if (person(); as person) {
-    <a class="back-link" routerLink="/photographers">‹ Alle Fotograf:innen</a>
+    <app-back-link kind="photographers" />
     <article>
       <header class="profile-head">
         <h1>{{ person.name }}</h1>

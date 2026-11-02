@@ -1,5 +1,6 @@
 <app-data-gate>
   @if (post(); as post) {
+    <app-back-link kind="posts" />
     <article>
       <h1>{{ post.title }}</h1>
       <p class="meta"><time [attr.datetime]="post.date">{{ formatDate(post.date) }}</time></p>

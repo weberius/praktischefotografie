@@ -1,5 +1,6 @@
 <app-data-gate>
   @if (venue(); as venue) {
+    <app-back-link kind="venues" />
     <h1>{{ venue.name }}</h1>
     <p class="venue-type"><span aria-hidden="true">{{ typeInfo[venue.type].icon }}</span> {{ typeInfo[venue.type].label }}</p>
 

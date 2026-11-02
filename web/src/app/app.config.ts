@@ -4,6 +4,7 @@ import { ApplicationConfig, inject, provideAppInitializer, provideBrowserGlobalE
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from '@angular/router';
 
+import { NAV_HISTORY_INITIALIZER } from './core/nav-history';
 import { routes } from './app.routes';
 
 /** Versatz für Anker-Sprünge in Pixeln; entspricht `scroll-padding-top: 6rem` in styles.css (ein Test erzwingt die Übereinstimmung, FRM-UB-5). */
@@ -20,6 +21,7 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideRouter(routes, withComponentInputBinding(), withInMemoryScrolling({ scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled' })),
     provideAppInitializer(() => applyHeaderScrollOffset(inject(ViewportScroller))),
+    NAV_HISTORY_INITIALIZER,
     provideHttpClient(withFetch()),
     provideClientHydration(withEventReplay()),
   ],
