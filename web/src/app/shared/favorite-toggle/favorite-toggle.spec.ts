@@ -1,14 +1,24 @@
-// Gherkin: web/favoriten.feature · „Umschalter auf Liste, Detail und Agenda“, „Markieren und Aufheben“, „Zustand gilt über Seiten hinweg“,
-// „Neuladen entfernt Favoriten“, „Eventliste nur mit Favoriten“, „Keine Favoriten“
+// Gherkin: web/favoriten.feature · „Umschalter auf Liste, Detail, Ort und Agenda“, „Markieren und Aufheben“, „Zustand gilt über Seiten hinweg“, „Neuladen entfernt Favoriten“
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { Router, provideRouter, withComponentInputBinding } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
 import { routes } from '../../app.routes';
-import { Favorites } from '../../core/favorites';
 import { provideTestData } from '../../testing/test-data';
+import { FavoriteToggle } from './favorite-toggle';
 
-async function open(url: string): Promise<{ harness: RouterTestingHarness; el: HTMLElement }> {
-  TestBed.configureTestingModule({ providers: [provideRouter(routes, withComponentInputBinding()), ...provideTestData()] });
+@Component({
+  imports: [FavoriteToggle],
+  template: `<app-favorite-toggle eventId="e-talk" eventTitle="Artist Talk" /><app-favorite-toggle eventId="e-workshop" eventTitle="Workshop" />`,
+})
+class Host {}
+
+const buttons = (el: HTMLElement) => Array.from(el.querySelectorAll<HTMLButtonElement>('app-favorite-toggle button'));
+const byName = (el: HTMLElement, title: string) => buttons(el).find((b) => b.querySelector('.visually-hidden')?.textContent?.trim() === `: ${title}`)!;
+const pressed = (b: HTMLButtonElement) => b.getAttribute('aria-pressed');
+
+async function open(url: string, requests?: string[]): Promise<{ harness: RouterTestingHarness; el: HTMLElement }> {
+  TestBed.configureTestingModule({ providers: [provideRouter(routes, withComponentInputBinding()), ...provideTestData({ requests })] });
   const harness = await RouterTestingHarness.create();
   await harness.navigateByUrl(url);
   return { harness, el: await settle(harness) };
@@ -20,87 +30,83 @@ async function settle(harness: RouterTestingHarness): Promise<HTMLElement> {
   return harness.routeNativeElement as HTMLElement;
 }
 
-const toggles = (el: HTMLElement) => Array.from(el.querySelectorAll<HTMLButtonElement>('button.favorite-toggle'));
-const toggleOf = (el: HTMLElement, title: string) => toggles(el).find((b) => b.textContent?.includes(`: ${title}`))!;
-const cardTitles = (el: HTMLElement) => Array.from(el.querySelectorAll('ul.card-list > li h2')).map((h) => h.textContent?.trim());
-
 describe('FavoriteToggle', () => {
-  it('Szenario: Umschalter auf Liste, Detail und Agenda (FAV-UB-1)', async () => {
-    for (const url of ['/events', '/events/e-talk', '/calendar']) {
-      TestBed.resetTestingModule();
-      const { el } = await open(url);
-      const b = toggleOf(el, 'Artist Talk');
-      expect(b.getAttribute('aria-pressed')).toBe('false');
-      expect(b.textContent).toContain('Favorit merken');
-      if (url === '/calendar') {
-        expect(el.querySelectorAll('ol.agenda > li').length).toBeGreaterThan(toggles(el).length);
-        expect(toggles(el).length).toBeGreaterThan(0);
-      }
+  it('Szenario: Markieren und Aufheben (FAV-EV-1, Q-USE-17)', () => {
+    const fixture = TestBed.createComponent(Host);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    const talk = byName(el, 'Artist Talk');
+    expect(talk.type).toBe('button');
+    expect([pressed(talk), talk.textContent]).toEqual(['false', jasmine.stringContaining('☆ Favorit merken')]);
+    talk.click();
+    fixture.detectChanges();
+    expect([pressed(talk), talk.textContent]).toEqual(['true', jasmine.stringContaining('★ Favorit gemerkt')]);
+    expect(pressed(byName(el, 'Workshop'))).toBe('false');
+    talk.click();
+    fixture.detectChanges();
+    expect(pressed(talk)).toBe('false');
+  });
+
+  it('Szenario: Tastaturbedienung (Q-USE-17)', () => {
+    const fixture = TestBed.createComponent(Host);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    // Ein nativer `<button>` ist per Tab erreichbar und löst bei Enter und Leertaste `click` aus.
+    expect(buttons(el).every((b) => b.tabIndex === 0 && !b.disabled)).toBeTrue();
+  });
+
+  describe('auf den Seiten', () => {
+    for (const url of ['/events', '/events/e-talk', '/venues/v-koeln-lib', '/calendar']) {
+      it(`Szenario: Umschalter auf ${url} (FAV-UB-5)`, async () => {
+        const { el } = await open(url);
+        const b = byName(el, 'Artist Talk');
+        expect(pressed(b)).toBe('false');
+        expect(b.textContent).toContain('Favorit merken');
+        expect(buttons(el).every((x) => x.querySelector('.visually-hidden')?.textContent?.startsWith(': '))).toBeTrue();
+      });
     }
+
+    it('Szenario: Ausstellungen in Agenda und Ort haben keinen Umschalter (FAV-UB-5)', async () => {
+      for (const url of ['/calendar', '/venues/v-koeln-lib']) {
+        TestBed.resetTestingModule();
+        const { el } = await open(url);
+        const exhibitionCards = Array.from(el.querySelectorAll<HTMLElement>('li.card')).filter((li) => li.querySelector('a[href^="/exhibitions/"]'));
+        expect(exhibitionCards.length).withContext(url).toBeGreaterThan(0);
+        expect(exhibitionCards.every((li) => li.querySelector('app-favorite-toggle') === null)).withContext(url).toBeTrue();
+      }
+    });
+
+    it('Szenario: Zustand gilt über Seiten hinweg (FAV-UB-2)', async () => {
+      const { harness, el } = await open('/events');
+      byName(el, 'Artist Talk').click();
+      const router = TestBed.inject(Router);
+      for (const url of ['/events/e-talk', '/venues/v-koeln-lib', '/calendar']) {
+        await router.navigateByUrl(url);
+        const page = await settle(harness);
+        expect(pressed(byName(page, 'Artist Talk'))).withContext(url).toBe('true');
+        const workshop = buttons(page).find((b) => b.textContent?.includes(': Workshop'));
+        if (workshop) expect(pressed(workshop)).withContext(url).toBe('false');
+      }
+    });
   });
 
-  it('Szenario: Markieren und Aufheben (FAV-EV-1)', async () => {
-    const { harness, el } = await open('/events');
-    toggleOf(el, 'Artist Talk').click();
-    await settle(harness);
-    expect(toggleOf(el, 'Artist Talk').getAttribute('aria-pressed')).toBe('true');
-    expect(toggleOf(el, 'Artist Talk').textContent).toContain('Favorit gemerkt');
-    expect(toggleOf(el, 'Workshop').getAttribute('aria-pressed')).toBe('false');
-    toggleOf(el, 'Artist Talk').click();
-    await settle(harness);
-    expect(toggleOf(el, 'Artist Talk').getAttribute('aria-pressed')).toBe('false');
-  });
-
-  it('Szenario: Zustand gilt über Seiten hinweg (FAV-UB-2)', async () => {
-    const { harness, el } = await open('/events');
-    toggleOf(el, 'Artist Talk').click();
-    const router = TestBed.inject(Router);
-    await router.navigateByUrl('/events/e-talk');
-    expect(toggleOf(await settle(harness), 'Artist Talk').getAttribute('aria-pressed')).toBe('true');
-    await router.navigateByUrl('/calendar');
-    const agenda = await settle(harness);
-    expect(toggleOf(agenda, 'Artist Talk').getAttribute('aria-pressed')).toBe('true');
-    expect(toggleOf(agenda, 'Workshop').getAttribute('aria-pressed')).toBe('false');
-  });
-
-  it('Szenario: Neuladen entfernt Favoriten, nichts wird gespeichert (FAV-UB-3, Q-SEC-10)', async () => {
-    const fetchSpy = spyOn(window, 'fetch').and.callThrough();
+  it('Szenario: Neuladen entfernt Favoriten, nichts wird gespeichert oder gesendet (FAV-UB-3, Q-SEC-10)', async () => {
+    const requests: string[] = [];
+    const watched = [spyOn(window, 'fetch'), spyOn(XMLHttpRequest.prototype, 'open'), spyOn(indexedDB, 'open')];
     const cookies = document.cookie;
-    const local = localStorage.length;
-    const session = sessionStorage.length;
-    const { harness, el } = await open('/events');
-    const fetchesBefore = fetchSpy.calls.count();
-    toggleOf(el, 'Artist Talk').click();
+    const stored = [localStorage.length, sessionStorage.length];
+    const { harness, el } = await open('/events', requests);
+    const requestsBefore = requests.length;
+    byName(el, 'Artist Talk').click();
     await settle(harness);
-    expect(fetchSpy.calls.count()).toBe(fetchesBefore);
+    expect(pressed(byName(el, 'Artist Talk'))).toBe('true');
+    expect(requests.length).toBe(requestsBefore);
+    watched.forEach((spy) => expect(spy).not.toHaveBeenCalled());
     expect(document.cookie).toBe(cookies);
-    expect(localStorage.length).toBe(local);
-    expect(sessionStorage.length).toBe(session);
-    expect(TestBed.inject(Favorites).count()).toBe(1);
+    expect([localStorage.length, sessionStorage.length]).toEqual(stored);
+
     TestBed.resetTestingModule();
     const fresh = await open('/events');
-    expect(toggleOf(fresh.el, 'Artist Talk').getAttribute('aria-pressed')).toBe('false');
-    expect(TestBed.inject(Favorites).count()).toBe(0);
-  });
-
-  it('Szenario: Eventliste nur mit Favoriten und Keine Favoriten (FAV-UB-4, FAV-ST-1)', async () => {
-    const { harness, el } = await open('/events');
-    const only = () => Array.from(el.querySelectorAll<HTMLInputElement>('.filters input[type=checkbox]')).find((i) => i.parentElement?.textContent?.includes('Nur Favoriten'))!;
-    only().click();
-    expect(await settle(harness)).toBe(el);
-    expect(cardTitles(el)).toEqual([]);
-    expect(el.querySelector('.notice')?.textContent).toContain('Keine Favoriten');
-    only().click();
-    await settle(harness);
-    toggleOf(el, 'Artist Talk').click();
-    only().click();
-    await settle(harness);
-    expect(cardTitles(el)).toEqual(['Artist Talk']);
-    const select = el.querySelector<HTMLSelectElement>('select')!;
-    select.value = 'workshop';
-    select.dispatchEvent(new Event('change'));
-    await harness.fixture.whenStable();
-    await settle(harness);
-    expect(el.querySelector('.notice')?.textContent).toContain('Keine Favoriten');
+    expect(pressed(byName(fresh.el, 'Artist Talk'))).toBe('false');
   });
 });

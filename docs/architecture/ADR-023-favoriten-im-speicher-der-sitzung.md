@@ -7,7 +7,7 @@ Besucher:innen sollen Events favorisieren können; die Markierung soll über die
 
 ## Entscheidung
 - **Ein Dienst im Speicher.** Ein Dienst der Wurzel hält die Menge der favorisierten Event-IDs als Signal. Alle Seiten lesen und ändern sie über denselben Dienst; er überlebt den Seitenwechsel, aber nicht das Neuladen.
-- **Keine Persistenz.** Weder `localStorage`, `sessionStorage`, IndexedDB, Cookies noch URL-Parameter; keine Netzanfrage. Die Datenschutzerklärung bleibt wahr.
+- **Keine Persistenz der Favoriten.** Weder `localStorage`, `sessionStorage`, IndexedDB, Cookies noch URL-Parameter; keine Netzanfrage. (Die Filteroption „Nur Favoriten“ steht gemäß ADR-024 in der Adresse, nie die Favoriten selbst.) Die Datenschutzerklärung bleibt wahr.
 - **Ein gemeinsamer Umschalter** (Komponente) für Liste, Detail und Agenda mit `aria-pressed`, zugänglichem Namen mit Event und Zustand in Text und Symbol.
 - **Nur Events**, identifiziert über die Event-`id`.
 - **Filter in der Eventliste** über dieselbe Menge; kein eigener Bereich.

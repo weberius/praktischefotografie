@@ -5,7 +5,7 @@
 **Quelle:** analyse-architecture.md  
 **Befund-Bezug:** ARCH-02  
 **ADR-Bezug:** ADR-023, ADR-022  
-**Status:** Vorgeschlagen
+**Status:** Umgesetzt
 
 ---
 

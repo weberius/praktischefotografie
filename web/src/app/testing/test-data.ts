@@ -120,6 +120,8 @@ export interface TestDataOptions {
   content?: (url: string) => string | null;
   /** Datendateien antworten mit 500 (NAV-UN-1). */
   failData?: boolean;
+  /** Sammelt die Adressen aller Anfragen, die den Interceptor erreichen. */
+  requests?: string[];
 }
 
 /**
@@ -129,6 +131,7 @@ export interface TestDataOptions {
 export function provideTestData(options: TestDataOptions = {}): (Provider | EnvironmentProviders)[] {
   const dataset = { ...TEST_DATASET, ...options.dataset };
   const interceptor: HttpInterceptorFn = (req) => {
+    options.requests?.push(req.url);
     const data = /^\/?data\/(\w+)\.json$/.exec(req.url);
     if (data) {
       if (options.failData) return throwError(() => new HttpErrorResponse({ status: 500, url: req.url }));

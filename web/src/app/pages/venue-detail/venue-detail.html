@@ -49,6 +49,7 @@
             <li class="card">
               <h4><a [routerLink]="['/events', event.id]">{{ event.title }}</a></h4>
               <p class="meta">{{ formatRange(event.startDate, event.endDate) }}</p>
+              <app-favorite-toggle [eventId]="event.id" [eventTitle]="event.title" />
             </li>
           }
         </ul>

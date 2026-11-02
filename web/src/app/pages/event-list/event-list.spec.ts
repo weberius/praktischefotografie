@@ -1,8 +1,9 @@
 // Gherkin: web/events.feature · „Liste zeigt Events“, „Liste ist nach Typ filterbar“, „Kommerzielles Event“, „Beendetes Event“, „Vernissage und Finissage in der Liste“, „Vernissage und Finissage filterbar“, „Vernissage und Finissage in der Detailansicht“
 import { TestBed } from '@angular/core/testing';
-import { provideRouter, withComponentInputBinding } from '@angular/router';
+import { Router, provideRouter, withComponentInputBinding } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
 import { routes } from '../../app.routes';
+import { Favorites } from '../../core/favorites';
 import { Dataset } from '../../core/models';
 import { provideTestData, TEST_DATASET } from '../../testing/test-data';
 
@@ -99,6 +100,43 @@ describe('EventListPage', () => {
     it('Szenario: Vernissage und Finissage in der Detailansicht', async () => {
       const { el } = await open('/events/e-finissage', { events: termine });
       expect(el.querySelector('.badge')?.textContent?.trim()).toBe('Finissage');
+    });
+  });
+
+  describe('Nur Favoriten (FAV-UB-4, FAV-UB-6, FAV-ST-1)', () => {
+    it('Szenario: Eventliste nur mit Favoriten, Option steht in der Adresse', async () => {
+      const { harness, el } = await open('/events');
+      TestBed.inject(Favorites).toggle('e-talk');
+      const checkbox = Array.from(el.querySelectorAll<HTMLInputElement>('.filters input[type=checkbox]')).find((i) => i.parentElement?.textContent?.includes('Nur Favoriten'))!;
+      checkbox.click();
+      await harness.fixture.whenStable();
+      harness.detectChanges();
+      expect(TestBed.inject(Router).url).toBe('/events?favorites=1');
+      expect(titles(el)).toEqual(['Artist Talk']);
+    });
+
+    it('Szenario: Option bleibt nach Detailseite und Zurück erhalten (FAV-UB-6)', async () => {
+      const { harness, el } = await open('/events?favorites=1');
+      TestBed.inject(Favorites).toggle('e-talk');
+      harness.detectChanges();
+      expect(titles(el)).toEqual(['Artist Talk']);
+      const router = TestBed.inject(Router);
+      await router.navigateByUrl('/events/e-talk');
+      await router.navigateByUrl('/events?favorites=1');
+      harness.detectChanges();
+      expect(titles(el)).toEqual(['Artist Talk']);
+      expect(el.querySelector<HTMLInputElement>('.filters input[type=checkbox]')?.checked).toBeTrue();
+    });
+
+    it('Szenario: Keine Favoriten, auch zusammen mit dem Typfilter', async () => {
+      const { harness, el } = await open('/events?favorites=1');
+      expect(titles(el)).toEqual([]);
+      expect(el.querySelectorAll('.notice').length).toBe(1);
+      expect(el.querySelector('.notice')?.textContent).toContain('Keine Favoriten');
+      TestBed.inject(Favorites).toggle('e-talk');
+      await TestBed.inject(Router).navigateByUrl('/events?favorites=1&type=workshop');
+      harness.detectChanges();
+      expect(el.querySelector('.notice')?.textContent).toContain('Keine Favoriten');
     });
   });
 });

@@ -11,11 +11,12 @@ import { BackLink } from '../../shared/back-link/back-link';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { NotFound } from '../../shared/not-found/not-found';
 import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
+import { FavoriteToggle } from '../../shared/favorite-toggle/favorite-toggle';
 
 /** Ortsdetail mit Stammdaten, Programm und verlinkten Beiträgen (VNU-UB-3, VNU-UB-4, VNU-ST-1). */
 @Component({
   selector: 'app-venue-detail-page',
-  imports: [BackLink, RouterLink, DataGate, NotFound, ExhibitionBadges],
+  imports: [BackLink, RouterLink, DataGate, NotFound, ExhibitionBadges, FavoriteToggle],
   templateUrl: './venue-detail.html',
 })
 export class VenueDetailPage {

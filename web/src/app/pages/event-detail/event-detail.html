@@ -12,7 +12,7 @@
           <span class="badge status-beendet">Beendet</span>
         }
       </p>
-      <app-favorite-toggle [eventId]="e.id" [title]="e.title" />
+      <app-favorite-toggle [eventId]="e.id" [eventTitle]="e.title" />
       <dl class="facts">
         <dt>Zeitraum</dt>
         <dd>{{ formatRange(e.startDate, e.endDate) }}</dd>

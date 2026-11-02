@@ -14,9 +14,9 @@
 Keine.
 
 ## Spezifikation (Phase 3, vorab erstellt)
-- EARS: FAV-UB-1, FAV-EV-1, FAV-UB-2, FAV-UB-3, FAV-UB-4, FAV-ST-1
+- EARS: FAV-UB-5 (ersetzt FAV-UB-1), FAV-EV-1, FAV-UB-2, FAV-UB-3, FAV-UB-4, FAV-UB-6, FAV-ST-1
 - Gherkin: `web/favoriten.feature` (Umschalter auf Liste, Detail und Agenda; Markieren und Aufheben; Zustand über Seiten hinweg; Neuladen leert; Filter Nur Favoriten; Keine Favoriten)
 - Quality: Q-USE-17, Q-SEC-10
-- ADR: ADR-023 (Proposed); ADR-002
+- ADR: ADR-023 (Accepted), ADR-024 (Proposed); ADR-002
 
 **INVEST:** I ✔ N ✔ V ✔ E ✔ S ✔ T ✔

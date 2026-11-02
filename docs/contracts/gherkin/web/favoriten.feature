@@ -6,6 +6,7 @@ Funktionalität: Events favorisieren
     Und die Events "e-talk" "Artist Talk" (talk) und "e-workshop" "Workshop" (workshop)
     Und die Ausstellung "a-kommend" in der Agenda
 
+  # Ersetzt durch „Umschalter auf Liste, Detail, Ort und Agenda“ (FAV-UB-1 ist Deprecated).
   # EARS: FAV-UB-1
   Szenariogrundriss: Umschalter auf Liste, Detail und Agenda
     Wenn "<seite>" aufgerufen wird
@@ -17,6 +18,26 @@ Funktionalität: Events favorisieren
     | /events |
     | /events/e-talk |
     | /calendar |
+
+  # EARS: FAV-UB-5
+  Szenariogrundriss: Umschalter auf Liste, Detail, Ort und Agenda
+    Wenn "<seite>" aufgerufen wird
+    Dann hat das Event "Artist Talk" einen Umschalter "Favorit" mit Zustand "nicht gewählt"
+    Und sein zugänglicher Name nennt "Artist Talk"
+    Und die Ausstellung auf der Seite hat keinen Umschalter
+    Beispiele:
+    | seite |
+    | /events |
+    | /events/e-talk |
+    | /venues/v-koeln-lib |
+    | /calendar |
+
+  # EARS: FAV-UB-6
+  Szenario: Option bleibt in der Adresse
+    Angenommen "Artist Talk" ist als Favorit markiert
+    Wenn auf "/events" die Option "Nur Favoriten" gewählt wird
+    Dann enthält die Adresse "favorites=1" und keine Event-ID
+    Und nach dem Wechsel auf "/events/e-talk" und zurück erscheint nur "Artist Talk"
 
   # EARS: FAV-EV-1
   Szenario: Markieren und Aufheben

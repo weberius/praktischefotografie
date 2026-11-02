@@ -41,7 +41,7 @@
             }
             <p class="meta">{{ formatRange(item.startDate, item.endDate) }}</p>
             @if (item.kind === 'Event') {
-              <app-favorite-toggle [eventId]="item.id" [title]="item.title" />
+              <app-favorite-toggle [eventId]="item.id" [eventTitle]="item.title" />
             }
           </li>
         }

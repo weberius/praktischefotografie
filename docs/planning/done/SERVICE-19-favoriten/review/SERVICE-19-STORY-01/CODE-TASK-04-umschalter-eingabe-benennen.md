@@ -5,7 +5,7 @@
 **Quelle:** analyse-code.md  
 **Befund-Bezug:** CODE-06  
 **ADR-Bezug:** ADR-023  
-**Status:** Vorgeschlagen
+**Status:** Umgesetzt
 
 ---
 

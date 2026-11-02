@@ -11,17 +11,13 @@
       </select>
     </label>
     <label class="inline">
-      <input type="checkbox" [checked]="onlyFavorites()" (change)="onlyFavorites.set($any($event.target).checked)" />
+      <input type="checkbox" [checked]="onlyFavorites()" (change)="selectOnlyFavorites($any($event.target).checked)" />
       Nur Favoriten
     </label>
   </div>
 
   @if (items().length === 0) {
-    @if (onlyFavorites()) {
-      <p class="notice" role="status">Keine Favoriten für diese Auswahl.</p>
-    } @else {
-      <p class="notice" role="status">Keine Events für diese Auswahl.</p>
-    }
+    <p class="notice" role="status">{{ onlyFavorites() ? 'Keine Favoriten für diese Auswahl.' : 'Keine Events für diese Auswahl.' }}</p>
   } @else {
     <ul class="card-list">
       @for (item of items(); track item.event.id) {
@@ -38,7 +34,7 @@
           <h2><a [routerLink]="['/events', item.event.id]">{{ item.event.title }}</a></h2>
           <p>{{ item.venue }}</p>
           <p class="meta">{{ formatRange(item.event.startDate, item.event.endDate) }}</p>
-          <app-favorite-toggle [eventId]="item.event.id" [title]="item.event.title" />
+          <app-favorite-toggle [eventId]="item.event.id" [eventTitle]="item.event.title" />
         </li>
       }
     </ul>
