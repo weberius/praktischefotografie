@@ -1,0 +1,7 @@
+# Qualität: Weiterleitung beim Abruf (setup)
+
+**Stand:** 2026-11-02. Fortlaufend zu Q-SEC-8. Q-SEC-9 ersetzt in Q-SEC-4 das Maß „0 Anfragen an andere Hosts als den des Ortes“ (jetzt: nur Host der `website` und Hosts aus der Weiterleitungsdatei); alle übrigen Maße aus Q-SEC-4 gelten fort.
+
+| ID | Szenario | Maß | Prüfverfahren | EARS |
+| --- | --- | --- | --- | --- |
+| Q-SEC-9 | Redaktion startet den Abruf; eine Website leitet per HTTP, Meta-Refresh oder JavaScript auf eine andere Domain weiter. Betreiber dürfen nicht belastet, Regeln nicht umgangen und nicht freigegebene Ziele nicht angefragt werden. | 0 Anfragen an Hosts, die weder Host der `website` noch in der Weiterleitungsdatei für den Ort stehen; je Anfrage ≤ 3 Weiterleitungen aller Arten zusammen, bei Schleife 0 weitere Anfragen; 100 % der Anfragen an einen freigegebenen Zielhost erfolgen nach Auswertung dessen `robots.txt`; Abstand je Host ≥ 2 s; 100 % der verfolgten und nicht verfolgten Weiterleitungen stehen mit Ausgangs- und Zieladresse im Bericht; 0 Anfragen ohne Kennung im `User-Agent`; 0 ausgeführte Skripte (JavaScript-Weiterleitungen nur aus dem Quelltext erkannt); Abruf endet mit Exit-Code 1 bei ungültiger Weiterleitungsdatei. | Tests mit lokalen Testservern (HTTP-Kette, Meta-Refresh, JavaScript-Zuweisung, Schleife, gesperrte `robots.txt`, ungültige Datei) und Zeitstempeln; Test ohne Netz (Q-MAIN-2) | FET-OP-3, FET-UB-6, FET-UB-7, FET-UN-3, FET-EV-2, FET-UB-8 |

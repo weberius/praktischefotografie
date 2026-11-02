@@ -11,7 +11,8 @@ const fileOf = (snapshotDir, venueId, url) => join(dirOf(snapshotDir, venueId), 
 export function saveSnapshot(snapshotDir, venueId, snapshot) {
   mkdirSync(dirOf(snapshotDir, venueId), { recursive: true });
   const record = { ...snapshot, hash: sha(snapshot.text) };
-  writeFileSync(fileOf(snapshotDir, venueId, snapshot.url), JSON.stringify(record, null, 2));
+  // Cache-Schlüssel ist die angefragte Adresse; `url` ist die abgerufene Zieladresse (FET-EV-2).
+  writeFileSync(fileOf(snapshotDir, venueId, snapshot.requestedUrl ?? snapshot.url), JSON.stringify(record, null, 2));
   return record;
 }
 

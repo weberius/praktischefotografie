@@ -2,11 +2,12 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFileSync, spawnSync } from 'node:child_process';
-import { existsSync, mkdtempSync, readdirSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { DEFAULTS, extractPage, fetchVenues, siteOf } from '../../scripts/scrape/lib/fetcher.mjs';
+import { loadRedirectHosts } from '../../scripts/scrape/lib/common.mjs';
 import { testServer, page } from './server.mjs';
 
 const ROOT = fileURLToPath(new URL('../..', import.meta.url));
@@ -158,7 +159,7 @@ test('Q-REL-1: bei 5 Ausfällen unter 20 Orten werden 15 verarbeitet und 5 beric
   }
 });
 
-test('Szenario: Weiterleitung auf anderen Host (FET-UN-2, Q-SEC-4)', async () => {
+test('Szenario: Weiterleitung auf anderen Host (FET-UN-3, Q-SEC-4)', async () => {
   // "localhost" statt "127.0.0.1" ist für den Abrufdienst ein anderer Host.
   const other = await testServer({ '/ziel': { body: page('Ziel') } });
   const s = await testServer({ '/': { status: 302, headers: { location: `http://localhost:${other.port}/ziel` }, body: '' } });
@@ -170,6 +171,95 @@ test('Szenario: Weiterleitung auf anderen Host (FET-UN-2, Q-SEC-4)', async () =>
     await s.close();
     await other.close();
   }
+});
+
+const to = (port, path = '/ziel') => `http://localhost:${port}${path}`;
+const redirect = (location) => ({ status: 302, headers: { location }, body: '' });
+const allow = { redirectHosts: { ort: ['localhost'] } };
+
+test('Szenario: Weiterleitung auf freigegebenen Host (FET-EV-2, FET-UB-6)', async () => {
+  const other = await testServer({ '/ziel': { body: page('Ziel', '<p>Inhalt</p>') } });
+  const s = await testServer({ '/': redirect(to(other.port)) });
+  const dir = tmp();
+  try {
+    const [summary] = await fetchVenues([venue(s.url)], { ...FAST, ...allow, snapshotDir: dir });
+    assert.equal(summary.status, 'abgerufen');
+    assert.ok(summary.notes.some((n) => n.includes('Weiterleitung verfolgt')), summary.notes.join('\n'));
+    assert.ok(other.requests.some((r) => r.path === '/robots.txt'), 'robots.txt des Zielhosts wird geprüft');
+    const [file] = readdirSync(join(dir, 'ort'));
+    assert.equal(JSON.parse(readFileSync(join(dir, 'ort', file), 'utf8')).url, to(other.port));
+  } finally {
+    await s.close();
+    await other.close();
+  }
+});
+
+test('Szenario: robots.txt des Zielhosts verbietet den Abruf (FET-UB-6)', async () => {
+  const other = await testServer({ '/robots.txt': { body: 'User-agent: *\nDisallow: /' }, '/ziel': { body: page('Ziel') } });
+  const s = await testServer({ '/': redirect(to(other.port)) });
+  try {
+    const [summary] = await fetchVenues([venue(s.url)], { ...FAST, ...allow, snapshotDir: tmp() });
+    assert.ok(!other.requests.some((r) => r.path === '/ziel'));
+    assert.notEqual(summary.status, 'abgerufen');
+  } finally {
+    await s.close();
+    await other.close();
+  }
+});
+
+test('Szenario: Weiterleitungsgrenze und Schleife (FET-UB-7)', async () => {
+  const s = await testServer({
+    '/': redirect('/a'), '/a': redirect('/b'), '/b': redirect('/c'), '/c': redirect('/d'), '/d': { body: page('Ende') },
+  });
+  const loop = await testServer({ '/': redirect('/x'), '/x': redirect('/') });
+  try {
+    const [tooLong] = await fetchVenues([venue(s.url)], { ...FAST, snapshotDir: tmp() });
+    assert.ok(!s.requests.some((r) => r.path === '/d'), 'höchstens 3 Weiterleitungen');
+    assert.notEqual(tooLong.status, 'abgerufen');
+    const [looped] = await fetchVenues([venue(loop.url)], { ...FAST, snapshotDir: tmp() });
+    assert.notEqual(looped.status, 'abgerufen');
+    assert.ok(loop.requests.filter((r) => r.path !== '/robots.txt').length <= 4);
+  } finally {
+    await s.close();
+    await loop.close();
+  }
+});
+
+test('Szenario: Meta-Refresh und JavaScript-Weiterleitung (FET-UB-8)', async () => {
+  const other = await testServer({ '/ziel': { body: page('Ziel', '<p>Inhalt</p>') } });
+  const meta = `<html><head><meta http-equiv="refresh" content="0; url=${to(other.port)}"></head><body></body></html>`;
+  const js = `<html><head></head><body><script>window.location.href = '${to(other.port)}';</script></body></html>`;
+  const content = `<html><head><title>Start</title></head><body><h1>Programm</h1><p>${'Ausstellung im Haus. '.repeat(10)}</p><script>window.location = '${to(other.port)}';</script></body></html>`;
+  const s = await testServer({ '/': { body: meta }, '/js': { body: js }, '/inhalt': { body: content } });
+  try {
+    for (const path of ['/', '/js']) {
+      const [summary] = await fetchVenues([venue(s.url + path)], { ...FAST, ...allow, snapshotDir: tmp() });
+      assert.equal(summary.status, 'abgerufen', path);
+      assert.ok(summary.notes.some((n) => n.includes('Weiterleitung verfolgt')), path);
+    }
+    const before = other.requests.length;
+    await fetchVenues([venue(s.url + '/inhalt')], { ...FAST, ...allow, snapshotDir: tmp() });
+    assert.equal(other.requests.length, before, 'Seite mit Inhalt wird nicht als Weiterleitung gewertet');
+  } finally {
+    await s.close();
+    await other.close();
+  }
+});
+
+test('Szenario: Weiterleitungsdatei wird geprüft (FET-OP-3)', () => {
+  const root = mkdtempSync(join(tmpdir(), 'pf-rh-'));
+  const write = (obj) => {
+    mkdirSync(join(root, 'scripts', 'scrape'), { recursive: true });
+    writeFileSync(join(root, 'scripts', 'scrape', 'redirect-hosts.json'), JSON.stringify(obj));
+  };
+  const sources = [{ id: 'ort' }];
+  write({ ort: ['www.example.org'] });
+  assert.deepEqual(loadRedirectHosts(sources, root), { ort: ['www.example.org'] });
+  write({ ort: ['https://example.org/pfad'] });
+  assert.throws(() => loadRedirectHosts(sources, root), /ungültiger Hostname/);
+  write({ unbekannt: ['example.org'] });
+  assert.throws(() => loadRedirectHosts(sources, root), /unbekannte/);
+  assert.deepEqual(loadRedirectHosts(sources, ROOT), {}, 'mitgelieferte Datei ist gültig');
 });
 
 test('Szenario: Snapshot wird gespeichert (FET-UB-4)', async () => {

@@ -44,12 +44,12 @@ Funktionalität: Abruf der Webseiten von Orten
     Und der andere Ort wird abgerufen
     Und der vorhandene Snapshot des fehlgeschlagenen Ortes bleibt unverändert
 
-  # EARS: FET-UN-2
+  # EARS: FET-UN-3 (ersetzt FET-UN-2)
   Szenario: Weiterleitung auf anderen Host
-    Angenommen eine Startseite, die auf eine andere Website weiterleitet
+    Angenommen eine Startseite, die auf eine andere Website weiterleitet, die nicht in der Weiterleitungsdatei für den Ort steht
     Wenn der Abruf gestartet wird
     Dann wird der anderen Adresse nicht gefolgt
-    Und der Bericht nennt die Weiterleitung
+    Und der Bericht nennt die Weiterleitung mit Ausgangs- und Zieladresse
 
   # EARS: FET-UB-4
   Szenario: Snapshot wird gespeichert
@@ -79,4 +79,53 @@ Funktionalität: Abruf der Webseiten von Orten
     Wenn der Abruf mit "--venue photoszene-koeln" gestartet wird
     Dann liegen Snapshots unter ".cache/snapshots/photoszene-koeln/"
     Und die Regeln für robots.txt, Abstand und Kennung gelten wie bei Orten
+
+  # EARS: FET-OP-3
+  Szenario: Freigegebener Host im Datensatz
+    Angenommen eine Weiterleitungsdatei mit Hosts für den Ort "a" und ohne Eintrag für den Ort "b"
+    Wenn der Abruf gestartet wird
+    Dann gelten für "a" der Host der Website und die Einträge als freigegeben
+    Und für "b" gilt nur der Host der Website
+    Und eine Datei mit ungültigem Hostnamen oder unbekannter Orts-ID beendet den Abruf mit Exit-Code 1 vor der ersten Anfrage
+
+  # EARS: FET-UB-6, FET-EV-2
+  Szenario: Weiterleitung auf freigegebenen Host
+    Angenommen eine Startseite, die auf einen freigegebenen Host weiterleitet
+    Wenn der Abruf gestartet wird
+    Dann wird der Weiterleitung gefolgt
+    Und Unterseiten des Zielhosts zählen als dieselbe Website
+
+  # EARS: FET-UB-6
+  Szenario: robots.txt des Zielhosts
+    Angenommen eine Weiterleitung auf einen freigegebenen Host, dessen robots.txt "/" verbietet
+    Wenn der Abruf gestartet wird
+    Dann wird keine Seite des Zielhosts abgerufen
+    Und der Bericht nennt den Zielhost als nicht erlaubt
+    Und zwischen zwei Anfragen an denselben Host liegen mindestens 2 Sekunden
+
+  # EARS: FET-UB-7
+  Szenario: Weiterleitungsgrenze und Schleife
+    Angenommen eine Kette aus vier Weiterleitungen und eine Weiterleitungsschleife auf freigegebenen Hosts
+    Wenn der Abruf gestartet wird
+    Dann endet die Anfrage nach höchstens drei Weiterleitungen
+    Und der Bericht nennt Kette bzw. Schleife
+    Und eine Weiterleitung von einem freigegebenen auf einen nicht freigegebenen Host wird nicht verfolgt
+    Und eine Kette aus HTTP-, Meta-Refresh- und JavaScript-Weiterleitung endet nach drei Weiterleitungen
+
+  # EARS: FET-UB-6, FET-UB-7, FET-UN-3, FET-UB-8
+  Szenario: Meta-Refresh und JavaScript-Weiterleitung
+    Angenommen eine Seite mit Meta-Refresh auf einen freigegebenen Host und eine Seite mit "window.location = 'https://frei.example.org/'" ohne weiteren Text
+    Und eine Seite mit Meta-Refresh auf einen nicht freigegebenen Host
+    Wenn der Abruf gestartet wird
+    Dann wird den Weiterleitungen auf freigegebene Hosts gefolgt
+    Und der Weiterleitung auf den nicht freigegebenen Host nicht, der Bericht nennt sie mit Ausgangs- und Zieladresse
+    Und JavaScript wird nicht ausgeführt
+    Und alle Weiterleitungsarten zählen zusammen zur Grenze von drei
+
+  # EARS: FET-EV-2
+  Szenario: Bericht und Snapshot nach Weiterleitung
+    Angenommen eine verfolgte Weiterleitung von "alt.example.org" nach "neu.example.org"
+    Wenn der Abruf beendet ist
+    Dann nennt der Bericht "alt.example.org" und "neu.example.org"
+    Und der Snapshot trägt die Adresse auf "neu.example.org" als URL
 

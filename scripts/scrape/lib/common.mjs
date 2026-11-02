@@ -23,6 +23,31 @@ export const loadSources = (root = ROOT) => [
   ...readJson(join(root, 'data', 'organizers.json'), []).filter((o) => o.website),
 ];
 
+export const REDIRECT_HOSTS_FILE = join('scripts', 'scrape', 'redirect-hosts.json');
+const HOSTNAME = /^(?=.{1,253}$)([a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z][a-z0-9-]{0,62}$/i;
+
+/**
+ * Liest die Weiterleitungsdatei (FET-OP-3, ADR-021): Objekt aus Orts- bzw. Veranstalter-ID und Liste von Hostnamen.
+ * Wirft bei ungültigen Hostnamen oder unbekannten IDs; fehlt die Datei, gibt es keine freigegebenen Hosts.
+ */
+export function loadRedirectHosts(sources, root = ROOT) {
+  const file = join(root, REDIRECT_HOSTS_FILE);
+  const hosts = readJson(file, {});
+  if (hosts === null || typeof hosts !== 'object' || Array.isArray(hosts)) throw new Error(`${REDIRECT_HOSTS_FILE}: erwartet ein Objekt aus ID und Hostnamen`);
+  const known = new Set(sources.map((s) => s.id));
+  const problems = [];
+  for (const [id, list] of Object.entries(hosts)) {
+    if (!known.has(id)) problems.push(`unbekannte Orts- oder Veranstalter-ID "${id}"`);
+    if (!Array.isArray(list)) {
+      problems.push(`"${id}": erwartet eine Liste von Hostnamen`);
+      continue;
+    }
+    for (const host of list) if (typeof host !== 'string' || !HOSTNAME.test(host)) problems.push(`"${id}": ungültiger Hostname ${JSON.stringify(host)}`);
+  }
+  if (problems.length) throw new Error(`${REDIRECT_HOSTS_FILE} ungültig: ${problems.join('; ')}`);
+  return hosts;
+}
+
 /** Wählt eine Quelle (Ort oder Veranstalter) oder alle (UPD-OP-1, UPD-OP-2); unbekannte IDs werden mit den gültigen IDs gemeldet (UPD-UN-2). */
 export function resolveVenues(venues, venueId) {
   if (!venueId) return venues;

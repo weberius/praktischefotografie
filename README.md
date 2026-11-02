@@ -259,7 +259,24 @@ npm install
 export SCRAPE_CONTACT="redaktion@example.org"   # Kontaktadresse für den User-Agent (Pflicht für Abrufe, nicht mit --offline)
 ```
 
-Abgerufene Seiten und Antworten liegen nur lokal unter `.cache/` und werden nicht versioniert. Alle Abrufe beachten `robots.txt` und halten Abstand (2 s je Website bei Orten, 1 s bei Wikimedia).
+Abgerufene Seiten und Antworten liegen nur lokal unter `.cache/` und werden nicht versioniert. Alle Abrufe beachten `robots.txt` und halten Abstand (2 s je Website bei Orten, 1 s bei Wikimedia). Weiterleitungen auf andere Websites folgt der Abruf nur, wenn der Zielhost in `scripts/scrape/redirect-hosts.json` für die jeweilige Quelle freigegeben ist.
+
+#### Weiterleitungen freigeben (`scripts/scrape/redirect-hosts.json`)
+
+Wird einer Weiterleitung nicht gefolgt, steht im Bericht (`updates/<Datum>/REPORT.md`) „Weiterleitung auf andere Website (<Host>) nicht verfolgt“. Nach Prüfung der Zielseite gibst du den Host frei. Schlüssel ist die ID des Ortes oder Veranstalters, Wert eine Liste von Hostnamen (ohne `https://`, Pfad und Port):
+
+```json
+{
+  "kunst-und-museumsbibliothek-koeln": ["www.museen.koeln"],
+  "lvr-landesmuseum-bonn-fotosammlung": ["www.lvr.de"],
+  "rheinisches-bildarchiv-koeln": ["www.rheinisches-bildarchiv.koeln"]
+}
+```
+
+- Ein freigegebener Host gilt wie die eigene Website; `www.` wird beim Vergleich ignoriert.
+- Gefolgt wird HTTP-3xx, Meta-Refresh und statisch erkannten JavaScript-Weiterleitungen (JavaScript wird nicht ausgeführt), höchstens 3 Weiterleitungen je Abruf; Schleifen, andere Ports und https → http werden nicht verfolgt.
+- `robots.txt` und Abstand (2 s) gelten je Zielhost. Der Snapshot trägt die Ziel-URL.
+- Unbekannte IDs oder ungültige Hostnamen brechen `npm run data:fetch` vor dem ersten Abruf mit Exit-Code 1 ab.
 
 ### `/update-venue-data` – Orte, Veranstalter, Festivals, Magazin
 

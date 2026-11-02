@@ -23,7 +23,7 @@ Argumente: `$ARGUMENTS` (optional `--venue <ort-oder-veranstalter-id>`, `--max-a
 ## Ablauf
 
 1. **Voraussetzung prüfen.** Für den Abruf muss `SCRAPE_CONTACT` (Kontaktadresse für den User-Agent) in der Umgebung gesetzt sein. Fehlt sie, bitte den Menschen, sie zu setzen (`export SCRAPE_CONTACT=…`), und trage sie nicht in Dateien ein. Mit `--offline` ist sie nicht nötig.
-2. **Abrufen:** `npm run data:fetch -- <Argumente>` (Orte und Veranstalter, Snapshots unter `.cache/snapshots/<id>/`). Lies die Ausgabe und `updates/<Datum>/fetch-summary.json`. Fehlgeschlagene oder durch `robots.txt` gesperrte Seiten nennst du im Bericht; sie werden nicht umgangen.
+2. **Abrufen:** `npm run data:fetch -- <Argumente>` (Orte und Veranstalter, Snapshots unter `.cache/snapshots/<id>/`). Lies die Ausgabe und `updates/<Datum>/fetch-summary.json`. Fehlgeschlagene oder durch `robots.txt` gesperrte Seiten nennst du im Bericht; sie werden nicht umgangen. Wird einer Weiterleitung auf eine andere Website nicht gefolgt, nennst du Quelle und Zielhost im Bericht; nur der Mensch gibt den Host in `scripts/scrape/redirect-hosts.json` frei (nie selbst eintragen).
 3. **Extrahieren.** Für jeden Ort mit Snapshots (`.cache/snapshots/<venue-id>/*.json`, Feld `text`) vergleichst du den Text mit den vorhandenen Daten und schreibst `updates/<Datum>/<venue-id>.json` im Format aus `updates/README.md`. Zielfelder:
    - Ort (`venues`): `district`, `address.*`, `website`, `features.hasPermanentCollection`, `features.hasReferenceLibrary`, `features.libraryNotes`.
    - Neue Ausstellungen und Events dieses Ortes (`op: "add"`) mit allen Pflichtfeldern aus `schema/`; Daten als `JJJJ-MM-TT`; kommerzielle Events mit `isCommercial: true`; `photographerIds` nur für vorhandene Personen.

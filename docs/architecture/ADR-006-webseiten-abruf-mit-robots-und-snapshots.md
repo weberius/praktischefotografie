@@ -12,6 +12,8 @@ Die Daten der Orte sollen aus deren eigenen Webseiten vervollständigt werden. D
 - Snapshots (URL, Abrufzeit, Status, Hash, bereinigter Text) unter `.cache/snapshots/<venue-id>/`, nicht versioniert, nicht im Build. Cache-Alter `--max-age` (7 Tage), `--offline` für Läufe ohne Netz.
 - Abruffehler brechen den Lauf nicht ab; sie stehen im Bericht.
 
+**Ergänzt 2026-11-02:** Die Regel „keine Weiterleitung auf andere Websites“ gilt nur noch für nicht freigegebene Hosts; siehe ADR-021 (`Proposed`).
+
 **Dieselbe Website:** Gleicher Host, ein führendes `www.` zählt nicht als Unterschied (Befund im ersten Live-Lauf: `www.makk.de` verlinkt auf `makk.de`). Der Abstand von 2 s gilt je Website; `robots.txt` wird je Ursprung (Schema, Host, Port) gelesen.
 
 ## Alternativen

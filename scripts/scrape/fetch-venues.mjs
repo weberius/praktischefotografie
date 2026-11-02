@@ -4,15 +4,18 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ROOT, arg, loadSources, resolveVenues, today } from './lib/common.mjs';
+import { ROOT, arg, loadRedirectHosts, loadSources, resolveVenues, today } from './lib/common.mjs';
 import { fetchVenues } from './lib/fetcher.mjs';
 
 export async function main(argv = process.argv.slice(2), env = process.env) {
   const offline = arg(argv, 'offline', false) === true;
   const date = arg(argv, 'date', today());
-  const venues = resolveVenues(loadSources(), arg(argv, 'venue'));
+  const sources = loadSources();
+  const redirectHosts = loadRedirectHosts(sources); // vor der ersten Anfrage prüfen (FET-OP-3)
+  const venues = resolveVenues(sources, arg(argv, 'venue'));
   const summaries = await fetchVenues(venues, {
     contact: env.SCRAPE_CONTACT,
+    redirectHosts,
     offline,
     maxAgeDays: Number(arg(argv, 'max-age', 7)),
     snapshotDir: join(ROOT, '.cache', 'snapshots'),
