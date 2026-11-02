@@ -127,6 +127,27 @@
           "url": "https://en.wikipedia.org/wiki/August_Sander"
         }
       ]
+    },
+    "web": {
+      "summary": "August Sander (1876–1964) stammte aus Herdorf. Mit 1892 von einem Onkel erhaltener Kamera richtete er sich eine Dunkelkammer ein und brachte sich die Fotografie selbst bei. Später führte er Ateliers in Österreich und in Köln, wo er in den frühen 1920er Jahren mit den Kölner Progressiven in Kontakt kam. Sein Hauptwerk „Menschen des 20. Jahrhunderts“ zeigt die Gesellschaft der Weimarer Republik in sieben Gruppen, von Bauern bis zu den „letzten Menschen“. Bis 1945 umfasste das Archiv über 40.000 Aufnahmen, vollendet wurde es nie. 1929 erschien „Antlitz der Zeit“.",
+      "sources": [
+        {
+          "title": "August Sander - International Center of Photography",
+          "url": "https://www.icp.org/browse/archive/constituents/august-sander"
+        },
+        {
+          "title": "AUGUST SANDER – Atlas Gallery | Fine Art Photography",
+          "url": "https://www.atlasgallery.com/artists/august-sander"
+        },
+        {
+          "title": "August Sander Photography, Bio, Ideas | TheArtStory",
+          "url": "https://www.theartstory.org/artist/sander-august"
+        },
+        {
+          "title": "August Sander - A Key Figure in Early Documentary Photography",
+          "url": "https://artincontext.org/august-sander"
+        }
+      ]
     }
   },
   {
@@ -222,7 +243,21 @@
   },
   {
     "name": "Wolfgang Zurborn",
-    "id": "wolfgang-zurborn"
+    "id": "wolfgang-zurborn",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1956,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Wolfgang Zurborn kam 1956 in Ludwigshafen am Rhein zur Welt. Er lernte Fotografie zunächst in München und später an der Fachhochschule Dortmund bei Hans Meyer-Veden. Als freischaffender Fotograf unterrichtet er an mehreren Hochschulen im In- und Ausland. Seit 1986 leitet er gemeinsam mit Tina Schelhorn die Kölner Fotogalerie Lichtblick und engagiert sich im Präsidium der Deutschen Fotografischen Akademie. Seine Werkserien „Drift“, „Terra Incognita“ und „dressur real“ wurden weltweit gezeigt; für das Buch „Drift“ erhielt er 2008 den Deutschen Fotobuchpreis. Er lebt in Köln.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Wolfgang_Zurborn"
+        }
+      ]
+    }
   },
   {
     "name": "Herbert W. Franke",
@@ -257,7 +292,30 @@
   },
   {
     "name": "Gottfried Jäger",
-    "id": "gottfried-jaeger"
+    "id": "gottfried-jaeger",
+    "occupation": "Fotograf und Fototheoretiker",
+    "life": {
+      "from": 1937,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Gottfried Jäger wurde 1937 in Burg geboren. Nach der Lehre bei einem Fotografenmeister in Bielefeld studierte er Fotoingenieurwesen in Köln und legte 1960 die Meisterprüfung ab. In Bielefeld baute er das künstlerische Lehrgebiet Fotografie aus, gründete den Studienschwerpunkt Foto-/Film-Design und wurde 1972 Professor. Mit dem Forschungsschwerpunkt Fotografie und Medien und den Bielefelder Fotosymposien prägte er die Debatte um die Fotografie als eigenständige Kunst. Zeitweise lehrte er als Gastprofessor in Melbourne; seit 2002 ist er emeritiert. Er arbeitet als Fotograf und Theoretiker.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Gottfried_J%C3%A4ger"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "gottfried-jaeger.jpg",
+      "width": 400,
+      "height": 216,
+      "source": "https://commons.wikimedia.org/wiki/File:Gottfried_J%C3%A4ger_1987.jpg",
+      "credit": "Ralph Hinterkeuser",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
   },
   {
     "name": "Florian Fäth",
@@ -361,7 +419,21 @@
   },
   {
     "name": "Norbert Bunge",
-    "id": "norbert-bunge"
+    "id": "norbert-bunge",
+    "occupation": "Filmemacher, Fotograf und Galerist",
+    "life": {
+      "from": 1941,
+      "to": 2024
+    },
+    "wikipedia": {
+      "summary": "Norbert Bunge (1941–2024) wirkte in Berlin als Kameramann, Regisseur, Produzent, Fotograf und Galerist. Ab 1974 entstanden zahlreiche Dokumentarfilme, die unter anderem Künstlerporträts sowie den Nationalsozialismus und die Apartheid behandeln. 1996 gründete er in Berlin-Mitte die Galerie argus fotokunst, die der Fotografie des 20. Jahrhunderts gewidmet war, vor allem in Schwarzweiß. Besonders machte er ostdeutsche Fotografie bekannt, etwa Arno Fischer, Helga Paris und Uwe Steinberg. Außerdem gab er in Deutschland wenig bekannten Fotografen wieder eine Bühne.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Norbert_Bunge"
+        }
+      ]
+    }
   },
   {
     "name": "Cornell Capa",
@@ -590,7 +662,21 @@
   },
   {
     "name": "Leonard Freed",
-    "id": "leonard-freed"
+    "id": "leonard-freed",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1929,
+      "to": 2006
+    },
+    "wikipedia": {
+      "summary": "Leonard Freed (1929–2006) wurde als Kind osteuropäischer jüdischer Einwanderer in Brooklyn geboren. Eigentlich wollte er Maler werden, begann aber mit 24 Jahren auf einer Reise durch die Niederlande zu fotografieren. Er studierte bei Alexey Brodovitch und arbeitete ab 1961 freiberuflich. Sein Bildband „Black in White America“ von 1968 über das Leben in Harlem fand als Beitrag zur Bürgerrechtsbewegung Beachtung. Außerdem bekannt wurde er mit Reportagen über arabisch-israelische Konflikte. Ab 1972 war er Vollmitglied der Agentur Magnum Photos.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Leonard_Freed"
+        }
+      ]
+    }
   },
   {
     "name": "George Friedman",
@@ -737,11 +823,60 @@
   },
   {
     "name": "Bernd Heyden",
-    "id": "bernd-heyden"
+    "id": "bernd-heyden",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1940,
+      "to": 1984
+    },
+    "wikipedia": {
+      "summary": "Bernd Heyden (1940–1984) wurde in Swinemünde geboren und wuchs im Berliner Prenzlauer Berg auf. Zunächst lernte er Damenschneider und arbeitete in verschiedenen Berufen, bevor er ab 1965 erste fotografische Versuche unternahm. Ab 1967 wirkte er im „Club junger Fotografen“ mit, den Arno Fischer und Sibylle Bergemann ins Leben gerufen hatten. Ab 1976 war er freiberuflich tätig und Mitglied im Verband Bildender Künstler der DDR. Bekannt wurde er durch seine Aufnahmen aus dem Prenzlauer Berg, die fast alle im Jahrzehnt von 1970 bis 1980 entstanden und mehr als tausend Motive umfassen.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Bernd_Heyden"
+        }
+      ]
+    },
+    "web": {
+      "summary": "Bernd Heyden (1940–1984) lernte Damenschneider, arbeitete als Fahrer und brachte sich ab Mitte der 1960er Jahre die Fotografie weitgehend selbst bei. Gefördert vom Kreis um Arno Fischer, hielt er ohne Auftrag das Leben im Berliner Prenzlauer Berg fest, in dem er selbst aufgewachsen war: Straßenkehrer, Kohlenhändler, Kinder, Alte, auch Szenen von der Pferderennbahn. Seine Bilder wirken melancholisch, zeigen aber auch Humor. Offiziell wurde er in der DDR als „Müllkastenfotograf“ geschmäht. Eine erste Werkschau gab es erst 1987. Sein Nachlass mit rund 1.200 Abzügen liegt beim bpk in Berlin; 2008 erschien der Band „Berlin – Ecke Prenzlauer“.",
+      "sources": [
+        {
+          "title": "Bernd Heyden | bpk Fotoarchiv",
+          "url": "https://bpk-fotoarchiv.de/pages/bernd-heyden"
+        },
+        {
+          "title": "Bernd Heyden: Berlin - Ecke Prenzlauer. Fotografien 1968-1984 ...",
+          "url": "https://www.perlentaucher.de/buch/bernd-heyden/berlin-ecke-prenzlauer.html"
+        },
+        {
+          "title": "Start | berndheydenimbabylon",
+          "url": "https://geschichtsbuero.wixsite.com/berndheydenimbabylon"
+        },
+        {
+          "title": "Idylle in Grau: Fotografien 1966-1980: Heyden, Bernd ... - Amazon",
+          "url": "https://www.amazon.com/Idylle-in-Grau/dp/395797013X"
+        }
+      ]
+    }
   },
   {
     "name": "Gerhard Hopf",
-    "id": "gerhard-hopf"
+    "id": "gerhard-hopf",
+    "occupation": "Fotograf und Fotografiker",
+    "life": {
+      "from": 1946,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Gerhard Hopf wurde 1946 in Völkershausen geboren. Schon 1964 gehörte er dem Fotografie-Zirkel in Torgau an und studierte anschließend bis 1971 Fotografie an der Leipziger Hochschule für Grafik und Buchkunst, wo er später als künstlerischer Assistent tätig war. Ab 1981 war er selbstständig und belieferte Presse, Industrie und Verlage; bis 1990 gehörte er dem Künstlerverband der DDR an. Von 1991 bis 2005 fotografierte er für die Pressestelle des MDR in Leipzig. 2021 übernahm das Stadtarchiv Leipzig über 2100 seiner Negative.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Gerhard_Hopf"
+        }
+      ]
+    }
   },
   {
     "name": "Lotte Jacobi",
@@ -771,7 +906,21 @@
   },
   {
     "name": "Max Jacoby",
-    "id": "max-jacoby"
+    "id": "max-jacoby",
+    "occupation": "Fotograf und Bildjournalist",
+    "life": {
+      "from": 1919,
+      "to": 2009
+    },
+    "wikipedia": {
+      "summary": "Max Jacoby (1919–2009) wuchs als Sohn einer jüdischen Kaufmannsfamilie in Koblenz auf und begann in Berlin eine Fotografenausbildung. 1937 wanderte er nach Buenos Aires aus, arbeitete dort als Assistent und machte sich 1941 selbstständig. Er fotografierte für Zeitschriften und Werbeagenturen in New York und Südamerika und war 1951 Mitgründer der Gruppe „Group of Ten“, die die moderne südamerikanische Fotografie prägte. 1957 kehrte er nach Berlin zurück. Seine Bilder zeigen Länder, Städte, Menschen und Persönlichkeiten und wurden international ausgestellt und publiziert.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Max_Jacoby_(Fotograf)"
+        }
+      ]
+    }
   },
   {
     "name": "Richard Kalvar",
@@ -997,7 +1146,30 @@
   },
   {
     "name": "Stefan Moses",
-    "id": "stefan-moses"
+    "id": "stefan-moses",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1928,
+      "to": 2018
+    },
+    "wikipedia": {
+      "summary": "Stefan Moses (1928–2018) musste 1943 als Jude die Schule verlassen und überlebte ein Zwangsarbeitslager. Nach der Ausbildung in Breslau arbeitete er als Theaterfotograf in Weimar und lebte ab 1950 in München, wo er mit Reportagen für den „Stern“ bekannt wurde. Berühmt sind seine Porträts von Menschen und Berufen in Ost und West, die er vor einem grauen Leinentuch aufnahm, ebenso Bildnisse von Persönlichkeiten wie Thomas Mann oder Loriot. Sein fotografischer Nachlass liegt im Münchner Stadtmuseum.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Stefan_Moses"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "stefan-moses.jpg",
+      "width": 300,
+      "height": 533,
+      "source": "https://commons.wikimedia.org/wiki/File:Grab_Stefan_Moses.jpg",
+      "credit": "Harvey Kneeslapper",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+    }
   },
   {
     "name": "Elisabeth Niggemeyer",
@@ -1145,7 +1317,21 @@
   },
   {
     "name": "Gerhard Riebicke",
-    "id": "gerhard-riebicke"
+    "id": "gerhard-riebicke",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1878,
+      "to": 1957
+    },
+    "wikipedia": {
+      "summary": "Gerhard Riebicke (1878–1957) eignete sich die Fotografie autodidaktisch an, nachdem er Medizin und Lehramt studiert hatte. Ab 1909 arbeitete er in Berlin als Pressefotograf und führte später eine Agentur für Presse-Illustrationen. Sein Schwerpunkt verlagerte sich auf Sport und Freikörperkultur, mit Motiven wie Ballspiel, Sprung, Tanz und Badeszenen. Am bekanntesten sind seine Standfotos, die 1925 für den UFA-Film „Wege zu Kraft und Schönheit“ entstanden. Als Chronist der Reformbewegung hielt er Kontakt zu Tanz- und Gymnastikschulen. Sein Atelier wurde 1944 zerstört.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Gerhard_Riebicke"
+        }
+      ]
+    }
   },
   {
     "name": "Willy Ronis",
@@ -1218,7 +1404,21 @@
   },
   {
     "name": "Max Scheler",
-    "id": "max-scheler"
+    "id": "max-scheler",
+    "occupation": "Fotograf und Bildjournalist",
+    "life": {
+      "from": 1928,
+      "to": 2003
+    },
+    "wikipedia": {
+      "summary": "Max Scheler (1928–2003) wurde in Köln geboren und lernte als Jugendlicher Herbert List kennen, dem er 1951 auf Reisen durch Südeuropa assistierte. In Paris überzeugte ihn Robert Capa, seine Bilder über die Agentur Magnum anzubieten. Ab 1953 lebte er in Rom und arbeitete als freier Bildjournalist für Magazine wie Life und Paris Match. Von 1959 an war er für den „Stern“ tätig, dessen Bildsprache er mitprägte. Sein Hauptthema waren Menschen unterschiedlicher Kulturen, im Alltag, bei Festen und in Krisenzeiten.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Max_Scheler_(Fotograf)"
+        }
+      ]
+    }
   },
   {
     "name": "Karl Schenker",
@@ -1282,7 +1482,29 @@
   },
   {
     "name": "Robert Sennecke",
-    "id": "robert-sennecke"
+    "id": "robert-sennecke",
+    "occupation": "Pressefotograf",
+    "life": {
+      "from": 1885,
+      "to": 1940
+    },
+    "wikipedia": {
+      "summary": "Robert Sennecke (1885–1940) trat 1906 bei den Olympischen Zwischenspielen im Marathon an, musste aber aufgeben. Schon vor dem Ersten Weltkrieg arbeitete er als Pressefotograf und war im Krieg als Berichterstatter unterwegs, unter anderem im Osmanischen Reich. Danach zählte er zu den bekanntesten Pressefotografen seiner Zeit. Seine Bildagentur Internationaler Illustrations-Verlag belieferte deutsche und ausländische Medien mit aktuellen Aufnahmen. Seine eigene Spezialität war die Sportfotografie. Ab 1928 verschlechterte sich seine Gesundheit, und er gab die Firmenleitung ab.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Robert_Sennecke"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "robert-sennecke.jpg",
+      "width": 400,
+      "height": 534,
+      "source": "https://commons.wikimedia.org/wiki/File:WP_Robert_Sennecke.jpeg",
+      "credit": "Robert Sennecke",
+      "license": "Public domain"
+    }
   },
   {
     "name": "Anton Stankowski",
@@ -1321,7 +1543,21 @@
   },
   {
     "name": "Uwe Steinberg",
-    "id": "uwe-steinberg"
+    "id": "uwe-steinberg",
+    "occupation": "Fotograf und Fotojournalist",
+    "life": {
+      "from": 1942,
+      "to": 1983
+    },
+    "wikipedia": {
+      "summary": "Uwe Steinberg (1942–1983) wurde in Breslau geboren und war Gründungsmitglied der Gruppe Jugendfoto Berlin. Nach autodidaktischen Anfängen ließ er sich bei ADN-Zentralbild zum Bildreporter ausbilden und arbeitete vor allem für die „Neue Berliner Illustrierte“. Später absolvierte er ein Fernstudium der Fotografie in Leipzig. Er sah Fotografie als eigenständiges künstlerisches Medium; sein Werk ist thematisch und farblich vielseitig. Er starb 1983 nach einem Verkehrsunfall in Budapest. Arbeiten befinden sich unter anderem in der Berlinischen Galerie.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Uwe_Steinberg"
+        }
+      ]
+    }
   },
   {
     "name": "Louis Stettner",
@@ -1351,7 +1587,21 @@
   },
   {
     "name": "Dennis Stock",
-    "id": "dennis-stock"
+    "id": "dennis-stock",
+    "occupation": "Fotojournalist",
+    "life": {
+      "from": 1928,
+      "to": 2010
+    },
+    "wikipedia": {
+      "summary": "Dennis Stock (1928–2010) absolvierte nach dem Militärdienst eine Lehre bei Gjon Mili und gewann 1951 einen Nachwuchswettbewerb des Magazins „Life“. Noch im selben Jahr wurde er außerordentliches Mitglied der Agentur Magnum, 1954 Vollmitglied. Weltweit bekannt wurde seine Fotoserie mit James Dean von 1955, vor allem das Bild am regnerischen Times Square. Ab 1957 widmete er sich häufig Jazzmusikern. 1968 ließ er sich von Magnum freistellen, um eine eigene Filmfirma zu gründen. Der Film „Life“ von 2015 erzählt die Geschichte dieser Begegnung.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Dennis_Stock"
+        }
+      ]
+    }
   },
   {
     "name": "Sasha Stone",

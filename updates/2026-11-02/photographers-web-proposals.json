@@ -2,31 +2,42 @@
   "date": "2026-11-02",
   "proposals": [
     {
-      "id": "arno-fischer",
-      "approved": true,
+      "id": "bernd-heyden",
+      "name": "Bernd Heyden",
       "web": {
-        "summary": "Arno Fischer (1927–2011) wuchs im Berliner Arbeiterbezirk Wedding auf, lernte zunächst Modelltischler, studierte Bildhauerei und entdeckte dann die Fotografie. Sein bekanntestes Werk, „Situation Berlin“, hält bis 1960 das Alltagsleben der geteilten Stadt in Ost und West fest. Wegen des Mauerbaus durfte der geplante Bildband zunächst nicht erscheinen und kam erst 42 Jahre später heraus. 1965 gehörte Fischer zu den Mitgründern der Gruppe DIREKT. Als Lehrer in Leipzig, Berlin und Dortmund prägte er drei Generationen von Fotografinnen und Fotografen in beiden deutschen Staaten. 2000 erhielt er den Erich-Salomon-Preis, 2010 den Hannah-Höch-Preis.",
+        "summary": "Bernd Heyden (1940–1984) lernte Damenschneider, arbeitete als Fahrer und brachte sich ab Mitte der 1960er Jahre die Fotografie weitgehend selbst bei. Gefördert vom Kreis um Arno Fischer, hielt er ohne Auftrag das Leben im Berliner Prenzlauer Berg fest, in dem er selbst aufgewachsen war: Straßenkehrer, Kohlenhändler, Kinder, Alte, auch Szenen von der Pferderennbahn. Seine Bilder wirken melancholisch, zeigen aber auch Humor. Offiziell wurde er in der DDR als „Müllkastenfotograf“ geschmäht. Eine erste Werkschau gab es erst 1987. Sein Nachlass mit rund 1.200 Abzügen liegt beim bpk in Berlin; 2008 erschien der Band „Berlin – Ecke Prenzlauer“.",
         "sources": [
-          "https://berlinischegalerie.de/en/collection/specialised-fields/photography/arno-fischer",
-          "https://kicken-gallery.com/artists/arno-fischer"
+          "https://bpk-fotoarchiv.de/pages/bernd-heyden",
+          "https://www.perlentaucher.de/buch/bernd-heyden/berlin-ecke-prenzlauer.html",
+          "https://geschichtsbuero.wixsite.com/berndheydenimbabylon",
+          "https://www.amazon.com/Idylle-in-Grau/dp/395797013X"
         ]
       },
       "problems": [],
       "result": {
         "web": {
-          "summary": "Arno Fischer (1927–2011) wuchs im Berliner Arbeiterbezirk Wedding auf, lernte zunächst Modelltischler, studierte Bildhauerei und entdeckte dann die Fotografie. Sein bekanntestes Werk, „Situation Berlin“, hält bis 1960 das Alltagsleben der geteilten Stadt in Ost und West fest. Wegen des Mauerbaus durfte der geplante Bildband zunächst nicht erscheinen und kam erst 42 Jahre später heraus. 1965 gehörte Fischer zu den Mitgründern der Gruppe DIREKT. Als Lehrer in Leipzig, Berlin und Dortmund prägte er drei Generationen von Fotografinnen und Fotografen in beiden deutschen Staaten. 2000 erhielt er den Erich-Salomon-Preis, 2010 den Hannah-Höch-Preis.",
+          "summary": "Bernd Heyden (1940–1984) lernte Damenschneider, arbeitete als Fahrer und brachte sich ab Mitte der 1960er Jahre die Fotografie weitgehend selbst bei. Gefördert vom Kreis um Arno Fischer, hielt er ohne Auftrag das Leben im Berliner Prenzlauer Berg fest, in dem er selbst aufgewachsen war: Straßenkehrer, Kohlenhändler, Kinder, Alte, auch Szenen von der Pferderennbahn. Seine Bilder wirken melancholisch, zeigen aber auch Humor. Offiziell wurde er in der DDR als „Müllkastenfotograf“ geschmäht. Eine erste Werkschau gab es erst 1987. Sein Nachlass mit rund 1.200 Abzügen liegt beim bpk in Berlin; 2008 erschien der Band „Berlin – Ecke Prenzlauer“.",
           "sources": [
             {
-              "title": "Arno Fischer - Berlinische Galerie",
-              "url": "https://berlinischegalerie.de/en/collection/specialised-fields/photography/arno-fischer"
+              "title": "Bernd Heyden | bpk Fotoarchiv",
+              "url": "https://bpk-fotoarchiv.de/pages/bernd-heyden"
             },
             {
-              "title": "Kicken Berlin | Arno Fischer",
-              "url": "https://kicken-gallery.com/artists/arno-fischer"
+              "title": "Bernd Heyden: Berlin - Ecke Prenzlauer. Fotografien 1968-1984 ...",
+              "url": "https://www.perlentaucher.de/buch/bernd-heyden/berlin-ecke-prenzlauer.html"
+            },
+            {
+              "title": "Start | berndheydenimbabylon",
+              "url": "https://geschichtsbuero.wixsite.com/berndheydenimbabylon"
+            },
+            {
+              "title": "Idylle in Grau: Fotografien 1966-1980: Heyden, Bernd ... - Amazon",
+              "url": "https://www.amazon.com/Idylle-in-Grau/dp/395797013X"
             }
           ]
         }
       },
+      "approved": true,
       "appliedAt": "2026-11-02"
     }
   ]
