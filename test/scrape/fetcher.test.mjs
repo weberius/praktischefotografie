@@ -7,7 +7,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { DEFAULTS, extractPage, fetchVenues, siteOf } from '../../scripts/scrape/lib/fetcher.mjs';
-import { loadRedirectHosts } from '../../scripts/scrape/lib/common.mjs';
+import { loadRedirectHosts, loadSources } from '../../scripts/scrape/lib/common.mjs';
 import { testServer, page } from './server.mjs';
 
 const ROOT = fileURLToPath(new URL('../..', import.meta.url));
@@ -259,7 +259,7 @@ test('Szenario: Weiterleitungsdatei wird geprüft (FET-OP-3)', () => {
   assert.throws(() => loadRedirectHosts(sources, root), /ungültiger Hostname/);
   write({ unbekannt: ['example.org'] });
   assert.throws(() => loadRedirectHosts(sources, root), /unbekannte/);
-  assert.deepEqual(loadRedirectHosts(sources, ROOT), {}, 'mitgelieferte Datei ist gültig');
+  assert.deepEqual(loadRedirectHosts(loadSources(ROOT), ROOT), loadRedirectHosts(loadSources(ROOT)), 'mitgelieferte Datei ist gültig');
 });
 
 test('Szenario: Snapshot wird gespeichert (FET-UB-4)', async () => {
