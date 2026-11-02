@@ -32,3 +32,5 @@ ADR-004 verlangt für jede Karte eine gleichwertige Listenalternative mit densel
 - Gherkin: `web/karte.feature`; Anpassung der Formulierung in `web/veranstalter.feature` und `web/festivals.feature`.
 - Quality: Q-USE-9, Q-USE-10; Ergänzungen zu Q-USE-3, Q-USE-4, Q-PERF-3, Q-SEO-1.
 - Ergänzt ADR-004 und ADR-002 (Vorabrendern).
+
+**Hinweis 2026-11-02:** ADR-025 ersetzt die Filterparameter `city`, `type`, `library` und `collection` durch einen globalen Filter im Speicher; auf `/map` und im Link auf `/venues` bleiben nur `organizer` und `festival`. MAP-UB-8 gilt damit als MAP-UB-15. Die übrigen Entscheidungen dieses ADR bleiben unverändert.

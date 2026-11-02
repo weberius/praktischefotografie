@@ -11,6 +11,8 @@
       }
     </nav>
 
+    <app-global-filter />
+
     <h2 class="period" aria-live="polite">{{ label() }}</h2>
 
     @if (!p.isMonthView) {
@@ -28,6 +30,9 @@
           Für {{ label() }} gibt es keine Einträge.
         } @else {
           Es gibt keine laufenden oder kommenden Einträge.
+        }
+        @if (globalFilter.active()) {
+          <button type="button" (click)="globalFilter.reset()">Filter zurücksetzen</button>
         }
       </p>
     } @else {

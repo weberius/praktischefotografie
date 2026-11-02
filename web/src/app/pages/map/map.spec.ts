@@ -1,4 +1,4 @@
-// Gherkin: web/karte.feature (MAP-UB-1, MAP-UB-2, MAP-UB-4, MAP-UB-7, MAP-UB-8, MAP-UB-11, MAP-EV-1, MAP-UN-1), web/veranstalter.feature · „Veranstalterfilter in der Karte“ (ORG-UB-6) und web/festivals.feature · „Festivalfilter in Karte und Orten“ (FST-UB-5)
+// Gherkin: web/karte.feature (MAP-UB-1, MAP-UB-7, MAP-UB-11, MAP-UB-14, MAP-UB-15), web/filter.feature (FLT-UB-2, FLT-UB-4, FLT-ST-1), web/veranstalter.feature · „Veranstalterfilter in der Karte“ (ORG-UB-6) und web/festivals.feature · „Festivalfilter in Karte und Orten“ (FST-UB-5)
 import { Location } from '@angular/common';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
@@ -30,7 +30,7 @@ function choose(root: HTMLElement, label: string, value: string): void {
 }
 
 function toggle(root: HTMLElement, label: string): void {
-  const l = Array.from(root.querySelectorAll('label')).find((x) => x.textContent?.includes(label));
+  const l = Array.from(root.querySelectorAll('app-global-filter label')).find((x) => x.textContent?.trim() === label);
   (l?.querySelector('input') as HTMLInputElement).click();
 }
 
@@ -67,11 +67,11 @@ describe('MapPage', () => {
     expect(root.querySelectorAll('h1').length).toBe(1);
   });
 
-  it('Szenario: Link zur Ortsliste mit Filtern – alle sechs Filter gehen in den Link ein (MAP-UB-8)', async () => {
-    const { root } = await open('/map?city=Köln&type=museum&library=1&collection=1&organizer=photoszene-koeln&festival=photoszene-festival-2026');
+  it('Szenario: Link zur Ortsliste mit Filtern – Veranstalter und Festival gehen in den Link ein (MAP-UB-15)', async () => {
+    const { root } = await open('/map?organizer=photoszene-koeln&festival=photoszene-festival-2026');
     const link = root.querySelector('a.list-link') as HTMLAnchorElement;
     expect(link.textContent?.trim()).toBe('Orte als Liste anzeigen');
-    expect(link.getAttribute('href')).toBe('/venues?city=K%C3%B6ln&type=museum&library=1&collection=1&organizer=photoszene-koeln&festival=photoszene-festival-2026');
+    expect(link.getAttribute('href')).toBe('/venues?organizer=photoszene-koeln&festival=photoszene-festival-2026');
   });
 
   it('Szenario: Karte ohne Ortsliste – Seitenbeschreibung und Karten-Beschriftung versprechen keine Liste auf der Seite (MAP-UB-7)', async () => {
@@ -84,21 +84,22 @@ describe('MapPage', () => {
     expect(label).toContain('Ortsliste');
   });
 
-  it('Szenario: Link zur Ortsliste mit Filtern – ohne Filter führt er auf /venues (MAP-UB-8)', async () => {
+  it('Szenario: Link zur Ortsliste mit Filtern – ohne Filter führt er auf /venues (MAP-UB-15)', async () => {
     const { root } = await open('/map');
     expect(root.querySelector('a.list-link')?.getAttribute('href')).toBe('/venues');
   });
 
-  it('Szenario: Link zur Ortsliste mit Filtern – folgt den geänderten Filtern (MAP-UB-8)', async () => {
+  it('Szenario: Link zur Ortsliste mit Filtern – folgt dem geänderten Veranstalter (MAP-UB-15)', async () => {
     const { harness, root } = await open('/map');
-    choose(root, 'Stadt', 'Köln');
+    choose(root, 'Veranstalter', 'photoszene-koeln');
     await harness.fixture.whenStable();
     harness.detectChanges();
-    expect(root.querySelector('a.list-link')?.getAttribute('href')).toBe('/venues?city=K%C3%B6ln');
+    expect(root.querySelector('a.list-link')?.getAttribute('href')).toBe('/venues?organizer=photoszene-koeln');
   });
 
   it('Szenario: Legende der Ortstypen – steht bei der Karte und nennt alle fünf Typen, auch wenn die Filter nur einen Teil zeigen (MAP-UB-11)', async () => {
-    const { root } = await open('/map?city=Essen&type=museum');
+    const { root } = await open('/map');
+    toggle(root, 'Museum');
     const legend = root.querySelector('app-venue-legend') as HTMLElement;
     expect(legend).not.toBeNull();
     expect(Array.from(legend.querySelectorAll('li')).map((li) => li.textContent?.trim())).toEqual(['Museum', 'Galerie', 'Stiftung', 'Off-Space', 'Bibliothek / Archiv']);
@@ -113,46 +114,43 @@ describe('MapPage', () => {
     expect(root.querySelector('a.list-link')).not.toBeNull();
   });
 
-  it('Szenario: Filter wirken kombiniert – Köln und Präsenzbibliothek wirken auf die Marker', async () => {
+  it('Szenario: Filter gilt auf allen filterbaren Seiten – Typ und Orte wirken auf die Marker (FLT-UB-1, FLT-UB-2)', async () => {
     const { harness, root } = await open('/map');
     await until(() => names(root).length === 3, harness);
-    choose(root, 'Stadt', 'Köln');
+    toggle(root, 'Museum');
     await until(() => names(root).length === 2, harness);
-    expect(names(root)).toEqual(['Haus Köln Bibliothek', 'Galerie Köln']);
-    toggle(root, 'Hat Präsenzbibliothek');
-    await until(() => names(root).length === 1, harness);
-    expect(names(root)).toEqual(['Haus Köln Bibliothek']);
-  });
-
-  it('Szenario: Filterzustand in der Adresse – city=Köln', async () => {
-    const { harness, root } = await open('/map');
-    choose(root, 'Stadt', 'Köln');
-    await harness.fixture.whenStable();
-    expect(TestBed.inject(Location).path()).toContain('city=K%C3%B6ln');
-    toggle(root, 'Ständige Sammlung');
-    await harness.fixture.whenStable();
-    expect(TestBed.inject(Location).path()).toContain('collection=1');
-  });
-
-  it('Szenario: Filter aus der Adresse – Stadt Essen und Typ museum vorbelegt', async () => {
-    const { harness, root } = await open('/map?city=Essen&type=museum');
-    expect(select(root, 'Stadt').value).toBe('Essen');
-    expect(select(root, 'Typ').value).toBe('museum');
+    expect(names(root)).toEqual(['Haus Köln Bibliothek', 'Museum Essen']);
+    toggle(root, 'Museum Essen');
     await until(() => names(root).length === 1, harness);
     expect(names(root)).toEqual(['Museum Essen']);
   });
 
-  it('Szenario: Kein Treffer – Hinweis und Schaltfläche zum Zurücksetzen', async () => {
-    const { harness, root } = await open('/map?city=Essen&type=gallery');
+  it('Szenario: Der globale Filter steht nicht in der Adresse (FLT-UB-6, ADR-025)', async () => {
+    const { harness, root } = await open('/map');
+    toggle(root, 'Museum');
+    await harness.fixture.whenStable();
+    expect(TestBed.inject(Location).path()).toBe('/map');
+  });
+
+  it('Szenario: Veranstalter- und Festivalfilter aus der Adresse – altes city und type werden ignoriert (MAP-UB-14)', async () => {
+    const { harness, root } = await open('/map?city=Essen&type=gallery&organizer=photoszene-koeln&festival=photoszene-festival-2026');
+    expect(select(root, 'Veranstalter').value).toBe('photoszene-koeln');
+    expect(select(root, 'Festival').value).toBe('photoszene-festival-2026');
+    expect(root.querySelector('#filter-city')).toBeNull();
+    await until(() => names(root).length === 2, harness);
+  });
+
+  it('Szenario: Kein Treffer – Hinweis und Schaltfläche zum Zurücksetzen (FLT-ST-1)', async () => {
+    const { harness, root } = await open('/map?organizer=photoszene-koeln');
+    toggle(root, 'Museum Essen');
+    harness.detectChanges();
     expect(names(root)).toEqual([]);
     expect(root.querySelector('.notice')?.textContent).toContain('keinen Ort');
     // Der Hinweis steht oberhalb der (leeren) Karte, die Karte bleibt sichtbar.
     const notice = root.querySelector('.notice') as HTMLElement;
     const map = root.querySelector('app-venue-map') as HTMLElement;
     expect(notice.compareDocumentPosition(map) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
-    const reset = Array.from(root.querySelectorAll('button')).filter((b) => b.textContent?.trim() === 'Filter zurücksetzen');
-    expect(reset.length).toBe(1);
-    reset[0].click();
+    notice.querySelector('button')!.click();
     await harness.fixture.whenStable();
     harness.detectChanges();
     await until(() => names(root).length === 3, harness);

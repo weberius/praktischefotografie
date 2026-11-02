@@ -2,15 +2,17 @@ import { Component, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { DataService } from '../../core/data.service';
-import { VENUE_TYPE_INFO, VENUE_TYPE_OPTIONS, VenueType } from '../../core/models';
+import { GlobalFilter } from '../../core/global-filter';
+import { VENUE_TYPE_INFO } from '../../core/models';
 import { PageMeta } from '../../core/page-meta';
-import { VenueFilter, cities, filterToParams, filterVenues, paramsToFilter } from '../../core/venue-filter';
+import { VenueFilter, filterToParams, filterVenues, paramsToFilter } from '../../core/venue-filter';
 import { DataGate } from '../../shared/data-gate/data-gate';
+import { GlobalFilterControl } from '../../shared/global-filter/global-filter';
 
-/** Ortsverzeichnis mit Filtern nach Stadt und Typ; der Filterzustand liegt in den Query-Parametern (VNU-UB-1, VNU-UB-2, ORG-UB-6, FST-UB-5, FST-ST-3). */
+/** Ortsverzeichnis; es gilt der globale Filter (FLT-UB-2), Veranstalter und Festival liegen in den Query-Parametern (VNU-UB-1, ORG-UB-6, FST-UB-5, FST-ST-3). */
 @Component({
   selector: 'app-venue-list-page',
-  imports: [RouterLink, DataGate],
+  imports: [RouterLink, DataGate, GlobalFilterControl],
   templateUrl: './venue-list.html',
   styleUrl: './venue-list.css',
 })
@@ -20,12 +22,13 @@ export class VenueListPage {
   private readonly params = toSignal(inject(ActivatedRoute).queryParamMap, { requireSync: true });
 
   protected readonly typeInfo = VENUE_TYPE_INFO;
-  protected readonly typeOptions = VENUE_TYPE_OPTIONS;
+  protected readonly globalFilter = inject(GlobalFilter);
 
   protected readonly filter = computed(() => paramsToFilter(this.params()));
-  protected readonly cityOptions = computed(() => cities(this.data.venues()));
   protected readonly venues = computed(() =>
-    filterVenues(this.data.venues(), this.filter(), this.data.exhibitions(), this.data.festivals()).sort((a, b) => a.name.localeCompare(b.name, 'de')),
+    filterVenues(this.data.venues(), this.filter(), this.data.exhibitions(), this.data.festivals())
+      .filter((v) => this.globalFilter.allows(v))
+      .sort((a, b) => a.name.localeCompare(b.name, 'de')),
   );
   protected readonly organizerName = computed(() => {
     const id = this.filter().organizer;
@@ -40,14 +43,6 @@ export class VenueListPage {
 
   constructor() {
     inject(PageMeta).set('Orte', 'Verzeichnis der Museen, Galerien und weiteren Foto-Orte in NRW mit Adresse, Typ und Besonderheiten.');
-  }
-
-  protected setCity(city: string): void {
-    this.apply({ ...this.filter(), city: city || undefined });
-  }
-
-  protected setType(type: string): void {
-    this.apply({ ...this.filter(), type: (type || undefined) as VenueType | undefined });
   }
 
   protected clearOrganizer(): void {

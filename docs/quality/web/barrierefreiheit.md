@@ -15,3 +15,5 @@
 **Ergänzung 2026-10-29:** Q-USE-3 gilt für die Navigation im Burger-Menü (FRM-UB-1); Prüfung, Maße und Zusatzanforderungen in `seitenrahmen.md` (Q-USE-12, Q-USE-13).
 
 **Ergänzung 2026-10-29:** Q-USE-2 gilt auch für `/haftungsausschluss` und `/quellen` (NAV-UB-7); die rechtlichen Seiten werden zusätzlich nach Q-USE-14 geprüft.
+
+**Hinweis 2026-11-02:** MAP-UB-2, MAP-UB-3 und MAP-UB-8 (Q-USE-3) sind durch den globalen Filter ersetzt (`ears/web/karte.md`, ADR-025); es gelten FLT-UB-4 und MAP-UB-15, Q-USE-18 ergänzt die Prüfung der Filterbedienung.

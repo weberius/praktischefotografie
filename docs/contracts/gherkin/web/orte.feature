@@ -7,11 +7,8 @@ Funktionalität: Orte
     Wenn "/venues" aufgerufen wird
     Dann erscheinen drei Orte mit Name, Typ, Stadt und Besonderheiten
 
-  # EARS: VNU-UB-2
-  Szenario: Verzeichnis ist filterbar
-    Angenommen Orte in Köln und Essen
-    Wenn die Stadt "Essen" gewählt wird
-    Dann erscheinen nur Essener Orte
+  # EARS: VNU-UB-2 (ersetzt durch FLT-UB-1 und FLT-UB-2)
+  # Entfallen: Szenario „Verzeichnis ist filterbar“ (Stadt). Siehe `web/filter.feature`.
 
   # EARS: VNU-UB-3
   Szenario: Ortsdetail zeigt Stammdaten

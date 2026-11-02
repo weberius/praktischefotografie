@@ -5,21 +5,24 @@ import { Clock, formatRange } from '../../core/clock';
 import { DataService } from '../../core/data.service';
 import { exhibitionKind } from '../../core/exhibition-kind';
 import { ExhibitionStatus, STATUS_LABEL, exhibitionStatus } from '../../core/exhibition-status';
+import { GlobalFilter } from '../../core/global-filter';
 import { PageMeta } from '../../core/page-meta';
 import { DataGate } from '../../shared/data-gate/data-gate';
+import { GlobalFilterControl } from '../../shared/global-filter/global-filter';
 import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
 
 const STATUSES: ExhibitionStatus[] = ['kommend', 'endet-bald', 'laufend', 'beendet'];
 
-/** Ausstellungsliste mit Statusfilter (Query-Parameter `status`), neueste zuerst (EXH-UB-1, EXH-UB-3, EXH-UB-6, EXH-UB-8). */
+/** Ausstellungsliste mit Statusfilter (Query-Parameter `status`) und globalem Filter (FLT-UB-2), neueste zuerst (EXH-UB-1, EXH-UB-3, EXH-UB-6, EXH-UB-8). */
 @Component({
   selector: 'app-exhibition-list-page',
-  imports: [RouterLink, DataGate, ExhibitionBadges],
+  imports: [RouterLink, DataGate, GlobalFilterControl, ExhibitionBadges],
   templateUrl: './exhibition-list.html',
 })
 export class ExhibitionListPage {
   private readonly data = inject(DataService);
   private readonly router = inject(Router);
+  protected readonly globalFilter = inject(GlobalFilter);
   private readonly today = inject(Clock).today();
   private readonly params = toSignal(inject(ActivatedRoute).queryParamMap, { requireSync: true });
 
@@ -37,7 +40,7 @@ export class ExhibitionListPage {
         const status = exhibitionStatus(exhibition, this.today);
         return { exhibition, venue: this.data.venueById().get(exhibition.venueId), status, kind: exhibitionKind(exhibition), second: { label: STATUS_LABEL[status], status } };
       })
-      .filter((item) => !this.statusFilter() || item.status === this.statusFilter())
+      .filter((item) => (!this.statusFilter() || item.status === this.statusFilter()) && this.globalFilter.allows(item.venue))
       .sort((a, b) => b.exhibition.startDate.localeCompare(a.exhibition.startDate)),
   );
 

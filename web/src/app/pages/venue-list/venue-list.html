@@ -12,26 +12,7 @@
       <a href="#" (click)="clearFestival(); $event.preventDefault()">Festivalfilter aufheben</a>
     </p>
   }
-  <form class="filters" (submit)="$event.preventDefault()">
-    <label>
-      Stadt
-      <select (change)="setCity($any($event.target).value)">
-        <option value="" [selected]="!filter().city">Alle Städte</option>
-        @for (city of cityOptions(); track city) {
-          <option [value]="city" [selected]="city === filter().city">{{ city }}</option>
-        }
-      </select>
-    </label>
-    <label>
-      Typ
-      <select (change)="setType($any($event.target).value)">
-        <option value="" [selected]="!filter().type">Alle Typen</option>
-        @for (option of typeOptions; track option.value) {
-          <option [value]="option.value" [selected]="option.value === filter().type">{{ option.label }}</option>
-        }
-      </select>
-    </label>
-  </form>
+  <app-global-filter />
   <p class="meta" role="status">{{ venues().length }} {{ venues().length === 1 ? 'Ort' : 'Orte' }}</p>
   @if (venues().length) {
     <ul class="card-list">
@@ -54,6 +35,11 @@
       }
     </ul>
   } @else {
-    <p class="notice">Keine Orte für diese Auswahl gefunden.</p>
+    <p class="notice" role="status">
+      Keine Orte für diese Auswahl gefunden.
+      @if (globalFilter.active()) {
+        <button type="button" (click)="globalFilter.reset()">Filter zurücksetzen</button>
+      }
+    </p>
   }
 </app-data-gate>

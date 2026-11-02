@@ -11,7 +11,7 @@ PRD 2.3 verlangt eine OpenStreetMap-basierte Karte mit Filtern. `klangland` nutz
 - Die Attribution „© OpenStreetMap-Mitwirkende“ ist immer sichtbar.
 - Jede Karte hat eine **gleichwertige Listenalternative** mit denselben Filtern, damit Inhalte ohne Karte und per Tastatur erreichbar sind. *(Teilweise ersetzt durch ADR-016: auf `/map` liegt sie nicht mehr auf derselben Seite, sondern auf `/venues` mit übernommenen Filtern.)*
 - Außer den Kartenkacheln werden keine Drittanbieter-Ressourcen geladen. Der Kachelabruf wird im Datenschutzhinweis genannt.
-- Filterzustand (Stadt, Typ, Feature) liegt in der URL (Query-Parameter), damit Ansichten teilbar sind.
+- Filterzustand (Stadt, Typ, Feature) liegt in der URL (Query-Parameter), damit Ansichten teilbar sind. *(Teilweise ersetzt durch ADR-025: der Filter nach Ort und Ortstyp ist global und liegt im Speicher; nur Veranstalter und Festival bleiben in der URL.)*
 
 ## Alternativen
 - **MapLibre GL:** Vektorkacheln und flüssigere Darstellung, aber größerer Bundle und Kachelanbieter nötig.

@@ -1,5 +1,6 @@
 <h1>Events</h1>
 <app-data-gate>
+  <app-global-filter />
   <div class="filters">
     <label>
       Typ
@@ -17,7 +18,11 @@
   </div>
 
   @if (items().length === 0) {
-    <p class="notice" role="status">{{ onlyFavorites() ? 'Keine Favoriten für diese Auswahl.' : 'Keine Events für diese Auswahl.' }}</p>
+    <p class="notice" role="status">{{ onlyFavorites() ? 'Keine Favoriten für diese Auswahl.' : 'Keine Events für diese Auswahl.' }}
+      @if (globalFilter.active()) {
+        <button type="button" (click)="globalFilter.reset()">Filter zurücksetzen</button>
+      }
+    </p>
   } @else {
     <ul class="card-list">
       @for (item of items(); track item.event.id) {

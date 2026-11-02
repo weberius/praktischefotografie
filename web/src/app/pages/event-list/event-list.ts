@@ -4,21 +4,24 @@ import { Clock, formatRange } from '../../core/clock';
 import { DataService } from '../../core/data.service';
 import { isOver } from '../../core/exhibition-status';
 import { Favorites } from '../../core/favorites';
+import { GlobalFilter } from '../../core/global-filter';
 import { EVENT_TYPE_LABEL, EventType } from '../../core/models';
 import { PageMeta } from '../../core/page-meta';
 import { DataGate } from '../../shared/data-gate/data-gate';
+import { GlobalFilterControl } from '../../shared/global-filter/global-filter';
 import { FavoriteToggle } from '../../shared/favorite-toggle/favorite-toggle';
 
-/** Eventliste `/events`: nach Beginn aufsteigend, filterbar nach Typ (Query-Parameter `type`) und nach Favoriten (Query-Parameter `favorites=1`, FAV-UB-4, FAV-UB-6). */
+/** Eventliste `/events`: nach Beginn aufsteigend, filterbar nach Typ (Query-Parameter `type`) nach Favoriten (Query-Parameter `favorites=1`, FAV-UB-4, FAV-UB-6) und globalem Filter (FLT-UB-2). */
 @Component({
   selector: 'app-event-list-page',
-  imports: [RouterLink, DataGate, FavoriteToggle],
+  imports: [RouterLink, DataGate, GlobalFilterControl, FavoriteToggle],
   templateUrl: './event-list.html',
 })
 export class EventListPage {
   private readonly data = inject(DataService);
   private readonly router = inject(Router);
   private readonly store = inject(Favorites);
+  protected readonly globalFilter = inject(GlobalFilter);
 
   readonly type = input<string>();
   readonly favorites = input<string>();
@@ -43,7 +46,7 @@ export class EventListPage {
     const onlyFavorites = this.onlyFavorites();
     return this.data
       .events()
-      .filter((e) => (!type || e.eventType === type) && (!onlyFavorites || this.store.isFavorite(e.id)))
+      .filter((e) => (!type || e.eventType === type) && (!onlyFavorites || this.store.isFavorite(e.id)) && this.globalFilter.allows(venues.get(e.venueId)))
       .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.endDate.localeCompare(b.endDate) || a.title.localeCompare(b.title, 'de'))
       .map((e) => ({ event: e, venue: venues.get(e.venueId)?.name ?? e.city }));
   });

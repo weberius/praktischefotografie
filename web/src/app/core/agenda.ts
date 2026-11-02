@@ -11,6 +11,8 @@ export interface AgendaItem {
   title: string;
   /** Name des Ortes (aus `venueId`); leer, wenn der Ort unbekannt ist. */
   venue: string;
+  /** `venueId` der Quelle, für den globalen Filter (FLT-UB-2). */
+  venueId: string;
   startDate: string;
   endDate: string;
   /** Pfad der Detailseite (CAL-UB-2). */
@@ -35,6 +37,7 @@ export function buildAgenda(
       id: e.id,
       title: e.title,
       venue: venueName(e.venueId),
+      venueId: e.venueId,
       startDate: e.startDate,
       endDate: e.endDate,
       link: `/exhibitions/${e.id}`,
@@ -46,6 +49,7 @@ export function buildAgenda(
       id: e.id,
       title: e.title,
       venue: venueName(e.venueId),
+      venueId: e.venueId,
       startDate: e.startDate,
       endDate: e.endDate,
       link: `/events/${e.id}`,

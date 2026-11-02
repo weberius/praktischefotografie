@@ -1,5 +1,6 @@
 <h1>Ausstellungen</h1>
 <app-data-gate>
+  <app-global-filter />
   <form class="filters" (submit)="$event.preventDefault()">
     <label>
       Status
@@ -26,6 +27,11 @@
       }
     </ul>
   } @else {
-    <p class="notice">Keine Ausstellungen für diese Auswahl gefunden.</p>
+    <p class="notice" role="status">
+      Keine Ausstellungen für diese Auswahl gefunden.
+      @if (globalFilter.active()) {
+        <button type="button" (click)="globalFilter.reset()">Filter zurücksetzen</button>
+      }
+    </p>
   }
 </app-data-gate>

@@ -1,0 +1,19 @@
+# EARS: Globaler Filter (Kürzel `FLT`)
+
+**Bereich:** web  ·  **Systemname:** Webanwendung  ·  **Stand:** 2026-11-02
+
+Begriffe: „Globaler Filter“ schränkt die Ansichten der Anwendung auf gewählte Orte (Datensatztyp `venues`) und/oder gewählte Ortstypen (`museum`, `gallery`, `foundation`, `off_space`, `library_archive`) ein; „leer“ heißt: keine Einschränkung in dieser Dimension. Events und Ausstellungen gehören über `venueId` zu einem Ort und damit zu dessen Typ. „Filterbare Seiten“ sind Karte (`/map`), Ortsverzeichnis (`/venues`), Agenda (`/calendar`), Ausstellungsliste (`/exhibitions`) und Eventliste (`/events`). „Sitzung“ dauert bis zum Neuladen der Anwendung. Datenfelder siehe `schema/`.
+
+| ID | Anforderung | Gherkin | Quality | ADR |
+| --- | --- | --- | --- | --- |
+| FLT-UB-1 | Die Webanwendung soll einen globalen Filter mit den Dimensionen „Ort“ und „Ortstyp“ anbieten, in denen jeweils mehrere Werte gewählt werden können; die Dimensionen wirken gemeinsam (UND), innerhalb einer Dimension gilt ODER, eine leere Dimension schränkt nicht ein. | `web/filter.feature` · „Orte und Typen kombinieren“ | Q-USE-18 | ADR-025 |
+| FLT-UB-2 | Die Webanwendung soll den globalen Filter auf allen filterbaren Seiten anwenden: Karte und Ortsverzeichnis zeigen nur passende Orte; Agenda, Ausstellungsliste und Eventliste zeigen nur Einträge passender Orte. Detailseiten, Fotograf:innen, Festivals, Veranstalter:innen und Magazin bleiben unberührt. | `web/filter.feature` · „Filter gilt auf allen filterbaren Seiten“ | Q-USE-18 | ADR-025 |
+| FLT-UB-3 | Die Webanwendung soll den Zustand des globalen Filters beim Wechsel zwischen den Seiten der Anwendung beibehalten. | `web/filter.feature` · „Filter bleibt beim Seitenwechsel“ | Q-USE-18 | ADR-025 |
+| FLT-UB-4 | Die Webanwendung soll auf jeder filterbaren Seite dieselbe Filterbedienung zeigen, die die Auswahl der Orte und Ortstypen erlaubt, die aktive Auswahl in Text anzeigt und das Zurücksetzen auf „alle“ erlaubt. | `web/filter.feature` · „Eine Filterbedienung auf jeder Seite“ | Q-USE-18, Q-USE-3 | ADR-025 |
+| FLT-UB-5 | Die Webanwendung soll den globalen Filter mit den seitenlokalen Filtern (Eventtyp, Ausstellungsstatus, „Nur Favoriten“) gemeinsam anwenden (UND). | `web/filter.feature` · „Globaler und lokaler Filter wirken gemeinsam“ | Q-USE-18 | ADR-025 |
+| FLT-UB-6 | Die Webanwendung soll den globalen Filter ausschließlich im Speicher der laufenden Sitzung halten, sodass nach dem Neuladen kein Filter gesetzt ist und weder Cookies noch Web-Speicher noch Netzanfragen dafür verwendet werden. | `web/filter.feature` · „Neuladen setzt den Filter zurück“ | Q-SEC-11 | ADR-025 |
+| FLT-ST-1 | Solange der globale Filter gesetzt ist und kein Eintrag der Seite dazu passt, soll die Webanwendung einen Hinweis mit einer Schaltfläche zum Zurücksetzen statt einer leeren Seite anzeigen. | `web/filter.feature` · „Kein Treffer“ | Q-USE-18 | ADR-025 |
+| FLT-UN-1 | Solange der globale Filter gesetzt ist, soll die Webanwendung Events und Ausstellungen ohne bekannten Ort nicht anzeigen. | `web/filter.feature` · „Einträge ohne bekannten Ort“ | – | ADR-025 |
+| FLT-UB-7 | Die Webanwendung soll die Filterwerte (Orte, Ortstypen) aus den Daten der Anwendung ableiten und nur Orte und Typen anbieten, die in den Daten vorkommen; Orte werden nach Name sortiert. | `web/filter.feature` · „Auswahl aus den Daten“ | – | ADR-025 |
+
+**Verhältnis zu bestehenden Anforderungen:** Festival- und Veranstalterfilter (FST-UB-4, FST-UB-5, FST-ST-3, ORG-UB-6) bleiben als Query-Parameter unverändert; EVT-UB-2, EXH-UB-3, FAV-UB-4 und FAV-UB-6 bleiben als lokale Filter gültig. Der globale Filter ersetzt die Filter nach Stadt, Typ, Präsenzbibliothek und Ständiger Sammlung auf Karte und Ortsverzeichnis: VNU-UB-2, MAP-UB-2, MAP-UB-4, MAP-EV-1, MAP-UN-1 und MAP-UB-8 sind per Supersede angepasst. RCH-UB-3 (keine Cookies, kein Tracking) bleibt wahr, weil FLT-UB-6 nichts speichert.

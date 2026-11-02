@@ -1,4 +1,4 @@
-// Gherkin: web/orte.feature (VNU-UB-1, VNU-UB-2, VNU-UB-5); web/veranstalter.feature (ORG-UB-4, Filter im Ortsverzeichnis)
+// Gherkin: web/orte.feature (VNU-UB-1, VNU-UB-5); web/filter.feature (FLT-UB-2, FLT-ST-1); web/veranstalter.feature (ORG-UB-4, Filter im Ortsverzeichnis)
 import { TestBed } from '@angular/core/testing';
 import { provideRouter, withComponentInputBinding, Router } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
@@ -14,16 +14,6 @@ async function open(url: string): Promise<{ harness: RouterTestingHarness; el: H
 }
 
 const cards = (el: HTMLElement) => Array.from(el.querySelectorAll<HTMLElement>('ul.card-list > li'));
-
-async function choose(harness: RouterTestingHarness, label: string, value: string): Promise<HTMLElement> {
-  const el = harness.routeNativeElement as HTMLElement;
-  const select = Array.from(el.querySelectorAll('label')).find((l) => l.textContent?.trim().startsWith(label))?.querySelector('select') as HTMLSelectElement;
-  select.value = value;
-  select.dispatchEvent(new Event('change'));
-  await harness.fixture.whenStable();
-  harness.detectChanges();
-  return el;
-}
 
 describe('VenueListPage', () => {
   beforeEach(() => {
@@ -43,23 +33,35 @@ describe('VenueListPage', () => {
     expect(lib.querySelector('a')?.getAttribute('href')).toBe('/venues/v-koeln-lib');
   });
 
-  it('Szenario: Verzeichnis ist filterbar (VNU-UB-2)', async () => {
+  it('Szenario: Filter gilt auf allen filterbaren Seiten – Verzeichnis nach Typ und Ort (FLT-UB-1, FLT-UB-2)', async () => {
     const { harness, el } = await open('/venues');
-    expect(el.querySelector('label select')).not.toBeNull();
-    await choose(harness, 'Stadt', 'Essen');
-    const items = cards(el);
-    expect(items.length).toBe(1);
-    expect(items[0].textContent).toContain('Museum Essen');
-    expect(TestBed.inject(Router).url).toBe('/venues?city=Essen');
+    const tick = async () => { await harness.fixture.whenStable(); harness.detectChanges(); };
+    const box = (label: string) => Array.from(el.querySelectorAll('app-global-filter label')).find((l) => l.textContent?.trim() === label)!.querySelector('input')!;
+    box('Galerie').click();
+    await tick();
+    expect(cards(el).map((c) => c.querySelector('h2')!.textContent!.trim())).toEqual(['Galerie Köln']);
+    box('Galerie').click();
+    box('Museum Essen').click();
+    await tick();
+    expect(cards(el).length).toBe(1);
+    expect(cards(el)[0].textContent).toContain('Museum Essen');
+    expect(TestBed.inject(Router).url).toBe('/venues');
+    expect(el.querySelector('.filters select')).toBeNull();
   });
 
-  it('Szenario: Filter nach Typ und Filterzustand aus der Adresse (VNU-UB-2)', async () => {
-    const { harness, el } = await open('/venues?city=K%C3%B6ln');
+  it('Szenario: Kein Treffer – Hinweis mit Zurücksetzen (FLT-ST-1)', async () => {
+    const { harness, el } = await open('/venues?organizer=photoszene-koeln');
+    const box = (label: string) => Array.from(el.querySelectorAll('app-global-filter label')).find((l) => l.textContent?.trim() === label)!.querySelector('input')!;
+    box('Museum Essen').click();
+    await harness.fixture.whenStable();
+    harness.detectChanges();
+    expect(cards(el).length).toBe(0);
+    const notice = Array.from(el.querySelectorAll<HTMLElement>('p.notice')).pop()!;
+    expect(notice.textContent).toContain('Keine Orte');
+    notice.querySelector('button')!.click();
+    await harness.fixture.whenStable();
+    harness.detectChanges();
     expect(cards(el).length).toBe(2);
-    await choose(harness, 'Typ', 'gallery');
-    expect(cards(el).length).toBe(1);
-    expect(cards(el)[0].textContent).toContain('Galerie Köln');
-    expect(TestBed.inject(Router).url).toContain('type=gallery');
   });
 
   it('Szenario: Typ mit Text und Symbol (VNU-UB-5)', async () => {

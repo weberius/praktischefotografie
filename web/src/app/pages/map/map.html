@@ -1,24 +1,7 @@
 <h1>Karte</h1>
 <app-data-gate>
+  <app-global-filter />
   <form class="filters" aria-label="Orte filtern" (submit)="$event.preventDefault()">
-    <label>
-      Stadt
-      <select id="filter-city" (change)="update({ city: value($event) || undefined })">
-        <option value="" [selected]="!filter().city">Alle Städte</option>
-        @for (city of cities(); track city) {
-          <option [value]="city" [selected]="filter().city === city">{{ city }}</option>
-        }
-      </select>
-    </label>
-    <label>
-      Typ
-      <select id="filter-type" (change)="update({ type: asType(value($event)) })">
-        <option value="" [selected]="!filter().type">Alle Typen</option>
-        @for (type of types; track type.value) {
-          <option [value]="type.value" [selected]="filter().type === type.value">{{ type.label }}</option>
-        }
-      </select>
-    </label>
     <label>
       Veranstalter:in
       <select id="filter-organizer" (change)="update({ organizer: value($event) || undefined })">
@@ -37,16 +20,8 @@
         }
       </select>
     </label>
-    <label class="inline">
-      <input type="checkbox" [checked]="!!filter().library" (change)="update({ library: checked($event) || undefined })" />
-      Hat Präsenzbibliothek
-    </label>
-    <label class="inline">
-      <input type="checkbox" [checked]="!!filter().collection" (change)="update({ collection: checked($event) || undefined })" />
-      Ständige Sammlung
-    </label>
-    @if (hasFilter() && venues().length > 0) {
-      <button type="button" (click)="reset()">Filter zurücksetzen</button>
+    @if (hasUrlFilter()) {
+      <button type="button" (click)="resetUrlFilter()">Veranstalter und Festival zurücksetzen</button>
     }
   </form>
 
@@ -58,7 +33,7 @@
   @if (venues().length === 0) {
     <div class="notice">
       <p>Zu diesen Filtern gibt es keinen Ort.</p>
-      <button type="button" (click)="reset()">Filter zurücksetzen</button>
+      <button type="button" (click)="resetAll()">Alle Filter zurücksetzen</button>
     </div>
   }
 

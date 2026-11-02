@@ -14,3 +14,5 @@
 **Ergänzung 2026-10-29 zu Q-PERF-3:** Q-PERF-3 gilt für `/map` unverändert (Lighthouse-Performance ≥ 90). Symbole werden ohne Bilddateien gezeichnet; die Standard-Marker-Bilder entfallen auf `/map`.
 
 **Ergänzung 2026-10-29 zu Q-SEO-1:** Beim Vorabrendern liefert `/map` Hauptüberschrift, Filter und den Hinweis mit dem Link auf `/venues` als Hauptinhalt (MAP-UB-13); die Ortsliste entfällt.
+
+**Hinweis 2026-11-02:** Verweise auf MAP-UB-2, MAP-UB-3 und MAP-UB-8 gelten nun für den globalen Filter (FLT-UB-4, `ears/web/filter.md`) bzw. MAP-UB-15 (ADR-025).

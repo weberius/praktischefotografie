@@ -8,37 +8,33 @@ Funktionalität: Karte der Orte
     Dann zeigt die Karte drei Marker
     Und die Auswahl eines Markers zeigt Name, Typ und einen Link zur Ortsseite
 
-  # EARS: MAP-UB-2
-  Szenario: Filter wirken kombiniert
-    Angenommen Orte in Köln und Essen, davon einer in Köln mit Präsenzbibliothek
-    Wenn die Stadt "Köln" und die Eigenschaft "Hat Präsenzbibliothek" gewählt werden
-    Dann bleibt nur der Kölner Ort mit Präsenzbibliothek übrig
+  # EARS: MAP-UB-2 (ersetzt durch FLT-UB-1 und FLT-UB-2)
+  # Entfallen: Szenario „Filter wirken kombiniert“ (Stadt, Präsenzbibliothek). Siehe `web/filter.feature`.
 
   # EARS: MAP-UB-3 (ersetzt durch MAP-UB-7 und MAP-UB-8)
   # Entfallen: Szenario „Listenalternative“ („Dann enthält die Seite eine Liste mit denselben drei Orten“).
   # Die Listenalternative liegt auf "/venues" (ADR-016).
 
-  # EARS: MAP-UB-4
-  Szenario: Filterzustand in der Adresse
-    Angenommen die Stadt "Köln" ist gewählt
-    Dann enthält die Adresse "city=Köln"
+  # EARS: MAP-UB-4 (ersetzt durch MAP-UB-14)
+  # Entfallen: Szenario „Filterzustand in der Adresse“ (`city=Köln`).
 
-  # EARS: MAP-EV-1
-  Szenario: Filter aus der Adresse
-    Angenommen die Adresse "/map?city=Essen&type=museum"
+  # EARS: MAP-EV-1 (ersetzt durch MAP-UB-14)
+  # Entfallen: Szenario „Filter aus der Adresse“ (`city`, `type`).
+
+  # EARS: MAP-UB-14
+  Szenario: Veranstalter- und Festivalfilter aus der Adresse
+    Angenommen die Adresse "/map?organizer=photoszene-koeln&festival=photoszene-festival-2027"
     Wenn sie aufgerufen wird
-    Dann sind die Filter Stadt "Essen" und Typ "museum" gesetzt
+    Dann sind Veranstalter und Festival als Filter gesetzt
+    Und die Karte zeigt nur zugehörige Orte
 
   # EARS: MAP-UB-5
   Szenario: Attribution sichtbar
     Angenommen die Karte ist geladen
     Dann ist die Attribution "© OpenStreetMap-Mitwirkende" sichtbar
 
-  # EARS: MAP-UN-1
-  Szenario: Kein Treffer
-    Angenommen Filter, zu denen kein Ort passt
-    Dann zeigt die Seite einen Hinweis
-    Und eine Schaltfläche zum Zurücksetzen der Filter
+  # EARS: MAP-UN-1 (ersetzt durch FLT-ST-1)
+  # Entfallen: Szenario „Kein Treffer“. Siehe `web/filter.feature`.
 
   # EARS: MAP-UB-6 (ersetzt durch MAP-UB-13)
   # EARS: MAP-UB-13
@@ -54,11 +50,12 @@ Funktionalität: Karte der Orte
     Dann zeigt die Karte drei Marker
     Und die Seite enthält keine Liste der Orte
 
-  # EARS: MAP-UB-8
+  # EARS: MAP-UB-8 (ersetzt durch MAP-UB-15)
+  # EARS: MAP-UB-15
   Szenario: Link zur Ortsliste mit Filtern
-    Angenommen die Adresse "/map?city=Köln&type=museum&library=1&collection=1&organizer=photoszene-koeln&festival=photoszene-festival-2027"
+    Angenommen die Adresse "/map?organizer=photoszene-koeln&festival=photoszene-festival-2027"
     Wenn sie aufgerufen wird
-    Dann führt der Link zur Ortsliste auf "/venues" mit denselben Filtern
+    Dann führt der Link zur Ortsliste auf "/venues" mit denselben Parametern
     Und ohne gesetzte Filter führt er auf "/venues"
 
   # EARS: MAP-UB-9

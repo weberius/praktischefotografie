@@ -57,8 +57,8 @@ describe('ExhibitionListPage', () => {
 
   it('Szenario: Liste ist nach Status filterbar (EXH-UB-3)', async () => {
     const { harness, el } = await open('/exhibitions');
-    const select = el.querySelector('select') as HTMLSelectElement;
-    expect(el.querySelector('label')?.textContent).toContain('Status');
+    const select = el.querySelector('.filters select') as HTMLSelectElement;
+    expect(el.querySelector('.filters label')?.textContent).toContain('Status');
     expect(Array.from(select.options).map((o) => o.textContent?.trim())).toEqual(['Alle', 'Kommend', 'Endet bald', 'Laufend', 'Beendet']);
     select.value = 'kommend';
     select.dispatchEvent(new Event('change'));
@@ -72,7 +72,7 @@ describe('ExhibitionListPage', () => {
   it('Filterzustand wird aus der Adresse gelesen (EXH-UB-3)', async () => {
     const { el } = await open('/exhibitions?status=beendet');
     expect(cards(el).length).toBe(1);
-    expect((el.querySelector('select') as HTMLSelectElement).value).toBe('beendet');
+    expect((el.querySelector('.filters select') as HTMLSelectElement).value).toBe('beendet');
   });
 
   it('Szenario: Status als Text (EXH-UB-6)', async () => {

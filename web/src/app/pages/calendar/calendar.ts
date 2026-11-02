@@ -5,7 +5,9 @@ import { AgendaItem, buildAgenda, filterByMonth, filterFromToday, parseMonth, sh
 import { DataService } from '../../core/data.service';
 import { STATUS_LABEL } from '../../core/exhibition-status';
 import { PageMeta } from '../../core/page-meta';
+import { GlobalFilter } from '../../core/global-filter';
 import { DataGate } from '../../shared/data-gate/data-gate';
+import { GlobalFilterControl } from '../../shared/global-filter/global-filter';
 import { NotFound } from '../../shared/not-found/not-found';
 import { ExhibitionBadges, SecondBadge } from '../../shared/exhibition-badges/exhibition-badges';
 import { FavoriteToggle } from '../../shared/favorite-toggle/favorite-toggle';
@@ -13,7 +15,7 @@ import { FavoriteToggle } from '../../shared/favorite-toggle/favorite-toggle';
 /** Kalender und Agenda: `/calendar` (ab heute) und `/calendar/:year/:month` (Monatsansicht). */
 @Component({
   selector: 'app-calendar-page',
-  imports: [RouterLink, DataGate, NotFound, ExhibitionBadges, FavoriteToggle],
+  imports: [RouterLink, DataGate, GlobalFilterControl, NotFound, ExhibitionBadges, FavoriteToggle],
   templateUrl: './calendar.html',
   styleUrl: './calendar.css',
 })
@@ -21,6 +23,7 @@ export class CalendarPage {
   private readonly data = inject(DataService);
   private readonly clock = inject(Clock);
   private readonly router = inject(Router);
+  protected readonly globalFilter = inject(GlobalFilter);
 
   readonly year = input<string>();
   readonly month = input<string>();
@@ -54,7 +57,8 @@ export class CalendarPage {
   protected readonly items = computed<AgendaItem[]>(() => {
     const p = this.period();
     if (!p) return [];
-    const all = buildAgenda(this.data.exhibitions(), this.data.events(), this.data.venueById(), this.today);
+    const venues = this.data.venueById();
+    const all = buildAgenda(this.data.exhibitions(), this.data.events(), venues, this.today).filter((i) => this.globalFilter.allows(venues.get(i.venueId)));
     return p.isMonthView ? filterByMonth(all, p.year, p.month) : filterFromToday(all, this.today, this.showEnded());
   });
 

@@ -81,8 +81,8 @@ describe('CalendarPage', () => {
     expect(titles(el)).toContain('Ausstellung a-kommend');
     expect(titles(el)).not.toContain('Ausstellung a-beendet');
     expect(titles(el)).not.toContain('Lesung');
-    const box = el.querySelector<HTMLInputElement>('input[type=checkbox]')!;
-    expect(el.querySelector('label')?.textContent).toContain('Beendete anzeigen');
+    const box = el.querySelector<HTMLInputElement>('.filters input[type=checkbox]')!;
+    expect(el.querySelector('.filters label')?.textContent).toContain('Beendete anzeigen');
     box.click();
     await harness.fixture.whenStable();
     harness.detectChanges();
@@ -95,7 +95,7 @@ describe('CalendarPage', () => {
   it('Szenario: Beendete anzeigen aus der Adresse (CAL-OP-1)', async () => {
     const { el } = await open('/calendar?ended=1');
     expect(titles(el)).toContain('Ausstellung a-beendet');
-    expect(el.querySelector<HTMLInputElement>('input[type=checkbox]')?.checked).toBeTrue();
+    expect(el.querySelector<HTMLInputElement>('.filters input[type=checkbox]')?.checked).toBeTrue();
   });
 
   it('Szenario: Monatsansicht (CAL-EV-1)', async () => {
