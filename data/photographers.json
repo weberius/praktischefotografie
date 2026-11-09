@@ -1707,5 +1707,49 @@
   {
     "name": "Marie Watt",
     "id": "marie-watt"
+  },
+  {
+    "id": "sasa-fuis",
+    "name": "Saša Fuis"
+  },
+  {
+    "id": "herlinde-koelbl",
+    "name": "Herlinde Koelbl",
+    "occupation": "Fotografin und Dokumentarfilmerin",
+    "life": {
+      "from": 1939,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Herlinde Koelbl, geboren 1939 in Lindau am Bodensee, ist eine deutsche Fotografin und Dokumentarfilmerin. Nach einem Modestudium kam sie als Autodidaktin zur Fotografie und arbeitet seit 1976 für Zeitungen und Zeitschriften. Bekannt wurde sie durch langfristig angelegte Projekte, die sie als Bücher und Ausstellungen veröffentlicht, darunter „Das deutsche Wohnzimmer“ (1980) und „Jüdische Porträts“ (1989), die Fotografien mit Gesprächen verbindet. Ihr größtes Projekt ist „Spuren der Macht“: Von 1991 bis 1998 porträtierte sie jährlich Persönlichkeiten aus Politik und Wirtschaft. Der zugehörige Film erhielt den Deutschen Kritikerpreis.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Herlinde_Koelbl"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Herlinde_Koelbl"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "herlinde-koelbl.jpg",
+      "width": 400,
+      "height": 540,
+      "source": "https://commons.wikimedia.org/wiki/File:Herlinde_Koelbl_auf_der_Frankfurter_Buchmesse_2026.jpg",
+      "credit": "Elena Ternovaja",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    "web": {
+      "summary": "Unter den Fotografinnen in Deutschland gehört Herlinde Koelbl zu den bekanntesten. Berühmt wurde sie durch Langzeitstudien. In ihren ungeschönten Fotoserien stehen Menschen im Zentrum; zugleich greift sie gesellschaftliche Tabus auf. In ihrem neuen Bildband zeigt sie Patientinnen und Patienten während der Strahlentherapie. Dazu war sie am 5. November 2026 in einem knapp 40-minütigen Gespräch im Deutschlandfunk Kultur zu hören, im Podcast „Im Gespräch“ mit Britta Bürger. Der Beitrag stellt die Fotografin und ihre Arbeit als Nahaufnahme des Menschen vor.",
+      "sources": [
+        {
+          "title": "Deutschlandfunk Kultur: Herlinde Koelbl (Interview)",
+          "url": "https://www.deutschlandfunkkultur.de/fotografin-herlinde-koelbl-nahaufnahme-mensch-100.html"
+        }
+      ]
+    }
   }
 ]

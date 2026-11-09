@@ -36,6 +36,21 @@ test('Szenario: Jede Venue nennt Quelle und Prüfstand (VEN-UB-5, Q-DATA-2)', ()
   }
 });
 
+test('Szenario: Neue Venues sind im Katalog (VEN-UB-6, VEN-UB-7)', () => {
+  const erwartet = [
+    { id: 'forum-fuer-fotografie-koeln', type: 'gallery', city: 'Köln', website: 'https://de.forum-fotografie.info/' },
+    { id: 'kunstmuseum-bonn', type: 'museum', city: 'Bonn', website: 'https://www.kunstmuseum-bonn.de/de/' },
+  ];
+  for (const e of erwartet) {
+    const v = venues.find((x) => x.id === e.id);
+    assert.ok(v, `fehlt: ${e.id}`);
+    assert.equal(v.type, e.type);
+    assert.equal(v.city, e.city);
+    assert.equal(v.website, e.website);
+    assert.ok(v.source.url && v.source.checkedAt && v.source.status, e.id);
+  }
+});
+
 test('Q-USE-1: Adresse als Text vollständig', () => {
   for (const { id, address: a } of venues) assert.ok(a.street && a.zip && a.city, id);
 });

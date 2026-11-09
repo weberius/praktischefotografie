@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-09",
+  "offline": false,
+  "venues": [
+    {
+      "venueId": "kunstmuseum-bonn",
+      "status": "abgerufen",
+      "pages": 6,
+      "fetched": 6,
+      "cached": 0,
+      "errors": [],
+      "notes": []
+    }
+  ]
+}

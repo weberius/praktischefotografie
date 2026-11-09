@@ -42,5 +42,16 @@
     "isCommercial": false,
     "description": "Finissage am Sonntag, 1. November 2026, mit einer Performance von Oliver Bedorf. Resonanz im Fotoraum um 18:00 Uhr.",
     "id": "men-dont-cry-2026-finissage"
+  },
+  {
+    "title": "Eröffnung: Köln. Wunderlich",
+    "eventType": "vernissage",
+    "startDate": "2026-11-28",
+    "endDate": "2026-11-28",
+    "venueId": "forum-fuer-fotografie-koeln",
+    "city": "Köln",
+    "isCommercial": false,
+    "description": "Eröffnung am 28. November 2026 um 16:00 Uhr.",
+    "id": "koeln-wunderlich-2026-eroeffnung"
   }
 ]

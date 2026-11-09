@@ -586,5 +586,173 @@
       "men-dont-cry-2026"
     ],
     "contentFile": "content/posts/men-dont-cry-2026-ende.md"
+  },
+  {
+    "id": "invisible-moments-2026-neu",
+    "slug": "invisible-moments-2026-neu",
+    "title": "Invisible Moments in Köln",
+    "date": "2026-11-09",
+    "excerpt": "Ab 19. September 2026 zeigt das Forum für Fotografie Köln „Invisible Moments“ von Saša Fuis; die Ausstellung läuft bis 21. November 2026.",
+    "linkedVenueIds": [
+      "forum-fuer-fotografie-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "invisible-moments-2026"
+    ],
+    "contentFile": "content/posts/invisible-moments-2026-neu.md"
+  },
+  {
+    "id": "invisible-moments-2026-eroeffnung",
+    "slug": "invisible-moments-2026-eroeffnung",
+    "title": "Invisible Moments in Köln",
+    "date": "2026-09-19",
+    "excerpt": "Das Forum für Fotografie Köln hat am 19. September 2026 „Invisible Moments“ von Saša Fuis eröffnet.",
+    "linkedVenueIds": [
+      "forum-fuer-fotografie-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "invisible-moments-2026"
+    ],
+    "contentFile": "content/posts/invisible-moments-2026-eroeffnung.md"
+  },
+  {
+    "id": "invisible-moments-2026-endet-bald",
+    "slug": "invisible-moments-2026-endet-bald",
+    "title": "Invisible Moments in Köln",
+    "date": "2026-11-07",
+    "excerpt": "„Invisible Moments“ von Saša Fuis im Forum für Fotografie Köln ist nur noch bis 21. November 2026 zu sehen.",
+    "linkedVenueIds": [
+      "forum-fuer-fotografie-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "invisible-moments-2026"
+    ],
+    "contentFile": "content/posts/invisible-moments-2026-endet-bald.md"
+  },
+  {
+    "id": "invisible-moments-2026-ende",
+    "slug": "invisible-moments-2026-ende",
+    "title": "Invisible Moments in Köln",
+    "date": "2026-11-22",
+    "excerpt": "Die Ausstellung „Invisible Moments“ von Saša Fuis im Forum für Fotografie Köln ist am 21. November 2026 zu Ende gegangen.",
+    "linkedVenueIds": [
+      "forum-fuer-fotografie-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "invisible-moments-2026"
+    ],
+    "contentFile": "content/posts/invisible-moments-2026-ende.md"
+  },
+  {
+    "id": "koeln-wunderlich-2026-neu",
+    "slug": "koeln-wunderlich-2026-neu",
+    "title": "Köln. Wunderlich in Köln",
+    "date": "2026-11-09",
+    "excerpt": "Vom 28. November bis 19. Dezember 2026 zeigt das Forum für Fotografie Köln „Köln. Wunderlich“ mit Buchvorstellung von Reinhard Matz.",
+    "linkedVenueIds": [
+      "forum-fuer-fotografie-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "koeln-wunderlich-2026"
+    ],
+    "contentFile": "content/posts/koeln-wunderlich-2026-neu.md"
+  },
+  {
+    "id": "koeln-wunderlich-2026-eroeffnung",
+    "slug": "koeln-wunderlich-2026-eroeffnung",
+    "title": "Köln. Wunderlich in Köln",
+    "date": "2026-11-28",
+    "excerpt": "Am 28. November 2026 um 16 Uhr eröffnet im Forum für Fotografie Köln „Köln. Wunderlich“.",
+    "linkedVenueIds": [
+      "forum-fuer-fotografie-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "koeln-wunderlich-2026"
+    ],
+    "contentFile": "content/posts/koeln-wunderlich-2026-eroeffnung.md"
+  },
+  {
+    "id": "koeln-wunderlich-2026-endet-bald",
+    "slug": "koeln-wunderlich-2026-endet-bald",
+    "title": "Köln. Wunderlich in Köln",
+    "date": "2026-12-05",
+    "excerpt": "„Köln. Wunderlich“ im Forum für Fotografie Köln läuft nur noch bis 19. Dezember 2026.",
+    "linkedVenueIds": [
+      "forum-fuer-fotografie-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "koeln-wunderlich-2026"
+    ],
+    "contentFile": "content/posts/koeln-wunderlich-2026-endet-bald.md"
+  },
+  {
+    "id": "koeln-wunderlich-2026-ende",
+    "slug": "koeln-wunderlich-2026-ende",
+    "title": "Köln. Wunderlich in Köln",
+    "date": "2026-12-20",
+    "excerpt": "Die Ausstellung „Köln. Wunderlich“ im Forum für Fotografie Köln ist am 19. Dezember 2026 zu Ende gegangen.",
+    "linkedVenueIds": [
+      "forum-fuer-fotografie-koeln"
+    ],
+    "linkedExhibitionIds": [
+      "koeln-wunderlich-2026"
+    ],
+    "contentFile": "content/posts/koeln-wunderlich-2026-ende.md"
+  },
+  {
+    "id": "fadenkreuze-fuer-das-leben-2026-neu",
+    "slug": "fadenkreuze-fuer-das-leben-2026-neu",
+    "title": "Fadenkreuze für das Leben in Bonn",
+    "date": "2026-11-09",
+    "excerpt": "Das Kunstmuseum Bonn zeigt ab 8. November 2026 „Fadenkreuze für das Leben“ von Herlinde Koelbl, bis 16. Mai 2027.",
+    "linkedVenueIds": [
+      "kunstmuseum-bonn"
+    ],
+    "linkedExhibitionIds": [
+      "fadenkreuze-fuer-das-leben-2026"
+    ],
+    "contentFile": "content/posts/fadenkreuze-fuer-das-leben-2026-neu.md"
+  },
+  {
+    "id": "fadenkreuze-fuer-das-leben-2026-eroeffnung",
+    "slug": "fadenkreuze-fuer-das-leben-2026-eroeffnung",
+    "title": "Fadenkreuze für das Leben in Bonn",
+    "date": "2026-11-08",
+    "excerpt": "Das Kunstmuseum Bonn hat am 8. November 2026 „Fadenkreuze für das Leben“ von Herlinde Koelbl eröffnet.",
+    "linkedVenueIds": [
+      "kunstmuseum-bonn"
+    ],
+    "linkedExhibitionIds": [
+      "fadenkreuze-fuer-das-leben-2026"
+    ],
+    "contentFile": "content/posts/fadenkreuze-fuer-das-leben-2026-eroeffnung.md"
+  },
+  {
+    "id": "fadenkreuze-fuer-das-leben-2026-endet-bald",
+    "slug": "fadenkreuze-fuer-das-leben-2026-endet-bald",
+    "title": "Fadenkreuze für das Leben in Bonn",
+    "date": "2027-05-02",
+    "excerpt": "„Fadenkreuze für das Leben“ von Herlinde Koelbl im Kunstmuseum Bonn endet am 16. Mai 2027.",
+    "linkedVenueIds": [
+      "kunstmuseum-bonn"
+    ],
+    "linkedExhibitionIds": [
+      "fadenkreuze-fuer-das-leben-2026"
+    ],
+    "contentFile": "content/posts/fadenkreuze-fuer-das-leben-2026-endet-bald.md"
+  },
+  {
+    "id": "fadenkreuze-fuer-das-leben-2026-ende",
+    "slug": "fadenkreuze-fuer-das-leben-2026-ende",
+    "title": "Fadenkreuze für das Leben in Bonn",
+    "date": "2027-05-17",
+    "excerpt": "Die Ausstellung „Fadenkreuze für das Leben“ von Herlinde Koelbl ist am 16. Mai 2027 im Kunstmuseum Bonn zu Ende gegangen.",
+    "linkedVenueIds": [
+      "kunstmuseum-bonn"
+    ],
+    "linkedExhibitionIds": [
+      "fadenkreuze-fuer-das-leben-2026"
+    ],
+    "contentFile": "content/posts/fadenkreuze-fuer-das-leben-2026-ende.md"
   }
 ]

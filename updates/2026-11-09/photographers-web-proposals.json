@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-09",
+  "proposals": [
+    {
+      "id": "herlinde-koelbl",
+      "name": "Herlinde Koelbl",
+      "web": {
+        "summary": "Unter den Fotografinnen in Deutschland gehört Herlinde Koelbl zu den bekanntesten. Berühmt wurde sie durch Langzeitstudien. In ihren ungeschönten Fotoserien stehen Menschen im Zentrum; zugleich greift sie gesellschaftliche Tabus auf. In ihrem neuen Bildband zeigt sie Patientinnen und Patienten während der Strahlentherapie. Dazu war sie am 5. November 2026 in einem knapp 40-minütigen Gespräch im Deutschlandfunk Kultur zu hören, im Podcast „Im Gespräch“ mit Britta Bürger. Der Beitrag stellt die Fotografin und ihre Arbeit als Nahaufnahme des Menschen vor.",
+        "sources": [
+          "https://www.deutschlandfunkkultur.de/fotografin-herlinde-koelbl-nahaufnahme-mensch-100.html"
+        ]
+      },
+      "problems": [],
+      "result": {
+        "web": {
+          "summary": "Unter den Fotografinnen in Deutschland gehört Herlinde Koelbl zu den bekanntesten. Berühmt wurde sie durch Langzeitstudien. In ihren ungeschönten Fotoserien stehen Menschen im Zentrum; zugleich greift sie gesellschaftliche Tabus auf. In ihrem neuen Bildband zeigt sie Patientinnen und Patienten während der Strahlentherapie. Dazu war sie am 5. November 2026 in einem knapp 40-minütigen Gespräch im Deutschlandfunk Kultur zu hören, im Podcast „Im Gespräch“ mit Britta Bürger. Der Beitrag stellt die Fotografin und ihre Arbeit als Nahaufnahme des Menschen vor.",
+          "sources": [
+            {
+              "title": "Deutschlandfunk Kultur: Herlinde Koelbl (Interview)",
+              "url": "https://www.deutschlandfunkkultur.de/fotografin-herlinde-koelbl-nahaufnahme-mensch-100.html"
+            }
+          ]
+        }
+      },
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    }
+  ]
+}

@@ -103,4 +103,4 @@ Funktionalität: Datenmodell und Venue-Datenbestand
     Beispiele:
       | id                          | typ     | stadt | website                          |
       | forum-fuer-fotografie-koeln | gallery | Köln  | https://de.forum-fotografie.info/ |
-      | kunstmuseum-bonn            | museum  | Bonn  | https://www.kunstmuseum-bonn.de/ |
+      | kunstmuseum-bonn            | museum  | Bonn  | https://www.kunstmuseum-bonn.de/de/ |

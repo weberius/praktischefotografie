@@ -1,0 +1,49 @@
+{
+  "venueId": "kunstmuseum-bonn",
+  "fetchedAt": "2026-11-09",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "herlinde-koelbl",
+        "name": "Herlinde Koelbl"
+      },
+      "evidence": {
+        "url": "https://www.kunstmuseum-bonn.de/de/ausstellungen/herlinde-koelbl/",
+        "excerpt": "Herlinde Koelbl zählt zu den bedeutendsten zeitgenössischen Fotografinnen Deutschlands."
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "c2",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "kunstmuseum-bonn",
+        "title": "Fadenkreuze für das Leben",
+        "startDate": "2026-11-08",
+        "endDate": "2027-05-16",
+        "type": "solo",
+        "photographerIds": [
+          "herlinde-koelbl"
+        ],
+        "description": "Porträts und Interviews von 40 an Krebs erkrankten Menschen: die neueste Werkserie von Herlinde Koelbl.",
+        "id": "fadenkreuze-fuer-das-leben-2026"
+      },
+      "evidence": {
+        "url": "https://www.kunstmuseum-bonn.de/de/ausstellungen/herlinde-koelbl/",
+        "excerpt": "Herlinde Koelbl, Fadenkreuze für das Leben, 2025, © Herlinde Koelbl 08.11.2026 – 16.05.2027"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    }
+  ],
+  "rejected": []
+}

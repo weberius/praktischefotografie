@@ -10,7 +10,7 @@
 | VEN-UB-4 | Die Datenbasis soll mindestens je eine Venue in Monschau, Köln, Düsseldorf, Essen und Gelsenkirchen enthalten. | `content/daten.feature` · „Kernstädte sind vertreten“ | – | – |
 | VEN-UB-5 | Die Datenbasis soll je Venue Quelle und Prüfstand aus der Recherche tragen und keine Venue vom Typ Handel oder Dienstleister (PRD 1.3) enthalten. | `content/daten.feature` · „Jede Venue nennt Quelle und Prüfstand“ | Q-DATA-2 | – |
 | VEN-UB-6 | Die Datenbasis soll das Forum für Fotografie Köln (Website `https://de.forum-fotografie.info/`) als Venue mit der `id` `forum-fuer-fotografie-koeln`, dem `type` `gallery` und der Stadt Köln führen. | `content/daten.feature` · „Neue Venues sind im Katalog“ | Q-DATA-1, Q-DATA-2 | – |
-| VEN-UB-7 | Die Datenbasis soll das Kunstmuseum Bonn (Website `https://www.kunstmuseum-bonn.de/`) als Venue mit der `id` `kunstmuseum-bonn`, dem `type` `museum` und der Stadt Bonn führen. | `content/daten.feature` · „Neue Venues sind im Katalog“ | Q-DATA-1, Q-DATA-2 | – |
+| VEN-UB-7 | Die Datenbasis soll das Kunstmuseum Bonn (Website `https://www.kunstmuseum-bonn.de/de/`) als Venue mit der `id` `kunstmuseum-bonn`, dem `type` `museum` und der Stadt Bonn führen. | `content/daten.feature` · „Neue Venues sind im Katalog“ | Q-DATA-1, Q-DATA-2 | – |
 
 ANNAHME: Adresse und Koordinaten der beiden neuen Venues stammen aus der Recherche der Webseiten in der Umsetzung; der Typ ist eine Lesart (Forum: Ausstellungsraum für Fotografie ohne Sammlung; Museum: Haus mit Sammlung, in dem nicht immer eine Fotoausstellung läuft).
 

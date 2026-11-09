@@ -1,0 +1,96 @@
+{
+  "venueId": "forum-fuer-fotografie-koeln",
+  "fetchedAt": "2026-11-09",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "sasa-fuis",
+        "name": "Saša Fuis"
+      },
+      "evidence": {
+        "url": "https://de.forum-fotografie.info/index.php/aktuelles",
+        "excerpt": "Ab 19. September 2026 präsentiert das Forum für Fotografie Köln die Fotografien des slowenischen Fotografen Saša Fuis."
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "c2",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "forum-fuer-fotografie-koeln",
+        "title": "Invisible Moments",
+        "startDate": "2026-09-19",
+        "endDate": "2026-11-21",
+        "type": "solo",
+        "photographerIds": [
+          "sasa-fuis"
+        ],
+        "description": "Fotografien von Saša Fuis: urbane Szenen, in denen die Grenzen zwischen Wirklichkeit und vermeintlicher Bedeutung verschwimmen.",
+        "id": "invisible-moments-2026"
+      },
+      "evidence": {
+        "url": "https://de.forum-fotografie.info/index.php/ausstellungen-im-forum-fuer-fotografie",
+        "excerpt": "Invisible Moments Saša Fuis Eröffnung am Samstag 19.09.2026, 16:00 Ausstellungsdauer: 19.09.-21.11.2026"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "c3",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "forum-fuer-fotografie-koeln",
+        "title": "Köln. Wunderlich",
+        "startDate": "2026-11-28",
+        "endDate": "2026-12-19",
+        "type": "solo",
+        "photographerIds": [],
+        "description": "Buchvorstellung und Ausstellung von Reinhard Matz im Forum für Fotografie Köln.",
+        "id": "koeln-wunderlich-2026"
+      },
+      "evidence": {
+        "url": "https://de.forum-fotografie.info/index.php/ausstellungen-im-forum-fuer-fotografie",
+        "excerpt": "Buchvorstellung:Reinhard MatzKöln. WunderlichEröffnung am Samstag 28.11.2026, 16:00Ausstellungsdauer: 28.11–19.12.2026"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "c4",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Eröffnung: Köln. Wunderlich",
+        "eventType": "vernissage",
+        "startDate": "2026-11-28",
+        "endDate": "2026-11-28",
+        "venueId": "forum-fuer-fotografie-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eröffnung am 28. November 2026 um 16:00 Uhr.",
+        "id": "koeln-wunderlich-2026-eroeffnung"
+      },
+      "evidence": {
+        "url": "https://de.forum-fotografie.info/index.php/ausstellungen-im-forum-fuer-fotografie",
+        "excerpt": "Eröffnung am Samstag 28.11.2026, 16:00"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    }
+  ],
+  "rejected": []
+}

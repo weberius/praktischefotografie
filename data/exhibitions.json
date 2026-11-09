@@ -228,5 +228,39 @@
     ],
     "description": "Fotografische Auseinandersetzung von Hannes Jung mit Geschichten von Männern, die im Bosnienkrieg der 1990er Jahre sexualisierte Gewalt erlebten.",
     "id": "men-dont-cry-2026"
+  },
+  {
+    "venueId": "forum-fuer-fotografie-koeln",
+    "title": "Invisible Moments",
+    "startDate": "2026-09-19",
+    "endDate": "2026-11-21",
+    "type": "solo",
+    "photographerIds": [
+      "sasa-fuis"
+    ],
+    "description": "Fotografien von Saša Fuis: urbane Szenen, in denen die Grenzen zwischen Wirklichkeit und vermeintlicher Bedeutung verschwimmen.",
+    "id": "invisible-moments-2026"
+  },
+  {
+    "venueId": "forum-fuer-fotografie-koeln",
+    "title": "Köln. Wunderlich",
+    "startDate": "2026-11-28",
+    "endDate": "2026-12-19",
+    "type": "solo",
+    "photographerIds": [],
+    "description": "Buchvorstellung und Ausstellung von Reinhard Matz im Forum für Fotografie Köln.",
+    "id": "koeln-wunderlich-2026"
+  },
+  {
+    "venueId": "kunstmuseum-bonn",
+    "title": "Fadenkreuze für das Leben",
+    "startDate": "2026-11-08",
+    "endDate": "2027-05-16",
+    "type": "solo",
+    "photographerIds": [
+      "herlinde-koelbl"
+    ],
+    "description": "Porträts und Interviews von 40 an Krebs erkrankten Menschen: die neueste Werkserie von Herlinde Koelbl.",
+    "id": "fadenkreuze-fuer-das-leben-2026"
   }
 ]

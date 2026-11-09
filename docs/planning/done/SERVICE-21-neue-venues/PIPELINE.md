@@ -5,17 +5,17 @@
 | Phase | Artefakt(e) | Status | Datum |
 | --- | --- | --- | --- |
 | 0 Setup | Ordner, PIPELINE.md, Feature-Branch | Erledigt | 2026-11-09 |
-| 1 Vision (H1) | EPIC, Annahmen | Entwurf (Intake) | 2026-11-09 |
+| 1 Vision (H1) | EPIC, Annahmen | Freigegeben (Aufruf von /spec-pipeline) | 2026-11-09 |
 | 2 UserStory | STORY-01, STORY-02 | Erledigt | 2026-11-09 |
 | 3 Spezifikation · EARS | content/venue-erfassung.md (VEN-UB-6, VEN-UB-7) | Erledigt | 2026-11-09 |
 | 3 Spezifikation · Gherkin | content/daten.feature („Neue Venues sind im Katalog“) | Erledigt | 2026-11-09 |
 | 3 Spezifikation · Quality | Q-DATA-1, Q-DATA-2 (bestehend, unverändert) | Erledigt | 2026-11-09 |
 | 3 Spezifikation · ADR | nicht erforderlich | Nicht erforderlich | 2026-11-09 |
 | 3 Spezifikation · Konsistenz | siehe unten | Erledigt | 2026-11-09 |
-| 4 Tasks | – | Offen | |
-| 5 Implement | – | Offen | |
-| 6 Human in the Loop (H2) | – | Offen | |
-| 7 Review | – | Offen | |
+| 4 Tasks | STORY-01-TASK-01; STORY-02-TASK-01, -02 | Erledigt | 2026-11-09 |
+| 5 Implement | data/venues.json, test/bestand.test.mjs, Changelogs | Erledigt (web:test nicht geprüft) | 2026-11-09 |
+| 6 Human in the Loop (H2) | Prüfpaket | Akzeptiert | 2026-11-09 |
+| 7 Review | review/analyse-code.md, -architecture.md, -security.md (Compliance: kein Skill, nicht verfügbar) | Erledigt | 2026-11-09 |
 
 Status: `Offen` · `In Arbeit` · `Erledigt` · `Nicht erforderlich` · `Rücklauf` · `Verworfen`
 (an H1: `Entwurf (Intake)` / `Freigegeben`, an H2: `Akzeptiert` / `Abweichung`)
@@ -35,6 +35,9 @@ Vom Menschen bestätigt (2026-11-09): URL `https://www.kunstmuseum-bonn.de/`; �
 - ANNAHME: „Katalog“ = `data/venues.json`; Ausstellungen der Orte nicht Teil des Wunsches.
 - ANNAHME: Die Idee-Datei war beim Intake untracked; der Branch geht von `main` aus.
 - ANNAHME: Der Ordner `docs/templates/` fehlt noch (legt der Mensch an); Aufbau nach SERVICE-05/-20.
+
+## Review-Triage
+Schwelle kritisch + hoch: keine Befunde darüber. Alle Vorschläge (review/TASK-01 bis TASK-05, mittel/niedrig) zurückgestellt, siehe Closure. Reviews einmal für beide Stories gemeinsam (identischer Umfang).
 
 ## Rückläufe
 | Datum | Herkunft (H2/Review) | Befund | Klasse | Quelle korrigiert | Neu abgeleitet |

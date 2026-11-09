@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-09",
+  "engine": "web_search (Copilot CLI); Treffer Deutschlandfunk Kultur auf Hinweis des Nutzers ergänzt",
+  "persons": [
+    {
+      "id": "herlinde-koelbl",
+      "engine": "web_search (Copilot CLI); Treffer Deutschlandfunk Kultur auf Hinweis des Nutzers ergänzt",
+      "queries": [
+        {
+          "query": "\"Herlinde Koelbl\" Fotograf",
+          "results": [
+            {
+              "title": "Herlinde Koelbl – Wikipedia",
+              "url": "https://de.wikipedia.org/wiki/Herlinde_Koelbl",
+              "snippet": "Herlinde Koelbl ist eine deutsche Fotografin und Dokumentarfilmerin.",
+              "query": "\"Herlinde Koelbl\" Fotograf",
+              "foundAt": "2026-11-09T15:40:41.817Z"
+            },
+            {
+              "title": "Deutschlandfunk Kultur: Herlinde Koelbl (Interview)",
+              "url": "https://www.deutschlandfunkkultur.de/fotografin-herlinde-koelbl-nahaufnahme-mensch-100.html",
+              "snippet": "Interview mit Herlinde Koelbl (vom Nutzer genannt).",
+              "query": "\"Herlinde Koelbl\" Fotograf",
+              "foundAt": "2026-11-09T15:40:41.817Z"
+            }
+          ]
+        },
+        {
+          "query": "\"Herlinde Koelbl\" photographer",
+          "results": [
+            {
+              "title": "Herlinde Koelbl – Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Herlinde_Koelbl",
+              "snippet": "Herlinde Koelbl is a German photographic artist, author and documentary filmer.",
+              "query": "\"Herlinde Koelbl\" photographer",
+              "foundAt": "2026-11-09T15:40:41.817Z"
+            }
+          ]
+        },
+        {
+          "query": "\"Herlinde Koelbl\" photographe",
+          "results": []
+        },
+        {
+          "query": "\"Herlinde Koelbl\" fotógrafo",
+          "results": []
+        },
+        {
+          "query": "\"Herlinde Koelbl\" fotografo",
+          "results": []
+        },
+        {
+          "query": "\"Herlinde Koelbl\" fotograaf",
+          "results": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "date": "2026-11-09",
+  "items": [
+    {
+      "id": "invisible-moments-2026-neu",
+      "occasion": "neu",
+      "exhibitionId": "invisible-moments-2026",
+      "venueId": "forum-fuer-fotografie-koeln",
+      "date": "2026-11-09",
+      "kind": "anlegen",
+      "expectedTitle": "Invisible Moments in Köln",
+      "context": {
+        "exhibition": {
+          "title": "Invisible Moments",
+          "type": "solo",
+          "startDate": "2026-09-19",
+          "endDate": "2026-11-21",
+          "description": "Fotografien von Saša Fuis: urbane Szenen, in denen die Grenzen zwischen Wirklichkeit und vermeintlicher Bedeutung verschwimmen."
+        },
+        "venue": {
+          "name": "Forum für Fotografie Köln",
+          "shortName": "Forum für Fotografie",
+          "city": "Köln",
+          "website": "https://de.forum-fotografie.info/"
+        },
+        "photographers": [
+          {
+            "name": "Saša Fuis",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Invisible Moments in Köln",
+      "excerpt": "Ab 19. September 2026 zeigt das Forum für Fotografie Köln „Invisible Moments“ von Saša Fuis; die Ausstellung läuft bis 21. November 2026.",
+      "text": "Saša Fuis zeigt im Forum für Fotografie Köln „Invisible Moments“. Ab 19. September 2026 präsentiert das Forum die Fotografien des slowenischen Fotografen. Fuis ist ein stiller Beobachter, der sich in städtischen Strukturen bewegt und richtet den Blick auf Momente, in denen die Grenzen zwischen Wirklichkeit und vermeintlicher Bedeutung verschwimmen. Die Ausstellung läuft bis zum 21. November 2026. Das Forum für Fotografie Köln ist Do und Fr von 14 bis 18 Uhr sowie Sa von 12 bis 17 Uhr geöffnet.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "invisible-moments-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "invisible-moments-2026",
+      "venueId": "forum-fuer-fotografie-koeln",
+      "date": "2026-09-19",
+      "kind": "anlegen",
+      "expectedTitle": "Invisible Moments in Köln",
+      "context": {
+        "exhibition": {
+          "title": "Invisible Moments",
+          "type": "solo",
+          "startDate": "2026-09-19",
+          "endDate": "2026-11-21",
+          "description": "Fotografien von Saša Fuis: urbane Szenen, in denen die Grenzen zwischen Wirklichkeit und vermeintlicher Bedeutung verschwimmen."
+        },
+        "venue": {
+          "name": "Forum für Fotografie Köln",
+          "shortName": "Forum für Fotografie",
+          "city": "Köln",
+          "website": "https://de.forum-fotografie.info/"
+        },
+        "photographers": [
+          {
+            "name": "Saša Fuis",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Invisible Moments in Köln",
+      "excerpt": "Das Forum für Fotografie Köln hat am 19. September 2026 „Invisible Moments“ von Saša Fuis eröffnet.",
+      "text": "Am 19. September 2026 um 16 Uhr wurde im Forum für Fotografie Köln die Ausstellung „Invisible Moments“ mit Fotografien von Saša Fuis eröffnet. Der slowenische Fotograf bewegt sich in städtischen Strukturen und widmet seine Aufmerksamkeit jenen Momenten, in denen die Grenzen zwischen Wirklichkeit und vermeintlicher Bedeutung verschwimmen. Die Ausstellung ist bis zum 21. November 2026 zu sehen, geöffnet Do und Fr von 14 bis 18 Uhr sowie Sa von 12 bis 17 Uhr im Forum für Fotografie Köln.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "invisible-moments-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "invisible-moments-2026",
+      "venueId": "forum-fuer-fotografie-koeln",
+      "date": "2026-11-07",
+      "kind": "anlegen",
+      "expectedTitle": "Invisible Moments in Köln",
+      "context": {
+        "exhibition": {
+          "title": "Invisible Moments",
+          "type": "solo",
+          "startDate": "2026-09-19",
+          "endDate": "2026-11-21",
+          "description": "Fotografien von Saša Fuis: urbane Szenen, in denen die Grenzen zwischen Wirklichkeit und vermeintlicher Bedeutung verschwimmen."
+        },
+        "venue": {
+          "name": "Forum für Fotografie Köln",
+          "shortName": "Forum für Fotografie",
+          "city": "Köln",
+          "website": "https://de.forum-fotografie.info/"
+        },
+        "photographers": [
+          {
+            "name": "Saša Fuis",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Invisible Moments in Köln",
+      "excerpt": "„Invisible Moments“ von Saša Fuis im Forum für Fotografie Köln ist nur noch bis 21. November 2026 zu sehen.",
+      "text": "Die Ausstellung „Invisible Moments“ von Saša Fuis im Forum für Fotografie Köln endet am 21. November 2026. Wer die Fotografien des slowenischen Fotografen noch sehen möchte, hat dazu Do und Fr von 14 bis 18 Uhr sowie Sa von 12 bis 17 Uhr Gelegenheit. Fuis zeigt städtische Szenen, in denen die Grenzen zwischen Wirklichkeit und vermeintlicher Bedeutung verschwimmen. Das Forum für Fotografie Köln befindet sich in der Schönhauser Straße 8.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "invisible-moments-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "invisible-moments-2026",
+      "venueId": "forum-fuer-fotografie-koeln",
+      "date": "2026-11-22",
+      "kind": "anlegen",
+      "expectedTitle": "Invisible Moments in Köln",
+      "context": {
+        "exhibition": {
+          "title": "Invisible Moments",
+          "type": "solo",
+          "startDate": "2026-09-19",
+          "endDate": "2026-11-21",
+          "description": "Fotografien von Saša Fuis: urbane Szenen, in denen die Grenzen zwischen Wirklichkeit und vermeintlicher Bedeutung verschwimmen."
+        },
+        "venue": {
+          "name": "Forum für Fotografie Köln",
+          "shortName": "Forum für Fotografie",
+          "city": "Köln",
+          "website": "https://de.forum-fotografie.info/"
+        },
+        "photographers": [
+          {
+            "name": "Saša Fuis",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Invisible Moments in Köln",
+      "excerpt": "Die Ausstellung „Invisible Moments“ von Saša Fuis im Forum für Fotografie Köln ist am 21. November 2026 zu Ende gegangen.",
+      "text": "Am 21. November 2026 ist im Forum für Fotografie Köln die Ausstellung „Invisible Moments“ zu Ende gegangen. Seit dem 19. September 2026 zeigte sie Fotografien von Saša Fuis. Der slowenische Fotograf gilt als stiller Beobachter: Er bewegt sich in städtischen Strukturen und richtet den Blick auf Momente, in denen die Grenzen zwischen Wirklichkeit und vermeintlicher Bedeutung verschwimmen. Das Forum für Fotografie Köln befindet sich in der Schönhauser Straße 8.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "koeln-wunderlich-2026-neu",
+      "occasion": "neu",
+      "exhibitionId": "koeln-wunderlich-2026",
+      "venueId": "forum-fuer-fotografie-koeln",
+      "date": "2026-11-09",
+      "kind": "anlegen",
+      "expectedTitle": "Köln. Wunderlich in Köln",
+      "context": {
+        "exhibition": {
+          "title": "Köln. Wunderlich",
+          "type": "solo",
+          "startDate": "2026-11-28",
+          "endDate": "2026-12-19",
+          "description": "Buchvorstellung und Ausstellung von Reinhard Matz im Forum für Fotografie Köln."
+        },
+        "venue": {
+          "name": "Forum für Fotografie Köln",
+          "shortName": "Forum für Fotografie",
+          "city": "Köln",
+          "website": "https://de.forum-fotografie.info/"
+        },
+        "photographers": []
+      },
+      "title": "Köln. Wunderlich in Köln",
+      "excerpt": "Vom 28. November bis 19. Dezember 2026 zeigt das Forum für Fotografie Köln „Köln. Wunderlich“ mit Buchvorstellung von Reinhard Matz.",
+      "text": "Im Forum für Fotografie Köln beginnt am 28. November 2026 die Ausstellung „Köln. Wunderlich“. Verbunden mit einer Buchvorstellung von Reinhard Matz, ist sie bis zum 19. Dezember 2026 im Forum für Fotografie Köln in der Schönhauser Straße 8 zu sehen. Die Eröffnung findet am Samstag, 28. November 2026, um 16 Uhr statt. Das Forum für Fotografie Köln zeigt Ausstellungen zur Fotografie und ist Do und Fr von 14 bis 18 Uhr sowie Sa von 12 bis 17 Uhr geöffnet.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "koeln-wunderlich-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "koeln-wunderlich-2026",
+      "venueId": "forum-fuer-fotografie-koeln",
+      "date": "2026-11-28",
+      "kind": "anlegen",
+      "expectedTitle": "Köln. Wunderlich in Köln",
+      "context": {
+        "exhibition": {
+          "title": "Köln. Wunderlich",
+          "type": "solo",
+          "startDate": "2026-11-28",
+          "endDate": "2026-12-19",
+          "description": "Buchvorstellung und Ausstellung von Reinhard Matz im Forum für Fotografie Köln."
+        },
+        "venue": {
+          "name": "Forum für Fotografie Köln",
+          "shortName": "Forum für Fotografie",
+          "city": "Köln",
+          "website": "https://de.forum-fotografie.info/"
+        },
+        "photographers": []
+      },
+      "title": "Köln. Wunderlich in Köln",
+      "excerpt": "Am 28. November 2026 um 16 Uhr eröffnet im Forum für Fotografie Köln „Köln. Wunderlich“.",
+      "text": "Am 28. November 2026 eröffnet das Forum für Fotografie Köln die Ausstellung „Köln. Wunderlich“ mit einer Buchvorstellung von Reinhard Matz. Die Eröffnung findet am Samstag, 28. November 2026, um 16 Uhr statt. Die Ausstellung ist anschließend bis zum 19. Dezember 2026 im Forum für Fotografie Köln in der Schönhauser Straße 8 zu sehen. Das Forum für Fotografie Köln ist Do und Fr von 14 bis 18 Uhr sowie Sa von 12 bis 17 Uhr geöffnet.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "koeln-wunderlich-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "koeln-wunderlich-2026",
+      "venueId": "forum-fuer-fotografie-koeln",
+      "date": "2026-12-05",
+      "kind": "anlegen",
+      "expectedTitle": "Köln. Wunderlich in Köln",
+      "context": {
+        "exhibition": {
+          "title": "Köln. Wunderlich",
+          "type": "solo",
+          "startDate": "2026-11-28",
+          "endDate": "2026-12-19",
+          "description": "Buchvorstellung und Ausstellung von Reinhard Matz im Forum für Fotografie Köln."
+        },
+        "venue": {
+          "name": "Forum für Fotografie Köln",
+          "shortName": "Forum für Fotografie",
+          "city": "Köln",
+          "website": "https://de.forum-fotografie.info/"
+        },
+        "photographers": []
+      },
+      "title": "Köln. Wunderlich in Köln",
+      "excerpt": "„Köln. Wunderlich“ im Forum für Fotografie Köln läuft nur noch bis 19. Dezember 2026.",
+      "text": "Die Ausstellung „Köln. Wunderlich“ im Forum für Fotografie Köln endet am 19. Dezember 2026. Seit dem 28. November 2026 ist sie dort mit einer Buchvorstellung von Reinhard Matz zu sehen. Wer die Schau noch besuchen möchte, kann das Do und Fr von 14 bis 18 Uhr sowie Sa von 12 bis 17 Uhr tun. Das Forum für Fotografie Köln liegt in der Schönhauser Straße 8; sonntags und an Feiertagen ist es geschlossen.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "koeln-wunderlich-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "koeln-wunderlich-2026",
+      "venueId": "forum-fuer-fotografie-koeln",
+      "date": "2026-12-20",
+      "kind": "anlegen",
+      "expectedTitle": "Köln. Wunderlich in Köln",
+      "context": {
+        "exhibition": {
+          "title": "Köln. Wunderlich",
+          "type": "solo",
+          "startDate": "2026-11-28",
+          "endDate": "2026-12-19",
+          "description": "Buchvorstellung und Ausstellung von Reinhard Matz im Forum für Fotografie Köln."
+        },
+        "venue": {
+          "name": "Forum für Fotografie Köln",
+          "shortName": "Forum für Fotografie",
+          "city": "Köln",
+          "website": "https://de.forum-fotografie.info/"
+        },
+        "photographers": []
+      },
+      "title": "Köln. Wunderlich in Köln",
+      "excerpt": "Die Ausstellung „Köln. Wunderlich“ im Forum für Fotografie Köln ist am 19. Dezember 2026 zu Ende gegangen.",
+      "text": "Am 19. Dezember 2026 ist im Forum für Fotografie Köln die Ausstellung „Köln. Wunderlich“ zu Ende gegangen. Seit dem 28. November 2026 zeigte das Forum für Fotografie Köln die Ausstellung, verbunden mit einer Buchvorstellung von Reinhard Matz. Die Eröffnung hatte am Samstag, 28. November 2026, um 16 Uhr stattgefunden. Das Forum für Fotografie Köln befindet sich in der Schönhauser Straße 8 und ist Do und Fr von 14 bis 18 Uhr sowie Sa von 12 bis 17 Uhr geöffnet.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "fadenkreuze-fuer-das-leben-2026-neu",
+      "occasion": "neu",
+      "exhibitionId": "fadenkreuze-fuer-das-leben-2026",
+      "venueId": "kunstmuseum-bonn",
+      "date": "2026-11-09",
+      "kind": "anlegen",
+      "expectedTitle": "Fadenkreuze für das Leben in Bonn",
+      "context": {
+        "exhibition": {
+          "title": "Fadenkreuze für das Leben",
+          "type": "solo",
+          "startDate": "2026-11-08",
+          "endDate": "2027-05-16",
+          "description": "Porträts und Interviews von 40 an Krebs erkrankten Menschen: die neueste Werkserie von Herlinde Koelbl."
+        },
+        "venue": {
+          "name": "Kunstmuseum Bonn",
+          "shortName": "Kunstmuseum Bonn",
+          "city": "Bonn",
+          "website": "https://www.kunstmuseum-bonn.de/de/"
+        },
+        "photographers": [
+          {
+            "name": "Herlinde Koelbl",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Fadenkreuze für das Leben in Bonn",
+      "excerpt": "Das Kunstmuseum Bonn zeigt ab 8. November 2026 „Fadenkreuze für das Leben“ von Herlinde Koelbl, bis 16. Mai 2027.",
+      "text": "Das Kunstmuseum Bonn zeigt ab 8. November 2026 „Fadenkreuze für das Leben“, die neueste Werkserie der international renommierten Fotografin und Dokumentarfilmerin Herlinde Koelbl. Die Ausstellung versammelt Porträts und Interviews von 40 an Krebs erkrankten Menschen; Ausgangspunkt ist Koelbls eigene Krebserkrankung in den Jahren 2019/20. Damit bricht sie gesellschaftliche Tabus. Zu sehen ist die Ausstellung im Kunstmuseum Bonn an der Helmut-Kohl-Allee 2 bis zum 16. Mai 2027.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "fadenkreuze-fuer-das-leben-2026-eroeffnung",
+      "occasion": "eroeffnung",
+      "exhibitionId": "fadenkreuze-fuer-das-leben-2026",
+      "venueId": "kunstmuseum-bonn",
+      "date": "2026-11-08",
+      "kind": "anlegen",
+      "expectedTitle": "Fadenkreuze für das Leben in Bonn",
+      "context": {
+        "exhibition": {
+          "title": "Fadenkreuze für das Leben",
+          "type": "solo",
+          "startDate": "2026-11-08",
+          "endDate": "2027-05-16",
+          "description": "Porträts und Interviews von 40 an Krebs erkrankten Menschen: die neueste Werkserie von Herlinde Koelbl."
+        },
+        "venue": {
+          "name": "Kunstmuseum Bonn",
+          "shortName": "Kunstmuseum Bonn",
+          "city": "Bonn",
+          "website": "https://www.kunstmuseum-bonn.de/de/"
+        },
+        "photographers": [
+          {
+            "name": "Herlinde Koelbl",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Fadenkreuze für das Leben in Bonn",
+      "excerpt": "Das Kunstmuseum Bonn hat am 8. November 2026 „Fadenkreuze für das Leben“ von Herlinde Koelbl eröffnet.",
+      "text": "Am 8. November 2026 wurde im Kunstmuseum Bonn „Fadenkreuze für das Leben“ von Herlinde Koelbl eröffnet, um 11:30 Uhr, mit freiem Eintritt bis 14 Uhr. Die Ausstellung zeigt Porträts und Interviews von 40 an Krebs erkrankten Menschen und erzählt von Angst, Hoffnung, Verlust und neuer Zuversicht. Die Fotografin und Dokumentarfilmerin Herlinde Koelbl hat die Serie nach ihrer eigenen Erkrankung begonnen. Die Ausstellung läuft im Kunstmuseum Bonn bis 16. Mai 2027.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "fadenkreuze-fuer-das-leben-2026-endet-bald",
+      "occasion": "endet-bald",
+      "exhibitionId": "fadenkreuze-fuer-das-leben-2026",
+      "venueId": "kunstmuseum-bonn",
+      "date": "2027-05-02",
+      "kind": "anlegen",
+      "expectedTitle": "Fadenkreuze für das Leben in Bonn",
+      "context": {
+        "exhibition": {
+          "title": "Fadenkreuze für das Leben",
+          "type": "solo",
+          "startDate": "2026-11-08",
+          "endDate": "2027-05-16",
+          "description": "Porträts und Interviews von 40 an Krebs erkrankten Menschen: die neueste Werkserie von Herlinde Koelbl."
+        },
+        "venue": {
+          "name": "Kunstmuseum Bonn",
+          "shortName": "Kunstmuseum Bonn",
+          "city": "Bonn",
+          "website": "https://www.kunstmuseum-bonn.de/de/"
+        },
+        "photographers": [
+          {
+            "name": "Herlinde Koelbl",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Fadenkreuze für das Leben in Bonn",
+      "excerpt": "„Fadenkreuze für das Leben“ von Herlinde Koelbl im Kunstmuseum Bonn endet am 16. Mai 2027.",
+      "text": "Die Ausstellung „Fadenkreuze für das Leben“ von Herlinde Koelbl im Kunstmuseum Bonn endet am 16. Mai 2027. Die Fotografin und Dokumentarfilmerin zeigt Porträts und Interviews von 40 an Krebs erkrankten Menschen, deren Geschichten von Angst, Hoffnung, Verlust und neuer Zuversicht erzählen. Seit dem 8. November 2026 ist die Serie im Kunstmuseum Bonn an der Helmut-Kohl-Allee 2 zu sehen, Dienstag bis Sonntag von 11 bis 18 Uhr, mittwochs bis 19 Uhr, montags geschlossen.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    },
+    {
+      "id": "fadenkreuze-fuer-das-leben-2026-ende",
+      "occasion": "ende",
+      "exhibitionId": "fadenkreuze-fuer-das-leben-2026",
+      "venueId": "kunstmuseum-bonn",
+      "date": "2027-05-17",
+      "kind": "anlegen",
+      "expectedTitle": "Fadenkreuze für das Leben in Bonn",
+      "context": {
+        "exhibition": {
+          "title": "Fadenkreuze für das Leben",
+          "type": "solo",
+          "startDate": "2026-11-08",
+          "endDate": "2027-05-16",
+          "description": "Porträts und Interviews von 40 an Krebs erkrankten Menschen: die neueste Werkserie von Herlinde Koelbl."
+        },
+        "venue": {
+          "name": "Kunstmuseum Bonn",
+          "shortName": "Kunstmuseum Bonn",
+          "city": "Bonn",
+          "website": "https://www.kunstmuseum-bonn.de/de/"
+        },
+        "photographers": [
+          {
+            "name": "Herlinde Koelbl",
+            "bio": null
+          }
+        ]
+      },
+      "title": "Fadenkreuze für das Leben in Bonn",
+      "excerpt": "Die Ausstellung „Fadenkreuze für das Leben“ von Herlinde Koelbl ist am 16. Mai 2027 im Kunstmuseum Bonn zu Ende gegangen.",
+      "text": "Am 16. Mai 2027 ist im Kunstmuseum Bonn die Ausstellung „Fadenkreuze für das Leben“ zu Ende gegangen. Seit dem 8. November 2026 zeigte das Kunstmuseum Bonn die neueste Werkserie der Fotografin und Dokumentarfilmerin Herlinde Koelbl: Porträts und Interviews von 40 an Krebs erkrankten Menschen. Die Bilder machten persönliche Geschichten von Angst, Hoffnung, Verlust und neuer Zuversicht sichtbar. Ausgangspunkt war Koelbls eigene Krebserkrankung in den Jahren 2019/20.",
+      "problems": [],
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    }
+  ],
+  "orphans": []
+}

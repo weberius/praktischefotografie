@@ -549,5 +549,55 @@
       "checkedAt": "2026-10-28",
       "status": "recherchiert"
     }
+  },
+  {
+    "id": "forum-fuer-fotografie-koeln",
+    "name": "Forum für Fotografie Köln",
+    "shortName": "Forum für Fotografie",
+    "type": "gallery",
+    "city": "Köln",
+    "district": "Bayenthal",
+    "address": {
+      "street": "Schönhauser Straße 8",
+      "zip": "50968",
+      "city": "Köln",
+      "lat": 50.9137181,
+      "lng": 6.9695619
+    },
+    "website": "https://de.forum-fotografie.info/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://de.forum-fotografie.info/index.php/aktuelles",
+      "checkedAt": "2026-11-09",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "kunstmuseum-bonn",
+    "name": "Kunstmuseum Bonn",
+    "shortName": "Kunstmuseum Bonn",
+    "type": "museum",
+    "city": "Bonn",
+    "district": "Gronau",
+    "address": {
+      "street": "Helmut-Kohl-Allee 2",
+      "zip": "53113",
+      "city": "Bonn",
+      "lat": 50.7152339,
+      "lng": 7.1208981
+    },
+    "website": "https://www.kunstmuseum-bonn.de/de/",
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.kunstmuseum-bonn.de/de/ausstellungen/herlinde-koelbl/",
+      "checkedAt": "2026-11-09",
+      "status": "recherchiert"
+    }
   }
 ]

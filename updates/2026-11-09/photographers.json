@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-09",
+  "proposals": [
+    {
+      "id": "herlinde-koelbl",
+      "occupation": "Fotografin und Dokumentarfilmerin",
+      "summary": "Herlinde Koelbl, geboren 1939 in Lindau am Bodensee, ist eine deutsche Fotografin und Dokumentarfilmerin. Nach einem Modestudium kam sie als Autodidaktin zur Fotografie und arbeitet seit 1976 für Zeitungen und Zeitschriften. Bekannt wurde sie durch langfristig angelegte Projekte, die sie als Bücher und Ausstellungen veröffentlicht, darunter „Das deutsche Wohnzimmer“ (1980) und „Jüdische Porträts“ (1989), die Fotografien mit Gesprächen verbindet. Ihr größtes Projekt ist „Spuren der Macht“: Von 1991 bis 1998 porträtierte sie jährlich Persönlichkeiten aus Politik und Wirtschaft. Der zugehörige Film erhielt den Deutschen Kritikerpreis.",
+      "sources": [
+        "de",
+        "en"
+      ],
+      "portrait": true,
+      "problems": [],
+      "result": {
+        "occupation": "Fotografin und Dokumentarfilmerin",
+        "life": {
+          "from": 1939,
+          "to": null
+        },
+        "wikipedia": {
+          "summary": "Herlinde Koelbl, geboren 1939 in Lindau am Bodensee, ist eine deutsche Fotografin und Dokumentarfilmerin. Nach einem Modestudium kam sie als Autodidaktin zur Fotografie und arbeitet seit 1976 für Zeitungen und Zeitschriften. Bekannt wurde sie durch langfristig angelegte Projekte, die sie als Bücher und Ausstellungen veröffentlicht, darunter „Das deutsche Wohnzimmer“ (1980) und „Jüdische Porträts“ (1989), die Fotografien mit Gesprächen verbindet. Ihr größtes Projekt ist „Spuren der Macht“: Von 1991 bis 1998 porträtierte sie jährlich Persönlichkeiten aus Politik und Wirtschaft. Der zugehörige Film erhielt den Deutschen Kritikerpreis.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Herlinde_Koelbl"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Herlinde_Koelbl"
+            }
+          ]
+        },
+        "portrait": {
+          "file": "herlinde-koelbl.jpg",
+          "width": 400,
+          "height": 540,
+          "source": "https://commons.wikimedia.org/wiki/File:Herlinde_Koelbl_auf_der_Frankfurter_Buchmesse_2026.jpg",
+          "credit": "Elena Ternovaja",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "cacheFile": ".cache/portraits/herlinde-koelbl.jpg"
+        }
+      },
+      "approved": true,
+      "appliedAt": "2026-11-09"
+    }
+  ]
+}

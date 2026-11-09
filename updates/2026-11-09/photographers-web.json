@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-09",
+  "offline": false,
+  "maxAgeDays": 30,
+  "persons": [
+    {
+      "id": "herlinde-koelbl",
+      "name": "Herlinde Koelbl",
+      "isNew": false,
+      "queries": [
+        "\"Herlinde Koelbl\" Fotograf",
+        "\"Herlinde Koelbl\" photographer",
+        "\"Herlinde Koelbl\" photographe",
+        "\"Herlinde Koelbl\" fotógrafo",
+        "\"Herlinde Koelbl\" fotografo",
+        "\"Herlinde Koelbl\" fotograaf"
+      ],
+      "useCache": false,
+      "queryCount": 6,
+      "hitCount": 3,
+      "newLinks": [
+        "https://www.deutschlandfunkkultur.de/fotografin-herlinde-koelbl-nahaufnahme-mensch-100.html"
+      ],
+      "status": "gesucht",
+      "engine": "web_search (Copilot CLI); Treffer Deutschlandfunk Kultur auf Hinweis des Nutzers ergänzt",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 1,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://www.deutschlandfunkkultur.de/fotografin-herlinde-koelbl-nahaufnahme-mensch-100.html"
+      ]
+    }
+  ]
+}
