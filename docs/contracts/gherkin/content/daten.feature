@@ -91,3 +91,16 @@ Funktionalität: Datenmodell und Venue-Datenbestand
     Wenn die Daten validiert werden
     Dann ist der Datensatz gültig
     Und ein Event mit "eventType" "unbekannt" ist ungültig
+
+  # EARS: VEN-UB-6, VEN-UB-7
+  Szenariogrundriss: Neue Venues sind im Katalog
+    Angenommen der Datenbestand in "data/venues.json"
+    Dann enthält er eine Venue mit der id "<id>", dem type "<typ>" und der city "<stadt>"
+    Und ihre website lautet "<website>"
+    Und sie hat eine source mit url, checkedAt und status
+    Und der Datenbestand besteht die Validierung
+
+    Beispiele:
+      | id                          | typ     | stadt | website                          |
+      | forum-fuer-fotografie-koeln | gallery | Köln  | https://de.forum-fotografie.info/ |
+      | kunstmuseum-bonn            | museum  | Bonn  | https://www.kunstmuseum-bonn.de/ |
