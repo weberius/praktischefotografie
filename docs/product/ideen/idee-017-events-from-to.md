@@ -1,0 +1,3 @@
+# Events sollen mit Start-Zeit und Endzeit recherchiert werden
+
+Die Events werden zur Zeit nur mit dem Datum gespeichert. Es steht aber meistens mindestens auch der Start-Zeitpunkt zur Verfügung. Dieser soll mit recherchiert und gespeichert werden. Sofern auch eine End-Zeitpunkt genannt wird, soll dieser recherchiert und gespeichert werden. Steht dieser End-Zeitpunkt nicht zur Verfügung, wird eine Dauer von 2 Stunden angenommen.
