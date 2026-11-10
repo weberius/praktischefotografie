@@ -48,5 +48,6 @@ export class App {
     { path: '/events', label: 'Events', exact: false },
     { path: '/festivals', label: 'Festivals', exact: false },
     { path: '/organizers', label: 'Veranstalter:innen', exact: false },
+    { path: '/projekt', label: 'Projekt', exact: false, separated: true },
   ];
 }

@@ -21,6 +21,7 @@ const OTHER: Record<string, string> = {
   haftungsausschluss: 'Haftungsausschluss',
   datenschutz: 'Datenschutz',
   quellen: 'Quellen & Lizenzen',
+  projekt: 'Projekt',
 };
 
 export type BackLinkKind = keyof typeof KINDS;

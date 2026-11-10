@@ -1,7 +1,7 @@
 ---
-status: offen  # offen | in-arbeit | umgesetzt | verworfen
+status: in-arbeit  # offen | in-arbeit | umgesetzt | verworfen
 prio: 2            # optional, kleiner = früher
-ticket: 
+ticket: SERVICE-25
 ---
 
 # Projekt

@@ -30,6 +30,7 @@ const ADDRESSES: [string, string][] = [
   ['/datenschutz', 'Datenschutz'],
   ['/haftungsausschluss', 'Haftungsausschluss'],
   ['/quellen', 'Quellen & Lizenzen'],
+  ['/projekt', 'Projekt'],
 ];
 
 describe('App', () => {
@@ -41,7 +42,7 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const labels = Array.from<HTMLElement>(fixture.nativeElement.querySelectorAll('a')).map((a) => a.textContent?.trim());
-    for (const label of ['Magazin', 'Kalender', 'Karte', 'Orte', 'Fotograf:innen', 'Ausstellungen', 'Events', 'Festivals', 'Veranstalter:innen', 'Impressum', 'Haftungsausschluss', 'Datenschutz', 'Quellen & Lizenzen']) {
+    for (const label of ['Magazin', 'Kalender', 'Karte', 'Orte', 'Fotograf:innen', 'Ausstellungen', 'Events', 'Festivals', 'Veranstalter:innen', 'Projekt', 'Impressum', 'Haftungsausschluss', 'Datenschutz', 'Quellen & Lizenzen']) {
       expect(labels).toContain(label);
     }
   });
@@ -230,7 +231,7 @@ describe('App', () => {
       const { button, nav } = await open();
       expect(visible(button)).toBeTrue();
       expect(visible(nav)).toBeFalse(); // display: none nimmt die Links aus Tab-Reihenfolge und Zugänglichkeitsbaum
-      expect(nav.querySelectorAll('a').length).toBe(9);
+      expect(nav.querySelectorAll('a').length).toBe(10);
       expect(button.getBoundingClientRect().width).toBeGreaterThanOrEqual(2.5 * 16 - 1);
       expect(button.getBoundingClientRect().height).toBeGreaterThanOrEqual(2.5 * 16 - 1);
     });
@@ -412,6 +413,12 @@ describe('App', () => {
       expect(t).not.toMatch(/\[[^\]]+\]/);
     });
 
+    it('Datenschutzerklärung nennt den PayPal-Link (RCH-UB-6)', async () => {
+      const { text: t } = await text('/datenschutz');
+      expect(t).toContain('PayPal');
+      expect(t).toContain('Erst mit dem Klick');
+    });
+
     it('Quellen und Lizenzen nennen alle Quellen (RCH-UB-4)', async () => {
       const { text: t } = await text('/quellen');
       for (const part of ['Wikipedia', 'Wikimedia Commons', 'Wikidata', 'OpenStreetMap', 'Leaflet', 'Orte und Veranstalter', 'CC BY-SA']) expect(t).toContain(part);
@@ -447,5 +454,73 @@ describe('App', () => {
         for (const a of Array.from(el.querySelectorAll('a[href^="http"]'))) expect(a.getAttribute('rel')).toContain('noopener');
       });
     }
+  });
+
+  describe('Szenario: Projektseite (PRJ)', () => {
+    async function page() {
+      const harness = await RouterTestingHarness.create();
+      await harness.navigateByUrl('/projekt');
+      harness.detectChanges();
+      return harness.routeNativeElement as HTMLElement;
+    }
+
+    it('Aufbau: h1, Motivationstext, Portrait, dann drei Abschnitte in Reihenfolge (PRJ-UB-1, -2, -7)', async () => {
+      const el = await page();
+      expect(Array.from(el.querySelectorAll('h1')).map((h) => h.textContent?.trim())).toEqual(['Projekt']);
+      expect(Array.from(el.querySelectorAll('h2')).map((h) => h.textContent?.trim())).toEqual(['Über das Projekt', 'Teilen', 'Zentrum für praktische Fotografie unterstützen']);
+      const order = Array.from(el.querySelectorAll('h1, p.projekt-motivation, img.projekt-portrait, h2')).map((n) => n.tagName + (n.className ? '.' + n.className : ''));
+      expect(order.slice(0, 3)).toEqual(['H1', 'P.projekt-motivation', 'IMG.projekt-portrait']);
+      expect(el.querySelector('p.projekt-motivation')?.textContent?.trim()).toBe('Ich möchte mich über Ausstellungen und andere Ereignisse in Bezug auf Fotografie informieren.');
+    });
+
+    it('Portrait und QR-Code mit Alternativtext, selbst ausgeliefert (PRJ-UB-3, -5, Q-SEC-2)', async () => {
+      const el = await page();
+      expect(el.querySelector('img.projekt-portrait')?.getAttribute('alt')).toContain('Wolfram Eberius');
+      expect(el.querySelector('img.projekt-qr')?.getAttribute('alt')?.length).toBeGreaterThan(5);
+      for (const img of Array.from(el.querySelectorAll('img'))) expect(img.getAttribute('src')).not.toMatch(/^https?:/);
+      expect(el.textContent).toContain('Wenn Dir die Webapp gefällt, dann teile sie gerne.');
+    });
+
+    it('Über das Projekt hebt das OK Lab Köln mit Link hervor (PRJ-UB-4)', async () => {
+      const el = await page();
+      const link = el.querySelector('a[href="https://codefor.de/koeln/"]') as HTMLAnchorElement;
+      expect(link.textContent).toContain('OK Lab Köln');
+      expect(link.getAttribute('rel')).toContain('noopener');
+    });
+
+    it('Unterstützen: Hinweis und PayPal-Link mit rel noopener (PRJ-UB-6)', async () => {
+      const el = await page();
+      expect(el.textContent).toContain('verlässt du die Webapp');
+      const link = el.querySelector('a[href^="https://www.paypal.com/"]') as HTMLAnchorElement;
+      expect(link.getAttribute('rel')).toContain('noopener');
+    });
+
+    it('kein Zurück-Link, keine Reste von Klangland (PRJ-UB-10)', async () => {
+      const el = await page();
+      expect(el.querySelector('app-back-link, .back-link')).toBeNull();
+      for (const word of ['Klangland', 'Konzert', 'Orchester', 'Komponist']) expect(el.textContent).not.toContain(word);
+    });
+
+    it('Titel und Beschreibung (PRJ-UB-9)', async () => {
+      await page();
+      expect(document.title).toContain('Projekt');
+      expect(document.querySelector('meta[name=description]')?.getAttribute('content')?.length).toBeGreaterThan(20);
+    });
+
+    it('Menü: Projekt ist der letzte Eintrag mit Trennlinie und als aktuelle Seite markiert (PRJ-UB-8, PRJ-ST-1)', async () => {
+      const fixture = TestBed.createComponent(App);
+      fixture.detectChanges();
+      await TestBed.inject(Router).navigateByUrl('/projekt');
+      await fixture.whenStable();
+      fixture.detectChanges();
+      (fixture.nativeElement.querySelector('button.nav-toggle') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const items = Array.from<HTMLElement>(fixture.nativeElement.querySelectorAll('#main-nav li'));
+      const last = items[items.length - 1];
+      expect(last.textContent?.trim()).toBe('Projekt');
+      expect(items.slice(0, -1).some((li) => li.textContent?.trim() === 'Projekt')).toBeFalse();
+      expect(parseFloat(getComputedStyle(last).borderTopWidth)).toBeGreaterThan(0);
+      expect(last.querySelector('a')?.classList).toContain('active');
+    });
   });
 });

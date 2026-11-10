@@ -15,7 +15,7 @@
   <nav id="main-nav" class="main-nav" [class.open]="menuOpen()" aria-label="Hauptnavigation">
     <ul>
       @for (link of links; track link.path) {
-        <li>
+        <li [class.separated]="link.separated">
           <a [routerLink]="link.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: link.exact }" (click)="closeMenu()">{{
             link.label
           }}</a>

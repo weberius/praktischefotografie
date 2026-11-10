@@ -23,6 +23,12 @@ Funktionalität: Rechtliche Seiten
     Und sie nennt die Rechte der Betroffenen und verweist für den Verantwortlichen auf das Impressum
     Und sie enthält keine Platzhalter
 
+  # EARS: RCH-UB-6
+  Szenario: Datenschutzerklärung nennt den PayPal-Link
+    Angenommen die Seite "/datenschutz"
+    Dann nennt sie den Link zu PayPal auf der Projektseite
+    Und sie erklärt, dass erst mit dem Klick Daten an PayPal übertragen werden
+
   # EARS: RCH-UB-4
   Szenario: Quellen und Lizenzen
     Angenommen die Seite "/quellen"

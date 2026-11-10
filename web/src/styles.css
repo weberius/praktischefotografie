@@ -46,6 +46,10 @@ html { scroll-padding-top: 6rem; } /* gekoppelt an HEADER_SCROLL_OFFSET_PX in ap
 .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; max-height: calc(100vh - 5rem); max-height: calc(100dvh - 5rem); overflow-y: auto; padding: 0.5rem 1.25rem; background: var(--card); border-bottom: 1px solid var(--border); box-shadow: 0 8px 16px rgb(0 0 0 / 0.1); }
 .main-nav.open { display: block; }
 .main-nav ul { display: flex; flex-direction: column; gap: 0.25rem; list-style: none; margin: 0; padding: 0; }
+.main-nav li.separated { margin-top: 0.25rem; padding-top: 0.5rem; border-top: 1px solid var(--border); } /* PRJ-UB-8 */
+.projekt-portrait, .projekt-qr { display: block; width: 15rem; max-width: 100%; height: auto; margin: 1rem 0; border-radius: var(--radius); }
+.projekt-support { display: inline-block; padding: 0.6rem 1rem; border-radius: var(--radius); background: #1b4a7a; color: #fff; font-weight: 600; text-decoration: none; }
+.projekt-support:hover { background: #14395f; }
 .main-nav a { display: block; padding: 0.6rem 0.75rem; border-radius: var(--radius); text-decoration: none; color: var(--fg); }
 .main-nav a:hover { background: var(--bg); }
 .main-nav a.active { font-weight: 600; background: var(--bg); box-shadow: inset 3px 0 0 var(--accent); }

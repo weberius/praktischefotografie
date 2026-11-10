@@ -17,7 +17,7 @@ function upcomingEventPath(paths, today = new Date().toISOString().slice(0, 10))
 /** Je Seitentyp eine Adresse (aus der Sitemap abgeleitet) plus Hinweisseite. */
 export function samplePages(paths) {
   const first = (re) => paths.find((p) => re.test(p));
-  return ['/', '/calendar', first(/^\/calendar\/\d{4}\/\d+$/), '/map', '/venues', first(/^\/venues\/.+/), '/photographers', first(/^\/photographers\/.+/), '/exhibitions', first(/^\/exhibitions\/.+/), '/events', first(/^\/events\/.+/), upcomingEventPath(paths), '/festivals', first(/^\/festivals\/.+/), '/organizers', first(/^\/organizers\/.+/), first(/^\/posts\/.+/), '/impressum', '/haftungsausschluss', '/datenschutz', '/quellen', '/404.html'].filter((p, i, all) => Boolean(p) && all.indexOf(p) === i);
+  return ['/', '/calendar', first(/^\/calendar\/\d{4}\/\d+$/), '/map', '/venues', first(/^\/venues\/.+/), '/photographers', first(/^\/photographers\/.+/), '/exhibitions', first(/^\/exhibitions\/.+/), '/events', first(/^\/events\/.+/), upcomingEventPath(paths), '/festivals', first(/^\/festivals\/.+/), '/organizers', first(/^\/organizers\/.+/), first(/^\/posts\/.+/), '/impressum', '/haftungsausschluss', '/datenschutz', '/quellen', '/projekt', '/404.html'].filter((p, i, all) => Boolean(p) && all.indexOf(p) === i);
 }
 
 export async function browserCheck({ baseUrl, paths, executablePath }) {

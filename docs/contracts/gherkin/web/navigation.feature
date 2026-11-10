@@ -6,7 +6,7 @@ Funktionalität: Navigation und Seitenrahmen
     Angenommen eine beliebige Seite der Anwendung
     Dann enthält sie Links zu Magazin, Kalender, Karte, Orten, Fotograf:innen, Ausstellungen, Events, Festivals, Veranstalter:innen, Impressum, Haftungsausschluss, Datenschutz und Quellen & Lizenzen
 
-  # EARS: NAV-UB-2 (ersetzt durch NAV-UB-6), NAV-UB-6 (ersetzt durch NAV-UB-7), NAV-UB-7
+  # EARS: NAV-UB-2 (ersetzt durch NAV-UB-6), NAV-UB-6 (ersetzt durch NAV-UB-7), NAV-UB-7 (ersetzt durch NAV-UB-10), NAV-UB-10
   Szenariogrundriss: Jede Adresse zeigt ihre Seite
     Angenommen die Adresse "<adresse>"
     Wenn sie aufgerufen wird
@@ -27,6 +27,7 @@ Funktionalität: Navigation und Seitenrahmen
     | /datenschutz | Datenschutz |
     | /haftungsausschluss | Haftungsausschluss |
     | /quellen | Quellen & Lizenzen |
+    | /projekt | Projekt |
 
   # EARS: NAV-EV-1
   Szenariogrundriss: Unbekannte Adresse oder ID

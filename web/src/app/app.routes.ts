@@ -87,6 +87,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/quellen/quellen').then((m) => m.QuellenPage),
   },
   {
+    path: 'projekt',
+    loadComponent: () => import('./pages/projekt/projekt').then((m) => m.ProjektPage),
+  },
+  {
     path: '404',
     loadComponent: () => import('./pages/not-found/not-found').then((m) => m.NotFoundPage),
   },
