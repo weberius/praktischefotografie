@@ -25,6 +25,19 @@ npm run validate:data && npm test
 
 Die komfortable Variante ist der Skill `/update-venue-data` (`.claude/skills/update-venue-data/SKILL.md`).
 
+### Veranstaltungsrecherche (`--events`)
+
+Der Skill `/research-events` (`.claude/skills/research-events/SKILL.md`, ADR-026) nutzt dieselben Befehle mit `--events`:
+
+```bash
+npm run data:fetch -- --events [--venue <ort-id>] [--offline]   # nur Orte, bis zu 10 Seiten
+npm run data:check -- --events [--venue <ort-id>]
+npm run data:report -- --events
+npm run data:apply -- --events [--venue <ort-id>]
+```
+
+Dateien liegen unter `updates/<Datum>/events/<ort-id>.json` (dazu `fetch-summary.json` und `REPORT.md`). Zulässig sind nur neue Events (`events`, `add`) der Arten `guided_tour`, `talk`, `workshop`, `reading`, `symposium` mit künftigem, im Auszug belegtem Datum; höchstens 30 je Ort und Lauf.
+
 ## Format einer Vorschlagsdatei
 
 ```json

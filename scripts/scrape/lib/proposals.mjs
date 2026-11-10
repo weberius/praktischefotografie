@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { DATASETS, validateData } from '../../validate-data.mjs';
 import { ROOT, normalizeSpace, readJson } from './common.mjs';
 import { listSnapshots } from './snapshots.mjs';
-import { EVENT_PREFIX, ID_SUFFIX, hasDate, hasHint, terminKind, timesOf } from './termine.mjs';
+import { EVENT_PREFIX, ID_SUFFIX, hasDate, hasHint, parseDates, terminKind, timesOf } from './termine.mjs';
 
 const SETTABLE = ['venues', 'exhibitions', 'events', 'photographers', 'organizers', 'festivals'];
 const ADDABLE = ['exhibitions', 'events', 'photographers', 'organizers', 'festivals'];
@@ -40,6 +40,24 @@ export function makeId(dataset, record, existingIds) {
   let id = base;
   for (let n = 2; existingIds.has(id); n++) id = `${base}-${n}`;
   return id;
+}
+
+/** Typen und Obergrenze der Veranstaltungsrecherche (VRS-UB-4, VRS-UB-5, ADR-026). */
+export const EVENT_RESEARCH_TYPES = ['guided_tour', 'talk', 'workshop', 'reading', 'symposium'];
+export const EVENT_RESEARCH_MAX = 30;
+
+/** Regeln der Veranstaltungsrecherche für einen Vorschlag (VRS-UB-2 bis VRS-UB-4); gibt den Verwerfungsgrund oder `null` zurück. */
+function checkEventResearch(change, today) {
+  if (change.dataset !== 'events' || change.op !== 'add') return 'Die Veranstaltungsrecherche schlägt nur neue Events vor (dataset "events", op "add")';
+  const record = change.record;
+  if (record && terminKind(record)) return 'Vernissage und Finissage gehören zu update-venue-data';
+  if (!EVENT_RESEARCH_TYPES.includes(record?.eventType)) return `eventType "${record?.eventType}" ist nicht vorgesehen (erlaubt: ${EVENT_RESEARCH_TYPES.join(', ')})`;
+  if (!isDate(record.startDate)) return 'Termin braucht ein gültiges startDate';
+  if (record.startDate < today) return `Termin liegt in der Vergangenheit (${record.startDate})`;
+  const [y, m, d] = record.startDate.split('-').map(Number);
+  const belegt = parseDates(change.evidence?.excerpt).some((x) => x.m === m && x.d === d && (x.y === undefined || x.y === y));
+  if (!belegt) return `Datum nicht belegt: Textauszug nennt ${record.startDate} nicht`;
+  return null;
 }
 
 /** Validiert einen Datensatz im Speicher mit dem Validator aus ADR-001. */
@@ -91,11 +109,12 @@ function checkTermin(kind, change, working, today) {
 }
 
 /** Prüft die Änderungen einer Vorschlagsdatei (UPD-EV-1, UPD-UB-1, UPD-UB-2, UPD-UB-4, UPD-UB-5, OPN-UB-3 bis OPN-UB-8, OPN-UN-1). */
-export function checkProposal(proposal, { dataset, snapshots, root = ROOT, today = new Date().toISOString().slice(0, 10) }) {
+export function checkProposal(proposal, { dataset, snapshots, root = ROOT, today = new Date().toISOString().slice(0, 10), events = false }) {
   const venue = proposal.organizerId ? undefined : dataset.venues.find((v) => v.id === proposal.venueId);
   const organizer = proposal.organizerId ? dataset.organizers.find((o) => o.id === proposal.organizerId) : undefined;
   if (!venue && !organizer) throw new Error(`Quelle "${proposal.organizerId ?? proposal.venueId}" existiert weder als Ort noch als Veranstalter`);
-  const conflict = venue?.source.status === 'verifiziert';
+  if (events && !venue) throw new Error(`Veranstaltungsrecherche: "${proposal.organizerId ?? proposal.venueId}" ist kein Ort`);
+  const conflict = !events && venue?.source.status === 'verifiziert';
   const festivalsOfOrganizer = (data) => new Set(data.festivals.filter((f) => f.organizerId === organizer?.id).map((f) => f.id));
   const working = clone(dataset);
   const accepted = [];
@@ -113,6 +132,10 @@ export function checkProposal(proposal, { dataset, snapshots, root = ROOT, today
     if (!SETTABLE.includes(change.dataset) || (op === 'add' && !ADDABLE.includes(change.dataset)) || !['set', 'add'].includes(op)) {
       reject(change, `Datensatztyp "${change.dataset}" mit Operation "${op}" ist nicht vorgesehen`);
       continue;
+    }
+    if (events) {
+      const reason = checkEventResearch(change, today) ?? (accepted.filter((c) => c.dataset === 'events').length >= EVENT_RESEARCH_MAX ? `Obergrenze von ${EVENT_RESEARCH_MAX} Vorschlägen je Ort erreicht` : null);
+      if (reason) { reject(change, reason); continue; }
     }
     // Zuordnung zur Quelle (UPD-UB-1, UPD-UB-6)
     if (op === 'set') {
@@ -215,9 +238,9 @@ export function checkProposal(proposal, { dataset, snapshots, root = ROOT, today
   return { ...proposal, changes: accepted, rejected };
 }
 
-export function checkProposalFile(file, { dataDir, snapshotDir, root = ROOT, today }) {
+export function checkProposalFile(file, { dataDir, snapshotDir, root = ROOT, today, events = false }) {
   const proposal = readJson(file);
-  const result = checkProposal(proposal, { dataset: loadDataset(dataDir), snapshots: listSnapshots(snapshotDir, proposal.organizerId ?? proposal.venueId), root, today });
+  const result = checkProposal(proposal, { dataset: loadDataset(dataDir), snapshots: listSnapshots(snapshotDir, proposal.organizerId ?? proposal.venueId), root, today, events });
   writeFileSync(file, JSON.stringify(result, null, 2) + '\n');
   return result;
 }
@@ -226,7 +249,7 @@ export function checkProposalFile(file, { dataDir, snapshotDir, root = ROOT, tod
  * Übernimmt freigegebene Änderungen (UPD-UB-3, UPD-EV-2, UPD-UB-4, UPD-UN-1).
  * Nichts wird geschrieben, wenn die Validierung des Ergebnisses fehlschlägt.
  */
-export function applyProposals(files, { dataDir, root = ROOT, now = new Date() }) {
+export function applyProposals(files, { dataDir, root = ROOT, now = new Date(), events = false }) {
   const dataset = loadDataset(dataDir);
   const working = clone(dataset);
   const applied = [];
@@ -242,7 +265,7 @@ export function applyProposals(files, { dataDir, root = ROOT, now = new Date() }
       if (change.appliedAt) continue;
       if (change.approved !== true) { note('keine Freigabe'); continue; }
       if (!change.kind) { note('nicht geprüft (data:check fehlt)'); continue; }
-      if (change.conflict || venue?.source.status === 'verifiziert') { note('Konflikt: Ort ist verifiziert'); continue; }
+      if (change.conflict || (!events && venue?.source.status === 'verifiziert')) { note('Konflikt: Ort ist verifiziert'); continue; }
       if (change.op === 'set') {
         const target = working[change.dataset].find((r) => r.id === change.recordId);
         if (!target) { note('Datensatz existiert nicht mehr'); continue; }
@@ -254,7 +277,7 @@ export function applyProposals(files, { dataDir, root = ROOT, now = new Date() }
       applied.push({ venueId: sourceId, id: change.id });
       change.appliedAt = now.toISOString().slice(0, 10);
     }
-    if (firstUrl && venue) {
+    if (firstUrl && venue && !events) {
       venue.source.url = firstUrl;
       venue.source.checkedAt = proposal.fetchedAt;
     }

@@ -12,11 +12,15 @@ export const DEFAULTS = {
   maxPages: 6, // Startseite + bis zu fünf Unterseiten (FET-EV-1)
   maxAgeDays: 7,
   maxRedirects: 3,
+  maxPagesEvents: 10, // Veranstaltungsmodus: Startseite + bis zu neun Unterseiten (VRS-EV-1)
 };
 
 const LINK_KEYWORDS = /programm|ausstellung|veranstaltung|event|kalender|aktuell|besuch|öffnungszeit|oeffnungszeit|anfahrt|bibliothek|sammlung|exhibition|visit|whatson|was-ist-los/i;
 /** Links zu Programm und Ausstellungen sind wichtiger als allgemeine Besuchsseiten; bei gleicher Wertung gilt die Reihenfolge im Dokument. */
 const PRIORITY = /ausstellung|exhibition|programm|veranstaltung|kalender|event|whatson|was-ist-los/i;
+/** Veranstaltungsmodus (VRS-EV-1): zusätzliche Stichwörter und Vorrang für Führungen, Veranstaltungen, Termine, Kalender und Programm. */
+const EVENT_LINK_KEYWORDS = new RegExp(`${LINK_KEYWORDS.source}|führung|fuehrung|termin|tour|workshop|vortrag|lesung|talk`, 'i');
+const EVENT_PRIORITY = /führung|fuehrung|veranstaltung|termin|kalender|event|programm|whatson|was-ist-los|tour|workshop|vortrag|lesung|talk/i;
 const SKIP_EXTENSIONS = /\.(pdf|jpe?g|png|gif|webp|svg|zip|mp[34]|docx?|xlsx?)(\?|$)/i;
 
 /** Website-Schlüssel: Host ohne führendes "www." (makk.de und www.makk.de sind dieselbe Website). */
@@ -62,7 +66,9 @@ function findPageRedirect($, text, baseUrl) {
 }
 
 /** Textinhalt einer HTML-Seite ohne Skripte, Stile und Eingebettetes; Leerraum normalisiert. `sites`: Websites, deren Links verfolgt werden (Standard: die der Seite). */
-export function extractPage(html, baseUrl, sites = [hostOf(baseUrl)]) {
+export function extractPage(html, baseUrl, sites = [hostOf(baseUrl)], { events = false } = {}) {
+  const keywords = events ? EVENT_LINK_KEYWORDS : LINK_KEYWORDS;
+  const priority = events ? EVENT_PRIORITY : PRIORITY;
   const $ = cheerio.load(html);
   const links = new Map();
   $('a[href]').each((_, a) => {
@@ -72,7 +78,7 @@ export function extractPage(html, baseUrl, sites = [hostOf(baseUrl)]) {
       if (!/^https?:$/.test(url.protocol) || !sites.includes(hostOf(url.href))) return;
       if (SKIP_EXTENSIONS.test(url.pathname) || url.href === new URL(baseUrl).href) return;
       const label = `${url.pathname} ${$(a).text()}`;
-      if (LINK_KEYWORDS.test(label) && !links.has(url.href)) links.set(url.href, PRIORITY.test(label) ? 0 : 1);
+      if (keywords.test(label) && !links.has(url.href)) links.set(url.href, priority.test(label) ? 0 : 1);
     } catch {
       // ungültige Adresse: ignorieren
     }
@@ -110,7 +116,8 @@ async function readLimited(response, maxBytes) {
  * Gibt je Ort eine Zusammenfassung zurück; Fehler einzelner Orte stoppen den Lauf nicht (FET-UN-1).
  */
 export async function fetchVenues(venues, options) {
-  const o = { ...DEFAULTS, fetchFn: globalThis.fetch, sleep: (ms) => new Promise((r) => setTimeout(r, ms)), now: new Date(), offline: false, ...options };
+  const o = { ...DEFAULTS, fetchFn: globalThis.fetch, sleep: (ms) => new Promise((r) => setTimeout(r, ms)), now: new Date(), offline: false, events: false, ...options };
+  if (o.events && options?.maxPages === undefined) o.maxPages = o.maxPagesEvents;
   if (!o.offline && !o.contact) throw new Error('SCRAPE_CONTACT fehlt: Ohne Kontaktadresse im User-Agent wird nicht abgerufen.');
   const ua = o.offline ? '' : userAgent(o.contact);
   const hostsFor = (id) => (o.redirectHosts?.[id] ?? []).map(normalizeHost);
@@ -218,14 +225,14 @@ export async function fetchVenues(venues, options) {
           summary.errors.push({ url: current, reason: `Antwort größer als ${o.maxBytes / 1024 / 1024} MB verworfen` });
           return null;
         }
-        page = extractPage(html, current, [...allowed]);
+        page = extractPage(html, current, [...allowed], { events: o.events });
         target = page.redirect?.target;
         if (target?.split('#')[0] === current.split('#')[0]) target = undefined; // Selbstverweis (Auto-Reload) ist keine Weiterleitung
       }
       if (!target) {
         const final = chain.length > 1 && hostOf(current) !== hostOf(url);
         if (final) summary.notes.push(`Weiterleitung verfolgt: ${chain.join(' → ')}`);
-        return saveSnapshot(o.snapshotDir, venueId, { url: current, requestedUrl: url, fetchedAt: o.now.toISOString(), status: response.status, title: page.title, text: page.text, links: page.links });
+        return saveSnapshot(o.snapshotDir, venueId, { url: current, requestedUrl: url, fetchedAt: o.now.toISOString(), status: response.status, title: page.title, text: page.text, links: page.links, ...(o.events ? { linkMode: 'events' } : {}) });
       }
       const problem = redirectProblem(chain, target, allowed);
       if (problem) {
@@ -241,8 +248,10 @@ export async function fetchVenues(venues, options) {
   for (const venue of venues) {
     const summary = { venueId: venue.id, status: 'übersprungen', pages: 0, fetched: 0, cached: 0, errors: [], notes: [] };
     summaries.push(summary);
-    const fresh = (url) => {
+    // Im Veranstaltungsmodus taugt ein zwischengespeicherter Snapshot der Startseite nur, wenn seine Links nach den Veranstaltungsstichwörtern gewählt wurden.
+    const fresh = (url, needsEventLinks = false) => {
       const snapshot = loadSnapshot(o.snapshotDir, venue.id, url);
+      if (snapshot && needsEventLinks && o.events && snapshot.linkMode !== 'events') return null;
       return snapshot && (o.offline || ageInDays(snapshot, o.now) < o.maxAgeDays) ? snapshot : null;
     };
     if (o.offline) {
@@ -278,7 +287,7 @@ export async function fetchVenues(venues, options) {
         continue;
       }
       const allowed = new Set([hostOf(venue.website), ...hostsFor(venue.id)]);
-      let start = fresh(venue.website);
+      let start = fresh(venue.website, true);
       if (start) summary.cached++;
       else {
         start = await fetchPage(venue.id, venue.website, summary, allowed);

@@ -1,4 +1,4 @@
-// Gherkin: web/events.feature · „Liste zeigt Events“, „Liste ist nach Typ filterbar“, „Kommerzielles Event“, „Beendetes Event“, „Vernissage und Finissage in der Liste“, „Vernissage und Finissage filterbar“, „Vernissage und Finissage in der Detailansicht“
+// Gherkin: web/events.feature · „Liste zeigt Events“, „Liste ist nach Typ filterbar“, „Kommerzielles Event“, „Beendetes Event“, „Vernissage und Finissage in der Liste“, „Vernissage und Finissage filterbar“, „Vernissage und Finissage in der Detailansicht“, „Führung in der Liste“, „Führung filterbar“, „Führung in der Detailansicht“
 import { TestBed } from '@angular/core/testing';
 import { Router, provideRouter, withComponentInputBinding } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
@@ -100,6 +100,29 @@ describe('EventListPage', () => {
     it('Szenario: Vernissage und Finissage in der Detailansicht', async () => {
       const { el } = await open('/events/e-finissage', { events: termine });
       expect(el.querySelector('.badge')?.textContent?.trim()).toBe('Finissage');
+    });
+  });
+
+  describe('Führung (EVT-UB-6)', () => {
+    const events = [
+      { ...baseEvent, id: 'e-fuehrung', title: 'Öffentliche Führung', eventType: 'guided_tour' as const, startDate: '2026-11-15', endDate: '2026-11-15' },
+      { ...baseEvent, id: 'e-vortrag', title: 'Vortrag', eventType: 'talk' as const, startDate: '2026-11-16', endDate: '2026-11-16' },
+    ];
+
+    it('Szenario: Führung in der Liste', async () => {
+      const { el } = await open('/events', { events });
+      expect(cards(el)[0].querySelector('.badge')?.textContent?.trim()).toBe('Führung');
+    });
+
+    it('Szenario: Führung filterbar', async () => {
+      const { el } = await open('/events?type=guided_tour', { events });
+      expect(titles(el)).toEqual(['Öffentliche Führung']);
+      expect(Array.from(el.querySelectorAll('option')).map((o) => o.textContent?.trim())).toContain('Führung');
+    });
+
+    it('Szenario: Führung in der Detailansicht', async () => {
+      const { el } = await open('/events/e-fuehrung', { events });
+      expect(el.querySelector('.badge')?.textContent?.trim()).toBe('Führung');
     });
   });
 

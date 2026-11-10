@@ -1,23 +1,24 @@
 // Prüft Vorschlagsdateien unter updates/<Datum>/ (ADR-007): Schema, Fundstelle im Snapshot, Dubletten, Konflikte.
-// Aufruf: npm run data:check -- [--date JJJJ-MM-TT] [--venue <ort-oder-veranstalter-id>]
+// Aufruf: npm run data:check -- [--date JJJJ-MM-TT] [--venue <ort-oder-veranstalter-id>] [--events]
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ROOT, arg, loadSources, resolveVenues, today } from './lib/common.mjs';
+import { ROOT, arg, loadSources, resolveEventVenues, resolveVenues, today } from './lib/common.mjs';
 import { checkProposalFile } from './lib/proposals.mjs';
 
 export function main(argv = process.argv.slice(2), root = ROOT) {
   const date = arg(argv, 'date', today());
-  const venues = resolveVenues(loadSources(root), arg(argv, 'venue'));
+  const events = arg(argv, 'events', false) === true; // Veranstaltungsrecherche (VRS-*, ADR-026): updates/<Datum>/events/
+  const venues = events ? resolveEventVenues(root, arg(argv, 'venue')) : resolveVenues(loadSources(root), arg(argv, 'venue'));
   const results = [];
   for (const venue of venues) {
-    const file = join(root, 'updates', date, `${venue.id}.json`);
+    const file = join(root, 'updates', date, ...(events ? ['events'] : []), `${venue.id}.json`);
     if (!existsSync(file)) continue;
-    const result = checkProposalFile(file, { dataDir: join(root, 'data'), snapshotDir: join(root, '.cache', 'snapshots'), root, today: date });
+    const result = checkProposalFile(file, { dataDir: join(root, 'data'), snapshotDir: join(root, '.cache', 'snapshots'), root, today: date, events });
     results.push({ venueId: venue.id, accepted: result.changes.length, rejected: result.rejected.length });
     console.log(`${venue.id}: ${result.changes.length} Vorschläge, ${result.rejected.length} verworfen`);
   }
-  if (results.length === 0) console.log(`Keine Vorschlagsdateien in updates/${date}/`);
+  if (results.length === 0) console.log(`Keine Vorschlagsdateien in updates/${date}/${events ? 'events/' : ''}`);
   return results;
 }
 

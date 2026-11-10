@@ -67,3 +67,15 @@ export function arg(argv, name, fallback) {
 }
 
 export const normalizeSpace = (text) => String(text).replace(/\s+/g, ' ').trim();
+
+/**
+ * Quellen des Veranstaltungsmodus (VRS-OP-1, VRS-UN-1): nur Orte mit `website` (Veranstalter haben keine `venueId`).
+ * Eine unbekannte oder zu einem Veranstalter gehörende ID wirft einen Fehler mit den gültigen Orts-IDs.
+ */
+export function resolveEventVenues(root = ROOT, venueId) {
+  const venues = loadVenues(root).filter((v) => v.website);
+  if (!venueId) return venues;
+  const found = venues.filter((v) => v.id === venueId);
+  if (found.length === 0) throw new Error(`Unbekannte Orts-ID "${venueId}". Gültige IDs: ${venues.map((v) => v.id).join(', ')}`);
+  return found;
+}

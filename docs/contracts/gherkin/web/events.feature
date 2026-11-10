@@ -46,3 +46,21 @@ Funktionalität: Events und Messen
     Angenommen ein Event "e-finissage" vom Typ "finissage"
     Wenn "/events/e-finissage" aufgerufen wird
     Dann trägt es den Typ "Finissage"
+
+  # EARS: EVT-UB-6
+  Szenario: Führung in der Liste
+    Angenommen ein Event vom Typ "guided_tour"
+    Wenn "/events" aufgerufen wird
+    Dann trägt es den Typ "Führung"
+
+  # EARS: EVT-UB-6
+  Szenario: Führung filterbar
+    Angenommen ein Event vom Typ "guided_tour" und eines vom Typ "talk"
+    Wenn der Typ "Führung" gewählt wird
+    Dann erscheint nur die Führung
+
+  # EARS: EVT-UB-6
+  Szenario: Führung in der Detailansicht
+    Angenommen ein Event "e-fuehrung" vom Typ "guided_tour"
+    Wenn "/events/e-fuehrung" aufgerufen wird
+    Dann trägt es den Typ "Führung"

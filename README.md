@@ -48,7 +48,7 @@ praktischefotografie/
 ├── web/                       # Angular-Webanwendung (siehe unten)
 ├── scripts/                   # Abruf, Prüfung und Übernahme (Orte, Fotograf:innen, Magazin)
 ├── updates/                   # Vorschläge, Berichte und Linksammlung der Skills (siehe updates/README.md)
-├── .claude/skills/            # Skills: update-venue-data, research-photographers
+├── .claude/skills/            # Skills: update-venue-data, research-photographers, research-events
 └── docs/                      # Spezifikation, ADRs, Planung
 ```
 
@@ -292,6 +292,18 @@ Hinweise:
 * Jeder Vorschlag nennt seine Fundstelle; Festivals werden nur mit belegtem Zeitraum vorgeschlagen (ADR-010).
 * Zu neuen, eröffnenden, bald endenden und beendeten Ausstellungen entstehen Magazinbeiträge (60 bis 80 Wörter, `npm run news:plan|check|apply`). Sie erscheinen erst an dem Tag ihres Anlasses und werden nur nach Freigabe übernommen.
 * Prüfe vor der Freigabe Fundstellen und Daten stichprobenartig gegen die Webseite; die Prüfung kann Formfehler finden, aber nicht jede Sachabweichung.
+
+### `/research-events` – Führungen und Veranstaltungen
+
+Recherchiert künftige Führungen, Vorträge, Workshops, Lesungen und Symposien der Orte (bis zu 10 Seiten je Ort, Veranstaltungslinks zuerst) und ergänzt sie in `data/events.json`. Nur Orte, keine Veranstalter; Vernissagen und Finissagen bleiben bei `/update-venue-data`.
+
+```text
+/research-events                                        # alle Orte mit Website
+/research-events --venue photographische-sammlung-koeln # ein Ort
+/research-events --offline                              # nur mit zwischengespeicherten Seiten
+```
+
+Hinweise: Jeder Vorschlag nennt seine Fundstelle mit belegtem Datum (höchstens 30 je Ort und Lauf); übernommen wird nur nach Freigabe (ADR-026).
 
 ### `/research-photographers` – Profile der Fotograf:innen
 

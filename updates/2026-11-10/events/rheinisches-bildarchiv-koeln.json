@@ -1,0 +1,432 @@
+{
+  "venueId": "rheinisches-bildarchiv-koeln",
+  "fetchedAt": "2026-11-10",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Führung im Bunker K101",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-14",
+        "endDate": "2026-11-14",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "fuehrung-im-bunker-k101-2026"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "14.11. 2026 Führung im Bunker K101Führung unter dem Titel \"Wenigstens ein Dach über dem Kopf\" im Bunker in der Körnerstr. Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c2",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-18",
+        "endDate": "2026-11-18",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "ausstellungsfuehrung-hungerleben-lebenshunger-koeln-1946-47-2026"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "18.11. 2026 Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"Führung durch die Ausstellung \"Hungerleben - Lebenshunger. Köln 1946/47\" Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c3",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-25",
+        "endDate": "2026-11-25",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "ausstellungsfuehrung-hungerleben-lebenshunger-koeln-1946-47-2026-2"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "25.11. 2026 Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"Führung durch die Ausstellung \"Hungerleben - Lebenshunger. Köln 1946/47\" Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c4",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Vortrag: Vom Zeltlager zum demokratischen Sozialismus",
+        "eventType": "talk",
+        "startDate": "2026-11-25",
+        "endDate": "2026-11-25",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "vortrag-vom-zeltlager-zum-demokratischen-sozialismus-2026"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "25.11. 2026 Vortrag: Vom Zeltlager zum demokratischen SozialismusDer Kinder- und Jugendverband \"Die Kölner Falken\" in den ersten Nachkriegsjahren Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c5",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"",
+        "eventType": "guided_tour",
+        "startDate": "2026-12-09",
+        "endDate": "2026-12-09",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "ausstellungsfuehrung-hungerleben-lebenshunger-koeln-1946-47-2026-3"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "09.12. 2026 Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"Führung durch die Ausstellung \"Hungerleben - Lebenshunger. Köln 1946/47\" Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c6",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Erzählcafé: Überleben in Trümmern – Kriegskindheiten in Köln",
+        "eventType": "talk",
+        "startDate": "2026-12-09",
+        "endDate": "2026-12-09",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "erzaehlcafe-ueberleben-in-truemmern-kriegskindheiten-in-koeln-2026"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "09.12. 2026 Erzählcafé: Überleben in Trümmern – Kriegskindheiten in KölnErinnerungen Kölner Zeitzeug*innen Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c7",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"",
+        "eventType": "guided_tour",
+        "startDate": "2027-01-06",
+        "endDate": "2027-01-06",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "ausstellungsfuehrung-hungerleben-lebenshunger-koeln-1946-47-2027"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "06.01. 2027 Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"Führung durch die Ausstellung \"Hungerleben - Lebenshunger. Köln 1946/47\" Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c8",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Führung: Zu Besuch im Rheinischen Bildarchiv",
+        "eventType": "guided_tour",
+        "startDate": "2027-01-13",
+        "endDate": "2027-01-13",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "fuehrung-zu-besuch-im-rheinischen-bildarchiv-2027"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "13.01. 2027 Führung: Zu Besuch im Rheinischen BildarchivBei diesem Rundgang erhalten Sie einen umfassenden Überblick zu den Alltäglichkeiten und Besonderheiten des modernen Bildarchivs. Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c9",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"",
+        "eventType": "guided_tour",
+        "startDate": "2027-01-20",
+        "endDate": "2027-01-20",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "ausstellungsfuehrung-hungerleben-lebenshunger-koeln-1946-47-2027-2"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "20.01. 2027 Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"Führung durch die Ausstellung \"Hungerleben - Lebenshunger. Köln 1946/47\" Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c10",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"",
+        "eventType": "guided_tour",
+        "startDate": "2027-02-17",
+        "endDate": "2027-02-17",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "ausstellungsfuehrung-hungerleben-lebenshunger-koeln-1946-47-2027-3"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "17.02. 2027 Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"Führung durch die Ausstellung \"Hungerleben - Lebenshunger. Köln 1946/47\" Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c11",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Führung: Zu Besuch im Rheinischen Bildarchiv",
+        "eventType": "guided_tour",
+        "startDate": "2027-02-23",
+        "endDate": "2027-02-23",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "fuehrung-zu-besuch-im-rheinischen-bildarchiv-2027-2"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "23.02. 2027 Führung: Zu Besuch im Rheinischen BildarchivBei diesem Rundgang erhalten Sie einen umfassenden Überblick zu den Alltäglichkeiten und Besonderheiten eines modernen Bildarchivs. Eintritt fre"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c12",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"",
+        "eventType": "guided_tour",
+        "startDate": "2027-02-24",
+        "endDate": "2027-02-24",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "ausstellungsfuehrung-hungerleben-lebenshunger-koeln-1946-47-2027-4"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "24.02. 2027 Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"Führung durch die Ausstellung \"Hungerleben - Lebenshunger. Köln 1946/47\" Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c13",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Vortrag: Von Schuld, Sühne und Persilscheinen – Entnazifizierung in Köln 1945 bis 1948",
+        "eventType": "talk",
+        "startDate": "2027-02-24",
+        "endDate": "2027-02-24",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "vortrag-von-schuld-suehne-und-persilscheinen-entnazifizierung-in-koeln-1945-bis-1948-2027"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "24.02. 2027 Vortrag: Von Schuld, Sühne und Persilscheinen – Entnazifizierung in Köln 1945 bis 1948Ein Vortrag über den Alltag der Entnazifizierung und ihrer Probleme in einer Wiederaufbaugesellschaft "
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c14",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Führung im Bunker K101",
+        "eventType": "guided_tour",
+        "startDate": "2027-03-04",
+        "endDate": "2027-03-04",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "fuehrung-im-bunker-k101-2027"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "04.03. 2027 Führung im Bunker K101Führung unter dem Titel \"Wenigstens ein Dach über dem Kopf\" im Bunker in der Körnerstr. Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c15",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"",
+        "eventType": "guided_tour",
+        "startDate": "2027-03-10",
+        "endDate": "2027-03-10",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "ausstellungsfuehrung-hungerleben-lebenshunger-koeln-1946-47-2027-5"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "10.03. 2027 Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"Führung durch die Ausstellung \"Hungerleben - Lebenshunger. Köln 1946/47\" Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c16",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"",
+        "eventType": "guided_tour",
+        "startDate": "2027-03-17",
+        "endDate": "2027-03-17",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "ausstellungsfuehrung-hungerleben-lebenshunger-koeln-1946-47-2027-6"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "17.03. 2027 Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"Führung durch die Ausstellung \"Hungerleben - Lebenshunger. Köln 1946/47\" Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c17",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"",
+        "eventType": "guided_tour",
+        "startDate": "2027-03-18",
+        "endDate": "2027-03-18",
+        "venueId": "rheinisches-bildarchiv-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Eintritt frei.",
+        "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "id": "ausstellungsfuehrung-hungerleben-lebenshunger-koeln-1946-47-2027-7"
+      },
+      "evidence": {
+        "url": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
+        "excerpt": "18.03. 2027 Ausstellungsführung: \"Hungerleben – Lebenshunger. Köln 1946/47\"Führung durch die Ausstellung \"Hungerleben - Lebenshunger. Köln 1946/47\" Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    }
+  ],
+  "rejected": []
+}

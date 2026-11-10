@@ -92,6 +92,12 @@ Funktionalität: Datenmodell und Venue-Datenbestand
     Dann ist der Datensatz gültig
     Und ein Event mit "eventType" "unbekannt" ist ungültig
 
+  # EARS: DAT-UB-8
+  Szenario: Event-Typ Führung ist gültig
+    Angenommen ein Event mit "eventType" "guided_tour" und allen Pflichtfeldern
+    Wenn die Daten validiert werden
+    Dann ist der Datensatz gültig
+
   # EARS: VEN-UB-6, VEN-UB-7
   Szenariogrundriss: Neue Venues sind im Katalog
     Angenommen der Datenbestand in "data/venues.json"

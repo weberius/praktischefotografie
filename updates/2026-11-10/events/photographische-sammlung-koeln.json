@@ -1,0 +1,232 @@
+{
+  "venueId": "photographische-sammlung-koeln",
+  "fetchedAt": "2026-11-10",
+  "changes": [
+    {
+      "id": "c1",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Öffentliche Führung durch die Ausstellung \"August Sander zum 150. Geburtstag\"",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-15",
+        "endDate": "2026-11-15",
+        "venueId": "photographische-sammlung-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Beginn 15:00 Uhr. Kosten inkl. Eintritt: 8,50 €, erm. 6 € (sonntags, laut Seite).",
+        "website": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "id": "oeffentliche-fuehrung-durch-die-ausstellung-august-sander-zum-150-geburtstag-2026"
+      },
+      "evidence": {
+        "url": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "excerpt": "Öffentliche Führung durch die Ausstellung \"August Sander zum 150. Geburtstag\" Sonntag, 15.11.2026, 15:00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c2",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "August Sander zum Geburtstag – öffentliche Führung",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-17",
+        "endDate": "2026-11-17",
+        "venueId": "photographische-sammlung-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Beginn 16:00 Uhr.",
+        "website": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "id": "august-sander-zum-geburtstag-oeffentliche-fuehrung-2026"
+      },
+      "evidence": {
+        "url": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "excerpt": "August Sander zum Geburtstag – öffentliche Führung Dienstag, 17.11.2026, 16:00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c3",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Öffentliche Führung durch die Ausstellung \"August Sander zum 150. Geburtstag\"",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-22",
+        "endDate": "2026-11-22",
+        "venueId": "photographische-sammlung-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Beginn 15:00 Uhr. Kosten inkl. Eintritt: 8,50 €, erm. 6 € (sonntags, laut Seite).",
+        "website": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "id": "oeffentliche-fuehrung-durch-die-ausstellung-august-sander-zum-150-geburtstag-2026-2"
+      },
+      "evidence": {
+        "url": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "excerpt": "Öffentliche Führung durch die Ausstellung \"August Sander zum 150. Geburtstag\" Sonntag, 22.11.2026, 15:00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c4",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Philosophische Führung Lebensrealität(en) in August Sanders Werk",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-22",
+        "endDate": "2026-11-22",
+        "venueId": "photographische-sammlung-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Beginn 17:00 Uhr.",
+        "website": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "id": "philosophische-fuehrung-lebensrealitaet-en-in-august-sanders-werk-2026"
+      },
+      "evidence": {
+        "url": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "excerpt": "Philosophische Führung Lebensrealität(en) in August Sanders Werk Sonntag, 22.11.2026, 17:00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c5",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "LeseWelten für Kinder: Geschichten hören, Bilder entdecken",
+        "eventType": "reading",
+        "startDate": "2026-11-28",
+        "endDate": "2026-11-28",
+        "venueId": "photographische-sammlung-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Beginn 16:00 Uhr.",
+        "website": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "id": "lesewelten-fuer-kinder-geschichten-hoeren-bilder-entdecken-2026"
+      },
+      "evidence": {
+        "url": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "excerpt": "LeseWelten für Kinder: Geschichten hören, Bilder entdecken Samstag, 28.11.2026, 16:00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c6",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Öffentliche Führung durch die Ausstellung \"August Sander zum 150. Geburtstag\"",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-29",
+        "endDate": "2026-11-29",
+        "venueId": "photographische-sammlung-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Beginn 15:00 Uhr. Kosten inkl. Eintritt: 8,50 €, erm. 6 € (sonntags, laut Seite).",
+        "website": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "id": "oeffentliche-fuehrung-durch-die-ausstellung-august-sander-zum-150-geburtstag-2026-3"
+      },
+      "evidence": {
+        "url": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "excerpt": "Öffentliche Führung durch die Ausstellung \"August Sander zum 150. Geburtstag\" Sonntag, 29.11.2026, 15:00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c7",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Kuratorinnenführung",
+        "eventType": "guided_tour",
+        "startDate": "2026-12-03",
+        "endDate": "2026-12-03",
+        "venueId": "photographische-sammlung-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Beginn 18:00 Uhr.",
+        "website": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "id": "kuratorinnenfuehrung-2026"
+      },
+      "evidence": {
+        "url": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "excerpt": "Kuratorinnenführung Donnerstag, 03.12.2026, 18:00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c8",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Öffentliche Führung Landschaft und Architektur im Werk von August Sander",
+        "eventType": "guided_tour",
+        "startDate": "2026-12-06",
+        "endDate": "2026-12-06",
+        "venueId": "photographische-sammlung-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Beginn 15:00 Uhr. Kosten inkl. Eintritt: 8,50 €, erm. 6 € (sonntags, laut Seite).",
+        "website": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "id": "oeffentliche-fuehrung-landschaft-und-architektur-im-werk-von-august-sander-2026"
+      },
+      "evidence": {
+        "url": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "excerpt": "Öffentliche Führung Landschaft und Architektur im Werk von August Sander Sonntag, 06.12.2026, 15:00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    },
+    {
+      "id": "c9",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Öffentliche Führung",
+        "eventType": "guided_tour",
+        "startDate": "2026-12-13",
+        "endDate": "2026-12-13",
+        "venueId": "photographische-sammlung-koeln",
+        "city": "Köln",
+        "isCommercial": false,
+        "description": "Beginn 15:00 Uhr. Kosten inkl. Eintritt: 8,50 €, erm. 6 € (sonntags, laut Seite).",
+        "website": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "id": "oeffentliche-fuehrung-2026"
+      },
+      "evidence": {
+        "url": "https://photographie-stiftungkultur.de/programm/fuehrungen-und-veranstaltungen",
+        "excerpt": "Öffentliche Führung Sonntag, 13.12.2026, 15:00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-10"
+    }
+  ],
+  "rejected": []
+}

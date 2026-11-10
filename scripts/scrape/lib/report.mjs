@@ -1,5 +1,5 @@
 // Bericht über einen Aktualisierungslauf (UPD-EV-3): updates/<Datum>/REPORT.md.
-import { existsSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { readJson } from './common.mjs';
 import { listSnapshots } from './snapshots.mjs';
@@ -86,5 +86,35 @@ export function buildReport({ root, date }) {
 export function writeReport({ root, date }) {
   const text = buildReport({ root, date });
   writeFileSync(join(root, 'updates', date, 'REPORT.md'), text);
+  return text;
+}
+
+/** Bericht der Veranstaltungsrecherche (VRS-EV-2, VRS-UN-2): je Ort Seiten, Vorschläge und verworfene Vorschläge mit Grund; Orte ohne Abruf mit Grund. */
+export function buildEventsReport({ root, date }) {
+  const dir = join(root, 'updates', date, 'events');
+  const fetchSummary = existsSync(join(dir, 'fetch-summary.json')) ? readJson(join(dir, 'fetch-summary.json')) : null;
+  const venues = fetchSummary?.venues ?? [];
+  const lines = [`# Bericht zur Veranstaltungsrecherche ${date}`, ''];
+  if (!fetchSummary) lines.push('- Kein Abruf in diesem Lauf (keine `events/fetch-summary.json`).', '');
+  const problems = [];
+  lines.push('## Orte', '');
+  for (const v of venues) {
+    const file = join(dir, `${v.venueId}.json`);
+    const proposal = existsSync(file) ? readJson(file) : { changes: [], rejected: [] };
+    const changes = proposal.changes ?? [];
+    const rejected = proposal.rejected ?? [];
+    lines.push(`- ${v.venueId}: ${v.status}, ${v.pages} Seiten, ${changes.length} Vorschläge (${changes.filter((c) => c.appliedAt).length} übernommen), ${rejected.length} verworfen`);
+    for (const r of rejected) lines.push(`  - verworfen ${r.id ?? ''}: ${r.reason}`);
+    for (const e of v.errors) problems.push(`${v.venueId}: ${e.url} – ${e.reason}`);
+    for (const n of v.notes) problems.push(`${v.venueId}: ${n}`);
+  }
+  lines.push('', '## Nicht erreichbar oder gesperrt', '', ...(problems.length ? problems.map((p) => `- ${p}`) : ['- keine']), '');
+  return lines.join('\n');
+}
+
+export function writeEventsReport({ root, date }) {
+  const text = buildEventsReport({ root, date });
+  mkdirSync(join(root, 'updates', date, 'events'), { recursive: true });
+  writeFileSync(join(root, 'updates', date, 'events', 'REPORT.md'), text);
   return text;
 }
