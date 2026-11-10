@@ -74,11 +74,27 @@ const cacheFresh = (root, id, maxAgeDays, offline, now) => {
   return age < maxAgeDays;
 };
 
+/** Prüft eigene Adressen (PQL-UN-1): nur gültiges http/https, keine internen Hosts; Dubletten nach Normalisierung entfallen. */
+export function classifyOwnUrls(urls, allowInternal = false) {
+  const seen = new Set();
+  const result = [];
+  for (const raw of urls) {
+    const url = normalizeUrl(raw);
+    if (!url) result.push({ url: String(raw), status: 'abgelehnt', reason: 'kein gültiges http oder https' });
+    else if (!allowInternal && isInternalHost(url)) result.push({ url, status: 'abgelehnt', reason: 'interne Adresse' });
+    else if (!seen.has(url)) {
+      seen.add(url);
+      result.push({ url, status: 'offen' });
+    }
+  }
+  return result;
+}
+
 /** Plan der Websuche: Person, Suchanfragen, Cache-Treffer. Schreibt photographers-web.json (WSP-UB-1, WSP-OP-1). */
-export function planWeb({ root = ROOT, date, photographerId, name, offline = false, maxAgeDays = 30, now = new Date() }) {
+export function planWeb({ root = ROOT, date, photographerId, name, offline = false, maxAgeDays = 30, now = new Date(), urls = [], noWeb = false, allowInternal = false }) {
   const target = resolveTarget(readJson(join(root, 'data', 'photographers.json')), { photographerId, name });
   const previous = readJson(webPlanPath(root, date), { persons: [] });
-  const person = { ...target, queries: queriesFor(target.name), useCache: cacheFresh(root, target.id, maxAgeDays, offline, now) };
+  const person = { ...target, queries: queriesFor(target.name), useCache: cacheFresh(root, target.id, maxAgeDays, offline, now), noSearch: noWeb, ownUrls: classifyOwnUrls(urls, allowInternal) };
   const plan = { date, offline, maxAgeDays, persons: [...previous.persons.filter((p) => p.id !== target.id), person] };
   write(webPlanPath(root, date), plan);
   return { plan, person };
@@ -95,6 +111,27 @@ export function ingestSearch({ root = ROOT, date, now = new Date() }) {
   for (const person of plan.persons) {
     if (person.status) continue;
     Object.assign(person, { queryCount: 0, hitCount: 0, newLinks: [], status: 'offen' });
+    // Eigene Adressen zuerst, damit ihre Seiten vor den Treffern abgerufen werden (PQL-EV-1, PQL-UB-2).
+    const own = person.ownUrls ?? [];
+    if (own.some((o) => o.status === 'offen')) {
+      const list = (links[person.id] ??= []);
+      const known = new Set(list.map((l) => normalizeUrl(l.url)));
+      for (const o of own) {
+        if (o.status !== 'offen') continue;
+        if (known.has(o.url)) {
+          o.status = 'schon vorhanden';
+          continue;
+        }
+        known.add(o.url);
+        list.push({ url: o.url, title: new URL(o.url).hostname, query: 'manuell', foundAt: stamp });
+        person.newLinks.push(o.url);
+        o.status = 'übernommen';
+      }
+    }
+    if (person.noSearch) {
+      person.status = 'nur eigene Adressen';
+      continue;
+    }
     let source;
     if (person.useCache && existsSync(cachePath(root, person.id))) {
       source = readJson(cachePath(root, person.id));
@@ -174,6 +211,8 @@ export async function fetchPages({ root = ROOT, date, contact, offline = false, 
     if (!person.newLinks?.length) continue;
     const internal = allowInternal ? [] : person.newLinks.filter(isInternalHost);
     const pages = person.newLinks.filter((u) => !internal.includes(u) && !isWikimediaPage(u)).slice(0, MAX_PAGES);
+    const ownPages = (person.ownUrls ?? []).filter((o) => o.status === 'übernommen').map((o) => o.url);
+    const skipped = (u) => (internal.includes(u) ? 'interne Adresse nicht abgerufen' : isWikimediaPage(u) ? 'Wikimedia-Adresse läuft über die Wikipedia-Recherche' : pages.includes(u) ? null : 'über der Grenze von zehn Seiten');
     const [summary] = await fetchVenues([{ id: person.id, pages }], {
       contact,
       offline,
@@ -183,10 +222,36 @@ export async function fetchPages({ root = ROOT, date, contact, offline = false, 
       ...fetchOptions,
     });
     person.pages = { status: summary.status, fetched: summary.fetched, cached: summary.cached, errors: summary.errors, notes: [...internal.map((u) => `${u}: interne Adresse nicht abgerufen`), ...summary.notes] };
+    if (ownPages.length > 0) recordOwnResults({ root, person, ownPages, skipped, summary });
   }
   write(webPlanPath(root, date), plan);
   report(root, date);
   return plan;
+}
+
+/** Ergebnis je eigener Adresse (PQL-EV-2) und Seitentitel als Linktitel (PQL-EV-1). */
+function recordOwnResults({ root, person, ownPages, skipped, summary }) {
+  const titles = new Map();
+  const dir = join(root, '.cache', 'snapshots', person.id);
+  if (existsSync(dir)) {
+    for (const f of readdirSync(dir)) {
+      if (!f.endsWith('.json')) continue;
+      const snap = readJson(join(dir, f));
+      for (const u of [snap.requestedUrl, snap.url]) if (u && normalizeUrl(u)) titles.set(normalizeUrl(u), normalizeSpace(snap.title ?? ''));
+    }
+  }
+  const links = readJson(linksPath(root), {});
+  for (const o of person.ownUrls) {
+    if (!ownPages.includes(o.url)) continue;
+    const reason = skipped(o.url);
+    const problem = [...summary.errors.map((e) => `${e.url}: ${e.reason}`), ...summary.notes].find((t) => t.includes(o.url));
+    if (reason) o.fetch = { status: 'nicht abgerufen', reason };
+    else if (titles.has(o.url)) o.fetch = { status: 'abgerufen' };
+    else o.fetch = { status: /robots/.test(problem ?? '') ? 'gesperrt' : 'nicht abrufbar', ...(problem ? { reason: problem } : {}) };
+    const link = (links[person.id] ?? []).find((l) => normalizeUrl(l.url) === o.url);
+    if (link && titles.get(o.url)) link.title = titles.get(o.url);
+  }
+  write(linksPath(root), links);
 }
 
 function report(root, date) {

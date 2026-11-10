@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-10",
+  "proposals": [
+    {
+      "id": "sasa-fuis",
+      "web": {
+        "summary": "Saša Fuis wurde 1961 in Novo mesto in Slowenien geboren und lebt und arbeitet in Köln. Er studierte von 1980 bis 1984 Fotografie und führt seit 1995 ein eigenes Studio für Kunst-, Architektur- und Studiofotografie. Für Auktionshäuser, Museen und Galerien fotografiert er Kunstwerke. Daneben verfolgt er seit den späten 1970er-Jahren freie Projekte, die alltägliche Szenen urbaner Räume beobachten und sich einer eindeutigen Deutung entziehen. Einzelausstellungen zeigten seine Arbeiten unter anderem in Slowenien, Prag und Montenegro. Seit dem 19. September 2026 sind seine „Invisible Moments“ im Forum für Fotografie Köln zu sehen.",
+        "sources": [
+          "https://www.dgph.de/ausstellungen/sasa-fuis-invisible-moments",
+          "https://www.architectureweek.cz/en/sasa-fuis-fotografie/"
+        ]
+      },
+      "approved": true,
+      "problems": [],
+      "result": {
+        "web": {
+          "summary": "Saša Fuis wurde 1961 in Novo mesto in Slowenien geboren und lebt und arbeitet in Köln. Er studierte von 1980 bis 1984 Fotografie und führt seit 1995 ein eigenes Studio für Kunst-, Architektur- und Studiofotografie. Für Auktionshäuser, Museen und Galerien fotografiert er Kunstwerke. Daneben verfolgt er seit den späten 1970er-Jahren freie Projekte, die alltägliche Szenen urbaner Räume beobachten und sich einer eindeutigen Deutung entziehen. Einzelausstellungen zeigten seine Arbeiten unter anderem in Slowenien, Prag und Montenegro. Seit dem 19. September 2026 sind seine „Invisible Moments“ im Forum für Fotografie Köln zu sehen.",
+          "sources": [
+            {
+              "title": "Saša Fuis – Invisible Moments | Deutsche Gesellschaft für Photographie e.V.",
+              "url": "https://www.dgph.de/ausstellungen/sasa-fuis-invisible-moments"
+            },
+            {
+              "title": "Sasha Fuis Photographs – architectureweek.cz",
+              "url": "https://www.architectureweek.cz/en/sasa-fuis-fotografie"
+            }
+          ]
+        }
+      },
+      "appliedAt": "2026-11-10"
+    }
+  ]
+}

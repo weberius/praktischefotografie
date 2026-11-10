@@ -32,6 +32,7 @@ export function webReportLines({ root, date }) {
     const prop = proposals.find((x) => x.id === p.id);
     const state = !prop ? 'kein Vorschlag' : prop.appliedAt ? 'übernommen' : prop.problems?.length ? `verworfen: ${prop.problems.join('; ')}` : prop.approved ? 'freigegeben' : 'geprüft';
     lines.push(`- \`${p.id}\` (${p.name}${p.isNew ? ', neu' : ''}): ${p.status ?? 'offen'}${p.note ? ` – ${p.note}` : ''}; Suchmaschine: ${p.engine ?? '–'}; Anfragen: ${p.queryCount ?? 0}; Treffer: ${p.hitCount ?? 0}; ${state}`);
+    for (const o of p.ownUrls ?? []) lines.push(`  - eigene Adresse: ${o.url} – ${o.status}${o.reason ? ` (${o.reason})` : ''}${o.fetch ? `; ${o.fetch.status}${o.fetch.reason ? ` (${o.fetch.reason})` : ''}` : ''}`);
     for (const url of p.newLinks ?? []) lines.push(`  - neuer Link: ${url}`);
     for (const url of p.usedLinks ?? []) lines.push(`  - genutzt: ${url}`);
     if (p.pages) {

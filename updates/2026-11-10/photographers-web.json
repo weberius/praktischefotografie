@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-10",
+  "offline": false,
+  "maxAgeDays": 30,
+  "persons": [
+    {
+      "id": "sasa-fuis",
+      "name": "Saša Fuis",
+      "isNew": false,
+      "queries": [
+        "\"Saša Fuis\" Fotograf",
+        "\"Saša Fuis\" photographer",
+        "\"Saša Fuis\" photographe",
+        "\"Saša Fuis\" fotógrafo",
+        "\"Saša Fuis\" fotografo",
+        "\"Saša Fuis\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.dgph.de/ausstellungen/sasa-fuis-invisible-moments",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.architectureweek.cz/en/sasa-fuis-fotografie",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.dgph.de/ausstellungen/sasa-fuis-invisible-moments",
+        "https://www.architectureweek.cz/en/sasa-fuis-fotografie"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://www.dgph.de/ausstellungen/sasa-fuis-invisible-moments",
+        "https://www.architectureweek.cz/en/sasa-fuis-fotografie"
+      ]
+    }
+  ]
+}

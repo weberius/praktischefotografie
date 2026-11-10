@@ -55,3 +55,21 @@
 - `paul-wolff` (Paul Wolff): mehrdeutig – Einträge: Q2063196, Q106608287; Sprachen: –; Bild: –; kein Vorschlag
 - `marie-watt` (Marie Watt): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
 - `sasa-fuis` (Saša Fuis): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+
+## Websuche
+
+- Personen: 1
+- Suchanfragen: 0
+- Treffer: 0
+- Neue Links: 2
+- Angelegte Personen: 0
+- Aktualisierte Webkurztexte: 1
+
+- `sasa-fuis` (Saša Fuis): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.dgph.de/ausstellungen/sasa-fuis-invisible-moments – übernommen; abgerufen
+  - eigene Adresse: https://www.architectureweek.cz/en/sasa-fuis-fotografie – übernommen; abgerufen
+  - neuer Link: https://www.dgph.de/ausstellungen/sasa-fuis-invisible-moments
+  - neuer Link: https://www.architectureweek.cz/en/sasa-fuis-fotografie
+  - genutzt: https://www.dgph.de/ausstellungen/sasa-fuis-invisible-moments
+  - genutzt: https://www.architectureweek.cz/en/sasa-fuis-fotografie
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher

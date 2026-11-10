@@ -295,3 +295,112 @@ test('Interne Adressen werden nie abgerufen (Q-SEC-7)', async () => {
     await server.close();
   }
 });
+
+// Gherkin: docs/contracts/gherkin/setup/personen-quellen.feature (PQL-*), Q-SEC-13, Q-DATA-18
+const planFile = (root) => readJson(root, 'updates', DATE, 'photographers-web.json');
+const report = (root) => readFileSync(join(root, 'updates', DATE, 'PHOTOGRAPHERS.md'), 'utf8');
+
+test('Szenario: Eigene Adressen nur mit Person (PQL-UB-1)', async () => {
+  const root = workspace();
+  await assert.rejects(() => main(argv('plan', '--url', 'https://example.org/a'), {}, root), /--photographer <id> oder --name/);
+  assert.ok(!existsSync(join(root, 'updates', DATE, 'photographers-web.json')));
+});
+
+test('Szenario: Eigene Adressen in der Linksammlung (PQL-EV-1, Q-DATA-18)', async () => {
+  const root = workspace();
+  writeFileSync(join(root, 'updates', 'photographers-links.json'), JSON.stringify({ 'wendy-red-star': [{ url: 'https://example.org/a', title: 'Alt', query: 'q', foundAt: '2026-01-01T00:00:00.000Z' }] }));
+  const args = ['plan', '--photographer', 'wendy-red-star', '--no-web', '--url', 'https://EXAMPLE.org/a/', '--url', 'https://example.org/b?utm_source=x#top'];
+  await run(root, ...args);
+  await run(root, 'links');
+  await run(root, ...args); // zweiter Lauf: nichts doppelt
+  await run(root, 'links');
+  const list = links(root)['wendy-red-star'];
+  assert.deepEqual(list.map((l) => l.url), ['https://example.org/a', 'https://example.org/b']);
+  assert.deepEqual(list[0], { url: 'https://example.org/a', title: 'Alt', query: 'q', foundAt: '2026-01-01T00:00:00.000Z' });
+  assert.equal(list[1].query, 'manuell');
+  assert.equal(list[1].title, 'example.org');
+  assert.ok(list[1].foundAt);
+});
+
+test('Szenario: Neuer eigener Link führt zu neuem Kurztext (PQL-EV-1, WSP-EV-3)', async () => {
+  const root = workspace();
+  await run(root, 'plan', '--photographer', 'wendy-red-star', '--no-web', '--url', 'https://example.org/a');
+  const plan = await run(root, 'links');
+  assert.deepEqual(plan.persons[0].newLinks, ['https://example.org/a']);
+  proposals(root, [{ id: 'wendy-red-star', web: { summary: words('eigen', 60), sources: ['https://example.org/a'] }, approved: true }]);
+  await run(root, 'check');
+  assert.deepEqual(readProposals(root)[0].problems, []);
+});
+
+test('Szenario: Eigene Seiten zuerst und höflich (PQL-UB-2, Q-SEC-13)', async () => {
+  const server = await testServer({
+    '/robots.txt': { body: 'User-agent: *\nDisallow: /gesperrt\n' },
+    '/gesperrt': { body: page('Gesperrt') },
+    '/eigen': { body: page('Eigene Seite', '<p>Inhalt</p>') },
+    ...Object.fromEntries(Array.from({ length: 12 }, (_, i) => [`/t${i}`, { body: page(`Treffer ${i}`, `<p>Inhalt ${i}</p>`) }])),
+  });
+  try {
+    const root = workspace();
+    const opts = { allowInternal: true, fetchOptions: { sleep: async () => {} } };
+    const own = ['--url', `${server.url}/gesperrt`, '--url', `${server.url}/eigen`];
+    // --no-web: nur eigene Seiten, keine Suche
+    await quiet(() => main(argv('plan', '--photographer', 'wendy-red-star', '--no-web', ...own), {}, root, opts));
+    await quiet(() => main(argv('links'), {}, root, opts));
+    await quiet(() => main(argv('pages'), { SCRAPE_CONTACT: CONTACT }, root, opts));
+    assert.ok(!existsSync(join(root, '.cache', 'websearch')));
+    let paths = server.requests.map((r) => r.path).filter((p) => p !== '/robots.txt');
+    assert.deepEqual(paths, ['/eigen']);
+    assert.equal(links(root)['wendy-red-star'].find((l) => l.url.endsWith('/eigen')).title, 'Eigene Seite');
+    // Standardlauf: eigene Adressen vor den Treffern, höchstens zehn Seiten
+    const root2 = workspace();
+    await quiet(() => main(argv('plan', '--photographer', 'wendy-red-star', ...own), {}, root2, opts));
+    writeSearch(root2, [search('wendy-red-star', Array.from({ length: 12 }, (_, i) => ({ title: `T${i}`, url: `${server.url}/t${i}`, snippet: '' })), 1)]);
+    await quiet(() => main(argv('links'), {}, root2, opts));
+    server.requests.length = 0;
+    await quiet(() => main(argv('pages'), { SCRAPE_CONTACT: CONTACT }, root2, opts));
+    paths = server.requests.map((r) => r.path).filter((p) => p !== '/robots.txt');
+    assert.equal(paths[0], '/eigen');
+    assert.equal(paths.length, 9); // zehn Seiten, davon eine gesperrt und nicht angefragt
+    assert.ok(!paths.includes('/gesperrt'));
+    assert.match(report(root2), /eigene Adresse: .*\/gesperrt – übernommen; gesperrt/);
+  } finally {
+    await server.close();
+  }
+});
+
+test('Szenario: Ungültige eigene Adresse (PQL-UN-1, Q-SEC-13)', async () => {
+  const server = await testServer({ '/ok': { body: page('Ok') } });
+  try {
+    const root = workspace();
+    const bad = ['ftp://example.org/x', 'http://localhost/y', 'kein url'];
+    await quiet(() => main(argv('plan', '--photographer', 'wendy-red-star', '--no-web', ...bad.flatMap((u) => ['--url', u]), '--url', `${server.url}/ok`), {}, root, { allowInternal: false }));
+    const plan = planFile(root);
+    assert.deepEqual(plan.persons[0].ownUrls.map((o) => o.status), ['abgelehnt', 'abgelehnt', 'abgelehnt', 'abgelehnt']); // der Testserver ist intern
+    await run(root, 'links');
+    assert.deepEqual(links(root)['wendy-red-star'] ?? [], []);
+    await quiet(() => main(argv('pages'), { SCRAPE_CONTACT: CONTACT }, root));
+    assert.equal(server.requests.length, 0);
+    const text = report(root);
+    for (const u of [...bad, `${server.url}/ok`]) assert.ok(text.includes(`eigene Adresse: ${u}`), u);
+    assert.match(text, /interne Adresse/);
+    assert.match(text, /kein gültiges http oder https/);
+    // gültige Adresse neben ungültigen wird verarbeitet
+    const root2 = workspace();
+    await run(root2, 'plan', '--photographer', 'wendy-red-star', '--no-web', '--url', 'ftp://example.org/x', '--url', 'https://example.org/ok');
+    await run(root2, 'links');
+    assert.deepEqual(links(root2)['wendy-red-star'].map((l) => l.url), ['https://example.org/ok']);
+  } finally {
+    await server.close();
+  }
+});
+
+test('Szenario: Bericht nennt eigene Adressen (PQL-EV-2, Q-DATA-18)', async () => {
+  const root = workspace();
+  writeFileSync(join(root, 'updates', 'photographers-links.json'), JSON.stringify({ 'wendy-red-star': [{ url: 'https://example.org/alt', title: 'Alt', query: 'q', foundAt: '2026-01-01T00:00:00.000Z' }] }));
+  await run(root, 'plan', '--photographer', 'wendy-red-star', '--no-web', '--url', 'https://example.org/alt', '--url', 'https://example.org/neu', '--url', 'gopher://x');
+  await run(root, 'links');
+  const text = report(root);
+  assert.match(text, /eigene Adresse: https:\/\/example\.org\/alt – schon vorhanden/);
+  assert.match(text, /eigene Adresse: https:\/\/example\.org\/neu – übernommen/);
+  assert.match(text, /eigene Adresse: gopher:\/\/x – abgelehnt/);
+});

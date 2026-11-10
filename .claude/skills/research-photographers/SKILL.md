@@ -7,7 +7,7 @@ description: Recherchiert Fotograf:innen über Wikidata, die Wikipedia in mehrer
 
 Du ergänzst in `data/photographers.json` die Profile der Personen aus **Wikidata, Wikipedia (mehrere Sprachen) und Wikimedia Commons**. Spezifikation: `docs/ears/setup/fotografinnen-recherche.md`, `docs/ears/content/fotografinnen-profile.md`, ADR-011 und ADR-012. Format der Dateien: `updates/README.md`.
 
-Argumente: `$ARGUMENTS` (optional `--photographer <id>`, `--force`, `--offline`, `--max-age <Tage>`, `--date JJJJ-MM-TT`, `--no-web`, `--web`, `--name "<Name>"`). Ohne `--photographer` werden alle Personen ohne Wikipedia-Zusammenfassung oder ohne Portrait bearbeitet.
+Argumente: `$ARGUMENTS` (optional `--photographer <id>`, `--force`, `--offline`, `--max-age <Tage>`, `--date JJJJ-MM-TT`, `--no-web`, `--web`, `--name "<Name>"`, `--url <adresse>` mehrfach). Ohne `--photographer` werden alle Personen ohne Wikipedia-Zusammenfassung oder ohne Portrait bearbeitet.
 
 Ein Lauf umfasst **beides**: die Wikipedia in allen Sprachen (Ablauf unten) und das Web in mehreren Sprachen (Abschnitt „Websuche“; Spezifikation: `docs/ears/setup/recherche-in-allen-sprachen.md`, ADR-020). Alle Fundstellen werden als Links in `updates/photographers-links.json` gespeichert; die Seiten dahinter (Snapshots) fließen in den Text ein. **Mit `--no-web` entfällt die Websuche: keine Suchmaschine, keine Trefferseite.** `--web` ist ein Alias für den Standardlauf.
 
@@ -62,7 +62,7 @@ Für **eine** Person: `--photographer <id>` (vorhandene Person) oder `--name "<N
 
 ### Ablauf
 
-1. **Plan:** `npm run photographers:web -- plan --photographer <id>` bzw. `--name "<Name>"` (mit `--offline`, `--max-age <Tage>` wie oben). Die Ausgabe nennt die Person (neu oder vorhanden) und die Suchanfragen oder den Zwischenspeicher. Ist die Suche zwischengespeichert, überspringst du Schritt 2.
+1. **Plan:** `npm run photographers:web -- plan --photographer <id>` bzw. `--name "<Name>"` (mit `--offline`, `--max-age <Tage>` wie oben; `--url <adresse>` für eigene Quellen der Redaktion, mehrfach angebbar, nur mit Person; `--no-web` lässt die Suche aus, ruft aber die eigenen Seiten ab – siehe `docs/ears/setup/personen-quellen.md`). Eigene Adressen stehen danach mit `query` `manuell` in der Linksammlung, gelten als neue Links und werden vor den Treffern abgerufen; ungültige oder interne Adressen lehnt der Plan ab und der Bericht nennt sie. Ohne `--no-web` führst du Schritt 2 aus, mit `--no-web` überspringst du ihn. Die Ausgabe nennt die Person (neu oder vorhanden) und die Suchanfragen oder den Zwischenspeicher. Ist die Suche zwischengespeichert, überspringst du Schritt 2.
 2. **Suchen** und `updates/<Datum>/photographers-search.json` schreiben:
    ```json
    { "date": "2026-11-02", "engine": "<Name der Suchmaschine>", "persons": [

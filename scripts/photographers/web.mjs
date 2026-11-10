@@ -1,5 +1,5 @@
 // Websuche nach Personen (ADR-019, WSP-*). Die Suche selbst führt der Skill aus und schreibt photographers-search.json.
-// Aufruf: npm run photographers:web -- plan   … (--photographer <id> | --name "<Name>") [--offline] [--max-age <Tage>] [--date JJJJ-MM-TT]
+// Aufruf: npm run photographers:web -- plan   … (--photographer <id> | --name "<Name>") [--url <adresse> …] [--no-web] [--offline] [--max-age <Tage>] [--date JJJJ-MM-TT]
 //         npm run photographers:web -- links  [--date …]   (Suchdatei in Linksammlung übernehmen)
 //         npm run photographers:web -- pages  [--offline] [--date …]   (Seiten neuer Links abrufen; braucht SCRAPE_CONTACT)
 //         npm run photographers:web -- check  [--date …]
@@ -15,8 +15,11 @@ export async function main(argv = process.argv.slice(2), env = process.env, root
   const offline = arg(rest, 'offline', false) === true;
   const maxAgeDays = Number(arg(rest, 'max-age', 30));
   if (command === 'plan') {
-    const { person } = planWeb({ root, date, photographerId: arg(rest, 'photographer') || undefined, name: arg(rest, 'name') || undefined, offline, maxAgeDays });
-    console.log(`${person.id}${person.isNew ? ' (neu)' : ''}: ${person.useCache ? 'Suche aus dem Zwischenspeicher' : `Suchanfragen: ${person.queries.join(' | ')}`}`);
+    const urls = rest.flatMap((a, i) => (a === '--url' && rest[i + 1] ? [rest[i + 1]] : []));
+    const noWeb = arg(rest, 'no-web', false) === true;
+    const { person } = planWeb({ root, date, photographerId: arg(rest, 'photographer') || undefined, name: arg(rest, 'name') || undefined, offline, maxAgeDays, urls, noWeb, allowInternal: options.allowInternal });
+    console.log(`${person.id}${person.isNew ? ' (neu)' : ''}: ${noWeb ? 'ohne Suche (--no-web)' : person.useCache ? 'Suche aus dem Zwischenspeicher' : `Suchanfragen: ${person.queries.join(' | ')}`}`);
+    for (const o of person.ownUrls) if (o.status === 'abgelehnt') console.log(`  eigene Adresse abgelehnt: ${o.url} (${o.reason})`);
     return person;
   }
   if (command === 'links') {
