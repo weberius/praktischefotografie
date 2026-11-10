@@ -24,13 +24,13 @@ describe('EventListPage', () => {
   it('Szenario: Liste zeigt Events (EVT-UB-1)', async () => {
     const { el } = await open('/events');
     expect(el.querySelectorAll('h1').length).toBe(1);
-    expect(titles(el)).toEqual(['Lesung', 'Artist Talk', 'Workshop', 'Beispielmesse']);
-    const talk = cards(el)[1];
+    expect(titles(el)).toEqual(['Artist Talk', 'Workshop', 'Beispielmesse']);
+    const talk = cards(el)[0];
     expect(talk.textContent).toContain('Talk');
     expect(talk.textContent).toContain('Haus Köln Bibliothek');
     expect(talk.textContent).toContain('12. November 2026');
-    expect(cards(el)[3].textContent).toContain('Messe');
-    expect(cards(el)[3].textContent).toContain('8. Oktober 2027 – 10. Oktober 2027');
+    expect(cards(el)[2].textContent).toContain('Messe');
+    expect(cards(el)[2].textContent).toContain('8. Oktober 2027 – 10. Oktober 2027');
     expect(talk.querySelector('a')?.getAttribute('href')).toBe('/events/e-talk');
   });
 
@@ -60,15 +60,19 @@ describe('EventListPage', () => {
     expect(talk.textContent).not.toContain('Kommerziell');
   });
 
-  it('Szenario: Beendetes Event (EVT-UB-4)', async () => {
+  it('Szenario: Listen zeigen nur Aktuelles (ACT-UB-1, Q-REL-4)', async () => {
     const gestern: Partial<Dataset> = {
       events: [{ ...baseEvent, id: 'e-gestern', title: 'Gestern', startDate: '2026-10-26', endDate: '2026-10-26' }, { ...baseEvent, id: 'e-heute', title: 'Heute', startDate: '2026-10-27', endDate: '2026-10-27' }],
     };
     const { el } = await open('/events', gestern);
-    const gesternCard = cards(el).find((li) => li.textContent?.includes('Gestern'))!;
-    const heuteCard = cards(el).find((li) => li.textContent?.includes('Heute'))!;
-    expect(gesternCard.textContent).toContain('Beendet');
-    expect(heuteCard.textContent).not.toContain('Beendet');
+    expect(titles(el)).toEqual(['Heute']);
+    expect(cards(el)[0].textContent).not.toContain('Beendet');
+  });
+
+  it('Szenario: Keine aktuellen Einträge (ACT-ST-1)', async () => {
+    const { el } = await open('/events', { events: [{ ...baseEvent, id: 'e-gestern', title: 'Gestern', startDate: '2026-10-26', endDate: '2026-10-26' }] });
+    expect(titles(el)).toEqual([]);
+    expect(el.querySelector('.notice')).not.toBeNull();
   });
 
   it('zeigt einen Hinweis ohne Treffer', async () => {

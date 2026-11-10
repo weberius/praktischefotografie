@@ -30,8 +30,9 @@ Funktionalität: Ausstellungen
     | 2026-09-01 | 2026-10-26 | beendet |
 
   # EARS: EXH-UB-3
+  # EXH-UB-3 gilt mit ACT-UB-2: Der Status „Beendet“ wird nicht mehr angeboten.
   Szenario: Liste ist nach Status filterbar
-    Angenommen eine kommende und eine beendete Ausstellung
+    Angenommen eine kommende und eine laufende Ausstellung
     Wenn der Status "kommend" gewählt wird
     Dann erscheint nur die kommende
 

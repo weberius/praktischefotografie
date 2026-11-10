@@ -11,9 +11,10 @@ import { DataGate } from '../../shared/data-gate/data-gate';
 import { GlobalFilterControl } from '../../shared/global-filter/global-filter';
 import { ExhibitionBadges } from '../../shared/exhibition-badges/exhibition-badges';
 
-const STATUSES: ExhibitionStatus[] = ['kommend', 'endet-bald', 'laufend', 'beendet'];
+/** Aktuelle Status (ACT-UB-1, ACT-UB-2): „beendet“ wird in der Liste weder gezeigt noch angeboten. */
+const STATUSES: ExhibitionStatus[] = ['kommend', 'endet-bald', 'laufend'];
 
-/** Ausstellungsliste mit Statusfilter (Query-Parameter `status`) und globalem Filter (FLT-UB-2), neueste zuerst (EXH-UB-1, EXH-UB-3, EXH-UB-6, EXH-UB-8). */
+/** Ausstellungsliste (nur aktuelle, ACT-UB-1) mit Statusfilter (Query-Parameter `status`) und globalem Filter (FLT-UB-2), neueste zuerst (EXH-UB-1, EXH-UB-3, EXH-UB-6, EXH-UB-8). */
 @Component({
   selector: 'app-exhibition-list-page',
   imports: [RouterLink, DataGate, GlobalFilterControl, ExhibitionBadges],
@@ -40,7 +41,7 @@ export class ExhibitionListPage {
         const status = exhibitionStatus(exhibition, this.today);
         return { exhibition, venue: this.data.venueById().get(exhibition.venueId), status, kind: exhibitionKind(exhibition), second: { label: STATUS_LABEL[status], status } };
       })
-      .filter((item) => (!this.statusFilter() || item.status === this.statusFilter()) && this.globalFilter.allows(item.venue))
+      .filter((item) => item.status !== 'beendet' && (!this.statusFilter() || item.status === this.statusFilter()) && this.globalFilter.allows(item.venue))
       .sort((a, b) => b.exhibition.startDate.localeCompare(a.exhibition.startDate)),
   );
 

@@ -32,9 +32,6 @@
             @if (item.event.isCommercial) {
               <span class="badge">Kommerziell</span>
             }
-            @if (isOver(item.event.endDate)) {
-              <span class="badge status-beendet">Beendet</span>
-            }
           </p>
           <h2><a [routerLink]="['/events', item.event.id]">{{ item.event.title }}</a></h2>
           <p>{{ item.venue }}</p>

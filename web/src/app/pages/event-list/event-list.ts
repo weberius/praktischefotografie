@@ -11,7 +11,7 @@ import { DataGate } from '../../shared/data-gate/data-gate';
 import { GlobalFilterControl } from '../../shared/global-filter/global-filter';
 import { FavoriteToggle } from '../../shared/favorite-toggle/favorite-toggle';
 
-/** Eventliste `/events`: nach Beginn aufsteigend, filterbar nach Typ (Query-Parameter `type`) nach Favoriten (Query-Parameter `favorites=1`, FAV-UB-4, FAV-UB-6) und globalem Filter (FLT-UB-2). */
+/** Eventliste `/events`: nur aktuelle Events (ACT-UB-1), nach Beginn aufsteigend, filterbar nach Typ (Query-Parameter `type`) nach Favoriten (Query-Parameter `favorites=1`, FAV-UB-4, FAV-UB-6) und globalem Filter (FLT-UB-2). */
 @Component({
   selector: 'app-event-list-page',
   imports: [RouterLink, DataGate, GlobalFilterControl, FavoriteToggle],
@@ -30,7 +30,6 @@ export class EventListPage {
   protected readonly typeLabel = EVENT_TYPE_LABEL;
   protected readonly typeOptions = (Object.keys(EVENT_TYPE_LABEL) as EventType[]).map((value) => ({ value, label: EVENT_TYPE_LABEL[value] }));
   protected readonly formatRange = formatRange;
-  protected readonly isOver = (endDate: string) => isOver({ endDate }, this.today);
 
   protected readonly onlyFavorites = computed(() => this.favorites() === '1');
 
@@ -46,7 +45,7 @@ export class EventListPage {
     const onlyFavorites = this.onlyFavorites();
     return this.data
       .events()
-      .filter((e) => (!type || e.eventType === type) && (!onlyFavorites || this.store.isFavorite(e.id)) && this.globalFilter.allows(venues.get(e.venueId)))
+      .filter((e) => !isOver(e, this.today) && (!type || e.eventType === type) && (!onlyFavorites || this.store.isFavorite(e.id)) && this.globalFilter.allows(venues.get(e.venueId)))
       .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.endDate.localeCompare(b.endDate) || a.title.localeCompare(b.title, 'de'))
       .map((e) => ({ event: e, venue: venues.get(e.venueId)?.name ?? e.city }));
   });

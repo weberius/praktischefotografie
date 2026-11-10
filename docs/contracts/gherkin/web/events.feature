@@ -24,9 +24,10 @@ Funktionalität: Events und Messen
     Wenn "/events/e-1" aufgerufen wird
     Dann erscheinen Beschreibung, Highlights, der Ort mit Link und die Website
 
-  # EARS: EVT-UB-4
+  # EARS: EVT-UB-4 (gilt nur für die Detailseite, siehe ACT-UB-3)
   Szenario: Beendetes Event
     Angenommen ein Event, das gestern endete
+    Wenn seine Detailseite aufgerufen wird
     Dann trägt es den Text "Beendet"
 
   # EARS: EVT-UB-5

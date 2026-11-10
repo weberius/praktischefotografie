@@ -1,4 +1,4 @@
-// Gherkin: web/ausstellungen.feature (EXH-UB-1, EXH-UB-3, EXH-UB-6)
+// Gherkin: web/ausstellungen.feature (EXH-UB-1, EXH-UB-3, EXH-UB-6), web/aktualitaet.feature (ACT-UB-1, ACT-UB-2, ACT-UN-1, ACT-ST-1)
 import { TestBed } from '@angular/core/testing';
 import { provideRouter, withComponentInputBinding, Router } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
@@ -29,16 +29,15 @@ describe('ExhibitionListPage', () => {
     const { el } = await open('/exhibitions');
     expect(el.querySelectorAll('h1').length).toBe(1);
     const items = cards(el);
-    expect(items.length).toBe(3);
-    // Sortierung nach Beginn absteigend
-    expect(items.map((i) => i.querySelector('h2')?.textContent?.trim())).toEqual(['Ausstellung a-kommend', 'Ausstellung a-endet-bald', 'Ausstellung a-beendet']);
+    expect(items.length).toBe(2);
+    // Sortierung nach Beginn absteigend, beendete Ausstellungen fehlen (ACT-UB-1)
+    expect(items.map((i) => i.querySelector('h2')?.textContent?.trim())).toEqual(['Ausstellung a-kommend', 'Ausstellung a-endet-bald']);
     const soon = items[1];
     expect(soon.textContent).toContain('Haus Köln Bibliothek');
     expect(soon.querySelector('a[href="/venues/v-koeln-lib"]')).not.toBeNull();
     expect(soon.textContent).toContain('15. August 2026 – 5. November 2026');
     expect(soon.textContent).toContain('Endet bald');
     expect(items[0].textContent).toContain('Kommend');
-    expect(items[2].textContent).toContain('Beendet');
   });
 
   it('Szenario: Badges oben in der Liste (EXH-UB-8, BDG-UB-2) – zuerst die Art, danach der Status, vor der Überschrift', async () => {
@@ -52,14 +51,13 @@ describe('ExhibitionListPage', () => {
     const badges = (i: Element) => Array.from(i.querySelectorAll('.badge-row .badge')).map((b) => b.textContent?.trim());
     expect(badges(items[0])).toEqual(['Einzelausstellung', 'Kommend']);
     expect(badges(items[1])).toEqual(['Einzelausstellung', 'Endet bald']);
-    expect(badges(items[2])).toEqual(['Einzelausstellung', 'Beendet']);
   });
 
   it('Szenario: Liste ist nach Status filterbar (EXH-UB-3)', async () => {
     const { harness, el } = await open('/exhibitions');
     const select = el.querySelector('.filters select') as HTMLSelectElement;
     expect(el.querySelector('.filters label')?.textContent).toContain('Status');
-    expect(Array.from(select.options).map((o) => o.textContent?.trim())).toEqual(['Alle', 'Kommend', 'Endet bald', 'Laufend', 'Beendet']);
+    expect(Array.from(select.options).map((o) => o.textContent?.trim())).toEqual(['Alle', 'Kommend', 'Endet bald', 'Laufend']);
     select.value = 'kommend';
     select.dispatchEvent(new Event('change'));
     await harness.fixture.whenStable();
@@ -70,9 +68,15 @@ describe('ExhibitionListPage', () => {
   });
 
   it('Filterzustand wird aus der Adresse gelesen (EXH-UB-3)', async () => {
-    const { el } = await open('/exhibitions?status=beendet');
+    const { el } = await open('/exhibitions?status=kommend');
     expect(cards(el).length).toBe(1);
-    expect((el.querySelector('.filters select') as HTMLSelectElement).value).toBe('beendet');
+    expect((el.querySelector('.filters select') as HTMLSelectElement).value).toBe('kommend');
+  });
+
+  it('Szenario: Statuswert beendet in der Adresse (ACT-UN-1)', async () => {
+    const { el } = await open('/exhibitions?status=beendet');
+    expect(cards(el).length).toBe(2);
+    expect((el.querySelector('.filters select') as HTMLSelectElement).value).toBe('');
   });
 
   it('Szenario: Status als Text (EXH-UB-6)', async () => {
