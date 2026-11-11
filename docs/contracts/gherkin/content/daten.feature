@@ -49,10 +49,13 @@ Funktionalität: Datenmodell und Venue-Datenbestand
     Wenn die Daten validiert werden
     Dann meldet die Validierung einen Fehler zur Ausstellung
 
-  # EARS: VEN-UB-1
-  Szenario: Datenbestand enthält 20 bis 30 Venues
+  # VEN-UB-1 (höchstens 30 Venues) ist durch VEN-UB-8 ersetzt; das frühere Szenario
+  # „Datenbestand enthält 20 bis 30 Venues“ entfällt.
+
+  # EARS: VEN-UB-8
+  Szenario: Datenbestand enthält 20 bis 60 Venues
     Angenommen der Datenbestand in "data/venues.json"
-    Dann enthält er mindestens 20 und höchstens 30 Venues
+    Dann enthält er mindestens 20 und höchstens 60 Venues
 
   # EARS: VEN-UB-2
   Szenario: Koordinaten liegen in NRW
@@ -131,3 +134,31 @@ Funktionalität: Datenmodell und Venue-Datenbestand
       | id                          | typ     | stadt | website                          |
       | forum-fuer-fotografie-koeln | gallery | Köln  | https://de.forum-fotografie.info/ |
       | kunstmuseum-bonn            | museum  | Bonn  | https://www.kunstmuseum-bonn.de/de/ |
+
+  # EARS: VEN-UB-9, VEN-UB-10, VEN-UB-11
+  Szenariogrundriss: Düsseldorfer Orte sind im Katalog
+    Angenommen der Datenbestand in "data/venues.json"
+    Dann enthält er eine Venue mit der id "<id>", dem type "<typ>" und der city "Düsseldorf"
+    Und sie hat eine source mit url, checkedAt und status
+    Und sie hat eine website
+    Und der Datenbestand besteht die Validierung
+
+    Beispiele:
+      | id                                  | typ        |
+      | k20-duesseldorf                     | museum     |
+      | k21-duesseldorf                     | museum     |
+      | stadtmuseum-duesseldorf             | museum     |
+      | filmmuseum-duesseldorf              | museum     |
+      | leica-galerie-duesseldorf           | gallery    |
+      | galerie-noir-blanche-duesseldorf    | gallery    |
+      | galerie-voss-duesseldorf            | gallery    |
+      | lumas-duesseldorf                   | gallery    |
+      | sammlung-philara-duesseldorf        | off_space  |
+      | plan-d-produzentengalerie-duesseldorf | off_space |
+      | gerhart-hauptmann-haus-duesseldorf  | foundation |
+      | polnisches-institut-duesseldorf     | foundation |
+
+  # EARS: VEN-UB-9, VEN-UB-10, VEN-UB-11
+  Szenario: Düsseldorfer Orte liegen in Düsseldorf
+    Angenommen der Datenbestand in "data/venues.json"
+    Dann liegt jede Venue mit der city "Düsseldorf" mit lat zwischen 51.12 und 51.36 und lng zwischen 6.65 und 6.95

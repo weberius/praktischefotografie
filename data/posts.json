@@ -754,5 +754,173 @@
       "fadenkreuze-fuer-das-leben-2026"
     ],
     "contentFile": "content/posts/fadenkreuze-fuer-das-leben-2026-ende.md"
+  },
+  {
+    "id": "select-2026-neu",
+    "slug": "select-2026-neu",
+    "title": "# select in Düsseldorf",
+    "date": "2026-11-11",
+    "excerpt": "Die Galerie noir blanche in Düsseldorf kündigt die Gruppenausstellung # select an.",
+    "linkedVenueIds": [
+      "galerie-noir-blanche-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "select-2026"
+    ],
+    "contentFile": "content/posts/select-2026-neu.md"
+  },
+  {
+    "id": "select-2026-eroeffnung",
+    "slug": "select-2026-eroeffnung",
+    "title": "# select in Düsseldorf",
+    "date": "2026-11-14",
+    "excerpt": "Am 14.",
+    "linkedVenueIds": [
+      "galerie-noir-blanche-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "select-2026"
+    ],
+    "contentFile": "content/posts/select-2026-eroeffnung.md"
+  },
+  {
+    "id": "select-2026-endet-bald",
+    "slug": "select-2026-endet-bald",
+    "title": "# select in Düsseldorf",
+    "date": "2027-01-02",
+    "excerpt": "Die Gruppenausstellung # select in der Galerie noir blanche in Düsseldorf läuft noch bis 16.",
+    "linkedVenueIds": [
+      "galerie-noir-blanche-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "select-2026"
+    ],
+    "contentFile": "content/posts/select-2026-endet-bald.md"
+  },
+  {
+    "id": "select-2026-ende",
+    "slug": "select-2026-ende",
+    "title": "# select in Düsseldorf",
+    "date": "2027-01-17",
+    "excerpt": "Die Gruppenausstellung # select in der Galerie noir blanche in Düsseldorf ist am 16.",
+    "linkedVenueIds": [
+      "galerie-noir-blanche-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "select-2026"
+    ],
+    "contentFile": "content/posts/select-2026-ende.md"
+  },
+  {
+    "id": "radu-darvas-fotografien-aus-siebenbuergen-2026-neu",
+    "slug": "radu-darvas-fotografien-aus-siebenbuergen-2026-neu",
+    "title": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
+    "date": "2026-11-11",
+    "excerpt": "Das Gerhart-Hauptmann-Haus in Düsseldorf zeigt vom 9.",
+    "linkedVenueIds": [
+      "gerhart-hauptmann-haus-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "radu-darvas-fotografien-aus-siebenbuergen-2026"
+    ],
+    "contentFile": "content/posts/radu-darvas-fotografien-aus-siebenbuergen-2026-neu.md"
+  },
+  {
+    "id": "radu-darvas-fotografien-aus-siebenbuergen-2026-eroeffnung",
+    "slug": "radu-darvas-fotografien-aus-siebenbuergen-2026-eroeffnung",
+    "title": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
+    "date": "2026-09-09",
+    "excerpt": "Am 9.",
+    "linkedVenueIds": [
+      "gerhart-hauptmann-haus-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "radu-darvas-fotografien-aus-siebenbuergen-2026"
+    ],
+    "contentFile": "content/posts/radu-darvas-fotografien-aus-siebenbuergen-2026-eroeffnung.md"
+  },
+  {
+    "id": "radu-darvas-fotografien-aus-siebenbuergen-2026-endet-bald",
+    "slug": "radu-darvas-fotografien-aus-siebenbuergen-2026-endet-bald",
+    "title": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
+    "date": "2026-10-30",
+    "excerpt": "Die Ausstellung Radu Darvas.",
+    "linkedVenueIds": [
+      "gerhart-hauptmann-haus-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "radu-darvas-fotografien-aus-siebenbuergen-2026"
+    ],
+    "contentFile": "content/posts/radu-darvas-fotografien-aus-siebenbuergen-2026-endet-bald.md"
+  },
+  {
+    "id": "radu-darvas-fotografien-aus-siebenbuergen-2026-ende",
+    "slug": "radu-darvas-fotografien-aus-siebenbuergen-2026-ende",
+    "title": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
+    "date": "2026-11-14",
+    "excerpt": "Die Ausstellung Radu Darvas.",
+    "linkedVenueIds": [
+      "gerhart-hauptmann-haus-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "radu-darvas-fotografien-aus-siebenbuergen-2026"
+    ],
+    "contentFile": "content/posts/radu-darvas-fotografien-aus-siebenbuergen-2026-ende.md"
+  },
+  {
+    "id": "personal-perspectives-50-jahre-leica-galerien-2026-neu",
+    "slug": "personal-perspectives-50-jahre-leica-galerien-2026-neu",
+    "title": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
+    "date": "2026-11-11",
+    "excerpt": "Die Leica Galerie Düsseldorf zeigt vom 10.",
+    "linkedVenueIds": [
+      "leica-galerie-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "personal-perspectives-50-jahre-leica-galerien-2026"
+    ],
+    "contentFile": "content/posts/personal-perspectives-50-jahre-leica-galerien-2026-neu.md"
+  },
+  {
+    "id": "personal-perspectives-50-jahre-leica-galerien-2026-eroeffnung",
+    "slug": "personal-perspectives-50-jahre-leica-galerien-2026-eroeffnung",
+    "title": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
+    "date": "2026-10-10",
+    "excerpt": "Am 10.",
+    "linkedVenueIds": [
+      "leica-galerie-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "personal-perspectives-50-jahre-leica-galerien-2026"
+    ],
+    "contentFile": "content/posts/personal-perspectives-50-jahre-leica-galerien-2026-eroeffnung.md"
+  },
+  {
+    "id": "personal-perspectives-50-jahre-leica-galerien-2026-endet-bald",
+    "slug": "personal-perspectives-50-jahre-leica-galerien-2026-endet-bald",
+    "title": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
+    "date": "2027-01-02",
+    "excerpt": "Die Ausstellung Personal Perspectives – 50 Jahre Leica Galerien in der Leica Galerie Düsseldorf läuft nur noch bis 16.",
+    "linkedVenueIds": [
+      "leica-galerie-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "personal-perspectives-50-jahre-leica-galerien-2026"
+    ],
+    "contentFile": "content/posts/personal-perspectives-50-jahre-leica-galerien-2026-endet-bald.md"
+  },
+  {
+    "id": "personal-perspectives-50-jahre-leica-galerien-2026-ende",
+    "slug": "personal-perspectives-50-jahre-leica-galerien-2026-ende",
+    "title": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
+    "date": "2027-01-17",
+    "excerpt": "Die Jubiläumsausstellung Personal Perspectives – 50 Jahre Leica Galerien in der Leica Galerie Düsseldorf ist am 16.",
+    "linkedVenueIds": [
+      "leica-galerie-duesseldorf"
+    ],
+    "linkedExhibitionIds": [
+      "personal-perspectives-50-jahre-leica-galerien-2026"
+    ],
+    "contentFile": "content/posts/personal-perspectives-50-jahre-leica-galerien-2026-ende.md"
   }
 ]

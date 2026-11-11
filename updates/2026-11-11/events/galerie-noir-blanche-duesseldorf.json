@@ -1,0 +1,33 @@
+{
+  "venueId": "galerie-noir-blanche-duesseldorf",
+  "fetchedAt": "2026-11-11",
+  "changes": [
+    {
+      "id": "e1",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Talk und Buchpräsentation mit Martin Waldbauer",
+        "eventType": "talk",
+        "startDate": "2026-11-21",
+        "endDate": "2026-11-21",
+        "startTime": "16:00",
+        "venueId": "galerie-noir-blanche-duesseldorf",
+        "city": "Düsseldorf",
+        "isCommercial": false,
+        "description": "Beginn 16:00 Uhr. Um Anmeldung und Reservierung wird gebeten.",
+        "website": "https://www.noirblanche.de/de/veranstaltungen/",
+        "id": "talk-und-buchpraesentation-mit-martin-waldbauer-2026"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/veranstaltungen/",
+        "excerpt": "Samstag, 21.11.2026 16.00 Uhr Martin Waldbauer Talk und Buchpräsentation mit Martin Waldbauer Um Anmeldung und Reservierung wird gebeten!"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    }
+  ],
+  "rejected": []
+}

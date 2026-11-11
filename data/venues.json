@@ -599,5 +599,306 @@
       "checkedAt": "2026-11-09",
       "status": "recherchiert"
     }
+  },
+  {
+    "id": "k20-duesseldorf",
+    "name": "Kunstsammlung Nordrhein-Westfalen, K20",
+    "shortName": "K20",
+    "type": "museum",
+    "city": "Düsseldorf",
+    "district": "Altstadt",
+    "address": {
+      "street": "Grabbeplatz 5",
+      "zip": "40213",
+      "city": "Düsseldorf",
+      "lat": 51.228636,
+      "lng": 6.7756798
+    },
+    "website": "https://www.kunstsammlung.de/",
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.kulturportal-duesseldorf.de/attraktionen/kunstsammlung-nordrhein-westfalen-k20-fotografische-sammlung-8c280a1428",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "k21-duesseldorf",
+    "name": "Kunstsammlung Nordrhein-Westfalen, K21",
+    "shortName": "K21",
+    "type": "museum",
+    "city": "Düsseldorf",
+    "district": "Stadtmitte",
+    "address": {
+      "street": "Ständehausstraße 1",
+      "zip": "40217",
+      "city": "Düsseldorf",
+      "lat": 51.2165447,
+      "lng": 6.7739719
+    },
+    "website": "https://www.kunstsammlung.de/",
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.artjunk.de/venue/k21-kunstsammlung-nordrhein-westfalen/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "stadtmuseum-duesseldorf",
+    "name": "Stadtmuseum Düsseldorf",
+    "shortName": "Stadtmuseum",
+    "type": "museum",
+    "city": "Düsseldorf",
+    "district": "Altstadt",
+    "address": {
+      "street": "Berger Allee 2",
+      "zip": "40213",
+      "city": "Düsseldorf",
+      "lat": 51.2223647,
+      "lng": 6.7698981
+    },
+    "website": "https://www.duesseldorf.de/stadtmuseum",
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.duesseldorf.de/stadtmuseum",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "filmmuseum-duesseldorf",
+    "name": "Filmmuseum Düsseldorf",
+    "shortName": "Filmmuseum",
+    "type": "museum",
+    "city": "Düsseldorf",
+    "district": "Altstadt",
+    "address": {
+      "street": "Schulstraße 4",
+      "zip": "40213",
+      "city": "Düsseldorf",
+      "lat": 51.2238317,
+      "lng": 6.7710946
+    },
+    "website": "https://filmmuseum-duesseldorf.de/",
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.duesseldorf.de/filmmuseum/ausstellungen/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "leica-galerie-duesseldorf",
+    "name": "Leica Galerie Düsseldorf",
+    "shortName": "Leica Galerie",
+    "type": "gallery",
+    "city": "Düsseldorf",
+    "district": "Stadtmitte",
+    "address": {
+      "street": "Königsallee 2",
+      "zip": "40212",
+      "city": "Düsseldorf",
+      "lat": 51.227069,
+      "lng": 6.7810536
+    },
+    "website": "https://leica-camera.com/de-DE/leica-galerien/leica-galerie-duesseldorf",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://leica-camera.com/de-DE/leica-galerien/leica-galerie-duesseldorf",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "galerie-noir-blanche-duesseldorf",
+    "name": "Galerie noir blanche",
+    "shortName": "noir blanche",
+    "type": "gallery",
+    "city": "Düsseldorf",
+    "district": "Flingern",
+    "address": {
+      "street": "Hermannstraße 31",
+      "zip": "40233",
+      "city": "Düsseldorf",
+      "lat": 51.2293394,
+      "lng": 6.8075108
+    },
+    "website": "https://www.noirblanche.de/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.noirblanche.de/de/ausstellungen/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "galerie-voss-duesseldorf",
+    "name": "Galerie Voss",
+    "shortName": "Galerie Voss",
+    "type": "gallery",
+    "city": "Düsseldorf",
+    "district": "Altstadt",
+    "address": {
+      "street": "Mühlengasse 3",
+      "zip": "40213",
+      "city": "Düsseldorf",
+      "lat": 51.2298579,
+      "lng": 6.7753635
+    },
+    "website": "https://www.galerievoss.de/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.galerievoss.de/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "lumas-duesseldorf",
+    "name": "LUMAS Galerie Düsseldorf",
+    "shortName": "LUMAS",
+    "type": "gallery",
+    "city": "Düsseldorf",
+    "district": "Stadtmitte",
+    "address": {
+      "street": "Grünstraße 8",
+      "zip": "40212",
+      "city": "Düsseldorf",
+      "lat": 51.2217102,
+      "lng": 6.7801477
+    },
+    "website": "https://www.lumas.de/gallery/dusseldorf/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.lumas.com/galleries/duesseldorf/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "sammlung-philara-duesseldorf",
+    "name": "Sammlung Philara",
+    "shortName": "Philara",
+    "type": "off_space",
+    "city": "Düsseldorf",
+    "district": "Flingern",
+    "address": {
+      "street": "Birkenstraße 47a",
+      "zip": "40233",
+      "city": "Düsseldorf",
+      "lat": 51.2265786,
+      "lng": 6.8031159
+    },
+    "website": "https://www.philara.de/de",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.philara.de/de",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "plan-d-produzentengalerie-duesseldorf",
+    "name": "plan.d. Produzentengalerie",
+    "shortName": "plan.d.",
+    "type": "off_space",
+    "city": "Düsseldorf",
+    "district": "Flingern",
+    "address": {
+      "street": "Dorotheenstraße 59",
+      "zip": "40235",
+      "city": "Düsseldorf",
+      "lat": 51.2280192,
+      "lng": 6.8106395
+    },
+    "website": "https://www.galerie-plan-d.de/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.galerie-plan-d.de/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "gerhart-hauptmann-haus-duesseldorf",
+    "name": "Gerhart-Hauptmann-Haus",
+    "shortName": "Gerhart-Hauptmann-Haus",
+    "type": "foundation",
+    "city": "Düsseldorf",
+    "district": "Stadtmitte",
+    "address": {
+      "street": "Bismarckstraße 90",
+      "zip": "40210",
+      "city": "Düsseldorf",
+      "lat": 51.2211133,
+      "lng": 6.7891881
+    },
+    "website": "https://www.g-h-h.de/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.g-h-h.de/ausstellung/ausstellung-wiedergutmachung-fotografien-aus-siebenbuergen-von-radu-darvas",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "polnisches-institut-duesseldorf",
+    "name": "Polnisches Institut Düsseldorf",
+    "shortName": "Polnisches Institut",
+    "type": "foundation",
+    "city": "Düsseldorf",
+    "district": "Altstadt",
+    "address": {
+      "street": "Citadellstraße 7",
+      "zip": "40213",
+      "city": "Düsseldorf",
+      "lat": 51.2234833,
+      "lng": 6.7705411
+    },
+    "website": "https://instytutpolski.pl/duesseldorf/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": true,
+      "libraryNotes": "Öffentliche Bibliothek mit rund 7.500 Bänden (laut Website, Stand Recherche 2026-11-11)."
+    },
+    "source": {
+      "url": "https://instytutpolski.pl/duesseldorf/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
   }
 ]

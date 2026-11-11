@@ -1,0 +1,49 @@
+{
+  "venueId": "gerhart-hauptmann-haus-duesseldorf",
+  "fetchedAt": "2026-11-11",
+  "changes": [
+    {
+      "id": "p1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "radu-darvas",
+        "name": "Radu Darvas"
+      },
+      "evidence": {
+        "url": "https://www.g-h-h.de/ausstellung/ausstellung-wiedergutmachung-fotografien-aus-siebenbuergen-von-radu-darvas",
+        "excerpt": "Laufzeit der Ausstellung: 09. September bis 13. November 2026 Radu Darvas (1973 in Rumänien geboren, 2015 in Dresden verstorben)"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e1",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "id": "radu-darvas-fotografien-aus-siebenbuergen-2026",
+        "venueId": "gerhart-hauptmann-haus-duesseldorf",
+        "title": "Radu Darvas. Fotografien aus Siebenbürgen",
+        "startDate": "2026-09-09",
+        "endDate": "2026-11-13",
+        "type": "solo",
+        "photographerIds": [
+          "radu-darvas"
+        ],
+        "description": "Schwarz-Weiß-Fotografien von Radu Darvas aus Viscri/Deutsch-Weißkirch, kuratiert von Mira Darvas."
+      },
+      "evidence": {
+        "url": "https://www.g-h-h.de/ausstellung/ausstellung-wiedergutmachung-fotografien-aus-siebenbuergen-von-radu-darvas",
+        "excerpt": "Radu Darvas. Fotografien aus Siebenbürgen«Ausstellungseröffnung: 08. September, 19.00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    }
+  ],
+  "rejected": []
+}

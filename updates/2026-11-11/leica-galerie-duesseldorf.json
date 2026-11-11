@@ -1,0 +1,51 @@
+{
+  "venueId": "leica-galerie-duesseldorf",
+  "fetchedAt": "2026-11-11",
+  "changes": [
+    {
+      "id": "p1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "joel-meyerowitz",
+        "name": "Joel Meyerowitz"
+      },
+      "evidence": {
+        "url": "https://leica-camera.com/de-DE/leica-galerien/leica-galerie-duesseldorf",
+        "excerpt": "Elliott Erwitt, Joel Meyerowitz und Barbara Klemm"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e1",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "id": "personal-perspectives-50-jahre-leica-galerien-2026",
+        "venueId": "leica-galerie-duesseldorf",
+        "title": "Personal Perspectives – 50 Jahre Leica Galerien",
+        "startDate": "2026-10-10",
+        "endDate": "2027-01-16",
+        "type": "group",
+        "photographerIds": [
+          "elliott-erwitt",
+          "joel-meyerowitz",
+          "barbara-klemm"
+        ],
+        "description": "Jubiläumsausstellung mit Werken von Elliott Erwitt, Joel Meyerowitz und Barbara Klemm im Dialog mit einer neuen Generation."
+      },
+      "evidence": {
+        "url": "https://leica-camera.com/de-DE/leica-galerien/leica-galerie-duesseldorf",
+        "excerpt": "Aktuelle Ausstellung Personal Perspectives – 50 Jahre Leica Galerien Die Ausstellung im Rahmen"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    }
+  ],
+  "rejected": []
+}

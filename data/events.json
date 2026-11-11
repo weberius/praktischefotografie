@@ -365,5 +365,18 @@
     "description": "Eintritt frei.",
     "website": "https://www.stadt-koeln.de/leben-in-koeln/kultur/historisches-archiv-mit-rheinischem-bildarchiv/veranstaltungen-des-historischen-archivs",
     "id": "ausstellungsfuehrung-hungerleben-lebenshunger-koeln-1946-47-2027-7"
+  },
+  {
+    "title": "Talk und Buchpräsentation mit Martin Waldbauer",
+    "eventType": "talk",
+    "startDate": "2026-11-21",
+    "endDate": "2026-11-21",
+    "startTime": "16:00",
+    "venueId": "galerie-noir-blanche-duesseldorf",
+    "city": "Düsseldorf",
+    "isCommercial": false,
+    "description": "Beginn 16:00 Uhr. Um Anmeldung und Reservierung wird gebeten.",
+    "website": "https://www.noirblanche.de/de/veranstaltungen/",
+    "id": "talk-und-buchpraesentation-mit-martin-waldbauer-2026"
   }
 ]

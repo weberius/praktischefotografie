@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-11",
+  "offline": false,
+  "venues": [
+    {
+      "venueId": "polnisches-institut-duesseldorf",
+      "status": "fehlgeschlagen",
+      "pages": 0,
+      "fetched": 0,
+      "cached": 0,
+      "errors": [
+        {
+          "url": "https://instytutpolski.pl/duesseldorf/",
+          "reason": "nicht abgerufen, robots.txt nicht lesbar (Zeitüberschreitung nach 15 s)"
+        }
+      ],
+      "notes": []
+    }
+  ]
+}

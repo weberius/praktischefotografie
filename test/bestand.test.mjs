@@ -8,8 +8,33 @@ import { validateData, NRW_BBOX } from '../scripts/validate-data.mjs';
 const dataDir = fileURLToPath(new URL('../data/', import.meta.url));
 const venues = JSON.parse(readFileSync(`${dataDir}venues.json`, 'utf8'));
 
-test('Szenario: Datenbestand enthält 20 bis 30 Venues (VEN-UB-1)', () => {
-  assert.ok(venues.length >= 20 && venues.length <= 30, `Anzahl: ${venues.length}`);
+test('Szenario: Datenbestand enthält 20 bis 60 Venues (VEN-UB-8, Q-DATA-21)', () => {
+  assert.ok(venues.length >= 20 && venues.length <= 60, `Anzahl: ${venues.length}`);
+});
+
+test('Szenario: Düsseldorfer Orte sind im Katalog und liegen in Düsseldorf (VEN-UB-9 bis VEN-UB-11, Q-DATA-22)', () => {
+  const erwartet = {
+    'k20-duesseldorf': 'museum',
+    'k21-duesseldorf': 'museum',
+    'stadtmuseum-duesseldorf': 'museum',
+    'filmmuseum-duesseldorf': 'museum',
+    'leica-galerie-duesseldorf': 'gallery',
+    'galerie-noir-blanche-duesseldorf': 'gallery',
+    'galerie-voss-duesseldorf': 'gallery',
+    'lumas-duesseldorf': 'gallery',
+    'sammlung-philara-duesseldorf': 'off_space',
+    'plan-d-produzentengalerie-duesseldorf': 'off_space',
+    'gerhart-hauptmann-haus-duesseldorf': 'foundation',
+    'polnisches-institut-duesseldorf': 'foundation',
+  };
+  for (const [id, type] of Object.entries(erwartet)) {
+    const v = venues.find((x) => x.id === id);
+    assert.ok(v, `fehlt: ${id}`);
+    assert.equal(v.type, type, id);
+    assert.equal(v.city, 'Düsseldorf', id);
+    assert.ok(v.address.lat >= 51.12 && v.address.lat <= 51.36 && v.address.lng >= 6.65 && v.address.lng <= 6.95, id);
+    assert.ok(v.website && v.source.url && v.source.checkedAt && v.source.status, id);
+  }
 });
 
 test('Szenario: Koordinaten liegen in NRW (VEN-UB-2)', () => {

@@ -1,3 +1,9 @@
+---
+status: umgesetzt  # offen | in-arbeit | umgesetzt | verworfen
+prio: 2            # optional, kleiner = früher
+ticket: SERVICE-27
+---
+
 # Fotografie-Orte in Düsseldorf
 
 Aktualisiere die Daten mit Informationen zu Museen, Galerien, Off-Spaces sowie weitere Ausstellungsorte und Formate für Fotografie in Düsseldorf. Diese Datei enthält eine Übersicht über Museen, Galerien, Off-Spaces sowie weitere Ausstellungsorte und Formate für Fotografie in Düsseldorf (zusammengestellt für das *Zentrum für praktische Fotografie*). Die Recherche und die Überführung in die Datenbasis soll im Rahmen dieses Tickets erfolgen.

@@ -1,0 +1,410 @@
+{
+  "venueId": "galerie-noir-blanche-duesseldorf",
+  "fetchedAt": "2026-11-11",
+  "changes": [
+    {
+      "id": "p1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "alexander-basta",
+        "name": "Alexander Basta"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "14.11.2026 - 16.01.2027 Alexander Basta Monika Baumgartl Karl Blossfeldt Werner Bokelberg Christian Coigny Josef Fischnaller"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p2",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "monika-baumgartl",
+        "name": "Monika Baumgartl"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "14.11.2026 - 16.01.2027 Alexander Basta Monika Baumgartl Karl Blossfeldt Werner Bokelberg Christian Coigny Josef Fischnaller"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p3",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "karl-blossfeldt",
+        "name": "Karl Blossfeldt"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "14.11.2026 - 16.01.2027 Alexander Basta Monika Baumgartl Karl Blossfeldt Werner Bokelberg Christian Coigny Josef Fischnaller"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p4",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "werner-bokelberg",
+        "name": "Werner Bokelberg"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "14.11.2026 - 16.01.2027 Alexander Basta Monika Baumgartl Karl Blossfeldt Werner Bokelberg Christian Coigny Josef Fischnaller"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p5",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "christian-coigny",
+        "name": "Christian Coigny"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "14.11.2026 - 16.01.2027 Alexander Basta Monika Baumgartl Karl Blossfeldt Werner Bokelberg Christian Coigny Josef Fischnaller"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p6",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "josef-fischnaller",
+        "name": "Josef Fischnaller"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "14.11.2026 - 16.01.2027 Alexander Basta Monika Baumgartl Karl Blossfeldt Werner Bokelberg Christian Coigny Josef Fischnaller"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p7",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "f-c-gundlach",
+        "name": "F.C. Gundlach"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "F.C. Gundlach Joop Greypink Markus C. Hurek Herlinde Koelbl Hans Lux Clay Perry Alfredo Sarabia jun. Fred Stein"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p8",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "joop-greypink",
+        "name": "Joop Greypink"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "F.C. Gundlach Joop Greypink Markus C. Hurek Herlinde Koelbl Hans Lux Clay Perry Alfredo Sarabia jun. Fred Stein"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p9",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "markus-c-hurek",
+        "name": "Markus C. Hurek"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "F.C. Gundlach Joop Greypink Markus C. Hurek Herlinde Koelbl Hans Lux Clay Perry Alfredo Sarabia jun. Fred Stein"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p10",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "hans-lux",
+        "name": "Hans Lux"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "F.C. Gundlach Joop Greypink Markus C. Hurek Herlinde Koelbl Hans Lux Clay Perry Alfredo Sarabia jun. Fred Stein"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p11",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "clay-perry",
+        "name": "Clay Perry"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "F.C. Gundlach Joop Greypink Markus C. Hurek Herlinde Koelbl Hans Lux Clay Perry Alfredo Sarabia jun. Fred Stein"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p12",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "alfredo-sarabia-jun",
+        "name": "Alfredo Sarabia jun."
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "F.C. Gundlach Joop Greypink Markus C. Hurek Herlinde Koelbl Hans Lux Clay Perry Alfredo Sarabia jun. Fred Stein"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p13",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "fred-stein",
+        "name": "Fred Stein"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "F.C. Gundlach Joop Greypink Markus C. Hurek Herlinde Koelbl Hans Lux Clay Perry Alfredo Sarabia jun. Fred Stein"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p14",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "walter-schels",
+        "name": "Walter Schels"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "Walter Schels Renate Scherra Axel Schmidt Walter Schmitz Ayako Takashi Horst Wackerbarth Martin Waldbauer Barbara Wolff"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p15",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "renate-scherra",
+        "name": "Renate Scherra"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "Walter Schels Renate Scherra Axel Schmidt Walter Schmitz Ayako Takashi Horst Wackerbarth Martin Waldbauer Barbara Wolff"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p16",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "axel-schmidt",
+        "name": "Axel Schmidt"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "Walter Schels Renate Scherra Axel Schmidt Walter Schmitz Ayako Takashi Horst Wackerbarth Martin Waldbauer Barbara Wolff"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p17",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "walter-schmitz",
+        "name": "Walter Schmitz"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "Walter Schels Renate Scherra Axel Schmidt Walter Schmitz Ayako Takashi Horst Wackerbarth Martin Waldbauer Barbara Wolff"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p18",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "ayako-takashi",
+        "name": "Ayako Takashi"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "Walter Schels Renate Scherra Axel Schmidt Walter Schmitz Ayako Takashi Horst Wackerbarth Martin Waldbauer Barbara Wolff"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p19",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "horst-wackerbarth",
+        "name": "Horst Wackerbarth"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "Walter Schels Renate Scherra Axel Schmidt Walter Schmitz Ayako Takashi Horst Wackerbarth Martin Waldbauer Barbara Wolff"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p20",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "martin-waldbauer",
+        "name": "Martin Waldbauer"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "Walter Schels Renate Scherra Axel Schmidt Walter Schmitz Ayako Takashi Horst Wackerbarth Martin Waldbauer Barbara Wolff"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p21",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "barbara-wolff",
+        "name": "Barbara Wolff"
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "Walter Schels Renate Scherra Axel Schmidt Walter Schmitz Ayako Takashi Horst Wackerbarth Martin Waldbauer Barbara Wolff"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e1",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "id": "select-2026",
+        "venueId": "galerie-noir-blanche-duesseldorf",
+        "title": "# select",
+        "startDate": "2026-11-14",
+        "endDate": "2027-01-16",
+        "type": "group",
+        "photographerIds": [
+          "alexander-basta",
+          "monika-baumgartl",
+          "karl-blossfeldt",
+          "werner-bokelberg",
+          "christian-coigny",
+          "josef-fischnaller",
+          "f-c-gundlach",
+          "joop-greypink",
+          "markus-c-hurek",
+          "herlinde-koelbl",
+          "hans-lux",
+          "clay-perry",
+          "alfredo-sarabia-jun",
+          "fred-stein",
+          "walter-schels",
+          "renate-scherra",
+          "axel-schmidt",
+          "walter-schmitz",
+          "ayako-takashi",
+          "horst-wackerbarth",
+          "martin-waldbauer",
+          "barbara-wolff"
+        ],
+        "description": "Gruppenausstellung mit Werken von 22 Fotograf:innen aus gut 100 Jahren, die das Programm der Galerie prägten: Alexander Basta, Monika Baumgartl, Karl Blossfeldt, Werner Bokelberg, Christian Coigny, Josef Fischnaller, F.C. Gundlach, Joop Greypink, Markus C. Hurek, Herlinde Koelbl, Hans Lux, Clay Perry, Alfredo Sarabia jun., Fred Stein, Walter Schels, Renate Scherra, Axel Schmidt, Walter Schmitz, Ayako Takashi, Horst Wackerbarth, Martin Waldbauer und Barbara Wolff."
+      },
+      "evidence": {
+        "url": "https://www.noirblanche.de/de/ausstellungen/",
+        "excerpt": "aktuelle Ausstellung # select 14.11.2026 - 16.01.2027 Alexander Basta Monika Baumgartl Karl Blossfeldt"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    }
+  ],
+  "rejected": []
+}
