@@ -63,3 +63,18 @@ Funktionalität: Kalender und Agenda
     Angenommen die Adresse "/calendar/2026/13"
     Wenn sie aufgerufen wird
     Dann zeigt die Anwendung die Hinweisseite
+
+  # EARS: CAL-UB-8
+  Szenario: Agenda zeigt die Uhrzeit
+    Angenommen ein eintägiges Event "e-1" mit "startTime" "16:00" und "endTime" "18:00" und ein mehrtägiges Event mit "startTime" "10:00"
+    Wenn "/calendar" und "/calendar/2026/11" aufgerufen werden
+    Dann zeigt der Eintrag von "e-1" in beiden "16:00–18:00 Uhr"
+    Und der Eintrag des mehrtägigen Events zeigt keine Uhrzeit
+
+  # EARS: CAL-UB-9
+  Szenario: Gleicher Tag nach Startzeit
+    Angenommen am selben Tag eine Ausstellung beginnt, ein Event um 18:00, eines um 09:30 und eines ohne Uhrzeit
+    Wenn "/calendar" aufgerufen wird
+    Dann stehen die Ausstellung und das Event ohne Uhrzeit vor dem Event um 09:30
+    Und danach folgt das Event um 18:00
+    Und Einträge mit verschiedenen Beginndaten bleiben nach Datum geordnet

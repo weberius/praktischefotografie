@@ -37,7 +37,7 @@ praktischefotografie/
 ├── data/
 │   ├── venues.json            # Permanente Orte (Museen, Stiftungen, Bibliotheken)
 │   ├── exhibitions.json       # Ausstellungen & Laufzeiten
-│   ├── events.json            # Einzel-Events, Vernissagen, Finissagen, Messen
+│   ├── events.json            # Einzel-Events (optional mit Uhrzeit und Zeitzone), Vernissagen, Finissagen, Messen
 │   ├── organizers.json        # Netzwerke, Vereine & Veranstalter ohne eigenen Raum
 │   ├── festivals.json         # Festivals (Zeitraum) der Veranstalter
 │   ├── photographers.json     # Fotograf:innen mit optionalem Profil (Wikipedia, Portrait)

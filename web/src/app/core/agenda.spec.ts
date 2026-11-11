@@ -24,6 +24,18 @@ describe('agenda', () => {
     expect(order).toEqual(['f-1', 'f-2']);
   });
 
+  it('Szenario: Gleicher Tag nach Startzeit, ohne Uhrzeit zuerst (CAL-UB-9)', () => {
+    const base = { ...events[0], startDate: '2026-11-02', endDate: '2026-11-02' };
+    const timed = [
+      { ...base, id: 'spaet', title: 'A', startTime: '19:00' },
+      { ...base, id: 'frueh', title: 'B', startTime: '09:30' },
+      { ...base, id: 'ohne', title: 'C' },
+    ];
+    const list = buildAgenda([{ ...exhibitions[0], id: 'ausstellung', title: 'A0', startDate: '2026-11-02', endDate: '2026-11-02' }], timed, venueById, TEST_TODAY);
+    expect(ids(list.filter((i) => i.startDate === '2026-11-02'))).toEqual(['ausstellung', 'ohne', 'frueh', 'spaet']);
+    expect(list.find((i) => i.id === 'frueh')?.startTime).toBe('09:30');
+  });
+
   it('Szenario: Beendete sind standardmäßig ausgeblendet (CAL-OP-1)', () => {
     expect(ids(filterFromToday(agenda, TEST_TODAY, false))).not.toContain('a-beendet');
     expect(ids(filterFromToday(agenda, TEST_TODAY, false))).not.toContain('e-vergangen');

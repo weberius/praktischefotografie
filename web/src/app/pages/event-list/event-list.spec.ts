@@ -21,6 +21,19 @@ const titles = (el: HTMLElement) => cards(el).map((li) => li.querySelector('h2')
 const baseEvent = TEST_DATASET.events[0];
 
 describe('EventListPage', () => {
+  it('Szenario: Uhrzeit in der Liste, mehrtägig und ohne Uhrzeit ohne Angabe (EVT-UB-7, EVT-UB-8)', async () => {
+    const events = [
+      { ...baseEvent, id: 'e-1', title: 'Abend', startDate: '2026-11-12', endDate: '2026-11-12', startTime: '16:00', endTime: '18:00' },
+      { ...baseEvent, id: 'e-2', title: 'Messe', startDate: '2026-11-13', endDate: '2026-11-14', startTime: '10:00', endTime: '17:00' },
+      { ...baseEvent, id: 'e-3', title: 'Ohne', startDate: '2026-11-15', endDate: '2026-11-15' },
+    ];
+    const { el } = await open('/events', { events });
+    const meta = cards(el).map((li) => li.querySelector('.meta:not(:has(.badge))')?.textContent ?? '');
+    expect(meta[0]).toContain('16:00–18:00 Uhr');
+    expect(meta[1]).not.toContain('Uhr');
+    expect(meta[2]).not.toContain('Uhr');
+  });
+
   it('Szenario: Liste zeigt Events (EVT-UB-1)', async () => {
     const { el } = await open('/events');
     expect(el.querySelectorAll('h1').length).toBe(1);

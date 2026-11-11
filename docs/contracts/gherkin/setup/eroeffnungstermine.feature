@@ -113,3 +113,28 @@ Funktionalität: Eröffnungstermine bei der Recherche
   Szenario: Bericht ohne Netz
     Wenn der Bericht geschrieben wird
     Dann wurde keine Netzanfrage gesendet
+
+  # EARS: OPN-UB-9
+  Szenario: Vernissage mit Startzeit und Endzeit
+    Angenommen ein Vernissage-Vorschlag für den 2026-11-07
+    Und ein Textauszug "Opening: 7 November 2026, 4-6pm"
+    Wenn die Vorschläge für den Ort geprüft werden
+    Dann ist der Vorschlag gültig
+    Und er trägt "startTime" "16:00" und "endTime" "18:00"
+    Und die "description" nennt die Uhrzeit weiterhin
+
+  # EARS: OPN-UB-9
+  Szenario: Vernissage ohne Uhrzeit
+    Angenommen ein Vernissage-Vorschlag für den 2026-11-07
+    Und ein Textauszug "Eröffnung am 7. November 2026"
+    Wenn die Vorschläge für den Ort geprüft werden
+    Dann ist der Vorschlag gültig
+    Und er trägt weder "startTime" noch "endTime"
+
+  # EARS: OPN-UN-3
+  Szenario: Uhrzeitfeld ohne Beleg
+    Angenommen ein Vernissage-Vorschlag mit "startTime" "19:00"
+    Und ein Textauszug "Eröffnung am 7. November 2026 um 16:00 Uhr"
+    Wenn die Vorschläge für den Ort geprüft werden
+    Dann wird der Vorschlag verworfen
+    Und der Bericht nennt den Grund "Uhrzeit nicht belegt"

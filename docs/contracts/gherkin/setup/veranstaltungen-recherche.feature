@@ -41,11 +41,11 @@ Funktionalität: Veranstaltungen und Führungen recherchieren
     Und es werden höchstens zehn Seiten dieses Ortes abgerufen
     Und "robots.txt", Abstand von 2 Sekunden und Kennung gelten wie im normalen Abruf
 
-  # EARS: VRS-UB-2
+  # EARS: VRS-UB-2 (ersetzt durch VRS-UB-10), VRS-UB-10
   Szenario: Nur Veranstaltungen werden vorgeschlagen
     Angenommen ein Snapshot mit einer Führung und einer neuen Ausstellung
     Wenn die Vorschläge geprüft werden
-    Dann enthält "updates/<Datum>/events/<venue-id>.json" nur Vorschläge für "events" mit "op" "add"
+    Dann enthält "updates/<Datum>/events/<venue-id>.json" nur Vorschläge für "events" (neue Veranstaltungen mit "op" "add")
     Und die Ausstellung ist nicht enthalten
 
   # EARS: VRS-UB-3
@@ -116,3 +116,46 @@ Funktionalität: Veranstaltungen und Führungen recherchieren
   Szenario: Bericht je Ort
     Angenommen ein beendeter Lauf
     Dann nennt der Bericht je Ort die Zahl der abgerufenen Seiten, der Vorschläge und der verworfenen Vorschläge mit Grund
+
+  # EARS: VRS-UB-8
+  Szenario: Uhrzeit mit Beleg
+    Angenommen ein Textauszug "Führung am 14. November 2026, 15:00 bis 16:30 Uhr"
+    Wenn der Vorschlag für die Führung geprüft wird
+    Dann trägt er "startTime" "15:00" und "endTime" "16:30"
+    Und er ist gültig
+
+  # EARS: VRS-UB-8
+  Szenario: Mehrere Uhrzeiten
+    Angenommen ein Textauszug "Vortrag am 14. November 2026, Einlass 18:30 Uhr, Beginn 19:00 Uhr"
+    Wenn der Vorschlag für den Vortrag geprüft wird
+    Dann trägt er "startTime" "19:00"
+    Und er trägt kein "endTime"
+
+  # EARS: VRS-UB-8, VRS-UN-3
+  Szenario: Keine Uhrzeit ohne Beleg
+    Angenommen ein Vorschlag mit "startTime" "15:00" und ein Textauszug "Führung am 14. November 2026"
+    Wenn die Vorschläge geprüft werden
+    Dann wird der Vorschlag verworfen
+    Und der Bericht nennt den Grund "Uhrzeit nicht belegt"
+
+  # EARS: VRS-UB-9
+  Szenario: Zeitzone nur bei Abweichung
+    Angenommen ein Vorschlag für einen Ort in Köln und einer für einen Ort mit belegter Zeitzone "Europe/London"
+    Wenn die Vorschläge geprüft werden
+    Dann trägt der Vorschlag für Köln kein "timeZone"
+    Und der andere Vorschlag trägt "timeZone" "Europe/London"
+
+  # EARS: VRS-EV-3, VRS-UB-10
+  Szenario: Bestandsevent erhält Uhrzeit
+    Angenommen ein Event "ein-abend-mit-tim-soter-2026" ohne Uhrzeit in "data/events.json"
+    Und ein Snapshot mit Titel, Datum 2026-11-07 und "19:00 Uhr" in einem Textauszug
+    Wenn die Vorschläge geprüft werden
+    Dann enthält die Vorschlagsdatei einen Vorschlag mit "op" "update" nur für "startTime"
+    Und es gibt keinen Vorschlag mit "op" "add" für dieses Event
+
+  # EARS: VRS-EV-3
+  Szenario: Vorhandene Uhrzeit bleibt
+    Angenommen ein Event mit "startTime" "19:00" in "data/events.json"
+    Und ein Snapshot, der "20:00 Uhr" für dasselbe Event nennt
+    Wenn die Vorschläge geprüft werden
+    Dann enthält die Vorschlagsdatei keinen Vorschlag, der "startTime" ändert

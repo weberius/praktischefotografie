@@ -17,6 +17,24 @@ async function open(url: string, dataset?: Partial<Dataset>): Promise<HTMLElemen
 }
 
 describe('EventDetailPage', () => {
+  it('Szenario: Uhrzeit, Zeitzone und mehrtägiger Start und Ende (EVT-UB-7, EVT-UB-8)', async () => {
+    const event = { ...TEST_DATASET.events[0], id: 'e-1', startDate: '2026-11-12', endDate: '2026-11-12', startTime: '16:00' };
+    expect((await open('/events/e-1', { events: [event] })).textContent).toContain('ab 16:00 Uhr');
+    TestBed.resetTestingModule();
+    const london = { ...event, endTime: '18:00', timeZone: 'Europe/London' };
+    expect((await open('/events/e-1', { events: [london] })).textContent).toContain('16:00–18:00 Uhr (Europe/London)');
+  });
+
+  it('Szenario: Mehrtägiges Event zeigt Start und Ende, ohne Uhrzeit keine Angabe (EVT-UB-8)', async () => {
+    const event = { ...TEST_DATASET.events[0], id: 'e-1', startDate: '2026-11-12', endDate: '2026-11-14', startTime: '10:00', endTime: '17:00' };
+    const text = (await open('/events/e-1', { events: [event] })).textContent;
+    expect(text).toContain('Start 10:00 Uhr');
+    expect(text).toContain('Ende 17:00 Uhr');
+    TestBed.resetTestingModule();
+    const none = { ...TEST_DATASET.events[0], id: 'e-1', startDate: '2026-11-12', endDate: '2026-11-12' };
+    expect((await open('/events/e-1', { events: [none] })).textContent).not.toMatch(/\bUhr\b/);
+  });
+
   it('Szenario: Eventdetail (EVT-UB-3)', async () => {
     const event = { ...TEST_DATASET.events[0], id: 'e-1', title: 'Fotomesse', website: 'https://example.org/e-1', highlights: ['Portfolio-Reviews', 'Vorträge'], description: 'Beschreibungstext.' };
     const el = await open('/events/e-1', { events: [event] });

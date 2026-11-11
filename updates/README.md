@@ -36,7 +36,7 @@ npm run data:report -- --events
 npm run data:apply -- --events [--venue <ort-id>]
 ```
 
-Dateien liegen unter `updates/<Datum>/events/<ort-id>.json` (dazu `fetch-summary.json` und `REPORT.md`). Zulässig sind nur neue Events (`events`, `add`) der Arten `guided_tour`, `talk`, `workshop`, `reading`, `symposium` mit künftigem, im Auszug belegtem Datum; höchstens 30 je Ort und Lauf.
+Dateien liegen unter `updates/<Datum>/events/<ort-id>.json` (dazu `fetch-summary.json` und `REPORT.md`). Zulässig sind nur neue Events (`events`, `add`) der Arten `guided_tour`, `talk`, `workshop`, `reading`, `symposium` mit künftigem, im Auszug belegtem Datum; höchstens 30 je Ort und Lauf. Zusätzlich darf ein Vorschlag `op: "update"` fehlende Zeitfelder eines Bestandsevents ergänzen: `{"dataset": "events", "op": "update", "recordId": "…", "values": {"startTime": "19:00"}, "evidence": {…}}`. Erlaubt sind nur `startTime`, `endTime` und `timeZone`; vorhandene Werte werden nie überschrieben. Neue Events und Updates tragen eine Uhrzeit nur, wenn der Textauszug sie nennt („Uhrzeit nicht belegt“ sonst).
 
 ## Format einer Vorschlagsdatei
 
@@ -71,7 +71,7 @@ Dateien liegen unter `updates/<Datum>/events/<ort-id>.json` (dazu `fetch-summary
 
 ## Eröffnung und Finissage
 
-Termine einer Ausstellung sind Events vom Typ `vernissage` bzw. `finissage` (`dataset: "events"`, `op: "add"`). Die Prüfung verlangt:
+Termine einer Ausstellung sind Events vom Typ `vernissage` bzw. `finissage` (`dataset: "events"`, `op: "add"`); `startTime` und `endTime` (`HH:MM`) sind optional und müssen im Textauszug belegt sein. Die Prüfung verlangt:
 
 ```json
 {

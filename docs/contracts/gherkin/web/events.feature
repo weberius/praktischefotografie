@@ -65,3 +65,40 @@ Funktionalität: Events und Messen
     Angenommen ein Event "e-fuehrung" vom Typ "guided_tour"
     Wenn "/events/e-fuehrung" aufgerufen wird
     Dann trägt es den Typ "Führung"
+
+  # EARS: EVT-UB-7
+  Szenario: Uhrzeit mit Ende in der Liste
+    Angenommen ein eintägiges Event mit "startTime" "16:00" und "endTime" "18:00"
+    Wenn "/events" aufgerufen wird
+    Dann zeigt sein Eintrag hinter dem Datum "16:00–18:00 Uhr"
+
+  # EARS: EVT-UB-7
+  Szenario: Uhrzeit ohne Ende
+    Angenommen ein eintägiges Event mit "startTime" "16:00" ohne "endTime"
+    Wenn seine Detailseite aufgerufen wird
+    Dann zeigt sie "ab 16:00 Uhr"
+    Und sie nennt keine Dauer von 2 Stunden
+
+  # EARS: EVT-UB-7
+  Szenario: Abweichende Zeitzone
+    Angenommen ein eintägiges Event mit "startTime" "16:00", "endTime" "18:00" und "timeZone" "Europe/London"
+    Wenn seine Detailseite aufgerufen wird
+    Dann zeigt sie "16:00–18:00 Uhr (Europe/London)"
+
+  # EARS: EVT-UB-7
+  Szenario: Ohne Uhrzeit keine Zeitangabe
+    Angenommen ein Event ohne "startTime"
+    Wenn "/events" und seine Detailseite aufgerufen werden
+    Dann zeigen beide nur das Datum und kein "Uhr"
+
+  # EARS: EVT-UB-8
+  Szenario: Mehrtägiges Event in der Liste
+    Angenommen ein Event vom 2026-11-12 bis 2026-11-14 mit "startTime" "10:00" und "endTime" "17:00"
+    Wenn "/events" aufgerufen wird
+    Dann zeigt sein Eintrag nur den Zeitraum und kein "Uhr"
+
+  # EARS: EVT-UB-8
+  Szenario: Mehrtägiges Event im Detail
+    Angenommen ein Event vom 2026-11-12 bis 2026-11-14 mit "startTime" "10:00" und "endTime" "17:00"
+    Wenn seine Detailseite aufgerufen wird
+    Dann zeigt sie "Start 10:00 Uhr" für den 12.11. und "Ende 17:00 Uhr" für den 14.11.

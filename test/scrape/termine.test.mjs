@@ -134,6 +134,17 @@ test('Szenario: jede genannte Uhrzeit muss belegt sein (OPN-UN-1)', () => {
   assert.equal(reasons(JSON.parse(readFileSync(ws.file, 'utf8')))[0], 'Uhrzeit nicht belegt');
 });
 
+test('Szenario: Terminevent mit Startzeit und Endzeit, unbelegte Zeitfelder werden verworfen (OPN-UB-9, OPN-UN-3)', () => {
+  const mit = (record) => vernissage({ record: { ...vernissage().record, ...record } });
+  const gut = setup([mit({ startTime: '16:00', endTime: '18:00' })]);
+  assert.equal(gut.proposal.changes.length, 1, reasons(gut.proposal).join('; '));
+  assert.equal(gut.proposal.changes[0].record.startTime, '16:00');
+  const falsch = setup([mit({ startTime: '17:00' })]);
+  assert.deepEqual(reasons(falsch.proposal), ['Uhrzeit nicht belegt']);
+  const ohne = setup([vernissage()]);
+  assert.equal(ohne.proposal.changes.length, 1);
+});
+
 test('Q-DATA-12: Erkennung von Uhrzeit, Datum und Hinweisen (Fixtures)', () => {
   for (const t of ['16:00 Uhr', '4-6pm', '18 Uhr', '16.30', 'am 7.11. ab 18 Uhr']) assert.ok(hasTime(t), t);
   for (const t of ['7 November 2026', 'Eröffnung am 07.11.2026', 'Vernissage am 7.11.2026', 'November 7, 2026', 'Eröffnung', '']) assert.ok(!hasTime(t), t);

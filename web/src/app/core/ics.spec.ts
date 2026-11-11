@@ -32,7 +32,7 @@ function expectValid(ics: string): void {
   const count = (text: string) => logical.filter((l) => l === text).length;
   expect(count('BEGIN:VEVENT')).toBe(1);
   expect(count('END:VEVENT')).toBe(1);
-  for (const field of ['VERSION:2.0', 'PRODID:', 'UID:', 'DTSTAMP:', 'DTSTART;VALUE=DATE:', 'DTEND;VALUE=DATE:', 'SUMMARY:']) {
+  for (const field of ['VERSION:2.0', 'PRODID:', 'UID:', 'DTSTAMP:', 'DTSTART', 'DTEND', 'SUMMARY:']) {
     expect(logical.some((l) => l.startsWith(field))).withContext(field).toBeTrue();
   }
   // Kein Zeichen ist durch die Faltung getrennt (auch Zeichen außerhalb der BMP) und nach CRLF gibt es keine Steuerzeichen
@@ -154,5 +154,56 @@ describe('buildEventIcs', () => {
 
   it('Eingabe mit maskierten Zeichen wird doppelt maskiert (ICS-UB-4)', () => {
     expect(unfold(buildEventIcs({ ...base, title: 'a\\;b' }))).toContain('SUMMARY:a\\\\\\;b\r\n');
+  });
+
+  describe('mit Uhrzeit (ICS-UB-8 bis ICS-UB-10, ICS-UN-2, Q-IOP-2)', () => {
+    const timed = (over: Partial<IcsEventInput>) => buildEventIcs({ ...base, ...over });
+
+    it('Termin mit Uhrzeit', () => {
+      const ics = timed({ startTime: '16:00', endTime: '18:00' });
+      expect(ics).toContain('DTSTART;TZID=Europe/Berlin:20261107T160000\r\n');
+      expect(ics).toContain('DTEND;TZID=Europe/Berlin:20261107T180000\r\n');
+      expect(ics).not.toContain('VALUE=DATE');
+      expectValid(ics);
+    });
+
+    it('Ohne Startzeit bleibt der Termin ganztägig, ohne VTIMEZONE', () => {
+      const ics = timed({ endTime: '18:00' });
+      expect(ics).toContain('DTSTART;VALUE=DATE:20261107\r\n');
+      expect(ics).not.toContain('VTIMEZONE');
+    });
+
+    it('Dauer von zwei Stunden ohne Endzeit, auch über Mitternacht', () => {
+      expect(timed({ startTime: '16:00' })).toContain('DTEND;TZID=Europe/Berlin:20261107T180000\r\n');
+      expect(timed({ startTime: '23:00' })).toContain('DTEND;TZID=Europe/Berlin:20261108T010000\r\n');
+    });
+
+    it('Mehrtägig mit Endzeit zeitgebunden, ohne Endzeit ganztägig', () => {
+      const days = { startDate: '2026-11-12', endDate: '2026-11-14' };
+      const ics = timed({ ...days, startTime: '10:00', endTime: '17:00' });
+      expect(ics).toContain('DTSTART;TZID=Europe/Berlin:20261112T100000\r\n');
+      expect(ics).toContain('DTEND;TZID=Europe/Berlin:20261114T170000\r\n');
+      const allDay = timed({ ...days, startTime: '10:00' });
+      expect(allDay).toContain('DTSTART;VALUE=DATE:20261112\r\n');
+      expect(allDay).toContain('DTEND;VALUE=DATE:20261115\r\n');
+    });
+
+    it('Zeitzonenblock Europe/Berlin steht vor dem Termin', () => {
+      const ics = unfold(timed({ startTime: '16:00' }));
+      expect(ics.indexOf('BEGIN:VTIMEZONE')).toBeGreaterThan(-1);
+      expect(ics.indexOf('END:VTIMEZONE')).toBeLessThan(ics.indexOf('BEGIN:VEVENT'));
+      for (const part of ['TZID:Europe/Berlin', 'BEGIN:STANDARD', 'BEGIN:DAYLIGHT', 'TZOFFSETTO:+0200', 'TZOFFSETTO:+0100', 'RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU', 'RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU']) {
+        expect(ics).withContext(part).toContain(part);
+      }
+      expect(timed({ startDate: '2026-07-10', endDate: '2026-07-10', startTime: '14:00' })).toContain('DTSTART;TZID=Europe/Berlin:20260710T140000');
+    });
+
+    it('Andere Zeitzone wird nach UTC umgerechnet', () => {
+      const ics = timed({ startDate: '2026-07-10', endDate: '2026-07-10', startTime: '16:00', endTime: '17:30', timeZone: 'Europe/London' });
+      expect(ics).toContain('DTSTART:20260710T150000Z\r\n');
+      expect(ics).toContain('DTEND:20260710T163000Z\r\n');
+      expect(ics).not.toContain('VTIMEZONE');
+      expect(timed({ startTime: '16:00', timeZone: 'Europe/London' })).toContain('DTSTART:20261107T160000Z');
+    });
   });
 });

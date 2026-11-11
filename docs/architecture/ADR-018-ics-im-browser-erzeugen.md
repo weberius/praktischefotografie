@@ -1,6 +1,6 @@
 # ADR-018: Kalenderdatei (.ics) im Browser erzeugen, nach dem Muster von Klangland
 
-**Status:** Accepted (an H2 am 2026-10-30 bestätigt)  ·  **Datum:** 2026-10-30
+**Status:** Accepted (an H2 am 2026-10-30 bestätigt); teilweise ergänzt durch ADR-027 (Accepted): Der ganztägige Eintrag gilt nur noch für Events ohne `startTime` und mehrtägige Events ohne `endTime`  ·  **Datum:** 2026-10-30
 
 ## Kontext
 Besucher:innen sollen einen Termin (Event) von seiner Detailseite in den Kalender ihres Geräts übernehmen können. Die Webanwendung ist eine statische Angular-SPA ohne Backend (ADR-002, ADR-003); die Datenschutzerklärung sagt, dass keine Cookies, kein Tracking und keine externen Dienste außer den Kartenkacheln verwendet werden (RCH-UB-3). Klangland (`../klangland`, US-012, US-026) löst dasselbe Problem mit einer im Browser erzeugten `.ics`-Datei. Die Events dieser Anwendung haben nur Datumsfelder (`startDate`, `endDate`), keine Uhrzeiten.

@@ -9,12 +9,13 @@ import { EVENT_TYPE_LABEL, EventType } from '../../core/models';
 import { PageMeta } from '../../core/page-meta';
 import { DataGate } from '../../shared/data-gate/data-gate';
 import { GlobalFilterControl } from '../../shared/global-filter/global-filter';
+import { EventTime } from '../../shared/event-time/event-time';
 import { FavoriteToggle } from '../../shared/favorite-toggle/favorite-toggle';
 
 /** Eventliste `/events`: nur aktuelle Events (ACT-UB-1), nach Beginn aufsteigend, filterbar nach Typ (Query-Parameter `type`) nach Favoriten (Query-Parameter `favorites=1`, FAV-UB-4, FAV-UB-6) und globalem Filter (FLT-UB-2). */
 @Component({
   selector: 'app-event-list-page',
-  imports: [RouterLink, DataGate, GlobalFilterControl, FavoriteToggle],
+  imports: [RouterLink, DataGate, GlobalFilterControl, FavoriteToggle, EventTime],
   templateUrl: './event-list.html',
 })
 export class EventListPage {

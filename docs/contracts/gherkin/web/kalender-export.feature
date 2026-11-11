@@ -81,3 +81,67 @@ Funktionalität: Termin in den Gerätekalender übernehmen
     Und sie hat genau ein "BEGIN:VEVENT" und ein "END:VEVENT"
     Und "END:VEVENT" aus dem Text steht nur innerhalb eines Werts
 
+  # EARS: ICS-UB-8
+  Szenario: Termin mit Uhrzeit
+    Angenommen das Event "between-2026-eroeffnung" am 2026-11-07 mit "startTime" "16:00" und "endTime" "18:00"
+    Wenn die Kalenderdatei erzeugt wird
+    Dann enthält sie "DTSTART;TZID=Europe/Berlin:20261107T160000"
+    Und "DTEND;TZID=Europe/Berlin:20261107T180000"
+    Und weder "DTSTART;VALUE=DATE" noch "DTEND;VALUE=DATE"
+
+  # EARS: ICS-UB-8, ICS-UB-2
+  Szenario: Ohne Startzeit bleibt der Termin ganztägig
+    Angenommen das Event "between-2026-eroeffnung" am 2026-11-07 ohne "startTime"
+    Wenn die Kalenderdatei erzeugt wird
+    Dann enthält sie "DTSTART;VALUE=DATE:20261107" und "DTEND;VALUE=DATE:20261108"
+    Und keinen "VTIMEZONE"-Block
+
+  # EARS: ICS-UB-9
+  Szenario: Dauer von zwei Stunden ohne Endzeit
+    Angenommen ein eintägiges Event am 2026-11-07 mit "startTime" "16:00" ohne "endTime"
+    Wenn die Kalenderdatei erzeugt wird
+    Dann enthält sie "DTSTART;TZID=Europe/Berlin:20261107T160000"
+    Und "DTEND;TZID=Europe/Berlin:20261107T180000"
+    Und die Daten des Events bleiben unverändert
+
+  # EARS: ICS-UB-9
+  Szenario: Termin über Mitternacht
+    Angenommen ein eintägiges Event am 2026-11-07 mit "startTime" "23:00" ohne "endTime"
+    Wenn die Kalenderdatei erzeugt wird
+    Dann enthält sie "DTEND;TZID=Europe/Berlin:20261108T010000"
+
+  # EARS: ICS-UB-9
+  Szenario: Mehrtägiges Event mit Uhrzeiten
+    Angenommen ein Event vom 2026-11-12 bis 2026-11-14 mit "startTime" "10:00" und "endTime" "17:00"
+    Wenn die Kalenderdatei erzeugt wird
+    Dann enthält sie "DTSTART;TZID=Europe/Berlin:20261112T100000"
+    Und "DTEND;TZID=Europe/Berlin:20261114T170000"
+
+  # EARS: ICS-UB-9, ICS-UB-2
+  Szenario: Mehrtägig ohne Endzeit bleibt ganztägig
+    Angenommen ein Event vom 2026-11-12 bis 2026-11-14 mit "startTime" "10:00" ohne "endTime"
+    Wenn die Kalenderdatei erzeugt wird
+    Dann enthält sie "DTSTART;VALUE=DATE:20261112" und "DTEND;VALUE=DATE:20261115"
+
+  # EARS: ICS-UB-10
+  Szenario: Zeitzonenblock Europe/Berlin
+    Angenommen ein Event mit "startTime" "16:00" ohne "timeZone"
+    Wenn die Kalenderdatei erzeugt wird
+    Dann enthält sie vor "BEGIN:VEVENT" einen Block "BEGIN:VTIMEZONE" mit "TZID:Europe/Berlin" bis "END:VTIMEZONE"
+    Und der Block enthält "STANDARD" und "DAYLIGHT"
+
+  # EARS: ICS-UB-10
+  Szenario: Sommerzeit und Winterzeit
+    Angenommen ein Event am 2026-07-10 und eines am 2026-11-07, je mit "startTime" "14:00"
+    Wenn die Kalenderdateien erzeugt werden
+    Dann verweisen beide mit "TZID=Europe/Berlin" auf denselben Zeitzonenblock
+    Und der Block gibt für die Sommerzeit "+0200" und für die Normalzeit "+0100" an
+    Und der Block endet die Sommerzeit am letzten Sonntag im Oktober und beginnt sie am letzten Sonntag im März
+
+  # EARS: ICS-UN-2
+  Szenario: Andere Zeitzone als UTC
+    Angenommen ein Event am 2026-07-10 mit "startTime" "16:00", "endTime" "17:30" und "timeZone" "Europe/London"
+    Wenn die Kalenderdatei erzeugt wird
+    Dann enthält sie "DTSTART:20260710T150000Z" und "DTEND:20260710T163000Z"
+    Und keinen "VTIMEZONE"-Block
+

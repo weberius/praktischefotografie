@@ -44,7 +44,7 @@
             @if (item.venue) {
               <p>{{ item.venue }}</p>
             }
-            <p class="meta">{{ formatRange(item.startDate, item.endDate) }}</p>
+            <p class="meta">{{ formatRange(item.startDate, item.endDate) }}<app-event-time [event]="item" separator=", " /></p>
             @if (item.kind === 'Event') {
               <app-favorite-toggle [eventId]="item.id" [eventTitle]="item.title" />
             }

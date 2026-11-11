@@ -9,6 +9,7 @@ import { EVENT_TYPE_LABEL } from '../../core/models';
 import { PageMeta } from '../../core/page-meta';
 import { BackLink } from '../../shared/back-link/back-link';
 import { DataGate } from '../../shared/data-gate/data-gate';
+import { EventTime } from '../../shared/event-time/event-time';
 import { FavoriteToggle } from '../../shared/favorite-toggle/favorite-toggle';
 import { NotFound } from '../../shared/not-found/not-found';
 
@@ -18,7 +19,7 @@ const BLOB_URL_LIFETIME_MS = 10_000;
 /** Eventdetail `/events/:id`. */
 @Component({
   selector: 'app-event-detail-page',
-  imports: [BackLink, RouterLink, DataGate, NotFound, FavoriteToggle],
+  imports: [BackLink, RouterLink, DataGate, NotFound, FavoriteToggle, EventTime],
   templateUrl: './event-detail.html',
   styleUrl: './event-detail.css',
 })
@@ -55,6 +56,9 @@ export class EventDetailPage {
       title: e.title,
       startDate: e.startDate,
       endDate: e.endDate,
+      startTime: e.startTime,
+      endTime: e.endTime,
+      timeZone: e.timeZone,
       typeLabel: EVENT_TYPE_LABEL[e.eventType],
       description: e.description,
       venue: v ? { name: v.name, street: v.address.street, zip: v.address.zip, city: v.address.city } : undefined,

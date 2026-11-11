@@ -38,6 +38,7 @@ Drei Ebenen: **Venue** (Ort mit fester Adresse), **Organizer** (Veranstalter ohn
 
 - Organizer: `id`, `name`, `type` (`association`, `festival`, `network`, `foundation`), `city`; optional `shortName`, `website`, `description`, `social.instagram`.
 - Festival: `id`, `organizerId`, `title`, `startDate`, `endDate`, `city`; optional `description`, `website`. Ein Festival ohne belegten Zeitraum wird nicht erfasst.
+- Event: optional `startTime` und `endTime` (`HH:MM`, 24 Stunden) sowie `timeZone` (IANA-Name; ohne Angabe gilt `Europe/Berlin`). `endTime` und `timeZone` setzen `startTime` voraus; bei eintägigen Events liegt `endTime` nach `startTime`. Eine Dauer wird nicht gespeichert (ADR-027).
 - Ausstellung: `festivalId` verweist auf ein **Festival** (früher auf einen Veranstalter); `isOfficialFestivalPartner: true` ist nur zusammen mit `festivalId` zulässig. Die Ausstellung muss nicht im Festivalzeitraum liegen.
 - Eine `id` darf nicht zugleich bei einem Venue und einem Veranstalter vorkommen.
 

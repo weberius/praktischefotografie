@@ -98,6 +98,19 @@ describe('CalendarPage', () => {
     expect(el.querySelector<HTMLInputElement>('.filters input[type=checkbox]')?.checked).toBeTrue();
   });
 
+  it('Szenario: Agenda zeigt die Uhrzeit, mehrtägig ohne (CAL-UB-8)', async () => {
+    const e = TEST_DATASET.events[0];
+    const events = [
+      { ...e, id: 'e-1', title: 'Abend', startDate: '2026-12-01', endDate: '2026-12-01', startTime: '16:00', endTime: '18:00' },
+      { ...e, id: 'e-2', title: 'Messe', startDate: '2026-12-02', endDate: '2026-12-03', startTime: '10:00', endTime: '17:00' },
+    ];
+    const { el } = await open('/calendar/2026/12', { events, exhibitions: [] });
+    const [abend, messe] = entries(el);
+    expect(abend.querySelector('.meta')?.textContent).toContain('16:00–18:00 Uhr');
+    expect(abend.querySelector('.visually-hidden')?.textContent).toContain('von 16:00 bis 18:00 Uhr');
+    expect(messe.querySelector('.meta')?.textContent).not.toContain('Uhr');
+  });
+
   it('Szenario: Monatsansicht (CAL-EV-1)', async () => {
     const dataset: Partial<Dataset> = {
       exhibitions: [{ ...TEST_DATASET.exhibitions[0], id: 'a-1', title: 'Herbstschau', startDate: '2026-10-20', endDate: '2026-11-05' }],

@@ -17,6 +17,14 @@ export const SUMMARY_WORDS = { min: 60, max: 120 };
 export const STORED_SUMMARY_WORDS = { min: 40, max: SUMMARY_WORDS.max };
 export const wordCount = (text) => String(text ?? '').split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w)).length;
 const norm = (text) => String(text ?? '').replace(/\s+/g, ' ').trim().toLowerCase();
+const isTimeZone = (name) => {
+  try {
+    new Intl.DateTimeFormat('de-DE', { timeZone: name });
+    return true;
+  } catch {
+    return false;
+  }
+};
 
 // NRW-Grenzen (VEN-UB-2). Bei der Ausweitung auf Deutschland anpassen (ADR-001).
 export const NRW_BBOX = { latMin: 50.3, latMax: 52.6, lngMin: 5.8, lngMax: 9.5 };
@@ -143,6 +151,15 @@ export function validateData({ dataDir = join(ROOT, 'data'), schemaDir = join(RO
       if (r.endDate < r.startDate) errors.push(`${file}.json: ${r.id} endDate – liegt vor startDate`);
       ref(file, r, 'venueId', r.venueId, venueIds);
     }
+  }
+  // Uhrzeit und Zeitzone (VAL-UN-6 bis VAL-UN-8, ADR-027)
+  for (const r of data.events ?? []) {
+    if (r.startTime === undefined) {
+      if (r.endTime !== undefined) errors.push(`events.json: ${r.id} endTime – erfordert startTime`);
+      if (r.timeZone !== undefined) errors.push(`events.json: ${r.id} timeZone – erfordert startTime`);
+    }
+    if (r.timeZone !== undefined && !isTimeZone(r.timeZone)) errors.push(`events.json: ${r.id} timeZone – "${r.timeZone}" ist kein gültiger IANA-Zeitzonenname`);
+    if (r.startTime !== undefined && r.endTime !== undefined && r.startDate === r.endDate && r.endTime <= r.startTime) errors.push(`events.json: ${r.id} endTime – liegt nicht nach startTime`);
   }
   for (const id of venueIds) {
     // Orte und Veranstalter teilen sich den Namensraum der Quellen (ADR-010, FES-UN-3).

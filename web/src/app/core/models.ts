@@ -37,6 +37,11 @@ export interface PhotoEvent {
   categoryTags?: string[];
   startDate: string;
   endDate: string;
+  /** Beginn und Ende am Veranstaltungstag, `HH:MM` (24 h) in `timeZone`. */
+  startTime?: string;
+  endTime?: string;
+  /** IANA-Zeitzone; ohne Angabe `Europe/Berlin` (ADR-027). */
+  timeZone?: string;
   venueId: string;
   city: string;
   website?: string;

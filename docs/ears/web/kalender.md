@@ -17,6 +17,10 @@ Begriffe: „heute“ ist das aktuelle Datum der Anwendung (in Tests ein fester 
 | CAL-ST-1 | Solange für die Auswahl keine Einträge vorhanden sind, soll die Webanwendung einen Hinweis anzeigen. | `web/kalender.feature` · „Keine Einträge in der Auswahl“ | – | ADR-002 |
 | CAL-UN-1 | Wenn der Monat in der Adresse nicht zwischen 1 und 12 liegt oder das Jahr keine vierstellige Zahl ist, soll die Webanwendung die Hinweisseite für unbekannte Adressen anzeigen. | `web/kalender.feature` · „Ungültiger Monat“ | – | ADR-002 |
 | CAL-UB-7 | Die Webanwendung soll Ausstellungen in der Agenda zuerst mit dem Badge der Art (BDG-UB-1, z. B. „Gruppenausstellung“) kennzeichnen, danach mit dem Status „Endet bald“ bzw. „Beendet“ (CAL-UB-3, CAL-UB-6), und Events mit dem Text „Event“. | `web/kalender.feature` · „Einträge tragen Art und Status“ | Q-USE-4, Q-USE-7 | ADR-014 |
+| CAL-UB-8 | Die Webanwendung soll in der Agenda (`/calendar` und `/calendar/:year/:month`) bei einem Event die Uhrzeit nach den Regeln von EVT-UB-7 und EVT-UB-8 (mehrtägig: ohne Uhrzeit) im Eintrag zeigen. | `web/kalender.feature` · „Agenda zeigt die Uhrzeit“ | Q-USE-21 | ADR-027 |
+| CAL-UB-9 | Die Webanwendung soll Einträge mit gleichem Beginndatum in der Agenda nach `startTime` aufsteigend ordnen, Einträge ohne `startTime` (auch Ausstellungen) davor; CAL-UB-1 bleibt für die Ordnung nach Beginndatum maßgeblich. | `web/kalender.feature` · „Gleicher Tag nach Startzeit“ | – | ADR-027 |
+
+**Ergänzung (Uhrzeiten):** CAL-UB-8 und CAL-UB-9 ergänzen CAL-UB-1; bestehende Szenarien bleiben gültig.
 
 **Supersede 2026-10-28:** CAL-UB-4 beschriftete Ausstellungen nur mit „Ausstellung“; CAL-UB-7 verlangt die genauere Art und die Reihenfolge Art, Status.
 

@@ -46,9 +46,19 @@ export function makeId(dataset, record, existingIds) {
 export const EVENT_RESEARCH_TYPES = ['guided_tour', 'talk', 'workshop', 'reading', 'symposium'];
 export const EVENT_RESEARCH_MAX = 30;
 
-/** Regeln der Veranstaltungsrecherche für einen Vorschlag (VRS-UB-2 bis VRS-UB-4); gibt den Verwerfungsgrund oder `null` zurück. */
+/** Zeitfelder eines Events (DAT-UB-9, DAT-UB-10, ADR-027). */
+export const TIME_FIELDS = ['startTime', 'endTime', 'timeZone'];
+
+/** Jede Uhrzeit (`startTime`, `endTime`) muss im Textauszug stehen (VRS-UN-3, OPN-UN-3); gibt den Verwerfungsgrund oder `null` zurück. */
+function checkTimesProven(values, excerpt) {
+  const belegt = new Set(timesOf(excerpt));
+  return ['startTime', 'endTime'].some((field) => values?.[field] !== undefined && !belegt.has(values[field])) ? 'Uhrzeit nicht belegt' : null;
+}
+
+/** Regeln der Veranstaltungsrecherche für einen Vorschlag (VRS-UB-2 bis VRS-UB-4, VRS-UB-8, VRS-UB-10); gibt den Verwerfungsgrund oder `null` zurück. */
 function checkEventResearch(change, today) {
-  if (change.dataset !== 'events' || change.op !== 'add') return 'Die Veranstaltungsrecherche schlägt nur neue Events vor (dataset "events", op "add")';
+  if (change.dataset !== 'events' || !['add', 'update'].includes(change.op)) return 'Die Veranstaltungsrecherche schlägt nur neue Events (op "add") und Zeitfeld-Ergänzungen (op "update") für dataset "events" vor';
+  if (change.op === 'update') return null;
   const record = change.record;
   if (record && terminKind(record)) return 'Vernissage und Finissage gehören zu update-venue-data';
   if (!EVENT_RESEARCH_TYPES.includes(record?.eventType)) return `eventType "${record?.eventType}" ist nicht vorgesehen (erlaubt: ${EVENT_RESEARCH_TYPES.join(', ')})`;
@@ -57,7 +67,22 @@ function checkEventResearch(change, today) {
   const [y, m, d] = record.startDate.split('-').map(Number);
   const belegt = parseDates(change.evidence?.excerpt).some((x) => x.m === m && x.d === d && (x.y === undefined || x.y === y));
   if (!belegt) return `Datum nicht belegt: Textauszug nennt ${record.startDate} nicht`;
-  return null;
+  return checkTimesProven(record, change.evidence?.excerpt);
+}
+
+/** Prüft eine Ergänzung der Zeitfelder eines Bestandsevents (VRS-EV-3); gibt den Verwerfungsgrund oder `null` zurück. */
+function checkTimeUpdate(change, target, venue) {
+  if (target.venueId !== venue.id) return 'Datensatz gehört nicht zu diesem Ort';
+  const values = change.values;
+  const fields = values && typeof values === 'object' ? Object.keys(values) : [];
+  if (fields.length === 0 || fields.some((f) => !TIME_FIELDS.includes(f))) return `Ein Update ändert nur ${TIME_FIELDS.join(', ')}`;
+  const present = fields.filter((f) => !isEmpty(target[f]));
+  if (present.length > 0) return `Wert ist bereits vorhanden (${present.join(', ')}) und wird nicht überschrieben`;
+  const excerpt = change.evidence?.excerpt ?? '';
+  if (!contains(excerpt, target.title)) return `Fundstelle: Textauszug enthält "${target.title}" nicht`;
+  const [y, m, d] = target.startDate.split('-').map(Number);
+  if (!parseDates(excerpt).some((x) => x.m === m && x.d === d && (x.y === undefined || x.y === y))) return `Datum nicht belegt: Textauszug nennt ${target.startDate} nicht`;
+  return checkTimesProven(values, excerpt);
 }
 
 /** Validiert einen Datensatz im Speicher mit dem Validator aus ADR-001. */
@@ -84,6 +109,10 @@ function applyChange(dataset, change) {
   }
   const record = list.find((r) => r.id === change.recordId);
   if (!record) return `Datensatz "${change.recordId}" existiert nicht`;
+  if (change.op === 'update') {
+    Object.assign(record, clone(change.values));
+    return null;
+  }
   setPath(record, change.field, clone(change.newValue));
   return null;
 }
@@ -103,6 +132,8 @@ function checkTermin(kind, change, working, today) {
   const excerpt = change.evidence?.excerpt ?? '';
   if (!hasHint(excerpt, kind)) return kind === 'finissage' ? 'Finissage nicht belegt: Textauszug nennt keine Finissage mit Datum' : 'Eröffnung nicht belegt: Textauszug nennt keine Eröffnung mit Datum';
   if (!hasDate(excerpt, kind, record.startDate)) return `Datum nicht belegt: Textauszug nennt ${record.startDate} nicht nach dem Stichwort`;
+  const zeitproblem = checkTimesProven(record, excerpt);
+  if (zeitproblem) return zeitproblem;
   const belegt = new Set(timesOf(excerpt));
   if (timesOf(record.description).some((time) => !belegt.has(time))) return 'Uhrzeit nicht belegt';
   return null;
@@ -129,7 +160,7 @@ export function checkProposal(proposal, { dataset, snapshots, root = ROOT, today
     }
     const change = { ...raw, op: raw.op ?? 'set' };
     const op = change.op;
-    if (!SETTABLE.includes(change.dataset) || (op === 'add' && !ADDABLE.includes(change.dataset)) || !['set', 'add'].includes(op)) {
+    if (!SETTABLE.includes(change.dataset) || (op === 'add' && !ADDABLE.includes(change.dataset)) || !['set', 'add', 'update'].includes(op) || (op === 'update' && (change.dataset !== 'events' || !events))) {
       reject(change, `Datensatztyp "${change.dataset}" mit Operation "${op}" ist nicht vorgesehen`);
       continue;
     }
@@ -138,6 +169,21 @@ export function checkProposal(proposal, { dataset, snapshots, root = ROOT, today
       if (reason) { reject(change, reason); continue; }
     }
     // Zuordnung zur Quelle (UPD-UB-1, UPD-UB-6)
+    if (op === 'update') {
+      const target = working.events.find((r) => r.id === change.recordId);
+      if (!target) { reject(change, `Datensatz "${change.recordId}" existiert nicht`); continue; }
+      const problem = checkTimeUpdate(change, target, venue);
+      if (problem) { reject(change, problem); continue; }
+      const snapshot = snapshots.find((s) => s.url === change.evidence?.url);
+      if (!snapshot || !contains(snapshot.text, change.evidence.excerpt)) { reject(change, 'Fundstelle: URL ohne Snapshot oder Textauszug steht nicht im Snapshot'); continue; }
+      const trial = clone(working);
+      applyChange(trial, change);
+      const errors = validateDataset(trial, root);
+      if (errors.length > 0) { reject(change, `Schema: ${errors[0]}`); continue; }
+      Object.assign(working, trial);
+      accepted.push({ ...change, kind: 'ergänzt', conflict, approved: raw.approved === true });
+      continue;
+    }
     if (op === 'set') {
       const target = working[change.dataset].find((r) => r.id === change.recordId);
       if (!target) { reject(change, `Datensatz "${change.recordId}" existiert nicht`); continue; }
@@ -270,6 +316,10 @@ export function applyProposals(files, { dataDir, root = ROOT, now = new Date(), 
         const target = working[change.dataset].find((r) => r.id === change.recordId);
         if (!target) { note('Datensatz existiert nicht mehr'); continue; }
         if (JSON.stringify(getPath(target, change.field) ?? null) !== JSON.stringify(change.oldValue ?? null)) { note('veraltet: Wert hat sich seit der Prüfung geändert'); continue; }
+      } else if (change.op === 'update') {
+        const target = working.events.find((r) => r.id === change.recordId);
+        if (!target) { note('Datensatz existiert nicht mehr'); continue; }
+        if (Object.keys(change.values).some((f) => !isEmpty(target[f]))) { note('veraltet: Zeitfeld ist inzwischen belegt'); continue; }
       } else if (working[change.dataset].some((r) => r.id === change.record.id)) { note('id ist bereits vergeben'); continue; }
       const problem = applyChange(working, change);
       if (problem) { note(problem); continue; }

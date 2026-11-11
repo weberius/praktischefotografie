@@ -10,12 +10,13 @@ import { DataGate } from '../../shared/data-gate/data-gate';
 import { GlobalFilterControl } from '../../shared/global-filter/global-filter';
 import { NotFound } from '../../shared/not-found/not-found';
 import { ExhibitionBadges, SecondBadge } from '../../shared/exhibition-badges/exhibition-badges';
+import { EventTime } from '../../shared/event-time/event-time';
 import { FavoriteToggle } from '../../shared/favorite-toggle/favorite-toggle';
 
 /** Kalender und Agenda: `/calendar` (ab heute) und `/calendar/:year/:month` (Monatsansicht). */
 @Component({
   selector: 'app-calendar-page',
-  imports: [RouterLink, DataGate, GlobalFilterControl, NotFound, ExhibitionBadges, FavoriteToggle],
+  imports: [RouterLink, DataGate, GlobalFilterControl, NotFound, ExhibitionBadges, FavoriteToggle, EventTime],
   templateUrl: './calendar.html',
   styleUrl: './calendar.css',
 })

@@ -98,6 +98,27 @@ Funktionalität: Datenmodell und Venue-Datenbestand
     Wenn die Daten validiert werden
     Dann ist der Datensatz gültig
 
+  # EARS: DAT-UB-9
+  Szenario: Event mit Uhrzeit ist gültig
+    Angenommen ein Event mit allen Pflichtfeldern, "startTime" "16:00", "endTime" "18:00" und "timeZone" "Europe/Berlin"
+    Wenn die Daten validiert werden
+    Dann ist der Datensatz gültig
+
+  # EARS: DAT-UB-9
+  Szenario: Uhrzeitfelder sind optional
+    Angenommen ein Event mit allen Pflichtfeldern ohne "startTime", "endTime" und "timeZone"
+    Wenn die Daten validiert werden
+    Dann ist der Datensatz gültig
+    Und die vorhandenen Events in "data/events.json" sind weiterhin gültig
+
+  # EARS: DAT-UB-10
+  Szenario: Zeitzone und Dauer werden nicht gespeichert
+    Angenommen ein Event mit "startTime" "16:00" ohne "endTime" und ohne "timeZone"
+    Wenn die Daten validiert werden
+    Dann ist der Datensatz gültig
+    Und der Datensatz enthält weder "endTime" noch "timeZone"
+    Und die Anwendung nimmt als Zeitzone "Europe/Berlin" an
+
   # EARS: VEN-UB-6, VEN-UB-7
   Szenariogrundriss: Neue Venues sind im Katalog
     Angenommen der Datenbestand in "data/venues.json"

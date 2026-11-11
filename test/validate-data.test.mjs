@@ -108,3 +108,16 @@ test('Szenario: Beitrag mit Kurzvorschau (DAT-UB-6)', () => {
   const ohne = post('x'); delete ohne.excerpt;
   assert.deepEqual(run({ ...validSet(), posts: [ohne] }, { files }).errors, []);
 });
+
+test('Szenario: Uhrzeit und Zeitzone bei Events (DAT-UB-9, DAT-UB-10, VAL-UN-6 bis VAL-UN-8)', async (t) => {
+  const { terminEvent } = await import('./helpers.mjs');
+  const errorsOf = (over) => run({ ...validSet(), events: [terminEvent({ id: 'e-1', eventType: 'talk', ...over })] }).errors;
+  assert.deepEqual(errorsOf({ startTime: '16:00', endTime: '18:00', timeZone: 'Europe/London' }), []);
+  assert.deepEqual(errorsOf({ startTime: '16:00' }), []);
+  await t.test('endTime ohne startTime', () => assert.ok(errorsOf({ endTime: '18:00' }).some((e) => e.startsWith('events.json: e-1 endTime'))));
+  await t.test('timeZone ohne startTime', () => assert.ok(errorsOf({ timeZone: 'Europe/Berlin' }).some((e) => e.startsWith('events.json: e-1 timeZone'))));
+  await t.test('ungültiges Format', () => assert.ok(errorsOf({ startTime: '25:00' }).some((e) => e.startsWith('events.json: e-1 startTime'))));
+  await t.test('ungültige Zeitzone', () => assert.ok(errorsOf({ startTime: '16:00', timeZone: 'Mars/Olympus' }).some((e) => e.startsWith('events.json: e-1 timeZone'))));
+  await t.test('Ende nicht nach Beginn', () => assert.ok(errorsOf({ startTime: '18:00', endTime: '18:00' }).some((e) => e.startsWith('events.json: e-1 endTime'))));
+  await t.test('mehrtägig: Ende darf früher sein', () => assert.deepEqual(errorsOf({ endDate: '2026-11-08', startTime: '18:00', endTime: '12:00' }), []));
+});

@@ -16,6 +16,12 @@
       <dl class="facts">
         <dt>Zeitraum</dt>
         <dd>{{ formatRange(e.startDate, e.endDate) }}</dd>
+        @if (e.startTime) {
+          <dt>Uhrzeit</dt>
+          <dd>
+            <app-event-time [event]="e" [detail]="true" />
+          </dd>
+        }
         <dt>Ort</dt>
         <dd>
           @if (venue(); as v) {

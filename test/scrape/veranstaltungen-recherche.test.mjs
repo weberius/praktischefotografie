@@ -144,6 +144,44 @@ test('Szenario: Bericht je Ort mit nicht erreichbaren Orten (VRS-EV-2, VRS-UN-2,
   assert.match(md, /anderer-ort: https:\/\/x\.example\/ – Timeout/);
 });
 
+test('Szenario: Uhrzeit nur mit Beleg (VRS-UB-8, VRS-UN-3)', () => {
+  const mit = (record) => tour({ record: { ...tour().record, ...record } });
+  const gut = run(setup([mit({ startTime: '15:00' })]));
+  assert.equal(gut.changes.length, 1, reasons(gut));
+  const zwei = run(setup([mit({ startTime: '15:00', endTime: '16:30' })]));
+  assert.match(reasons(zwei), /Uhrzeit nicht belegt/);
+  const ohne = run(setup([mit({ startTime: '09:00' })]));
+  assert.match(reasons(ohne), /Uhrzeit nicht belegt/);
+});
+
+test('Szenario: Bestandsevent erhält fehlende Uhrzeit per update, vorhandene bleibt (VRS-EV-3, VRS-UB-10)', () => {
+  const bestand = terminEvent({ id: 'fuehrung-2026', title: 'Führung durch die Ausstellung', eventType: 'guided_tour', startDate: '2026-12-14', endDate: '2026-12-14', venueId: ID });
+  const update = (id, values, excerpt = EXCERPT) => ({ id, dataset: 'events', op: 'update', recordId: 'fuehrung-2026', values, evidence: { url: URL_PAGE, excerpt } });
+  const build = (events, changes) => {
+    const ws = setup(changes);
+    writeFileSync(join(ws.dataDir, 'events.json'), JSON.stringify(events));
+    return ws;
+  };
+  const ok = run(build([bestand], [update('u1', { startTime: '15:00' })]));
+  assert.equal(ok.changes.length, 1, reasons(ok));
+  ok.changes[0].approved = true;
+  const ws = build([bestand], [update('u1', { startTime: '15:00' })]);
+  const checked = run(ws);
+  checked.changes[0].approved = true;
+  writeFileSync(ws.file, JSON.stringify(checked));
+  assert.equal(apply(['--date', DATE, '--venue', ID, '--events'], ws.root).ok, true);
+  const stored = JSON.parse(readFileSync(join(ws.dataDir, 'events.json'), 'utf8'));
+  assert.equal(stored[0].startTime, '15:00');
+  assert.equal(stored[0].title, bestand.title);
+
+  const vorhanden = run(build([{ ...bestand, startTime: '19:00' }], [update('u2', { startTime: '15:00' })]));
+  assert.match(reasons(vorhanden), /nicht überschrieben/);
+  const fremd = run(build([bestand], [update('u3', { startTime: '15:00', title: 'X' })]));
+  assert.match(reasons(fremd), /ändert nur/);
+  const unbelegt = run(build([bestand], [update('u4', { startTime: '20:00' })]));
+  assert.match(reasons(unbelegt), /Uhrzeit nicht belegt/);
+});
+
 test('Szenario: Skill research-events ist vorhanden und führt den Ablauf aus (VRS-UB-7)', () => {
   const text = readFileSync(join(ROOT, '.claude/skills/research-events/SKILL.md'), 'utf8');
   assert.match(text, /^---\nname: research-events\ndescription: .+\n---/);

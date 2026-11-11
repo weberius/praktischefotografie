@@ -1,6 +1,6 @@
 # Fotografie-Orte in Düsseldorf
 
-Übersicht über Museen, Galerien, Off-Spaces sowie weitere Ausstellungsorte und Formate für Fotografie in Düsseldorf (zusammengestellt für das *Zentrum für praktische Fotografie*).
+Aktualisiere die Daten mit Informationen zu Museen, Galerien, Off-Spaces sowie weitere Ausstellungsorte und Formate für Fotografie in Düsseldorf. Diese Datei enthält eine Übersicht über Museen, Galerien, Off-Spaces sowie weitere Ausstellungsorte und Formate für Fotografie in Düsseldorf (zusammengestellt für das *Zentrum für praktische Fotografie*). Die Recherche und die Überführung in die Datenbasis soll im Rahmen dieses Tickets erfolgen.
 
 ---
 

@@ -1,7 +1,7 @@
 ---
-status: offen  # offen | in-arbeit | umgesetzt | verworfen
+status: umgesetzt  # offen | in-arbeit | umgesetzt | verworfen
 prio: 2            # optional, kleiner = früher
-ticket: SERVICE-25
+ticket: SERVICE-26
 ---
 
 # Events sollen mit Start-Zeit und Endzeit recherchiert werden

@@ -10,3 +10,11 @@
 | Q-USE-3 (Ergänzung) | Besucher:in bedient die Schaltfläche nur mit der Tastatur. | Die Schaltfläche ist ein echtes `<button>`, per Tab erreichbar und mit Enter und Leertaste auslösbar; Fokus sichtbar. | Komponententest, axe | ICS-UB-1 |
 
 **Konflikt zu benennen:** Das Maß aus Q-PERF-4 (initiales Bundle ≤ 500 kB Warnung) bleibt maßgeblich; die Kalenderdatei-Erzeugung ist eine kleine reine Funktion (Richtwert ≤ 3 kB gebündelt) und braucht keine Bibliothek.
+
+**Ergänzung (Uhrzeiten):** Q-IOP-2 ergänzt Q-IOP-1; deren Fixtures und die Strukturprüfung gelten auch für zeitgebundene Termine.
+
+| ID | Szenario | Maß | Prüfverfahren | EARS |
+| --- | --- | --- | --- | --- |
+| Q-IOP-2 | Besucher:in importiert einen zeitgebundenen Termin in Apple Kalender, Google Kalender oder Outlook; Datum, Uhrzeit und Dauer sollen stimmen, auch bei Sommerzeit, Mitternacht und fremder Zeitzone. | 100 % der Fixtures bestehen die Strukturprüfung aus Q-IOP-1 und zusätzlich: `VTIMEZONE` ausgewogen und vor dem `VEVENT`, jede `TZID` hat einen Block; ≥ 8 Fixtures: mit Endzeit, ohne Endzeit (+2 h), über Mitternacht, mehrtägig mit Zeiten, mehrtägig ohne Endzeit (ganztägig), Sommerzeit, Winterzeit, Zone außerhalb Berlins (UTC), ohne Startzeit (ganztägig); 0 Abweichungen von den erwarteten Werten; `DTEND` immer nach `DTSTART`; 0 Netzanfragen. | Tests mit Fixtures und festen Erwartungswerten; Strukturprüfung. **Nicht automatisiert prüfbar:** Import in echte Kalender-Apps (Handprobe, Stichprobe mindestens Apple und Google mit einem Sommer- und einem Wintertermin). | ICS-UB-8, ICS-UB-9, ICS-UB-10, ICS-UN-2 |
+
+**Konflikt zu benennen:** Q-IOP-1 nennt als Richtwert ≤ 3 kB gebündelt für die Kalenderdatei-Erzeugung; der `VTIMEZONE`-Block und die Zeitberechnung erhöhen ihn auf ≤ 5 kB, ohne neue Bibliothek (Q-PERF-4 bleibt maßgeblich).

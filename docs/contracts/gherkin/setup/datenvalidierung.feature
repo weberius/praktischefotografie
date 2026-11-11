@@ -37,6 +37,33 @@ Funktionalität: Datenvalidierung
     Dann endet sie mit Exit-Code 1
     Und die Meldung nennt die Venue
 
+  # EARS: VAL-UN-6
+  Szenario: Endzeit ohne Startzeit
+    Angenommen ein Event mit "endTime" "18:00" ohne "startTime"
+    Wenn die Validierung gestartet wird
+    Dann endet sie mit Exit-Code 1
+    Und die Meldung nennt Datei und Datensatz-ID
+
+  # EARS: VAL-UN-7
+  Szenariogrundriss: Ungültige Uhrzeit oder Zeitzone
+    Angenommen ein Event mit "startTime" "<startTime>" und "timeZone" "<zone>"
+    Wenn die Validierung gestartet wird
+    Dann endet sie mit Exit-Code 1
+    Und die Meldung nennt Datensatz-ID und das Feld "<feld>"
+
+    Beispiele:
+      | startTime | zone          | feld      |
+      | 25:00     | Europe/Berlin | startTime |
+      | 9:00      | Europe/Berlin | startTime |
+      | 16:00     | Mitteleuropa  | timeZone  |
+
+  # EARS: VAL-UN-8
+  Szenario: Ende nicht nach Beginn am selben Tag
+    Angenommen ein eintägiges Event mit "startTime" "18:00" und "endTime" "16:00"
+    Wenn die Validierung gestartet wird
+    Dann endet sie mit Exit-Code 1
+    Und die Meldung nennt Datei und Datensatz-ID
+
   # EARS: VAL-UB-1
   Szenario: Validierung greift nicht auf das Netz zu
     Angenommen ein blockierter Netzwerkzugriff

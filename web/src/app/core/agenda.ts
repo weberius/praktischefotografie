@@ -15,6 +15,10 @@ export interface AgendaItem {
   venueId: string;
   startDate: string;
   endDate: string;
+  /** Nur bei Events: Uhrzeiten und Zeitzone (CAL-UB-8). */
+  startTime?: string;
+  endTime?: string;
+  timeZone?: string;
   /** Pfad der Detailseite (CAL-UB-2). */
   link: string;
   /** Nur bei Ausstellungen. */
@@ -23,7 +27,7 @@ export interface AgendaItem {
   art: string;
 }
 
-/** Führt Ausstellungen und Events zusammen und sortiert nach Beginn aufsteigend (Ende und Titel als Tiebreaker). */
+/** Führt Ausstellungen und Events zusammen und sortiert nach Beginn aufsteigend, bei gleichem Tag nach `startTime` (ohne Uhrzeit zuerst, CAL-UB-9), dann Ende und Titel. */
 export function buildAgenda(
   exhibitions: Exhibition[],
   events: PhotoEvent[],
@@ -52,12 +56,18 @@ export function buildAgenda(
       venueId: e.venueId,
       startDate: e.startDate,
       endDate: e.endDate,
+      startTime: e.startTime,
+      endTime: e.endTime,
+      timeZone: e.timeZone,
       link: `/events/${e.id}`,
       art: 'Event',
     })),
   ];
   return items.sort(
-    (a, b) => a.startDate.localeCompare(b.startDate) || a.endDate.localeCompare(b.endDate) || a.title.localeCompare(b.title, 'de'),
+    (a, b) =>
+      a.startDate.localeCompare(b.startDate) ||
+      (a.startTime ?? '').localeCompare(b.startTime ?? '') ||
+      a.endDate.localeCompare(b.endDate) || a.title.localeCompare(b.title, 'de'),
   );
 }
 

@@ -35,7 +35,7 @@
           </p>
           <h2><a [routerLink]="['/events', item.event.id]">{{ item.event.title }}</a></h2>
           <p>{{ item.venue }}</p>
-          <p class="meta">{{ formatRange(item.event.startDate, item.event.endDate) }}</p>
+          <p class="meta">{{ formatRange(item.event.startDate, item.event.endDate) }}<app-event-time [event]="item.event" separator=", " /></p>
           <app-favorite-toggle [eventId]="item.event.id" [eventTitle]="item.event.title" />
         </li>
       }
