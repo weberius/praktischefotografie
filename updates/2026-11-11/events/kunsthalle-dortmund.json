@@ -1,0 +1,115 @@
+{
+  "venueId": "kunsthalle-dortmund",
+  "fetchedAt": "2026-11-11",
+  "changes": [
+    {
+      "id": "e1",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Öffentliche Führung: INDUSTRIAL. Seidenstraßen 3000",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-15",
+        "endDate": "2026-11-15",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "venueId": "kunsthalle-dortmund",
+        "city": "Dortmund",
+        "isCommercial": false,
+        "description": "Öffentliche Führung durch die Ausstellung, Dauer ca. 60 Minuten, Ebene 3 und 6. Eine Anmeldung ist nicht erforderlich.",
+        "website": "https://www.kunsthalledortmund.de/termine/oeffentliche-fuehrung-industrial-seidenstrassen-3000-3-2-2-2-2-2-2",
+        "id": "oeffentliche-fuehrung-industrial-seidenstrassen-3000-2026"
+      },
+      "evidence": {
+        "url": "https://www.kunsthalledortmund.de/termine/oeffentliche-fuehrung-industrial-seidenstrassen-3000-3-2-2-2-2-2-2",
+        "excerpt": "Führung So. 15.11.2026 Öffentliche Führung: INDUSTRIAL. Seidenstraßen 3000 16:00 – 17:00"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e2",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Öffentliche Führung: INDUSTRIAL. Seidenstraßen 3000",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-22",
+        "endDate": "2026-11-22",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "venueId": "kunsthalle-dortmund",
+        "city": "Dortmund",
+        "isCommercial": false,
+        "description": "Öffentliche Führung durch die Ausstellung, Dauer ca. 60 Minuten, Ebene 3 und 6. Eine Anmeldung ist nicht erforderlich.",
+        "website": "https://www.kunsthalledortmund.de/termine/oeffentliche-fuehrung-industrial-seidenstrassen-3000-3-2-2-2-2-2-2-2",
+        "id": "oeffentliche-fuehrung-industrial-seidenstrassen-3000-2026-2"
+      },
+      "evidence": {
+        "url": "https://www.kunsthalledortmund.de/termine/oeffentliche-fuehrung-industrial-seidenstrassen-3000-3-2-2-2-2-2-2-2",
+        "excerpt": "Führung So. 22.11.2026 Öffentliche Führung: INDUSTRIAL. Seidenstraßen 3000 16:00 – 17:00"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e3",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Talk: Silk Road – What the European Mind Can and Cannot See",
+        "eventType": "talk",
+        "startDate": "2026-11-25",
+        "endDate": "2026-11-25",
+        "startTime": "18:30",
+        "endTime": "20:00",
+        "venueId": "kunsthalle-dortmund",
+        "city": "Dortmund",
+        "isCommercial": false,
+        "description": "Vortrag von Prof. Dr. Mi You (documenta Institut, Kassel) mit anschließendem Gespräch mit Inke Arns, Ebene 3, Eintritt frei.",
+        "website": "https://www.kunsthalledortmund.de/termine/talk-sil-road---what-the-european-mind-can-and-cannot-see",
+        "id": "talk-silk-road-what-the-european-mind-can-and-cannot-see-2026"
+      },
+      "evidence": {
+        "url": "https://www.kunsthalledortmund.de/termine/talk-sil-road---what-the-european-mind-can-and-cannot-see",
+        "excerpt": "Mi. 25.11.2026 Talk: Silk Road – What the European Mind Can and Cannot See 18:30 – 20:00 Ebene 3 Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e4",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Buchclub: Kunsthalle liest",
+        "eventType": "reading",
+        "startDate": "2026-11-26",
+        "endDate": "2026-11-26",
+        "startTime": "18:00",
+        "endTime": "20:00",
+        "venueId": "kunsthalle-dortmund",
+        "city": "Dortmund",
+        "isCommercial": false,
+        "description": "Buchclub zur aktuellen Ausstellung, Ebene 3, Eintritt frei.",
+        "website": "https://www.kunsthalledortmund.de/termine/kunsthalle-liest",
+        "id": "buchclub-kunsthalle-liest-2026"
+      },
+      "evidence": {
+        "url": "https://www.kunsthalledortmund.de/termine/kunsthalle-liest",
+        "excerpt": "Do. 26.11.2026 Buchclub: Kunsthalle liest 18:00 – 20:00 Ebene 3 Eintritt frei"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    }
+  ],
+  "rejected": []
+}

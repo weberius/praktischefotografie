@@ -162,3 +162,23 @@ Funktionalität: Datenmodell und Venue-Datenbestand
   Szenario: Düsseldorfer Orte liegen in Düsseldorf
     Angenommen der Datenbestand in "data/venues.json"
     Dann liegt jede Venue mit der city "Düsseldorf" mit lat zwischen 51.12 und 51.36 und lng zwischen 6.65 und 6.95
+
+  # EARS: VEN-UB-12, VEN-UB-13, VEN-UB-14
+  Szenariogrundriss: Dortmunder Orte sind im Katalog
+    Angenommen der Datenbestand in "data/venues.json"
+    Dann enthält er eine Venue mit der id "<id>", dem type "<typ>" und der city "Dortmund"
+    Und sie hat eine source mit url, checkedAt und status
+    Und sie hat eine website
+    Und der Datenbestand besteht die Validierung
+
+    Beispiele:
+      | id                              | typ        |
+      | projektraum-fotografie-dortmund | off_space  |
+      | kulturort-depot-dortmund        | off_space  |
+      | kunsthalle-dortmund             | gallery    |
+      | fh-dortmund-design-dortmund     | foundation |
+
+  # EARS: VEN-UB-12, VEN-UB-13, VEN-UB-14
+  Szenario: Dortmunder Orte liegen in Dortmund
+    Angenommen der Datenbestand in "data/venues.json"
+    Dann liegt jede Venue mit der city "Dortmund" mit lat zwischen 51.40 und 51.62 und lng zwischen 7.30 und 7.66

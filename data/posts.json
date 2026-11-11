@@ -922,5 +922,61 @@
       "personal-perspectives-50-jahre-leica-galerien-2026"
     ],
     "contentFile": "content/posts/personal-perspectives-50-jahre-leica-galerien-2026-ende.md"
+  },
+  {
+    "id": "verhaeltnisse-2026-neu",
+    "slug": "verhaeltnisse-2026-neu",
+    "title": "VERHÄLTNISSE in Dortmund",
+    "date": "2026-11-11",
+    "excerpt": "Der Projektraum Fotografie in Dortmund kündigt die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht an. Sie ist vom 20. November bis 20. Dezember 2026 zu sehen. Gezeigt wird eine …",
+    "linkedVenueIds": [
+      "projektraum-fotografie-dortmund"
+    ],
+    "linkedExhibitionIds": [
+      "verhaeltnisse-2026"
+    ],
+    "contentFile": "content/posts/verhaeltnisse-2026-neu.md"
+  },
+  {
+    "id": "verhaeltnisse-2026-eroeffnung",
+    "slug": "verhaeltnisse-2026-eroeffnung",
+    "title": "VERHÄLTNISSE in Dortmund",
+    "date": "2026-11-20",
+    "excerpt": "Am 20. November 2026 eröffnet im Projektraum Fotografie in Dortmund die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht. Die Vernissage beginnt um 19:00 Uhr. Zu sehen ist eine multimediale …",
+    "linkedVenueIds": [
+      "projektraum-fotografie-dortmund"
+    ],
+    "linkedExhibitionIds": [
+      "verhaeltnisse-2026"
+    ],
+    "contentFile": "content/posts/verhaeltnisse-2026-eroeffnung.md"
+  },
+  {
+    "id": "verhaeltnisse-2026-endet-bald",
+    "slug": "verhaeltnisse-2026-endet-bald",
+    "title": "VERHÄLTNISSE in Dortmund",
+    "date": "2026-12-06",
+    "excerpt": "Die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht im Projektraum Fotografie in Dortmund endet bald: Sie läuft nur noch bis zum 20. Dezember 2026. Die multimediale Installation in Bild, …",
+    "linkedVenueIds": [
+      "projektraum-fotografie-dortmund"
+    ],
+    "linkedExhibitionIds": [
+      "verhaeltnisse-2026"
+    ],
+    "contentFile": "content/posts/verhaeltnisse-2026-endet-bald.md"
+  },
+  {
+    "id": "verhaeltnisse-2026-ende",
+    "slug": "verhaeltnisse-2026-ende",
+    "title": "VERHÄLTNISSE in Dortmund",
+    "date": "2026-12-21",
+    "excerpt": "Die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht im Projektraum Fotografie in Dortmund ist seit dem 20. Dezember 2026 beendet. Gezeigt wurde eine multimediale Installation in Bild, Ton …",
+    "linkedVenueIds": [
+      "projektraum-fotografie-dortmund"
+    ],
+    "linkedExhibitionIds": [
+      "verhaeltnisse-2026"
+    ],
+    "contentFile": "content/posts/verhaeltnisse-2026-ende.md"
   }
 ]

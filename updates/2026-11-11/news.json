@@ -1,802 +1,163 @@
 {
   "date": "2026-11-11",
+  "venueId": "projektraum-fotografie-dortmund",
   "items": [
     {
-      "id": "select-2026-neu",
+      "id": "verhaeltnisse-2026-neu",
       "occasion": "neu",
-      "exhibitionId": "select-2026",
-      "venueId": "galerie-noir-blanche-duesseldorf",
+      "exhibitionId": "verhaeltnisse-2026",
+      "venueId": "projektraum-fotografie-dortmund",
       "date": "2026-11-11",
       "kind": "anlegen",
-      "expectedTitle": "# select in Düsseldorf",
+      "expectedTitle": "VERHÄLTNISSE in Dortmund",
       "context": {
         "exhibition": {
-          "title": "# select",
+          "title": "VERHÄLTNISSE",
           "type": "group",
-          "startDate": "2026-11-14",
-          "endDate": "2027-01-16",
-          "description": "Gruppenausstellung mit Werken von 22 Fotograf:innen aus gut 100 Jahren, die das Programm der Galerie prägten: Alexander Basta, Monika Baumgartl, Karl Blossfeldt, Werner Bokelberg, Christian Coigny, Josef Fischnaller, F.C. Gundlach, Joop Greypink, Markus C. Hurek, Herlinde Koelbl, Hans Lux, Clay Perry, Alfredo Sarabia jun., Fred Stein, Walter Schels, Renate Scherra, Axel Schmidt, Walter Schmitz, Ayako Takashi, Horst Wackerbarth, Martin Waldbauer und Barbara Wolff."
+          "startDate": "2026-11-20",
+          "endDate": "2026-12-20",
+          "description": "Multimediale Installation in Bild, Ton und Video von Nino Sable und Benno Schlicht im Projektraum Fotografie."
         },
         "venue": {
-          "name": "Galerie noir blanche",
-          "shortName": "noir blanche",
-          "city": "Düsseldorf",
-          "website": "https://www.noirblanche.de/"
+          "name": "Projektraum Fotografie",
+          "shortName": "Projektraum Fotografie",
+          "city": "Dortmund",
+          "website": "http://www.projektraumfotografie.de/"
         },
         "photographers": [
           {
-            "name": "Alexander Basta",
+            "name": "Nino Sable",
             "bio": null
           },
           {
-            "name": "Monika Baumgartl",
-            "bio": null
-          },
-          {
-            "name": "Karl Blossfeldt",
-            "bio": null
-          },
-          {
-            "name": "Werner Bokelberg",
-            "bio": null
-          },
-          {
-            "name": "Christian Coigny",
-            "bio": null
-          },
-          {
-            "name": "Josef Fischnaller",
-            "bio": null
-          },
-          {
-            "name": "F.C. Gundlach",
-            "bio": null
-          },
-          {
-            "name": "Joop Greypink",
-            "bio": null
-          },
-          {
-            "name": "Markus C. Hurek",
-            "bio": null
-          },
-          {
-            "name": "Herlinde Koelbl",
-            "bio": null
-          },
-          {
-            "name": "Hans Lux",
-            "bio": null
-          },
-          {
-            "name": "Clay Perry",
-            "bio": null
-          },
-          {
-            "name": "Alfredo Sarabia jun.",
-            "bio": null
-          },
-          {
-            "name": "Fred Stein",
-            "bio": null
-          },
-          {
-            "name": "Walter Schels",
-            "bio": null
-          },
-          {
-            "name": "Renate Scherra",
-            "bio": null
-          },
-          {
-            "name": "Axel Schmidt",
-            "bio": null
-          },
-          {
-            "name": "Walter Schmitz",
-            "bio": null
-          },
-          {
-            "name": "Ayako Takashi",
-            "bio": null
-          },
-          {
-            "name": "Horst Wackerbarth",
-            "bio": null
-          },
-          {
-            "name": "Martin Waldbauer",
-            "bio": null
-          },
-          {
-            "name": "Barbara Wolff",
+            "name": "Benno Schlicht",
             "bio": null
           }
         ]
       },
-      "title": "# select in Düsseldorf",
-      "text": "Die Galerie noir blanche in Düsseldorf kündigt die Gruppenausstellung # select an. Vom 14. November 2026 bis 16. Januar 2027 zeigt sie Arbeiten von Alexander Basta, Monika Baumgartl, Karl Blossfeldt, Werner Bokelberg, Christian Coigny, Josef Fischnaller, F.C. Gundlach, Joop Greypink, Markus C. Hurek, Herlinde Koelbl, Hans Lux, Clay Perry, Alfredo Sarabia jun., Fred Stein, Walter Schels, Renate Scherra, Axel Schmidt, Walter Schmitz, Ayako Takashi, Horst Wackerbarth, Martin Waldbauer und Barbara Wolff. Die Schau umfasst gut hundert Jahre Fotografie.",
-      "excerpt": "Die Galerie noir blanche in Düsseldorf kündigt die Gruppenausstellung # select an.",
+      "title": "VERHÄLTNISSE in Dortmund",
+      "text": "Der Projektraum Fotografie in Dortmund kündigt die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht an. Sie ist vom 20. November bis 20. Dezember 2026 zu sehen. Gezeigt wird eine multimediale Installation in Bild, Ton und Video: Sables Vektorgrafiken und deren filmische Verwandlungen treffen auf Zeichnungen von Benno Schlicht. Die Schau rückt formale Aspekte in den Vordergrund. Geöffnet ist der Projektraum Fotografie donnerstags von 16:00 bis 19:00 Uhr und nach Vereinbarung.",
+      "excerpt": "Der Projektraum Fotografie in Dortmund kündigt die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht an. Sie ist vom 20. November bis 20. Dezember 2026 zu sehen. Gezeigt wird eine …",
       "problems": [],
       "approved": true,
       "appliedAt": "2026-11-11"
     },
     {
-      "id": "select-2026-eroeffnung",
+      "id": "verhaeltnisse-2026-eroeffnung",
       "occasion": "eroeffnung",
-      "exhibitionId": "select-2026",
-      "venueId": "galerie-noir-blanche-duesseldorf",
-      "date": "2026-11-14",
+      "exhibitionId": "verhaeltnisse-2026",
+      "venueId": "projektraum-fotografie-dortmund",
+      "date": "2026-11-20",
       "kind": "anlegen",
-      "expectedTitle": "# select in Düsseldorf",
+      "expectedTitle": "VERHÄLTNISSE in Dortmund",
       "context": {
         "exhibition": {
-          "title": "# select",
+          "title": "VERHÄLTNISSE",
           "type": "group",
-          "startDate": "2026-11-14",
-          "endDate": "2027-01-16",
-          "description": "Gruppenausstellung mit Werken von 22 Fotograf:innen aus gut 100 Jahren, die das Programm der Galerie prägten: Alexander Basta, Monika Baumgartl, Karl Blossfeldt, Werner Bokelberg, Christian Coigny, Josef Fischnaller, F.C. Gundlach, Joop Greypink, Markus C. Hurek, Herlinde Koelbl, Hans Lux, Clay Perry, Alfredo Sarabia jun., Fred Stein, Walter Schels, Renate Scherra, Axel Schmidt, Walter Schmitz, Ayako Takashi, Horst Wackerbarth, Martin Waldbauer und Barbara Wolff."
+          "startDate": "2026-11-20",
+          "endDate": "2026-12-20",
+          "description": "Multimediale Installation in Bild, Ton und Video von Nino Sable und Benno Schlicht im Projektraum Fotografie."
         },
         "venue": {
-          "name": "Galerie noir blanche",
-          "shortName": "noir blanche",
-          "city": "Düsseldorf",
-          "website": "https://www.noirblanche.de/"
+          "name": "Projektraum Fotografie",
+          "shortName": "Projektraum Fotografie",
+          "city": "Dortmund",
+          "website": "http://www.projektraumfotografie.de/"
         },
         "photographers": [
           {
-            "name": "Alexander Basta",
+            "name": "Nino Sable",
             "bio": null
           },
           {
-            "name": "Monika Baumgartl",
-            "bio": null
-          },
-          {
-            "name": "Karl Blossfeldt",
-            "bio": null
-          },
-          {
-            "name": "Werner Bokelberg",
-            "bio": null
-          },
-          {
-            "name": "Christian Coigny",
-            "bio": null
-          },
-          {
-            "name": "Josef Fischnaller",
-            "bio": null
-          },
-          {
-            "name": "F.C. Gundlach",
-            "bio": null
-          },
-          {
-            "name": "Joop Greypink",
-            "bio": null
-          },
-          {
-            "name": "Markus C. Hurek",
-            "bio": null
-          },
-          {
-            "name": "Herlinde Koelbl",
-            "bio": null
-          },
-          {
-            "name": "Hans Lux",
-            "bio": null
-          },
-          {
-            "name": "Clay Perry",
-            "bio": null
-          },
-          {
-            "name": "Alfredo Sarabia jun.",
-            "bio": null
-          },
-          {
-            "name": "Fred Stein",
-            "bio": null
-          },
-          {
-            "name": "Walter Schels",
-            "bio": null
-          },
-          {
-            "name": "Renate Scherra",
-            "bio": null
-          },
-          {
-            "name": "Axel Schmidt",
-            "bio": null
-          },
-          {
-            "name": "Walter Schmitz",
-            "bio": null
-          },
-          {
-            "name": "Ayako Takashi",
-            "bio": null
-          },
-          {
-            "name": "Horst Wackerbarth",
-            "bio": null
-          },
-          {
-            "name": "Martin Waldbauer",
-            "bio": null
-          },
-          {
-            "name": "Barbara Wolff",
+            "name": "Benno Schlicht",
             "bio": null
           }
         ]
       },
-      "title": "# select in Düsseldorf",
-      "text": "Am 14. November 2026 beginnt in der Galerie noir blanche in Düsseldorf die Gruppenausstellung # select. Bis 16. Januar 2027 sind Arbeiten von Alexander Basta, Monika Baumgartl, Karl Blossfeldt, Werner Bokelberg, Christian Coigny, Josef Fischnaller, F.C. Gundlach, Joop Greypink, Markus C. Hurek, Herlinde Koelbl, Hans Lux, Clay Perry, Alfredo Sarabia jun., Fred Stein, Walter Schels, Renate Scherra, Axel Schmidt, Walter Schmitz, Ayako Takashi, Horst Wackerbarth, Martin Waldbauer und Barbara Wolff zu sehen, historische und zeitgenössische Positionen im Dialog.",
-      "excerpt": "Am 14.",
+      "title": "VERHÄLTNISSE in Dortmund",
+      "text": "Am 20. November 2026 eröffnet im Projektraum Fotografie in Dortmund die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht. Die Vernissage beginnt um 19:00 Uhr. Zu sehen ist eine multimediale Installation in Bild, Ton und Video, in der Vektorgrafiken filmisch in Bewegung geraten und Zeichnungen aufgreifen. Die Ausstellung läuft bis zum 20. Dezember 2026 und ist donnerstags von 16:00 bis 19:00 Uhr sowie nach Vereinbarung im Projektraum Fotografie geöffnet.",
+      "excerpt": "Am 20. November 2026 eröffnet im Projektraum Fotografie in Dortmund die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht. Die Vernissage beginnt um 19:00 Uhr. Zu sehen ist eine multimediale …",
       "problems": [],
       "approved": true,
       "appliedAt": "2026-11-11"
     },
     {
-      "id": "select-2026-endet-bald",
+      "id": "verhaeltnisse-2026-endet-bald",
       "occasion": "endet-bald",
-      "exhibitionId": "select-2026",
-      "venueId": "galerie-noir-blanche-duesseldorf",
-      "date": "2027-01-02",
+      "exhibitionId": "verhaeltnisse-2026",
+      "venueId": "projektraum-fotografie-dortmund",
+      "date": "2026-12-06",
       "kind": "anlegen",
-      "expectedTitle": "# select in Düsseldorf",
+      "expectedTitle": "VERHÄLTNISSE in Dortmund",
       "context": {
         "exhibition": {
-          "title": "# select",
+          "title": "VERHÄLTNISSE",
           "type": "group",
-          "startDate": "2026-11-14",
-          "endDate": "2027-01-16",
-          "description": "Gruppenausstellung mit Werken von 22 Fotograf:innen aus gut 100 Jahren, die das Programm der Galerie prägten: Alexander Basta, Monika Baumgartl, Karl Blossfeldt, Werner Bokelberg, Christian Coigny, Josef Fischnaller, F.C. Gundlach, Joop Greypink, Markus C. Hurek, Herlinde Koelbl, Hans Lux, Clay Perry, Alfredo Sarabia jun., Fred Stein, Walter Schels, Renate Scherra, Axel Schmidt, Walter Schmitz, Ayako Takashi, Horst Wackerbarth, Martin Waldbauer und Barbara Wolff."
+          "startDate": "2026-11-20",
+          "endDate": "2026-12-20",
+          "description": "Multimediale Installation in Bild, Ton und Video von Nino Sable und Benno Schlicht im Projektraum Fotografie."
         },
         "venue": {
-          "name": "Galerie noir blanche",
-          "shortName": "noir blanche",
-          "city": "Düsseldorf",
-          "website": "https://www.noirblanche.de/"
+          "name": "Projektraum Fotografie",
+          "shortName": "Projektraum Fotografie",
+          "city": "Dortmund",
+          "website": "http://www.projektraumfotografie.de/"
         },
         "photographers": [
           {
-            "name": "Alexander Basta",
+            "name": "Nino Sable",
             "bio": null
           },
           {
-            "name": "Monika Baumgartl",
-            "bio": null
-          },
-          {
-            "name": "Karl Blossfeldt",
-            "bio": null
-          },
-          {
-            "name": "Werner Bokelberg",
-            "bio": null
-          },
-          {
-            "name": "Christian Coigny",
-            "bio": null
-          },
-          {
-            "name": "Josef Fischnaller",
-            "bio": null
-          },
-          {
-            "name": "F.C. Gundlach",
-            "bio": null
-          },
-          {
-            "name": "Joop Greypink",
-            "bio": null
-          },
-          {
-            "name": "Markus C. Hurek",
-            "bio": null
-          },
-          {
-            "name": "Herlinde Koelbl",
-            "bio": null
-          },
-          {
-            "name": "Hans Lux",
-            "bio": null
-          },
-          {
-            "name": "Clay Perry",
-            "bio": null
-          },
-          {
-            "name": "Alfredo Sarabia jun.",
-            "bio": null
-          },
-          {
-            "name": "Fred Stein",
-            "bio": null
-          },
-          {
-            "name": "Walter Schels",
-            "bio": null
-          },
-          {
-            "name": "Renate Scherra",
-            "bio": null
-          },
-          {
-            "name": "Axel Schmidt",
-            "bio": null
-          },
-          {
-            "name": "Walter Schmitz",
-            "bio": null
-          },
-          {
-            "name": "Ayako Takashi",
-            "bio": null
-          },
-          {
-            "name": "Horst Wackerbarth",
-            "bio": null
-          },
-          {
-            "name": "Martin Waldbauer",
-            "bio": null
-          },
-          {
-            "name": "Barbara Wolff",
+            "name": "Benno Schlicht",
             "bio": null
           }
         ]
       },
-      "title": "# select in Düsseldorf",
-      "text": "Die Gruppenausstellung # select in der Galerie noir blanche in Düsseldorf läuft noch bis 16. Januar 2027. Zu sehen sind Arbeiten von Alexander Basta, Monika Baumgartl, Karl Blossfeldt, Werner Bokelberg, Christian Coigny, Josef Fischnaller, F.C. Gundlach, Joop Greypink, Markus C. Hurek, Herlinde Koelbl, Hans Lux, Clay Perry, Alfredo Sarabia jun., Fred Stein, Walter Schels, Renate Scherra, Axel Schmidt, Walter Schmitz, Ayako Takashi, Horst Wackerbarth, Martin Waldbauer und Barbara Wolff, die das Galerieprogramm geprägt haben.",
-      "excerpt": "Die Gruppenausstellung # select in der Galerie noir blanche in Düsseldorf läuft noch bis 16.",
+      "title": "VERHÄLTNISSE in Dortmund",
+      "text": "Die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht im Projektraum Fotografie in Dortmund endet bald: Sie läuft nur noch bis zum 20. Dezember 2026. Die multimediale Installation in Bild, Ton und Video verbindet Vektorgrafiken, ihre filmische Mobilisierung und Zeichnungen zu einer Art digitaler Resonanz. Der Projektraum Fotografie ist donnerstags von 16:00 bis 19:00 Uhr und nach Vereinbarung geöffnet. Zur Finissage am 20. Dezember um 15:00 Uhr sind Besucherinnen und Besucher willkommen.",
+      "excerpt": "Die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht im Projektraum Fotografie in Dortmund endet bald: Sie läuft nur noch bis zum 20. Dezember 2026. Die multimediale Installation in Bild, …",
       "problems": [],
       "approved": true,
       "appliedAt": "2026-11-11"
     },
     {
-      "id": "select-2026-ende",
+      "id": "verhaeltnisse-2026-ende",
       "occasion": "ende",
-      "exhibitionId": "select-2026",
-      "venueId": "galerie-noir-blanche-duesseldorf",
-      "date": "2027-01-17",
+      "exhibitionId": "verhaeltnisse-2026",
+      "venueId": "projektraum-fotografie-dortmund",
+      "date": "2026-12-21",
       "kind": "anlegen",
-      "expectedTitle": "# select in Düsseldorf",
+      "expectedTitle": "VERHÄLTNISSE in Dortmund",
       "context": {
         "exhibition": {
-          "title": "# select",
+          "title": "VERHÄLTNISSE",
           "type": "group",
-          "startDate": "2026-11-14",
-          "endDate": "2027-01-16",
-          "description": "Gruppenausstellung mit Werken von 22 Fotograf:innen aus gut 100 Jahren, die das Programm der Galerie prägten: Alexander Basta, Monika Baumgartl, Karl Blossfeldt, Werner Bokelberg, Christian Coigny, Josef Fischnaller, F.C. Gundlach, Joop Greypink, Markus C. Hurek, Herlinde Koelbl, Hans Lux, Clay Perry, Alfredo Sarabia jun., Fred Stein, Walter Schels, Renate Scherra, Axel Schmidt, Walter Schmitz, Ayako Takashi, Horst Wackerbarth, Martin Waldbauer und Barbara Wolff."
+          "startDate": "2026-11-20",
+          "endDate": "2026-12-20",
+          "description": "Multimediale Installation in Bild, Ton und Video von Nino Sable und Benno Schlicht im Projektraum Fotografie."
         },
         "venue": {
-          "name": "Galerie noir blanche",
-          "shortName": "noir blanche",
-          "city": "Düsseldorf",
-          "website": "https://www.noirblanche.de/"
+          "name": "Projektraum Fotografie",
+          "shortName": "Projektraum Fotografie",
+          "city": "Dortmund",
+          "website": "http://www.projektraumfotografie.de/"
         },
         "photographers": [
           {
-            "name": "Alexander Basta",
+            "name": "Nino Sable",
             "bio": null
           },
           {
-            "name": "Monika Baumgartl",
-            "bio": null
-          },
-          {
-            "name": "Karl Blossfeldt",
-            "bio": null
-          },
-          {
-            "name": "Werner Bokelberg",
-            "bio": null
-          },
-          {
-            "name": "Christian Coigny",
-            "bio": null
-          },
-          {
-            "name": "Josef Fischnaller",
-            "bio": null
-          },
-          {
-            "name": "F.C. Gundlach",
-            "bio": null
-          },
-          {
-            "name": "Joop Greypink",
-            "bio": null
-          },
-          {
-            "name": "Markus C. Hurek",
-            "bio": null
-          },
-          {
-            "name": "Herlinde Koelbl",
-            "bio": null
-          },
-          {
-            "name": "Hans Lux",
-            "bio": null
-          },
-          {
-            "name": "Clay Perry",
-            "bio": null
-          },
-          {
-            "name": "Alfredo Sarabia jun.",
-            "bio": null
-          },
-          {
-            "name": "Fred Stein",
-            "bio": null
-          },
-          {
-            "name": "Walter Schels",
-            "bio": null
-          },
-          {
-            "name": "Renate Scherra",
-            "bio": null
-          },
-          {
-            "name": "Axel Schmidt",
-            "bio": null
-          },
-          {
-            "name": "Walter Schmitz",
-            "bio": null
-          },
-          {
-            "name": "Ayako Takashi",
-            "bio": null
-          },
-          {
-            "name": "Horst Wackerbarth",
-            "bio": null
-          },
-          {
-            "name": "Martin Waldbauer",
-            "bio": null
-          },
-          {
-            "name": "Barbara Wolff",
+            "name": "Benno Schlicht",
             "bio": null
           }
         ]
       },
-      "title": "# select in Düsseldorf",
-      "text": "Die Gruppenausstellung # select in der Galerie noir blanche in Düsseldorf ist am 16. Januar 2027 zu Ende gegangen. Gezeigt wurden Arbeiten von Alexander Basta, Monika Baumgartl, Karl Blossfeldt, Werner Bokelberg, Christian Coigny, Josef Fischnaller, F.C. Gundlach, Joop Greypink, Markus C. Hurek, Herlinde Koelbl, Hans Lux, Clay Perry, Alfredo Sarabia jun., Fred Stein, Walter Schels, Renate Scherra, Axel Schmidt, Walter Schmitz, Ayako Takashi, Horst Wackerbarth, Martin Waldbauer und Barbara Wolff aus gut hundert Jahren Fotografie.",
-      "excerpt": "Die Gruppenausstellung # select in der Galerie noir blanche in Düsseldorf ist am 16.",
-      "problems": [],
-      "approved": true,
-      "appliedAt": "2026-11-11"
-    },
-    {
-      "id": "radu-darvas-fotografien-aus-siebenbuergen-2026-neu",
-      "occasion": "neu",
-      "exhibitionId": "radu-darvas-fotografien-aus-siebenbuergen-2026",
-      "venueId": "gerhart-hauptmann-haus-duesseldorf",
-      "date": "2026-11-11",
-      "kind": "anlegen",
-      "expectedTitle": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
-      "context": {
-        "exhibition": {
-          "title": "Radu Darvas. Fotografien aus Siebenbürgen",
-          "type": "solo",
-          "startDate": "2026-09-09",
-          "endDate": "2026-11-13",
-          "description": "Schwarz-Weiß-Fotografien von Radu Darvas aus Viscri/Deutsch-Weißkirch, kuratiert von Mira Darvas."
-        },
-        "venue": {
-          "name": "Gerhart-Hauptmann-Haus",
-          "shortName": "Gerhart-Hauptmann-Haus",
-          "city": "Düsseldorf",
-          "website": "https://www.g-h-h.de/"
-        },
-        "photographers": [
-          {
-            "name": "Radu Darvas",
-            "bio": null
-          }
-        ]
-      },
-      "title": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
-      "text": "Das Gerhart-Hauptmann-Haus in Düsseldorf zeigt vom 9. September bis 13. November 2026 die Ausstellung Radu Darvas. Fotografien aus Siebenbürgen. Der 2015 verstorbene Fotograf Radu Darvas hielt in Schwarz-Weiß den Alltag älterer Siebenbürger Sachsen in Viscri fest. Kuratiert hat die Schau seine Tochter Mira Darvas. Die Aufnahmen entwickelte Darvas, der 1973 in Rumänien geboren wurde, noch selbst im Badezimmer seiner Bukarester Wohnung; heute ist das Dorf UNESCO-Weltkulturerbe.",
-      "excerpt": "Das Gerhart-Hauptmann-Haus in Düsseldorf zeigt vom 9.",
-      "problems": [],
-      "approved": true,
-      "appliedAt": "2026-11-11"
-    },
-    {
-      "id": "radu-darvas-fotografien-aus-siebenbuergen-2026-eroeffnung",
-      "occasion": "eroeffnung",
-      "exhibitionId": "radu-darvas-fotografien-aus-siebenbuergen-2026",
-      "venueId": "gerhart-hauptmann-haus-duesseldorf",
-      "date": "2026-09-09",
-      "kind": "anlegen",
-      "expectedTitle": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
-      "context": {
-        "exhibition": {
-          "title": "Radu Darvas. Fotografien aus Siebenbürgen",
-          "type": "solo",
-          "startDate": "2026-09-09",
-          "endDate": "2026-11-13",
-          "description": "Schwarz-Weiß-Fotografien von Radu Darvas aus Viscri/Deutsch-Weißkirch, kuratiert von Mira Darvas."
-        },
-        "venue": {
-          "name": "Gerhart-Hauptmann-Haus",
-          "shortName": "Gerhart-Hauptmann-Haus",
-          "city": "Düsseldorf",
-          "website": "https://www.g-h-h.de/"
-        },
-        "photographers": [
-          {
-            "name": "Radu Darvas",
-            "bio": null
-          }
-        ]
-      },
-      "title": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
-      "text": "Am 9. September 2026 beginnt im Gerhart-Hauptmann-Haus in Düsseldorf die Ausstellung Radu Darvas. Fotografien aus Siebenbürgen. Radu Darvas fotografierte Anfang der Neunzigerjahre in Viscri die Begegnungen und den Alltag der Dorfbewohner. Die Schau läuft bis 13. November 2026 und wurde von Mira Darvas kuratiert. Die frühen Schwarz-Weiß-Abzüge entwickelte der 1973 geborene Fotograf noch selbst im Badezimmer seiner Bukarester Wohnung; mehrere hundert Negative blieben im Nachlass der Familie erhalten.",
-      "excerpt": "Am 9.",
-      "problems": [],
-      "approved": true,
-      "appliedAt": "2026-11-11"
-    },
-    {
-      "id": "radu-darvas-fotografien-aus-siebenbuergen-2026-endet-bald",
-      "occasion": "endet-bald",
-      "exhibitionId": "radu-darvas-fotografien-aus-siebenbuergen-2026",
-      "venueId": "gerhart-hauptmann-haus-duesseldorf",
-      "date": "2026-10-30",
-      "kind": "anlegen",
-      "expectedTitle": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
-      "context": {
-        "exhibition": {
-          "title": "Radu Darvas. Fotografien aus Siebenbürgen",
-          "type": "solo",
-          "startDate": "2026-09-09",
-          "endDate": "2026-11-13",
-          "description": "Schwarz-Weiß-Fotografien von Radu Darvas aus Viscri/Deutsch-Weißkirch, kuratiert von Mira Darvas."
-        },
-        "venue": {
-          "name": "Gerhart-Hauptmann-Haus",
-          "shortName": "Gerhart-Hauptmann-Haus",
-          "city": "Düsseldorf",
-          "website": "https://www.g-h-h.de/"
-        },
-        "photographers": [
-          {
-            "name": "Radu Darvas",
-            "bio": null
-          }
-        ]
-      },
-      "title": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
-      "text": "Die Ausstellung Radu Darvas. Fotografien aus Siebenbürgen im Gerhart-Hauptmann-Haus in Düsseldorf läuft nur noch bis 13. November 2026. Radu Darvas zeigt in Schwarz-Weiß-Fotografien aus Viscri das Leben der Siebenbürger Sachsen nach der Wende. Wer die von Mira Darvas kuratierte Schau sehen möchte, sollte bald vorbeikommen. Die Fotografien aus dem Nachlass des 1973 geborenen und 2015 verstorbenen Künstlers stammen aus den späten Achtziger- und frühen Neunzigerjahren und sind ein seltener Einblick in diese Zeit.",
-      "excerpt": "Die Ausstellung Radu Darvas.",
-      "problems": [],
-      "approved": true,
-      "appliedAt": "2026-11-11"
-    },
-    {
-      "id": "radu-darvas-fotografien-aus-siebenbuergen-2026-ende",
-      "occasion": "ende",
-      "exhibitionId": "radu-darvas-fotografien-aus-siebenbuergen-2026",
-      "venueId": "gerhart-hauptmann-haus-duesseldorf",
-      "date": "2026-11-14",
-      "kind": "anlegen",
-      "expectedTitle": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
-      "context": {
-        "exhibition": {
-          "title": "Radu Darvas. Fotografien aus Siebenbürgen",
-          "type": "solo",
-          "startDate": "2026-09-09",
-          "endDate": "2026-11-13",
-          "description": "Schwarz-Weiß-Fotografien von Radu Darvas aus Viscri/Deutsch-Weißkirch, kuratiert von Mira Darvas."
-        },
-        "venue": {
-          "name": "Gerhart-Hauptmann-Haus",
-          "shortName": "Gerhart-Hauptmann-Haus",
-          "city": "Düsseldorf",
-          "website": "https://www.g-h-h.de/"
-        },
-        "photographers": [
-          {
-            "name": "Radu Darvas",
-            "bio": null
-          }
-        ]
-      },
-      "title": "Radu Darvas. Fotografien aus Siebenbürgen in Düsseldorf",
-      "text": "Die Ausstellung Radu Darvas. Fotografien aus Siebenbürgen im Gerhart-Hauptmann-Haus in Düsseldorf ist am 13. November 2026 zu Ende gegangen. Radu Darvas hielt in Viscri mit seiner Kamera den Alltag der Siebenbürger Sachsen fest. Die Schau wurde von seiner Tochter Mira Darvas kuratiert und lief seit dem 9. September. Die Fotografien stammen aus den späten Achtziger- und frühen Neunzigerjahren; der 1973 geborene Künstler entwickelte die Schwarz-Weiß-Abzüge noch selbst im Badezimmer seiner Wohnung in Bukarest.",
-      "excerpt": "Die Ausstellung Radu Darvas.",
-      "problems": [],
-      "approved": true,
-      "appliedAt": "2026-11-11"
-    },
-    {
-      "id": "personal-perspectives-50-jahre-leica-galerien-2026-neu",
-      "occasion": "neu",
-      "exhibitionId": "personal-perspectives-50-jahre-leica-galerien-2026",
-      "venueId": "leica-galerie-duesseldorf",
-      "date": "2026-11-11",
-      "kind": "anlegen",
-      "expectedTitle": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
-      "context": {
-        "exhibition": {
-          "title": "Personal Perspectives – 50 Jahre Leica Galerien",
-          "type": "group",
-          "startDate": "2026-10-10",
-          "endDate": "2027-01-16",
-          "description": "Jubiläumsausstellung mit Werken von Elliott Erwitt, Joel Meyerowitz und Barbara Klemm im Dialog mit einer neuen Generation."
-        },
-        "venue": {
-          "name": "Leica Galerie Düsseldorf",
-          "shortName": "Leica Galerie",
-          "city": "Düsseldorf",
-          "website": "https://leica-camera.com/de-DE/leica-galerien/leica-galerie-duesseldorf"
-        },
-        "photographers": [
-          {
-            "name": "Elliott Erwitt",
-            "bio": null
-          },
-          {
-            "name": "Joel Meyerowitz",
-            "bio": null
-          },
-          {
-            "name": "Barbara Klemm",
-            "bio": null
-          }
-        ]
-      },
-      "title": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
-      "text": "Die Leica Galerie Düsseldorf zeigt vom 10. Oktober 2026 bis 16. Januar 2027 die Gruppenausstellung Personal Perspectives – 50 Jahre Leica Galerien. Werke von Elliott Erwitt, Joel Meyerowitz und Barbara Klemm treten mit den Sichtweisen einer neuen Generation in Dialog. Anlass ist das 50-jährige Jubiläum der Leica Galerien. Die Galerie liegt am Kö-Bogen an der Königsallee, der Eintritt ist frei. Geleitet und kuratiert wird sie von der Kunsthistorikerin Ulla Born, die dort etablierten Namen und Talenten eine Bühne bietet.",
-      "excerpt": "Die Leica Galerie Düsseldorf zeigt vom 10.",
-      "problems": [],
-      "approved": true,
-      "appliedAt": "2026-11-11"
-    },
-    {
-      "id": "personal-perspectives-50-jahre-leica-galerien-2026-eroeffnung",
-      "occasion": "eroeffnung",
-      "exhibitionId": "personal-perspectives-50-jahre-leica-galerien-2026",
-      "venueId": "leica-galerie-duesseldorf",
-      "date": "2026-10-10",
-      "kind": "anlegen",
-      "expectedTitle": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
-      "context": {
-        "exhibition": {
-          "title": "Personal Perspectives – 50 Jahre Leica Galerien",
-          "type": "group",
-          "startDate": "2026-10-10",
-          "endDate": "2027-01-16",
-          "description": "Jubiläumsausstellung mit Werken von Elliott Erwitt, Joel Meyerowitz und Barbara Klemm im Dialog mit einer neuen Generation."
-        },
-        "venue": {
-          "name": "Leica Galerie Düsseldorf",
-          "shortName": "Leica Galerie",
-          "city": "Düsseldorf",
-          "website": "https://leica-camera.com/de-DE/leica-galerien/leica-galerie-duesseldorf"
-        },
-        "photographers": [
-          {
-            "name": "Elliott Erwitt",
-            "bio": null
-          },
-          {
-            "name": "Joel Meyerowitz",
-            "bio": null
-          },
-          {
-            "name": "Barbara Klemm",
-            "bio": null
-          }
-        ]
-      },
-      "title": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
-      "text": "Am 10. Oktober 2026 startet in der Leica Galerie Düsseldorf die Jubiläumsausstellung Personal Perspectives – 50 Jahre Leica Galerien. Bis 16. Januar 2027 zeigt sie Werke von Elliott Erwitt, Joel Meyerowitz und Barbara Klemm im Dialog mit einer neuen Generation, von dokumentarischen Arbeiten und Porträts bis zur Straßen- und Landschaftsfotografie. Die Galerie am Kö-Bogen an der Königsallee wird von der Kunsthistorikerin Ulla Born geleitet und kuratiert; der Eintritt ist frei.",
-      "excerpt": "Am 10.",
-      "problems": [],
-      "approved": true,
-      "appliedAt": "2026-11-11"
-    },
-    {
-      "id": "personal-perspectives-50-jahre-leica-galerien-2026-endet-bald",
-      "occasion": "endet-bald",
-      "exhibitionId": "personal-perspectives-50-jahre-leica-galerien-2026",
-      "venueId": "leica-galerie-duesseldorf",
-      "date": "2027-01-02",
-      "kind": "anlegen",
-      "expectedTitle": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
-      "context": {
-        "exhibition": {
-          "title": "Personal Perspectives – 50 Jahre Leica Galerien",
-          "type": "group",
-          "startDate": "2026-10-10",
-          "endDate": "2027-01-16",
-          "description": "Jubiläumsausstellung mit Werken von Elliott Erwitt, Joel Meyerowitz und Barbara Klemm im Dialog mit einer neuen Generation."
-        },
-        "venue": {
-          "name": "Leica Galerie Düsseldorf",
-          "shortName": "Leica Galerie",
-          "city": "Düsseldorf",
-          "website": "https://leica-camera.com/de-DE/leica-galerien/leica-galerie-duesseldorf"
-        },
-        "photographers": [
-          {
-            "name": "Elliott Erwitt",
-            "bio": null
-          },
-          {
-            "name": "Joel Meyerowitz",
-            "bio": null
-          },
-          {
-            "name": "Barbara Klemm",
-            "bio": null
-          }
-        ]
-      },
-      "title": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
-      "text": "Die Ausstellung Personal Perspectives – 50 Jahre Leica Galerien in der Leica Galerie Düsseldorf läuft nur noch bis 16. Januar 2027. Zu sehen sind Werke von Elliott Erwitt, Joel Meyerowitz und Barbara Klemm im Dialog mit einer neuen Generation, vom Dokumentarischen bis zur Straßenfotografie. Das Jubiläum der Leica Galerien feiert die Vielfalt der Fotografie. Die Galerie am Kö-Bogen an der Königsallee wird von der Kunsthistorikerin Ulla Born geleitet und kuratiert; der Eintritt ist frei.",
-      "excerpt": "Die Ausstellung Personal Perspectives – 50 Jahre Leica Galerien in der Leica Galerie Düsseldorf läuft nur noch bis 16.",
-      "problems": [],
-      "approved": true,
-      "appliedAt": "2026-11-11"
-    },
-    {
-      "id": "personal-perspectives-50-jahre-leica-galerien-2026-ende",
-      "occasion": "ende",
-      "exhibitionId": "personal-perspectives-50-jahre-leica-galerien-2026",
-      "venueId": "leica-galerie-duesseldorf",
-      "date": "2027-01-17",
-      "kind": "anlegen",
-      "expectedTitle": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
-      "context": {
-        "exhibition": {
-          "title": "Personal Perspectives – 50 Jahre Leica Galerien",
-          "type": "group",
-          "startDate": "2026-10-10",
-          "endDate": "2027-01-16",
-          "description": "Jubiläumsausstellung mit Werken von Elliott Erwitt, Joel Meyerowitz und Barbara Klemm im Dialog mit einer neuen Generation."
-        },
-        "venue": {
-          "name": "Leica Galerie Düsseldorf",
-          "shortName": "Leica Galerie",
-          "city": "Düsseldorf",
-          "website": "https://leica-camera.com/de-DE/leica-galerien/leica-galerie-duesseldorf"
-        },
-        "photographers": [
-          {
-            "name": "Elliott Erwitt",
-            "bio": null
-          },
-          {
-            "name": "Joel Meyerowitz",
-            "bio": null
-          },
-          {
-            "name": "Barbara Klemm",
-            "bio": null
-          }
-        ]
-      },
-      "title": "Personal Perspectives – 50 Jahre Leica Galerien in Düsseldorf",
-      "text": "Die Jubiläumsausstellung Personal Perspectives – 50 Jahre Leica Galerien in der Leica Galerie Düsseldorf ist am 16. Januar 2027 zu Ende gegangen. Gezeigt wurden Werke von Elliott Erwitt, Joel Meyerowitz und Barbara Klemm im Dialog mit einer neuen Generation, von Porträts bis zur Landschaftsfotografie, zum 50-jährigen Bestehen der Leica Galerien. Die Galerie am Kö-Bogen an der Königsallee wird von der Kunsthistorikerin Ulla Born geleitet und kuratiert; der Eintritt in die Galerie ist frei.",
-      "excerpt": "Die Jubiläumsausstellung Personal Perspectives – 50 Jahre Leica Galerien in der Leica Galerie Düsseldorf ist am 16.",
+      "title": "VERHÄLTNISSE in Dortmund",
+      "text": "Die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht im Projektraum Fotografie in Dortmund ist seit dem 20. Dezember 2026 beendet. Gezeigt wurde eine multimediale Installation in Bild, Ton und Video, in der Vektorgrafiken und Zeichnungen zueinander in Beziehung traten und formale Aspekte in den Vordergrund rückten. Der Projektraum Fotografie informiert über künftige Ausstellungen in seinem Newsletter. Die Schau lief seit dem 20. November 2026 in Dortmund.",
+      "excerpt": "Die Ausstellung VERHÄLTNISSE von Nino Sable und Benno Schlicht im Projektraum Fotografie in Dortmund ist seit dem 20. Dezember 2026 beendet. Gezeigt wurde eine multimediale Installation in Bild, Ton …",
       "problems": [],
       "approved": true,
       "appliedAt": "2026-11-11"

@@ -6,7 +6,7 @@ ticket:
 
 # Orte der Fotografie in Essen: Museen, Institutionen und Ausstellungsräume
 
-Essen gehört zu den zentralen Standorten für Fotografie und Bildkultur im Ruhrgebiet. Geprägt durch traditionsreiche Sammlungen, hochkarätige Hochschulen und Industriekultur, bietet die Stadt zahlreiche Anlaufstellen für Foto-Ausstellungen und Events. Aktualisiere die Daten mit Informationen zu Museen, Galerien, Off-Spaces sowie weitere Ausstellungsorte und Formate für Fotografie in Essen. Diese Datei enthält eine Übersicht über Museen, Galerien, Off-Spaces sowie weitere Ausstellungsorte und Formate für Fotografie in Düsseldorf (zusammengestellt für das *Zentrum für praktische Fotografie*). Die Recherche und die Überführung in die Datenbasis soll im Rahmen dieses Tickets erfolgen.
+Essen gehört zu den zentralen Standorten für Fotografie und Bildkultur im Ruhrgebiet. Geprägt durch traditionsreiche Sammlungen, hochkarätige Hochschulen und Industriekultur, bietet die Stadt zahlreiche Anlaufstellen für Foto-Ausstellungen und Events. Aktualisiere die Daten mit Informationen zu Museen, Galerien, Off-Spaces sowie weitere Ausstellungsorte und Formate für Fotografie in Essen. Diese Datei enthält eine Übersicht über Museen, Galerien, Off-Spaces sowie weitere Ausstellungsorte und Formate für Fotografie in Essen (zusammengestellt für das *Zentrum für praktische Fotografie*). Die Recherche und die Überführung in die Datenbasis soll im Rahmen dieses Tickets erfolgen.
 
 ## 1. Museum Folkwang
 * **Adresse:** Museumsplatz 1, 45128 Essen

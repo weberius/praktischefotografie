@@ -900,5 +900,105 @@
       "checkedAt": "2026-11-11",
       "status": "recherchiert"
     }
+  },
+  {
+    "id": "projektraum-fotografie-dortmund",
+    "name": "Projektraum Fotografie",
+    "shortName": "Projektraum Fotografie",
+    "type": "off_space",
+    "city": "Dortmund",
+    "district": "Huckarde",
+    "address": {
+      "street": "Huckarder Straße 10–12",
+      "zip": "44147",
+      "city": "Dortmund",
+      "lat": 51.5134764,
+      "lng": 7.4372532
+    },
+    "website": "http://www.projektraumfotografie.de/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "http://www.projektraumfotografie.de/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "kulturort-depot-dortmund",
+    "name": "Kulturort Depot",
+    "shortName": "Depot",
+    "type": "off_space",
+    "city": "Dortmund",
+    "district": "Nordstadt",
+    "address": {
+      "street": "Immermannstraße 29",
+      "zip": "44147",
+      "city": "Dortmund",
+      "lat": 51.533108,
+      "lng": 7.4530841
+    },
+    "website": "https://www.depotdortmund.de/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.depotdortmund.de/kontakt.html",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "kunsthalle-dortmund",
+    "name": "Kunsthalle Dortmund (ehemals HMKV)",
+    "shortName": "Kunsthalle Dortmund",
+    "type": "gallery",
+    "city": "Dortmund",
+    "district": "Innenstadt",
+    "address": {
+      "street": "Leonie-Reygers-Terrasse",
+      "zip": "44137",
+      "city": "Dortmund",
+      "lat": 51.5151627,
+      "lng": 7.4536964
+    },
+    "website": "https://www.kunsthalledortmund.de/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.kunsthalledortmund.de/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "fh-dortmund-design-dortmund",
+    "name": "Fachhochschule Dortmund, Fachbereich Design",
+    "shortName": "FH Dortmund Design",
+    "type": "foundation",
+    "city": "Dortmund",
+    "district": "Kreuzviertel",
+    "address": {
+      "street": "Max-Ophüls-Platz 2",
+      "zip": "44139",
+      "city": "Dortmund",
+      "lat": 51.4988082,
+      "lng": 7.4533496
+    },
+    "website": "https://design.fh-dortmund.de/de",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://design.fh-dortmund.de/de",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
   }
 ]

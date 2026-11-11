@@ -321,5 +321,18 @@
       "barbara-klemm"
     ],
     "description": "Jubiläumsausstellung mit Werken von Elliott Erwitt, Joel Meyerowitz und Barbara Klemm im Dialog mit einer neuen Generation."
+  },
+  {
+    "venueId": "projektraum-fotografie-dortmund",
+    "title": "VERHÄLTNISSE",
+    "startDate": "2026-11-20",
+    "endDate": "2026-12-20",
+    "type": "group",
+    "photographerIds": [
+      "nino-sable",
+      "benno-schlicht"
+    ],
+    "description": "Multimediale Installation in Bild, Ton und Video von Nino Sable und Benno Schlicht im Projektraum Fotografie.",
+    "id": "verhaeltnisse-2026"
   }
 ]

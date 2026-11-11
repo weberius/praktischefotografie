@@ -37,6 +37,26 @@ test('Szenario: Düsseldorfer Orte sind im Katalog und liegen in Düsseldorf (VE
   }
 });
 
+test('Szenario: Dortmunder Orte sind im Katalog und liegen in Dortmund (VEN-UB-12 bis VEN-UB-14, Q-DATA-23)', () => {
+  const erwartet = {
+    'projektraum-fotografie-dortmund': 'off_space',
+    'kulturort-depot-dortmund': 'off_space',
+    'kunsthalle-dortmund': 'gallery',
+    'fh-dortmund-design-dortmund': 'foundation',
+  };
+  for (const [id, type] of Object.entries(erwartet)) {
+    const v = venues.find((x) => x.id === id);
+    assert.ok(v, `fehlt: ${id}`);
+    assert.equal(v.type, type, id);
+  }
+  assert.equal(venues.filter((v) => v.id === 'museum-ostwall-dortmund').length, 1);
+  const dortmund = venues.filter((v) => v.city === 'Dortmund');
+  for (const v of dortmund) {
+    assert.ok(v.address.lat >= 51.4 && v.address.lat <= 51.62 && v.address.lng >= 7.3 && v.address.lng <= 7.66, v.id);
+    assert.ok(v.website && v.source.url && v.source.checkedAt && ['recherchiert', 'verifiziert'].includes(v.source.status), v.id);
+  }
+});
+
 test('Szenario: Koordinaten liegen in NRW (VEN-UB-2)', () => {
   for (const { id, address: a } of venues) {
     assert.ok(a.lat >= NRW_BBOX.latMin && a.lat <= NRW_BBOX.latMax && a.lng >= NRW_BBOX.lngMin && a.lng <= NRW_BBOX.lngMax, id);

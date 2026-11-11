@@ -1,0 +1,117 @@
+{
+  "venueId": "projektraum-fotografie-dortmund",
+  "fetchedAt": "2026-11-11",
+  "changes": [
+    {
+      "id": "p1",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "nino-sable",
+        "name": "Nino Sable"
+      },
+      "evidence": {
+        "url": "http://www.projektraumfotografie.de/",
+        "excerpt": "Nino Sable / Benno SchlichtVERHÄLTNISSE 20. November 2026 bis 20. Dezember 2026"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "p2",
+      "dataset": "photographers",
+      "op": "add",
+      "record": {
+        "id": "benno-schlicht",
+        "name": "Benno Schlicht"
+      },
+      "evidence": {
+        "url": "http://www.projektraumfotografie.de/",
+        "excerpt": "Nino Sable / Benno SchlichtVERHÄLTNISSE 20. November 2026 bis 20. Dezember 2026"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e1",
+      "dataset": "exhibitions",
+      "op": "add",
+      "record": {
+        "venueId": "projektraum-fotografie-dortmund",
+        "title": "VERHÄLTNISSE",
+        "startDate": "2026-11-20",
+        "endDate": "2026-12-20",
+        "type": "group",
+        "photographerIds": [
+          "nino-sable",
+          "benno-schlicht"
+        ],
+        "description": "Multimediale Installation in Bild, Ton und Video von Nino Sable und Benno Schlicht im Projektraum Fotografie.",
+        "id": "verhaeltnisse-2026"
+      },
+      "evidence": {
+        "url": "http://www.projektraumfotografie.de/",
+        "excerpt": "Nino Sable / Benno SchlichtVERHÄLTNISSE 20. November 2026 bis 20. Dezember 2026"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "v1",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Eröffnung: VERHÄLTNISSE",
+        "eventType": "vernissage",
+        "startDate": "2026-11-20",
+        "endDate": "2026-11-20",
+        "startTime": "19:00",
+        "venueId": "projektraum-fotografie-dortmund",
+        "city": "Dortmund",
+        "isCommercial": false,
+        "description": "Eröffnung am 20. November 2026 um 19:00 Uhr.",
+        "id": "verhaeltnisse-2026-eroeffnung"
+      },
+      "evidence": {
+        "url": "http://www.projektraumfotografie.de/",
+        "excerpt": "Vernissage 20. November 2026 um 19:00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "v2",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Finissage: VERHÄLTNISSE",
+        "eventType": "finissage",
+        "startDate": "2026-12-20",
+        "endDate": "2026-12-20",
+        "startTime": "15:00",
+        "venueId": "projektraum-fotografie-dortmund",
+        "city": "Dortmund",
+        "isCommercial": false,
+        "description": "Finissage am 20. Dezember 2026 um 15:00 Uhr.",
+        "id": "verhaeltnisse-2026-finissage"
+      },
+      "evidence": {
+        "url": "http://www.projektraumfotografie.de/",
+        "excerpt": "Finissage 20. Dezember 2026 um 15:00 Uhr"
+      },
+      "kind": "ergänzt",
+      "conflict": false,
+      "approved": true,
+      "appliedAt": "2026-11-11"
+    }
+  ],
+  "rejected": []
+}

@@ -3,17 +3,12 @@
   "offline": false,
   "venues": [
     {
-      "venueId": "polnisches-institut-duesseldorf",
-      "status": "fehlgeschlagen",
-      "pages": 0,
-      "fetched": 0,
-      "cached": 0,
-      "errors": [
-        {
-          "url": "https://instytutpolski.pl/duesseldorf/",
-          "reason": "nicht abgerufen, robots.txt nicht lesbar (Zeitüberschreitung nach 15 s)"
-        }
-      ],
+      "venueId": "fh-dortmund-design-dortmund",
+      "status": "abgerufen",
+      "pages": 10,
+      "fetched": 9,
+      "cached": 1,
+      "errors": [],
       "notes": []
     }
   ]

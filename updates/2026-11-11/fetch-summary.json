@@ -3,6 +3,325 @@
   "offline": false,
   "venues": [
     {
+      "venueId": "fotografie-forum-monschau",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "makk-koeln",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "museum-ludwig-koeln",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "photographische-sammlung-koeln",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "photobookmuseum-koeln",
+      "status": "zwischengespeichert",
+      "pages": 2,
+      "fetched": 0,
+      "cached": 2,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "kunst-und-museumsbibliothek-koeln",
+      "status": "übersprungen",
+      "pages": 0,
+      "fetched": 0,
+      "cached": 0,
+      "errors": [],
+      "notes": [
+        "https://www.museenkoeln.de/kunst-und-museumsbibliothek/: Weiterleitung auf andere Website (kunst-und-museumsbibliothek.de) nicht verfolgt: https://www.museen.koeln/kunst-und-museumsbibliothek/ → https://kunst-und-museumsbibliothek.de/"
+      ]
+    },
+    {
+      "venueId": "rheinisches-bildarchiv-koeln",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "zander-galerie-koeln",
+      "status": "zwischengespeichert",
+      "pages": 5,
+      "fetched": 0,
+      "cached": 5,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "galerie-lichtblick-koeln",
+      "status": "zwischengespeichert",
+      "pages": 3,
+      "fetched": 0,
+      "cached": 3,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "kaune-contemporary-koeln",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "kunstpalast-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "nrw-forum-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 5,
+      "fetched": 0,
+      "cached": 5,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "museum-folkwang-essen",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "ruhr-museum-essen",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "isg-fotoarchiv-gelsenkirchen",
+      "status": "zwischengespeichert",
+      "pages": 1,
+      "fetched": 0,
+      "cached": 1,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "museum-ostwall-dortmund",
+      "status": "zwischengespeichert",
+      "pages": 1,
+      "fetched": 0,
+      "cached": 1,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "galerie-m-duisburg",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "museum-dkm-duisburg",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "lvr-landesmuseum-bonn-fotosammlung",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "museum-schloss-moyland",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "fotoraum-koeln",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "michael-horbach-stiftung",
+      "status": "zwischengespeichert",
+      "pages": 3,
+      "fetched": 0,
+      "cached": 3,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "forum-fuer-fotografie-koeln",
+      "status": "zwischengespeichert",
+      "pages": 4,
+      "fetched": 0,
+      "cached": 4,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "kunstmuseum-bonn",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "k20-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "k21-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "stadtmuseum-duesseldorf",
+      "status": "übersprungen",
+      "pages": 0,
+      "fetched": 0,
+      "cached": 0,
+      "errors": [],
+      "notes": [
+        "https://www.duesseldorf.de/stadtmuseum: laut robots.txt nicht erlaubt"
+      ]
+    },
+    {
+      "venueId": "filmmuseum-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "leica-galerie-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "galerie-noir-blanche-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "galerie-voss-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 1,
+      "fetched": 0,
+      "cached": 1,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "lumas-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 4,
+      "fetched": 0,
+      "cached": 4,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "sammlung-philara-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 5,
+      "fetched": 0,
+      "cached": 5,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "plan-d-produzentengalerie-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 1,
+      "fetched": 0,
+      "cached": 1,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "gerhart-hauptmann-haus-duesseldorf",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
       "venueId": "polnisches-institut-duesseldorf",
       "status": "fehlgeschlagen",
       "pages": 0,
@@ -14,6 +333,60 @@
           "reason": "nicht abgerufen, robots.txt nicht lesbar (Zeitüberschreitung nach 15 s)"
         }
       ],
+      "notes": []
+    },
+    {
+      "venueId": "projektraum-fotografie-dortmund",
+      "status": "abgerufen",
+      "pages": 2,
+      "fetched": 2,
+      "cached": 0,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "kulturort-depot-dortmund",
+      "status": "abgerufen",
+      "pages": 6,
+      "fetched": 6,
+      "cached": 0,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "kunsthalle-dortmund",
+      "status": "abgerufen",
+      "pages": 6,
+      "fetched": 6,
+      "cached": 0,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "fh-dortmund-design-dortmund",
+      "status": "abgerufen",
+      "pages": 2,
+      "fetched": 2,
+      "cached": 0,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "photoszene-koeln",
+      "status": "zwischengespeichert",
+      "pages": 6,
+      "fetched": 0,
+      "cached": 6,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "duesseldorf-photo-plus",
+      "status": "zwischengespeichert",
+      "pages": 1,
+      "fetched": 0,
+      "cached": 1,
+      "errors": [],
       "notes": []
     }
   ]
