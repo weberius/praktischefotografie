@@ -352,6 +352,31 @@
     }
   },
   {
+    "id": "folkwang-universitaet-der-kuenste-essen",
+    "name": "Folkwang Universität der Künste – Fachbereich Gestaltung (Fotografie)",
+    "shortName": "Folkwang Universität",
+    "type": "foundation",
+    "city": "Essen",
+    "district": "Stoppenberg",
+    "address": {
+      "street": "Martin-Kremmer-Straße 21",
+      "zip": "45327",
+      "city": "Essen",
+      "lat": 51.491733,
+      "lng": 7.0421571
+    },
+    "website": "https://www.folkwang-uni.de/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.folkwang-uni.de/home/hochschule/ueber-folkwang/kontakt",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
     "id": "isg-fotoarchiv-gelsenkirchen",
     "name": "Institut für Stadtgeschichte Gelsenkirchen – Foto- und Filmarchiv",
     "shortName": "ISG Gelsenkirchen",

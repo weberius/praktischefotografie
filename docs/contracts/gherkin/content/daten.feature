@@ -182,3 +182,22 @@ Funktionalität: Datenmodell und Venue-Datenbestand
   Szenario: Dortmunder Orte liegen in Dortmund
     Angenommen der Datenbestand in "data/venues.json"
     Dann liegt jede Venue mit der city "Dortmund" mit lat zwischen 51.40 und 51.62 und lng zwischen 7.30 und 7.66
+
+  # EARS: VEN-UB-15, VEN-UB-16
+  Szenariogrundriss: Essener Orte sind im Katalog
+    Angenommen der Datenbestand in "data/venues.json"
+    Dann enthält er genau eine Venue mit der id "<id>", dem type "<typ>" und der city "Essen"
+    Und sie hat eine source mit url, checkedAt und status
+    Und sie hat eine website
+    Und der Datenbestand besteht die Validierung
+
+    Beispiele:
+      | id                                      | typ        |
+      | folkwang-universitaet-der-kuenste-essen | foundation |
+      | museum-folkwang-essen                   | museum     |
+      | ruhr-museum-essen                       | museum     |
+
+  # EARS: VEN-UB-15, VEN-UB-16
+  Szenario: Essener Orte liegen in Essen
+    Angenommen der Datenbestand in "data/venues.json"
+    Dann liegt jede Venue mit der city "Essen" mit lat zwischen 51.35 und 51.55 und lng zwischen 6.90 und 7.20

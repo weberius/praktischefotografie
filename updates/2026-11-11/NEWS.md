@@ -2,12 +2,8 @@
 
 | Anlass | Geplant | Verworfen | Freigegeben | Übernommen |
 | --- | --- | --- | --- | --- |
-| Neu | 1 | 0 | 1 | 1 |
-| Eröffnung | 1 | 0 | 1 | 1 |
-| Endet bald | 1 | 0 | 1 | 1 |
-| Ende | 1 | 0 | 1 | 1 |
+| Neu | 0 | 0 | 0 | 0 |
+| Eröffnung | 0 | 0 | 0 | 0 |
+| Endet bald | 0 | 0 | 0 | 0 |
+| Ende | 0 | 0 | 0 | 0 |
 
-- `verhaeltnisse-2026-neu` (anlegen, 2026-11-11): übernommen
-- `verhaeltnisse-2026-eroeffnung` (anlegen, 2026-11-20): übernommen
-- `verhaeltnisse-2026-endet-bald` (anlegen, 2026-12-06): übernommen
-- `verhaeltnisse-2026-ende` (anlegen, 2026-12-21): übernommen

@@ -1,7 +1,7 @@
 ---
-status: offen  # offen | in-arbeit | umgesetzt | verworfen
+status: umgesetzt  # offen | in-arbeit | umgesetzt | verworfen
 prio: 2            # optional, kleiner = früher
-ticket: 
+ticket: SERVICE-29
 ---
 
 # Orte der Fotografie in Essen: Museen, Institutionen und Ausstellungsräume

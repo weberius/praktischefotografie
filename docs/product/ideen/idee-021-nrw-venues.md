@@ -1,6 +1,12 @@
+---
+status: offen  # offen | in-arbeit | umgesetzt | verworfen
+prio: 2            # optional, kleiner = früher
+ticket: 
+---
+
 # Ergänzung: Orte und Institutionen der Fotografie in NRW
 
-Diese Übersicht ergänzt Ihre Liste um weitere relevante Orte in Nordrhein-Westfalen (außerhalb der Hauptmetropolen Köln, Düsseldorf, Essen und Dortmund) sowie das Japanische Kulturinstitut.
+Diese Übersicht ergänzt Ihre Liste um weitere relevante Orte in Nordrhein-Westfalen (außerhalb der Hauptmetropolen Köln, Düsseldorf, Essen und Dortmund) sowie das Japanische Kulturinstitut. Diese Datei enthält eine Übersicht über Museen, Galerien, Off-Spaces sowie weitere Ausstellungsorte und Formate für Fotografie (zusammengestellt für das *Zentrum für praktische Fotografie*). Die Recherche und die Überführung in die Datenbasis soll im Rahmen dieses Tickets erfolgen.
 
 ## 1. Nachtrag Köln
 

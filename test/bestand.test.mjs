@@ -57,6 +57,24 @@ test('Szenario: Dortmunder Orte sind im Katalog und liegen in Dortmund (VEN-UB-1
   }
 });
 
+test('Szenario: Essener Orte sind im Katalog und liegen in Essen (VEN-UB-15, VEN-UB-16, Q-DATA-24)', () => {
+  const erwartet = {
+    'folkwang-universitaet-der-kuenste-essen': 'foundation',
+    'museum-folkwang-essen': 'museum',
+    'ruhr-museum-essen': 'museum',
+  };
+  for (const [id, type] of Object.entries(erwartet)) {
+    const treffer = venues.filter((x) => x.id === id);
+    assert.equal(treffer.length, 1, id);
+    assert.equal(treffer[0].type, type, id);
+    assert.equal(treffer[0].city, 'Essen', id);
+  }
+  for (const v of venues.filter((x) => x.city === 'Essen')) {
+    assert.ok(v.address.lat >= 51.35 && v.address.lat <= 51.55 && v.address.lng >= 6.9 && v.address.lng <= 7.2, v.id);
+    assert.ok(v.website && v.source.url && v.source.checkedAt && ['recherchiert', 'verifiziert'].includes(v.source.status), v.id);
+  }
+});
+
 test('Szenario: Koordinaten liegen in NRW (VEN-UB-2)', () => {
   for (const { id, address: a } of venues) {
     assert.ok(a.lat >= NRW_BBOX.latMin && a.lat <= NRW_BBOX.latMax && a.lng >= NRW_BBOX.lngMin && a.lng <= NRW_BBOX.lngMax, id);
