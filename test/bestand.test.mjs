@@ -75,6 +75,26 @@ test('Szenario: Essener Orte sind im Katalog und liegen in Essen (VEN-UB-15, VEN
   }
 });
 
+test('Szenario: Weitere NRW-Orte sind im Katalog und liegen in ihrer Stadt (VEN-UB-17 bis VEN-UB-19, Q-DATA-25)', () => {
+  const erwartet = [
+    ['japanisches-kulturinstitut-koeln', 'foundation', 'Köln', [50.85, 51.05, 6.8, 7.15]],
+    ['gasometer-oberhausen', 'gallery', 'Oberhausen', [51.43, 51.54, 6.77, 6.91]],
+    ['camera-obscura-muelheim-an-der-ruhr', 'museum', 'Mülheim an der Ruhr', [51.38, 51.5, 6.78, 6.95]],
+    ['von-der-heydt-museum-wuppertal', 'museum', 'Wuppertal', [51.2, 51.32, 7.0, 7.3]],
+    ['kunstmuseen-krefeld', 'museum', 'Krefeld', [51.28, 51.4, 6.5, 6.7]],
+    ['lwl-museum-fuer-kunst-und-kultur-muenster', 'museum', 'Münster', [51.9, 52.02, 7.55, 7.7]],
+  ];
+  for (const [id, type, city, [latMin, latMax, lngMin, lngMax]] of erwartet) {
+    const treffer = venues.filter((x) => x.id === id);
+    assert.equal(treffer.length, 1, id);
+    const v = treffer[0];
+    assert.equal(v.type, type, id);
+    assert.equal(v.city, city, id);
+    assert.ok(v.address.lat >= latMin && v.address.lat <= latMax && v.address.lng >= lngMin && v.address.lng <= lngMax, id);
+    assert.ok(v.website && v.source.url && v.source.checkedAt && ['recherchiert', 'verifiziert'].includes(v.source.status), id);
+  }
+});
+
 test('Szenario: Koordinaten liegen in NRW (VEN-UB-2)', () => {
   for (const { id, address: a } of venues) {
     assert.ok(a.lat >= NRW_BBOX.latMin && a.lat <= NRW_BBOX.latMax && a.lng >= NRW_BBOX.lngMin && a.lng <= NRW_BBOX.lngMax, id);

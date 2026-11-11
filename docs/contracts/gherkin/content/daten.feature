@@ -201,3 +201,34 @@ Funktionalität: Datenmodell und Venue-Datenbestand
   Szenario: Essener Orte liegen in Essen
     Angenommen der Datenbestand in "data/venues.json"
     Dann liegt jede Venue mit der city "Essen" mit lat zwischen 51.35 und 51.55 und lng zwischen 6.90 und 7.20
+
+  # EARS: VEN-UB-17, VEN-UB-18
+  Szenariogrundriss: Weitere NRW-Orte sind im Katalog
+    Angenommen der Datenbestand in "data/venues.json"
+    Dann enthält er genau eine Venue mit der id "<id>", dem type "<typ>" und der city "<stadt>"
+    Und sie hat eine source mit url, checkedAt und status
+    Und sie hat eine website
+    Und der Datenbestand besteht die Validierung
+
+    Beispiele:
+      | id                                       | typ        | stadt                 |
+      | japanisches-kulturinstitut-koeln         | foundation | Köln                  |
+      | gasometer-oberhausen                     | gallery    | Oberhausen            |
+      | camera-obscura-muelheim-an-der-ruhr      | museum     | Mülheim an der Ruhr   |
+      | von-der-heydt-museum-wuppertal           | museum     | Wuppertal             |
+      | kunstmuseen-krefeld                      | museum     | Krefeld               |
+      | lwl-museum-fuer-kunst-und-kultur-muenster | museum    | Münster               |
+
+  # EARS: VEN-UB-19
+  Szenariogrundriss: Weitere NRW-Orte liegen in ihrer Stadt
+    Angenommen der Datenbestand in "data/venues.json"
+    Dann liegt die Venue mit der id "<id>" mit lat zwischen <lat_min> und <lat_max> und lng zwischen <lng_min> und <lng_max>
+
+    Beispiele:
+      | id                                        | lat_min | lat_max | lng_min | lng_max |
+      | japanisches-kulturinstitut-koeln          | 50.85   | 51.05   | 6.80    | 7.15    |
+      | gasometer-oberhausen                      | 51.43   | 51.54   | 6.77    | 6.91    |
+      | camera-obscura-muelheim-an-der-ruhr       | 51.38   | 51.50   | 6.78    | 6.95    |
+      | von-der-heydt-museum-wuppertal            | 51.20   | 51.32   | 7.00    | 7.30    |
+      | kunstmuseen-krefeld                       | 51.28   | 51.40   | 6.50    | 6.70    |
+      | lwl-museum-fuer-kunst-und-kultur-muenster | 51.90   | 52.02   | 7.55    | 7.70    |

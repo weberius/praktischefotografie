@@ -1,0 +1,115 @@
+{
+  "venueId": "kunstmuseen-krefeld",
+  "fetchedAt": "2026-11-11",
+  "changes": [
+    {
+      "id": "e1",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Kunst Hand Werk Brücke",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-22",
+        "endDate": "2026-11-22",
+        "startTime": "11:30",
+        "endTime": "12:30",
+        "venueId": "kunstmuseen-krefeld",
+        "city": "Krefeld",
+        "isCommercial": false,
+        "description": "Führung durch die Ausstellung im Haus Lange.",
+        "website": "https://kunstmuseenkrefeld.de/de/Program/2026/11/Kunst-Hand-Werk-Bruecke",
+        "id": "kunst-hand-werk-bruecke-2026"
+      },
+      "evidence": {
+        "url": "https://kunstmuseenkrefeld.de/de/Program/2026/11/Kunst-Hand-Werk-Bruecke",
+        "excerpt": "FührungKunst Hand Werk BrückeSo, 22. Nov. 2026, 11.30 Uhr–So, 22. Nov. 2026, 12.30 Uhr Haus Lange"
+      },
+      "approved": true,
+      "kind": "ergänzt",
+      "conflict": false,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e2",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Thorn Prikker und seine Zeit",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-15",
+        "endDate": "2026-11-15",
+        "startTime": "11:30",
+        "endTime": "13:00",
+        "venueId": "kunstmuseen-krefeld",
+        "city": "Krefeld",
+        "isCommercial": false,
+        "description": "Führung im Kaiser Wilhelm Museum.",
+        "website": "https://kunstmuseenkrefeld.de/de/Program/2026/11/Thorn-Prikker-Und-Seine-Zeit",
+        "id": "thorn-prikker-und-seine-zeit-2026"
+      },
+      "evidence": {
+        "url": "https://kunstmuseenkrefeld.de/de/Program/2026/11/Thorn-Prikker-Und-Seine-Zeit",
+        "excerpt": "FührungThorn Prikker und seine ZeitSo, 15. Nov. 2026, 11.30 Uhr–So, 15. Nov. 2026, 13.00 Uhr Kaiser Wilhelm Museum"
+      },
+      "approved": true,
+      "kind": "ergänzt",
+      "conflict": false,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e3",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Dialogführung Kunst x Handwerk",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-13",
+        "endDate": "2026-11-13",
+        "startTime": "15:00",
+        "endTime": "17:00",
+        "venueId": "kunstmuseen-krefeld",
+        "city": "Krefeld",
+        "isCommercial": false,
+        "description": "Museumstreff-Dialogführung in Kooperation mit der VHS Krefeld, Haus Esters und Haus Lange. Anmeldung über die VHS Krefeld.",
+        "website": "https://kunstmuseenkrefeld.de/de/Program/2026/11/Museumstreff-Dialogfuehrung-Kunst-X-Handwerk",
+        "id": "dialogfuehrung-kunst-x-handwerk-2026"
+      },
+      "evidence": {
+        "url": "https://kunstmuseenkrefeld.de/de/Program/2026/11/Museumstreff-Dialogfuehrung-Kunst-X-Handwerk",
+        "excerpt": "Dialogführung Kunst x Handwerkin Kooperation mit der VHS Krefeld Anmeldung über die VHS KrefeldFr, 13. Nov. 2026, 15.00 Uhr–Fr, 13. Nov. 2026, 17.00 Uhr"
+      },
+      "approved": true,
+      "kind": "ergänzt",
+      "conflict": false,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e4",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Kunterbunt und riesengroß",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-14",
+        "endDate": "2026-11-14",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "venueId": "kunstmuseen-krefeld",
+        "city": "Krefeld",
+        "isCommercial": false,
+        "description": "Familienführung: interaktiver, spielerischer Museumsrundgang mit künstlerischem Teil im Kaiser Wilhelm Museum. Mit der Krefelder Familienkarte ist der Eintritt frei.",
+        "website": "https://kunstmuseenkrefeld.de/de/Program/2026/11/Kunst-Fuer-Klein-Und-Gross-Fuehrung-Kunterbunt-Und-Riesengross",
+        "id": "kunterbunt-und-riesengross-2026"
+      },
+      "evidence": {
+        "url": "https://kunstmuseenkrefeld.de/de/Program/2026/11/Kunst-Fuer-Klein-Und-Gross-Fuehrung-Kunterbunt-Und-Riesengross",
+        "excerpt": "Kunterbunt und riesengroßInteraktiver, spielerischer Museumsrundgang mit künstlerischem TeilSa, 14. Nov. 2026, 14.00 Uhr–Sa, 14. Nov. 2026, 16.00 Uhr"
+      },
+      "approved": true,
+      "kind": "ergänzt",
+      "conflict": false,
+      "appliedAt": "2026-11-11"
+    }
+  ],
+  "rejected": []
+}

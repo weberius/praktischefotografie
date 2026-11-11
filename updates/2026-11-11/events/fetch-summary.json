@@ -132,10 +132,10 @@
     },
     {
       "venueId": "folkwang-universitaet-der-kuenste-essen",
-      "status": "abgerufen",
+      "status": "zwischengespeichert",
       "pages": 10,
-      "fetched": 5,
-      "cached": 5,
+      "fetched": 0,
+      "cached": 10,
       "errors": [],
       "notes": []
     },
@@ -379,6 +379,60 @@
       "pages": 10,
       "fetched": 0,
       "cached": 10,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "japanisches-kulturinstitut-koeln",
+      "status": "abgerufen",
+      "pages": 10,
+      "fetched": 5,
+      "cached": 5,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "gasometer-oberhausen",
+      "status": "abgerufen",
+      "pages": 10,
+      "fetched": 5,
+      "cached": 5,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "camera-obscura-muelheim-an-der-ruhr",
+      "status": "abgerufen",
+      "pages": 8,
+      "fetched": 3,
+      "cached": 5,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "von-der-heydt-museum-wuppertal",
+      "status": "abgerufen",
+      "pages": 10,
+      "fetched": 7,
+      "cached": 3,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "kunstmuseen-krefeld",
+      "status": "abgerufen",
+      "pages": 10,
+      "fetched": 8,
+      "cached": 2,
+      "errors": [],
+      "notes": []
+    },
+    {
+      "venueId": "lwl-museum-fuer-kunst-und-kultur-muenster",
+      "status": "abgerufen",
+      "pages": 10,
+      "fetched": 5,
+      "cached": 5,
       "errors": [],
       "notes": []
     }

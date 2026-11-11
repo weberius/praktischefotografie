@@ -1,7 +1,7 @@
 ---
-status: offen  # offen | in-arbeit | umgesetzt | verworfen
+status: umgesetzt  # offen | in-arbeit | umgesetzt | verworfen
 prio: 2            # optional, kleiner = früher
-ticket: 
+ticket: SERVICE-30
 ---
 
 # Ergänzung: Orte und Institutionen der Fotografie in NRW

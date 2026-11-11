@@ -1,0 +1,85 @@
+{
+  "venueId": "von-der-heydt-museum-wuppertal",
+  "fetchedAt": "2026-11-11",
+  "changes": [
+    {
+      "id": "e1",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Kurator*innenführung in der Ausstellung \"Schön & Streng. Die Macht des Ornaments\"",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-12",
+        "endDate": "2026-11-12",
+        "startTime": "16:30",
+        "venueId": "von-der-heydt-museum-wuppertal",
+        "city": "Wuppertal",
+        "isCommercial": false,
+        "description": "Kurator*innenführung mit Dr. Beate Eickhoff.",
+        "website": "https://von-der-heydt-museum.de/kalender/",
+        "id": "kurator-innenfuehrung-in-der-ausstellung-schoen-streng-die-macht-des-ornaments-2026"
+      },
+      "evidence": {
+        "url": "https://von-der-heydt-museum.de/kalender/",
+        "excerpt": "Kurator*innenführung in der Ausstellung \"Schön & Streng. Die Macht des Ornaments\" 12.11.2026 16:30 Uhr"
+      },
+      "approved": true,
+      "kind": "ergänzt",
+      "conflict": false,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e2",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Öffentliche Führung in der Ausstellung \"Schön & Streng. Die Macht des Ornaments\"",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-15",
+        "endDate": "2026-11-15",
+        "startTime": "15:30",
+        "venueId": "von-der-heydt-museum-wuppertal",
+        "city": "Wuppertal",
+        "isCommercial": false,
+        "description": "Tickets an der Museumskasse oder im Online-Shop.",
+        "website": "https://von-der-heydt-museum.de/kalender/",
+        "id": "oeffentliche-fuehrung-in-der-ausstellung-schoen-streng-die-macht-des-ornaments-2026"
+      },
+      "evidence": {
+        "url": "https://von-der-heydt-museum.de/kalender/",
+        "excerpt": "Öffentliche Führung in der Ausstellung \"Schön & Streng. Die Macht des Ornaments\" 15.11.2026 15:30 Uhr"
+      },
+      "approved": true,
+      "kind": "ergänzt",
+      "conflict": false,
+      "appliedAt": "2026-11-11"
+    },
+    {
+      "id": "e3",
+      "dataset": "events",
+      "op": "add",
+      "record": {
+        "title": "Öffentliche Führung in der Ausstellung \"Schön & Streng. Die Macht des Ornaments\"",
+        "eventType": "guided_tour",
+        "startDate": "2026-11-17",
+        "endDate": "2026-11-17",
+        "startTime": "11:30",
+        "venueId": "von-der-heydt-museum-wuppertal",
+        "city": "Wuppertal",
+        "isCommercial": false,
+        "description": "Tickets an der Museumskasse oder im Online-Shop.",
+        "website": "https://von-der-heydt-museum.de/kalender/",
+        "id": "oeffentliche-fuehrung-in-der-ausstellung-schoen-streng-die-macht-des-ornaments-2026-2"
+      },
+      "evidence": {
+        "url": "https://von-der-heydt-museum.de/kalender/",
+        "excerpt": "Öffentliche Führung in der Ausstellung \"Schön & Streng. Die Macht des Ornaments\" 17.11.2026 11:30 Uhr"
+      },
+      "approved": true,
+      "kind": "ergänzt",
+      "conflict": false,
+      "appliedAt": "2026-11-11"
+    }
+  ],
+  "rejected": []
+}

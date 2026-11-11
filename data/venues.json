@@ -1025,5 +1025,157 @@
       "checkedAt": "2026-11-11",
       "status": "recherchiert"
     }
+  },
+  {
+    "id": "japanisches-kulturinstitut-koeln",
+    "name": "Japanisches Kulturinstitut Köln (The Japan Foundation)",
+    "shortName": "Japanisches Kulturinstitut",
+    "type": "foundation",
+    "city": "Köln",
+    "district": "Neustadt-Süd",
+    "address": {
+      "street": "Universitätsstraße 98",
+      "zip": "50674",
+      "city": "Köln",
+      "lat": 50.9344311,
+      "lng": 6.9257912
+    },
+    "website": "https://co.jpf.go.jp/",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": true,
+      "libraryNotes": "Eigene Bibliothek des Instituts mit eigener Kontaktadresse laut Website; Umfang und Nutzungsbedingungen nicht belegt."
+    },
+    "source": {
+      "url": "https://co.jpf.go.jp/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "gasometer-oberhausen",
+    "name": "Gasometer Oberhausen",
+    "shortName": "Gasometer Oberhausen",
+    "type": "gallery",
+    "city": "Oberhausen",
+    "district": "Neue Mitte",
+    "address": {
+      "street": "Arenastraße 11",
+      "zip": "46047",
+      "city": "Oberhausen",
+      "lat": 51.4940683,
+      "lng": 6.8704895
+    },
+    "website": "https://www.gasometer.de/de",
+    "features": {
+      "hasPermanentCollection": false,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.gasometer.de/de",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "camera-obscura-muelheim-an-der-ruhr",
+    "name": "Camera Obscura – Museum zur Vorgeschichte des Films",
+    "shortName": "Camera Obscura Mülheim",
+    "type": "museum",
+    "city": "Mülheim an der Ruhr",
+    "district": "Broich",
+    "address": {
+      "street": "Am Schloß Broich 42",
+      "zip": "45479",
+      "city": "Mülheim an der Ruhr",
+      "lat": 51.4291069,
+      "lng": 6.8681763
+    },
+    "website": "https://www.camera-obscura-muelheim.de/",
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.camera-obscura-muelheim.de/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "von-der-heydt-museum-wuppertal",
+    "name": "Von der Heydt-Museum",
+    "shortName": "Von der Heydt-Museum",
+    "type": "museum",
+    "city": "Wuppertal",
+    "district": "Elberfeld",
+    "address": {
+      "street": "Turmhof 8",
+      "zip": "42103",
+      "city": "Wuppertal",
+      "lat": 51.2574373,
+      "lng": 7.1466389
+    },
+    "website": "https://von-der-heydt-museum.de/",
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": true,
+      "libraryNotes": "Museumsbibliothek (Burgstraße 2, Wuppertal) laut Kontaktseite des Museums; Fotosammlung mit rund 800 Fotografien."
+    },
+    "source": {
+      "url": "https://von-der-heydt-museum.de/museum/kontakt/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "kunstmuseen-krefeld",
+    "name": "Kunstmuseen Krefeld (Kaiser Wilhelm Museum, Haus Lange, Haus Esters)",
+    "shortName": "Kunstmuseen Krefeld",
+    "type": "museum",
+    "city": "Krefeld",
+    "district": "Mitte",
+    "address": {
+      "street": "Joseph-Beuys-Platz 1",
+      "zip": "47798",
+      "city": "Krefeld",
+      "lat": 51.3303094,
+      "lng": 6.5594522
+    },
+    "website": "https://kunstmuseenkrefeld.de/de",
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://kunstmuseenkrefeld.de/de",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
+  },
+  {
+    "id": "lwl-museum-fuer-kunst-und-kultur-muenster",
+    "name": "LWL-Museum für Kunst und Kultur",
+    "shortName": "LWL-Museum Münster",
+    "type": "museum",
+    "city": "Münster",
+    "district": "Altstadt",
+    "address": {
+      "street": "Domplatz 10",
+      "zip": "48143",
+      "city": "Münster",
+      "lat": 51.9613817,
+      "lng": 7.6242696
+    },
+    "website": "https://www.lwl-museum-kunst-kultur.de/de/",
+    "features": {
+      "hasPermanentCollection": true,
+      "hasReferenceLibrary": false
+    },
+    "source": {
+      "url": "https://www.lwl-museum-kunst-kultur.de/de/",
+      "checkedAt": "2026-11-11",
+      "status": "recherchiert"
+    }
   }
 ]
