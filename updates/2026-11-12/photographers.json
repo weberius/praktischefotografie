@@ -1,0 +1,1082 @@
+{
+  "date": "2026-11-12",
+  "proposals": [
+    {
+      "id": "august-sander",
+      "occupation": "Fotograf",
+      "summary": "August Sander wuchs als Sohn eines Grubenzimmerhauers in Herdorf auf und kam über einen Siegener Berufsfotografen zur Fotografie. Nach Militärdienst in Trier und Wanderjahren übernahm er 1901 bis 1902 ein Atelier in Linz an der Donau. Später wurde er mit dem Projekt Menschen des 20. Jahrhunderts bekannt, einem Querschnitt der Gesellschaft der Weimarer Republik. Sein erstes Buch Antlitz der Zeit erschien 1929. Er zählt zu den wichtigsten Porträtfotografen des 20. Jahrhunderts, arbeitete aber auch in Landschaft, Natur und Architektur. Seine Bildsprache gilt als dokumentarisch, sachlich und konzeptuell.",
+      "sources": [
+        "de",
+        "en"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1876,
+          "to": 1964
+        },
+        "wikipedia": {
+          "summary": "August Sander wuchs als Sohn eines Grubenzimmerhauers in Herdorf auf und kam über einen Siegener Berufsfotografen zur Fotografie. Nach Militärdienst in Trier und Wanderjahren übernahm er 1901 bis 1902 ein Atelier in Linz an der Donau. Später wurde er mit dem Projekt Menschen des 20. Jahrhunderts bekannt, einem Querschnitt der Gesellschaft der Weimarer Republik. Sein erstes Buch Antlitz der Zeit erschien 1929. Er zählt zu den wichtigsten Porträtfotografen des 20. Jahrhunderts, arbeitete aber auch in Landschaft, Natur und Architektur. Seine Bildsprache gilt als dokumentarisch, sachlich und konzeptuell.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/August_Sander"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/August_Sander"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "tina-barney",
+      "occupation": "Fotografin",
+      "summary": "Tina Barney wuchs als Tochter einer wohlhabenden Familie an der amerikanischen Ostküste auf und studierte Kunstgeschichte. Sie arbeitete im Museum of Modern Art und baute eine eigene Kunstsammlung auf. In den 1970er Jahren lernte sie in Idaho das Fotografieren und hielt in den Sommern in Neuengland Menschen fest, die ihr seit der Kindheit vertraut waren. Ab 1981 wechselte sie zur Großformatkamera mit Abzügen von etwa 120 mal 150 Zentimetern. Bekannt wurde sie mit farbigen Porträts ihrer Familie und Freunde in New York und Neuengland; das Museum of Modern Art kaufte 1983 eines ihrer Bilder.",
+      "sources": [
+        "de",
+        "en"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotografin",
+        "life": {
+          "from": 1945,
+          "to": null
+        },
+        "wikipedia": {
+          "summary": "Tina Barney wuchs als Tochter einer wohlhabenden Familie an der amerikanischen Ostküste auf und studierte Kunstgeschichte. Sie arbeitete im Museum of Modern Art und baute eine eigene Kunstsammlung auf. In den 1970er Jahren lernte sie in Idaho das Fotografieren und hielt in den Sommern in Neuengland Menschen fest, die ihr seit der Kindheit vertraut waren. Ab 1981 wechselte sie zur Großformatkamera mit Abzügen von etwa 120 mal 150 Zentimetern. Bekannt wurde sie mit farbigen Porträts ihrer Familie und Freunde in New York und Neuengland; das Museum of Modern Art kaufte 1983 eines ihrer Bilder.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Tina_Barney"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Tina_Barney"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "wolfgang-zurborn",
+      "occupation": "Fotograf",
+      "summary": "Wolfgang Zurborn ist ein freischaffender deutscher Fotograf, der in Köln lebt und arbeitet. Er studierte Fotografie- und Filmdesign und unterrichtet an mehreren Hochschulen und Universitäten, darunter in Berlin, Braunschweig, Bremen, Karlsruhe und Dortmund. Seit 1986 betreibt er mit Tina Schelhorn die Fotogalerie Lichtblick in Köln und gehört seit 1998 dem Präsidium der Deutschen Fotografischen Akademie an. Seine Arbeiten wurden international ausgestellt, oft mit den Werkschauen Drift, Terra Incognita und dressur real. Für sein Buch Drift erhielt er 2008 den Deutschen Fotobuchpreis; 1985 gewann er den Otto-Steinert-Preis.",
+      "sources": [
+        "de"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1956,
+          "to": null
+        },
+        "wikipedia": {
+          "summary": "Wolfgang Zurborn ist ein freischaffender deutscher Fotograf, der in Köln lebt und arbeitet. Er studierte Fotografie- und Filmdesign und unterrichtet an mehreren Hochschulen und Universitäten, darunter in Berlin, Braunschweig, Bremen, Karlsruhe und Dortmund. Seit 1986 betreibt er mit Tina Schelhorn die Fotogalerie Lichtblick in Köln und gehört seit 1998 dem Präsidium der Deutschen Fotografischen Akademie an. Seine Arbeiten wurden international ausgestellt, oft mit den Werkschauen Drift, Terra Incognita und dressur real. Für sein Buch Drift erhielt er 2008 den Deutschen Fotobuchpreis; 1985 gewann er den Otto-Steinert-Preis.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Wolfgang_Zurborn"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "paul-almasy",
+      "occupation": "Fotojournalist",
+      "summary": "Paul Almásy wurde in Budapest geboren, studierte Politikwissenschaften in Wien, München und Heidelberg und arbeitete zunächst als Journalist. Seine ersten Fotografien entstanden 1935 auf einer Südamerikareise. Danach berichtete er in Reportagen aus allen Erdteilen, durchquerte etwa die Sahara mit dem Auto und reiste nach dem Krieg von Paris aus weiter, unter anderem für UN-Institutionen wie UNICEF und UNESCO. 1956 nahm er die französische Staatsbürgerschaft an. Er lehrte an der Sorbonne und hinterließ rund 120.000 Negative. Seine Motive waren Menschen aller Schichten, auch Randgruppen. Er starb 2003 bei Paris.",
+      "sources": [
+        "de",
+        "en",
+        "fr"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotojournalist",
+        "life": {
+          "from": 1906,
+          "to": 2003
+        },
+        "wikipedia": {
+          "summary": "Paul Almásy wurde in Budapest geboren, studierte Politikwissenschaften in Wien, München und Heidelberg und arbeitete zunächst als Journalist. Seine ersten Fotografien entstanden 1935 auf einer Südamerikareise. Danach berichtete er in Reportagen aus allen Erdteilen, durchquerte etwa die Sahara mit dem Auto und reiste nach dem Krieg von Paris aus weiter, unter anderem für UN-Institutionen wie UNICEF und UNESCO. 1956 nahm er die französische Staatsbürgerschaft an. Er lehrte an der Sorbonne und hinterließ rund 120.000 Negative. Seine Motive waren Menschen aller Schichten, auch Randgruppen. Er starb 2003 bei Paris.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Paul_Alm%C3%A1sy"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Paul_Alm%C3%A1sy"
+            },
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/Paul_Alm%C3%A1sy"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "bruno-barbey",
+      "occupation": "Fotograf",
+      "summary": "Bruno Barbey verbrachte seine Kindheit in Marokko und studierte Grafik und Fotografie in Vevey. In den 1960er Jahren illustrierte er für einen Verlag Bücher über Reisen durch Europa und Afrika. 1968 wurde er Vollmitglied der Agentur Magnum und dokumentierte die Unruhen in Paris. Er berichtete aus Biafra, Vietnam, dem Nahen Osten, Bangladesch, Kambodscha, Nordirland und dem Irak, wehrte sich aber gegen das Etikett des Kriegsfotografen. Seine Reportagen erschienen unter anderem in Life, Paris Match, Stern und National Geographic. Von 1992 bis 1995 war er Präsident von Magnum International; 2016 wurde er in die Académie des Beaux-Arts aufgenommen.",
+      "sources": [
+        "de",
+        "en",
+        "fr"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1941,
+          "to": 2020
+        },
+        "wikipedia": {
+          "summary": "Bruno Barbey verbrachte seine Kindheit in Marokko und studierte Grafik und Fotografie in Vevey. In den 1960er Jahren illustrierte er für einen Verlag Bücher über Reisen durch Europa und Afrika. 1968 wurde er Vollmitglied der Agentur Magnum und dokumentierte die Unruhen in Paris. Er berichtete aus Biafra, Vietnam, dem Nahen Osten, Bangladesch, Kambodscha, Nordirland und dem Irak, wehrte sich aber gegen das Etikett des Kriegsfotografen. Seine Reportagen erschienen unter anderem in Life, Paris Match, Stern und National Geographic. Von 1992 bis 1995 war er Präsident von Magnum International; 2016 wurde er in die Académie des Beaux-Arts aufgenommen.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Bruno_Barbey"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Bruno_Barbey"
+            },
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/Bruno_Barbey"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "heinrich-von-der-becke",
+      "occupation": "Sportfotograf",
+      "summary": "Heinrich von der Becke bekam mit zwölf Jahren seine erste Kamera und begann 1928 eine Lehre bei der Berliner Sportbildagentur Max Schirner. Ab 1935 arbeitete er bei der Pressebildzentrale Berlin. Im Zweiten Weltkrieg diente er als Soldat und wurde mehrfach verwundet. Im Oktober 1945 machte er sich als Pressefotograf selbständig und richtete mit seiner Frau Theresia Geschäftsräume in Berlin-Charlottenburg. Weltweit bekannt wurden seine Bilder von Jesse Owens bei den Olympischen Spielen 1936. Sein Archiv umfasst etwa 65.000 Schwarzweiß-Abzüge und 1,2 Millionen Negative; sein Markenzeichen war die Schiebermütze.",
+      "sources": [
+        "de"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Sportfotograf",
+        "life": {
+          "from": 1913,
+          "to": 1997
+        },
+        "wikipedia": {
+          "summary": "Heinrich von der Becke bekam mit zwölf Jahren seine erste Kamera und begann 1928 eine Lehre bei der Berliner Sportbildagentur Max Schirner. Ab 1935 arbeitete er bei der Pressebildzentrale Berlin. Im Zweiten Weltkrieg diente er als Soldat und wurde mehrfach verwundet. Im Oktober 1945 machte er sich als Pressefotograf selbständig und richtete mit seiner Frau Theresia Geschäftsräume in Berlin-Charlottenburg. Weltweit bekannt wurden seine Bilder von Jesse Owens bei den Olympischen Spielen 1936. Sein Archiv umfasst etwa 65.000 Schwarzweiß-Abzüge und 1,2 Millionen Negative; sein Markenzeichen war die Schiebermütze.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Heinrich_von_der_Becke"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "norbert-bunge",
+      "occupation": "Filmemacher",
+      "summary": "Norbert Bunge war Filmemacher, Kameramann, Fotograf und Galerist in Berlin. Er begann hinter der Kamera und übernahm später Regie und Produktion. Seine Filme porträtieren Künstler wie Grosz, Weiss und Cremer und behandeln den Nationalsozialismus und die Apartheid und liefen im Kino, im Fernsehen und auf Festivals. 1996 eröffnete er in Berlin-Mitte die Galerie argus fotokunst, die der Fotografie des 20. Jahrhunderts gewidmet war, vor allem der Schwarzweißfotografie. Er machte besonders die ostdeutsche Fotografie bekannter, etwa Arno Fischer, Helga Paris und Sibylle Bergemann. Er starb 2024.",
+      "sources": [
+        "de"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Filmemacher",
+        "life": {
+          "from": 1941,
+          "to": 2024
+        },
+        "wikipedia": {
+          "summary": "Norbert Bunge war Filmemacher, Kameramann, Fotograf und Galerist in Berlin. Er begann hinter der Kamera und übernahm später Regie und Produktion. Seine Filme porträtieren Künstler wie Grosz, Weiss und Cremer und behandeln den Nationalsozialismus und die Apartheid und liefen im Kino, im Fernsehen und auf Festivals. 1996 eröffnete er in Berlin-Mitte die Galerie argus fotokunst, die der Fotografie des 20. Jahrhunderts gewidmet war, vor allem der Schwarzweißfotografie. Er machte besonders die ostdeutsche Fotografie bekannter, etwa Arno Fischer, Helga Paris und Sibylle Bergemann. Er starb 2024.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Norbert_Bunge"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "pietro-donzelli",
+      "occupation": "Fotograf",
+      "summary": "Geboren 1915 in Monte-Carlo, wuchs Pietro Donzelli in Mailand auf. Beruflich war er bei der staatlichen Telefongesellschaft in Mailand angestellt und erwarb 1939 seine erste Kamera. Erst nach dem Krieg, im Alter von 31, fing er an, eigene Bilder zu machen, und trat dem Circolo Fotografico Milanese bei. 1947 rief er mit Mitstreitern die Zeitschrift Fotografia ins Leben und richtete Ausstellungen aus dem In- und Ausland aus. Seine Schwarzweißbilder des Italiens der Nachkriegsjahrzehnte, oft von Einsamkeit geprägt, fanden internationale Anerkennung. Man zählt ihn zu den Maestros der italienischen Fotografie; er wirkte zudem als Kurator.",
+      "sources": [
+        "de",
+        "it"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1915,
+          "to": 1998
+        },
+        "wikipedia": {
+          "summary": "Geboren 1915 in Monte-Carlo, wuchs Pietro Donzelli in Mailand auf. Beruflich war er bei der staatlichen Telefongesellschaft in Mailand angestellt und erwarb 1939 seine erste Kamera. Erst nach dem Krieg, im Alter von 31, fing er an, eigene Bilder zu machen, und trat dem Circolo Fotografico Milanese bei. 1947 rief er mit Mitstreitern die Zeitschrift Fotografia ins Leben und richtete Ausstellungen aus dem In- und Ausland aus. Seine Schwarzweißbilder des Italiens der Nachkriegsjahrzehnte, oft von Einsamkeit geprägt, fanden internationale Anerkennung. Man zählt ihn zu den Maestros der italienischen Fotografie; er wirkte zudem als Kurator.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Pietro_Donzelli"
+            },
+            {
+              "lang": "it",
+              "url": "https://it.wikipedia.org/wiki/Pietro_Donzelli"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "leonard-freed",
+      "occupation": "Fotograf",
+      "summary": "Leonard Freed wollte zunächst Maler werden und begann mit 24 Jahren auf einer Reise durch die Niederlande zu fotografieren. Zurück in Amerika belegte er 1954 einen Kurs bei Alexey Brodovitch. 1961 wurde er freier Fotograf und lernte früh Edward Steichen kennen. Sein Bildband Black in White America von 1968 über Afroamerikaner in Harlem fand als Beitrag zur Bürgerrechtsbewegung Anerkennung. Daneben dokumentierte er die arabisch-israelischen Kriege 1967 und 1973 sowie den Alltag in einem New Yorker Polizeirevier, woraus 1980 das Buch Police Work entstand. Ab 1972 gehörte er zu Magnum Photos.",
+      "sources": [
+        "de",
+        "en"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1929,
+          "to": 2006
+        },
+        "wikipedia": {
+          "summary": "Leonard Freed wollte zunächst Maler werden und begann mit 24 Jahren auf einer Reise durch die Niederlande zu fotografieren. Zurück in Amerika belegte er 1954 einen Kurs bei Alexey Brodovitch. 1961 wurde er freier Fotograf und lernte früh Edward Steichen kennen. Sein Bildband Black in White America von 1968 über Afroamerikaner in Harlem fand als Beitrag zur Bürgerrechtsbewegung Anerkennung. Daneben dokumentierte er die arabisch-israelischen Kriege 1967 und 1973 sowie den Alltag in einem New Yorker Polizeirevier, woraus 1980 das Buch Police Work entstand. Ab 1972 gehörte er zu Magnum Photos.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Leonard_Freed"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Leonard_Freed"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "gilbert-garcin",
+      "occupation": "Fotograf",
+      "summary": "Gilbert Garcin wurde 1929 in La Ciotat geboren und arbeitete zunächst als Unternehmer. Erst mit 65 Jahren begann er eine Laufbahn als Fotograf. Er gewann einen Fotowettbewerb, der ihm 1992 die Teilnahme an einem Fotomontage-Kurs bei den Rencontres d'Arles ermöglichte. Die Technik faszinierte ihn. Seine Bilder zeigen ausgeschnittene Papierfiguren, meist von ihm selbst und manchmal von seiner Frau, die er in surreal wirkende Hintergründe einfügte. Mit diesem eigenen Stil wurde er weltweit bekannt. Er starb 2020 in Marseille im Alter von 91 Jahren.",
+      "sources": [
+        "en",
+        "fr"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1929,
+          "to": 2020
+        },
+        "wikipedia": {
+          "summary": "Gilbert Garcin wurde 1929 in La Ciotat geboren und arbeitete zunächst als Unternehmer. Erst mit 65 Jahren begann er eine Laufbahn als Fotograf. Er gewann einen Fotowettbewerb, der ihm 1992 die Teilnahme an einem Fotomontage-Kurs bei den Rencontres d'Arles ermöglichte. Die Technik faszinierte ihn. Seine Bilder zeigen ausgeschnittene Papierfiguren, meist von ihm selbst und manchmal von seiner Frau, die er in surreal wirkende Hintergründe einfügte. Mit diesem eigenen Stil wurde er weltweit bekannt. Er starb 2020 in Marseille im Alter von 91 Jahren.",
+          "sources": [
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Gilbert_Garcin"
+            },
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/Gilbert_Garcin"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "bernd-heyden",
+      "occupation": "Fotograf",
+      "summary": "Bernd Heyden wuchs bei seiner Mutter im Bötzow-Viertel des Berliner Prenzlauer Bergs auf. Er lernte zunächst Damenschneider, arbeitete als Bügler und später als Fahrer an der Hochschule in Weißensee. Ab 1965 fotografierte er und arbeitete im Club junger Fotografen mit, den Arno Fischer und Sibylle Bergemann gegründet hatten. Seit 1976 war er freiberuflich tätig und Mitglied im Verband Bildender Künstler der DDR. Zwischen 1970 und 1980 entstanden nahezu alle erhaltenen Aufnahmen des Stadtteils Prenzlauer Berg, weit mehr als 1000 Motive. Er starb 1984; sein Nachlass liegt beim Bildarchiv Preußischer Kulturbesitz.",
+      "sources": [
+        "de"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1940,
+          "to": 1984
+        },
+        "wikipedia": {
+          "summary": "Bernd Heyden wuchs bei seiner Mutter im Bötzow-Viertel des Berliner Prenzlauer Bergs auf. Er lernte zunächst Damenschneider, arbeitete als Bügler und später als Fahrer an der Hochschule in Weißensee. Ab 1965 fotografierte er und arbeitete im Club junger Fotografen mit, den Arno Fischer und Sibylle Bergemann gegründet hatten. Seit 1976 war er freiberuflich tätig und Mitglied im Verband Bildender Künstler der DDR. Zwischen 1970 und 1980 entstanden nahezu alle erhaltenen Aufnahmen des Stadtteils Prenzlauer Berg, weit mehr als 1000 Motive. Er starb 1984; sein Nachlass liegt beim Bildarchiv Preußischer Kulturbesitz.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Bernd_Heyden"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "gerhard-hopf",
+      "occupation": "Fotograf",
+      "summary": "Gerhard Hopf, in Leipzig zu Hause, ist Fotograf und Fotografiker. Nach dem Studium an der Hochschule für Grafik und Buchkunst arbeitete er dort bis 1981 als künstlerischer Assistent für das Grundlagenstudium der Fotografie. Danach arbeitete er auf eigene Rechnung für Zeitungen, Industrie und Verlage. Von 1991 bis 2005 arbeitete er als freier Mitarbeiter der Pressestelle des Mitteldeutschen Rundfunks in Leipzig. Ein großer Teil seiner Fotografien zeigt Leipzig und erschien oft in Leipziger Blättern. Hopf war bis 1990 Mitglied im Verband Bildender Künstler der DDR. 2021 übernahm das Stadtarchiv Leipzig über 2100 seiner Negative.",
+      "sources": [
+        "de"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1946,
+          "to": null
+        },
+        "wikipedia": {
+          "summary": "Gerhard Hopf, in Leipzig zu Hause, ist Fotograf und Fotografiker. Nach dem Studium an der Hochschule für Grafik und Buchkunst arbeitete er dort bis 1981 als künstlerischer Assistent für das Grundlagenstudium der Fotografie. Danach arbeitete er auf eigene Rechnung für Zeitungen, Industrie und Verlage. Von 1991 bis 2005 arbeitete er als freier Mitarbeiter der Pressestelle des Mitteldeutschen Rundfunks in Leipzig. Ein großer Teil seiner Fotografien zeigt Leipzig und erschien oft in Leipziger Blättern. Hopf war bis 1990 Mitglied im Verband Bildender Künstler der DDR. 2021 übernahm das Stadtarchiv Leipzig über 2100 seiner Negative.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Gerhard_Hopf"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "lotte-jacobi",
+      "occupation": "Fotografin",
+      "summary": "Lotte Jacobi stammte aus einer jüdischen Fotografenfamilie, wuchs in Posen auf und zog 1921 nach Berlin. Sie studierte in München Film und Fotografie und übernahm das Atelier ihres Vaters. Ihre Bilder erschienen in Illustrierten wie der Berliner Illustrirten Zeitung. Unter dem nationalsozialistischen Regime konnte sie kaum noch arbeiten und emigrierte 1935 nach New York, wo sie Intellektuelle, Schriftsteller und Künstler porträtierte. Später ließ sie sich in New Hampshire nieder. Sie gilt als bedeutende deutsch-amerikanische Porträtfotografin, bekannt für kontrastreiche Schwarzweißbilder, die menschlich, intim und oft eigenwillig wirken.",
+      "sources": [
+        "de",
+        "en"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotografin",
+        "life": {
+          "from": 1896,
+          "to": 1990
+        },
+        "wikipedia": {
+          "summary": "Lotte Jacobi stammte aus einer jüdischen Fotografenfamilie, wuchs in Posen auf und zog 1921 nach Berlin. Sie studierte in München Film und Fotografie und übernahm das Atelier ihres Vaters. Ihre Bilder erschienen in Illustrierten wie der Berliner Illustrirten Zeitung. Unter dem nationalsozialistischen Regime konnte sie kaum noch arbeiten und emigrierte 1935 nach New York, wo sie Intellektuelle, Schriftsteller und Künstler porträtierte. Später ließ sie sich in New Hampshire nieder. Sie gilt als bedeutende deutsch-amerikanische Porträtfotografin, bekannt für kontrastreiche Schwarzweißbilder, die menschlich, intim und oft eigenwillig wirken.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Lotte_Jacobi"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Lotte_Jacobi"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "max-jacoby",
+      "occupation": "Fotograf",
+      "summary": "Max Jacoby wurde 1919 in Koblenz geboren und zog Mitte der 1930er Jahre nach Berlin, um dort eine Ausbildung zum Fotografen zu beginnen. 1937 wanderte er nach Buenos Aires aus und arbeitete zunächst als Vertreter, dann als Assistent. 1941 machte er sich selbstständig und fotografierte für Zeitschriften und Werbeagenturen. 1951 gehörte er zu den Gründern der Fotografengruppe Group of Ten, die die moderne südamerikanische Fotografie prägte. 1957 kehrte er nach Berlin zurück. Seine Arbeiten zeigen Länder, Städte, Menschen und Porträts von Persönlichkeiten und wurden international ausgestellt. Er starb 2009 in Berlin.",
+      "sources": [
+        "de",
+        "lb"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1919,
+          "to": 2009
+        },
+        "wikipedia": {
+          "summary": "Max Jacoby wurde 1919 in Koblenz geboren und zog Mitte der 1930er Jahre nach Berlin, um dort eine Ausbildung zum Fotografen zu beginnen. 1937 wanderte er nach Buenos Aires aus und arbeitete zunächst als Vertreter, dann als Assistent. 1941 machte er sich selbstständig und fotografierte für Zeitschriften und Werbeagenturen. 1951 gehörte er zu den Gründern der Fotografengruppe Group of Ten, die die moderne südamerikanische Fotografie prägte. 1957 kehrte er nach Berlin zurück. Seine Arbeiten zeigen Länder, Städte, Menschen und Porträts von Persönlichkeiten und wurden international ausgestellt. Er starb 2009 in Berlin.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Max_Jacoby_(Fotograf)"
+            },
+            {
+              "lang": "lb",
+              "url": "https://lb.wikipedia.org/wiki/Max_Jacoby_(Fotograf)"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "richard-kalvar",
+      "occupation": "Fotograf",
+      "summary": "Richard Kalvar wurde 1944 in Brooklyn geboren. Eine Reise nach Europa 1966 mit einer Pentax, die ihm der Modefotograf Jérôme Ducrot schenkte, machte ihn zum Fotografen. Zurück in New York arbeitete er in einem Fotolabor, zwei Jahre später zog er nach Paris und schloss sich der Agentur Vu an. Seit 1975 ist er mit Magnum Photos verbunden. Er fotografierte weltweit, besonders in England, Frankreich, Italien, Japan und den USA. Seine Einzelausstellungen zeigten ihn unter anderem in der Maison européenne de la photographie in Paris; zu seinen Büchern zählen Earthlings von 2007 und Familles en France.",
+      "sources": [
+        "en",
+        "fr",
+        "it"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1944,
+          "to": null
+        },
+        "wikipedia": {
+          "summary": "Richard Kalvar wurde 1944 in Brooklyn geboren. Eine Reise nach Europa 1966 mit einer Pentax, die ihm der Modefotograf Jérôme Ducrot schenkte, machte ihn zum Fotografen. Zurück in New York arbeitete er in einem Fotolabor, zwei Jahre später zog er nach Paris und schloss sich der Agentur Vu an. Seit 1975 ist er mit Magnum Photos verbunden. Er fotografierte weltweit, besonders in England, Frankreich, Italien, Japan und den USA. Seine Einzelausstellungen zeigten ihn unter anderem in der Maison européenne de la photographie in Paris; zu seinen Büchern zählen Earthlings von 2007 und Familles en France.",
+          "sources": [
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Richard_Kalvar"
+            },
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/Richard_Kalvar"
+            },
+            {
+              "lang": "it",
+              "url": "https://it.wikipedia.org/wiki/Richard_Kalvar"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "herbert-list",
+      "occupation": "Fotograf",
+      "summary": "Herbert List wurde 1903 in Hamburg geboren, studierte Literaturgeschichte und arbeitete als Kaffeekaufmann in der Firma seiner Familie. Angeregt von Andreas Feininger und von Künstlern wie de Chirico, Magritte und Man Ray fotografierte er ab 1930 ernsthaft. 1935 emigrierte er nach Paris; 1937 fand dort seine erste Ausstellung statt. Er arbeitete für Magazine wie Vogue, Harper's Bazaar und Life und stand Magnum Photos nahe. Bekannt wurden seine surreal wirkenden Schwarzweißbilder und streng komponierten Männerakte aus Italien und Griechenland. Er gilt als moderner Klassiker; er starb 1975 in München.",
+      "sources": [
+        "de",
+        "en"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1903,
+          "to": 1975
+        },
+        "wikipedia": {
+          "summary": "Herbert List wurde 1903 in Hamburg geboren, studierte Literaturgeschichte und arbeitete als Kaffeekaufmann in der Firma seiner Familie. Angeregt von Andreas Feininger und von Künstlern wie de Chirico, Magritte und Man Ray fotografierte er ab 1930 ernsthaft. 1935 emigrierte er nach Paris; 1937 fand dort seine erste Ausstellung statt. Er arbeitete für Magazine wie Vogue, Harper's Bazaar und Life und stand Magnum Photos nahe. Bekannt wurden seine surreal wirkenden Schwarzweißbilder und streng komponierten Männerakte aus Italien und Griechenland. Er gilt als moderner Klassiker; er starb 1975 in München.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Herbert_List"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Herbert_List"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "gerhard-riebicke",
+      "occupation": "Fotograf",
+      "summary": "Gerhard Riebicke wurde 1878 geboren, studierte Medizin und fürs Lehramt, unterrichtete als Hauslehrer in Posen und brachte sich die Fotografie selbst bei. Ab 1909 war er Pressefotograf in Berlin und führte ab 1918 in Charlottenburg eine Agentur für Pressebilder. Allmählich verlagerte sich sein Schwerpunkt auf Sport- und Freikörperkultur-Fotografie, darunter Ballspiele, Sprünge, Tanz und Badeszenen. Am bekanntesten sind seine Standbilder zum UFA-Film von 1925, Wege zu Kraft und Schönheit. Als Chronist der Reformbewegung pflegte er Kontakte zu Tanz- und Gymnastikschulen. Sein Atelier wurde 1944 bei einem Luftangriff zerstört; er starb 1957 in Berlin.",
+      "sources": [
+        "de",
+        "sv"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1878,
+          "to": 1957
+        },
+        "wikipedia": {
+          "summary": "Gerhard Riebicke wurde 1878 geboren, studierte Medizin und fürs Lehramt, unterrichtete als Hauslehrer in Posen und brachte sich die Fotografie selbst bei. Ab 1909 war er Pressefotograf in Berlin und führte ab 1918 in Charlottenburg eine Agentur für Pressebilder. Allmählich verlagerte sich sein Schwerpunkt auf Sport- und Freikörperkultur-Fotografie, darunter Ballspiele, Sprünge, Tanz und Badeszenen. Am bekanntesten sind seine Standbilder zum UFA-Film von 1925, Wege zu Kraft und Schönheit. Als Chronist der Reformbewegung pflegte er Kontakte zu Tanz- und Gymnastikschulen. Sein Atelier wurde 1944 bei einem Luftangriff zerstört; er starb 1957 in Berlin.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Gerhard_Riebicke"
+            },
+            {
+              "lang": "sv",
+              "url": "https://sv.wikipedia.org/wiki/Gerhard_Riebicke"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "max-scheler",
+      "occupation": "Fotograf",
+      "summary": "Max Scheler lernte als Jugendlicher den Fotografen Herbert List kennen und assistierte ihm 1951 auf Reisen durch Italien, Spanien und Griechenland. In Paris traf er Robert Capa, der ihn für die Agentur Magnum gewann; die Zusammenarbeit dauerte bis 1956. Von 1953 bis 1959 lebte er in Rom als freier Bildjournalist für Magazine wie Life und Paris Match. Ab 1959 arbeitete er in Hamburg für den Stern und prägte dessen Erscheinungsbild mit. Sein Hauptthema waren Menschen unterschiedlicher Kulturen. Er porträtierte Politiker wie Adenauer und Brandt und begleitete 1964 die Beatles bei Dreharbeiten.",
+      "sources": [
+        "de"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1928,
+          "to": 2003
+        },
+        "wikipedia": {
+          "summary": "Max Scheler lernte als Jugendlicher den Fotografen Herbert List kennen und assistierte ihm 1951 auf Reisen durch Italien, Spanien und Griechenland. In Paris traf er Robert Capa, der ihn für die Agentur Magnum gewann; die Zusammenarbeit dauerte bis 1956. Von 1953 bis 1959 lebte er in Rom als freier Bildjournalist für Magazine wie Life und Paris Match. Ab 1959 arbeitete er in Hamburg für den Stern und prägte dessen Erscheinungsbild mit. Sein Hauptthema waren Menschen unterschiedlicher Kulturen. Er porträtierte Politiker wie Adenauer und Brandt und begleitete 1964 die Beatles bei Dreharbeiten.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Max_Scheler_(Fotograf)"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "friedrich-seidenstuecker",
+      "occupation": "Fotograf",
+      "summary": "Friedrich Seidenstücker studierte zunächst Maschinenbau, beschäftigte sich aber schon früh mit Bildhauerei und Fotografie. Im Ersten Weltkrieg war er Flugzeugkonstrukteur, danach studierte er bei dem Tierbildhauer August Gaul. Als Fotograf war er erfolgreicher denn als Bildhauer. Bekannt wurde er mit Tierbildern aus dem Berliner Zoo, Szenen aus dem Berliner Alltag und Aktporträts; ab 1930 arbeitete er für den Ullstein Verlag. Nach 1945 entstanden Serien über das zerstörte Berlin, besonders den Tiergarten. Zeitweise vergessen, wurde sein Nachlass 1971 bei einem Trödler aufgespürt und vom Bildarchiv Preußischer Kulturbesitz gekauft.",
+      "sources": [
+        "de",
+        "es",
+        "ru"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1882,
+          "to": 1966
+        },
+        "wikipedia": {
+          "summary": "Friedrich Seidenstücker studierte zunächst Maschinenbau, beschäftigte sich aber schon früh mit Bildhauerei und Fotografie. Im Ersten Weltkrieg war er Flugzeugkonstrukteur, danach studierte er bei dem Tierbildhauer August Gaul. Als Fotograf war er erfolgreicher denn als Bildhauer. Bekannt wurde er mit Tierbildern aus dem Berliner Zoo, Szenen aus dem Berliner Alltag und Aktporträts; ab 1930 arbeitete er für den Ullstein Verlag. Nach 1945 entstanden Serien über das zerstörte Berlin, besonders den Tiergarten. Zeitweise vergessen, wurde sein Nachlass 1971 bei einem Trödler aufgespürt und vom Bildarchiv Preußischer Kulturbesitz gekauft.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Friedrich_Seidenst%C3%BCcker"
+            },
+            {
+              "lang": "es",
+              "url": "https://es.wikipedia.org/wiki/Friedrich_Seidenst%C3%BCcker"
+            },
+            {
+              "lang": "ru",
+              "url": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B9%D0%B4%D0%B5%D0%BD%D1%88%D1%82%D1%8E%D0%BA%D0%BA%D0%B5%D1%80%2C_%D0%A4%D1%80%D0%B8%D0%B4%D1%80%D0%B8%D1%85"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "uwe-steinberg",
+      "occupation": "Fotograf",
+      "summary": "Uwe Steinberg fotografierte zunächst autodidaktisch und absolvierte von 1963 bis 1965 eine Ausbildung zum Bildreporter bei ADN-Zentralbild. Danach arbeitete er vor allem für die Neue Berliner Illustrierte. Er absolvierte ein Fernstudium der Journalistik und später der Fotografie in Leipzig an der Hochschule für Grafik und Buchkunst. Er gehörte dem Verband Bildender Künstler der DDR an an und war an der Gründung der Gruppe Jugendfoto Berlin beteiligt. Er verstand Fotografie als eigenständiges künstlerisches Medium; sein Werk ist thematisch und farblich vielseitig. 1983 starb er in Budapest nach einem Verkehrsunfall. Werke von ihm besitzen die Berlinische Galerie und das Deutsche Historische Museum.",
+      "sources": [
+        "de"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1942,
+          "to": 1983
+        },
+        "wikipedia": {
+          "summary": "Uwe Steinberg fotografierte zunächst autodidaktisch und absolvierte von 1963 bis 1965 eine Ausbildung zum Bildreporter bei ADN-Zentralbild. Danach arbeitete er vor allem für die Neue Berliner Illustrierte. Er absolvierte ein Fernstudium der Journalistik und später der Fotografie in Leipzig an der Hochschule für Grafik und Buchkunst. Er gehörte dem Verband Bildender Künstler der DDR an an und war an der Gründung der Gruppe Jugendfoto Berlin beteiligt. Er verstand Fotografie als eigenständiges künstlerisches Medium; sein Werk ist thematisch und farblich vielseitig. 1983 starb er in Budapest nach einem Verkehrsunfall. Werke von ihm besitzen die Berlinische Galerie und das Deutsche Historische Museum.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Uwe_Steinberg"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "louis-stettner",
+      "occupation": "Fotograf",
+      "summary": "Louis Stettner erhielt mit 13 Jahren seine erste Kamera und studierte im Metropolitan Museum die Arbeiten von Stieglitz, White und Strand. Er schloss sich der Photo League in New York an. Im Zweiten Weltkrieg diente er als Kriegsfotograf im Pazifik, 1947 zog er für fünf Jahre nach Paris und freundete sich mit Brassaï an. Zurück in New York arbeitete er für Zeitschriften wie Life und Fortune und unterrichtete später an Colleges. Bekannt wurde er für einfühlsame Schwarzweißbilder von Straßen, Menschen und Architektur in New York und Paris, die er über Jahrzehnte fotografierte. Er starb 2016 in Paris.",
+      "sources": [
+        "de",
+        "en",
+        "fr"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1922,
+          "to": 2016
+        },
+        "wikipedia": {
+          "summary": "Louis Stettner erhielt mit 13 Jahren seine erste Kamera und studierte im Metropolitan Museum die Arbeiten von Stieglitz, White und Strand. Er schloss sich der Photo League in New York an. Im Zweiten Weltkrieg diente er als Kriegsfotograf im Pazifik, 1947 zog er für fünf Jahre nach Paris und freundete sich mit Brassaï an. Zurück in New York arbeitete er für Zeitschriften wie Life und Fortune und unterrichtete später an Colleges. Bekannt wurde er für einfühlsame Schwarzweißbilder von Straßen, Menschen und Architektur in New York und Paris, die er über Jahrzehnte fotografierte. Er starb 2016 in Paris.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Louis_Stettner"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Louis_Stettner"
+            },
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/Louis_Stettner"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "dennis-stock",
+      "occupation": "Fotograf",
+      "summary": "Dennis Stock lernte zwischen 1947 und 1951 bei dem Fotografen Gjon Mili. Im Jahr 1951 gewann er einen Wettbewerb des Life-Magazins für junge Fotografen und wurde im selben Jahr außerordentliches Mitglied der Agentur Magnum, 1954 Vollmitglied. 1955 begleitete er den Schauspieler James Dean; sein Bild des Schauspielers am regennassen Times Square ist eine der meistreproduzierten Fotografien der Nachkriegszeit. Ab 1957 widmete er sich Jazzmusikern. Um 1975 fuhr er nach Japan und in den Fernen Osten und fertigte Reportagen über Regionen wie Hawaii oder Alaska. 1968 baute er zeitweise eine eigene Filmfirma auf.",
+      "sources": [
+        "de",
+        "en",
+        "fr"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1928,
+          "to": 2010
+        },
+        "wikipedia": {
+          "summary": "Dennis Stock lernte zwischen 1947 und 1951 bei dem Fotografen Gjon Mili. Im Jahr 1951 gewann er einen Wettbewerb des Life-Magazins für junge Fotografen und wurde im selben Jahr außerordentliches Mitglied der Agentur Magnum, 1954 Vollmitglied. 1955 begleitete er den Schauspieler James Dean; sein Bild des Schauspielers am regennassen Times Square ist eine der meistreproduzierten Fotografien der Nachkriegszeit. Ab 1957 widmete er sich Jazzmusikern. Um 1975 fuhr er nach Japan und in den Fernen Osten und fertigte Reportagen über Regionen wie Hawaii oder Alaska. 1968 baute er zeitweise eine eigene Filmfirma auf.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Dennis_Stock"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Dennis_Stock"
+            },
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/Dennis_Stock"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "sasha-stone",
+      "occupation": "Fotograf",
+      "summary": "Sasha Stone wurde 1895 geboren und zog nach einer Ausbildung zum Elektromonteur in die USA, wo er Bildhauerei studierte. Anfang der 1920er Jahre kam er nach Berlin und bewegte sich im Umfeld der Dadaisten. Ab 1924 machte er als Fotograf und Collageur mit seinem Atelier Karriere; es galt als führend in der Gebrauchsfotografie im Stil der Neuen Sachlichkeit. Mit Walter Benjamin war er befreundet und gestaltete den Umschlag von dessen Einbahnstraße. 1931 zog er nach Brüssel und arbeitete dort als Industrie-, Werbe- und Kunstfotograf. Er starb 1940 in Südfrankreich auf der Flucht vor den deutschen Truppen.",
+      "sources": [
+        "de",
+        "en"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1895,
+          "to": 1940
+        },
+        "wikipedia": {
+          "summary": "Sasha Stone wurde 1895 geboren und zog nach einer Ausbildung zum Elektromonteur in die USA, wo er Bildhauerei studierte. Anfang der 1920er Jahre kam er nach Berlin und bewegte sich im Umfeld der Dadaisten. Ab 1924 machte er als Fotograf und Collageur mit seinem Atelier Karriere; es galt als führend in der Gebrauchsfotografie im Stil der Neuen Sachlichkeit. Mit Walter Benjamin war er befreundet und gestaltete den Umschlag von dessen Einbahnstraße. 1931 zog er nach Brüssel und arbeitete dort als Industrie-, Werbe- und Kunstfotograf. Er starb 1940 in Südfrankreich auf der Flucht vor den deutschen Truppen.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Sasha_Stone"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Sasha_Stone_(photographer)"
+            }
+          ]
+        }
+      },
+      "approved": true
+    },
+    {
+      "id": "monika-baumgartl",
+      "occupation": "Fotografin",
+      "summary": "Monika Baumgartl ist eine deutsche Fotografin und Performancekünstlerin und gilt als Vertreterin der Konkreten Fotografie. Sie arbeitete zunächst als Schauspielerin und war Assistentin des Filmemachers Gerry Schum in Düsseldorf. Seit 1970 ist sie als Fotokünstlerin tätig und veranstaltete bis 1976 Performances und gemeinsame Ausstellungen mit Klaus Rinke. Ihre erste Einzelausstellung hatte sie 1974. Ihre Fotografien sind fast ausschließlich Nachtaufnahmen. Sie nahm an der Documenta 5 im Jahr 1972 und an der Documenta 6 im Jahr 1977 teil. Seit den 1980er Jahren unterrichtet sie auch Stepptanz und Taiko-Trommeln. Ihr Wohnort und Arbeitsort ist Düsseldorf.",
+      "sources": [
+        "de",
+        "en"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotografin",
+        "life": {
+          "from": 1942,
+          "to": null
+        },
+        "wikipedia": {
+          "summary": "Monika Baumgartl ist eine deutsche Fotografin und Performancekünstlerin und gilt als Vertreterin der Konkreten Fotografie. Sie arbeitete zunächst als Schauspielerin und war Assistentin des Filmemachers Gerry Schum in Düsseldorf. Seit 1970 ist sie als Fotokünstlerin tätig und veranstaltete bis 1976 Performances und gemeinsame Ausstellungen mit Klaus Rinke. Ihre erste Einzelausstellung hatte sie 1974. Ihre Fotografien sind fast ausschließlich Nachtaufnahmen. Sie nahm an der Documenta 5 im Jahr 1972 und an der Documenta 6 im Jahr 1977 teil. Seit den 1980er Jahren unterrichtet sie auch Stepptanz und Taiko-Trommeln. Ihr Wohnort und Arbeitsort ist Düsseldorf.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Monika_Baumgartl"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Monika_Baumgartl"
+            }
+          ]
+        }
+      },
+      "approved": true,
+      "appliedAt": "2026-11-12"
+    },
+    {
+      "id": "karl-blossfeldt",
+      "occupation": "Fotograf und Bildhauer",
+      "summary": "Karl Blossfeldt ging 1881 in einer Kunstgießerei im Harz als Bildhauer und Modelleur in die Lehre und nutzte dort schon Blätter als Vorlage für Verzierungen. Später studierte er in Berlin am Kunstgewerbemuseum und arbeitete am Projekt des Zeichenlehrers Moritz Meurer mit. Auf Reisen durch Italien, Griechenland und Nordafrika legte er eine botanische Mustersammlung an; hier begann seine systematische Fotoarbeit an Pflanzen. Berühmt wurde er mit streng formalen Nahaufnahmen von Pflanzen, die 1929 als Urformen der Kunst erschienen. Fotokünstlerisch ordnet man ihn der Neuen Sachlichkeit zu.",
+      "sources": [
+        "de",
+        "en",
+        "fr"
+      ],
+      "portrait": true,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf und Bildhauer",
+        "life": {
+          "from": 1865,
+          "to": 1932
+        },
+        "wikipedia": {
+          "summary": "Karl Blossfeldt ging 1881 in einer Kunstgießerei im Harz als Bildhauer und Modelleur in die Lehre und nutzte dort schon Blätter als Vorlage für Verzierungen. Später studierte er in Berlin am Kunstgewerbemuseum und arbeitete am Projekt des Zeichenlehrers Moritz Meurer mit. Auf Reisen durch Italien, Griechenland und Nordafrika legte er eine botanische Mustersammlung an; hier begann seine systematische Fotoarbeit an Pflanzen. Berühmt wurde er mit streng formalen Nahaufnahmen von Pflanzen, die 1929 als Urformen der Kunst erschienen. Fotokünstlerisch ordnet man ihn der Neuen Sachlichkeit zu.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Karl_Blossfeldt"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Karl_Blossfeldt"
+            },
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/Karl_Blossfeldt"
+            }
+          ]
+        },
+        "portrait": {
+          "file": "karl-blossfeldt.jpg",
+          "width": 400,
+          "height": 556,
+          "source": "https://commons.wikimedia.org/wiki/File:Karl_Blossfeldt_1895.jpg",
+          "credit": "Karl Bossfeldt (1865-1932)",
+          "license": "Public domain",
+          "cacheFile": ".cache/portraits/karl-blossfeldt.jpg"
+        }
+      },
+      "approved": true,
+      "appliedAt": "2026-11-12"
+    },
+    {
+      "id": "werner-bokelberg",
+      "occupation": "Fotograf und Schauspieler",
+      "summary": "Werner Bokelberg hatte seine Standorte in Hamburg, Paris und New York. Mit 19 Jahren wollte er Komiker werden und besuchte Kurse an der Schauspielschule in Wiesbaden, kehrte aber zur Fotografie zurück. Von 1962 bis 1972 war er Fotograf beim Stern und porträtierte Prominente wie Picasso, Dalí, Andy Warhol, Romy Schneider und Uschi Obermaier sowie die 68er-Bewegung. 1973 spielte er in der Komödie Sylvie sich selbst als Fotografen. Später arbeitete er als Werbefotograf, unter anderem für Kampagnen der Deutschen Bank und der Lufthansa. Er veröffentlichte Bücher, darunter Da-Da-Dali. Er starb 2024.",
+      "sources": [
+        "de",
+        "en",
+        "cs"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf und Schauspieler",
+        "life": {
+          "from": 1937,
+          "to": 2024
+        },
+        "wikipedia": {
+          "summary": "Werner Bokelberg hatte seine Standorte in Hamburg, Paris und New York. Mit 19 Jahren wollte er Komiker werden und besuchte Kurse an der Schauspielschule in Wiesbaden, kehrte aber zur Fotografie zurück. Von 1962 bis 1972 war er Fotograf beim Stern und porträtierte Prominente wie Picasso, Dalí, Andy Warhol, Romy Schneider und Uschi Obermaier sowie die 68er-Bewegung. 1973 spielte er in der Komödie Sylvie sich selbst als Fotografen. Später arbeitete er als Werbefotograf, unter anderem für Kampagnen der Deutschen Bank und der Lufthansa. Er veröffentlichte Bücher, darunter Da-Da-Dali. Er starb 2024.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Werner_Bokelberg"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Werner_Bokelberg"
+            },
+            {
+              "lang": "cs",
+              "url": "https://cs.wikipedia.org/wiki/Werner_Bokelberg"
+            }
+          ]
+        }
+      },
+      "approved": true,
+      "appliedAt": "2026-11-12"
+    },
+    {
+      "id": "christian-coigny",
+      "occupation": "Fotograf",
+      "summary": "Christian Coigny wurde 1946 in Lausanne geboren und besuchte kurz die Fotoschule in Vevey. Ab 1969 lernte er in San Francisco autodidaktisch Fotografie und arbeitete dort fünf Jahre an Werbekampagnen. Nach einem Jahr in Brasilien mit Modefotografie kehrte er in die Schweiz zurück, arbeitete mit dem Magazin Annabelle und eröffnete in Lausanne ein eigenes Studio mit Schwerpunkt Stillleben, Mode und Porträt. Er fotografierte für Marken wie Chopard, Hermès und Hublot. Heute widmet er sich vor allem freien Arbeiten in Schwarzweiß und analog zu Akt, Porträt, Landschaft und Stillleben, die er in Galerien und Museen zeigt.",
+      "sources": [
+        "fr"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1946,
+          "to": null
+        },
+        "wikipedia": {
+          "summary": "Christian Coigny wurde 1946 in Lausanne geboren und besuchte kurz die Fotoschule in Vevey. Ab 1969 lernte er in San Francisco autodidaktisch Fotografie und arbeitete dort fünf Jahre an Werbekampagnen. Nach einem Jahr in Brasilien mit Modefotografie kehrte er in die Schweiz zurück, arbeitete mit dem Magazin Annabelle und eröffnete in Lausanne ein eigenes Studio mit Schwerpunkt Stillleben, Mode und Porträt. Er fotografierte für Marken wie Chopard, Hermès und Hublot. Heute widmet er sich vor allem freien Arbeiten in Schwarzweiß und analog zu Akt, Porträt, Landschaft und Stillleben, die er in Galerien und Museen zeigt.",
+          "sources": [
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/Christian_Coigny"
+            }
+          ]
+        }
+      },
+      "approved": true,
+      "appliedAt": "2026-11-12"
+    },
+    {
+      "id": "f-c-gundlach",
+      "occupation": "Fotograf, Galerist und Kurator",
+      "summary": "Franz Christian Gundlach war Fotograf, Galerist, Sammler, Kurator und Stifter. Als Modefotograf prägte er die 1950er bis 1970er Jahre; viele seiner Bilder wurden zu Ikonen und gelangten in Museen. Seit 1975 stellte er zunächst in einer eigenen Galerie, später für zahlreiche Museen Ausstellungen zusammen. Im September 2003 leitete er als Gründungsdirektor das neue Haus der Photographie der Hamburger Deichtorhallen. Seine Sammlung zum Bild des Menschen in der Fotografie gehört zu den bedeutendsten privaten Fotosammlungen Deutschlands und ist dort als Dauerleihgabe zu sehen. 2005 kuratierte er die Retrospektive von Martin Munkácsi. Er starb 2021 in Hamburg.",
+      "sources": [
+        "de",
+        "en",
+        "fr"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf, Galerist und Kurator",
+        "life": {
+          "from": 1926,
+          "to": 2021
+        },
+        "wikipedia": {
+          "summary": "Franz Christian Gundlach war Fotograf, Galerist, Sammler, Kurator und Stifter. Als Modefotograf prägte er die 1950er bis 1970er Jahre; viele seiner Bilder wurden zu Ikonen und gelangten in Museen. Seit 1975 stellte er zunächst in einer eigenen Galerie, später für zahlreiche Museen Ausstellungen zusammen. Im September 2003 leitete er als Gründungsdirektor das neue Haus der Photographie der Hamburger Deichtorhallen. Seine Sammlung zum Bild des Menschen in der Fotografie gehört zu den bedeutendsten privaten Fotosammlungen Deutschlands und ist dort als Dauerleihgabe zu sehen. 2005 kuratierte er die Retrospektive von Martin Munkácsi. Er starb 2021 in Hamburg.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/F._C._Gundlach"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/F._C._Gundlach"
+            },
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/F._C._Gundlach"
+            }
+          ]
+        }
+      },
+      "approved": true,
+      "appliedAt": "2026-11-12"
+    },
+    {
+      "id": "fred-stein",
+      "occupation": "Fotograf",
+      "summary": "Fred Stein war ein Pionier der Kleinbildfotografie. Er wuchs als Sohn eines Rabbiners auf und beendete 1933 sein Jurastudium in Leipzig. Als die Nationalsozialisten die Macht übernahmen, emigrierte er mit seiner Frau nach Paris und begann dort mit einer Leica zu fotografieren. Seine oft abstrakten Straßenszenen werden der Moderne zugerechnet. Später lebte er in New York, wo er der Photo League angehörte. Weltruhm brachten ihm seine Bildreportagen von den Straßen von Paris in den 1930er Jahren und seine Porträts von Albert Einstein. Er fotografierte auch viele weitere Persönlichkeiten des 20. Jahrhunderts und starb 1967 in New York.",
+      "sources": [
+        "de",
+        "en",
+        "fr"
+      ],
+      "portrait": true,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1909,
+          "to": 1967
+        },
+        "wikipedia": {
+          "summary": "Fred Stein war ein Pionier der Kleinbildfotografie. Er wuchs als Sohn eines Rabbiners auf und beendete 1933 sein Jurastudium in Leipzig. Als die Nationalsozialisten die Macht übernahmen, emigrierte er mit seiner Frau nach Paris und begann dort mit einer Leica zu fotografieren. Seine oft abstrakten Straßenszenen werden der Moderne zugerechnet. Später lebte er in New York, wo er der Photo League angehörte. Weltruhm brachten ihm seine Bildreportagen von den Straßen von Paris in den 1930er Jahren und seine Porträts von Albert Einstein. Er fotografierte auch viele weitere Persönlichkeiten des 20. Jahrhunderts und starb 1967 in New York.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Fred_Stein"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Fred_Stein"
+            },
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/Fred_Stein"
+            }
+          ]
+        },
+        "portrait": {
+          "file": "fred-stein.jpg",
+          "width": 400,
+          "height": 369,
+          "source": "https://commons.wikimedia.org/wiki/File:Fred_Stein_%E2%80%93_Affidavit_in_Lieu_of_Passport_1941_Crop.jpg",
+          "credit": "US Consulate Marseilles 1941, picture: Lilo Stein",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "cacheFile": ".cache/portraits/fred-stein.jpg"
+        }
+      },
+      "approved": true,
+      "appliedAt": "2026-11-12"
+    },
+    {
+      "id": "walter-schels",
+      "occupation": "Fotograf",
+      "summary": "Walter Schels wurde als deutscher Fotograf durch schwarzweiße Serien von Menschen- und Tierporträts bekannt. Er ging nach New York, um Fotograf zu werden, war ab 1970 wieder in Deutschland und betrieb ein Studio in München. Er fotografierte für Werbung und Magazine; ab den mittleren 1990er Jahren widmete er sich zunehmend eigenen Projekten. Fotos von Neugeborenen für die Zeitschrift Eltern beeinflussten sein späteres Porträtschaffen. In Langzeitstudien beschäftigte er sich mit Extremsituationen menschlicher Existenz. Für die Serie Noch mal leben vor dem Tod mit Beate Lakotta, die Hospizpatienten vor und nach dem Tod zeigt, wurde er mehrfach ausgezeichnet.",
+      "sources": [
+        "de"
+      ],
+      "portrait": true,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1936,
+          "to": null
+        },
+        "wikipedia": {
+          "summary": "Walter Schels wurde als deutscher Fotograf durch schwarzweiße Serien von Menschen- und Tierporträts bekannt. Er ging nach New York, um Fotograf zu werden, war ab 1970 wieder in Deutschland und betrieb ein Studio in München. Er fotografierte für Werbung und Magazine; ab den mittleren 1990er Jahren widmete er sich zunehmend eigenen Projekten. Fotos von Neugeborenen für die Zeitschrift Eltern beeinflussten sein späteres Porträtschaffen. In Langzeitstudien beschäftigte er sich mit Extremsituationen menschlicher Existenz. Für die Serie Noch mal leben vor dem Tod mit Beate Lakotta, die Hospizpatienten vor und nach dem Tod zeigt, wurde er mehrfach ausgezeichnet.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Walter_Schels"
+            }
+          ]
+        },
+        "portrait": {
+          "file": "walter-schels.jpg",
+          "width": 400,
+          "height": 606,
+          "source": "https://commons.wikimedia.org/wiki/File:Walter_Scheels_(2009)_by_Guenter_Prust.jpg",
+          "credit": "Günter Prust",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "cacheFile": ".cache/portraits/walter-schels.jpg"
+        }
+      },
+      "approved": true,
+      "appliedAt": "2026-11-12"
+    },
+    {
+      "id": "horst-wackerbarth",
+      "occupation": "Foto- und Videokünstler",
+      "summary": "Horst Wackerbarth wuchs in Nordhessen auf, brach eine Buchhändlerlehre ab und studierte Fotografie an der Hochschule für bildende Künste Kassel. 1976 gründete er mit die alternative Stattzeitung für Kassel und gab einen alternativen Katalog zur Documenta 6 heraus. Seit 1978 arbeitet er freischaffend in Medien-, Porträt- und Modefotografie und realisierte preisgekrönte Werbekampagnen. Seit 1984 lebt er in Düsseldorf. Sein Projekt Die Rote Couch begann 1979 mit Kevin Clarke: Menschen verschiedener Gesellschaftsbereiche wurden in ihrem Umfeld auf einer roten Couch fotografiert. Der Journalist Freddy Langer nannte es ein Schlüsselwerk der Porträtkunst.",
+      "sources": [
+        "de"
+      ],
+      "portrait": false,
+      "problems": [],
+      "result": {
+        "occupation": "Foto- und Videokünstler",
+        "life": {
+          "from": 1950,
+          "to": null
+        },
+        "wikipedia": {
+          "summary": "Horst Wackerbarth wuchs in Nordhessen auf, brach eine Buchhändlerlehre ab und studierte Fotografie an der Hochschule für bildende Künste Kassel. 1976 gründete er mit die alternative Stattzeitung für Kassel und gab einen alternativen Katalog zur Documenta 6 heraus. Seit 1978 arbeitet er freischaffend in Medien-, Porträt- und Modefotografie und realisierte preisgekrönte Werbekampagnen. Seit 1984 lebt er in Düsseldorf. Sein Projekt Die Rote Couch begann 1979 mit Kevin Clarke: Menschen verschiedener Gesellschaftsbereiche wurden in ihrem Umfeld auf einer roten Couch fotografiert. Der Journalist Freddy Langer nannte es ein Schlüsselwerk der Porträtkunst.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Horst_Wackerbarth"
+            }
+          ]
+        }
+      },
+      "approved": true,
+      "appliedAt": "2026-11-12"
+    },
+    {
+      "id": "joel-meyerowitz",
+      "occupation": "Fotograf",
+      "summary": "Joel Meyerowitz ist ein US-amerikanischer Straßen-, Porträt- und Landschaftsfotograf, der 1938 in der Bronx geboren wurde und in New York lebt. Er begann anfangs mit Schwarzweißfotografie und wandte sich Mitte der 1960er Jahre der Farbe zu, als viele sie noch nicht als ernsthafte Kunst ansahen. Damit zählt er zu den Pionieren der künstlerischen Farbfotografie, vergleichbar mit William Eggleston und Stephen Shore. Sein erstes Buch Cape Light erschien 1979 und widmet sich der Landschaft von Cape Cod. In den frühen 1970er Jahren unterrichtete er an der Cooper Union; er betreut das Bildarchiv zum zerstörten World Trade Center.",
+      "sources": [
+        "de",
+        "en",
+        "fr"
+      ],
+      "portrait": true,
+      "problems": [],
+      "result": {
+        "occupation": "Fotograf",
+        "life": {
+          "from": 1938,
+          "to": null
+        },
+        "wikipedia": {
+          "summary": "Joel Meyerowitz ist ein US-amerikanischer Straßen-, Porträt- und Landschaftsfotograf, der 1938 in der Bronx geboren wurde und in New York lebt. Er begann anfangs mit Schwarzweißfotografie und wandte sich Mitte der 1960er Jahre der Farbe zu, als viele sie noch nicht als ernsthafte Kunst ansahen. Damit zählt er zu den Pionieren der künstlerischen Farbfotografie, vergleichbar mit William Eggleston und Stephen Shore. Sein erstes Buch Cape Light erschien 1979 und widmet sich der Landschaft von Cape Cod. In den frühen 1970er Jahren unterrichtete er an der Cooper Union; er betreut das Bildarchiv zum zerstörten World Trade Center.",
+          "sources": [
+            {
+              "lang": "de",
+              "url": "https://de.wikipedia.org/wiki/Joel_Meyerowitz"
+            },
+            {
+              "lang": "en",
+              "url": "https://en.wikipedia.org/wiki/Joel_Meyerowitz"
+            },
+            {
+              "lang": "fr",
+              "url": "https://fr.wikipedia.org/wiki/Joel_Meyerowitz"
+            }
+          ]
+        },
+        "portrait": {
+          "file": "joel-meyerowitz.jpg",
+          "width": 400,
+          "height": 295,
+          "source": "https://commons.wikimedia.org/wiki/File:Meyerowitz_271104_k%C3%B6ln_galeriezander.jpg",
+          "credit": "Hans Peter Schaefer Hps-poll",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "cacheFile": ".cache/portraits/joel-meyerowitz.jpg"
+        }
+      },
+      "approved": true,
+      "appliedAt": "2026-11-12"
+    }
+  ]
+}

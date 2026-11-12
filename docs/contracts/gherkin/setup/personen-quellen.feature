@@ -36,3 +36,28 @@ Funktionalität: Eigene Quellen für Personen
     Angenommen eine übernommene, eine schon vorhandene, eine abgelehnte und eine gesperrte eigene Adresse
     Wenn der Lauf endet
     Dann nennt "updates/<Datum>/PHOTOGRAPHERS.md" je Person alle vier Adressen mit ihrem Ergebnis
+
+  # EARS: PQL-EV-3
+  Szenario: Sammeldatei in einem Lauf
+    Angenommen eine Sammeldatei mit zwei bekannten Personen und je zwei Adressen
+    Wenn die Recherche mit "--sources <datei> --no-web" gestartet wird
+    Dann stehen alle vier Adressen mit "query" "manuell" in den Linksammlungen der jeweiligen Person
+    Und die erlaubten Seiten werden je Person höchstens zehnmal abgerufen
+    Und es entsteht keine Suchanfrage
+    Und der Bericht nennt je Person alle Adressen mit Ergebnis
+
+  # EARS: PQL-UN-2
+  Szenario: Sammeldatei mit unbekannter Person oder Adresse
+    Angenommen eine Sammeldatei mit der unbekannten "id" "gibt-es-nicht", einer Person mit leerer Adressliste und einer Person mit den Adressen "kein url", "" und "https://example.org/ok"
+    Wenn die Recherche gestartet wird
+    Dann werden die ersten beiden nicht verarbeitet
+    Und der Bericht nennt sie mit Grund
+    Aber "https://example.org/ok" wird für die dritte Person verarbeitet
+    Und "kein url" wird abgelehnt und im Bericht genannt, die leere Adresse bleibt unbeachtet
+
+  # EARS: PQL-UB-3
+  Szenario: Sammeldatei nicht mit Einzelangaben
+    Wenn die Recherche mit "--sources <datei> --url https://example.org/a" gestartet wird
+    Dann endet sie mit einem Hinweis
+    Und es entsteht keine Anfrage an eine Seite
+    Und dasselbe gilt für eine nicht lesbare Datei oder eine Datei, die kein Objekt mit Adresslisten enthält

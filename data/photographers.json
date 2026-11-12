@@ -1771,19 +1771,103 @@
   },
   {
     "id": "monika-baumgartl",
-    "name": "Monika Baumgartl"
+    "name": "Monika Baumgartl",
+    "occupation": "Fotografin",
+    "life": {
+      "from": 1942,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Monika Baumgartl ist eine deutsche Fotografin und Performancekünstlerin und gilt als Vertreterin der Konkreten Fotografie. Sie arbeitete zunächst als Schauspielerin und war Assistentin des Filmemachers Gerry Schum in Düsseldorf. Seit 1970 ist sie als Fotokünstlerin tätig und veranstaltete bis 1976 Performances und gemeinsame Ausstellungen mit Klaus Rinke. Ihre erste Einzelausstellung hatte sie 1974. Ihre Fotografien sind fast ausschließlich Nachtaufnahmen. Sie nahm an der Documenta 5 im Jahr 1972 und an der Documenta 6 im Jahr 1977 teil. Seit den 1980er Jahren unterrichtet sie auch Stepptanz und Taiko-Trommeln. Ihr Wohnort und Arbeitsort ist Düsseldorf.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Monika_Baumgartl"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Monika_Baumgartl"
+        }
+      ]
+    }
   },
   {
     "id": "karl-blossfeldt",
-    "name": "Karl Blossfeldt"
+    "name": "Karl Blossfeldt",
+    "occupation": "Fotograf und Bildhauer",
+    "life": {
+      "from": 1865,
+      "to": 1932
+    },
+    "wikipedia": {
+      "summary": "Karl Blossfeldt ging 1881 in einer Kunstgießerei im Harz als Bildhauer und Modelleur in die Lehre und nutzte dort schon Blätter als Vorlage für Verzierungen. Später studierte er in Berlin am Kunstgewerbemuseum und arbeitete am Projekt des Zeichenlehrers Moritz Meurer mit. Auf Reisen durch Italien, Griechenland und Nordafrika legte er eine botanische Mustersammlung an; hier begann seine systematische Fotoarbeit an Pflanzen. Berühmt wurde er mit streng formalen Nahaufnahmen von Pflanzen, die 1929 als Urformen der Kunst erschienen. Fotokünstlerisch ordnet man ihn der Neuen Sachlichkeit zu.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Karl_Blossfeldt"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Karl_Blossfeldt"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Karl_Blossfeldt"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "karl-blossfeldt.jpg",
+      "width": 400,
+      "height": 556,
+      "source": "https://commons.wikimedia.org/wiki/File:Karl_Blossfeldt_1895.jpg",
+      "credit": "Karl Bossfeldt (1865-1932)",
+      "license": "Public domain"
+    }
   },
   {
     "id": "werner-bokelberg",
-    "name": "Werner Bokelberg"
+    "name": "Werner Bokelberg",
+    "occupation": "Fotograf und Schauspieler",
+    "life": {
+      "from": 1937,
+      "to": 2024
+    },
+    "wikipedia": {
+      "summary": "Werner Bokelberg hatte seine Standorte in Hamburg, Paris und New York. Mit 19 Jahren wollte er Komiker werden und besuchte Kurse an der Schauspielschule in Wiesbaden, kehrte aber zur Fotografie zurück. Von 1962 bis 1972 war er Fotograf beim Stern und porträtierte Prominente wie Picasso, Dalí, Andy Warhol, Romy Schneider und Uschi Obermaier sowie die 68er-Bewegung. 1973 spielte er in der Komödie Sylvie sich selbst als Fotografen. Später arbeitete er als Werbefotograf, unter anderem für Kampagnen der Deutschen Bank und der Lufthansa. Er veröffentlichte Bücher, darunter Da-Da-Dali. Er starb 2024.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Werner_Bokelberg"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Werner_Bokelberg"
+        },
+        {
+          "lang": "cs",
+          "url": "https://cs.wikipedia.org/wiki/Werner_Bokelberg"
+        }
+      ]
+    }
   },
   {
     "id": "christian-coigny",
-    "name": "Christian Coigny"
+    "name": "Christian Coigny",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1946,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Christian Coigny wurde 1946 in Lausanne geboren und besuchte kurz die Fotoschule in Vevey. Ab 1969 lernte er in San Francisco autodidaktisch Fotografie und arbeitete dort fünf Jahre an Werbekampagnen. Nach einem Jahr in Brasilien mit Modefotografie kehrte er in die Schweiz zurück, arbeitete mit dem Magazin Annabelle und eröffnete in Lausanne ein eigenes Studio mit Schwerpunkt Stillleben, Mode und Porträt. Er fotografierte für Marken wie Chopard, Hermès und Hublot. Heute widmet er sich vor allem freien Arbeiten in Schwarzweiß und analog zu Akt, Porträt, Landschaft und Stillleben, die er in Galerien und Museen zeigt.",
+      "sources": [
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Christian_Coigny"
+        }
+      ]
+    }
   },
   {
     "id": "josef-fischnaller",
@@ -1791,7 +1875,29 @@
   },
   {
     "id": "f-c-gundlach",
-    "name": "F.C. Gundlach"
+    "name": "F.C. Gundlach",
+    "occupation": "Fotograf, Galerist und Kurator",
+    "life": {
+      "from": 1926,
+      "to": 2021
+    },
+    "wikipedia": {
+      "summary": "Franz Christian Gundlach war Fotograf, Galerist, Sammler, Kurator und Stifter. Als Modefotograf prägte er die 1950er bis 1970er Jahre; viele seiner Bilder wurden zu Ikonen und gelangten in Museen. Seit 1975 stellte er zunächst in einer eigenen Galerie, später für zahlreiche Museen Ausstellungen zusammen. Im September 2003 leitete er als Gründungsdirektor das neue Haus der Photographie der Hamburger Deichtorhallen. Seine Sammlung zum Bild des Menschen in der Fotografie gehört zu den bedeutendsten privaten Fotosammlungen Deutschlands und ist dort als Dauerleihgabe zu sehen. 2005 kuratierte er die Retrospektive von Martin Munkácsi. Er starb 2021 in Hamburg.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/F._C._Gundlach"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/F._C._Gundlach"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/F._C._Gundlach"
+        }
+      ]
+    }
   },
   {
     "id": "joop-greypink",
@@ -1815,11 +1921,65 @@
   },
   {
     "id": "fred-stein",
-    "name": "Fred Stein"
+    "name": "Fred Stein",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1909,
+      "to": 1967
+    },
+    "wikipedia": {
+      "summary": "Fred Stein war ein Pionier der Kleinbildfotografie. Er wuchs als Sohn eines Rabbiners auf und beendete 1933 sein Jurastudium in Leipzig. Als die Nationalsozialisten die Macht übernahmen, emigrierte er mit seiner Frau nach Paris und begann dort mit einer Leica zu fotografieren. Seine oft abstrakten Straßenszenen werden der Moderne zugerechnet. Später lebte er in New York, wo er der Photo League angehörte. Weltruhm brachten ihm seine Bildreportagen von den Straßen von Paris in den 1930er Jahren und seine Porträts von Albert Einstein. Er fotografierte auch viele weitere Persönlichkeiten des 20. Jahrhunderts und starb 1967 in New York.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Fred_Stein"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Fred_Stein"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Fred_Stein"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "fred-stein.jpg",
+      "width": 400,
+      "height": 369,
+      "source": "https://commons.wikimedia.org/wiki/File:Fred_Stein_%E2%80%93_Affidavit_in_Lieu_of_Passport_1941_Crop.jpg",
+      "credit": "US Consulate Marseilles 1941, picture: Lilo Stein",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+    }
   },
   {
     "id": "walter-schels",
-    "name": "Walter Schels"
+    "name": "Walter Schels",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1936,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Walter Schels wurde als deutscher Fotograf durch schwarzweiße Serien von Menschen- und Tierporträts bekannt. Er ging nach New York, um Fotograf zu werden, war ab 1970 wieder in Deutschland und betrieb ein Studio in München. Er fotografierte für Werbung und Magazine; ab den mittleren 1990er Jahren widmete er sich zunehmend eigenen Projekten. Fotos von Neugeborenen für die Zeitschrift Eltern beeinflussten sein späteres Porträtschaffen. In Langzeitstudien beschäftigte er sich mit Extremsituationen menschlicher Existenz. Für die Serie Noch mal leben vor dem Tod mit Beate Lakotta, die Hospizpatienten vor und nach dem Tod zeigt, wurde er mehrfach ausgezeichnet.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Walter_Schels"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "walter-schels.jpg",
+      "width": 400,
+      "height": 606,
+      "source": "https://commons.wikimedia.org/wiki/File:Walter_Scheels_(2009)_by_Guenter_Prust.jpg",
+      "credit": "Günter Prust",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+    }
   },
   {
     "id": "renate-scherra",
@@ -1839,7 +1999,21 @@
   },
   {
     "id": "horst-wackerbarth",
-    "name": "Horst Wackerbarth"
+    "name": "Horst Wackerbarth",
+    "occupation": "Foto- und Videokünstler",
+    "life": {
+      "from": 1950,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Horst Wackerbarth wuchs in Nordhessen auf, brach eine Buchhändlerlehre ab und studierte Fotografie an der Hochschule für bildende Künste Kassel. 1976 gründete er mit die alternative Stattzeitung für Kassel und gab einen alternativen Katalog zur Documenta 6 heraus. Seit 1978 arbeitet er freischaffend in Medien-, Porträt- und Modefotografie und realisierte preisgekrönte Werbekampagnen. Seit 1984 lebt er in Düsseldorf. Sein Projekt Die Rote Couch begann 1979 mit Kevin Clarke: Menschen verschiedener Gesellschaftsbereiche wurden in ihrem Umfeld auf einer roten Couch fotografiert. Der Journalist Freddy Langer nannte es ein Schlüsselwerk der Porträtkunst.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Horst_Wackerbarth"
+        }
+      ]
+    }
   },
   {
     "id": "martin-waldbauer",
@@ -1855,7 +2029,38 @@
   },
   {
     "id": "joel-meyerowitz",
-    "name": "Joel Meyerowitz"
+    "name": "Joel Meyerowitz",
+    "occupation": "Fotograf",
+    "life": {
+      "from": 1938,
+      "to": null
+    },
+    "wikipedia": {
+      "summary": "Joel Meyerowitz ist ein US-amerikanischer Straßen-, Porträt- und Landschaftsfotograf, der 1938 in der Bronx geboren wurde und in New York lebt. Er begann anfangs mit Schwarzweißfotografie und wandte sich Mitte der 1960er Jahre der Farbe zu, als viele sie noch nicht als ernsthafte Kunst ansahen. Damit zählt er zu den Pionieren der künstlerischen Farbfotografie, vergleichbar mit William Eggleston und Stephen Shore. Sein erstes Buch Cape Light erschien 1979 und widmet sich der Landschaft von Cape Cod. In den frühen 1970er Jahren unterrichtete er an der Cooper Union; er betreut das Bildarchiv zum zerstörten World Trade Center.",
+      "sources": [
+        {
+          "lang": "de",
+          "url": "https://de.wikipedia.org/wiki/Joel_Meyerowitz"
+        },
+        {
+          "lang": "en",
+          "url": "https://en.wikipedia.org/wiki/Joel_Meyerowitz"
+        },
+        {
+          "lang": "fr",
+          "url": "https://fr.wikipedia.org/wiki/Joel_Meyerowitz"
+        }
+      ]
+    },
+    "portrait": {
+      "file": "joel-meyerowitz.jpg",
+      "width": 400,
+      "height": 295,
+      "source": "https://commons.wikimedia.org/wiki/File:Meyerowitz_271104_k%C3%B6ln_galeriezander.jpg",
+      "credit": "Hans Peter Schaefer Hps-poll",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+    }
   },
   {
     "id": "nino-sable",

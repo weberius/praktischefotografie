@@ -1,6 +1,6 @@
 # EARS: Eigene Quellen für Personen (Kürzel `PQL`)
 
-**Bereich:** setup  ·  **Systemname:** Personen-Recherche  ·  **Stand:** 2026-11-10
+**Bereich:** setup  ·  **Systemname:** Personen-Recherche  ·  **Stand:** 2026-11-12
 
 Ergänzt `personen-websuche.md` (WSP) und `recherche-in-allen-sprachen.md` (RAS); deren Regeln gelten fort. Begriffe wie dort. „Eigene Adresse“ ist eine Webadresse, die die Redaktion der Recherche mit `--url` nennt, weil sie die Seite als Quelle zu einer Person kennt.
 
@@ -11,3 +11,6 @@ Ergänzt `personen-websuche.md` (WSP) und `recherche-in-allen-sprachen.md` (RAS)
 | PQL-UB-2 | Die Recherche soll die Seiten eigener Adressen vor den Treffern der Websuche abrufen, innerhalb der Grenze aus RAS-UB-4, nach denselben Regeln wie der Abrufdienst (WSP-UB-3), und die Seiten auch dann abrufen, wenn die Websuche mit `--no-web` ausgelassen wird. | `setup/personen-quellen.feature` · „Eigene Seiten zuerst und höflich“ | Q-SEC-13 | ADR-006, ADR-019 |
 | PQL-UN-1 | Wenn eine eigene Adresse kein http oder https nutzt, auf einen internen Host zeigt oder kein gültiges URL-Format hat, soll die Recherche sie nicht übernehmen und nicht abrufen, sie im Bericht mit Grund nennen und mit den übrigen Adressen fortfahren. | `setup/personen-quellen.feature` · „Ungültige eigene Adresse“ | Q-SEC-13 | ADR-019 |
 | PQL-EV-2 | Wenn ein Lauf mit eigenen Adressen endet, soll die Recherche im Bericht (WSP-EV-4) je Person die eigenen Adressen mit Ergebnis (übernommen, schon vorhanden, abgelehnt, gesperrt, nicht abrufbar) nennen. | `setup/personen-quellen.feature` · „Bericht nennt eigene Adressen“ | Q-DATA-18 | ADR-019 |
+| PQL-UB-3 | Der Skill `research-photographers` soll `--sources <datei>` anbieten; die Datei ist JSON und ordnet je Person-`id` eine Liste eigener Adressen zu (`{ "<id>": ["<adresse>", …] }`). Ist die Datei nicht lesbar oder kein solches Objekt, soll er mit einem Hinweis enden; zusammen mit `--url`, `--photographer` oder `--name` soll er die Angabe ablehnen. | `setup/personen-quellen.feature` · „Sammeldatei nicht mit Einzelangaben“ | Q-DATA-26 | ADR-019 |
+| PQL-EV-3 | Wenn `--sources` genutzt wird, soll die Recherche jede Person der Datei in einem Lauf wie mit `--url` verarbeiten (PQL-EV-1, PQL-UB-2, PQL-EV-2), wobei die Grenzen je Person gelten (RAS-UB-4) und die Websuche mit `--no-web` ausgelassen werden kann. | `setup/personen-quellen.feature` · „Sammeldatei in einem Lauf“ | Q-DATA-26, Q-SEC-13 | ADR-006, ADR-019 |
+| PQL-UN-2 | Wenn eine `id` der Sammeldatei keiner Person in `data/photographers.json` entspricht oder die Adressliste einer Person leer ist, soll die Recherche diese Person nicht verarbeiten, sie im Bericht mit Grund nennen und mit den übrigen Personen fortfahren; leere Einträge in Adresslisten soll sie ignorieren. | `setup/personen-quellen.feature` · „Sammeldatei mit unbekannter Person oder Adresse“ | Q-DATA-26 | ADR-019 |
