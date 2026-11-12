@@ -100,6 +100,30 @@ export function planWeb({ root = ROOT, date, photographerId, name, offline = fal
   return { plan, person };
 }
 
+/** Sammeldatei `{ "<id>": ["<adresse>", …] }` (PQL-UB-3, PQL-EV-3, PQL-UN-2): plant jede Person wie mit `--url`; unbekannte Personen und leere Listen werden übersprungen. */
+export function planSources({ root = ROOT, date, file, offline = false, maxAgeDays = 30, noWeb = false, allowInternal = false }) {
+  let sources;
+  try {
+    sources = JSON.parse(readFileSync(file, 'utf8'));
+  } catch (e) {
+    throw new Error(`Die Sammeldatei "${file}" ist nicht lesbar: ${e.message}`, { cause: e });
+  }
+  if (!sources || typeof sources !== 'object' || Array.isArray(sources)) throw new Error(`Die Sammeldatei "${file}" muss ein Objekt { "<id>": ["<adresse>", …] } enthalten.`);
+  const known = new Set(readJson(join(root, 'data', 'photographers.json')).map((p) => p.id));
+  const skipped = [];
+  const planned = [];
+  for (const [id, list] of Object.entries(sources)) {
+    const urls = Array.isArray(list) ? list.filter((u) => String(u ?? '').trim() !== '') : [];
+    if (!known.has(id)) skipped.push({ id, reason: 'unbekannte Personen-ID' });
+    else if (urls.length === 0) skipped.push({ id, reason: 'keine Adressen' });
+    else planned.push(planWeb({ root, date, photographerId: id, offline, maxAgeDays, urls, noWeb, allowInternal }).person);
+  }
+  const plan = readJson(webPlanPath(root, date), { date, offline, maxAgeDays, persons: [] });
+  plan.skipped = skipped;
+  write(webPlanPath(root, date), plan);
+  return { persons: planned, skipped };
+}
+
 /** Übernimmt die Suchdatei in Cache, Linksammlung und Plan (WSP-EV-1, WSP-UB-2, WSP-UN-1, WSP-OP-1). */
 export function ingestSearch({ root = ROOT, date, now = new Date() }) {
   const plan = readJson(webPlanPath(root, date), null);

@@ -627,8 +627,64 @@
       "foundAt": "2026-11-02T12:46:01.454Z"
     }
   ],
-  "stefan-draschan": [],
-  "jochen-ehmke": [],
+  "stefan-draschan": [
+    {
+      "url": "https://stefandraschan.com",
+      "title": "Stefan Draschan – info@stefandraschan.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.instagram.com/stefandraschan",
+      "title": "www.instagram.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://suermondt-ludwig-museum.de/ausstellung/archiv/2026-2/stefan-draschan-2",
+      "title": "stefan draschan - Suermondt-Ludwig-Museum",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://hatjecantz.de/blogs/interviews/stefan-draschan-double-take",
+      "title": "STEFAN DRASCHAN: DOUBLE TAKE | Hatje Cantz Verlag",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://aboutphotography.blog/photographer/stefan-draschan",
+      "title": "Stefan Draschan — about photography",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "jochen-ehmke": [
+    {
+      "url": "https://www.zeit.de/kultur/2011-12/fs-jochen-ehmke",
+      "title": "www.zeit.de",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.kunst-chemnitz.de/fluchtversuch-und-andere-merkwuerdigkeiten/1357",
+      "title": "FLUCHTVERSUCH UND ANDERE MERKWÜRDIGKEITEN - kunst chemnitz + südwestsachsen",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.mz.de/lokal/halle-saale/jochen-ehmke-aus-halle-es-begann-mit-dem-rollfilm-2788616",
+      "title": "70. Geburtstag: Jochen Ehmke aus Halle: Es begann mit dem Rollfilm",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.dasfotoportal.de/fotografie-forum-staedte-region-aachen-mysterium-der-paare",
+      "title": "www.dasfotoportal.de",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
   "leonard-freed": [
     {
       "url": "https://de.wikipedia.org/wiki/Leonard_Freed",
@@ -1013,7 +1069,32 @@
       "foundAt": "2026-11-02T12:46:01.455Z"
     }
   ],
-  "nelly-rau-haering": [],
+  "nelly-rau-haering": [
+    {
+      "url": "https://www.editionfroelich.de/produkt/nelly-rau-haering",
+      "title": "Nelly Rau-Häring – Edition Frölich",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://hatjecantz.de/en/products/52766-nelly-rauhaering",
+      "title": "Nelly Rau-Häring | Hatje Cantz Verlag",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://fhochdrei.org/en/nelly-rau-haringost-west-berlin",
+      "title": "OST/WEST BERLIN - fhochdrei",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://pictorial-online.com?p=7270",
+      "title": "Berlin: Zwischenzeit 1990 – Fotografien aus Ost-Berlin von Nelly Rau-Häring – PICTORIAL",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
   "gerhard-riebicke": [
     {
       "url": "https://de.wikipedia.org/wiki/Gerhard_Riebicke",
@@ -1584,6 +1665,588 @@
       "title": "Joel Meyerowitz",
       "query": "wikipedia:vo",
       "foundAt": "2026-11-12T08:01:48.281Z"
+    }
+  ],
+  "hans-georg-esch": [
+    {
+      "url": "https://www.hgesch.de",
+      "title": "Homepage – HG Esch",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://de.wikipedia.org/wiki/Hans-Georg_Esch",
+      "title": "de.wikipedia.org",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.instagram.com/hgeschphotography",
+      "title": "Instagram",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.kaunegallery.com/artists/hans-georg-esch",
+      "title": "Hans Georg Esch – Architekturfotografie | Kaune Gallery KölnKaune Contemporary Gallery",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.marlowes.de/author/hgesch",
+      "title": "HG Esch – marlowes",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "juergen-klauke": [
+    {
+      "url": "http://www.juergenklauke.de",
+      "title": "JÜRGEN KLAUKE",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://de.wikipedia.org/wiki/J%C3%BCrgen_Klauke",
+      "title": "de.wikipedia.org",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.awk.nrw/mitglieder/liste/klasse/k/prof-juergen-klauke",
+      "title": "Klauke, Jürgen: Nordrhein-Westfälische Akademie der Wissenschaften und der Künste",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "florian-faeth": [
+    {
+      "url": "https://www.folkwang-uni.de/home/gestaltung/aktuell/vollanzeige/folkwang-absolventinnen-photography-masters-im-museum-folkwang",
+      "title": "Folkwang Absolvent*innen präsentieren sich mit Photography Masters im Museum Folkwang",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.instagram.com/florianfaeth",
+      "title": "www.instagram.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://artfacts.net/artist/florian-faeth",
+      "title": "Florian Fäth | Artist | ArtFacts",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://wettmann.com/charityauktion-junge-fotokunst-folkwang-universitaet-der-kuenste",
+      "title": "Charityauktion – Junge Fotokunst -FOLKWANG Universität der Künste - WETTMANN Kunstauktionen",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "mara-fischer": [
+    {
+      "url": "https://www.instagram.com/mararakete",
+      "title": "www.instagram.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.marafischer.com",
+      "title": "Mara Fischer — Photographer & Artist, Munich",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "patrick-lohse": [
+    {
+      "url": "https://patricklohse.de",
+      "title": "Patrick Lohse",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://schuelerlabor.folkwang-uni.de/team/patrick-lohse",
+      "title": "Schülerlabor der Künste",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.instagram.com/____patrick.lohse",
+      "title": "www.instagram.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "nina-mokhtarbaf": [
+    {
+      "url": "https://www.photoszene.de/ls/artist-programme/open-call-2025/kunstler-innen-open-call-2025/nina-mokhtarbaf",
+      "title": "Nina Mokhtarbaf - Internationale Photoszene Köln",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.instagram.com/nina_mokhtarbaf",
+      "title": "www.instagram.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://finale.folkwang-uni.de/projekte/was-bleibt",
+      "title": "Was bleibt",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "hannes-jung": [
+    {
+      "url": "https://hannesjung.com",
+      "title": "hannesjung.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.instagram.com/hannes.jung",
+      "title": "www.instagram.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.zeit.de/autoren/J/Hannes_Jung/index",
+      "title": "www.zeit.de",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://n-ost.org/de/people/hannes-jung",
+      "title": "Hannes Jung - n-ost - german",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://freelens.com/neues/showcases/hannes-jung",
+      "title": "Hannes Jung | FREELENS",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "sibylle-bergemann": [
+    {
+      "url": "https://sibyllebergemann.com/de",
+      "title": "Sibylle Bergemann - Photography",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://de.wikipedia.org/wiki/Sibylle_Bergemann",
+      "title": "de.wikipedia.org",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.ifa.de/tournee/sibylle-bergemann",
+      "title": "www.ifa.de",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://berlinischegalerie.de/sammlung/fotografie/sibylle-bergemann",
+      "title": "Sibylle Bergemann - Berlinische Galerie",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "herbert-dombrowski": [
+    {
+      "url": "https://www.mare.de/crew/herbert-dombrowski-urheber-1493",
+      "title": "Herbert Dombrowski",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.mkdw.de/de/ausstellung/schicht-und-striptease-herbert-dombrowskis-hamburg",
+      "title": "Schicht und Striptease Herbert Dombrowskis Hamburg | www.mkdw.de",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://monovisions.com/herbert-dombrowski-biography-city-life-street-photographer",
+      "title": "Biography: City Life / Street photographer Herbert Dombrowski | MONOVISIONS - Black & White Photography Magazine",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.kunstleben-berlin.de/galerie-hilaneh-von-kories-zeigt-herbert-dombrowski-jedes-bild-ist-mir-begegnet",
+      "title": "www.kunstleben-berlin.de",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "george-friedman": [
+    {
+      "url": "https://de.wikipedia.org/wiki/George_Friedmann",
+      "title": "de.wikipedia.org",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://vasarishop.com/en/collections/george-friedman",
+      "title": "George Friedman – Galería Vasari",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://mapadelarte.museomoderno.org/en/artistas/friedman-george",
+      "title": "Friedman George - Mapa dinámico del arte contemporáneo argentino",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "franz-goettfried": [
+    {
+      "url": "https://foto.folkwang-uni.de/de/info/ausstellungen/franz-goettfried-portraits",
+      "title": "Franz Göttfried Portraits",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.margitneuhold.com/von-oben-im-tal-simon-baptist-archiv-franz-goettfried",
+      "title": "Von oben im Tal Simon Baptist – Archiv Franz Göttfried - Margit Neuhold",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "jordis-schloesser": [
+    {
+      "url": "https://www.ostkreuz.de/fotografen/jordis-a-schloesser",
+      "title": "One moment, please...",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.instagram.com/jordisantoniaschloesser",
+      "title": "www.instagram.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.journal21.ch/artikel/von-schicksalen-erzaehlen",
+      "title": "Von Schicksalen erzählen | Journal21",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "paul-wolff": [
+    {
+      "url": "https://de.wikipedia.org/wiki/Paul_Wolff",
+      "title": "de.wikipedia.org",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://sammlung.staedelmuseum.de/de/person/wolff-paul",
+      "title": "Paul Wolff - Digitale Sammlung",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.blind-magazine.com/news/dr-paul-wolff-between-light-and-shadows",
+      "title": "Dr. Paul Wolff: Between Light and Shadows — Blind Magazine",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "marie-watt": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Marie_Watt",
+      "title": "en.wikipedia.org",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://mariewattstudio.com",
+      "title": "mariewattstudio.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "alexander-basta": [
+    {
+      "url": "https://basta-photograph.de",
+      "title": "Alexander Basta – Alexander Basta – Photograph",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.noirblanche.de/de/artists/alexander-basta",
+      "title": "noirblanche Düsseldorf - Alexander Basta",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.tonhalle.de/storykachel-basta-portraets",
+      "title": "Storykachel Basta-Porträts | Tonhalle",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "josef-fischnaller": [
+    {
+      "url": "https://www.joseffischnaller.com",
+      "title": "Josef Fischnaller | Fotografie",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://de.wikipedia.org/wiki/Josef_Fischnaller_(Fotograf)",
+      "title": "de.wikipedia.org",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.galeriefriedmann-hahn.com/de/artists/josef_fischnaller/works",
+      "title": "Galerie Friedmann-Hahn",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "joop-greypink": [
+    {
+      "url": "https://www.noirblanche.de/de/artists/joop-greypink",
+      "title": "noirblanche Düsseldorf - Joop Greypink",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://guru.ag/h5/index.html",
+      "title": "guru.ag",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "markus-c-hurek": [
+    {
+      "url": "https://de.wikipedia.org/wiki/Markus_Hurek",
+      "title": "de.wikipedia.org",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://mchurek.de",
+      "title": "mchurek.de",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://leica-camera.com/de-DE/event/made-berlin",
+      "title": "Markus C. Hurek \"Made in Berlin\"",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "hans-lux": [
+    {
+      "url": "https://www.noirblanche.de/de/artists/hans-lux",
+      "title": "noirblanche Düsseldorf - Hans Lux",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://rp-online.de/nrw/staedte/duesseldorf/portraet-des-duesseldorfer-fotografen-hans-lux_aid-49808197",
+      "title": "Porträt des Düsseldorfer Fotografen Hans Lux",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.profifoto.de/szene/ausstellungen/2020/03/04/hans-lux-ueber-peter-lindbergh",
+      "title": "Hans Lux über Peter Lindbergh: Vom Sultan mit den langen Haaren | ProfiFoto",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "clay-perry": [
+    {
+      "url": "https://clayperry.co.uk",
+      "title": "Clay Perry Photography",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.englandgallery.com/clay-perry",
+      "title": "Clay Perry | England & Co Gallery",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.rockarchive.com/photographers/clay-perry",
+      "title": "Clay Perry Photographer | Limited Edition Prints For Sale",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "alfredo-sarabia-jun": [
+    {
+      "url": "https://www.noirblanche.de/eng/artists/alfredo-sarabia-jun",
+      "title": "noirblanche Düsseldorf - Alfredo Sarabia jun.",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "http://www.michael-horbach-stiftung.de/fotopreis/alfredo-sarabia-junior.html",
+      "title": "Alfredo Sarabia Junior 2017 - Michael Horbach Stiftung",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.instagram.com/alfredosarabia_artwork",
+      "title": "www.instagram.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "renate-scherra": [
+    {
+      "url": "https://www.noirblanche.de/de/artists/renate-scherra",
+      "title": "noirblanche Düsseldorf - Renate Scherra",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://bbk-duesseldorf.de/mitglied/renate-scherra",
+      "title": "Renate Scherra – BBK Kunstforum",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.renatescherra.de",
+      "title": "www.renatescherra.de",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.wz.de/nrw/duesseldorf/kultur/galerie-noir-blanche-duesseldorf-renate-scherra-zeigt-bilder-aus-jemen_aid-46338929",
+      "title": "Galerie noir blanche Düsseldorf - Renate Scherra zeigt Bilder aus Jemen",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "axel-schmidt": [
+    {
+      "url": "https://axelschmidt.photography",
+      "title": "axelschmidt.photography – Axel Schmidt, artist, photographer and exhibitions. Based in Düsseldorf and Spain",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.noirblanche.de/de/artists/axel-schmidt",
+      "title": "noirblanche Düsseldorf - Axel Schmidt",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "walter-schmitz": [
+    {
+      "url": "https://walterschmitz.com",
+      "title": "Walter Schmitz – photography",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.noirblanche.de/de/artists/walter-schmitz",
+      "title": "noirblanche Düsseldorf - Walter Schmitz",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "ayako-takashi": [
+    {
+      "url": "https://www.ayakotakaishi.com",
+      "title": "Home | ayako takaishi",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.noirblanche.de/de/artists/ayako-takaishi",
+      "title": "noirblanche Düsseldorf - Ayako Takaishi",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "martin-waldbauer": [
+    {
+      "url": "https://martinwaldbauer.com",
+      "title": ". - Martin Waldbauer Photography",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.instagram.com/martinwaldbauer",
+      "title": "www.instagram.com",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.whitewall.com/de/magazin/inspiration/martin-waldbauer-portrait-photography",
+      "title": "Ausdrucksstarke Porträtfotografie von Martin Waldbauer",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.g99gallery.com/ausstellung-martin-waldbauer-1",
+      "title": "Martin Waldbauer 2026 — Galerie G99",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "barbara-wolff": [
+    {
+      "url": "https://barbarawolff.eu",
+      "title": "Photography Barbara Wolff Ausstellungen News",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://de.wikipedia.org/wiki/Barbara_Wolff_(Fotografin)",
+      "title": "de.wikipedia.org",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://www.dgph.de/aktuelles/barbara-wolff-das-leben-bestimmt-die-bilder-die-bleiben",
+      "title": "Barbara Wolff: Das Leben bestimmt die Bilder, die bleiben | Deutsche Gesellschaft für Photographie e.V.",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "radu-darvas": [
+    {
+      "url": "https://kulturaktiv.org/events/radu-darvas-wiedergutmachung",
+      "title": "Radu Darvas – Wiedergutmachung | Kultur Aktiv e.V.",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    },
+    {
+      "url": "https://dresdencontemporaryart.com/en/event/radu-darvas-wiedergutmachung",
+      "title": "DresdenContemporaryArt - Radu Darvas – Reparation",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "nino-sable": [
+    {
+      "url": "https://ninosable.de",
+      "title": "nino sable - NINO SABLE",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
+    }
+  ],
+  "benno-schlicht": [
+    {
+      "url": "https://www.benno-schlicht.com",
+      "title": "One moment, please...",
+      "query": "manuell",
+      "foundAt": "2026-11-12T12:29:47.774Z"
     }
   ]
 }

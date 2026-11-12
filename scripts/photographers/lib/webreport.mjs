@@ -21,6 +21,7 @@ export function webReportLines({ root, date }) {
     '## Websuche',
     '',
     `- Personen: ${persons.length}`,
+    `- Übersprungen: ${(plan.skipped ?? []).length}`,
     `- Suchanfragen: ${sum('queryCount')}`,
     `- Treffer: ${sum('hitCount')}`,
     `- Neue Links: ${persons.reduce((n, p) => n + (p.newLinks?.length ?? 0), 0)}`,
@@ -41,5 +42,6 @@ export function webReportLines({ root, date }) {
       for (const e of p.pages.errors ?? []) lines.push(`  - Fehler: ${e.url}: ${e.reason}`);
     }
   }
+  for (const s of plan.skipped ?? []) lines.push(`- übersprungen \`${s.id}\`: ${s.reason}`);
   return lines;
 }

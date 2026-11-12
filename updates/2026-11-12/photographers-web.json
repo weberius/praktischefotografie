@@ -1,0 +1,1989 @@
+{
+  "date": "2026-11-12",
+  "offline": false,
+  "maxAgeDays": 30,
+  "persons": [
+    {
+      "id": "hans-georg-esch",
+      "name": "Hans Georg Esch",
+      "isNew": false,
+      "queries": [
+        "\"Hans Georg Esch\" Fotograf",
+        "\"Hans Georg Esch\" photographer",
+        "\"Hans Georg Esch\" photographe",
+        "\"Hans Georg Esch\" fotógrafo",
+        "\"Hans Georg Esch\" fotografo",
+        "\"Hans Georg Esch\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.hgesch.de",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Hans-Georg_Esch",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abgerufen",
+            "reason": "Wikimedia-Adresse läuft über die Wikipedia-Recherche"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/hgeschphotography",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.kaunegallery.com/artists/hans-georg-esch",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.marlowes.de/author/hgesch",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.hgesch.de",
+        "https://de.wikipedia.org/wiki/Hans-Georg_Esch",
+        "https://www.instagram.com/hgeschphotography",
+        "https://www.kaunegallery.com/artists/hans-georg-esch",
+        "https://www.marlowes.de/author/hgesch"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 4,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://www.hgesch.de",
+        "https://www.kaunegallery.com/artists/hans-georg-esch",
+        "https://www.marlowes.de/author/hgesch"
+      ]
+    },
+    {
+      "id": "juergen-klauke",
+      "name": "Jürgen Klauke",
+      "isNew": false,
+      "queries": [
+        "\"Jürgen Klauke\" Fotograf",
+        "\"Jürgen Klauke\" photographer",
+        "\"Jürgen Klauke\" photographe",
+        "\"Jürgen Klauke\" fotógrafo",
+        "\"Jürgen Klauke\" fotografo",
+        "\"Jürgen Klauke\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "http://www.juergenklauke.de",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/J%C3%BCrgen_Klauke",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abgerufen",
+            "reason": "Wikimedia-Adresse läuft über die Wikipedia-Recherche"
+          }
+        },
+        {
+          "url": "https://www.awk.nrw/mitglieder/liste/klasse/k/prof-juergen-klauke",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "http://www.juergenklauke.de",
+        "https://de.wikipedia.org/wiki/J%C3%BCrgen_Klauke",
+        "https://www.awk.nrw/mitglieder/liste/klasse/k/prof-juergen-klauke"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "http://www.juergenklauke.de",
+        "https://www.awk.nrw/mitglieder/liste/klasse/k/prof-juergen-klauke"
+      ]
+    },
+    {
+      "id": "florian-faeth",
+      "name": "Florian Fäth",
+      "isNew": false,
+      "queries": [
+        "\"Florian Fäth\" Fotograf",
+        "\"Florian Fäth\" photographer",
+        "\"Florian Fäth\" photographe",
+        "\"Florian Fäth\" fotógrafo",
+        "\"Florian Fäth\" fotografo",
+        "\"Florian Fäth\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.folkwang-uni.de/home/gestaltung/aktuell/vollanzeige/folkwang-absolventinnen-photography-masters-im-museum-folkwang",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/florianfaeth",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.instagram.com/florianfaeth: laut robots.txt nicht erlaubt"
+          }
+        },
+        {
+          "url": "https://artfacts.net/artist/florian-faeth",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://wettmann.com/charityauktion-junge-fotokunst-folkwang-universitaet-der-kuenste",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.folkwang-uni.de/home/gestaltung/aktuell/vollanzeige/folkwang-absolventinnen-photography-masters-im-museum-folkwang",
+        "https://www.instagram.com/florianfaeth",
+        "https://artfacts.net/artist/florian-faeth",
+        "https://wettmann.com/charityauktion-junge-fotokunst-folkwang-universitaet-der-kuenste"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 3,
+        "cached": 0,
+        "errors": [],
+        "notes": [
+          "https://www.instagram.com/florianfaeth: laut robots.txt nicht erlaubt"
+        ]
+      },
+      "usedLinks": [
+        "https://www.folkwang-uni.de/home/gestaltung/aktuell/vollanzeige/folkwang-absolventinnen-photography-masters-im-museum-folkwang",
+        "https://wettmann.com/charityauktion-junge-fotokunst-folkwang-universitaet-der-kuenste"
+      ]
+    },
+    {
+      "id": "mara-fischer",
+      "name": "Mara Fischer",
+      "isNew": false,
+      "queries": [
+        "\"Mara Fischer\" Fotograf",
+        "\"Mara Fischer\" photographer",
+        "\"Mara Fischer\" photographe",
+        "\"Mara Fischer\" fotógrafo",
+        "\"Mara Fischer\" fotografo",
+        "\"Mara Fischer\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.instagram.com/mararakete",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.instagram.com/mararakete: laut robots.txt nicht erlaubt"
+          }
+        },
+        {
+          "url": "https://www.marafischer.com",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.instagram.com/mararakete",
+        "https://www.marafischer.com"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 1,
+        "cached": 0,
+        "errors": [],
+        "notes": [
+          "https://www.instagram.com/mararakete: laut robots.txt nicht erlaubt"
+        ]
+      },
+      "usedLinks": [
+        "https://www.marafischer.com"
+      ]
+    },
+    {
+      "id": "patrick-lohse",
+      "name": "Patrick Lohse",
+      "isNew": false,
+      "queries": [
+        "\"Patrick Lohse\" Fotograf",
+        "\"Patrick Lohse\" photographer",
+        "\"Patrick Lohse\" photographe",
+        "\"Patrick Lohse\" fotógrafo",
+        "\"Patrick Lohse\" fotografo",
+        "\"Patrick Lohse\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://patricklohse.de",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://schuelerlabor.folkwang-uni.de/team/patrick-lohse",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/____patrick.lohse",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.instagram.com/____patrick.lohse: laut robots.txt nicht erlaubt"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://patricklohse.de",
+        "https://schuelerlabor.folkwang-uni.de/team/patrick-lohse",
+        "https://www.instagram.com/____patrick.lohse"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": [
+          "https://www.instagram.com/____patrick.lohse: laut robots.txt nicht erlaubt"
+        ]
+      },
+      "usedLinks": [
+        "https://patricklohse.de",
+        "https://schuelerlabor.folkwang-uni.de/team/patrick-lohse"
+      ]
+    },
+    {
+      "id": "nina-mokhtarbaf",
+      "name": "Nina Mokhtarbaf",
+      "isNew": false,
+      "queries": [
+        "\"Nina Mokhtarbaf\" Fotograf",
+        "\"Nina Mokhtarbaf\" photographer",
+        "\"Nina Mokhtarbaf\" photographe",
+        "\"Nina Mokhtarbaf\" fotógrafo",
+        "\"Nina Mokhtarbaf\" fotografo",
+        "\"Nina Mokhtarbaf\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.photoszene.de/ls/artist-programme/open-call-2025/kunstler-innen-open-call-2025/nina-mokhtarbaf",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/nina_mokhtarbaf",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.instagram.com/nina_mokhtarbaf: laut robots.txt nicht erlaubt"
+          }
+        },
+        {
+          "url": "https://finale.folkwang-uni.de/projekte/was-bleibt",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.photoszene.de/ls/artist-programme/open-call-2025/kunstler-innen-open-call-2025/nina-mokhtarbaf",
+        "https://www.instagram.com/nina_mokhtarbaf",
+        "https://finale.folkwang-uni.de/projekte/was-bleibt"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": [
+          "https://www.instagram.com/nina_mokhtarbaf: laut robots.txt nicht erlaubt"
+        ]
+      },
+      "usedLinks": [
+        "https://www.photoszene.de/ls/artist-programme/open-call-2025/kunstler-innen-open-call-2025/nina-mokhtarbaf",
+        "https://finale.folkwang-uni.de/projekte/was-bleibt"
+      ]
+    },
+    {
+      "id": "hannes-jung",
+      "name": "Hannes Jung",
+      "isNew": false,
+      "queries": [
+        "\"Hannes Jung\" Fotograf",
+        "\"Hannes Jung\" photographer",
+        "\"Hannes Jung\" photographe",
+        "\"Hannes Jung\" fotógrafo",
+        "\"Hannes Jung\" fotografo",
+        "\"Hannes Jung\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://hannesjung.com",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://hannesjung.com: nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: UND_ERR_CONNECT_TIMEOUT)"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/hannes.jung",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.instagram.com/hannes.jung: laut robots.txt nicht erlaubt"
+          }
+        },
+        {
+          "url": "https://www.zeit.de/autoren/J/Hannes_Jung/index",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.zeit.de/autoren/J/Hannes_Jung/index: laut robots.txt nicht erlaubt"
+          }
+        },
+        {
+          "url": "https://n-ost.org/de/people/hannes-jung",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://freelens.com/neues/showcases/hannes-jung",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://hannesjung.com",
+        "https://www.instagram.com/hannes.jung",
+        "https://www.zeit.de/autoren/J/Hannes_Jung/index",
+        "https://n-ost.org/de/people/hannes-jung",
+        "https://freelens.com/neues/showcases/hannes-jung"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [
+          {
+            "url": "https://hannesjung.com",
+            "reason": "nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: UND_ERR_CONNECT_TIMEOUT)"
+          }
+        ],
+        "notes": [
+          "https://www.instagram.com/hannes.jung: laut robots.txt nicht erlaubt",
+          "https://www.zeit.de/autoren/J/Hannes_Jung/index: laut robots.txt nicht erlaubt"
+        ]
+      },
+      "usedLinks": [
+        "https://hannesjung.com",
+        "https://n-ost.org/de/people/hannes-jung",
+        "https://freelens.com/neues/showcases/hannes-jung"
+      ]
+    },
+    {
+      "id": "sibylle-bergemann",
+      "name": "Sibylle Bergemann",
+      "isNew": false,
+      "queries": [
+        "\"Sibylle Bergemann\" Fotograf",
+        "\"Sibylle Bergemann\" photographer",
+        "\"Sibylle Bergemann\" photographe",
+        "\"Sibylle Bergemann\" fotógrafo",
+        "\"Sibylle Bergemann\" fotografo",
+        "\"Sibylle Bergemann\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://sibyllebergemann.com/de",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Sibylle_Bergemann",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abgerufen",
+            "reason": "Wikimedia-Adresse läuft über die Wikipedia-Recherche"
+          }
+        },
+        {
+          "url": "https://www.ifa.de/tournee/sibylle-bergemann",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abrufbar",
+            "reason": "https://www.ifa.de/tournee/sibylle-bergemann/: HTTP 401"
+          }
+        },
+        {
+          "url": "https://berlinischegalerie.de/sammlung/fotografie/sibylle-bergemann",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://sibyllebergemann.com/de",
+        "https://de.wikipedia.org/wiki/Sibylle_Bergemann",
+        "https://www.ifa.de/tournee/sibylle-bergemann",
+        "https://berlinischegalerie.de/sammlung/fotografie/sibylle-bergemann"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [
+          {
+            "url": "https://www.ifa.de/tournee/sibylle-bergemann/",
+            "reason": "HTTP 401"
+          }
+        ],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://sibyllebergemann.com/de",
+        "https://de.wikipedia.org/wiki/Sibylle_Bergemann",
+        "https://www.ifa.de/tournee/sibylle-bergemann",
+        "https://berlinischegalerie.de/sammlung/fotografie/sibylle-bergemann"
+      ]
+    },
+    {
+      "id": "herbert-dombrowski",
+      "name": "Herbert Dombrowski",
+      "isNew": false,
+      "queries": [
+        "\"Herbert Dombrowski\" Fotograf",
+        "\"Herbert Dombrowski\" photographer",
+        "\"Herbert Dombrowski\" photographe",
+        "\"Herbert Dombrowski\" fotógrafo",
+        "\"Herbert Dombrowski\" fotografo",
+        "\"Herbert Dombrowski\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.mare.de/crew/herbert-dombrowski-urheber-1493",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.mkdw.de/de/ausstellung/schicht-und-striptease-herbert-dombrowskis-hamburg",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://monovisions.com/herbert-dombrowski-biography-city-life-street-photographer",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.kunstleben-berlin.de/galerie-hilaneh-von-kories-zeigt-herbert-dombrowski-jedes-bild-ist-mir-begegnet",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abrufbar",
+            "reason": "https://www.kunstleben-berlin.de/galerie-hilaneh-von-kories-zeigt-herbert-dombrowski-jedes-bild-ist-mir-begegnet/: Antwort größer als 2 MB verworfen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.mare.de/crew/herbert-dombrowski-urheber-1493",
+        "https://www.mkdw.de/de/ausstellung/schicht-und-striptease-herbert-dombrowskis-hamburg",
+        "https://monovisions.com/herbert-dombrowski-biography-city-life-street-photographer",
+        "https://www.kunstleben-berlin.de/galerie-hilaneh-von-kories-zeigt-herbert-dombrowski-jedes-bild-ist-mir-begegnet"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 3,
+        "cached": 0,
+        "errors": [
+          {
+            "url": "https://www.kunstleben-berlin.de/galerie-hilaneh-von-kories-zeigt-herbert-dombrowski-jedes-bild-ist-mir-begegnet/",
+            "reason": "Antwort größer als 2 MB verworfen"
+          }
+        ],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://www.mare.de/crew/herbert-dombrowski-urheber-1493",
+        "https://www.mkdw.de/de/ausstellung/schicht-und-striptease-herbert-dombrowskis-hamburg",
+        "https://monovisions.com/herbert-dombrowski-biography-city-life-street-photographer"
+      ]
+    },
+    {
+      "id": "stefan-draschan",
+      "name": "Stefan Draschan",
+      "isNew": false,
+      "queries": [
+        "\"Stefan Draschan\" Fotograf",
+        "\"Stefan Draschan\" photographer",
+        "\"Stefan Draschan\" photographe",
+        "\"Stefan Draschan\" fotógrafo",
+        "\"Stefan Draschan\" fotografo",
+        "\"Stefan Draschan\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://stefandraschan.com",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/stefandraschan",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.instagram.com/stefandraschan: laut robots.txt nicht erlaubt"
+          }
+        },
+        {
+          "url": "https://suermondt-ludwig-museum.de/ausstellung/archiv/2026-2/stefan-draschan-2",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://hatjecantz.de/blogs/interviews/stefan-draschan-double-take",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://aboutphotography.blog/photographer/stefan-draschan",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://stefandraschan.com",
+        "https://www.instagram.com/stefandraschan",
+        "https://suermondt-ludwig-museum.de/ausstellung/archiv/2026-2/stefan-draschan-2",
+        "https://hatjecantz.de/blogs/interviews/stefan-draschan-double-take",
+        "https://aboutphotography.blog/photographer/stefan-draschan"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 4,
+        "cached": 0,
+        "errors": [],
+        "notes": [
+          "https://www.instagram.com/stefandraschan: laut robots.txt nicht erlaubt"
+        ]
+      },
+      "usedLinks": [
+        "https://stefandraschan.com",
+        "https://suermondt-ludwig-museum.de/ausstellung/archiv/2026-2/stefan-draschan-2",
+        "https://hatjecantz.de/blogs/interviews/stefan-draschan-double-take",
+        "https://aboutphotography.blog/photographer/stefan-draschan"
+      ]
+    },
+    {
+      "id": "jochen-ehmke",
+      "name": "Jochen Ehmke",
+      "isNew": false,
+      "queries": [
+        "\"Jochen Ehmke\" Fotograf",
+        "\"Jochen Ehmke\" photographer",
+        "\"Jochen Ehmke\" photographe",
+        "\"Jochen Ehmke\" fotógrafo",
+        "\"Jochen Ehmke\" fotografo",
+        "\"Jochen Ehmke\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.zeit.de/kultur/2011-12/fs-jochen-ehmke",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.zeit.de/kultur/2011-12/fs-jochen-ehmke: laut robots.txt nicht erlaubt"
+          }
+        },
+        {
+          "url": "https://www.kunst-chemnitz.de/fluchtversuch-und-andere-merkwuerdigkeiten/1357",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.mz.de/lokal/halle-saale/jochen-ehmke-aus-halle-es-begann-mit-dem-rollfilm-2788616",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.dasfotoportal.de/fotografie-forum-staedte-region-aachen-mysterium-der-paare",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abrufbar",
+            "reason": "https://www.dasfotoportal.de/fotografie-forum-staedte-region-aachen-mysterium-der-paare: Zeitüberschreitung nach 15 s"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.zeit.de/kultur/2011-12/fs-jochen-ehmke",
+        "https://www.kunst-chemnitz.de/fluchtversuch-und-andere-merkwuerdigkeiten/1357",
+        "https://www.mz.de/lokal/halle-saale/jochen-ehmke-aus-halle-es-begann-mit-dem-rollfilm-2788616",
+        "https://www.dasfotoportal.de/fotografie-forum-staedte-region-aachen-mysterium-der-paare"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [
+          {
+            "url": "https://www.dasfotoportal.de/fotografie-forum-staedte-region-aachen-mysterium-der-paare",
+            "reason": "Zeitüberschreitung nach 15 s"
+          }
+        ],
+        "notes": [
+          "https://www.zeit.de/kultur/2011-12/fs-jochen-ehmke: laut robots.txt nicht erlaubt"
+        ]
+      },
+      "usedLinks": [
+        "https://www.zeit.de/kultur/2011-12/fs-jochen-ehmke",
+        "https://www.kunst-chemnitz.de/fluchtversuch-und-andere-merkwuerdigkeiten/1357",
+        "https://www.mz.de/lokal/halle-saale/jochen-ehmke-aus-halle-es-begann-mit-dem-rollfilm-2788616"
+      ]
+    },
+    {
+      "id": "george-friedman",
+      "name": "George Friedman",
+      "isNew": false,
+      "queries": [
+        "\"George Friedman\" Fotograf",
+        "\"George Friedman\" photographer",
+        "\"George Friedman\" photographe",
+        "\"George Friedman\" fotógrafo",
+        "\"George Friedman\" fotografo",
+        "\"George Friedman\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://de.wikipedia.org/wiki/George_Friedmann",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abgerufen",
+            "reason": "Wikimedia-Adresse läuft über die Wikipedia-Recherche"
+          }
+        },
+        {
+          "url": "https://vasarishop.com/en/collections/george-friedman",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://mapadelarte.museomoderno.org/en/artistas/friedman-george",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://de.wikipedia.org/wiki/George_Friedmann",
+        "https://vasarishop.com/en/collections/george-friedman",
+        "https://mapadelarte.museomoderno.org/en/artistas/friedman-george"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://vasarishop.com/en/collections/george-friedman",
+        "https://mapadelarte.museomoderno.org/en/artistas/friedman-george"
+      ]
+    },
+    {
+      "id": "franz-goettfried",
+      "name": "Franz Göttfried",
+      "isNew": false,
+      "queries": [
+        "\"Franz Göttfried\" Fotograf",
+        "\"Franz Göttfried\" photographer",
+        "\"Franz Göttfried\" photographe",
+        "\"Franz Göttfried\" fotógrafo",
+        "\"Franz Göttfried\" fotografo",
+        "\"Franz Göttfried\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://foto.folkwang-uni.de/de/info/ausstellungen/franz-goettfried-portraits",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.margitneuhold.com/von-oben-im-tal-simon-baptist-archiv-franz-goettfried",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://foto.folkwang-uni.de/de/info/ausstellungen/franz-goettfried-portraits",
+        "https://www.margitneuhold.com/von-oben-im-tal-simon-baptist-archiv-franz-goettfried"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://foto.folkwang-uni.de/de/info/ausstellungen/franz-goettfried-portraits",
+        "https://www.margitneuhold.com/von-oben-im-tal-simon-baptist-archiv-franz-goettfried"
+      ]
+    },
+    {
+      "id": "nelly-rau-haering",
+      "name": "Nelly Rau-Häring",
+      "isNew": false,
+      "queries": [
+        "\"Nelly Rau-Häring\" Fotograf",
+        "\"Nelly Rau-Häring\" photographer",
+        "\"Nelly Rau-Häring\" photographe",
+        "\"Nelly Rau-Häring\" fotógrafo",
+        "\"Nelly Rau-Häring\" fotografo",
+        "\"Nelly Rau-Häring\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.editionfroelich.de/produkt/nelly-rau-haering",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://hatjecantz.de/en/products/52766-nelly-rauhaering",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://fhochdrei.org/en/nelly-rau-haringost-west-berlin",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://pictorial-online.com?p=7270",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.editionfroelich.de/produkt/nelly-rau-haering",
+        "https://hatjecantz.de/en/products/52766-nelly-rauhaering",
+        "https://fhochdrei.org/en/nelly-rau-haringost-west-berlin",
+        "https://pictorial-online.com?p=7270"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 4,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://www.editionfroelich.de/produkt/nelly-rau-haering",
+        "https://hatjecantz.de/en/products/52766-nelly-rauhaering",
+        "https://fhochdrei.org/en/nelly-rau-haringost-west-berlin",
+        "https://pictorial-online.com?p=7270"
+      ]
+    },
+    {
+      "id": "jordis-schloesser",
+      "name": "Jordis Schlösser",
+      "isNew": false,
+      "queries": [
+        "\"Jordis Schlösser\" Fotograf",
+        "\"Jordis Schlösser\" photographer",
+        "\"Jordis Schlösser\" photographe",
+        "\"Jordis Schlösser\" fotógrafo",
+        "\"Jordis Schlösser\" fotografo",
+        "\"Jordis Schlösser\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.ostkreuz.de/fotografen/jordis-a-schloesser",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/jordisantoniaschloesser",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.instagram.com/jordisantoniaschloesser: laut robots.txt nicht erlaubt"
+          }
+        },
+        {
+          "url": "https://www.journal21.ch/artikel/von-schicksalen-erzaehlen",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.ostkreuz.de/fotografen/jordis-a-schloesser",
+        "https://www.instagram.com/jordisantoniaschloesser",
+        "https://www.journal21.ch/artikel/von-schicksalen-erzaehlen"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": [
+          "https://www.instagram.com/jordisantoniaschloesser: laut robots.txt nicht erlaubt"
+        ]
+      },
+      "usedLinks": [
+        "https://www.ostkreuz.de/fotografen/jordis-a-schloesser",
+        "https://www.journal21.ch/artikel/von-schicksalen-erzaehlen"
+      ]
+    },
+    {
+      "id": "paul-wolff",
+      "name": "Paul Wolff",
+      "isNew": false,
+      "queries": [
+        "\"Paul Wolff\" Fotograf",
+        "\"Paul Wolff\" photographer",
+        "\"Paul Wolff\" photographe",
+        "\"Paul Wolff\" fotógrafo",
+        "\"Paul Wolff\" fotografo",
+        "\"Paul Wolff\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://de.wikipedia.org/wiki/Paul_Wolff",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abgerufen",
+            "reason": "Wikimedia-Adresse läuft über die Wikipedia-Recherche"
+          }
+        },
+        {
+          "url": "https://sammlung.staedelmuseum.de/de/person/wolff-paul",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.blind-magazine.com/news/dr-paul-wolff-between-light-and-shadows",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://de.wikipedia.org/wiki/Paul_Wolff",
+        "https://sammlung.staedelmuseum.de/de/person/wolff-paul",
+        "https://www.blind-magazine.com/news/dr-paul-wolff-between-light-and-shadows"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://de.wikipedia.org/wiki/Paul_Wolff",
+        "https://sammlung.staedelmuseum.de/de/person/wolff-paul",
+        "https://www.blind-magazine.com/news/dr-paul-wolff-between-light-and-shadows"
+      ]
+    },
+    {
+      "id": "marie-watt",
+      "name": "Marie Watt",
+      "isNew": false,
+      "queries": [
+        "\"Marie Watt\" Fotograf",
+        "\"Marie Watt\" photographer",
+        "\"Marie Watt\" photographe",
+        "\"Marie Watt\" fotógrafo",
+        "\"Marie Watt\" fotografo",
+        "\"Marie Watt\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Marie_Watt",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abgerufen",
+            "reason": "Wikimedia-Adresse läuft über die Wikipedia-Recherche"
+          }
+        },
+        {
+          "url": "https://mariewattstudio.com",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://mariewattstudio.com: nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://en.wikipedia.org/wiki/Marie_Watt",
+        "https://mariewattstudio.com"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "fehlgeschlagen",
+        "fetched": 0,
+        "cached": 0,
+        "errors": [
+          {
+            "url": "https://mariewattstudio.com",
+            "reason": "nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: UNABLE_TO_VERIFY_LEAF_SIGNATURE)"
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "id": "alexander-basta",
+      "name": "Alexander Basta",
+      "isNew": false,
+      "queries": [
+        "\"Alexander Basta\" Fotograf",
+        "\"Alexander Basta\" photographer",
+        "\"Alexander Basta\" photographe",
+        "\"Alexander Basta\" fotógrafo",
+        "\"Alexander Basta\" fotografo",
+        "\"Alexander Basta\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://basta-photograph.de",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.noirblanche.de/de/artists/alexander-basta",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.tonhalle.de/storykachel-basta-portraets",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://basta-photograph.de",
+        "https://www.noirblanche.de/de/artists/alexander-basta",
+        "https://www.tonhalle.de/storykachel-basta-portraets"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 3,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://basta-photograph.de",
+        "https://www.noirblanche.de/de/artists/alexander-basta",
+        "https://www.tonhalle.de/storykachel-basta-portraets"
+      ]
+    },
+    {
+      "id": "josef-fischnaller",
+      "name": "Josef Fischnaller",
+      "isNew": false,
+      "queries": [
+        "\"Josef Fischnaller\" Fotograf",
+        "\"Josef Fischnaller\" photographer",
+        "\"Josef Fischnaller\" photographe",
+        "\"Josef Fischnaller\" fotógrafo",
+        "\"Josef Fischnaller\" fotografo",
+        "\"Josef Fischnaller\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.joseffischnaller.com",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Josef_Fischnaller_(Fotograf)",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abgerufen",
+            "reason": "Wikimedia-Adresse läuft über die Wikipedia-Recherche"
+          }
+        },
+        {
+          "url": "https://www.galeriefriedmann-hahn.com/de/artists/josef_fischnaller/works",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.joseffischnaller.com",
+        "https://de.wikipedia.org/wiki/Josef_Fischnaller_(Fotograf)",
+        "https://www.galeriefriedmann-hahn.com/de/artists/josef_fischnaller/works"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://www.joseffischnaller.com",
+        "https://de.wikipedia.org/wiki/Josef_Fischnaller_(Fotograf)",
+        "https://www.galeriefriedmann-hahn.com/de/artists/josef_fischnaller/works"
+      ]
+    },
+    {
+      "id": "joop-greypink",
+      "name": "Joop Greypink",
+      "isNew": false,
+      "queries": [
+        "\"Joop Greypink\" Fotograf",
+        "\"Joop Greypink\" photographer",
+        "\"Joop Greypink\" photographe",
+        "\"Joop Greypink\" fotógrafo",
+        "\"Joop Greypink\" fotografo",
+        "\"Joop Greypink\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.noirblanche.de/de/artists/joop-greypink",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://guru.ag/h5/index.html",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://guru.ag/h5/index.html: laut robots.txt nicht erlaubt"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.noirblanche.de/de/artists/joop-greypink",
+        "https://guru.ag/h5/index.html"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 1,
+        "cached": 0,
+        "errors": [],
+        "notes": [
+          "https://guru.ag/h5/index.html: laut robots.txt nicht erlaubt"
+        ]
+      },
+      "usedLinks": [
+        "https://www.noirblanche.de/de/artists/joop-greypink"
+      ]
+    },
+    {
+      "id": "markus-c-hurek",
+      "name": "Markus C. Hurek",
+      "isNew": false,
+      "queries": [
+        "\"Markus C. Hurek\" Fotograf",
+        "\"Markus C. Hurek\" photographer",
+        "\"Markus C. Hurek\" photographe",
+        "\"Markus C. Hurek\" fotógrafo",
+        "\"Markus C. Hurek\" fotografo",
+        "\"Markus C. Hurek\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://de.wikipedia.org/wiki/Markus_Hurek",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abgerufen",
+            "reason": "Wikimedia-Adresse läuft über die Wikipedia-Recherche"
+          }
+        },
+        {
+          "url": "https://mchurek.de",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://mchurek.de: nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: ETIMEDOUT)"
+          }
+        },
+        {
+          "url": "https://leica-camera.com/de-DE/event/made-berlin",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://de.wikipedia.org/wiki/Markus_Hurek",
+        "https://mchurek.de",
+        "https://leica-camera.com/de-DE/event/made-berlin"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 1,
+        "cached": 0,
+        "errors": [
+          {
+            "url": "https://mchurek.de",
+            "reason": "nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: ETIMEDOUT)"
+          }
+        ],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://de.wikipedia.org/wiki/Markus_Hurek",
+        "https://mchurek.de",
+        "https://leica-camera.com/de-DE/event/made-berlin"
+      ]
+    },
+    {
+      "id": "hans-lux",
+      "name": "Hans Lux",
+      "isNew": false,
+      "queries": [
+        "\"Hans Lux\" Fotograf",
+        "\"Hans Lux\" photographer",
+        "\"Hans Lux\" photographe",
+        "\"Hans Lux\" fotógrafo",
+        "\"Hans Lux\" fotografo",
+        "\"Hans Lux\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.noirblanche.de/de/artists/hans-lux",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://rp-online.de/nrw/staedte/duesseldorf/portraet-des-duesseldorfer-fotografen-hans-lux_aid-49808197",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.profifoto.de/szene/ausstellungen/2020/03/04/hans-lux-ueber-peter-lindbergh",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.noirblanche.de/de/artists/hans-lux",
+        "https://rp-online.de/nrw/staedte/duesseldorf/portraet-des-duesseldorfer-fotografen-hans-lux_aid-49808197",
+        "https://www.profifoto.de/szene/ausstellungen/2020/03/04/hans-lux-ueber-peter-lindbergh"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 3,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://www.noirblanche.de/de/artists/hans-lux",
+        "https://rp-online.de/nrw/staedte/duesseldorf/portraet-des-duesseldorfer-fotografen-hans-lux_aid-49808197",
+        "https://www.profifoto.de/szene/ausstellungen/2020/03/04/hans-lux-ueber-peter-lindbergh"
+      ]
+    },
+    {
+      "id": "clay-perry",
+      "name": "Clay Perry",
+      "isNew": false,
+      "queries": [
+        "\"Clay Perry\" Fotograf",
+        "\"Clay Perry\" photographer",
+        "\"Clay Perry\" photographe",
+        "\"Clay Perry\" fotógrafo",
+        "\"Clay Perry\" fotografo",
+        "\"Clay Perry\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://clayperry.co.uk",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.englandgallery.com/clay-perry",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.rockarchive.com/photographers/clay-perry",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://clayperry.co.uk",
+        "https://www.englandgallery.com/clay-perry",
+        "https://www.rockarchive.com/photographers/clay-perry"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 3,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://clayperry.co.uk",
+        "https://www.englandgallery.com/clay-perry",
+        "https://www.rockarchive.com/photographers/clay-perry"
+      ]
+    },
+    {
+      "id": "alfredo-sarabia-jun",
+      "name": "Alfredo Sarabia jun.",
+      "isNew": false,
+      "queries": [
+        "\"Alfredo Sarabia jun.\" Fotograf",
+        "\"Alfredo Sarabia jun.\" photographer",
+        "\"Alfredo Sarabia jun.\" photographe",
+        "\"Alfredo Sarabia jun.\" fotógrafo",
+        "\"Alfredo Sarabia jun.\" fotografo",
+        "\"Alfredo Sarabia jun.\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.noirblanche.de/eng/artists/alfredo-sarabia-jun",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "http://www.michael-horbach-stiftung.de/fotopreis/alfredo-sarabia-junior.html",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/alfredosarabia_artwork",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.instagram.com/alfredosarabia_artwork: laut robots.txt nicht erlaubt"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.noirblanche.de/eng/artists/alfredo-sarabia-jun",
+        "http://www.michael-horbach-stiftung.de/fotopreis/alfredo-sarabia-junior.html",
+        "https://www.instagram.com/alfredosarabia_artwork"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": [
+          "https://www.instagram.com/alfredosarabia_artwork: laut robots.txt nicht erlaubt"
+        ]
+      },
+      "usedLinks": [
+        "https://www.noirblanche.de/eng/artists/alfredo-sarabia-jun",
+        "http://www.michael-horbach-stiftung.de/fotopreis/alfredo-sarabia-junior.html"
+      ]
+    },
+    {
+      "id": "renate-scherra",
+      "name": "Renate Scherra",
+      "isNew": false,
+      "queries": [
+        "\"Renate Scherra\" Fotograf",
+        "\"Renate Scherra\" photographer",
+        "\"Renate Scherra\" photographe",
+        "\"Renate Scherra\" fotógrafo",
+        "\"Renate Scherra\" fotografo",
+        "\"Renate Scherra\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.noirblanche.de/de/artists/renate-scherra",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://bbk-duesseldorf.de/mitglied/renate-scherra",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.renatescherra.de",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.renatescherra.de: nicht abgerufen, robots.txt antwortet mit 503"
+          }
+        },
+        {
+          "url": "https://www.wz.de/nrw/duesseldorf/kultur/galerie-noir-blanche-duesseldorf-renate-scherra-zeigt-bilder-aus-jemen_aid-46338929",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.noirblanche.de/de/artists/renate-scherra",
+        "https://bbk-duesseldorf.de/mitglied/renate-scherra",
+        "https://www.renatescherra.de",
+        "https://www.wz.de/nrw/duesseldorf/kultur/galerie-noir-blanche-duesseldorf-renate-scherra-zeigt-bilder-aus-jemen_aid-46338929"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 3,
+        "cached": 0,
+        "errors": [
+          {
+            "url": "https://www.renatescherra.de",
+            "reason": "nicht abgerufen, robots.txt antwortet mit 503"
+          }
+        ],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://www.noirblanche.de/de/artists/renate-scherra",
+        "https://bbk-duesseldorf.de/mitglied/renate-scherra",
+        "https://www.renatescherra.de",
+        "https://www.wz.de/nrw/duesseldorf/kultur/galerie-noir-blanche-duesseldorf-renate-scherra-zeigt-bilder-aus-jemen_aid-46338929"
+      ]
+    },
+    {
+      "id": "axel-schmidt",
+      "name": "Axel Schmidt",
+      "isNew": false,
+      "queries": [
+        "\"Axel Schmidt\" Fotograf",
+        "\"Axel Schmidt\" photographer",
+        "\"Axel Schmidt\" photographe",
+        "\"Axel Schmidt\" fotógrafo",
+        "\"Axel Schmidt\" fotografo",
+        "\"Axel Schmidt\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://axelschmidt.photography",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.noirblanche.de/de/artists/axel-schmidt",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://axelschmidt.photography",
+        "https://www.noirblanche.de/de/artists/axel-schmidt"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://axelschmidt.photography",
+        "https://www.noirblanche.de/de/artists/axel-schmidt"
+      ]
+    },
+    {
+      "id": "walter-schmitz",
+      "name": "Walter Schmitz",
+      "isNew": false,
+      "queries": [
+        "\"Walter Schmitz\" Fotograf",
+        "\"Walter Schmitz\" photographer",
+        "\"Walter Schmitz\" photographe",
+        "\"Walter Schmitz\" fotógrafo",
+        "\"Walter Schmitz\" fotografo",
+        "\"Walter Schmitz\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://walterschmitz.com",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.noirblanche.de/de/artists/walter-schmitz",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://walterschmitz.com",
+        "https://www.noirblanche.de/de/artists/walter-schmitz"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://walterschmitz.com",
+        "https://www.noirblanche.de/de/artists/walter-schmitz"
+      ]
+    },
+    {
+      "id": "ayako-takashi",
+      "name": "Ayako Takashi",
+      "isNew": false,
+      "queries": [
+        "\"Ayako Takashi\" Fotograf",
+        "\"Ayako Takashi\" photographer",
+        "\"Ayako Takashi\" photographe",
+        "\"Ayako Takashi\" fotógrafo",
+        "\"Ayako Takashi\" fotografo",
+        "\"Ayako Takashi\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.ayakotakaishi.com",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.noirblanche.de/de/artists/ayako-takaishi",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.ayakotakaishi.com",
+        "https://www.noirblanche.de/de/artists/ayako-takaishi"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://www.ayakotakaishi.com",
+        "https://www.noirblanche.de/de/artists/ayako-takaishi"
+      ]
+    },
+    {
+      "id": "martin-waldbauer",
+      "name": "Martin Waldbauer",
+      "isNew": false,
+      "queries": [
+        "\"Martin Waldbauer\" Fotograf",
+        "\"Martin Waldbauer\" photographer",
+        "\"Martin Waldbauer\" photographe",
+        "\"Martin Waldbauer\" fotógrafo",
+        "\"Martin Waldbauer\" fotografo",
+        "\"Martin Waldbauer\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://martinwaldbauer.com",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/martinwaldbauer",
+          "status": "übernommen",
+          "fetch": {
+            "status": "gesperrt",
+            "reason": "https://www.instagram.com/martinwaldbauer: laut robots.txt nicht erlaubt"
+          }
+        },
+        {
+          "url": "https://www.whitewall.com/de/magazin/inspiration/martin-waldbauer-portrait-photography",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://www.g99gallery.com/ausstellung-martin-waldbauer-1",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://martinwaldbauer.com",
+        "https://www.instagram.com/martinwaldbauer",
+        "https://www.whitewall.com/de/magazin/inspiration/martin-waldbauer-portrait-photography",
+        "https://www.g99gallery.com/ausstellung-martin-waldbauer-1"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 3,
+        "cached": 0,
+        "errors": [],
+        "notes": [
+          "https://www.instagram.com/martinwaldbauer: laut robots.txt nicht erlaubt"
+        ]
+      },
+      "usedLinks": [
+        "https://martinwaldbauer.com",
+        "https://www.whitewall.com/de/magazin/inspiration/martin-waldbauer-portrait-photography",
+        "https://www.g99gallery.com/ausstellung-martin-waldbauer-1"
+      ]
+    },
+    {
+      "id": "barbara-wolff",
+      "name": "Barbara Wolff",
+      "isNew": false,
+      "queries": [
+        "\"Barbara Wolff\" Fotograf",
+        "\"Barbara Wolff\" photographer",
+        "\"Barbara Wolff\" photographe",
+        "\"Barbara Wolff\" fotógrafo",
+        "\"Barbara Wolff\" fotografo",
+        "\"Barbara Wolff\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://barbarawolff.eu",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Barbara_Wolff_(Fotografin)",
+          "status": "übernommen",
+          "fetch": {
+            "status": "nicht abgerufen",
+            "reason": "Wikimedia-Adresse läuft über die Wikipedia-Recherche"
+          }
+        },
+        {
+          "url": "https://www.dgph.de/aktuelles/barbara-wolff-das-leben-bestimmt-die-bilder-die-bleiben",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://barbarawolff.eu",
+        "https://de.wikipedia.org/wiki/Barbara_Wolff_(Fotografin)",
+        "https://www.dgph.de/aktuelles/barbara-wolff-das-leben-bestimmt-die-bilder-die-bleiben"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://barbarawolff.eu",
+        "https://de.wikipedia.org/wiki/Barbara_Wolff_(Fotografin)",
+        "https://www.dgph.de/aktuelles/barbara-wolff-das-leben-bestimmt-die-bilder-die-bleiben"
+      ]
+    },
+    {
+      "id": "radu-darvas",
+      "name": "Radu Darvas",
+      "isNew": false,
+      "queries": [
+        "\"Radu Darvas\" Fotograf",
+        "\"Radu Darvas\" photographer",
+        "\"Radu Darvas\" photographe",
+        "\"Radu Darvas\" fotógrafo",
+        "\"Radu Darvas\" fotografo",
+        "\"Radu Darvas\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://kulturaktiv.org/events/radu-darvas-wiedergutmachung",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        },
+        {
+          "url": "https://dresdencontemporaryart.com/en/event/radu-darvas-wiedergutmachung",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://kulturaktiv.org/events/radu-darvas-wiedergutmachung",
+        "https://dresdencontemporaryart.com/en/event/radu-darvas-wiedergutmachung"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 2,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      },
+      "usedLinks": [
+        "https://kulturaktiv.org/events/radu-darvas-wiedergutmachung",
+        "https://dresdencontemporaryart.com/en/event/radu-darvas-wiedergutmachung"
+      ]
+    },
+    {
+      "id": "nino-sable",
+      "name": "Nino Sable",
+      "isNew": false,
+      "queries": [
+        "\"Nino Sable\" Fotograf",
+        "\"Nino Sable\" photographer",
+        "\"Nino Sable\" photographe",
+        "\"Nino Sable\" fotógrafo",
+        "\"Nino Sable\" fotografo",
+        "\"Nino Sable\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://ninosable.de",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://ninosable.de"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 1,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "benno-schlicht",
+      "name": "Benno Schlicht",
+      "isNew": false,
+      "queries": [
+        "\"Benno Schlicht\" Fotograf",
+        "\"Benno Schlicht\" photographer",
+        "\"Benno Schlicht\" photographe",
+        "\"Benno Schlicht\" fotógrafo",
+        "\"Benno Schlicht\" fotografo",
+        "\"Benno Schlicht\" fotograaf"
+      ],
+      "useCache": false,
+      "noSearch": true,
+      "ownUrls": [
+        {
+          "url": "https://www.benno-schlicht.com",
+          "status": "übernommen",
+          "fetch": {
+            "status": "abgerufen"
+          }
+        }
+      ],
+      "queryCount": 0,
+      "hitCount": 0,
+      "newLinks": [
+        "https://www.benno-schlicht.com"
+      ],
+      "status": "nur eigene Adressen",
+      "pages": {
+        "status": "abgerufen",
+        "fetched": 1,
+        "cached": 0,
+        "errors": [],
+        "notes": []
+      }
+    }
+  ],
+  "skipped": []
+}

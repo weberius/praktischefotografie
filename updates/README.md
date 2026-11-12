@@ -163,7 +163,7 @@ updates/<JJJJ-MM-TT>/
 
 ## Websuche nach Personen
 
-Der Skill recherchiert standardmäßig auch über eine Suchmaschine (ADR-019, ADR-020, `docs/ears/setup/personen-websuche.md`, `docs/ears/setup/recherche-in-allen-sprachen.md`): höchstens sechs Anfragen in sechs Sprachen, höchstens zehn Seiten. Die Wikipedia-Sprachversionen landen als Links ebenfalls in der Linksammlung. Mit `--no-web` entsteht keine Suchanfrage. Eigene Quellen der Redaktion gibt `plan --url <adresse>` (mehrfach, nur mit Person) vor: Sie stehen mit `query` `manuell` in der Linksammlung und werden auch mit `--no-web` abgerufen (`docs/ears/setup/personen-quellen.md`).
+Der Skill recherchiert standardmäßig auch über eine Suchmaschine (ADR-019, ADR-020, `docs/ears/setup/personen-websuche.md`, `docs/ears/setup/recherche-in-allen-sprachen.md`): höchstens sechs Anfragen in sechs Sprachen, höchstens zehn Seiten. Die Wikipedia-Sprachversionen landen als Links ebenfalls in der Linksammlung. Mit `--no-web` entsteht keine Suchanfrage. Eigene Quellen der Redaktion gibt `plan --url <adresse>` (mehrfach, nur mit Person) vor: Sie stehen mit `query` `manuell` in der Linksammlung und werden auch mit `--no-web` abgerufen (`docs/ears/setup/personen-quellen.md`). Für viele Personen gibt `plan --sources <datei.json>` (`{ "<id>": ["<adresse>", …] }`, nicht mit `--url`/`--photographer`/`--name`) die Adressen in einem Lauf vor; Übersprungenes steht im Bericht.
 
 ```bash
 npm run photographers:web -- plan --name "Wendy Red Star" [--offline] [--max-age 30]

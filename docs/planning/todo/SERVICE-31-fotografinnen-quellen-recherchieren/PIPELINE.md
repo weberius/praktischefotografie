@@ -5,16 +5,16 @@
 | Phase | Artefakt(e) | Status | Datum |
 | --- | --- | --- | --- |
 | 0 Setup | Ordner, PIPELINE.md, Feature-Branch | Erledigt | 2026-11-12 |
-| 1 Vision (H1) | EPIC, Annahmen | Entwurf (Intake) | 2026-11-12 |
+| 1 Vision (H1) | EPIC, Annahmen | Freigegeben (Aufruf von /spec-pipeline) | 2026-11-12 |
 | 2 UserStory | STORY-01, STORY-02 | Erledigt | 2026-11-12 |
 | 3 Spezifikation · EARS | setup/personen-quellen.md (PQL-UB-3, PQL-EV-3, PQL-UN-2) | Erledigt | 2026-11-12 |
 | 3 Spezifikation · Gherkin | setup/personen-quellen.feature (3 neue Szenarien) | Erledigt | 2026-11-12 |
 | 3 Spezifikation · Quality | setup/personen-quellen.md (Q-DATA-26) | Erledigt | 2026-11-12 |
 | 3 Spezifikation · ADR | nicht erforderlich (geltend ADR-006, ADR-007, ADR-011, ADR-012, ADR-019, ADR-020) | Nicht erforderlich | 2026-11-12 |
 | 3 Spezifikation · Konsistenz | siehe unten | Erledigt | 2026-11-12 |
-| 4 Tasks | – | Offen | |
-| 5 Implement | – | Offen | |
-| 6 Human in the Loop (H2) | – | Offen | |
+| 4 Tasks | STORY-01-TASK-01; STORY-02-TASK-01, -TASK-02 | Erledigt | 2026-11-12 |
+| 5 Implement | Code + Tests + CHANGELOG (Story 01 und 02 umgesetzt, 30 Webkurztexte übernommen) | Erledigt | 2026-11-12 |
+| 6 Human in the Loop (H2) | Prüfpaket | Akzeptiert (alle Annahmen bestätigt) | 2026-11-12 |
 | 7 Review | – | Offen | |
 
 Status: `Offen` · `In Arbeit` · `Erledigt` · `Nicht erforderlich` · `Rücklauf` · `Verworfen`

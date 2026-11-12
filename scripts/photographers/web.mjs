@@ -1,12 +1,13 @@
 // Websuche nach Personen (ADR-019, WSP-*). Die Suche selbst führt der Skill aus und schreibt photographers-search.json.
 // Aufruf: npm run photographers:web -- plan   … (--photographer <id> | --name "<Name>") [--url <adresse> …] [--no-web] [--offline] [--max-age <Tage>] [--date JJJJ-MM-TT]
+//         npm run photographers:web -- plan   --sources <datei.json> [--no-web] [--offline] [--max-age <Tage>] [--date JJJJ-MM-TT]   (Sammeldatei { "<id>": ["<adresse>", …] })
 //         npm run photographers:web -- links  [--date …]   (Suchdatei in Linksammlung übernehmen)
 //         npm run photographers:web -- pages  [--offline] [--date …]   (Seiten neuer Links abrufen; braucht SCRAPE_CONTACT)
 //         npm run photographers:web -- check  [--date …]
 //         npm run photographers:web -- apply  [--photographer <id>] [--force] [--date …]
 import { fileURLToPath } from 'node:url';
 import { ROOT, arg, today } from '../scrape/lib/common.mjs';
-import { applyWebFile, checkWebFile, fetchPages, ingestSearch, planWeb } from './lib/websearch.mjs';
+import { applyWebFile, checkWebFile, fetchPages, ingestSearch, planSources, planWeb } from './lib/websearch.mjs';
 
 export async function main(argv = process.argv.slice(2), env = process.env, root = ROOT, options = {}) {
   const [command] = argv;
@@ -17,6 +18,17 @@ export async function main(argv = process.argv.slice(2), env = process.env, root
   if (command === 'plan') {
     const urls = rest.flatMap((a, i) => (a === '--url' && rest[i + 1] ? [rest[i + 1]] : []));
     const noWeb = arg(rest, 'no-web', false) === true;
+    const sourcesFile = arg(rest, 'sources', false);
+    if (sourcesFile !== false) {
+      if (typeof sourcesFile !== 'string' || urls.length > 0 || arg(rest, 'photographer') || arg(rest, 'name')) throw new Error('--sources <datei> lässt sich nicht mit --url, --photographer oder --name kombinieren.');
+      const result = planSources({ root, date, file: sourcesFile, offline, maxAgeDays, noWeb, allowInternal: options.allowInternal });
+      for (const p of result.persons) {
+        console.log(`${p.id}: ${noWeb ? 'ohne Suche (--no-web)' : p.useCache ? 'Suche aus dem Zwischenspeicher' : `Suchanfragen: ${p.queries.join(' | ')}`}`);
+        for (const o of p.ownUrls) if (o.status === 'abgelehnt') console.log(`  eigene Adresse abgelehnt: ${o.url} (${o.reason})`);
+      }
+      for (const s of result.skipped) console.log(`übersprungen ${s.id}: ${s.reason}`);
+      return result;
+    }
     const { person } = planWeb({ root, date, photographerId: arg(rest, 'photographer') || undefined, name: arg(rest, 'name') || undefined, offline, maxAgeDays, urls, noWeb, allowInternal: options.allowInternal });
     console.log(`${person.id}${person.isNew ? ' (neu)' : ''}: ${noWeb ? 'ohne Suche (--no-web)' : person.useCache ? 'Suche aus dem Zwischenspeicher' : `Suchanfragen: ${person.queries.join(' | ')}`}`);
     for (const o of person.ownUrls) if (o.status === 'abgelehnt') console.log(`  eigene Adresse abgelehnt: ${o.url} (${o.reason})`);

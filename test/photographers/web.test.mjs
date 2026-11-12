@@ -404,3 +404,46 @@ test('Szenario: Bericht nennt eigene Adressen (PQL-EV-2, Q-DATA-18)', async () =
   assert.match(text, /eigene Adresse: https:\/\/example\.org\/neu – übernommen/);
   assert.match(text, /eigene Adresse: gopher:\/\/x – abgelehnt/);
 });
+
+// Gherkin: docs/contracts/gherkin/setup/personen-quellen.feature (PQL-UB-3, PQL-EV-3, PQL-UN-2), Q-DATA-26
+const sourcesFile = (root, content) => {
+  const file = join(root, 'sources.json');
+  writeFileSync(file, typeof content === 'string' ? content : JSON.stringify(content));
+  return file;
+};
+const two = [{ id: 'anna-a', name: 'Anna A' }, { id: 'bert-b', name: 'Bert B' }];
+
+test('Szenario: Sammeldatei in einem Lauf (PQL-EV-3, Q-DATA-26)', async () => {
+  const root = workspace(two);
+  const file = sourcesFile(root, { 'anna-a': ['https://example.org/a1', 'https://example.org/a2'], 'bert-b': ['https://example.org/b1', 'https://example.org/b2'] });
+  await run(root, 'plan', '--sources', file, '--no-web');
+  await run(root, 'links');
+  const l = links(root);
+  assert.deepEqual(l['anna-a'].map((x) => x.url), ['https://example.org/a1', 'https://example.org/a2']);
+  assert.deepEqual(l['bert-b'].map((x) => x.query), ['manuell', 'manuell']);
+  assert.ok(!existsSync(join(root, 'updates', DATE, 'photographers-search.json')));
+  assert.match(report(root), /`bert-b`[\s\S]*eigene Adresse: https:\/\/example\.org\/b2 – übernommen/);
+});
+
+test('Szenario: Sammeldatei mit unbekannter Person oder Adresse (PQL-UN-2, Q-DATA-26)', async () => {
+  const root = workspace(two);
+  const file = sourcesFile(root, { 'gibt-es-nicht': ['https://example.org/x'], 'anna-a': [], 'bert-b': ['kein url', '', 'https://example.org/ok'] });
+  await run(root, 'plan', '--sources', file, '--no-web');
+  await run(root, 'links');
+  assert.deepEqual(Object.keys(links(root)), ['bert-b']);
+  assert.deepEqual(links(root)['bert-b'].map((x) => x.url), ['https://example.org/ok']);
+  const text = report(root);
+  assert.match(text, /übersprungen `gibt-es-nicht`: unbekannte Personen-ID/);
+  assert.match(text, /übersprungen `anna-a`: keine Adressen/);
+  assert.match(text, /eigene Adresse: kein url – abgelehnt/);
+});
+
+test('Szenario: Sammeldatei nicht mit Einzelangaben (PQL-UB-3)', async () => {
+  const root = workspace(two);
+  const file = sourcesFile(root, { 'anna-a': ['https://example.org/a'] });
+  await assert.rejects(() => main(argv('plan', '--sources', file, '--url', 'https://example.org/a'), {}, root), /nicht mit --url/);
+  await assert.rejects(() => main(argv('plan', '--sources', file, '--photographer', 'anna-a'), {}, root), /nicht mit --url/);
+  await assert.rejects(() => main(argv('plan', '--sources', join(root, 'fehlt.json')), {}, root), /nicht lesbar/);
+  await assert.rejects(() => main(argv('plan', '--sources', sourcesFile(root, '["a"]')), {}, root), /muss ein Objekt/);
+  assert.ok(!existsSync(join(root, 'updates', DATE, 'photographers-web.json')));
+});

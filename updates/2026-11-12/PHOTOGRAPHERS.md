@@ -80,3 +80,377 @@
 - `joel-meyerowitz` (Joel Meyerowitz): gefunden; Sprachen: de, en, fr, es, it, nl, cs, fa, ru, vo; Bild: CC BY-SA 3.0; übernommen
 - `nino-sable` (Nino Sable): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
 - `benno-schlicht` (Benno Schlicht): nicht gefunden – kein Eintrag mit passendem Namen und Beruf; Sprachen: –; Bild: –; kein Vorschlag
+
+## Websuche
+
+- Personen: 33
+- Übersprungen: 0
+- Suchanfragen: 0
+- Treffer: 0
+- Neue Links: 100
+- Angelegte Personen: 0
+- Aktualisierte Webkurztexte: 30
+
+- `hans-georg-esch` (Hans Georg Esch): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.hgesch.de – übernommen; abgerufen
+  - eigene Adresse: https://de.wikipedia.org/wiki/Hans-Georg_Esch – übernommen; nicht abgerufen (Wikimedia-Adresse läuft über die Wikipedia-Recherche)
+  - eigene Adresse: https://www.instagram.com/hgeschphotography – übernommen; abgerufen
+  - eigene Adresse: https://www.kaunegallery.com/artists/hans-georg-esch – übernommen; abgerufen
+  - eigene Adresse: https://www.marlowes.de/author/hgesch – übernommen; abgerufen
+  - neuer Link: https://www.hgesch.de
+  - neuer Link: https://de.wikipedia.org/wiki/Hans-Georg_Esch
+  - neuer Link: https://www.instagram.com/hgeschphotography
+  - neuer Link: https://www.kaunegallery.com/artists/hans-georg-esch
+  - neuer Link: https://www.marlowes.de/author/hgesch
+  - genutzt: https://www.hgesch.de
+  - genutzt: https://www.kaunegallery.com/artists/hans-georg-esch
+  - genutzt: https://www.marlowes.de/author/hgesch
+  - Seiten: 4 abgerufen, 0 aus dem Zwischenspeicher
+- `juergen-klauke` (Jürgen Klauke): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: http://www.juergenklauke.de – übernommen; abgerufen
+  - eigene Adresse: https://de.wikipedia.org/wiki/J%C3%BCrgen_Klauke – übernommen; nicht abgerufen (Wikimedia-Adresse läuft über die Wikipedia-Recherche)
+  - eigene Adresse: https://www.awk.nrw/mitglieder/liste/klasse/k/prof-juergen-klauke – übernommen; abgerufen
+  - neuer Link: http://www.juergenklauke.de
+  - neuer Link: https://de.wikipedia.org/wiki/J%C3%BCrgen_Klauke
+  - neuer Link: https://www.awk.nrw/mitglieder/liste/klasse/k/prof-juergen-klauke
+  - genutzt: http://www.juergenklauke.de
+  - genutzt: https://www.awk.nrw/mitglieder/liste/klasse/k/prof-juergen-klauke
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+- `florian-faeth` (Florian Fäth): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.folkwang-uni.de/home/gestaltung/aktuell/vollanzeige/folkwang-absolventinnen-photography-masters-im-museum-folkwang – übernommen; abgerufen
+  - eigene Adresse: https://www.instagram.com/florianfaeth – übernommen; gesperrt (https://www.instagram.com/florianfaeth: laut robots.txt nicht erlaubt)
+  - eigene Adresse: https://artfacts.net/artist/florian-faeth – übernommen; abgerufen
+  - eigene Adresse: https://wettmann.com/charityauktion-junge-fotokunst-folkwang-universitaet-der-kuenste – übernommen; abgerufen
+  - neuer Link: https://www.folkwang-uni.de/home/gestaltung/aktuell/vollanzeige/folkwang-absolventinnen-photography-masters-im-museum-folkwang
+  - neuer Link: https://www.instagram.com/florianfaeth
+  - neuer Link: https://artfacts.net/artist/florian-faeth
+  - neuer Link: https://wettmann.com/charityauktion-junge-fotokunst-folkwang-universitaet-der-kuenste
+  - genutzt: https://www.folkwang-uni.de/home/gestaltung/aktuell/vollanzeige/folkwang-absolventinnen-photography-masters-im-museum-folkwang
+  - genutzt: https://wettmann.com/charityauktion-junge-fotokunst-folkwang-universitaet-der-kuenste
+  - Seiten: 3 abgerufen, 0 aus dem Zwischenspeicher
+  - Hinweis: https://www.instagram.com/florianfaeth: laut robots.txt nicht erlaubt
+- `mara-fischer` (Mara Fischer): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.instagram.com/mararakete – übernommen; gesperrt (https://www.instagram.com/mararakete: laut robots.txt nicht erlaubt)
+  - eigene Adresse: https://www.marafischer.com – übernommen; abgerufen
+  - neuer Link: https://www.instagram.com/mararakete
+  - neuer Link: https://www.marafischer.com
+  - genutzt: https://www.marafischer.com
+  - Seiten: 1 abgerufen, 0 aus dem Zwischenspeicher
+  - Hinweis: https://www.instagram.com/mararakete: laut robots.txt nicht erlaubt
+- `patrick-lohse` (Patrick Lohse): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://patricklohse.de – übernommen; abgerufen
+  - eigene Adresse: https://schuelerlabor.folkwang-uni.de/team/patrick-lohse – übernommen; abgerufen
+  - eigene Adresse: https://www.instagram.com/____patrick.lohse – übernommen; gesperrt (https://www.instagram.com/____patrick.lohse: laut robots.txt nicht erlaubt)
+  - neuer Link: https://patricklohse.de
+  - neuer Link: https://schuelerlabor.folkwang-uni.de/team/patrick-lohse
+  - neuer Link: https://www.instagram.com/____patrick.lohse
+  - genutzt: https://patricklohse.de
+  - genutzt: https://schuelerlabor.folkwang-uni.de/team/patrick-lohse
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+  - Hinweis: https://www.instagram.com/____patrick.lohse: laut robots.txt nicht erlaubt
+- `nina-mokhtarbaf` (Nina Mokhtarbaf): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.photoszene.de/ls/artist-programme/open-call-2025/kunstler-innen-open-call-2025/nina-mokhtarbaf – übernommen; abgerufen
+  - eigene Adresse: https://www.instagram.com/nina_mokhtarbaf – übernommen; gesperrt (https://www.instagram.com/nina_mokhtarbaf: laut robots.txt nicht erlaubt)
+  - eigene Adresse: https://finale.folkwang-uni.de/projekte/was-bleibt – übernommen; abgerufen
+  - neuer Link: https://www.photoszene.de/ls/artist-programme/open-call-2025/kunstler-innen-open-call-2025/nina-mokhtarbaf
+  - neuer Link: https://www.instagram.com/nina_mokhtarbaf
+  - neuer Link: https://finale.folkwang-uni.de/projekte/was-bleibt
+  - genutzt: https://www.photoszene.de/ls/artist-programme/open-call-2025/kunstler-innen-open-call-2025/nina-mokhtarbaf
+  - genutzt: https://finale.folkwang-uni.de/projekte/was-bleibt
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+  - Hinweis: https://www.instagram.com/nina_mokhtarbaf: laut robots.txt nicht erlaubt
+- `hannes-jung` (Hannes Jung): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://hannesjung.com – übernommen; gesperrt (https://hannesjung.com: nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: UND_ERR_CONNECT_TIMEOUT))
+  - eigene Adresse: https://www.instagram.com/hannes.jung – übernommen; gesperrt (https://www.instagram.com/hannes.jung: laut robots.txt nicht erlaubt)
+  - eigene Adresse: https://www.zeit.de/autoren/J/Hannes_Jung/index – übernommen; gesperrt (https://www.zeit.de/autoren/J/Hannes_Jung/index: laut robots.txt nicht erlaubt)
+  - eigene Adresse: https://n-ost.org/de/people/hannes-jung – übernommen; abgerufen
+  - eigene Adresse: https://freelens.com/neues/showcases/hannes-jung – übernommen; abgerufen
+  - neuer Link: https://hannesjung.com
+  - neuer Link: https://www.instagram.com/hannes.jung
+  - neuer Link: https://www.zeit.de/autoren/J/Hannes_Jung/index
+  - neuer Link: https://n-ost.org/de/people/hannes-jung
+  - neuer Link: https://freelens.com/neues/showcases/hannes-jung
+  - genutzt: https://hannesjung.com
+  - genutzt: https://n-ost.org/de/people/hannes-jung
+  - genutzt: https://freelens.com/neues/showcases/hannes-jung
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+  - Hinweis: https://www.instagram.com/hannes.jung: laut robots.txt nicht erlaubt
+  - Hinweis: https://www.zeit.de/autoren/J/Hannes_Jung/index: laut robots.txt nicht erlaubt
+  - Fehler: https://hannesjung.com: nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: UND_ERR_CONNECT_TIMEOUT)
+- `sibylle-bergemann` (Sibylle Bergemann): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://sibyllebergemann.com/de – übernommen; abgerufen
+  - eigene Adresse: https://de.wikipedia.org/wiki/Sibylle_Bergemann – übernommen; nicht abgerufen (Wikimedia-Adresse läuft über die Wikipedia-Recherche)
+  - eigene Adresse: https://www.ifa.de/tournee/sibylle-bergemann – übernommen; nicht abrufbar (https://www.ifa.de/tournee/sibylle-bergemann/: HTTP 401)
+  - eigene Adresse: https://berlinischegalerie.de/sammlung/fotografie/sibylle-bergemann – übernommen; abgerufen
+  - neuer Link: https://sibyllebergemann.com/de
+  - neuer Link: https://de.wikipedia.org/wiki/Sibylle_Bergemann
+  - neuer Link: https://www.ifa.de/tournee/sibylle-bergemann
+  - neuer Link: https://berlinischegalerie.de/sammlung/fotografie/sibylle-bergemann
+  - genutzt: https://sibyllebergemann.com/de
+  - genutzt: https://de.wikipedia.org/wiki/Sibylle_Bergemann
+  - genutzt: https://www.ifa.de/tournee/sibylle-bergemann
+  - genutzt: https://berlinischegalerie.de/sammlung/fotografie/sibylle-bergemann
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+  - Fehler: https://www.ifa.de/tournee/sibylle-bergemann/: HTTP 401
+- `herbert-dombrowski` (Herbert Dombrowski): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.mare.de/crew/herbert-dombrowski-urheber-1493 – übernommen; abgerufen
+  - eigene Adresse: https://www.mkdw.de/de/ausstellung/schicht-und-striptease-herbert-dombrowskis-hamburg – übernommen; abgerufen
+  - eigene Adresse: https://monovisions.com/herbert-dombrowski-biography-city-life-street-photographer – übernommen; abgerufen
+  - eigene Adresse: https://www.kunstleben-berlin.de/galerie-hilaneh-von-kories-zeigt-herbert-dombrowski-jedes-bild-ist-mir-begegnet – übernommen; nicht abrufbar (https://www.kunstleben-berlin.de/galerie-hilaneh-von-kories-zeigt-herbert-dombrowski-jedes-bild-ist-mir-begegnet/: Antwort größer als 2 MB verworfen)
+  - neuer Link: https://www.mare.de/crew/herbert-dombrowski-urheber-1493
+  - neuer Link: https://www.mkdw.de/de/ausstellung/schicht-und-striptease-herbert-dombrowskis-hamburg
+  - neuer Link: https://monovisions.com/herbert-dombrowski-biography-city-life-street-photographer
+  - neuer Link: https://www.kunstleben-berlin.de/galerie-hilaneh-von-kories-zeigt-herbert-dombrowski-jedes-bild-ist-mir-begegnet
+  - genutzt: https://www.mare.de/crew/herbert-dombrowski-urheber-1493
+  - genutzt: https://www.mkdw.de/de/ausstellung/schicht-und-striptease-herbert-dombrowskis-hamburg
+  - genutzt: https://monovisions.com/herbert-dombrowski-biography-city-life-street-photographer
+  - Seiten: 3 abgerufen, 0 aus dem Zwischenspeicher
+  - Fehler: https://www.kunstleben-berlin.de/galerie-hilaneh-von-kories-zeigt-herbert-dombrowski-jedes-bild-ist-mir-begegnet/: Antwort größer als 2 MB verworfen
+- `stefan-draschan` (Stefan Draschan): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://stefandraschan.com – übernommen; abgerufen
+  - eigene Adresse: https://www.instagram.com/stefandraschan – übernommen; gesperrt (https://www.instagram.com/stefandraschan: laut robots.txt nicht erlaubt)
+  - eigene Adresse: https://suermondt-ludwig-museum.de/ausstellung/archiv/2026-2/stefan-draschan-2 – übernommen; abgerufen
+  - eigene Adresse: https://hatjecantz.de/blogs/interviews/stefan-draschan-double-take – übernommen; abgerufen
+  - eigene Adresse: https://aboutphotography.blog/photographer/stefan-draschan – übernommen; abgerufen
+  - neuer Link: https://stefandraschan.com
+  - neuer Link: https://www.instagram.com/stefandraschan
+  - neuer Link: https://suermondt-ludwig-museum.de/ausstellung/archiv/2026-2/stefan-draschan-2
+  - neuer Link: https://hatjecantz.de/blogs/interviews/stefan-draschan-double-take
+  - neuer Link: https://aboutphotography.blog/photographer/stefan-draschan
+  - genutzt: https://stefandraschan.com
+  - genutzt: https://suermondt-ludwig-museum.de/ausstellung/archiv/2026-2/stefan-draschan-2
+  - genutzt: https://hatjecantz.de/blogs/interviews/stefan-draschan-double-take
+  - genutzt: https://aboutphotography.blog/photographer/stefan-draschan
+  - Seiten: 4 abgerufen, 0 aus dem Zwischenspeicher
+  - Hinweis: https://www.instagram.com/stefandraschan: laut robots.txt nicht erlaubt
+- `jochen-ehmke` (Jochen Ehmke): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.zeit.de/kultur/2011-12/fs-jochen-ehmke – übernommen; gesperrt (https://www.zeit.de/kultur/2011-12/fs-jochen-ehmke: laut robots.txt nicht erlaubt)
+  - eigene Adresse: https://www.kunst-chemnitz.de/fluchtversuch-und-andere-merkwuerdigkeiten/1357 – übernommen; abgerufen
+  - eigene Adresse: https://www.mz.de/lokal/halle-saale/jochen-ehmke-aus-halle-es-begann-mit-dem-rollfilm-2788616 – übernommen; abgerufen
+  - eigene Adresse: https://www.dasfotoportal.de/fotografie-forum-staedte-region-aachen-mysterium-der-paare – übernommen; nicht abrufbar (https://www.dasfotoportal.de/fotografie-forum-staedte-region-aachen-mysterium-der-paare: Zeitüberschreitung nach 15 s)
+  - neuer Link: https://www.zeit.de/kultur/2011-12/fs-jochen-ehmke
+  - neuer Link: https://www.kunst-chemnitz.de/fluchtversuch-und-andere-merkwuerdigkeiten/1357
+  - neuer Link: https://www.mz.de/lokal/halle-saale/jochen-ehmke-aus-halle-es-begann-mit-dem-rollfilm-2788616
+  - neuer Link: https://www.dasfotoportal.de/fotografie-forum-staedte-region-aachen-mysterium-der-paare
+  - genutzt: https://www.zeit.de/kultur/2011-12/fs-jochen-ehmke
+  - genutzt: https://www.kunst-chemnitz.de/fluchtversuch-und-andere-merkwuerdigkeiten/1357
+  - genutzt: https://www.mz.de/lokal/halle-saale/jochen-ehmke-aus-halle-es-begann-mit-dem-rollfilm-2788616
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+  - Hinweis: https://www.zeit.de/kultur/2011-12/fs-jochen-ehmke: laut robots.txt nicht erlaubt
+  - Fehler: https://www.dasfotoportal.de/fotografie-forum-staedte-region-aachen-mysterium-der-paare: Zeitüberschreitung nach 15 s
+- `george-friedman` (George Friedman): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://de.wikipedia.org/wiki/George_Friedmann – übernommen; nicht abgerufen (Wikimedia-Adresse läuft über die Wikipedia-Recherche)
+  - eigene Adresse: https://vasarishop.com/en/collections/george-friedman – übernommen; abgerufen
+  - eigene Adresse: https://mapadelarte.museomoderno.org/en/artistas/friedman-george – übernommen; abgerufen
+  - neuer Link: https://de.wikipedia.org/wiki/George_Friedmann
+  - neuer Link: https://vasarishop.com/en/collections/george-friedman
+  - neuer Link: https://mapadelarte.museomoderno.org/en/artistas/friedman-george
+  - genutzt: https://vasarishop.com/en/collections/george-friedman
+  - genutzt: https://mapadelarte.museomoderno.org/en/artistas/friedman-george
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+- `franz-goettfried` (Franz Göttfried): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://foto.folkwang-uni.de/de/info/ausstellungen/franz-goettfried-portraits – übernommen; abgerufen
+  - eigene Adresse: https://www.margitneuhold.com/von-oben-im-tal-simon-baptist-archiv-franz-goettfried – übernommen; abgerufen
+  - neuer Link: https://foto.folkwang-uni.de/de/info/ausstellungen/franz-goettfried-portraits
+  - neuer Link: https://www.margitneuhold.com/von-oben-im-tal-simon-baptist-archiv-franz-goettfried
+  - genutzt: https://foto.folkwang-uni.de/de/info/ausstellungen/franz-goettfried-portraits
+  - genutzt: https://www.margitneuhold.com/von-oben-im-tal-simon-baptist-archiv-franz-goettfried
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+- `nelly-rau-haering` (Nelly Rau-Häring): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.editionfroelich.de/produkt/nelly-rau-haering – übernommen; abgerufen
+  - eigene Adresse: https://hatjecantz.de/en/products/52766-nelly-rauhaering – übernommen; abgerufen
+  - eigene Adresse: https://fhochdrei.org/en/nelly-rau-haringost-west-berlin – übernommen; abgerufen
+  - eigene Adresse: https://pictorial-online.com?p=7270 – übernommen; abgerufen
+  - neuer Link: https://www.editionfroelich.de/produkt/nelly-rau-haering
+  - neuer Link: https://hatjecantz.de/en/products/52766-nelly-rauhaering
+  - neuer Link: https://fhochdrei.org/en/nelly-rau-haringost-west-berlin
+  - neuer Link: https://pictorial-online.com?p=7270
+  - genutzt: https://www.editionfroelich.de/produkt/nelly-rau-haering
+  - genutzt: https://hatjecantz.de/en/products/52766-nelly-rauhaering
+  - genutzt: https://fhochdrei.org/en/nelly-rau-haringost-west-berlin
+  - genutzt: https://pictorial-online.com?p=7270
+  - Seiten: 4 abgerufen, 0 aus dem Zwischenspeicher
+- `jordis-schloesser` (Jordis Schlösser): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.ostkreuz.de/fotografen/jordis-a-schloesser – übernommen; abgerufen
+  - eigene Adresse: https://www.instagram.com/jordisantoniaschloesser – übernommen; gesperrt (https://www.instagram.com/jordisantoniaschloesser: laut robots.txt nicht erlaubt)
+  - eigene Adresse: https://www.journal21.ch/artikel/von-schicksalen-erzaehlen – übernommen; abgerufen
+  - neuer Link: https://www.ostkreuz.de/fotografen/jordis-a-schloesser
+  - neuer Link: https://www.instagram.com/jordisantoniaschloesser
+  - neuer Link: https://www.journal21.ch/artikel/von-schicksalen-erzaehlen
+  - genutzt: https://www.ostkreuz.de/fotografen/jordis-a-schloesser
+  - genutzt: https://www.journal21.ch/artikel/von-schicksalen-erzaehlen
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+  - Hinweis: https://www.instagram.com/jordisantoniaschloesser: laut robots.txt nicht erlaubt
+- `paul-wolff` (Paul Wolff): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://de.wikipedia.org/wiki/Paul_Wolff – übernommen; nicht abgerufen (Wikimedia-Adresse läuft über die Wikipedia-Recherche)
+  - eigene Adresse: https://sammlung.staedelmuseum.de/de/person/wolff-paul – übernommen; abgerufen
+  - eigene Adresse: https://www.blind-magazine.com/news/dr-paul-wolff-between-light-and-shadows – übernommen; abgerufen
+  - neuer Link: https://de.wikipedia.org/wiki/Paul_Wolff
+  - neuer Link: https://sammlung.staedelmuseum.de/de/person/wolff-paul
+  - neuer Link: https://www.blind-magazine.com/news/dr-paul-wolff-between-light-and-shadows
+  - genutzt: https://de.wikipedia.org/wiki/Paul_Wolff
+  - genutzt: https://sammlung.staedelmuseum.de/de/person/wolff-paul
+  - genutzt: https://www.blind-magazine.com/news/dr-paul-wolff-between-light-and-shadows
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+- `marie-watt` (Marie Watt): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; kein Vorschlag
+  - eigene Adresse: https://en.wikipedia.org/wiki/Marie_Watt – übernommen; nicht abgerufen (Wikimedia-Adresse läuft über die Wikipedia-Recherche)
+  - eigene Adresse: https://mariewattstudio.com – übernommen; gesperrt (https://mariewattstudio.com: nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: UNABLE_TO_VERIFY_LEAF_SIGNATURE))
+  - neuer Link: https://en.wikipedia.org/wiki/Marie_Watt
+  - neuer Link: https://mariewattstudio.com
+  - Seiten: 0 abgerufen, 0 aus dem Zwischenspeicher
+  - Fehler: https://mariewattstudio.com: nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: UNABLE_TO_VERIFY_LEAF_SIGNATURE)
+- `alexander-basta` (Alexander Basta): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://basta-photograph.de – übernommen; abgerufen
+  - eigene Adresse: https://www.noirblanche.de/de/artists/alexander-basta – übernommen; abgerufen
+  - eigene Adresse: https://www.tonhalle.de/storykachel-basta-portraets – übernommen; abgerufen
+  - neuer Link: https://basta-photograph.de
+  - neuer Link: https://www.noirblanche.de/de/artists/alexander-basta
+  - neuer Link: https://www.tonhalle.de/storykachel-basta-portraets
+  - genutzt: https://basta-photograph.de
+  - genutzt: https://www.noirblanche.de/de/artists/alexander-basta
+  - genutzt: https://www.tonhalle.de/storykachel-basta-portraets
+  - Seiten: 3 abgerufen, 0 aus dem Zwischenspeicher
+- `josef-fischnaller` (Josef Fischnaller): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.joseffischnaller.com – übernommen; abgerufen
+  - eigene Adresse: https://de.wikipedia.org/wiki/Josef_Fischnaller_(Fotograf) – übernommen; nicht abgerufen (Wikimedia-Adresse läuft über die Wikipedia-Recherche)
+  - eigene Adresse: https://www.galeriefriedmann-hahn.com/de/artists/josef_fischnaller/works – übernommen; abgerufen
+  - neuer Link: https://www.joseffischnaller.com
+  - neuer Link: https://de.wikipedia.org/wiki/Josef_Fischnaller_(Fotograf)
+  - neuer Link: https://www.galeriefriedmann-hahn.com/de/artists/josef_fischnaller/works
+  - genutzt: https://www.joseffischnaller.com
+  - genutzt: https://de.wikipedia.org/wiki/Josef_Fischnaller_(Fotograf)
+  - genutzt: https://www.galeriefriedmann-hahn.com/de/artists/josef_fischnaller/works
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+- `joop-greypink` (Joop Greypink): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.noirblanche.de/de/artists/joop-greypink – übernommen; abgerufen
+  - eigene Adresse: https://guru.ag/h5/index.html – übernommen; gesperrt (https://guru.ag/h5/index.html: laut robots.txt nicht erlaubt)
+  - neuer Link: https://www.noirblanche.de/de/artists/joop-greypink
+  - neuer Link: https://guru.ag/h5/index.html
+  - genutzt: https://www.noirblanche.de/de/artists/joop-greypink
+  - Seiten: 1 abgerufen, 0 aus dem Zwischenspeicher
+  - Hinweis: https://guru.ag/h5/index.html: laut robots.txt nicht erlaubt
+- `markus-c-hurek` (Markus C. Hurek): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://de.wikipedia.org/wiki/Markus_Hurek – übernommen; nicht abgerufen (Wikimedia-Adresse läuft über die Wikipedia-Recherche)
+  - eigene Adresse: https://mchurek.de – übernommen; gesperrt (https://mchurek.de: nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: ETIMEDOUT))
+  - eigene Adresse: https://leica-camera.com/de-DE/event/made-berlin – übernommen; abgerufen
+  - neuer Link: https://de.wikipedia.org/wiki/Markus_Hurek
+  - neuer Link: https://mchurek.de
+  - neuer Link: https://leica-camera.com/de-DE/event/made-berlin
+  - genutzt: https://de.wikipedia.org/wiki/Markus_Hurek
+  - genutzt: https://mchurek.de
+  - genutzt: https://leica-camera.com/de-DE/event/made-berlin
+  - Seiten: 1 abgerufen, 0 aus dem Zwischenspeicher
+  - Fehler: https://mchurek.de: nicht abgerufen, robots.txt nicht lesbar (Netzwerkfehler: ETIMEDOUT)
+- `hans-lux` (Hans Lux): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.noirblanche.de/de/artists/hans-lux – übernommen; abgerufen
+  - eigene Adresse: https://rp-online.de/nrw/staedte/duesseldorf/portraet-des-duesseldorfer-fotografen-hans-lux_aid-49808197 – übernommen; abgerufen
+  - eigene Adresse: https://www.profifoto.de/szene/ausstellungen/2020/03/04/hans-lux-ueber-peter-lindbergh – übernommen; abgerufen
+  - neuer Link: https://www.noirblanche.de/de/artists/hans-lux
+  - neuer Link: https://rp-online.de/nrw/staedte/duesseldorf/portraet-des-duesseldorfer-fotografen-hans-lux_aid-49808197
+  - neuer Link: https://www.profifoto.de/szene/ausstellungen/2020/03/04/hans-lux-ueber-peter-lindbergh
+  - genutzt: https://www.noirblanche.de/de/artists/hans-lux
+  - genutzt: https://rp-online.de/nrw/staedte/duesseldorf/portraet-des-duesseldorfer-fotografen-hans-lux_aid-49808197
+  - genutzt: https://www.profifoto.de/szene/ausstellungen/2020/03/04/hans-lux-ueber-peter-lindbergh
+  - Seiten: 3 abgerufen, 0 aus dem Zwischenspeicher
+- `clay-perry` (Clay Perry): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://clayperry.co.uk – übernommen; abgerufen
+  - eigene Adresse: https://www.englandgallery.com/clay-perry – übernommen; abgerufen
+  - eigene Adresse: https://www.rockarchive.com/photographers/clay-perry – übernommen; abgerufen
+  - neuer Link: https://clayperry.co.uk
+  - neuer Link: https://www.englandgallery.com/clay-perry
+  - neuer Link: https://www.rockarchive.com/photographers/clay-perry
+  - genutzt: https://clayperry.co.uk
+  - genutzt: https://www.englandgallery.com/clay-perry
+  - genutzt: https://www.rockarchive.com/photographers/clay-perry
+  - Seiten: 3 abgerufen, 0 aus dem Zwischenspeicher
+- `alfredo-sarabia-jun` (Alfredo Sarabia jun.): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.noirblanche.de/eng/artists/alfredo-sarabia-jun – übernommen; abgerufen
+  - eigene Adresse: http://www.michael-horbach-stiftung.de/fotopreis/alfredo-sarabia-junior.html – übernommen; abgerufen
+  - eigene Adresse: https://www.instagram.com/alfredosarabia_artwork – übernommen; gesperrt (https://www.instagram.com/alfredosarabia_artwork: laut robots.txt nicht erlaubt)
+  - neuer Link: https://www.noirblanche.de/eng/artists/alfredo-sarabia-jun
+  - neuer Link: http://www.michael-horbach-stiftung.de/fotopreis/alfredo-sarabia-junior.html
+  - neuer Link: https://www.instagram.com/alfredosarabia_artwork
+  - genutzt: https://www.noirblanche.de/eng/artists/alfredo-sarabia-jun
+  - genutzt: http://www.michael-horbach-stiftung.de/fotopreis/alfredo-sarabia-junior.html
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+  - Hinweis: https://www.instagram.com/alfredosarabia_artwork: laut robots.txt nicht erlaubt
+- `renate-scherra` (Renate Scherra): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.noirblanche.de/de/artists/renate-scherra – übernommen; abgerufen
+  - eigene Adresse: https://bbk-duesseldorf.de/mitglied/renate-scherra – übernommen; abgerufen
+  - eigene Adresse: https://www.renatescherra.de – übernommen; gesperrt (https://www.renatescherra.de: nicht abgerufen, robots.txt antwortet mit 503)
+  - eigene Adresse: https://www.wz.de/nrw/duesseldorf/kultur/galerie-noir-blanche-duesseldorf-renate-scherra-zeigt-bilder-aus-jemen_aid-46338929 – übernommen; abgerufen
+  - neuer Link: https://www.noirblanche.de/de/artists/renate-scherra
+  - neuer Link: https://bbk-duesseldorf.de/mitglied/renate-scherra
+  - neuer Link: https://www.renatescherra.de
+  - neuer Link: https://www.wz.de/nrw/duesseldorf/kultur/galerie-noir-blanche-duesseldorf-renate-scherra-zeigt-bilder-aus-jemen_aid-46338929
+  - genutzt: https://www.noirblanche.de/de/artists/renate-scherra
+  - genutzt: https://bbk-duesseldorf.de/mitglied/renate-scherra
+  - genutzt: https://www.renatescherra.de
+  - genutzt: https://www.wz.de/nrw/duesseldorf/kultur/galerie-noir-blanche-duesseldorf-renate-scherra-zeigt-bilder-aus-jemen_aid-46338929
+  - Seiten: 3 abgerufen, 0 aus dem Zwischenspeicher
+  - Fehler: https://www.renatescherra.de: nicht abgerufen, robots.txt antwortet mit 503
+- `axel-schmidt` (Axel Schmidt): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://axelschmidt.photography – übernommen; abgerufen
+  - eigene Adresse: https://www.noirblanche.de/de/artists/axel-schmidt – übernommen; abgerufen
+  - neuer Link: https://axelschmidt.photography
+  - neuer Link: https://www.noirblanche.de/de/artists/axel-schmidt
+  - genutzt: https://axelschmidt.photography
+  - genutzt: https://www.noirblanche.de/de/artists/axel-schmidt
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+- `walter-schmitz` (Walter Schmitz): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://walterschmitz.com – übernommen; abgerufen
+  - eigene Adresse: https://www.noirblanche.de/de/artists/walter-schmitz – übernommen; abgerufen
+  - neuer Link: https://walterschmitz.com
+  - neuer Link: https://www.noirblanche.de/de/artists/walter-schmitz
+  - genutzt: https://walterschmitz.com
+  - genutzt: https://www.noirblanche.de/de/artists/walter-schmitz
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+- `ayako-takashi` (Ayako Takashi): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://www.ayakotakaishi.com – übernommen; abgerufen
+  - eigene Adresse: https://www.noirblanche.de/de/artists/ayako-takaishi – übernommen; abgerufen
+  - neuer Link: https://www.ayakotakaishi.com
+  - neuer Link: https://www.noirblanche.de/de/artists/ayako-takaishi
+  - genutzt: https://www.ayakotakaishi.com
+  - genutzt: https://www.noirblanche.de/de/artists/ayako-takaishi
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+- `martin-waldbauer` (Martin Waldbauer): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://martinwaldbauer.com – übernommen; abgerufen
+  - eigene Adresse: https://www.instagram.com/martinwaldbauer – übernommen; gesperrt (https://www.instagram.com/martinwaldbauer: laut robots.txt nicht erlaubt)
+  - eigene Adresse: https://www.whitewall.com/de/magazin/inspiration/martin-waldbauer-portrait-photography – übernommen; abgerufen
+  - eigene Adresse: https://www.g99gallery.com/ausstellung-martin-waldbauer-1 – übernommen; abgerufen
+  - neuer Link: https://martinwaldbauer.com
+  - neuer Link: https://www.instagram.com/martinwaldbauer
+  - neuer Link: https://www.whitewall.com/de/magazin/inspiration/martin-waldbauer-portrait-photography
+  - neuer Link: https://www.g99gallery.com/ausstellung-martin-waldbauer-1
+  - genutzt: https://martinwaldbauer.com
+  - genutzt: https://www.whitewall.com/de/magazin/inspiration/martin-waldbauer-portrait-photography
+  - genutzt: https://www.g99gallery.com/ausstellung-martin-waldbauer-1
+  - Seiten: 3 abgerufen, 0 aus dem Zwischenspeicher
+  - Hinweis: https://www.instagram.com/martinwaldbauer: laut robots.txt nicht erlaubt
+- `barbara-wolff` (Barbara Wolff): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://barbarawolff.eu – übernommen; abgerufen
+  - eigene Adresse: https://de.wikipedia.org/wiki/Barbara_Wolff_(Fotografin) – übernommen; nicht abgerufen (Wikimedia-Adresse läuft über die Wikipedia-Recherche)
+  - eigene Adresse: https://www.dgph.de/aktuelles/barbara-wolff-das-leben-bestimmt-die-bilder-die-bleiben – übernommen; abgerufen
+  - neuer Link: https://barbarawolff.eu
+  - neuer Link: https://de.wikipedia.org/wiki/Barbara_Wolff_(Fotografin)
+  - neuer Link: https://www.dgph.de/aktuelles/barbara-wolff-das-leben-bestimmt-die-bilder-die-bleiben
+  - genutzt: https://barbarawolff.eu
+  - genutzt: https://de.wikipedia.org/wiki/Barbara_Wolff_(Fotografin)
+  - genutzt: https://www.dgph.de/aktuelles/barbara-wolff-das-leben-bestimmt-die-bilder-die-bleiben
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+- `radu-darvas` (Radu Darvas): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; übernommen
+  - eigene Adresse: https://kulturaktiv.org/events/radu-darvas-wiedergutmachung – übernommen; abgerufen
+  - eigene Adresse: https://dresdencontemporaryart.com/en/event/radu-darvas-wiedergutmachung – übernommen; abgerufen
+  - neuer Link: https://kulturaktiv.org/events/radu-darvas-wiedergutmachung
+  - neuer Link: https://dresdencontemporaryart.com/en/event/radu-darvas-wiedergutmachung
+  - genutzt: https://kulturaktiv.org/events/radu-darvas-wiedergutmachung
+  - genutzt: https://dresdencontemporaryart.com/en/event/radu-darvas-wiedergutmachung
+  - Seiten: 2 abgerufen, 0 aus dem Zwischenspeicher
+- `nino-sable` (Nino Sable): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; kein Vorschlag
+  - eigene Adresse: https://ninosable.de – übernommen; abgerufen
+  - neuer Link: https://ninosable.de
+  - Seiten: 1 abgerufen, 0 aus dem Zwischenspeicher
+- `benno-schlicht` (Benno Schlicht): nur eigene Adressen; Suchmaschine: –; Anfragen: 0; Treffer: 0; kein Vorschlag
+  - eigene Adresse: https://www.benno-schlicht.com – übernommen; abgerufen
+  - neuer Link: https://www.benno-schlicht.com
+  - Seiten: 1 abgerufen, 0 aus dem Zwischenspeicher
