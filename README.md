@@ -234,6 +234,14 @@ npm run build:demo   # Build mit gekennzeichneten Demo-Daten aus demo/
 npm run quality      # axe, Tastatur, Netzwerk, SEO, Lighthouse gegen den Demo-Build
 ```
 
+### Entwicklung im Devcontainer
+
+`.devcontainer/` richtet eine Node-22-Umgebung mit Chromium (`CHROME_BIN` ist gesetzt) ein. In VS Code: „Dev Containers: Reopen in Container“. Beim ersten Start installiert `postCreateCommand` die Abhängigkeiten (`node_modules` liegen in Docker-Volumes). Der Dev-Server läuft auf Port 4200:
+
+```bash
+cd web && npm start -- --host 0.0.0.0
+```
+
 `demo/` enthält erkennbar fiktive Beispieldaten (`demo-`-IDs, Titel mit „[Demo]“). Sie erscheinen nie im Produktionsbuild.
 
 ### Icon und Postkartenmotiv

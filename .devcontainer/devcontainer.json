@@ -1,0 +1,28 @@
+{
+  "name": "praktischefotografie",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "node",
+  "forwardPorts": [4200],
+  "portsAttributes": {
+    "4200": { "label": "Angular Dev-Server", "onAutoForward": "notify" }
+  },
+  "mounts": [
+    // node_modules in benannten Volumes: schneller und ohne Konflikt mit dem Host (macOS)
+    "source=pf-node-modules-root,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=pf-node-modules-web,target=${containerWorkspaceFolder}/web/node_modules,type=volume",
+    // Claude-Login und -Einstellungen bleiben beim Neuaufbau erhalten
+    "source=pf-claude-config,target=/home/node/.claude,type=volume",
+    "source=pf-angular-cache,target=${containerWorkspaceFolder}/web/.angular,type=volume"
+  ],
+  "postCreateCommand": "sudo chown node:node /home/node/.claude node_modules web/node_modules web/.angular && npm ci && npm --prefix web ci",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "angular.ng-template",
+        "esbenp.prettier-vscode",
+        "anthropic.claude-code"
+      ]
+    }
+  }
+}
